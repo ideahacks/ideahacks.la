@@ -1,7 +1,7 @@
 {
   "name": "ideahacks.la",
   "version": "1.0.0",
-  "description": "## Setting up the development environment Run `npm install` to install the project's dependencies.   Run `npm start` to start the server.",
+  "description": "Website for UCLA's IDEA Hacks",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
