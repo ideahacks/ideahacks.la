@@ -1,0 +1,24 @@
+{
+  "name": "ideahacks.la",
+  "version": "1.0.0",
+  "description": "## Setting up the development environment Run `npm install` to install the project's dependencies.   Run `npm start` to start the server.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IDEA-Hacks/ideahacks.la.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IDEA-Hacks/ideahacks.la/issues"
+  },
+  "homepage": "https://github.com/IDEA-Hacks/ideahacks.la#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "path": "^0.12.7"
+  }
+}
