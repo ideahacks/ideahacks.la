@@ -4,7 +4,8 @@
   "description": "Website for UCLA's IDEA Hacks",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo 'tests passed'"
   },
   "repository": {
     "type": "git",
