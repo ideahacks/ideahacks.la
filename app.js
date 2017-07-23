@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
+const ideahacks = require('./ideahacks')
 
 let app = express()
 
