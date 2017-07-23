@@ -1,4 +1,4 @@
-let main = {res, req} => {
+let main = (req, res) => {
     return res.render('index')
 }
 
