@@ -1,5 +1,5 @@
 # IDEA Hacks Website
-[![Build Status](https://travis-ci.org/ideahacks/ideahacks.la.svg?branch=master)](https://travis-ci.org/ideahacks/ideahacks.la)
+[![Build Status](https://travis-ci.org/ideahacks/ideahacks.la.svg?branch=development)](https://travis-ci.org/ideahacks/ideahacks.la)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Setting up the development environment
