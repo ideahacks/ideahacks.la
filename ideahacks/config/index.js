@@ -1,5 +1,7 @@
 if (process.env.NODE_ENV === 'production') {
-  console.log('In production environment')
+  module.exports = {
+    dbURI: process.env.dbURI
+  }
 } else {
-  console.log('In development environment')
+  module.exports = require('./development.json')
 }
