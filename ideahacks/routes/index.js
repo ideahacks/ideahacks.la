@@ -1,3 +1,6 @@
+const mainRouter = require('./main')
+
 module.exports = {
-  mainRouter = require('./main')
+  mainRouter
 }
+
