@@ -3,10 +3,10 @@ let main = (req, res) => {
 }
 
 let login = (req, res) => {
-	return res.render('login')
+  return res.render('login.html')
 }
 
 module.exports = {
   main,
-	login
+  login
 }
