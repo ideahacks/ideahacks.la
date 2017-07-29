@@ -2,11 +2,11 @@ let main = (req, res) => {
   return res.render('index')
 }
 
-let login = (req, res) => {
-  return res.render('login')
+let team = (req, res) => {
+  return res.render('team')
 }
 
 module.exports = {
   main,
-  login
+  team
 }
