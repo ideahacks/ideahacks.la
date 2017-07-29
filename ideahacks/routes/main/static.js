@@ -3,7 +3,7 @@ let main = (req, res) => {
 }
 
 let login = (req, res) => {
-  return res.render('login.html')
+  return res.render('login')
 }
 
 module.exports = {
