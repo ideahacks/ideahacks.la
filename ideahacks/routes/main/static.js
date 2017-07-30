@@ -1,12 +1,12 @@
-let main = (req, res) => {
+let getMain = (req, res) => {
   return res.render('index')
 }
 
-let team = (req, res) => {
+let getTeam = (req, res) => {
   return res.render('team')
 }
 
 module.exports = {
-  main,
-  team
+  getMain,
+  getTeam
 }
