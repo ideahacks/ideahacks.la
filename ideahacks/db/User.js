@@ -1,7 +1,7 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema
+const mongoose = require('mongoose')
+let Schema = mongoose.Schema
 
-var userSchema = new Schema({
+let UserSchema = new Schema({
     email: String,
     password: String,
     firstName: String,
@@ -11,4 +11,4 @@ var userSchema = new Schema({
     year: String
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('User', UserSchema)

@@ -1,6 +1,6 @@
 const dbURI = require('../config').dbURI
 const mongoose = require('mongoose')
-const User = require('./User.js');
+const User = require('./User.js')
 
 mongoose.connect(dbURI, {
   useMongoClient: true
