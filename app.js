@@ -18,5 +18,5 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(ideahacks.routes.mainRouter)
-
+app.use(ideahacks.routes.adminRouter)
 module.exports = app
