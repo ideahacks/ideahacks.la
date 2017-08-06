@@ -1,8 +1,7 @@
 const express = require('express')
-const adminRouter = express.Router() //create instance of an express router
-const adminHandlers = require('./admin.js') // grab the module in admin.js
+const adminRouter = express.Router()
+const adminHandlers = require('./admin.js')
 
 adminRouter.get('/admin', adminHandlers.getAdmin)
 
 module.exports = adminRouter
-
