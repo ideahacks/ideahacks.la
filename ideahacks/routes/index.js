@@ -1,4 +1,8 @@
+const adminRouter = require('./admin')
+const mainRouter = require('./main')
+
 module.exports = {
-  mainRouter: require('./main')
-  adminRouter: require('./admin')
-}
+ adminRouter,
+
+ mainRouter
+ }
