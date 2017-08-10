@@ -2,22 +2,153 @@
 <html>
 <head>
   <title>Login - IDEA Hacks</title>
+  
+  <!-- Linked google font -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" />
+  
+  <!-- Personalized css styling -->
+ 
+  <style>
+  
+  body {
+    background-color: #10253f;
+  }
+  
+  #banner {
+    font-family: Roboto, Helvetica, sans-serif;
+    color: #ffc301;
+    padding-left: 25px;
+  }
+  
+  #introduction {
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    color: #ffc301;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 2px;
+    border-bottom: 3px solid #ffc301;
+  }  
+  
+  #introduction h1 {
+    margin-bottom: 2px;  
+  }
+  
+  #form-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5px;
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    color: #ffc301;
+  }
+  
+  .form-group {
+    margin-top: 15px;
+  }
+  
+  .form-group label {
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
+    width: 30%;
+  
+  }
+  
+  .form-group input {
+    width: 60%;
+    height: 30px;
+    float: right;
+  }
+  
+  #form-buttons {
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    margin-top: 5%;
+  }
+  
+  #form-buttons button {
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+    background-color: CornFlowerBlue;
+    width: 30%;
+    height: 40px;
+    text-align: center;
+  }
+  
+  #submit-button {
+    margin-left: 10%;
+  }
+  
+  #registration-button {
+    margin-left: 20%;
+  }
+  
+  #reset-password {
+    font-family:  'Source Sans Pro', helvetica, sans-serif;
+    color: #ffc301;
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+ .footer {
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    color: white;
+    background-color: DeepSkyBlue;
+    height: 50px;
+    padding-top: 0px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .footer h3 {
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+  
+  
+  </style>
 </head>
 <body>
-  <h1>Hello from the ideahacks 2017</h1>
-  <h3>Login to the annual hardware hackathon at UCLA</h3>
 
+  <div id="banner">
+    <h1>Hello from IDEA Hacks</h1>
+  </div>
+  
+  <div id="introduction">
+    <h1>Login</h1>
+  </div>
+   
   <form>
 
-  	<div id="container">
-  		<label>Email:</label><br/>
-  		<input type="text" placeholder="Enter Email address"/><br/>
-  		<label>Password:</label><br/>
+  	<div id="form-container">
+  	
+  	  <div class="form-group">
+  		<label>Email</label>
+        <input type="text" placeholder="Enter Email address"/><br/>
+      </div>
+      
+      <div class="form-group">
+  		<label>Password</label>
   		<input type="Password" placeholder="Enter password"/><br/>
-  		<button type="submit">Login</button>
+  	  </div>
+  	  
+  	  <div id="form-buttons">
+  		<button type="submit" id="submit-button">Login</button>
+  		<a href="/registration"><button type="button" id="registration-button">Registration</button></a>
+  	  </div>
+  	  
+  	  <a id="reset-password" href="" style="text-decoration:none"><p>Forgot your password?</p></a>
+  	  <!-- missing the address of the reset-password web page -->
+  	  
   	</div>
 
   </form>
+  
+  <div class="footer">
+    <h3>Copyright &copy; Idea Hacks<h3>
+  </div>
 
 </body>
 </html>
