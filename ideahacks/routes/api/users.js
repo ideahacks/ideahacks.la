@@ -1,6 +1,6 @@
 const User = require ('../../db').User // grab User schema from db module
 
-let getUser = (req,res) => {
+const getUser = (req,res) => {
 	User.find({})
 	.then(users => {
 		res.json(users)
@@ -8,7 +8,7 @@ let getUser = (req,res) => {
 }
 
 
-let postUser = (req, res) => {
+const postUser = (req, res) => {
 	let trey = new User()
 	trey.firstName = 'Trey'
 	trey.lastName = 'Crossley'

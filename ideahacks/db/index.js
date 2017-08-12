@@ -14,6 +14,6 @@ mongoose.connection.on('error', err => {
 })
 
 module.exports = {
-    User,
-    Team
+  User,
+  Team
 }
