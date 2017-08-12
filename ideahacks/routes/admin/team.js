@@ -3,7 +3,7 @@ const Team = require('../../db').Team
 const getTeam = (req, res) => {
     Team.find({})
       .then(teams => {
-        res.json(teams)
+        res.render('admin-team', {teams})
       })
 }
 
