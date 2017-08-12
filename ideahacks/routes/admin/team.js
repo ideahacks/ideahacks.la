@@ -2,9 +2,9 @@ const Team = require('../../db').Team
 
 const getTeam = (req, res) => {
     Team.find({})
-        .then(teams => {
-            res.json(teams)
-    })
+      .then(teams => {
+        res.json(teams)
+      })
 }
 
 const postTeam = (req, res) => {
@@ -14,13 +14,13 @@ const postTeam = (req, res) => {
     shokugeki.parts = []
     shokugeki.members = []
     shokugeki.save()
-    
+
     res.json({message: "post request received"})
 }
 
 const deleteTeam = (req, res) => {
     Team.remove({})
-    
+
     res.json({message: "delete request received"})
 }
 
