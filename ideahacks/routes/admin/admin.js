@@ -1,4 +1,4 @@
-let getAdmin = (req, res) => {
+const getAdmin = (req, res) => {
   return res.render('admin')
 }
 

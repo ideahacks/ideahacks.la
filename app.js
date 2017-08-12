@@ -19,5 +19,6 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(ideahacks.routes.mainRouter)
 app.use(ideahacks.routes.adminRouter)
+app.use('./api', ideahacks.routes.apiRouter)
 
 module.exports = app
