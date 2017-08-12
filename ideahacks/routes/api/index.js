@@ -6,4 +6,8 @@ apiRouter.get('/team', apiHandlers.getTeam)
 apiRouter.post('/team', apiHandlers.postTeam)
 apiRouter.delete('/team', apiHandlers.deleteTeam)
 
+apiRouter.get('/users', apiHandlers.getUsers)
+apiRouter.post('/users', apiHandlers.postUsers)
+// apiRouter.delete('/users', apiHandlers.deleteUsers)
+
 module.exports = apiRouter
