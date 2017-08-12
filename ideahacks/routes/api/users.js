@@ -15,7 +15,14 @@ const postUser = (req, res) => {
 	trey.save()
 }
 
+const deleteUser = (req,res) => {
+	User.remove({})
+
+	res.json({ message: 'delete reqest received' })
+}
+
 module.exports = {
 	getUser,
-	postUser
+	postUser,
+	deleteUser
 }

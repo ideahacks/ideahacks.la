@@ -10,7 +10,7 @@ apiRouter.delete('/team', teamApiHandlers.deleteTeam)
 
 apiRouter.get('/user', userApiHandlers.getUser)
 apiRouter.post('/user', userApiHandlers.postUser)
-//apiRouter.delete('/users', apiHandlers2.deleteUsers)
+apiRouter.delete('/user', userApiHandlers.deleteUser)
 
 
 module.exports = apiRouter
