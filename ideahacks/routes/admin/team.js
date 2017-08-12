@@ -1,31 +1,30 @@
 const Team = require('../../db').Team
 
 const getTeam = (req, res) => {
-    Team.find({})
-      .then(teams => {
-        res.render('admin-team', {teams})
-      })
+  Team.find({}).then(teams => {
+    res.render('admin-team', { teams })
+  })
 }
 
 const postTeam = (req, res) => {
-    let shokugeki = new Team()
-    shokugeki.teamNumber = 1
-    shokugeki.teamName = 'Jeffrey Loves Shokugeki no Soma'
-    shokugeki.parts = []
-    shokugeki.members = []
-    shokugeki.save()
+  let shokugeki = new Team()
+  shokugeki.teamNumber = 1
+  shokugeki.teamName = 'Jeffrey Loves Shokugeki no Soma'
+  shokugeki.parts = []
+  shokugeki.members = []
+  shokugeki.save()
 
-    res.json({message: "post request received"})
+  res.json({ message: 'post request received' })
 }
 
 const deleteTeam = (req, res) => {
-    Team.remove({})
+  Team.remove({})
 
-    res.json({message: "delete request received"})
+  res.json({ message: 'delete request received' })
 }
 
 module.exports = {
-    getTeam,
-    postTeam,
-    deleteTeam
+  getTeam,
+  postTeam,
+  deleteTeam
 }
