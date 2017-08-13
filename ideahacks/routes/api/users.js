@@ -11,12 +11,14 @@ const postUser = (req, res) => {
   trey.firstName = 'Trey'
   trey.lastName = 'Crossley'
   trey.save()
+
+  res.json({ message: 'Received POST request' })
 }
 
 const deleteUser = (req, res) => {
   User.remove({})
 
-  res.json({ message: 'delete reqest received' })
+  res.json({ message: 'Received DELETE requets' })
 }
 
 module.exports = {
