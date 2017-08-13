@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo 'tests passed'",
+    "test": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
     "format": "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./ideahacks/**/**.js ./ideahacks/**/**/**.js"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "serve-favicon": "^2.4.3"
   },
   "devDependencies": {
-    "prettier": "^1.5.3"
+    "prettier": "^1.5.3",
+    "prettier-check": "^1.0.0"
   }
 }
