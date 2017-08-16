@@ -1,4 +1,4 @@
 module.exports = {
-	db: require('./db'),
-	routes: require('./routes')
+  db: require('./db'),
+  routes: require('./routes')
 }
