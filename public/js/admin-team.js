@@ -1,6 +1,7 @@
 $(document).ready(() => {
-  $('form').submit(function(e) {
+  $('form').submit(e => {
     e.preventDefault()
+
     let teamMembers = []
     $('.member-email').each(function(i, el) {
       teamMembers.push(el.value)
@@ -13,8 +14,6 @@ $(document).ready(() => {
       parts: []
     }
 
-    $.ajax({ url: '/admin/team', type: 'POST', data: teamData }).then(() => {
-      console.log('Submitted')
-    })
+    $.ajax({ url: '/admin/teams', type: 'POST', data: teamData }).done()
   })
 })

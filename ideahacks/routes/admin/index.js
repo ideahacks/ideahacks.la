@@ -6,9 +6,9 @@ const partsHandlers = require('./parts')
 
 adminRouter.get('/', adminHandlers.getAdmin)
 
-adminRouter.get('/team', teamHandlers.getTeam)
-adminRouter.post('/team', teamHandlers.postTeam)
-adminRouter.delete('/team', teamHandlers.deleteTeam)
+adminRouter.get('/teams', teamHandlers.getTeams)
+adminRouter.post('/teams', teamHandlers.postTeams)
+adminRouter.delete('/teams', teamHandlers.deleteTeams)
 
 adminRouter.get('/parts', partsHandlers.getParts)
 adminRouter.post('/parts', partsHandlers.postParts)
