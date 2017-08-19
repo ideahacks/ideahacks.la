@@ -1,20 +1,20 @@
-var main = function(){
-    $('form').submit(function(event) {
-        let $input = $(event.target).find('input');
-        let team = $input.val();
-        let members = [];
-        
-        $('.member-email').each(function(){
-            console.log("hello")
-            members.push($(this).val)
-        })
-        
-        $.ajax({
-            url: '/admin/team',
-            type: 'POST',
-            dataType: 'json',
-            data: json
-        });
+$(document).ready(() => {
+  $('form').submit(function(e) {
+    e.preventDefault()
+    let teamMembers = []
+    $('.member-email').each(function(i, el) {
+      teamMembers.push(el.value)
     })
-}
-$(document).ready(main); 
+
+    let teamData = {
+      teamName: $('.team-name').val(),
+      teamNumber: $('.team-number').val(),
+      members: teamMembers,
+      parts: []
+    }
+
+    $.ajax({ url: '/admin/team', type: 'POST', data: teamData }).then(() => {
+      console.log('Submitted')
+    })
+  })
+})

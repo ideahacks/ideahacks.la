@@ -7,15 +7,13 @@ const getTeam = (req, res) => {
 }
 
 const postTeam = (req, res) => {
-  let shokugeki = new Team()
-    console.log(req.body)
-    console.log(req.body.teamNumber)
-    
-  shokugeki.teamNumber = req.body.teamNumber
-  shokugeki.teamName = req.body.teamName
-  shokugeki.parts = []
-  shokugeki.members = []
-  shokugeki.save()
+  let newTeam = new Team()
+
+  newTeam.teamName = req.body.teamName || ''
+  newTeam.teamNumber = req.body.teamNumber || ''
+  newTeam.members = []
+  newTeam.parts = []
+  newTeam.save()
 
   res.json({ message: 'post request received' })
 }
