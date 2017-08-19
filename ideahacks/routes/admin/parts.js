@@ -1,35 +1,32 @@
 const Part = require('../../db').Part
 
 const getParts = (req, res) => {
- Part.find({})
-	.then(parts => {
-	   res.render('admin-parts', { parts }) 
-	})
+  Part.find().then(parts => {
+    res.render('admin-parts', { parts })
+  })
 }
 
-const postParts = (req,res) => {
- let pylon = new Part()
- pylon.name = 'MUST CONSTRUCT ADDITIONAL'
- pylon.stock = 15
- pylon.description = 'support structure for use in beams'
-pylon.owners = [0001, 0002];
-pylon.save()
+const postParts = (req, res) => {
+  let pylon = new Part()
+  pylon.partName = 'MUST CONSTRUCT ADDITIONAL'
+  pylon.stock = 15
+  pylon.description = 'support structure for use in beams'
+  pylon.owners = []
+  pylon.save()
 
-
-res.json({ message: 'Received POST request'})
+  res.json({ message: 'Received POST request' })
 }
 
 const deleteParts = (req, res) => {
-Part.remove({})
+  Part.remove().then(err => {
+    if (err) console.log(err)
 
-res.json({message: 'Received DELETE request'})
-
+    res.json({ message: 'Received DELETE request' })
+  })
 }
 
 module.exports = {
-getParts,
-postParts,
-deleteParts
+  getParts,
+  postParts,
+  deleteParts
 }
-
-
