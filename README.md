@@ -1,6 +1,7 @@
 # IDEA Hacks Website
 [![Build Status](https://travis-ci.org/ideahacks/ideahacks.la.svg?branch=development)](https://travis-ci.org/ideahacks/ideahacks.la)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Setting up the development environment
 Run `npm install` to install the project's dependencies.  
