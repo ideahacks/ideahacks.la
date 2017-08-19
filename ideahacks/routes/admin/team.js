@@ -8,10 +8,11 @@ const getTeam = (req, res) => {
 
 const postTeam = (req, res) => {
   let shokugeki = new Team()
-  
-  //console.log("req.body")
-  shokugeki.teamNumber = 1
-  shokugeki.teamName = 'Jeffrey Loves Shokugeki'
+    console.log(req.body)
+    console.log(req.body.teamNumber)
+    
+  shokugeki.teamNumber = req.body.teamNumber
+  shokugeki.teamName = req.body.teamName
   shokugeki.parts = []
   shokugeki.members = []
   shokugeki.save()
