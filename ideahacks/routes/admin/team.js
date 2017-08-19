@@ -1,12 +1,12 @@
 const Team = require('../../db').Team
 
-const getTeam = (req, res) => {
+const getTeams = (req, res) => {
   Team.find({}).then(teams => {
     res.render('admin-team', { teams })
   })
 }
 
-const postTeam = (req, res) => {
+const postTeams = (req, res) => {
   let newTeam = new Team()
 
   newTeam.teamName = req.body.teamName || ''
@@ -18,7 +18,7 @@ const postTeam = (req, res) => {
   res.json({ message: 'post request received' })
 }
 
-const deleteTeam = (req, res) => {
+const deleteTeams = (req, res) => {
   Team.remove().then(err => {
     if (err) console.log(err)
 
@@ -27,7 +27,7 @@ const deleteTeam = (req, res) => {
 }
 
 module.exports = {
-  getTeam,
-  postTeam,
-  deleteTeam
+  getTeams,
+  postTeams,
+  deleteTeams
 }
