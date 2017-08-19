@@ -18,11 +18,11 @@ const postTeam = (req, res) => {
 }
 
 const deleteTeam = (req, res) => {
-  Team.remove().then((err) => [
+  Team.remove().then(err => {
     if (err) console.log(err)
 
     res.json({ message: 'delete request received' })
-  ])
+  })
 }
 
 module.exports = {
