@@ -1,9 +1,7 @@
 const express = require('express')
-const passport = require('passport')
 const mainRouter = express.Router()
 const staticHandlers = require('./static.js')
 const authHandlers = require('./auth.js')
-const h = require('../../helpers').authHelpers
 
 mainRouter.get('/', staticHandlers.getMain)
 

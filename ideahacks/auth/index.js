@@ -1,4 +1,3 @@
-const config = require('../config')
 const User = require('../db').User
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
