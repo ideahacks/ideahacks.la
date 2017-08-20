@@ -23,5 +23,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(ideahacks.routes.mainRouter)
 app.use('/admin', ideahacks.routes.adminRouter)
 app.use('/api', ideahacks.routes.apiRouter)
+app.use((req, res) => {
+  res.status(404).render('error', { status: res.statusCode })
+})
+app.use((err, req, res, next) => {
+  res.status(500).render('error', { status: res.statusCode })
+})
 
 module.exports = app
