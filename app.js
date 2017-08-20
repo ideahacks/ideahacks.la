@@ -17,4 +17,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(ideahacks.routes.mainRouter)
 
+app.get('/team', (req, res) => {
+  res.render('team')
+})
+
 module.exports = app
