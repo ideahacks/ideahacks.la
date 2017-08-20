@@ -1,12 +1,25 @@
-let getLogin = (req, res) => {
+const User = require('../../db').User
+
+const getLogin = (req, res) => {
   return res.render('login')
 }
 
-let getRegistration = (req, res) => {
+const postLogin = (req, res) => {
+  return res.json({ message: 'post request received' })
+}
+
+const getRegistration = (req, res) => {
   return res.render('registration')
+}
+
+const postRegistration = (req, res) => {
+  // TODO: create new user here
+  retrun res.json({ message: 'received post request' })
 }
 
 module.exports = {
   getLogin,
-  getRegistration
+  postLogin,
+  getRegistration,
+  postRegistration
 }

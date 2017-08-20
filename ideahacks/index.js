@@ -1,4 +1,7 @@
+require('./auth')()
+
 module.exports = {
   db: require('./db'),
-  routes: require('./routes')
+  routes: require('./routes'),
+  session: require('./session')
 }

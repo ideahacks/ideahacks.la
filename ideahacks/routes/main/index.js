@@ -8,7 +8,9 @@ mainRouter.get('/', staticHandlers.getMain)
 mainRouter.get('/team', staticHandlers.getTeam)
 
 mainRouter.get('/login', signupHandlers.getLogin)
+mainRouter.post('/login', signupHandlers.postLogin)
 
 mainRouter.get('/registration', signupHandlers.getRegistration)
+mainRouter.post('/registration', signupHandlers.postRegistration)
 
 module.exports = mainRouter
