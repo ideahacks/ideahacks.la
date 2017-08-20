@@ -1,5 +1,8 @@
 const dbURI = require('../config').dbURI
 const mongoose = require('mongoose')
+const User = require('./User.js')
+const Team = require('./Team.js')
+const Part = require('./Part.js')
 
 mongoose.connect(dbURI, {
   useMongoClient: true
@@ -11,6 +14,8 @@ mongoose.connection.on('error', err => {
   console.log('Mongoose error: ', err)
 })
 
-let dummy = 'hello'
-
-module.exports = dummy;
+module.exports = {
+  User,
+  Team,
+  Part
+}

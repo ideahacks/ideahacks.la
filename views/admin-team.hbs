@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Admin Team</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/admin-team.js"></script>
+</head>
+<body>
+    <form>
+        <p>Team Name</p>
+        <input class="team-name" type="text" name="teamName">
+        <p>Team Number</p>
+        <input class="team-number" type="number" name="teamNumber">
+        <p>Team Member Emails</p>
+        <input class="member-email" type="text" name="email1"><br>
+        <input class="member-email" type="text" name="email2"><br>
+        <input class="member-email" type="text" name="email3"><br>
+        <input class="member-email" type="text" name="email4"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {{#each teams}}
+        <h1>{{ this.teamName }}</h1>
+        <h1>{{ this.teamNumber}}</h1>
+    {{/each}}
+</body>
+</html>

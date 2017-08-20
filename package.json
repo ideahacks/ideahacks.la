@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo 'tests passed'"
+    "test": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "format": "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,14 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "hbs": "^4.0.1",
+    "hbs-utils": "0.0.4",
     "mongoose": "^4.11.3",
     "path": "^0.12.7",
     "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.5.3",
+    "prettier-check": "^1.0.0"
   }
 }

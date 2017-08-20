@@ -1,6 +1,5 @@
-const mainRouter = require('./main')
-
 module.exports = {
-  mainRouter
+  adminRouter: require('./admin'),
+  mainRouter: require('./main'),
+  apiRouter: require('./api')
 }
-
