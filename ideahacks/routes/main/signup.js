@@ -14,7 +14,7 @@ const getRegistration = (req, res) => {
 
 const postRegistration = (req, res) => {
   // TODO: create new user here
-  retrun res.json({ message: 'received post request' })
+  return res.json({ message: 'received post request' })
 }
 
 module.exports = {

@@ -8,7 +8,7 @@ const UserSchema = new Schema({
   lastName: String,
   major: String,
   school: String,
-  year: String
+  year: String,
 
   // auth fields
   isAdmin: { type: Boolean, default: false }
