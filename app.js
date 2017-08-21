@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const favicon = require('serve-favicon')
 const hbs = require('hbs')
+const passport = require('passport')
 const hbsutils = require('hbs-utils')(hbs)
 const ideahacks = require('./ideahacks')
 
@@ -19,6 +20,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(ideahacks.session)
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(ideahacks.routes.mainRouter)
 app.use('/admin', ideahacks.routes.adminRouter)
