@@ -2,6 +2,7 @@ const dbURI = require('../config').dbURI
 const mongoose = require('mongoose')
 const User = require('./User.js')
 const Team = require('./Team.js')
+const Part = require('./Part.js')
 
 mongoose.connect(dbURI, {
   useMongoClient: true
@@ -15,5 +16,6 @@ mongoose.connection.on('error', err => {
 
 module.exports = {
   User,
-  Team
+  Team,
+  Part
 }
