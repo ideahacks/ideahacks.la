@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - IDEA Hacks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Linked google font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" />
+
+    <!-- Personalized css styling -->
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+</head>
+<body>
+
+    <div id="banner">
+        <h1>IDEA Hacks</h1>
+    </div>
+
+    <div id="introduction">
+        <h1>Login</h1>
+    </div>
+
+    <form action='/login' method='post'>
+        <div id="form-container">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name='username' /><br/>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="Password" name='password' /><br/>
+            </div>
+
+            <div id="form-buttons">
+                <button type="submit" id="submit-button">Login</button>
+                <a href="/registration"><button type="button" id="registration-button">Registration</button></a>
+            </div>
+
+            <a id="reset-password" href="" style="text-decoration:none"><p>Forgot your password?</p></a>
+            <!-- missing the address of the reset-password web page -->
+        </div>
+    </form>
+
+    <div class="footer">
+        <h3>Copyright &copy; IDEA Hacks<h3>
+    </div>
+</body>
+</html>
