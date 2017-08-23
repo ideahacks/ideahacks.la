@@ -2,12 +2,14 @@ const Team = require('../../db').Team
 
 const getTeams = (req, res) => {
   Team.find({}).then(teams => {
+      console.log(teams)
     res.render('admin-team', { teams })
   })
 }
 
 const postTeams = (req, res) => {
   let newTeam = new Team()
+  console.log(req.body)
 
   newTeam.teamName = req.body.teamName || ''
   newTeam.teamNumber = req.body.teamNumber || ''

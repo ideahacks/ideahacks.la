@@ -9,7 +9,7 @@ adminRouter.get('/', h.isAuthenticated, adminHandlers.getAdmin)
 
 adminRouter.get('/teams', h.isAuthenticated, teamHandlers.getTeams)
 adminRouter.post('/teams', h.isAuthenticated, teamHandlers.postTeams)
-adminRouter.delete('/teams', h.isAuthenticated, teamHandlers.deleteTeams)
+adminRouter.delete('/teams', /*h.isAuthenticated,*/ teamHandlers.deleteTeams)
 
 adminRouter.get('/parts', h.isAuthenticated, partsHandlers.getParts)
 adminRouter.post('/parts', h.isAuthenticated, partsHandlers.postParts)
