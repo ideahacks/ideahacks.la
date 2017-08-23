@@ -5,6 +5,8 @@
 
 ## Setting up the development environment
 Run `npm install` to install the project's dependencies.  
+Create a `development.json` file within the `/ideahacks/config` folder
+containing a dbURI and a sessionSecret.  
 Run `npm start` to start the server.  
 Visit `localhost:3000` to view the site.
 

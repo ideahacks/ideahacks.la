@@ -10,6 +10,8 @@ const postUser = (req, res) => {
   let trey = new User()
   trey.firstName = 'Trey'
   trey.lastName = 'Crossley'
+  trey.email = 'jeffschan97@gmail.com'
+  trey.password = 'jeffrey'
   trey.save()
 
   res.json({ message: 'Received POST request' })
