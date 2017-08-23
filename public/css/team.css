@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway|Montserrat|Open+Sans|Roboto|Pacifico);
+
+* {
+  text-align: center;
+  font-family: Open Sans;
+}
+
+body {
+  background-color: #f9f7f4;
+  color: #4c4c4c;
+}
+
+.header {
+  font-size: 60px;
+  margin-bottom: 40px;
+  font-family: Pacifico;
+}
+
+h1 {
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+h2 {
+  padding-top: 15px;
+  font-size: 19px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.row {
+  margin: auto;
+}
+
+
+.team-container {
+  padding: 30px 0 0;
+
+}
+
+
+img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.profile {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 370px;
+  margin: 20px;
+}
+
+.section {
+  text-align: center;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  color: white;
+  padding: 20px 0;
+}
