@@ -8,6 +8,7 @@ var main = function(){
             console.log("hello")
             members.push($(this).val)
         })
+        members.reverse();
         
         $.ajax({
             url: '/admin/team',
