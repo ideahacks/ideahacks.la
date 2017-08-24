@@ -7,12 +7,12 @@ const getTeams = (req, res) => {
 }
 
 const postTeams = (req, res) => {
-  let newTeam = new Team()
-
-  newTeam.teamName = req.body.teamName || ''
-  newTeam.teamNumber = req.body.teamNumber || ''
-  newTeam.members = []
-  newTeam.parts = []
+  let newTeam = new Team({
+    teamName: req.body.teamName || '',
+    teamNumber: req.body.teamNumber || '',
+    members: [],
+    parts: []
+  })
   newTeam.save()
 
   res.json({ message: 'post request received' })
