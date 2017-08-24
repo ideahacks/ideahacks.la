@@ -7,11 +7,12 @@ const getParts = (req, res) => {
 }
 
 const postParts = (req, res) => {
-  let pylon = new Part()
-  pylon.partName = 'MUST CONSTRUCT ADDITIONAL'
-  pylon.stock = 15
-  pylon.description = 'support structure for use in beams'
-  pylon.owners = []
+  let pylon = new Part({
+    partName: 'MUST CONSTRUCT ADDITION',
+    stock: 15,
+    description: 'support structure for use in beams',
+    owners: []
+  })
   pylon.save()
 
   res.json({ message: 'Received POST request' })
