@@ -12,7 +12,10 @@ $(document).ready(() => {
       if (response.status === 'success') location.href = '/' // redirects to main page
 
       $('input').val('') // empties all input fields
-      // TODO: inject error message when failure
+      $('input').blur() // unfocuses all input fields
+      $('.error-message').html(response.message)
     })
   })
+
+  $('input').focus(() => $('.error-message').html(''))
 })
