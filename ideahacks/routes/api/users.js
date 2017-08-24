@@ -8,10 +8,10 @@ const getUser = (req, res) => {
 
 const postUser = (req, res) => {
   let trey = new User({
-    firstName = 'Trey',
-    lastName = 'Crossley',
-    email = 'jeffschan97@gmail.com',
-    password = 'jeffrey'
+    firstName: 'Trey',
+    lastName: 'Crossley',
+    email: 'jeffschan97@gmail.com',
+    password: 'jeffrey'
   })
   trey.save()
 
