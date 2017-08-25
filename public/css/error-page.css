@@ -18,8 +18,8 @@
     font-size: 500%;
     font-weight: bold;
     color: #ffc301;
-    padding-left: 100px;
-    padding-top: 75px;
+    padding-left: 150px;
+    padding-top: 10px;
 }
 
 .return_main_page_button
@@ -37,8 +37,8 @@
 .return_main_page_link
 {
     text-decoration: none;
-    width: 80%;
-    float: right;
+    float: center;
+    padding-left: 300px;
 }
 
 body
