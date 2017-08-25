@@ -12,7 +12,6 @@ const postTeams = (req, res) => {
     $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
   }).then(team => {
     if (team.length === 0) {
-      console.log('make new team')
       let newTeam = new Team({
         teamName: req.body.teamName || '',
         teamNumber: req.body.teamNumber || '',
