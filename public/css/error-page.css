@@ -4,7 +4,7 @@
     color: #ffc301;
     padding-left: 25px;
     width: 25%;
-    float: left;
+    text-align: center;
     text-align: center;
     font-size: 350%;
     top: 5px;
@@ -15,7 +15,7 @@
 .error_msg
 {
     text-align: left;
-    font-size: 500%;
+    font-size: 460%;
     font-weight: bold;
     color: #ffc301;
     padding-left: 150px;
@@ -37,8 +37,7 @@
 .return_main_page_link
 {
     text-decoration: none;
-    float: center;
-    padding-left: 300px;
+    text-align: center;
 }
 
 body
@@ -49,6 +48,7 @@ body
 
 .messages
 {
-    width: 75%;
-    float: right;
+    width: 60%;
+    text-align: center;
+    margin: auto;
 }
