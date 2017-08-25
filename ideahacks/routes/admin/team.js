@@ -21,9 +21,11 @@ const postTeams = (req, res) => {
       })
       newTeam.save()
 
-      return res.json({ message: 'new team has been added to the database' })
+      return res.json({
+        status: 'success',
+        message: 'new team has been added to the database'
+      })
     }
-    console.log('fuck you no repeats')
     return res.json({
       status: 'failure',
       message: 'A team with this team name and number has already been created!'

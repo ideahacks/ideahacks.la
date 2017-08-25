@@ -1,6 +1,7 @@
 $(document).ready(() => {
   $('form').submit(e => {
     e.preventDefault()
+    $('.error-message').html('')
 
     let teamMembers = []
     $('.member-email').each(function(i, el) {
@@ -14,6 +15,8 @@ $(document).ready(() => {
       parts: []
     }
 
-    $.ajax({ url: '/admin/teams', type: 'POST', data: teamData }).done()
+    $.ajax({ url: '/admin/teams', type: 'POST', data: teamData }).done(response => {
+        if(response.status === 'failure') $('.error-message').html(response.message)
+    })
   })
 })
