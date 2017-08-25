@@ -14,12 +14,10 @@
 
 .error_msg
 {
-    text-align: left;
+    text-align: center;
     font-size: 460%;
     font-weight: bold;
     color: #ffc301;
-    padding-left: 150px;
-    padding-top: 10px;
 }
 
 .return_main_page_button
