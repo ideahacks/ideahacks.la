@@ -1,7 +1,6 @@
 $(document).ready(() => {
   $('form').submit(e => {
     e.preventDefault()
-    $('.error-message').html('')
 
     let teamMembers = []
     $('.member-email').each(function(i, el) {
@@ -16,7 +15,21 @@ $(document).ready(() => {
     }
 
     $.ajax({ url: '/admin/teams', type: 'POST', data: teamData }).done(response => {
-        if(response.status === 'failure') $('.error-message').html(response.message)
+      if (response.status === 'failure') {
+        $('.error-message').text(response.message)
+      } else {
+        const newTeamHTML = [
+          '<li>',
+            '<h1>',teamData.teamName,'</h1>',
+            '<h1>',teamData.teamNumber,'</h1>',
+          '</li>'
+        ].join('')
+
+        $(newTeamHTML).prependTo('.team-list')
+        $('input').val('')
+      }
     })
   })
+
+  $('input').focus(() => $('.error-message').text(''))
 })

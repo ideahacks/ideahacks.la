@@ -17,11 +17,15 @@
         <input class="member-email" type="text" name="email2"><br>
         <input class="member-email" type="text" name="email3"><br>
         <input class="member-email" type="text" name="email4"><br><br>
-        <input type="submit" value="Submit">
+        <button type="submit" value="Submit">Submit</button>
     </form>
-    {{#each teams}}
-        <h1>{{ this.teamName }}</h1>
-        <h1>{{ this.teamNumber}}</h1>
-    {{/each}}
+    <ul class='team-list'>
+      {{#each teams}}
+          <li>
+            <h1>{{ this.teamName }}</h1>
+            <h1>{{ this.teamNumber }}</h1>
+          </li>
+      {{/each}}
+    </ul>
 </body>
 </html>

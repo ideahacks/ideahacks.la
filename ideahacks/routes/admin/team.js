@@ -22,12 +22,12 @@ const postTeams = (req, res) => {
 
       return res.json({
         status: 'success',
-        message: 'new team has been added to the database'
+        message: 'New team has been added to the database!'
       })
     }
     return res.json({
       status: 'failure',
-      message: 'A team with this team name and number has already been created!'
+      message: 'A team with this name number has already been created!'
     })
   })
 }
