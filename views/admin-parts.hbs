@@ -2,9 +2,30 @@
 <html>
 <head>
 	<title>Parts - Admin</title>
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="/js/admin-parts.js"></script>
+
 </head>
 <body>
-	{{#each parts}}
+
+	<form>
+		<p>Part name</p>
+		<br>
+		<input class="part-name" type = "text" name="partName">
+		<br>
+		<p>Stock</p>
+		<br>
+		<input  class="stock" type="text" name="stock"><br>
+		<p>Description</p>
+		<br>
+		<input class="description" type="text" name="description"><br>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+
+  {{#each parts}}
 		<h1>{{ this.partName }} </h1>
 		<p> {{ this.stock }} </p>
 	{{/each}}
