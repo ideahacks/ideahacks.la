@@ -11,8 +11,7 @@ $(document).ready(() => {
     $.ajax({ url: '/registration', type: 'POST', data: registrationData }).done(response => {
       if (response.status === 'success') location.href = '/' // redirects to main page
 
-      $('input').val('') // empties all input fields
-      $('input').blur() // unfocuses all input fields
+      $('input').val('')
       $('.error-message').html(response.message)
     })
   })
