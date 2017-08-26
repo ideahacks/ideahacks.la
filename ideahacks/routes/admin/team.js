@@ -2,20 +2,34 @@ const Team = require('../../db').Team
 
 const getTeams = (req, res) => {
   Team.find({}).then(teams => {
+    teams.reverse()
     res.render('admin-team', { teams })
   })
 }
 
 const postTeams = (req, res) => {
-  let newTeam = new Team({
-    teamName: req.body.teamName || '',
-    teamNumber: req.body.teamNumber || '',
-    members: [],
-    parts: []
-  })
-  newTeam.save()
+  Team.find({
+    $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
+  }).then(team => {
+    if (team.length === 0) {
+      let newTeam = new Team({
+        teamName: req.body.teamName || '',
+        teamNumber: req.body.teamNumber || '',
+        members: [],
+        parts: []
+      })
+      newTeam.save()
 
-  res.json({ message: 'post request received' })
+      return res.json({
+        status: 'success',
+        message: 'New team has been added to the database!'
+      })
+    }
+    return res.json({
+      status: 'failure',
+      message: 'A team with this name number has already been created!'
+    })
+  })
 }
 
 const deleteTeams = (req, res) => {
