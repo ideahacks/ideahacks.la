@@ -7,13 +7,13 @@ const getParts = (req, res) => {
 }
 
 const postParts = (req, res) => {
-  let pylon = new Part({
+  let newPart = new Part({
     partName: req.body.partName || '',
     stock: req.body.stock || '',
     description: req.body.description || ' ',
     owners: []
   })
-  pylon.save()
+  newPart.save()
 
   res.json({ message: 'Received POST request' })
 }

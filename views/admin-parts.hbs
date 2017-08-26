@@ -9,9 +9,6 @@
 
 </head>
 <body>
-	
-
-
 
 	<form>
 		<p>Part name</p>
@@ -28,15 +25,9 @@
 		<input type="submit" value="Submit">
 	</form>
 
-
-    {{#each parts}}
+  {{#each parts}}
 		<h1>{{ this.partName }} </h1>
 		<p> {{ this.stock }} </p>
 	{{/each}}
-
-
-
-
-
 </body>
 </html>
