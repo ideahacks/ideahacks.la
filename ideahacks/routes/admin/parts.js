@@ -8,9 +8,9 @@ const getParts = (req, res) => {
 
 const postParts = (req, res) => {
   let pylon = new Part({
-    partName: 'MUST CONSTRUCT ADDITION',
-    stock: 15,
-    description: 'support structure for use in beams',
+    partName: req.body.partName || '',
+    stock: req.body.stock || '',
+    description: req.body.description || ' ',
     owners: []
   })
   pylon.save()
