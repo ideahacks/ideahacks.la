@@ -1,9 +1,11 @@
 $(document).ready(() => {
+  let socket = io('/admin/teams')
+
   $('form').submit(e => {
     e.preventDefault()
 
     let teamMembers = []
-    $('.member-email').each(function(i, el) {
+    $('.member-email').each((i, el) => {
       teamMembers.push(el.value)
     })
 
@@ -18,18 +20,25 @@ $(document).ready(() => {
       if (response.status === 'failure') {
         $('.error-message').text(response.message)
       } else {
-        const newTeamHTML = [
-          '<li>',
-            '<h1>',teamData.teamName,'</h1>',
-            '<h1>',teamData.teamNumber,'</h1>',
-          '</li>'
-        ].join('')
-
-        $(newTeamHTML).prependTo('.team-list')
+        appendNewTeam(teamData)
+        socket.emit('team created', teamData)
         $('input').val('')
       }
     })
   })
 
   $('input').focus(() => $('.error-message').text(''))
+
+  socket.on('team created', teamData => appendNewTeam(teamData))
 })
+
+function appendNewTeam(teamData) {
+  const newTeamHTML = [
+    '<li>',
+      '<h1>',teamData.teamName,'</h1>',
+      '<h1>',teamData.teamNumber,'</h1>',
+    '</li>'
+  ].join('')
+
+  $(newTeamHTML).prependTo('.team-list')
+}
