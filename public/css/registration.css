@@ -13,6 +13,7 @@ footer {
   line-height: normal;
   padding-top: 15px;
 }
+
 body {
   background-color: #10253f;
   color: #ffc301;
@@ -26,6 +27,7 @@ hr {
   width: 63%;
   float: left;
 }
+
 .idea_hacks_banner {
   font-family: 'Source Sans Pro', sans-serif;
   width: 25%;
