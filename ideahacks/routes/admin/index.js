@@ -7,8 +7,8 @@ const h = require('../../helpers').authHelpers
 
 adminRouter.get('/', h.isAuthenticated, adminHandlers.getAdmin)
 
-adminRouter.get('/teams', h.isAuthenticated, teamHandlers.getTeams)
-adminRouter.post('/teams', h.isAuthenticated, teamHandlers.postTeams)
+adminRouter.get('/teams', /*h.isAuthenticated,*/ teamHandlers.getTeams)
+adminRouter.post('/teams', /*h.isAuthenticated,*/ teamHandlers.postTeams)
 adminRouter.delete('/teams', h.isAuthenticated, teamHandlers.deleteTeams)
 
 adminRouter.get('/parts', h.isAuthenticated, partsHandlers.getParts)
