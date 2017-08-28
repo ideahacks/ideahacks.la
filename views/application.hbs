@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BANH MI</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel='stylesheet' href="/css/form.css" />
+
+</head>
+
+<body>
+  <p id='required-text'>* Required Field</p>
+  <form id='appForm'>
+  <!-- PERSONAL INFORMATION -->
+  <div class='row'>
+    <fieldset id='personal-information' class='col-md-12'>
+      <legend><b>PERSONAL INFORMATION</b></legend>
+      <div class='form-group col-md-5>'
+        <label>FIRST NAME*:</label>
+        <input class='form-control' type='text' name='firstName'>
+      </div>
+      <div class='form-group col-md-5>'
+        <label>LAST NAME*:</label>
+        <input class='form-control' type='text' name='lastName'>
+      </div>
+      <div class='form-group col-md-5>'
+        <label>PHONE NUMBER*:</label>
+        <input class='form-control' type='tel' name='telephone'>
+      </div>
+      <div class='form-group col-md-5>'
+        <label>EMAIL ADDRESS*: <span class='sublabel'>(EDU EMAIL REQUIRED)</span></label>
+        <input class='form-control' type='email' name='email'>
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- EDUCATIONAL INFORMATION -->
+  <div class='row'>
+    <fieldset id='educational-information' class='col-md-12'>
+      <legend><b>EDUCATIONAL INFORMATION</b></legend>
+        <div class='form-group col-md-12>'
+          <label>SCHOOL*:</label>
+          <input class='form-control' type='text' name='school'>
+        </div>
+        <div class='form-group col-md-5>'
+          <label>MAJOR*:</label>
+          <input class='form-control' type='text' name='major'>
+        </div>
+        <div class='form-group col-md-5>'
+          <label>YEAR*:</label>
+          <input class='form-control' type='text' name='year'>
+        </div>
+        <div class='form-group col-md-4>'
+          <label>GITHUB:</label>
+          <input class='form-control' type='url' name='github'>
+        </div>
+        <div class='form-group col-md-4>'
+          <label>LINKEDIN:</label>
+          <input class='form-control' type='url' name='linkedin'>
+        </div>
+    </fieldset>
+  </div>
+
+  <!-- TEAM INFORMATION -->
+  <div class='row'>
+    <fieldset id='team-information' class='col-md-6'>
+      <legend><b>TEAM INFORMATION</b></legend>
+      <div class='form-group col-md-12'>
+        <label>DO YOU HAVE A TEAM?*</label>
+        <select class='form-control' id='team-select' name='teamOrNot'>
+          <option>SELECT</option>
+          <option>YES</option>
+          <option>NO</option>
+        </select>
+      </div>
+
+      <div class='form-group col-md-12'>
+        <label>IF SO, WHAT ARE YOUR TEAMMATES' EMAILS?</label><br />
+        <input class='form control' type='email' name='tm_email1'><br />
+        <input class='form control' type='email' name='tm_email2'><br />
+        <input class='form control' type='email' name='tm_email3'><br />
+        <input class='form control' type='email' name='tm_email4'>
+      </div>
+    </fieldset>
+
+    <!-- MISC INFORMATION -->
+    <fieldset id='misc' class='col-md-6'>
+      <legend><b>MISCELLANEOUS</b></legend>
+        <div class='form-group col-md-12>'
+          <label>DIETARY RESTRICTIONS AND FOOD ALLERGIES: </label>
+          <input class='form-control' type='url' name='dietary_restriction'>
+        </div>
+        <div class='form-group>'
+          <label class='col-sm-7'>WILL YOU BE BRINGING A VEHICLE AND NEED PARKING? <span class='sublabel'>(PARKING PRIORITY TO NON-UCLA STUDENTS)</span></label>
+          <select class='form-control' name='parking'>
+            <option>SELECT</option>
+            <option>YES</option>
+            <option>NO</option>
+          </select>
+
+        </div>
+    </fieldset>
+  </div>
+
+  <!-- HACKATHON INFORMATION -->
+  <div class='row'>
+    <fieldset id='hackathon-information' class='col-md-12'>
+      <legend><b>HACKATHON INFORMATION</b></legend>
+      <div class='form-group col-md-12'>
+        <label>SKILLS AND EXPERIENCES<span style='color: transparent;'>HACKATHON EXPERIENCE</span></label>
+        <textarea class='form-control textarea' rows='4'></textarea>
+      </div>
+      <div class='form-group col-md-12'>
+        <label>DO YOU HAVE ANY PAST HACKATHON EXPERIENCE?<label>
+        <textarea class='form-control textarea' rows='4'></textarea>
+      </div>
+      <div class='form-group col-md-12'>
+        <label>WHY DO YOU WANT TO PARTICIPATE IN IDEA HACKS?<label>
+        <textarea class='form-control textarea' rows='4'></textarea>
+      </div>
+      <div class='form-group col-md-12'>
+        <label>DO YOU HAVE AN IDEA TO HACK FOR THIS YEAR'S THEME? <span class='sublabel'>THEME: AUTOMATION (IT'S OK IF YOU DON'T YET!)</span><label>
+
+        <textarea class='form-control textarea' rows='4'></textarea>
+      </div>
+      <div class='form-group col-md-12'>
+        <label>WHAT PARTS WOULD YOU LIKE TO SEE AT IDEA HACKS THIS YEAR?<label>
+        <textarea class='form-control textarea' type='text'></textarea>
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- BUTTONS -->
+  <div id='buttons' class='row'>
+    <button type='submit' class='btn btn-primary col-xs-10 col-xs-offset-1 col-md-offset-4'>SUBMIT APPLICATION</button>
+  </div>
+  </form>
+
+  <!-- FOOTER -->
+  <div class='footer'>
+    <p>Copyright &copy; IDEA Hacks</p>
+  </div>
+
+
+</body>
+
+</html>
