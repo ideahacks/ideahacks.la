@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway|Montserrat|Open+Sans|Roboto|Pacifico);
+
+* {
+  font-family: Raleway;
+}
+
+body {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#required-text {
+  color: #5e5e5e;
+  font-size: 18px;
+}
+
+.sublabel {
+  font-size: 10px;
+  color: #5e5e5e;
+}
+
+fieldset {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+.btn {
+  padding: 10px;
+  margin: 0 auto;
+}
