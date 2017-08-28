@@ -1,8 +1,10 @@
 $(document).ready(() => {
-  let socket = io('/admin/teams')
+  let socket = io('/admin/teams') // open socket to the server
 
+  // form submission logic
   $('form').submit(e => {
     e.preventDefault()
+    userNoLongerTyping()
 
     let teamMembers = []
     $('.member-email').each((i, el) => {
@@ -27,8 +29,30 @@ $(document).ready(() => {
     })
   })
 
+  // clear error message when user tries to retry
   $('input').focus(() => $('.error-message').text(''))
 
+  // user is typing logic
+  let typing = false
+  let timeout;
+  let userNoLongerTyping = () => {
+    typing = false
+    socket.emit('no longer typing')
+  }
+  $('input').on('input', () => {
+    if (typing === false) {
+      typing = true
+      socket.emit('user typing')
+      timeout = setTimeout(userNoLongerTyping, 5000)
+    } else {
+      clearTimeout(timeout)
+      timeout = setTimeout(userNoLongerTyping, 5000)
+    }
+  })
+  socket.on('user typing', () => $('.user-typing-message').text('A team is being created.'))
+  socket.on('no longer typing', () => $('.user-typing-message').text(''))
+
+  // append new team to list when server sends team created event
   socket.on('team created', teamData => appendNewTeam(teamData))
 })
 
