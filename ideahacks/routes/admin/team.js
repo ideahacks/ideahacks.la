@@ -1,4 +1,5 @@
 const Team = require('../../db').Team
+const User = require('../../db').User
 
 const getTeams = (req, res) => {
   Team.find({}).then(teams => {
@@ -14,8 +15,20 @@ const postTeams = (req, res) => {
       message: 'Please fill out all fields of the form!'
     })
   }
+    console.log(req.body.members)
+  User.find({
+    email: { $in: [req.body.members] }
+  }).then(emails => {
+      console.log(emails)
+    if (emails.length === 0) {
+      return res.json({
+        status: 'failure',
+        message: 'A user you entered is not in our database!'
+      })
+    }
+  }) 
   Team.find({
-    $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
+    $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }, {members: {$in:[req.body.members]}}]
   }).then(team => {
     if (team.length === 0) {
       let newTeam = new Team({
