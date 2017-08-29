@@ -8,7 +8,7 @@ $(document).ready(() => {
 
     let teamMembers = []
     $('.member-email').each((i, el) => {
-      teamMembers.push(el.value)
+      if (el.value !== '') teamMembers.push(el.value)
     })
 
     let teamData = {
