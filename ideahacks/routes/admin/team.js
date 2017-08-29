@@ -8,6 +8,12 @@ const getTeams = (req, res) => {
 }
 
 const postTeams = (req, res) => {
+  if (req.body.teamName === '' || req.body.teamNumber === '') {
+    return res.json({
+      status: 'failure',
+      message: 'Please fill out all fields of the form!'
+    })
+  }
   Team.find({
     $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
   }).then(team => {
@@ -27,7 +33,7 @@ const postTeams = (req, res) => {
     }
     return res.json({
       status: 'failure',
-      message: 'A team with this name number has already been created!'
+      message: 'A team with this name or number has already been created!'
     })
   })
 }
