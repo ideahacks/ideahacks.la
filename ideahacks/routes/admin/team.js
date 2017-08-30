@@ -20,8 +20,6 @@ const postTeams = (req, res) => {
     .populate('members')
     .then(teams => {
       for (let team of teams) {
-          console.log(team.teamName, req.body.teamName)
-          console.log(team.teamNumber, req.body.teamNumber)
         if (team.teamName === req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {
           return res.json({
             status: 'failure',
@@ -66,7 +64,6 @@ const postTeams = (req, res) => {
             parts: []
           })
           newTeam.save()
-          console.log(newTeam)
 
           return res.json({
             status: 'success',
