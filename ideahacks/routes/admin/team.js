@@ -9,49 +9,53 @@ const getTeams = (req, res) => {
 }
 
 const postTeams = (req, res) => {
-  if (req.body.teamName === '' || req.body.teamNumber === '') {
+  if (req.body.teamName === '' || req.body.teamNumber === '' || req.body.members === undefined) {
     return res.json({
       status: 'failure',
       message: 'Please fill out all fields of the form!'
     })
   }
 
-  User.find({
-    email: { $in: req.body.members }
+  Team.find({
+    $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
   })
-    .then(users => {
-      let tempEmails = req.body.members
-      for (let user of users) {
-        let index = tempEmails.indexOf(user.email)
-        if (index !== -1) {
-          tempEmails.splice(index, 1)
-        }
-      }
-      if (tempEmails.length > 0) {
+    .then(team => {
+      if (team.length !== 0) {
         return res.json({
           status: 'failure',
-          message: 'The emails ' + tempEmails.join(', ') + ' are not within our database!'
+          message: 'A team with this name or number has already been created!'
         })
       }
-
-      return Team.find({
-        $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
+      return User.find({
+        email: { $in: req.body.members }
       })
-        .then(team => {
-          if (team.length !== 0) {
+        .then(users => {
+          let tempEmails = req.body.members
+          for (let user of users) {
+            let index = tempEmails.indexOf(user.email)
+            if (index !== -1) {
+              tempEmails.splice(index, 1)
+            }
+          }
+          if (tempEmails.length > 0) {
             return res.json({
               status: 'failure',
-              message: 'A team with this name or number has already been created!'
+              message: 'The emails ' + tempEmails.join(', ') + ' are not within our database!'
             })
+          }
+          let memberIds = []
+          for (let user of users) {
+            memberIds.push(user._id)
           }
 
           let newTeam = new Team({
             teamName: req.body.teamName || '',
             teamNumber: req.body.teamNumber || '',
-            members: [],
+            members: memberIds,
             parts: []
           })
           newTeam.save()
+          console.log(newTeam)
 
           return res.json({
             status: 'success',
