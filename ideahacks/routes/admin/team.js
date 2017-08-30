@@ -30,7 +30,7 @@ const postTeams = (req, res) => {
           if (req.body.members.indexOf(user.email) != -1) {
             return res.json({
               status: 'failure',
-              message: 'Some of your teammates are already on another team!'
+              message: user.email + ' has already been taken by team #' + team.teamNumber
             })
           }
         }
