@@ -16,15 +16,26 @@ const postTeams = (req, res) => {
     })
   }
 
-  Team.find({
-    $or: [{ teamName: req.body.teamName }, { teamNumber: req.body.teamNumber }]
-  })
-    .then(team => {
-      if (team.length !== 0) {
-        return res.json({
-          status: 'failure',
-          message: 'A team with this name or number has already been created!'
-        })
+  Team.find()
+    .populate('members')
+    .then(teams => {
+      for (let team of teams) {
+          console.log(team.teamName, req.body.teamName)
+          console.log(team.teamNumber, req.body.teamNumber)
+        if (team.teamName === req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {
+          return res.json({
+            status: 'failure',
+            message: 'A team with this team name or number already exists!'
+          })
+        }
+        for (let user of team.members) {
+          if (req.body.members.indexOf(user.email) != -1) {
+            return res.json({
+              status: 'failure',
+              message: 'Some of your teammates are already on another team!'
+            })
+          }
+        }
       }
       return User.find({
         email: { $in: req.body.members }
