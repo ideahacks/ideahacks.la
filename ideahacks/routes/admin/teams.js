@@ -2,9 +2,10 @@ const Team = require('../../db').Team
 const User = require('../../db').User
 
 const getTeams = (req, res) => {
-  Team.find({}).then(teams => {
+  // prettier-ignore
+  Team.find().populate('members', 'email').then(teams => {
     teams.reverse()
-    res.render('admin-team', { teams })
+    res.render('admin-teams', { teams })
   })
 }
 
@@ -17,7 +18,7 @@ const postTeams = (req, res) => {
   }
 
   Team.find()
-    .populate('members')
+    .populate('members', 'email')
     .then(teams => {
       for (let team of teams) {
         if (team.teamName === req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {

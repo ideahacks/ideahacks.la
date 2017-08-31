@@ -1,7 +1,7 @@
 const express = require('express')
 const adminRouter = express.Router()
 const adminHandlers = require('./admin.js')
-const teamHandlers = require('./team.js')
+const teamHandlers = require('./teams.js')
 const partsHandlers = require('./parts')
 const h = require('../../helpers').authHelpers
 
