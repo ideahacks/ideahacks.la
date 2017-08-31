@@ -26,6 +26,9 @@
           <li>
             <h1>{{ this.teamName }}</h1>
             <h1>{{ this.teamNumber }}</h1>
+              {{#each this.members}}
+              <p>{{ this.email }}</p>
+              {{/each}}
           </li>
       {{/each}}
     </ul>

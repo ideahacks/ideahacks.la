@@ -57,12 +57,16 @@ $(document).ready(() => {
 })
 
 function appendNewTeam(teamData) {
-  const newTeamHTML = [
+  let newTeamHTML = [
     '<li>',
       '<h1>',teamData.teamName,'</h1>',
-      '<h1>',teamData.teamNumber,'</h1>',
-    '</li>'
-  ].join('')
+      '<h1>',teamData.teamNumber,'</h1>'
+  ]
+  for(let email of teamData.members){
+      newTeamHTML.push('<p>', email, '</p>')
+  }
+  newTeamHTML.push('</li>')
+  newTeamHTML = newTeamHTML.join('')
 
   $(newTeamHTML).prependTo('.team-list')
 }
