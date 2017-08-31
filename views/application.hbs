@@ -4,17 +4,23 @@
 <head>
   <title>BANH MI</title>
 
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
   <!-- CSS -->
   <link rel='stylesheet' href="/css/form.css" />
 
+  <!-- SCRIPTS -->
+  <script src='/js/application.js'></script>
+
 </head>
 
 <body>
   <p id='required-text'>* Required Field</p>
-  <form id='appForm'>
+  <form id='appForm' class='application-form'>
   <!-- PERSONAL INFORMATION -->
   <div class='row'>
     <fieldset id='personal-information' class='col-md-12'>
@@ -29,11 +35,11 @@
       </div>
       <div class='form-group col-md-5>'
         <label>PHONE NUMBER*:</label>
-        <input class='form-control' type='tel' name='telephone'>
+        <input class='form-control' type='tel' name='phone'>
       </div>
       <div class='form-group col-md-5>'
         <label>EMAIL ADDRESS*: <span class='sublabel'>(EDU EMAIL REQUIRED)</span></label>
-        <input class='form-control' type='email' name='email'>
+        <input class='form-control' type='email' name='email' value='{{ user.email }}'>
       </div>
     </fieldset>
   </div>
@@ -71,7 +77,7 @@
       <legend><b>TEAM INFORMATION</b></legend>
       <div class='form-group col-md-12'>
         <label>DO YOU HAVE A TEAM?*</label>
-        <select class='form-control' id='team-select' name='teamOrNot'>
+        <select class='form-control' id='team-select' name='hasTeam'>
           <option>SELECT</option>
           <option>YES</option>
           <option>NO</option>
@@ -80,10 +86,10 @@
 
       <div class='form-group col-md-12'>
         <label>IF SO, WHAT ARE YOUR TEAMMATES' EMAILS?</label><br />
-        <input class='form control' type='email' name='tm_email1'><br />
-        <input class='form control' type='email' name='tm_email2'><br />
-        <input class='form control' type='email' name='tm_email3'><br />
-        <input class='form control' type='email' name='tm_email4'>
+        <input class='form control teammate-email' type='email' name='tm-email1'><br />
+        <input class='form control teammate-email' type='email' name='tm-email2'><br />
+        <input class='form control teammate-email' type='email' name='tm-email3'><br />
+        <input class='form control teammate-email' type='email' name='tm-email4'>
       </div>
     </fieldset>
 
@@ -92,11 +98,11 @@
       <legend><b>MISCELLANEOUS</b></legend>
         <div class='form-group col-md-12>'
           <label>DIETARY RESTRICTIONS AND FOOD ALLERGIES: </label>
-          <input class='form-control' type='url' name='dietary_restriction'>
+          <input class='form-control' type='text' name='foodRestrictions'>
         </div>
         <div class='form-group>'
           <label class='col-sm-7'>WILL YOU BE BRINGING A VEHICLE AND NEED PARKING? <span class='sublabel'>(PARKING PRIORITY TO NON-UCLA STUDENTS)</span></label>
-          <select class='form-control' name='parking'>
+          <select class='form-control' name='vehicleNeed'>
             <option>SELECT</option>
             <option>YES</option>
             <option>NO</option>
@@ -112,31 +118,31 @@
       <legend><b>HACKATHON INFORMATION</b></legend>
       <div class='form-group col-md-12'>
         <label>SKILLS AND EXPERIENCES<span style='color: transparent;'>HACKATHON EXPERIENCE</span></label>
-        <textarea class='form-control textarea' rows='4'></textarea>
+        <textarea class='form-control textarea' name='skillsAndExperience' rows='4'></textarea>
       </div>
       <div class='form-group col-md-12'>
         <label>DO YOU HAVE ANY PAST HACKATHON EXPERIENCE?<label>
-        <textarea class='form-control textarea' rows='4'></textarea>
+        <textarea class='form-control textarea' name='pastHackathonExperience' rows='4'></textarea>
       </div>
       <div class='form-group col-md-12'>
         <label>WHY DO YOU WANT TO PARTICIPATE IN IDEA HACKS?<label>
-        <textarea class='form-control textarea' rows='4'></textarea>
+        <textarea class='form-control textarea' name='reasonForParticipation' rows='4'></textarea>
       </div>
       <div class='form-group col-md-12'>
         <label>DO YOU HAVE AN IDEA TO HACK FOR THIS YEAR'S THEME? <span class='sublabel'>THEME: AUTOMATION (IT'S OK IF YOU DON'T YET!)</span><label>
 
-        <textarea class='form-control textarea' rows='4'></textarea>
+        <textarea class='form-control textarea' name='themeIdea' rows='4'></textarea>
       </div>
       <div class='form-group col-md-12'>
         <label>WHAT PARTS WOULD YOU LIKE TO SEE AT IDEA HACKS THIS YEAR?<label>
-        <textarea class='form-control textarea' type='text'></textarea>
+        <textarea class='form-control textarea' name='desiredParts' type='text'></textarea>
       </div>
     </fieldset>
   </div>
 
   <!-- BUTTONS -->
   <div id='buttons' class='row'>
-    <button type='submit' class='btn btn-primary col-xs-10 col-xs-offset-1 col-md-offset-4'>SUBMIT APPLICATION</button>
+    <button type='submit' class='submit-application btn btn-primary col-xs-10 col-xs-offset-1 col-md-offset-4'>SUBMIT APPLICATION</button>
   </div>
   </form>
 
