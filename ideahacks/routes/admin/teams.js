@@ -2,9 +2,10 @@ const Team = require('../../db').Team
 const User = require('../../db').User
 
 const getTeams = (req, res) => {
+  // prettier-ignore
   Team.find().populate('members', 'email').then(teams => {
     teams.reverse()
-    res.render('admin-team', { teams })
+    res.render('admin-teams', { teams })
   })
 }
 
