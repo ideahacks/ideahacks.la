@@ -1,5 +1,6 @@
 module.exports = {
   adminRouter: require('./admin'),
+  apiRouter: require('./api'),
   mainRouter: require('./main'),
-  apiRouter: require('./api')
+  dashboardRouter: require('./dashboard')
 }
