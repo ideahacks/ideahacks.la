@@ -17,7 +17,7 @@ const postParts = (req, res) => {
 
 
 	//Check if part name already exists in database
-	Part.find({ partName: req.body.partName}).then(parts =? {
+	Part.find({ partName: req.body.partName}).then(parts => {
 		if( parts.length > 0) {
 			return res.json({ status: 'failure', message: 'Part already exists'})	
 		}
