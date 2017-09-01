@@ -7,27 +7,29 @@ const getParts = (req, res) => {
 }
 
 const postParts = (req, res) => {
+  //return failure if anything is wrong with the submitted part
+  if (
+    req.body.partName === '' ||
+    !(Number.isInteger(req.body.stock) && req.body.stock >= 0) ||
+    req.body.description === '' ||
+    req.body.owners === undefined
+  ) {
+    return res.json({ status: 'failure', message: 'Please fill out all fields of the form!' })
+  }
+  //end of form failure test
 
-	//return failure if anything is wrong with the submitted part
-	if(req.body.partName === '' || !(Number.isInteger(req.body.stock) && req.body.stock >= 0) || req.body.description === '' || req.body.owners === undefined)
-	{
-		return res.json({ status: 'failure', message: 'Please fill out all fields of the form!'})
-	}
- 	//end of form failure test
+  //Check if part name already exists in database
+  Part.find({ partName: req.body.partName }).then(parts => {
+    if (parts.length > 0) {
+      return res.json({ status: 'failure', message: 'Part already exists' })
+    }
+  })
 
+  //end of uniqueness check
 
-	//Check if part name already exists in database
-	Part.find({ partName: req.body.partName}).then(parts => {
-		if( parts.length > 0) {
-			return res.json({ status: 'failure', message: 'Part already exists'})	
-		}
-	})
+  //if part passes both tests, then create the part
 
-	//end of uniqueness check
-
-//if part passes both tests, then create the part
-
-let newPart = new Part({
+  let newPart = new Part({
     partName: req.body.partName || '',
     stock: req.body.stock || '',
     description: req.body.description || ' ',
@@ -36,13 +38,10 @@ let newPart = new Part({
   newPart.save()
 
   res.json({ message: 'Success! Part has been created' })
-//end of part creation
-	
+  //end of part creation
 
-//end postParts function
+  //end postParts function
 }
-
-
 
 const deleteParts = (req, res) => {
   Part.remove().then(err => {
