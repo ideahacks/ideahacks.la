@@ -8,7 +8,7 @@ $(() => {
     }
 
     $.ajax({ url: '/login', type: 'POST', data: loginData }).done(response => {
-      if (response.status === 'success') location.href = '/admin'
+      if (response.status === 'success') location.href = '/dashboard'
 
       $('.error-message').text(response.message)
     })

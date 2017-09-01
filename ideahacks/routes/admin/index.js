@@ -1,11 +1,16 @@
 const express = require('express')
 const adminRouter = express.Router()
 const adminHandlers = require('./admin.js')
+const announcementHandlers = require('./announcements.js')
 const teamHandlers = require('./teams.js')
 const partsHandlers = require('./parts')
 const h = require('../../helpers').authHelpers
 
 adminRouter.get('/', h.isAuthenticated, adminHandlers.getAdmin)
+
+adminRouter.get('/announcements', h.isAuthenticated, announcementHandlers.getAnnouncements)
+adminRouter.post('/announcements', h.isAuthenticated, announcementHandlers.postAnnouncements)
+adminRouter.delete('/announcements', h.isAuthenticated, announcementHandlers.nukeAnnouncements)
 
 adminRouter.get('/teams', h.isAuthenticated, teamHandlers.getTeams)
 adminRouter.post('/teams', h.isAuthenticated, teamHandlers.postTeams)

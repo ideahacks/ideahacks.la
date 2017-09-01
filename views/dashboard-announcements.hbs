@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dashboard - Announcements</title>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- SOCKET IO -->
+    <script src='/socket.io/socket.io.js'></script>
+</head>
+<body>
+    <div class='banner'>
+      <h1>Announcements</h1>
+    </div>
+    <ul class='announcements-list'>
+        {{#each announcements}}
+            <li>
+                <h1>{{ this.header }}</h1>
+                <p>{{ this.body  }}</p>
+                <p>{{ this.category }}</p>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
