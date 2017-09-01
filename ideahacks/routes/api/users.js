@@ -1,31 +1,33 @@
 const User = require('../../db').User
 
-const getUser = (req, res) => {
-  User.find({}).then(users => {
-    res.json(users)
+const getUsers = (req, res) => {
+  User.find().then(users => {
+    return res.json(users)
   })
 }
 
-const postUser = (req, res) => {
-  let trey = new User({
+const postUsers = (req, res) => {
+  let newUser = new User({
     firstName: 'Trey',
     lastName: 'Crossley',
     email: 'jeffschan97@gmail.com',
     password: 'jeffrey'
   })
-  trey.save()
+  newUser.save()
 
-  res.json({ message: 'Received POST request' })
+  return res.json({ message: 'Received POST request' })
 }
 
-const deleteUser = (req, res) => {
-  User.remove({})
+const deleteUsers = (req, res) => {
+  User.remove().then(err => {
+    if (err) console.log(err)
 
-  res.json({ message: 'Received DELETE requets' })
+    return res.json({ message: 'Received DELETE requets' })
+  })
 }
 
 module.exports = {
-  getUser,
-  postUser,
-  deleteUser
+  getUsers,
+  postUsers,
+  deleteUsers
 }
