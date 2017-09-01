@@ -6,8 +6,13 @@
   "scripts": {
     "development": "./node_modules/.bin/nodemon server.js",
     "start": "node server.js",
-    "test": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
-    "format": "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js"
+    "test":
+      "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "format":
+      "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js"
+  },
+  "lint-staged": {
+    "*.js": ["npm run format", "git add"]
   },
   "repository": {
     "type": "git",
@@ -33,6 +38,8 @@
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
     "nodemon": "^1.11.0",
     "prettier": "^1.6.1",
     "prettier-check": "^1.0.0"
