@@ -25,9 +25,13 @@
 		<input type="submit" value="Submit">
 	</form>
 
-  {{#each parts}}
-		<h1>{{ this.partName }} </h1>
-		<p> {{ this.stock }} </p>
-	{{/each}}
+	<ul class='part-list'>
+ 		 {{#each parts}}
+		 <li>
+			<h1>{{ this.partName }} </h1>
+			<p> {{ this.stock }} </p>
+		 </li>
+		{{/each}}
+	</ul> 
 </body>
 </html>
