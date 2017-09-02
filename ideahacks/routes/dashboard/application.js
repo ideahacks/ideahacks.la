@@ -6,6 +6,17 @@ const getApplication = (req, res) => {
 }
 
 const postApplication = (req, res) => {
+  if (req.body.teammates === undefined && req.body.hasTeam === 'YES') {
+    return res.json({
+      status: 'failure',
+      message: 'You cannot have a team without teammates!'
+    })
+  } else if (req.body.teammates.length >= 1 && req.body.hasTeam === 'NO') {
+    return res.json({
+      status: 'failure',
+      message: 'You have a team!'
+    })
+  }
   for (let key in req.body) {
     req.user[key] = req.body[key]
   }
@@ -16,7 +27,10 @@ const postApplication = (req, res) => {
 
   req.user.save()
 
-  res.json({ message: 'post request received' })
+  return res.json({
+    status: 'success',
+    message: 'You have sucessfully submitted!'
+  })
 }
 
 module.exports = {

@@ -78,9 +78,8 @@
       <div class='form-group col-md-12'>
         <label>DO YOU HAVE A TEAM?*</label>
         <select class='form-control' id='team-select' name='hasTeam'>
-          <option>SELECT</option>
-          <option>YES</option>
-          <option>NO</option>
+          <option {{#if user.hasATeam}}selected{{/if}}>YES</option>
+          <option {{#if user.hasNoTeam}}selected{{/if}}>NO</option>
         </select>
       </div>
 
@@ -103,9 +102,8 @@
         <div class='form-group>'
           <label class='col-sm-7'>WILL YOU BE BRINGING A VEHICLE AND NEED PARKING? <span class='sublabel'>(PARKING PRIORITY TO NON-UCLA STUDENTS)</span></label>
           <select class='form-control' name='vehicleNeed'>
-            <option>SELECT</option>
-            <option>YES</option>
-            <option>NO</option>
+            <option {{#if user.doesNeedVehicle}}selected{{/if}}>YES</option>
+            <option {{#if user.doesNotNeedVehicle}}selected{{/if}}>NO</option>
           </select>
 
         </div>
@@ -144,6 +142,7 @@
   <div id='buttons' class='row'>
     <button type='submit' class='submit-application btn btn-primary col-xs-10 col-xs-offset-1 col-md-offset-4'>SUBMIT APPLICATION</button>
   </div>
+  <h1 class="submit-message"></h1>
   </form>
 
   <!-- FOOTER -->
