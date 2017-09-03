@@ -1,36 +1,45 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16pt;
 }
 
 body{
 	margin:0;
 	line-height: 1.6;
 }
-
 h1{
 	text-align: center;
 	padding: 50px 20px;
 }
 
-h2{
+.title{
 	text-transform: uppercase;
 }
 
-h3{
-	padding-top: 20px;
+/*---------------- CONTAINERS -----------------------------------------*/
+.container-fluid{
+	background-color: #FAFAFA;
+	padding: 78pt 0;
 }
 
+.container{
+	padding: 78pt 0;
+}
+
+/*---------------- NAVBAR -----------------------------------------*/
 .navbar {
-   background-color: transparent !important;
-   background: transparent !important;
-   border-color: transparent !important;
+	background-color: transparent !important;
+	background: transparent !important;
+	border-color: transparent !important;
+}
+.navbar li {
+	color: #000 !important;
 }
 
-.navbar li { 
-	color: #000 !important; 
-} 
 
+/*---------------- LANDPAGE -----------------------------------------*/
 #showcase{
 	/*background-image:url(/img/index/image.jpg);*/
 	background-color: #00665e;
@@ -38,7 +47,6 @@ h3{
 	background-position: center;
 	height: 100vh;
 }
-
 #showcase #content{
 	height: 100vh;
 	display: flex;
@@ -47,88 +55,141 @@ h3{
 	align-items: center;
 	padding: 0 20px;
 }
-
 #showcase h1{
 	font-size: 50px;
 	line-height: 1.2;
+	padding: 0 20px;
 }
-
-
 #showcase p{
 	font-size: 20px;
 }
 
-#showcase nav{
+/*---------------- DETAILS SECTION -----------------------------------------*/
+
+#detail{
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+#detail div{
+	font-size: 18pt;
 }
 
-.container{
-	padding: 0px 20px;
-	padding-bottom: 100px
+.location{
+	color: #ffb718;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 32pt !important;
+	background-color: #FBEFD5;
+	line-height: 32pt;
 }
 
-.container-fluid{
-	padding: 0px 20px;
-	padding-bottom: 100px;
-	background-color: #1d1d1d;
+#dayspan{
+	padding-top: 22px;
+}
+
+/*---------------- ABOUT SECTION -----------------------------------------*/
+
+#left div{
+	font-family: "Courier New", Courier, monospace;
 	display: flex;
 	justify-content: center;
+	font-size: 20pt;
+	line-height: 20pt;
+
 }
 
-#about{
-	padding-top: 100px;
+#left #tf{
+	justify-content: flex-start;
+	text-indent: 2em;
 }
+
+#left #hh{
+	color: #ffb718;
+	font-size: 48pt !important;
+	line-height: 48pt;
+}
+
+#left #ot{
+	text-indent: 2em;
+}
+
+#left #wc{
+	text-indent: 8em;
+}
+
+/*---------------- SCHEDULE SECTION -----------------------------------------*/
 #schedule{
 	flex-direction: column;
 	align-items: center;
 }
-
-#schedule-header{
+#schedule-content{
 	background-color: white;
 }
 
-.table{
-	color: #33CEC3;	
+.day{
+	color: #ffb718;
+	padding-left: 20px;
 }
 
-.table th, .table td { 
-     border-top: none !important; 
- }
-
-.nav-link{
-	color: #33CEC3;
+.day-num{
+	color: #3185C0;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 32pt;
+	line-height: 30px;
+	padding-bottom: 20px;
+	padding-left: 20px;
 }
 
-#schedule .nav-pills{
-	border: 2px solid;
-	border-color: #33CEC3;
-	width: 1000px;
-	align-items: center;
+/*---------------- FAQ SECTION -----------------------------------------*/
+
+section h3{
+	font-weight: bold;
+	font-size: 22pt;
+	padding-top: 15px;
 }
 
-.nav-item{
-	border-radius: 0 !important;
+.bot{
+	padding-top: 15%;
 }
 
-.nav-pills .active{
-	border-radius: 0 !important;
-	background-color: #33CEC3 !important;
-	color: black !important;
+/*---------------- DOTS LIST -----------------------------------------*/
+.dots-list {
+	width: 100%;
 }
-.nav-pills > li > a:focus{
-	background-color: #33CEC3 !important;
-		color:#fff;
+.dots-list ol {
+	padding-left: 50px;
+	position: relative;
+	margin-bottom: 20px;
+	list-style: none !important;
+}
+.dots-list ol li {
+	position: relative;
+	margin-top: 0em;
+	margin-bottom: 20px;
 }
 
-.nav-pills > li > a:hover{
-	background-color: #303136 !important;
-	    border: medium none;
-	    border-radius: 0;
-	    color:#fff;
+.dots-list ol li:before {
+	content: "";
+	background: #d8d8d8;
+	position: absolute;
+	width: 2px;
+	top: 1px;
+	bottom: -21px;
+	left: -24px;
 }
-
-.sched-time{
-	text-align: right;
+.dots-list ol li:after {
+	content: "";
+	background: #ffb718;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	top: 1px;
+	left: -31px;
 }
-.sched-event{
-	color: white;
+.dots-list ol li:last-child:before {
+	content: "";
+	background: #ffffff;
 }
