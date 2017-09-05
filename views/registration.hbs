@@ -16,15 +16,36 @@
 <!-- SCRIPTS -->
 <script src='/js/registration.js'></script>
 </head>
-    <body>
-        <div class="idea_hacks_banner">
-            IDEA HACKS
-        </div>
+<body>
+<div class="idea_hacks_banner">
+<h1>IDEA HACKS</h1>
+</div>
 
-        <div class="rectangle_content">
-            <svg width="400" height="110">
-                <rect width="300" height="100" />
-            </svg>
-        </div>
-    </body>
+<div class="create_account_heading">
+<h1>Create an Account</h1>
+</div>
+
+<div class = "main_body" style="position:fixed">
+<hr align="center"><br>
+
+<form action="/registration" method="POST">
+<strong>Email</strong>
+<input class="input" type="email" name="email" required><br>
+<strong> Password</strong>
+<input class="input" type="text" name="password" required><br>
+<strong>Confirm Password</strong>
+<input type="text" class="input" name="password-confirm" required><br>
+<input class="create_account_button" type="submit" name="Create Account" value="Create Account"/>
+<p class='error-message'></p>
+</form>
+
+<div class="account_already">
+<p>Already have an account? <a class="login_hyperlink" href="/login">Login</a></p>
+</div>
+</div>
+
+<footer style="margin:top:10px;">
+<strong>Copyright &copy; IDEA Hacks </strong>
+</footer>
+</body>
 </html>

@@ -2,10 +2,12 @@ const Team = require('../../db').Team
 const User = require('../../db').User
 
 const getTeams = (req, res) => {
-  Team.find({}).then(teams => {
-    teams.reverse()
-    res.render('admin-team', { teams })
-  })
+  Team.find()
+    .populate('members', 'email')
+    .then(teams => {
+      teams.reverse()
+      res.render('admin-teams', { teams })
+    })
 }
 
 const postTeams = (req, res) => {
@@ -17,7 +19,7 @@ const postTeams = (req, res) => {
   }
 
   Team.find()
-    .populate('members')
+    .populate('members', 'email')
     .then(teams => {
       for (let team of teams) {
         if (team.teamName === req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {
@@ -27,7 +29,7 @@ const postTeams = (req, res) => {
           })
         }
         for (let user of team.members) {
-          if (req.body.members.indexOf(user.email) != -1) {
+          if (req.body.members.indexOf(user.email) !== -1) {
             return res.json({
               status: 'failure',
               message: user.email + ' has already been taken by team #' + team.teamNumber

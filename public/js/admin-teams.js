@@ -34,7 +34,7 @@ $(document).ready(() => {
 
   // user is typing logic
   let typing = false
-  let timeout;
+  let timeout
   let userNoLongerTyping = () => {
     typing = false
     socket.emit('no longer typing')
@@ -57,12 +57,17 @@ $(document).ready(() => {
 })
 
 function appendNewTeam(teamData) {
-  const newTeamHTML = [
+  // prettier-ignore
+  let newTeamHTML = [
     '<li>',
       '<h1>',teamData.teamName,'</h1>',
-      '<h1>',teamData.teamNumber,'</h1>',
-    '</li>'
-  ].join('')
+      '<h1>',teamData.teamNumber,'</h1>'
+  ]
+  for (let email of teamData.members) {
+    newTeamHTML.push('<p>', email, '</p>')
+  }
+  newTeamHTML.push('</li>')
+  newTeamHTML = newTeamHTML.join('')
 
   $(newTeamHTML).prependTo('.team-list')
 }
