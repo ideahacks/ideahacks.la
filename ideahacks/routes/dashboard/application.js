@@ -11,7 +11,7 @@ const postApplication = (req, res) => {
       status: 'failure',
       message: 'You cannot have a team without teammates!'
     })
-  } else if (req.body.teammates.length >= 1 && req.body.hasTeam === 'NO') {
+  } else if (req.body.teammates !== undefined && req.body.teammates.length >= 1 && req.body.hasTeam === 'NO') {
     return res.json({
       status: 'failure',
       message: 'You have a team!'
