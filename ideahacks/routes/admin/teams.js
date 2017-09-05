@@ -29,7 +29,7 @@ const postTeams = (req, res) => {
           })
         }
         for (let user of team.members) {
-          if (req.body.members.indexOf(user.email) != -1) {
+          if (req.body.members.indexOf(user.email) !== -1) {
             return res.json({
               status: 'failure',
               message: user.email + ' has already been taken by team #' + team.teamNumber

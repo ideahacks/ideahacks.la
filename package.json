@@ -8,15 +8,18 @@
   "main": "index.js",
   "scripts": {
     "development": "./node_modules/.bin/nodemon server.js",
+    "format":
+      "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "format-check":
+      "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "lint": "./node_modules/.bin/eslint --fix --quiet ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "precommit": "lint-staged && npm test",
+    "prepush": "npm test",
     "start": "node server.js",
-    "test": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
-    "format": "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js"
+    "test": "npm run format-check && npm run lint"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run format",
-      "git add"
-    ]
+    "*.js": ["npm run format", "git add"]
   },
   "repository": {
     "type": "git",
@@ -43,6 +46,14 @@
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.4",
     "nodemon": "^1.11.0",
