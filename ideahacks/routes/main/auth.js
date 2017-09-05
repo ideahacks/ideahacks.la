@@ -32,10 +32,10 @@ const postRegistration = (req, res, next) => {
   User.findOne({ email: req.body.email }).then(user => {
     if (user) return res.json({ status: 'failure', message: 'A user with this username already exists!' })
 
-    bcrypt.hash(req.body.password, 10, (err, hash) => {
+    bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
       let newUser = new User({
         email: req.body.email,
-        password: hash
+        password: hashedPassword
       })
       newUser.save()
 
