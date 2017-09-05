@@ -53,7 +53,7 @@ img{
 
 /*---------------- LANDPAGE -----------------------------------------*/
 #showcase{
-	background-image:url(../img/index/startup-photos.jpg);
+	background-image:url(/img/index/startup-photos.jpg);
 	background-size:cover;
 	background-position: center;
 	height: 95vh;
