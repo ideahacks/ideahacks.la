@@ -1,6 +1,9 @@
 {
   "name": "ideahacks.la",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.x.x"
+  },
   "description": "Website for UCLA's IDEA Hacks",
   "main": "index.js",
   "scripts": {
