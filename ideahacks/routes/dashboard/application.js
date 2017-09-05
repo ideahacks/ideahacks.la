@@ -25,6 +25,8 @@ const postApplication = (req, res) => {
   req.user['hasTeam'] = req.body['hasTeam'] === 'YES'
   req.user['vehicleNeed'] = req.body['vehicleNeed'] === 'YES'
 
+  req.user.hasApplication = true
+
   req.user.save()
 
   return res.json({

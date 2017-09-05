@@ -6,6 +6,12 @@ const getUsers = (req, res) => {
   })
 }
 
+const getUserByEmail = (req, res) => {
+  User.findOne({ email: req.params.email }).then(user => {
+    return res.json(user)
+  })
+}
+
 const postUsers = (req, res) => {
   let newUser = new User({
     firstName: 'Trey',
@@ -28,6 +34,7 @@ const deleteUsers = (req, res) => {
 
 module.exports = {
   getUsers,
+  getUserByEmail,
   postUsers,
   deleteUsers
 }
