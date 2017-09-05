@@ -22,7 +22,7 @@ const postTeams = (req, res) => {
     .populate('members', 'email')
     .then(teams => {
       for (let team of teams) {
-        if (team.teamName === req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {
+        if (team.teamName == req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {
           return res.json({
             status: 'failure',
             message: 'A team with this team name or number already exists!'
