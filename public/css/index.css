@@ -3,6 +3,7 @@
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16pt;
+	color: #222222;
 }
 
 body{
@@ -14,18 +15,24 @@ h1{
 	padding: 50px 20px;
 }
 
+img{
+	width: 5%;
+	height: 5%;
+}
+
 .title{
 	text-transform: uppercase;
 }
 
+
 /*---------------- CONTAINERS -----------------------------------------*/
 .container-fluid{
 	background-color: #FAFAFA;
-	padding: 78pt 0;
+	padding: 78pt 20px;
 }
 
 .container{
-	padding: 78pt 0;
+	padding: 78pt 20px;
 }
 
 /*---------------- NAVBAR -----------------------------------------*/
@@ -38,31 +45,46 @@ h1{
 	color: #000 !important;
 }
 
+.nav-link{
+	color: white !important;
+	text-transform: uppercase !important;
+}
+
 
 /*---------------- LANDPAGE -----------------------------------------*/
 #showcase{
-	/*background-image:url(/img/index/image.jpg);*/
-	background-color: #00665e;
+	background-image:url(../img/index/startup-photos.jpg);
 	background-size:cover;
 	background-position: center;
-	height: 100vh;
+	height: 95vh;
 }
 #showcase #content{
+	position: absolute;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 0 20px;
+	padding-bottom: 25vh;
+	padding-left: 25vw;
 }
-#showcase h1{
-	font-size: 50px;
-	line-height: 1.2;
-	padding: 0 20px;
+#showcase #content img{
+	height: 50vh;
+	width: 50vw;
 }
-#showcase p{
-	font-size: 20px;
+
+.tint:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 5vh;
+	left: 0;
+	right: 0;
+	background: rgba(0,50,160,0.7);
 }
+
 
 /*---------------- DETAILS SECTION -----------------------------------------*/
 
@@ -81,6 +103,7 @@ h1{
 	color: #ffb718;
 	font-family: "Courier New", Courier, monospace;
 	font-size: 32pt !important;
+	display: inline;
 	background-color: #FBEFD5;
 	line-height: 32pt;
 }
@@ -91,7 +114,7 @@ h1{
 
 /*---------------- ABOUT SECTION -----------------------------------------*/
 
-#left div{
+#left span{
 	font-family: "Courier New", Courier, monospace;
 	display: flex;
 	justify-content: center;
@@ -119,6 +142,21 @@ h1{
 	text-indent: 8em;
 }
 
+#hosted{
+	font-weight: 900;
+	font-size: 12pt;
+}
+
+#tt{
+	width: 150%;
+	height: 100%;
+}
+
+#ieee{
+	width: 100%;
+	height: 40%;
+}
+
 /*---------------- SCHEDULE SECTION -----------------------------------------*/
 #schedule{
 	flex-direction: column;
@@ -126,6 +164,18 @@ h1{
 }
 #schedule-content{
 	background-color: white;
+}
+
+#schedule-header{
+	display: flex;
+	color: #DFF5FC;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 15vw;
+	line-height: 16vh;
+	font-weight: 900;
+	padding-bottom: 0px;
 }
 
 .day{
@@ -143,6 +193,10 @@ h1{
 }
 
 /*---------------- FAQ SECTION -----------------------------------------*/
+section{
+	padding: 0 20px;
+	padding-top: 15%;
+}
 
 section h3{
 	font-weight: bold;
@@ -150,8 +204,21 @@ section h3{
 	padding-top: 15px;
 }
 
-.bot{
-	padding-top: 15%;
+#faq-header{
+	display: flex;
+	color: #FBEFD5;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 15vw;
+	line-height: 15vw;
+	font-weight: 900;
+	padding-bottom: 0px;
+}
+
+.highlight{
+	display: inline;
+	background-color: #DFF5FC;
 }
 
 /*---------------- DOTS LIST -----------------------------------------*/
@@ -174,7 +241,7 @@ section h3{
 	content: "";
 	background: #d8d8d8;
 	position: absolute;
-	width: 2px;
+	width: 3px;
 	top: 1px;
 	bottom: -21px;
 	left: -24px;
