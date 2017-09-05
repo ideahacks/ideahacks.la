@@ -30,5 +30,12 @@ function getAndSendApplicationData() {
     desiredParts: $('textarea[name="desiredParts"]').val()
   }
 
-  $.ajax({ url: '/dashboard/application', type: 'POST', data: applicationData }).done()
+  $.ajax({ url: '/dashboard/application', type: 'POST', data: applicationData }).done(response =>{
+      if(response.status === 'success'){
+          $('.submit-message').text(response.message)
+      }
+      else if(response.status === 'failure'){
+          $('.submit-message').text(response.message)
+      }
+  })
 }
