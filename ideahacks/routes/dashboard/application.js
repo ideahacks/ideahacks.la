@@ -22,8 +22,8 @@ const postApplication = (req, res) => {
   }
 
   // process hasTeam and vehicleNeed
-  req.user['hasTeam'] = req.body['hasTeam'] === 'YES' ? true : false
-  req.user['vehicleNeed'] = req.body['vehicleNeed'] === 'YES' ? true : false
+  req.user['hasTeam'] = req.body['hasTeam'] === 'YES'
+  req.user['vehicleNeed'] = req.body['vehicleNeed'] === 'YES'
 
   req.user.save()
 

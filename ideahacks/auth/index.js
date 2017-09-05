@@ -11,7 +11,7 @@ const initializePassport = () => {
   passport.deserializeUser((username, done) => {
     User.findOne({ email: username })
       .then(user => done(null, user))
-      .catch(error => console.log('Error in deserializing user'))
+      .catch(err => console.log(err))
   })
 
   const authProcessor = (username, password, done) => {
@@ -20,6 +20,7 @@ const initializePassport = () => {
         return done(null, false, { message: 'Incorrect username.' })
       }
       bcrypt.compare(password, user.password, (err, response) => {
+        if (err) console.log(err)
         if (!response) return done(null, false, { message: 'Incorrect password.' })
 
         return done(null, user)

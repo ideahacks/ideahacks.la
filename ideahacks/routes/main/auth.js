@@ -33,6 +33,8 @@ const postRegistration = (req, res, next) => {
     if (user) return res.json({ status: 'failure', message: 'A user with this username already exists!' })
 
     bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
+      if (err) console.log(err)
+
       let newUser = new User({
         email: req.body.email,
         password: hashedPassword
