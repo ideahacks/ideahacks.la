@@ -14,8 +14,22 @@ $(document).ready(() => {
 	} 
 	else {
 	
-	
-		//appendTeam
+		//appendPart
+		appendNewPart(partData)
+
+
+		//clear form
+		$('input').val('')
+	}
+    
+    
+    })
+  })
+})
+
+function appendNewPart(partData) {
+
+		
 
 		let newPartHTML = [
 			'<li>',
@@ -26,14 +40,6 @@ $(document).ready(() => {
 
 		newPartHTML = newPartHTML.join('')
 
-		$(newPartHTML).appendTo('.team-list')
+		$(newPartHTML).appendTo('.part-list')
 	
-
-		//clear form
-		$('input').val('')
-	}
-    
-    
-    })
-  })
-})
+}
