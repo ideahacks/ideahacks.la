@@ -13,21 +13,27 @@
 	<form>
 		<p>Part name</p>
 		<br>
-		<input class="part-name" type = "text" name="partName">
+		<input class="part-name" type = "text" name="partName" required>
 		<br>
 		<p>Stock</p>
 		<br>
-		<input  class="stock" type="text" name="stock"><br>
+		<input  class="stock" type="text" name="stock" required><br>
 		<p>Description</p>
 		<br>
-		<input class="description" type="text" name="description"><br>
+		<input class="description" type="text" name="description" required><br>
 		<br>
-		<input type="submit" value="Submit">
+		<button type="submit">Submit</button>
 	</form>
 
-  {{#each parts}}
-		<h1>{{ this.partName }} </h1>
-		<p> {{ this.stock }} </p>
-	{{/each}}
+	<h1 class='error-message'></h1>
+
+	<ul class='part-list'>
+ 		 {{#each parts}}
+		 <li>
+			<h1>{{ this.partName }} </h1>
+			<p> {{ this.stock }} </p>
+		 </li>
+		{{/each}}
+	</ul>
 </body>
 </html>
