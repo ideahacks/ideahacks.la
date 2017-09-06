@@ -1,7 +1,7 @@
 $(() => {
-  $('.submit-application').click(() => getAndSendApplicationData(true))
+  $('.submit-application').click(getAndSendApplicationData(true))
 
-  $('.save-application').click(() => getAndSendApplicationData(false))
+  $('.save-application').click(getAndSendApplicationData(false))
 })
 
 function getAndSendApplicationData(toggleHasApplication) {
