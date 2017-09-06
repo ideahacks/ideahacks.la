@@ -23,7 +23,7 @@
 
     <ul class='application-list'>
         {{#each applications}}
-            <li class='{{ this.email }}'>
+            <li class='{{ this.email }} {{this.applicationStatus}}' name='{{this.email}}'>
                 <h1>{{ this.firstName }} {{ this.lastName }}</h1>
             </li>
         {{/each}}
