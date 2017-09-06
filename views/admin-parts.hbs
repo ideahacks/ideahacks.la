@@ -22,8 +22,10 @@
 		<br>
 		<input class="description" type="text" name="description" required><br>
 		<br>
-		<input type="submit" value="Submit">
+		<button type="submit">Submit</button>
 	</form>
+
+	<h1 class='error-message'></h1>
 
 	<ul class='part-list'>
  		 {{#each parts}}
@@ -32,6 +34,6 @@
 			<p> {{ this.stock }} </p>
 		 </li>
 		{{/each}}
-	</ul> 
+	</ul>
 </body>
 </html>
