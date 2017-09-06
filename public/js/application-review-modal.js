@@ -18,7 +18,9 @@ $(() => {
 
   $('input[name="application-status-radio"]').click(function() {
     let userEmail = $('span[name="email"]').text()
-    let oldApplicationStatus = $('span[name="applicationStatus"]').text()
+    let oldApplicationStatus = $('li[name="' + userEmail + '"]')
+      .find('.application-status')
+      .text()
     let newApplicationStatus = $(this).val()
     let userApiUrl = '/api/users/change/application-status/' + userEmail + '/' + newApplicationStatus
 
