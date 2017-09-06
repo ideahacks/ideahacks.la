@@ -11,22 +11,21 @@ $(() => {
       for (let key in response) {
         $('*[name="' + key + '"]').text(response[key])
       }
+      $('input[value="' + response['applicationStatus'] + '"]').attr('checked', 'checked')
       modal.style.display = 'block'
     })
   })
 
-  $('.application-status').click(() => {
+  $('input[name="application-status-radio"]').click(function() {
     let userEmail = $('span[name="email"]').text()
     let oldApplicationStatus = $('span[name="applicationStatus"]').text()
-    let newApplicationStatus = 'accepted'
+    let newApplicationStatus = $(this).val()
     let userApiUrl = '/api/users/change/application-status/' + userEmail + '/' + newApplicationStatus
 
     $.ajax({ url: userApiUrl, type: 'POST' }).done(response => {
       if (response.status === 'failure') console.log(response.message)
 
-      let application = $('li[name="' + userEmail + '"]')
-      application.removeClass(oldApplicationStatus)
-      application.addClass(newApplicationStatus)
+      changeApplicationStatus(userEmail, oldApplicationStatus, newApplicationStatus)
     })
   })
 
@@ -40,3 +39,11 @@ $(() => {
     }
   }
 })
+
+function changeApplicationStatus(userEmail, oldApplicationStatus, newApplicationStatus) {
+  let application = $('li[name="' + userEmail + '"]')
+  application.removeClass(oldApplicationStatus)
+  application.addClass(newApplicationStatus)
+
+  application.find('.application-status').text(newApplicationStatus)
+}
