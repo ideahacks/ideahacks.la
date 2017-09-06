@@ -7,6 +7,16 @@ const getParts = (req, res) => {
 }
 
 const postParts = (req, res) => {
+
+  //Check if part name already exists in database
+  Part.find({ partName: req.body.partName }).then(parts => {
+    if (parts.length > 0) {
+      return res.json({ status: 'failure', message: 'Part already exists' })
+    }
+  //end of uniqueness check
+ 
+  //if part passes both tests, then create the part
+
   let newPart = new Part({
     partName: req.body.partName || '',
     stock: req.body.stock || '',
@@ -15,7 +25,15 @@ const postParts = (req, res) => {
   })
   newPart.save()
 
-  res.json({ message: 'Received POST request' })
+  res.json({ status: 'success',  message: 'Success! Part has been created' })
+  //end of part creation
+
+  })
+
+
+
+
+  //end postParts function
 }
 
 const deleteParts = (req, res) => {
