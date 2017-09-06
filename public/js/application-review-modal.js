@@ -6,7 +6,7 @@ $(() => {
 
     $.ajax({ url: userApiUrl, type: 'GET' }).done(response => {
       for (let key in response) {
-        $('p[name="' + key + '"]').text(response[key])
+        $('*[name="' + key + '"]').text(response[key])
       }
       modal.style.display = 'block'
     })
