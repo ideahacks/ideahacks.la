@@ -13,7 +13,8 @@
     "format-check":
       "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
     "lint": "./node_modules/.bin/eslint --fix --quiet ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
-    "precommit": "lint-staged && npm test",
+    "precommit": "lint-staged",
+    "prepush": "npm test",
     "start": "node server.js",
     "test": "npm run format-check && npm run lint"
   },
