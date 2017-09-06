@@ -1,6 +1,7 @@
 const User = require('../db').User
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const bcrypt = require('bcrypt')
 
 const initializePassport = () => {
   passport.serializeUser((user, done) => {
@@ -18,10 +19,12 @@ const initializePassport = () => {
       if (!user) {
         return done(null, false, { message: 'Incorrect username.' })
       }
-      if (user.password !== password) {
-        return done(null, false, { message: 'Incorrect password.' })
-      }
-      return done(null, user)
+      bcrypt.compare(password, user.password, (err, response) => {
+        if (err) console.log(err)
+        if (!response) return done(null, false, { message: 'Incorrect password.' })
+
+        return done(null, user)
+      })
     })
   }
 

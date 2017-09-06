@@ -1,5 +1,6 @@
 const User = require('../../db').User
 const passport = require('passport')
+const bcrypt = require('bcrypt')
 
 const getLogin = (req, res) => {
   return res.render('login')
@@ -31,13 +32,17 @@ const postRegistration = (req, res, next) => {
   User.findOne({ email: req.body.email }).then(user => {
     if (user) return res.json({ status: 'failure', message: 'A user with this username already exists!' })
 
-    let newUser = new User({
-      email: req.body.email,
-      password: req.body.password
-    })
-    newUser.save()
+    bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
+      if (err) console.log(err)
 
-    return res.json({ status: 'success', message: 'Successfully registered new user!' })
+      let newUser = new User({
+        email: req.body.email,
+        password: hashedPassword
+      })
+      newUser.save()
+
+      return res.json({ status: 'success', message: 'Successfully registered new user!' })
+    })
   })
 }
 
