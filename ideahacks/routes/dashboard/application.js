@@ -17,6 +17,8 @@ const postApplication = (req, res) => {
       message: 'You have a team!'
     })
   }
+
+  let oldHasApplicationStatus = req.user.hasApplication
   for (let key in req.body) {
     req.user[key] = req.body[key]
   }
@@ -25,14 +27,24 @@ const postApplication = (req, res) => {
   req.user['hasTeam'] = req.body['hasTeam'] === 'YES'
   req.user['vehicleNeed'] = req.body['vehicleNeed'] === 'YES'
 
-  req.user.hasApplication = true
-
+  if (oldHasApplicationStatus === true) {
+    req.user.hasApplication = true
+  } else if (oldHasApplicationStatus === false && req.body.hasApplication === 'true') {
+    req.user.hasApplication = true
+  }
   req.user.save()
 
-  return res.json({
-    status: 'success',
-    message: 'You have sucessfully submitted!'
-  })
+  if (req.body.hasApplication === 'false') {
+    return res.json({
+      status: 'success',
+      message: 'You have sucessfully saved!'
+    })
+  } else {
+    return res.json({
+      status: 'success',
+      message: 'You have sucessfully submitted!'
+    })
+  }
 }
 
 module.exports = {

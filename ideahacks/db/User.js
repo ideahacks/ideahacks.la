@@ -25,6 +25,7 @@ const UserSchema = new Schema({
 
   // boolean fields
   hasApplication: { type: Boolean, default: false },
+  applicationStatus: { type: String, default: 'pending' },
 
   // auth fields
   isAdmin: { type: Boolean, default: false }
