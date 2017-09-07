@@ -6,21 +6,22 @@ const applicationReviewHandlers = require('./application-review.js')
 const teamHandlers = require('./teams.js')
 const partsHandlers = require('./parts')
 const h = require('../../helpers').authHelpers
+const setResLocals = require('../../helpers').routeHelpers.setResLocals
 
-adminRouter.get('/', h.isAuthenticated, adminHandlers.getAdmin)
+adminRouter.get('/', setResLocals, h.isAuthenticated, adminHandlers.getAdmin)
 
-adminRouter.get('/announcements', h.isAuthenticated, announcementHandlers.getAnnouncements)
-adminRouter.post('/announcements', h.isAuthenticated, announcementHandlers.postAnnouncements)
-adminRouter.delete('/announcements', h.isAuthenticated, announcementHandlers.nukeAnnouncements)
+adminRouter.get('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.getAnnouncements)
+adminRouter.post('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.postAnnouncements)
+adminRouter.delete('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.nukeAnnouncements)
 
-adminRouter.get('/application-review', applicationReviewHandlers.getApplicationReview)
+adminRouter.get('/application-review', setResLocals, applicationReviewHandlers.getApplicationReview)
 
-adminRouter.get('/teams', h.isAuthenticated, teamHandlers.getTeams)
-adminRouter.post('/teams', h.isAuthenticated, teamHandlers.postTeams)
-adminRouter.delete('/teams', h.isAuthenticated, teamHandlers.deleteTeams)
+adminRouter.get('/teams', setResLocals, h.isAuthenticated, teamHandlers.getTeams)
+adminRouter.post('/teams', setResLocals, h.isAuthenticated, teamHandlers.postTeams)
+adminRouter.delete('/teams', setResLocals, h.isAuthenticated, teamHandlers.deleteTeams)
 
-adminRouter.get('/parts', h.isAuthenticated, partsHandlers.getParts)
-adminRouter.post('/parts', h.isAuthenticated, partsHandlers.postParts)
-adminRouter.delete('/parts', h.isAuthenticated, partsHandlers.deleteParts)
+adminRouter.get('/parts', setResLocals, h.isAuthenticated, partsHandlers.getParts)
+adminRouter.post('/parts', setResLocals, h.isAuthenticated, partsHandlers.postParts)
+adminRouter.delete('/parts', setResLocals, h.isAuthenticated, partsHandlers.deleteParts)
 
 module.exports = adminRouter
