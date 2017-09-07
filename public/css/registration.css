@@ -1,10 +1,37 @@
-.rectangle_content
+.logo_image
 {
-    fill:#FFFFFF;
-    border-radius: 40 px;
+    
+}
+
+.logo
+{
+    padding-left: 50px;
+    width:1000px;
+    height:100px;
+    font-family: "Open Sans", josefin sans;
+    color:  #ffc301;
+    font-size: 35px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.box
+{
+    width: 1000px;
+    height: 900px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate (-50%, -50%);
 }
 
 body
 {
-    background: blue;
+    background-image: url("/img/registration/startup-photos.jpg");
+    background-size: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
+
+
