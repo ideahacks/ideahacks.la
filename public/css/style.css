@@ -1,0 +1,9 @@
+/* GLOBAL STYLESHEET: STYLE.CSS
+ * This stylesheet is meant to included on mostly all pages so that all pages
+ * conform to a similar style, such as fonts and text sizing.
+ * Please be cautious with only including global stylings in this file
+ */
+
+body {
+  margin: 0;
+}

@@ -1,10 +1,16 @@
 <link rel='stylesheet' type='text/css' href='/css/navbar.css' />
 <div class="navbar">
-    <a id="header" href='/admin'>IDEA Hacks {{#if onAdmin}}| ADMIN{{/if}}</a>
     {{#if onAdmin}}
-    <a href="/admin/application-review">Application</a>
-    <a href="/admin/announcements">Announcement</a>
-    <a href="/admin/parts">Parts</a>
-    <a href="/admin/teams">Teams</a>
+        <a id="header" href='/admin'>IDEA Hacks {{#if onAdmin}}| ADMIN{{/if}}</a>
+        <a href="/admin/announcements">Announcements</a>
+        <a href="/admin/application-review">Application Review</a>
+        <a href="/admin/teams">Teams</a>
+        <a href="/admin/parts">Parts</a>
+    {{/if}}
+
+    {{#if onDashboard}}
+        <a id="header" href='/dashboard'>IDEA Hacks</a>
+        <a href="/dashboard">Announcements</a>
+        <a href="/dashboard/application">Application</a>
     {{/if}}
 </div>

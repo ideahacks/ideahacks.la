@@ -1,29 +1,33 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Parts - Admin</title>
+    <title>Parts - Admin</title>
 
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="/js/admin-parts.js"></script>
 
+		<!-- STYLESHEETS -->
+		<link rel='stylesheet' type='text/css' href='/css/style.css' />
 </head>
 <body>
+    <!-- NAVBAR -->
     {{> navbar }}
-	<form>
-		<p>Part name</p>
-		<br>
-		<input class="part-name" type = "text" name="partName" required>
-		<br>
-		<p>Stock</p>
-		<br>
-		<input  class="stock" type="text" name="stock" required><br>
-		<p>Description</p>
-		<br>
-		<input class="description" type="text" name="description" required><br>
-		<br>
-		<button type="submit">Submit</button>
-	</form>
+
+    <form>
+        <p>Part name</p>
+        <br>
+        <input class="part-name" type = "text" name="partName" required>
+        <br>
+        <p>Stock</p>
+        <br>
+        <input  class="stock" type="text" name="stock" required><br>
+        <p>Description</p>
+        <br>
+        <input class="description" type="text" name="description" required><br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 
 	<h1 class='error-message'></h1>
 
