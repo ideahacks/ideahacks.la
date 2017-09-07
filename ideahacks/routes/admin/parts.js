@@ -7,15 +7,21 @@ const getParts = (req, res) => {
 }
 
 const postParts = (req, res) => {
-  let newPart = new Part({
-    partName: req.body.partName || '',
-    stock: req.body.stock || '',
-    description: req.body.description || ' ',
-    owners: []
-  })
-  newPart.save()
+  Part.find({ partName: req.body.partName }).then(parts => {
+    if (parts.length > 0) {
+      return res.json({ status: 'failure', message: 'Part already exists' })
+    }
 
-  res.json({ message: 'Received POST request' })
+    let newPart = new Part({
+      partName: req.body.partName || '',
+      stock: req.body.stock || 0,
+      description: req.body.description || ' ',
+      owners: []
+    })
+    newPart.save()
+
+    res.json({ status: 'success', message: 'Success! Part has been created' })
+  })
 }
 
 const deleteParts = (req, res) => {

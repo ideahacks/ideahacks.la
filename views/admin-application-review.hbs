@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Admin - Announcements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- SOCKET IO -->
+    <script src='/socket.io/socket.io.js'></script>
+
+    <!-- CSS -->
+    <link rel='stylesheet' type='text/css' href='/css/application-review-modal.css' />
+    <link rel='stylesheet' type='text/css' href='/css/admin-application-review.css' />
+
+    <!-- SCRIPTS -->
+    <script src='/js/application-review-modal.js'></script>
+</head>
+<body>
+    <div class='banner'>
+      <h1>Application Review</h1>
+    </div>
+
+    <ul class='application-list'>
+        {{#each applications}}
+            <li class='{{ this.email }} {{this.applicationStatus}} container-fluid' name='{{this.email}}'>
+                <div class='row'>
+                    <div class='col-md-2'>
+                        <p>{{ this.firstName }} {{ this.lastName}}</p>
+                    </div>
+                    <div class='col-md-8'>
+                      <p>{{#if this.year }}{{ this.year }} year {{/if}} {{ this.school }} {{#if this.major}}studying {{ this.major }}{{/if}}</p>
+                    </div>
+                    <div class='col-md-2'>
+                      <p class='application-status'>{{ this.applicationStatus }}</p>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+
+    {{> applicationModal }}
+</body>
+</html>
