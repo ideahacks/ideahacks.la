@@ -46,9 +46,15 @@ const postRegistration = (req, res, next) => {
   })
 }
 
+const getLogout = (req, res) => {
+  req.logout()
+  res.redirect('/login')
+}
+
 module.exports = {
   getLogin,
   postLogin,
   getRegistration,
-  postRegistration
+  postRegistration,
+  getLogout
 }
