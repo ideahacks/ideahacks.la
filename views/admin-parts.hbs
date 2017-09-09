@@ -1,33 +1,43 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Parts - Admin</title>
+    <title>Parts - Admin</title>
 
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="/js/admin-parts.js"></script>
 
+		<!-- STYLESHEETS -->
+		<link rel='stylesheet' type='text/css' href='/css/style.css' />
 </head>
 <body>
+    <!-- NAVBAR -->
+    {{> navbar }}
 
-	<form>
-		<p>Part name</p>
-		<br>
-		<input class="part-name" type = "text" name="partName">
-		<br>
-		<p>Stock</p>
-		<br>
-		<input  class="stock" type="text" name="stock"><br>
-		<p>Description</p>
-		<br>
-		<input class="description" type="text" name="description"><br>
-		<br>
-		<input type="submit" value="Submit">
-	</form>
+    <form>
+        <p>Part name</p>
+        <br>
+        <input class="part-name" type = "text" name="partName" required>
+        <br>
+        <p>Stock</p>
+        <br>
+        <input  class="stock" type="text" name="stock" required><br>
+        <p>Description</p>
+        <br>
+        <input class="description" type="text" name="description" required><br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 
-  {{#each parts}}
-		<h1>{{ this.partName }} </h1>
-		<p> {{ this.stock }} </p>
-	{{/each}}
+	<h1 class='error-message'></h1>
+
+	<ul class='part-list'>
+ 		 {{#each parts}}
+		 <li>
+			<h1>{{ this.partName }} </h1>
+			<p> {{ this.stock }} </p>
+		 </li>
+		{{/each}}
+	</ul>
 </body>
 </html>
