@@ -25,6 +25,16 @@ img{
 }
 
 
+.location{
+	color: #ffb718;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 32pt !important;
+	display: inline;
+	background-color: #FBEFD5;
+	line-height: 32pt;
+}
+
+
 /*---------------- CONTAINERS -----------------------------------------*/
 .container-fluid{
 	background-color: #FAFAFA;
@@ -36,7 +46,7 @@ img{
 }
 
 /*---------------- NAVBAR -----------------------------------------*/
-.navbar {
+/*.navbar {
 	background-color: transparent !important;
 	background: transparent !important;
 	border-color: transparent !important;
@@ -48,7 +58,7 @@ img{
 .nav-link{
 	color: white !important;
 	text-transform: uppercase !important;
-}
+}*/
 
 
 /*---------------- LANDPAGE -----------------------------------------*/
@@ -65,13 +75,33 @@ img{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 0 20px;
-	padding-bottom: 25vh;
 	padding-left: 25vw;
 }
+
 #showcase #content img{
 	height: 50vh;
 	width: 50vw;
+	padding-left: 5vw;
+}
+
+#showcase:after {
+    content:'';
+    position: absolute;
+    top: 95%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 35px rgba(0,50,160,0.7);
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+}
+
+#content div{
+	color: white;
+	line-height: 20pt;
+	font-size: 16pt !important;
 }
 
 .tint:before{
@@ -88,28 +118,14 @@ img{
 
 /*---------------- DETAILS SECTION -----------------------------------------*/
 
-#detail{
-	display:flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-
-}
-#detail div{
-	font-size: 18pt;
-}
-
-.location{
-	color: #ffb718;
+#loc{
+	color: #ffb718 !important;
 	font-family: "Courier New", Courier, monospace;
-	font-size: 32pt !important;
-	display: inline;
-	background-color: #FBEFD5;
-	line-height: 32pt;
 }
 
 #dayspan{
-	padding-top: 22px;
+	color: white;
+	font-weight: bold;	
 }
 
 /*---------------- ABOUT SECTION -----------------------------------------*/
@@ -168,7 +184,7 @@ img{
 
 #schedule-header{
 	display: flex;
-	color: #DFF5FC;
+	color: #DCE2EF;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -218,7 +234,7 @@ section h3{
 
 .highlight{
 	display: inline;
-	background-color: #DFF5FC;
+	background-color: #DCE2EF;
 }
 
 /*---------------- DOTS LIST -----------------------------------------*/
