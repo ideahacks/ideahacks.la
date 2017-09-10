@@ -29,13 +29,12 @@ const postApplication = (req, res) => {
 
   if (oldHasApplicationStatus === true) {
     req.user.hasApplication = true
-  } else if (oldHasApplicationStatus === false && req.body.hasApplication === true) {
+  } else if (oldHasApplicationStatus === false && req.body.hasApplication === 'true') {
     req.user.hasApplication = true
   }
-
   req.user.save()
 
-  if (req.body.hasApplication === false) {
+  if (req.body.hasApplication === 'false') {
     return res.json({
       status: 'success',
       message: 'You have sucessfully saved!'

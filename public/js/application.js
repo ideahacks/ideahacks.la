@@ -1,7 +1,7 @@
 $(() => {
-  $('.submit-application').click(getAndSendApplicationData(true))
+  $('.submit-application').click(() => getAndSendApplicationData(true))
 
-  $('.save-application').click(getAndSendApplicationData(false))
+  $('.save-application').click(() => getAndSendApplicationData(false))
 })
 
 function getAndSendApplicationData(toggleHasApplication) {
@@ -35,11 +35,7 @@ function getAndSendApplicationData(toggleHasApplication) {
     hasApplication: toggleHasApplication
   }
 
-  $.ajax({ url: '/dashboard/application', type: 'POST', data: applicationData }).done(response => {
-    if (response.status === 'success') {
-      $('.submit-message').text(response.message)
-    } else if (response.status === 'failure') {
-      $('.submit-message').text(response.message)
-    }
-  })
+  $.ajax({ url: '/dashboard/application', type: 'POST', data: applicationData }).done(response =>
+    $('.submit-message').text(response.message)
+  )
 }

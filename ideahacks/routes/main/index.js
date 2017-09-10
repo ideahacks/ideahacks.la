@@ -13,4 +13,6 @@ mainRouter.post('/login', authHandlers.postLogin)
 mainRouter.get('/registration', authHandlers.getRegistration)
 mainRouter.post('/registration', authHandlers.postRegistration)
 
+mainRouter.get('/logout', authHandlers.getLogout)
+
 module.exports = mainRouter
