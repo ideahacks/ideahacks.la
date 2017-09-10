@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="fullscreen">
 <head>
 <title>Registration - IDEA Hacks</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- JQUERY -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -17,17 +18,31 @@
 <script src='/js/registration.js'></script>
 </head>
 
-<body>
+<body class="fullscreen">
         <div class="logo">
             <img src="/favicon.ico">
                 IDEA HACKS
         </div>
 
         <div class="box">
+
+            <div class = "computer_picture">
+                <img src="/img/registration/cloudComputerPhone.png">
+            </div>
+
             <div class = "words">
-            Register
+            <div class = "register">
+                Register <br>
+            </div>
+
+            <form action = "/registration" method = "get">
+            Email <input type ="text" name ="email" value = "Email" maxlength = "100"/> <br>
+            Password <input type ="text" name ="password" value = "password" maxlength = "100"/> <br>
+            <input type = "submit" value ="Log In" /> <br>
+            Don't have an account? Register!
             </div>
         </div>
+
 
 </body>
 </html>
