@@ -60,7 +60,7 @@ img {
 .pic {
   /*opacity: 1.0;*/
   /*background-color: rgba(255, 183, 24, 0.5);*/
-  filter: grayscale();
+  filter: none;
   position: relative;
   overflow: auto;
   transition: all 0.5s ease-in-out;
@@ -71,7 +71,7 @@ img {
 
 .pic:hover {
   /*opacity: 0.7;*/
-  filter: none;
+  filter: grayscale();
   /*background-color: rgba(255, 183, 24, 1.0);*/
 }
 
@@ -86,21 +86,28 @@ img {
 .fa-facebook{
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 60%;
   display: none;
 }
 
 .fa-linkedin {
   position: absolute;
   top: 50%;
-  left: 75%;
+  left: 40%;
   display: none;
 }
 
 .fa-github {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 80%;
+  display: none;
+}
+
+.fa-user-circle {
+  position: absolute;
+  top: 50%;
+  left: 20%;
   display: none;
 }
 
