@@ -24,7 +24,7 @@
 body
 {
     background: linear-gradient(rgba(0, 0, 128, .75), rgba(0, 0, 128, .75)), url(/img/registration/startup-photos.jpg) no-repeat center center scroll;
-    background-size: 100%;
+    background-size: cover;
 
 }
 
@@ -51,6 +51,20 @@ body
     background-color: yellow;
     background: rgba(255, 170, 128,.5);
     opacity: .25;
-    ;
+    font-size: 30px;
 }
 
+.form_input
+{
+    font-family: "Source Sans Pro";
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.sign_up
+{
+    
+}

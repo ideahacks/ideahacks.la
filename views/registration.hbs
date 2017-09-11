@@ -10,6 +10,7 @@
 
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 <!-- PERSONAL STYLESHEETS -->
 <link rel='stylesheet' type='text/css' href='/css/registration.css' />
@@ -19,29 +20,33 @@
 </head>
 
 <body class="fullscreen">
-        <div class="logo">
-            <img src="/favicon.ico">
-                IDEA HACKS
+    <div class="logo">
+        <img src="/favicon.ico">
+        IDEA HACKS
+    </div>
+
+    <div class="box">
+
+        <div class = "computer_picture">
+            <img src="/img/registration/cloudComputerPhone.png">
         </div>
 
-        <div class="box">
-
-            <div class = "computer_picture">
-                <img src="/img/registration/cloudComputerPhone.png">
-            </div>
-
-            <div class = "words">
+        <div class = "words">
             <div class = "register">
                 Register <br>
             </div>
 
-            <form action = "/registration" method = "get">
-            Email <input type ="text" name ="email" value = "Email" maxlength = "100"/> <br>
-            Password <input type ="text" name ="password" value = "password" maxlength = "100"/> <br>
-            <input type = "submit" value ="Log In" /> <br>
-            Don't have an account? Register!
+                <form action = "/registration" method = "get">
+
+                <input class="form_input" type ="text" name ="email" placeholder = "Email" maxlength = "100"/> <br>
+                <input class="form_input" type ="text" name ="password" placeholder = "Password" maxlength = "100"/> <br>
+                <input class="form_input" type ="text" name ="confirm_pwd" placeholder = "Confirm Password" maxlength = "100"/> <br>
+            <div class="sign_up">
+                <input type= "submit" value ="Sign Up" /> <br>
             </div>
+            Don't have an account? Register!
         </div>
+    </div>
 
 
 </body>
