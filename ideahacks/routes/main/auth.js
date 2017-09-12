@@ -1,6 +1,6 @@
 const User = require('../../db').User
 const passport = require('passport')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt-nodejs')
 
 const getLogin = (req, res) => {
   return res.render('login')
@@ -32,7 +32,7 @@ const postRegistration = (req, res, next) => {
   User.findOne({ email: req.body.email }).then(user => {
     if (user) return res.json({ status: 'failure', message: 'A user with this username already exists!' })
 
-    bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
+    bcrypt.hash(req.body.password, null, null, (err, hashedPassword) => {
       if (err) console.log(err)
 
       let newUser = new User({
@@ -40,8 +40,10 @@ const postRegistration = (req, res, next) => {
         password: hashedPassword
       })
       newUser.save()
-
-      return res.json({ status: 'success', message: 'Successfully registered new user!' })
+      return res.json({
+        status: 'success',
+        message: 'Successfully registered a new user!'
+      })
     })
   })
 }
