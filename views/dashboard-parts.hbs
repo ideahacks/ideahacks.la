@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Parts List - Dashboard</title>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/dashboard-parts.css' />
+</head>
+<body>
+    <!-- NAVBAR -->
+    {{> navbar }}
+
+    <!-- FILTER LIST -->
+    {{> filter}}
+
+    <ul class='parts-list filter-list'>
+        {{#each parts}}
+            <li>
+                <h3 class='filter-key'>{{this.partName}}</h3>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>

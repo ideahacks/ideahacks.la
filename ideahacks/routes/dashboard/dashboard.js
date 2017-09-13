@@ -1,4 +1,5 @@
 const Announcement = require('../../db').Announcement
+const Part = require('../../db').Part
 
 const getDashboard = (req, res) => {
   Announcement.find().then(announcements => {
@@ -8,6 +9,13 @@ const getDashboard = (req, res) => {
   })
 }
 
+const getParts = (req, res) => {
+  Part.find().then(parts => {
+    res.render('dashboard-parts', { parts })
+  })
+}
+
 module.exports = {
-  getDashboard
+  getDashboard,
+  getParts
 }
