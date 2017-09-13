@@ -2,7 +2,7 @@ const formatUser = require('../../helpers').userFunctions.formatUser
 
 const getApplication = (req, res) => {
   req.user = formatUser(req.user)
-  res.render('application', { user: req.user })
+  res.render('dashboard-application', { user: req.user })
 }
 
 const postApplication = (req, res) => {
