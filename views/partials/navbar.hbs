@@ -1,4 +1,5 @@
 <link rel='stylesheet' type='text/css' href='/css/navbar.css' />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
 <div class="navbar">
     {{#if onAdmin}}
         <a id="header" href='/admin'>IDEA Hacks {{#if onAdmin}}| ADMIN{{/if}}</a>
@@ -9,6 +10,7 @@
     {{/if}}
 
     {{#if onDashboard}}
+        <a href='/dashboard'><img src='/img/navbar-icon.svg' width='300px' style='display: inline-block;' /></a>
         <a id="header" href='/dashboard'>IDEA Hacks</a>
         <a href="/dashboard">Announcements</a>
         <a href="/dashboard/application">Application</a>

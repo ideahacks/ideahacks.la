@@ -1,23 +1,18 @@
 .navbar {
-  background-color: rgba(12, 13, 14, 0.86);
+  background-color: white;
   width: 100%;
   overflow: hidden;
   border-radius: 0px;
 }
 
 .navbar a {
+  font-family: 'Source Sans Pro';
   float: left;
   display: block;
-  color: white;
+  color: black;
   text-align: center;
-  padding: 15px 20px;
   font-size: 17px;
   text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: #ddd;
-  color: blue;
 }
 
 .navbar a:active {
