@@ -11,7 +11,7 @@ body {
   width: 100%;
   height: 75px;
   overflow: hidden;
-  background-color: white;
+  background-color: transparent;
 
   transition: background-color 0.3s ease;
 }
@@ -130,7 +130,11 @@ body {
 .myNavbar li a:visited,
 .brand-container a,
 .brand-container a:hover,
-.brand-container a:visited,
+.brand-container a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .mobile-nav-list li a,
 .mobile-nav-list li a:hover,
 .mobile-nav-list li a:visited {

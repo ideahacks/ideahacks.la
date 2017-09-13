@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  padding-top: 0px !important;
   line-height: 1.6;
 }
 h1 {

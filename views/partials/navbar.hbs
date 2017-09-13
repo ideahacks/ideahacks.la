@@ -1,16 +1,61 @@
-<link rel='stylesheet' type='text/css' href='/css/navbar.css' />
-<div class="navbar">
+<div class='myNavbar'>
+    <div class='brand-container'>
+        <a href='{{#if onAdmin}}/admin{{/if}}{{#if onDashboard}}/dashboard{{/if}}{{#if onMainOrTeam}}/{{/if}}'><img src='/img/navbar-icon.svg' width='300px' style='display: inline-block;' /></a>
+    </div>
+    <div class='navbar-icon' onclick='toggleNavbarIconLogic(this)'>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <ul class='nav-list' id='nav-list'>
+        {{#if onAdmin}}
+            <li><a href='/admin/announcements'>Announcements</a></li>
+            <li><a href='/admin/application-review'>Application Review</a></li>
+            <li><a href='/admin/teams'>Teams</a></li>
+            <li><a href='/admin/parts'>Parts</a></li>
+        {{/if}}
+
+        {{#if onDashboard}}
+            <li><a href='/dashboard'>Announcements</a></li>
+            <li><a href='/dashboard/application'>Application</a></li>
+        {{/if}}
+
+        {{#if onMainOrTeam}}
+            <li><a href='/#about'>About</a></li>
+            <li><a href='/team'>Team</a></li>
+            <li><a href='/#schedule'>Schedule</a></li>
+            <li><a href='/#faq'>FAQ</a></li>
+            <li><a href='/#sponsors'>Sponsors</a></li>
+            <li><a href='/login'>Login</a></li>
+        {{/if}}
+    </ul>
+</div>
+<ul class='mobile-nav-list' id='mobile-nav-list'>
     {{#if onAdmin}}
-        <a id="header" href='/admin'>IDEA Hacks {{#if onAdmin}}| ADMIN{{/if}}</a>
-        <a href="/admin/announcements">Announcements</a>
-        <a href="/admin/application-review">Application Review</a>
-        <a href="/admin/teams">Teams</a>
-        <a href="/admin/parts">Parts</a>
+        <li><a href='/admin/announcements'>Announcements</a></li>
+        <li><a href='/admin/application-review'>Application Review</a></li>
+        <li><a href='/admin/teams'>Teams</a></li>
+        <li><a href='/admin/parts'>Parts</a></li>
     {{/if}}
 
     {{#if onDashboard}}
-        <a id="header" href='/dashboard'>IDEA Hacks</a>
-        <a href="/dashboard">Announcements</a>
-        <a href="/dashboard/application">Application</a>
+        <li><a href='/dashboard'>Announcements</a></li>
+        <li><a href='/dashboard/application'>Application</a></li>
     {{/if}}
-</div>
+
+    {{#if onMainOrTeam}}
+        <li><a href='/#about'>About</a></li>
+        <li><a href='/team'>Team</a></li>
+        <li><a href='/#schedule'>Schedule</a></li>
+        <li><a href='/#faq'>FAQ</a></li>
+        <li><a href='/#sponsors'>Sponsors</a></li>
+        <li><a href='/login'>Login</a></li>
+    {{/if}}
+</ul>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+{{#if onMain}}
+<link rel='stylesheet' type='text/css' href='/css/navbar-inverse.css' />
+{{else}}
+<link rel='stylesheet' type='text/css' href='/css/navbar.css' />
+{{/if}}
+<script src='/js/navbar.js'></script>
