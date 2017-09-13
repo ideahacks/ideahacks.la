@@ -1,28 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Dashboard Parts</title>
+    <title>Parts List - Dashboard</title>
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/dashboard-parts.css' />
-    
-    <!-- SCRIPTS -->
-    <script src="/js/filter.js"></script>
 </head>
-    
 <body>
     <!-- NAVBAR -->
     {{> navbar }}
-    
+
     <!-- FILTER LIST -->
     {{> filter}}
-    <ul class="parts-filter" id="filter"> 
+
+    <ul class='parts-list filter-list'>
         {{#each parts}}
             <li>
-                <h3>{{this.partName}}</h3>
+                <h3 class='filter-key'>{{this.partName}}</h3>
             </li>
         {{/each}}
     </ul>
