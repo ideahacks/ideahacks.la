@@ -2,6 +2,7 @@
   background-color: rgba(12, 13, 14, 0.86);
   width: 100%;
   overflow: hidden;
+  border-radius: 0px;
 }
 
 .navbar a {

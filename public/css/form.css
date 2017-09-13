@@ -1,38 +1,67 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway|Montserrat|Open+Sans|Roboto|Pacifico);
+/* GLOBAL STYLESHEET: FORM.CSS
+ * Global stylesheet for form elements
+ */
 
-* {
-  font-family: Raleway;
+/* LEGEND */
+.ideahacks-form legend {
+  font-family: 'Courier New';
+  font-size: 26px;
+  width: auto;
+  padding: 10px 20px 10px 5%;
+  color: #3185c0;
+  border: none;
+  background-color: #d6e9f5;
 }
 
-body {
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+/* FIELDSET */
+.ideahacks-form fieldset {
+  padding: 15px 5% 45px;
 }
 
-#required-text {
-  color: #5e5e5e;
-  font-size: 18px;
+/* FORM-GROUP */
+.ideahacks-form .form-group {
+  margin: 30px 0;
 }
 
-.sublabel {
-  font-size: 10px;
-  color: #5e5e5e;
+/* LABEL */
+.ideahacks-form label {
+  font-size: 20px;
+  font-weight: 300;
 }
 
-fieldset {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.ideahacks-form label.sublabel {
+  font-size: 15px;
 }
 
-.footer {
-  padding-top: 20px;
-  text-align: center;
+/* INPUT */
+.ideahacks-form input,
+.ideahacks-form input:focus,
+.ideahacks-form input[readonly] {
+  font-family: 'Source Sans Pro';
+  font-size: 20px;
+
+  padding: 20px 0;
+  margin-bottom: 10px;
+
+  border-radius: 0;
+  border: none;
+  border-bottom: solid #d8d8d8 1px;
+
+  box-shadow: none;
+  background-color: white;
 }
 
+.ideahacks-form select,
+.ideahacks-form select:focus {
+  box-shadow: none;
+}
 
-.btn {
-  padding: 10px;
-  margin: 0 auto;
+/* BUTTON */
+.ideahacks-form button {
+  color: white;
+  font-size: 16px;
+  background-color: #ffb718;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 60px;
 }
