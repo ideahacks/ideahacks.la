@@ -20,7 +20,7 @@
     "test": "npm run format-check && npm run lint"
   },
   "lint-staged": {
-    "*.js": ["npm run format", "git add"]
+    "*.js, *.css": ["npm run format", "git add"]
   },
   "repository": {
     "type": "git",
