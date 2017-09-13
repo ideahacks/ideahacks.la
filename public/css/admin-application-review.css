@@ -1,28 +1,28 @@
 .banner {
-  text-align: center;
+text-align: center;
 }
 
 .application-list {
-  list-style: none;
-  padding: 0;
+list-style: none;
+padding: 0;
 }
 
 .application-list li:hover {
-  cursor: pointer;
+cursor: pointer;
 }
 
 .application-list li.accepted {
-  background-color: green;
+background-color: green;
 }
 
 .application-list li.pending {
-  background-color: skyblue;
+background-color: skyblue;
 }
 
 .application-list li.rejected {
-  background-color: red;
+background-color: red;
 }
 
 .application-list li.waitlisted {
-  background-color: gold;
+background-color: gold;
 }
