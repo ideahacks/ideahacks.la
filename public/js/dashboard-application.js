@@ -2,6 +2,8 @@ $(() => {
   $('.submit-application').click(() => getAndSendApplicationData(true))
 
   $('.save-application').click(() => getAndSendApplicationData(false))
+
+  $('input, textarea, select').focus(() => $('.submit-message').css('color', 'transparent'))
 })
 
 function getAndSendApplicationData(toggleHasApplication) {
@@ -31,11 +33,12 @@ function getAndSendApplicationData(toggleHasApplication) {
     pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
     reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
     themeIdea: $('textarea[name="themeIdea"]').val(),
-    desiredParts: $('textarea[name="desiredParts"]').val(),
+    desiredParts: $('input[name="desiredParts"]').val(),
     hasApplication: toggleHasApplication
   }
 
-  $.ajax({ url: '/dashboard/application', type: 'POST', data: applicationData }).done(response =>
+  $.ajax({ url: '/dashboard/application', type: 'POST', data: applicationData }).done(response => {
     $('.submit-message').text(response.message)
-  )
+    $('.submit-message').css('color', '#ffb718')
+  })
 }

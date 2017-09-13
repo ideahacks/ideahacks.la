@@ -1,0 +1,38 @@
+/* REQUIRED TEXT */
+.required-text {
+  color: #ffb718;
+  padding: 15px 5%;
+  font-size: 18px;
+}
+
+/* FORM FIELDS */
+.short-answer {
+  margin: 0 0 50px;
+}
+
+/* BUTTONS */
+.buttons {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.buttons button {
+  margin: 0 60px;
+}
+
+@media (max-width: 583px) {
+  .buttons {
+    padding: 0 15px;
+  }
+
+  .buttons button {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+/* SUBMIT MESSAGE */
+.submit-message {
+  text-align: center;
+  padding: 0 0 50px;
+}
