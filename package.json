@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/IDEA-Hacks/ideahacks.la#readme",
   "dependencies": {
-    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-session": "^1.15.5",
