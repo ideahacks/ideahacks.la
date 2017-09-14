@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" class="fullscreen">
 <head>
-<title>Registration - IDEA Hacks</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - IDEA Hacks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- JQUERY -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- JQUERY -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- PERSONAL STYLESHEETS -->
-<link rel='stylesheet' type='text/css' href='/css/registration.css' />
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-<!-- SCRIPTS -->
-<script src='/js/registration.js'></script>
+    <!-- PERSONAL STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
+    <link rel='stylesheet' type='text/css' href='/css/registration.css' />
+
+    <!-- SCRIPTS -->
+    <script src='/js/registration.js'></script>
 </head>
-
 <body class="fullscreen">
     <div class="logo">
-        <img src="/img/navbar-icon.svg"> </svg>
+        <img src="/img/navbar-icon.svg"></img>
     </div>
 
-    <div class="box">
-
-        <div class = "computer_picture">
+    <div class="box container">
+        <div class="computer_picture col-md-6">
             <img src="/img/registration/cloudComputerPhone.png">
         </div>
 
-        <div class = "words">
-        <br>
-
+        <div class="words col-md-6">
             <div class = "register">
-                 Register
+                 <span>Register</span>
             </div>
-            <br>
-                <form action = "/registration" method = "get">
 
-                <input class="form_input" type ="text" name ="email" placeholder = "Email" maxlength = "100"/> <br>
-                <input class="form_input" type ="text" name ="password" placeholder = "Password" maxlength = "100"/> <br>
-                <input class="form_input" type ="text" name ="confirm_pwd" placeholder = "Confirm Password" maxlength = "100"/> <br> <br>
-                <input class="sign_up"type= "button" value ="Sign Up" />
+            <form class='ideahacks-form'>
+                <input type="text" name ="email" placeholder = "Email" required />
+                <input type="text" name ="password" placeholder = "Password" required />
+                <input type="text" name ="password-confirm" placeholder = "Confirm Password" required />
+                <button type='submit'>SIGN UP</button>
+            </form>
 
-<br> <br>
-
-            <div class = "no_account_register">
-
-                <span style="color: black "> <br>Already have an account? </span>
-
-                <a style="text-decoration:none" "href="/login">Login!</a>
+            <div class="no_account_register">
+                <p>Already have an account? <a href='/login'>Login!</a></p>
             </div>
+        </div>
     </div>
-
-
 </body>
 </html>
