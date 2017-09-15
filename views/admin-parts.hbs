@@ -26,6 +26,11 @@
         <br>
         <input class="description" type="text" name="description" required><br>
         <br>
+	<p>Returnable or Perishable Item</p>
+	<br>
+<input type="radio" name="ReturnOrPerish" value="Returnable" required>Returnable<br>
+<input type="radio" name="ReturnOrPerish" value="Perishable">Perishable<br>
+
         <button type="submit">Submit</button>
     </form>
 
@@ -36,6 +41,7 @@
 		 <li>
 			<h1>{{ this.partName }} </h1>
 			<p> {{ this.stock }} </p>
+			<p> {{ this.type  }} </p>
 		 </li>
 		{{/each}}
 	</ul>

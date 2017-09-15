@@ -16,7 +16,8 @@ const postParts = (req, res) => {
       partName: req.body.partName || '',
       stock: req.body.stock || 0,
       description: req.body.description || ' ',
-      owners: []
+      owners: [],
+      type: req.body.type || ''
     })
     newPart.save()
 

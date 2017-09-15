@@ -5,7 +5,8 @@ $(document).ready(() => {
     let partsData = {
       partName: $('.part-name').val(),
       stock: $('.stock').val(),
-      description: $('.description').val()
+      description: $('.description').val(),
+      type: $('input[name="ReturnOrPerish"]:checked').val()
     }
 
     $.ajax({ url: '/admin/parts', type: 'POST', data: partsData }).done(results => {
@@ -28,6 +29,7 @@ function appendNewPart(partData) {
     '<li>',
       '<h1>', partData.partName, '</h1>',
       '<h1>', partData.stock, '</h1>',
+      '<h1>', partData.type, '</h1>',
     '</li>'
   ]
 
