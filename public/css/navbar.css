@@ -51,7 +51,7 @@ body {
   cursor: pointer;
   position: absolute;
   right: 30px;
-  padding: 20px 0 0 0;
+  padding: 16px 0 0 0;
 }
 
 .bar1,
@@ -113,7 +113,10 @@ body {
 
 @media (max-width: 500px) {
   .brand-container {
-    padding: 24px 20px;
+    padding: 14px 20px;
+  }
+  .brand-container img {
+    width: 250px;
   }
   .navbar-icon {
     right: 20px;
