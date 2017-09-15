@@ -1,3 +1,21 @@
+/* LIGHT BULB IN THE BACKGROUND */
+body {
+  background: url('/img/large-transparent-bulb.svg') no-repeat fixed;
+  background-size: 600px;
+  background-position: 1000px 40px;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-position: 550px 40px;
+  }
+}
+@media (max-width: 650px) {
+  body {
+    background-position: 400px 40px;
+  }
+}
+
 /* REQUIRED TEXT */
 .required-text {
   color: #ffb718;

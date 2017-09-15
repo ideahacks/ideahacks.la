@@ -48,7 +48,7 @@
   border-bottom: solid #d8d8d8 1px;
 
   box-shadow: none;
-  background-color: white;
+  background-color: transparent;
 }
 
 .ideahacks-form select,
@@ -63,6 +63,7 @@
   border-radius: 0;
   box-shadow: none;
   border-color: #d8d8d8;
+  background-color: transparent;
   resize: none;
 }
 
