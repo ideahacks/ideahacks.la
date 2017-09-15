@@ -1,8 +1,8 @@
 $(document).ready(() => {
   let socket = io('/admin/teams') // open socket to the server
 
-  //deleting team from database
-  $('span').click(deleteTeam)
+  // deleting team from the page
+  $('.team-list').on('click', 'li span.delete-team', deleteTeam)
 
   // form submission logic
   $('form').submit(e => {
@@ -72,22 +72,25 @@ function appendNewTeam(teamData) {
   }
   newTeamHTML.push('</li>')
   newTeamHTML = newTeamHTML.join('')
-  //$(newTeamHTML).find('.delete-team').on('click', $(this), deleteTeam)
 
   $(newTeamHTML).prependTo('.team-list')
 }
 
 function deleteTeam() {
-  confirm('Are you sure you want to delete this team?')
-  let teamName = $(this)
-    .parent()
-    .find('.team-name')
-    .text()
-  $.ajax({ url: '/admin/teams/delete/' + teamName, type: 'DELETE' }).done(response => {
-    if (response.status == 'success') {
-      $(this)
-        .parent()
-        .remove()
-    }
-  })
+  if (confirm('Are you sure you want to delete this team?')) {
+    let teamName = $(this)
+      .parent()
+      .find('.team-name')
+      .text()
+
+    $.ajax({ url: '/admin/teams/delete/' + teamName, type: 'DELETE' }).done(response => {
+      if (response.status === 'failure') {
+        $('.error-message').text(response.message)
+      } else if (response.status === 'success') {
+        $(this)
+          .parent()
+          .remove()
+      }
+    })
+  }
 }

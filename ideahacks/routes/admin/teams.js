@@ -86,12 +86,13 @@ const deleteTeams = (req, res) => {
 }
 
 const deleteOneTeam = (req, res) => {
-  let teamName = req.params.teamName
-  Team.remove({ teamName: teamName }).then(err => {
+  let teamToDelete = req.params.teamName
+  Team.remove({ teamName: teamToDelete }, err => {
     if (err) console.log(err)
+
     return res.json({
       status: 'success',
-      message: teamName + 'has been deleted'
+      message: teamToDelete + 'has been deleted'
     })
   })
 }

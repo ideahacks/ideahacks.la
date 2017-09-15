@@ -8,7 +8,7 @@
 
     <!-- SOCKETIO -->
     <script src='/socket.io/socket.io.js'></script>
-    
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
@@ -22,7 +22,7 @@
 <body>
     <!-- NAVBAR -->
     {{> navbar }}
-    
+
     <h1 class="error-message"></h1>
     <h1 class='user-typing-message'></h1>
     <form>
@@ -43,10 +43,9 @@
             <span class="delete-team">&times;</span>
             <h1 class="team-name">{{ this.teamName }}</h1>
             <h1>{{ this.teamNumber }}</h1>
-              {{#each this.members}}
-              <p>{{ this.email }}</p>
-              {{/each}}
-            
+            {{#each this.members}}
+            <p>{{ this.email }}</p>
+            {{/each}}
           </li>
       {{/each}}
     </ul>
