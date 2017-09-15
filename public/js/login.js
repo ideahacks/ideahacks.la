@@ -1,5 +1,5 @@
 $(() => {
-  $('.login-form').submit(e => {
+  $('form').submit(e => {
     e.preventDefault()
 
     let loginData = {

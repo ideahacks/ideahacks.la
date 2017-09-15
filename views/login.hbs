@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" class="fullscreen">
 <head>
-<title>Registration - IDEA Hacks</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IDEA Hacks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- JQUERY -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- JQUERY -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-<!-- PERSONAL STYLESHEETS -->
-<link rel='stylesheet' type='text/css' href='/css/style.css' />
-<link rel='stylesheet' type='text/css' href='/css/form.css' />
-<link rel='stylesheet' type='text/css' href='/css/registration.css' />
+    <!-- PERSONAL STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
+    <link rel='stylesheet' type='text/css' href='/css/registration.css' />
 
-<!-- SCRIPTS -->
-<script src='/js/registration.js'></script>
+    <!-- SCRIPTS -->
+    <script src='/js/login.js'></script>
 </head>
 <body class="fullscreen">
-<div class="logo">
-<img src="/img/navbar-icon.svg"></img>
-</div>
+    <div class="logo">
+        <a href='/'><img src="/img/navbar-icon.svg"></img></a>
+    </div>
 
-<div class="box container">
-<div class="computer_picture col-md-6">
-<img src="/img/registration/cloudComputerPhone.png">
-</div>
+    <div class="box container">
+        <div class="computer_picture col-md-6">
+            <img src="/img/registration/cloudComputerPhone.png">
+        </div>
 
-<div class="words col-md-6">
-<div class = "register">
-<span>Register</span>
-</div>
+        <div class="words col-md-6">
+            <div class="register">
+                <span>Log In</span>
+            </div>
 
-<form class='ideahacks-form'>
-<input type="text" name ="email" placeholder = "Email" required />
-<input type="text" name ="password" placeholder = "Password" required />
-<button type='submit'> LOGIN </button>
-</form>
+            <form class='ideahacks-form'>
+                <input type="text" name="username" placeholder="Email" required />
+                <input type="Password" name="password" placeholder="Password" required />
+                <p class='error-message'></p>
+                <button type='submit'>LOG IN</button>
+            </form>
 
-<div class="no_account_register">
-<p>Don't' have an account? <a href='/register'> Register!</a></p>
-</div>
-</div>
-</div>
+
+            <div class="no_account_register">
+                <p>Don't' have an account? <a href='/registration'> Register!</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
