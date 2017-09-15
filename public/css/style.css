@@ -26,8 +26,8 @@ body {
 }
 
 /* TEXT */
-/* TODO: NEED TO SEPARATE H1 FROM COLOR */
-h1.transparent-ucla-blue {
+h1.transparent-ucla-blue,
+h1.transparent-ucla-gold {
   font-family: 'Source Sans Pro';
   font-weight: bold;
   font-style: italic;
@@ -41,7 +41,8 @@ h1.transparent-ucla-blue {
 }
 
 @media (max-width: 850px) {
-  h1.transparent-ucla-blue {
+  h1.transparent-ucla-blue,
+  h1.transparent-ucla-gold {
     font-size: 80px;
   }
 }
