@@ -60,6 +60,8 @@
 .ideahacks-form textarea,
 .ideahacks-form textarea:focus {
   font-family: 'Source Sans Pro';
+  font-size: 20px;
+
   border-radius: 0;
   box-shadow: none;
   border-color: #d8d8d8;
