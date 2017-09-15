@@ -1,60 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="fullscreen">
 <head>
     <title>Login - IDEA Hacks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery -->
+    <!-- JQUERY -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- Linked google font -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" />
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-    <!-- Personalized css styling -->
-    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+    <!-- PERSONAL STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
+    <link rel='stylesheet' type='text/css' href='/css/registration.css' />
 
-    <!-- Scripts -->
+    <!-- SCRIPTS -->
     <script src='/js/login.js'></script>
 </head>
-<body>
-
-    <div id="banner">
-        <h1>IDEA Hacks</h1>
+<body class="fullscreen">
+    <div class="logo">
+        <a href='/'><img src="/img/navbar-icon.svg"></img></a>
     </div>
 
-    <div id="introduction">
-        <h1>Login</h1>
-    </div>
-
-    <form class='login-form'>
-        <div id="form-container">
-            <div class="form-group">
-                <label>Email</label>
-                <input type="text" name='username' required /><br/>
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input type="Password" name='password' required /><br/>
-            </div>
-            <p class='error-message'></p>
-
-            <div id="form-buttons">
-                <button type="submit" id="submit-button">Login</button>
-                <a href="/registration"><button type="button" id="registration-button">Registration</button></a>
-            </div>
-
-            <a id="reset-password" href="" style="text-decoration:none"><p>Forgot your password?</p></a>
-            <!-- missing the address of the reset-password web page -->
+    <div class="box container">
+        <div class="computer_picture col-md-6">
+            <img src="/img/registration/cloudComputerPhone.png">
         </div>
-    </form>
 
-    <div class="footer">
-        <h3>Copyright &copy; IDEA Hacks<h3>
+        <div class="words col-md-6">
+            <div class="register">
+                <span>Log In</span>
+            </div>
+
+            <form class='ideahacks-form'>
+                <input type="text" name="username" placeholder="Email" required />
+                <input type="Password" name="password" placeholder="Password" required />
+                <p class='error-message'></p>
+                <button type='submit'>LOG IN</button>
+            </form>
+
+
+            <div class="no_account_register">
+                <p>Don't' have an account? <a href='/registration'> Register!</a></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

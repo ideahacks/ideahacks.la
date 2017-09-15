@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="fullscreen">
 <head>
     <title>Registration - IDEA Hacks</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JQUERY -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <!-- GOOGLE FONTS -->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <!-- PERSONAL STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
     <link rel='stylesheet' type='text/css' href='/css/registration.css' />
 
     <!-- SCRIPTS -->
     <script src='/js/registration.js'></script>
 </head>
-<body>
-    <div class="idea_hacks_banner">
-        <h1>IDEA HACKS</h1>
+<body class="fullscreen">
+    <div class="logo">
+        <a href='/'><img src="/img/navbar-icon.svg"></img></a>
     </div>
 
-    <div class="create_account_heading">
-      <h1>Create an Account</h1>
-    </div>
+    <div class="box container">
+        <div class="computer_picture col-md-6">
+            <img src="/img/registration/cloudComputerPhone.png">
+        </div>
 
-    <div class = "main_body" style="position:fixed">
-        <hr align="center"><br>
+        <div class="words col-md-6">
+            <div class = "register">
+                 <span>Register</span>
+            </div>
 
-        <form action="/registration" method="POST">
-            <strong>Email</strong>
-            <input class="input" type="email" name="email" required><br>
-            <strong> Password</strong>
-            <input class="input" type="text" name="password" required><br>
-            <strong>Confirm Password</strong>
-            <input type="text" class="input" name="password-confirm" required><br>
-            <input class="create_account_button" type="submit" name="Create Account" value="Create Account"/>
-            <p class='error-message'></p>
-        </form>
+            <form class='ideahacks-form'>
+                <input type="text" name="email" placeholder = "Email" required />
+                <input type="Password" name="password" placeholder = "Password" required />
+                <input type="Password" name="password-confirm" placeholder = "Confirm Password" required />
+                <p class='error-message'></p>
+                <button type='submit'>SIGN UP</button>
+            </form>
 
-        <div class="account_already">
-            <p>Already have an account? <a class="login_hyperlink" href="/login">Login</a></p>
+            <div class="no_account_register">
+                <p>Already have an account? <a href='/login'>Login!</a></p>
+            </div>
         </div>
     </div>
-
-    <footer style="margin:top:10px;">
-        <strong>Copyright &copy; IDEA Hacks </strong>
-    </footer>
 </body>
 </html>
