@@ -78,6 +78,7 @@ function appendNewTeam(teamData) {
 }
 
 function deleteTeam() {
+  confirm('Are you sure you want to delete this team?')
   let teamName = $(this)
     .parent()
     .find('.team-name')
