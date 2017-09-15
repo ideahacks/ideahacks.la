@@ -56,6 +56,16 @@
   box-shadow: none;
 }
 
+/* TEXTAREA */
+.ideahacks-form textarea,
+.ideahacks-form textarea:focus {
+  font-family: 'Source Sans Pro';
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #d8d8d8;
+  resize: none;
+}
+
 /* BUTTON */
 .ideahacks-form button {
   color: white;

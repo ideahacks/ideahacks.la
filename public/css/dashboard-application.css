@@ -2,12 +2,23 @@
 .required-text {
   color: #ffb718;
   padding: 15px 5%;
+  margin-top: 20px;
   font-size: 18px;
 }
 
 /* FORM FIELDS */
 .short-answer {
   margin: 0 0 50px;
+}
+
+.whitespace {
+  color: transparent;
+}
+
+@media (max-width: 828px) {
+  .whitespace {
+    display: none;
+  }
 }
 
 /* BUTTONS */
