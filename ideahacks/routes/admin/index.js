@@ -24,4 +24,6 @@ adminRouter.get('/parts', setResLocals, h.isAuthenticated, partsHandlers.getPart
 adminRouter.post('/parts', setResLocals, h.isAuthenticated, partsHandlers.postParts)
 adminRouter.delete('/parts', setResLocals, h.isAuthenticated, partsHandlers.deleteParts)
 
+adminRouter.delete('/teams/delete/:teamName', setResLocals, h.isAuthenticated, teamHandlers.deleteOneTeam)
+
 module.exports = adminRouter

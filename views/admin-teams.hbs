@@ -8,9 +8,13 @@
 
     <!-- SOCKETIO -->
     <script src='/socket.io/socket.io.js'></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/admin-teams.css'/>
 
     <!-- SCRIPTS -->
     <script src="/js/admin-teams.js"></script>
@@ -36,11 +40,13 @@
     <ul class='team-list'>
       {{#each teams}}
           <li>
-            <h1>{{ this.teamName }}</h1>
+            <span class="delete-team">&times;</span>
+            <h1 class="team-name">{{ this.teamName }}</h1>
             <h1>{{ this.teamNumber }}</h1>
               {{#each this.members}}
               <p>{{ this.email }}</p>
               {{/each}}
+            
           </li>
       {{/each}}
     </ul>

@@ -1,6 +1,9 @@
 $(document).ready(() => {
   let socket = io('/admin/teams') // open socket to the server
 
+  //deleting team from database
+  $('span').click(deleteTeam)
+
   // form submission logic
   $('form').submit(e => {
     e.preventDefault()
@@ -60,14 +63,30 @@ function appendNewTeam(teamData) {
   // prettier-ignore
   let newTeamHTML = [
     '<li>',
-      '<h1>',teamData.teamName,'</h1>',
-      '<h1>',teamData.teamNumber,'</h1>'
+      '<span class="delete-team">&times;</span>',
+      '<h1 class="team-name">',teamData.teamName,'</h1>',
+      '<h1>',teamData.teamNumber,'</h1>',
   ]
   for (let email of teamData.members) {
     newTeamHTML.push('<p>', email, '</p>')
   }
   newTeamHTML.push('</li>')
   newTeamHTML = newTeamHTML.join('')
+  //$(newTeamHTML).find('.delete-team').on('click', $(this), deleteTeam)
 
   $(newTeamHTML).prependTo('.team-list')
+}
+
+function deleteTeam() {
+  let teamName = $(this)
+    .parent()
+    .find('.team-name')
+    .text()
+  $.ajax({ url: '/admin/teams/delete/' + teamName, type: 'DELETE' }).done(response => {
+    if (response.status == 'success') {
+      $(this)
+        .parent()
+        .remove()
+    }
+  })
 }
