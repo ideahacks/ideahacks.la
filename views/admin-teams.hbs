@@ -11,6 +11,7 @@
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/admin-teams.css'/>
 
     <!-- SCRIPTS -->
     <script src="/js/admin-teams.js"></script>
@@ -18,7 +19,7 @@
 <body>
     <!-- NAVBAR -->
     {{> navbar }}
-    
+
     <h1 class="error-message"></h1>
     <h1 class='user-typing-message'></h1>
     <form>
@@ -36,11 +37,12 @@
     <ul class='team-list'>
       {{#each teams}}
           <li>
-            <h1>{{ this.teamName }}</h1>
+            <span class="delete-team">&times;</span>
+            <h1 class="team-name">{{ this.teamName }}</h1>
             <h1>{{ this.teamNumber }}</h1>
-              {{#each this.members}}
-              <p>{{ this.email }}</p>
-              {{/each}}
+            {{#each this.members}}
+            <p>{{ this.email }}</p>
+            {{/each}}
           </li>
       {{/each}}
     </ul>

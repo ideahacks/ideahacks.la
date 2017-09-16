@@ -85,8 +85,27 @@ const deleteTeams = (req, res) => {
   })
 }
 
+const deleteOneTeam = (req, res) => {
+  let teamToDelete = req.params.teamName
+  Team.remove({ teamName: teamToDelete }, err => {
+    if (err) {
+      console.log(err)
+      return res.json({
+        status: 'failure',
+        message: 'Failed to delete team from database!'
+      })
+    } else {
+      return res.json({
+        status: 'success',
+        message: teamToDelete + 'has been deleted'
+      })
+    }
+  })
+}
+
 module.exports = {
   getTeams,
   postTeams,
-  deleteTeams
+  deleteTeams,
+  deleteOneTeam
 }

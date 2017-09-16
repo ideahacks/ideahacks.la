@@ -1,6 +1,9 @@
 $(document).ready(() => {
   let socket = io('/admin/teams') // open socket to the server
 
+  // deleting team from the page
+  $('.team-list').on('click', 'li span.delete-team', deleteTeam)
+
   // form submission logic
   $('form').submit(e => {
     e.preventDefault()
@@ -60,8 +63,9 @@ function appendNewTeam(teamData) {
   // prettier-ignore
   let newTeamHTML = [
     '<li>',
-      '<h1>',teamData.teamName,'</h1>',
-      '<h1>',teamData.teamNumber,'</h1>'
+      '<span class="delete-team">&times;</span>',
+      '<h1 class="team-name">',teamData.teamName,'</h1>',
+      '<h1>',teamData.teamNumber,'</h1>',
   ]
   for (let email of teamData.members) {
     newTeamHTML.push('<p>', email, '</p>')
@@ -70,4 +74,23 @@ function appendNewTeam(teamData) {
   newTeamHTML = newTeamHTML.join('')
 
   $(newTeamHTML).prependTo('.team-list')
+}
+
+function deleteTeam() {
+  if (confirm('Are you sure you want to delete this team?')) {
+    let teamName = $(this)
+      .parent()
+      .find('.team-name')
+      .text()
+
+    $.ajax({ url: '/admin/teams/delete/' + teamName, type: 'DELETE' }).done(response => {
+      if (response.status === 'failure') {
+        $('.error-message').text(response.message)
+      } else if (response.status === 'success') {
+        $(this)
+          .parent()
+          .remove()
+      }
+    })
+  }
 }

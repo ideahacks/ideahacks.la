@@ -44,21 +44,6 @@ img {
   padding: 78pt 20px;
 }
 
-/*---------------- NAVBAR -----------------------------------------*/
-/*.navbar {
-	background-color: transparent !important;
-	background: transparent !important;
-	border-color: transparent !important;
-}
-.navbar li {
-	color: #000 !important;
-}
-
-.nav-link{
-	color: white !important;
-	text-transform: uppercase !important;
-}*/
-
 /*---------------- LANDPAGE -----------------------------------------*/
 #showcase {
   background-image: url(/img/index/startup-photos.jpg);
@@ -271,4 +256,14 @@ section h3 {
 .dots-list ol li:last-child:before {
   content: '';
   background: #ffffff;
+}
+
+/* SPONSORS SECTION */
+.sponsors {
+  padding: 30px 0;
+}
+
+.sponsor-message {
+  text-align: center;
+  padding: 40px 0 20px;
 }
