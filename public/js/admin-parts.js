@@ -16,6 +16,7 @@ $(document).ready(() => {
         appendNewPart(partsData)
 
         $('input').val('')
+        $('input').attr('checked', '')
       }
     })
   })
@@ -28,8 +29,8 @@ function appendNewPart(partData) {
   let newPartHTML = [
     '<li>',
       '<h1>', partData.partName, '</h1>',
-      '<h1>', partData.stock, '</h1>',
-      '<h1>', partData.type, '</h1>',
+      '<p>', partData.stock, '</p>',
+      '<p>', partData.type, '</p>',
     '</li>'
   ]
 

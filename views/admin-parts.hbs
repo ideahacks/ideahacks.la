@@ -16,20 +16,14 @@
 
     <form>
         <p>Part name</p>
-        <br>
         <input class="part-name" type = "text" name="partName" required>
-        <br>
         <p>Stock</p>
-        <br>
-        <input  class="stock" type="text" name="stock" required><br>
+        <input  class="stock" type="number" name="stock" required><br>
         <p>Description</p>
-        <br>
         <input class="description" type="text" name="description" required><br>
-        <br>
-	<p>Returnable or Perishable Item</p>
-	<br>
-<input type="radio" name="ReturnOrPerish" value="Returnable" required>Returnable<br>
-<input type="radio" name="ReturnOrPerish" value="Perishable">Perishable<br>
+      	<p>Returnable or Perishable Item</p>
+        <input type="radio" name="ReturnOrPerish" value="returnable" required>Returnable<br>
+        <input type="radio" name="ReturnOrPerish" value="perishable">Perishable<br>
 
         <button type="submit">Submit</button>
     </form>

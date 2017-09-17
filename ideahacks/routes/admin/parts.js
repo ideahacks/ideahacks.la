@@ -13,15 +13,15 @@ const postParts = (req, res) => {
     }
 
     let newPart = new Part({
-      partName: req.body.partName || '',
-      stock: req.body.stock || 0,
-      description: req.body.description || ' ',
+      partName: req.body.partName,
+      stock: req.body.stock,
+      description: req.body.description,
       owners: [],
-      type: req.body.type || ''
+      type: req.body.type
     })
     newPart.save()
 
-    res.json({ status: 'success', message: 'Success! Part has been created' })
+    return res.json({ status: 'success', message: 'Success! Part has been created' })
   })
 }
 
