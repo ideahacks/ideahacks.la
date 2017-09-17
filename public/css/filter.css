@@ -1,4 +1,21 @@
-.filter {
+.filter,
+.filter:focus,
+.filter:hover {
+  font-family: 'Source Sans Pro';
   font-size: 30px;
-  margin: 10px 0px;
+  text-transform: uppercase;
+
+  margin: 10px 0;
+  padding: 5px 0;
+
+  border-radius: 0;
+  /*border: none;*/
+  border: solid #d8d8d8 1px;
+
+  box-shadow: none;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+
+  outline: none; /* disables blue highlight on macs */
 }
