@@ -62,6 +62,18 @@ p {
   background-color: #fafafa;
 }
 
+/* BUTTON */
+button {
+  color: white;
+  font-size: 16px;
+  background-color: #ffb718;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 60px;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
 /* LINKS */
 a,
 a:hover,
