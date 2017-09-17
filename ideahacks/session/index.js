@@ -1,6 +1,5 @@
 const session = require('express-session')
 const config = require('../config')
-const db = require('../db')
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = session({

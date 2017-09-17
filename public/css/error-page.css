@@ -1,0 +1,46 @@
+.idea_hacks_banner {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ffc301;
+  padding-left: 25px;
+  width: 25%;
+  text-align: center;
+  text-align: center;
+  font-size: 350%;
+  top: 5px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.error_msg {
+  text-align: center;
+  font-size: 460%;
+  font-weight: bold;
+  color: #ffc301;
+}
+
+.return_main_page_button {
+  text-align: center;
+  font-size: 200%;
+  color: #ffffff;
+  background-color: #5599cd;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.return_main_page_link {
+  text-decoration: none;
+  text-align: center;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #10253f;
+}
+
+.messages {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}

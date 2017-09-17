@@ -1,30 +1,50 @@
 const User = require('../../db').User
 
-const getUser = (req, res) => {
-  User.find({}).then(users => {
-    res.json(users)
+const getUsers = (req, res) => {
+  User.find().then(users => {
+    return res.json(users)
   })
 }
 
-const postUser = (req, res) => {
-  let trey = new User()
-  trey.firstName = 'Trey'
-  trey.lastName = 'Crossley'
-  trey.email = 'jeffschan97@gmail.com'
-  trey.password = 'jeffrey'
-  trey.save()
-
-  res.json({ message: 'Received POST request' })
+const getUserByEmail = (req, res) => {
+  User.findOne({ email: req.params.email }).then(user => {
+    return res.json(user)
+  })
 }
 
-const deleteUser = (req, res) => {
-  User.remove({})
+const postUsers = (req, res) => {
+  let newUser = new User({
+    firstName: 'Trey',
+    lastName: 'Crossley',
+    email: 'jeffschan97@gmail.com',
+    password: 'jeffrey'
+  })
+  newUser.save()
 
-  res.json({ message: 'Received DELETE requets' })
+  return res.json({ message: 'Received POST request' })
+}
+
+const changeApplicationStatus = (req, res) => {
+  User.findOne({ email: req.params.email }).then(user => {
+    user.applicationStatus = req.params.newApplicationStatus
+    user.save()
+
+    return res.json({ status: 'success', message: 'Successfully changed application status!' })
+  })
+}
+
+const deleteUsers = (req, res) => {
+  User.remove().then(err => {
+    if (err) console.log(err)
+
+    return res.json({ message: 'Received DELETE requets' })
+  })
 }
 
 module.exports = {
-  getUser,
-  postUser,
-  deleteUser
+  getUsers,
+  getUserByEmail,
+  postUsers,
+  changeApplicationStatus,
+  deleteUsers
 }

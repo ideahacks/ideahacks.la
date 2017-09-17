@@ -1,0 +1,72 @@
+/* GLOBAL STYLESHEET: STYLE.CSS
+ * This stylesheet is meant to included on mostly all pages so that all pages
+ * conform to a similar style, such as fonts and text sizing.
+ * Please be cautious with only including global stylings in this file
+ */
+
+body {
+  margin: 0;
+}
+
+/* COLORS */
+.transparent-ucla-blue {
+  color: rgba(49, 133, 192, 0.2);
+}
+
+.transparent-ucla-gold {
+  color: rgba(255, 183, 24, 0.2);
+}
+
+.ucla-blue {
+  color: #3185c0;
+}
+
+.ucla-gold {
+  color: #ffb718;
+}
+
+/* TEXT */
+h1.transparent-ucla-blue,
+h1.transparent-ucla-gold {
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 150px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 850px) {
+  h1.transparent-ucla-blue,
+  h1.transparent-ucla-gold {
+    font-size: 80px;
+  }
+}
+
+h2 {
+  font-family: 'Courier New', sans-serif;
+  font-size: 36px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* BACKGROUNDS */
+.background-grey {
+  background-color: #fafafa;
+}
+
+/* LINKS */
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #ffb718;
+  font-size: 18px;
+}

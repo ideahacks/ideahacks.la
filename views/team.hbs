@@ -2,22 +2,30 @@
 <html>
 <head>
   <title>Team - IDEA Hacks</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <!--Icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
   <link rel='stylesheet' href="/css/team.css" />
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600i" rel="stylesheet">
 </head>
 <body>
+    <!-- NAVBAR -->
+    {{> navbar }}
 
-  <div class='team-container container-fluid'>
-    <div>
-      <span class='header'>Meet The Team!</span>
+  <div class='team-container container'>
+    <div class='header'>
+      <p>THE TEAM</p>
     </div>
+
 
 
     <!-- Captains -->
@@ -26,21 +34,39 @@
 
         <div class='row justify-content-center'>
 
-          <div class='col-sm-2 col-sm-offset-2 profile'>
-            <img src='./img/team/catcat.jpg' />
+          <div class='col-sm-3  no-padding'>
+            <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+              <div class='row justify-content-center'>
+                  <a href="#" class="fa fa-linkedin"></a>
+                  <a href="#" class="fa fa-github"></a>
+                  <a href="#" class="fa fa-user-circle"></a>
+                  <a href="#" class="fa fa-facebook"></a>
+              </div>
+            </div>
             <h2>Derrick Benson</h2>
             <h3>Theta Tau</h3>
           </div>
-          <div class='col-sm-2 col-sm-offset-1 profile'>
-            <img src='./img/team/catcat.jpg' />
+          <div class='col-sm-3  no-padding'>
+            <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-github"></a>
+              <a href="#" class="fa fa-user-circle"></a>
+              <a href="#" class="fa fa-facebook"></a>
+            </div>
             <h2>Wenlong Xiong</h2>
             <h3>IEEE</h3>
           </div>
-          <div class='col-sm-2 col-sm-offset-1 profile'>
-            <img src='./img/team/catcat.jpg' />
+          <div class='col-sm-3  no-padding'>
+            <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-github"></a>
+              <a href="#" class="fa fa-user-circle"></a>
+              <a href="#" class="fa fa-facebook"></a>
+            </div>
             <h2>Ted Akiyama</h2>
             <h3>IEEE</h3>
           </div>
+
 
         </div>
     </div>
@@ -49,24 +75,37 @@
     <div class='container-fluid section'>
       <h1>Corporate</h1>
       <div class='row justify-content-center'>
-        <div class='col-sm-2 col-sm-offset-2 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Kenny Chan</h2>
           <h3>IEEE</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Mabel Chen</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="#" class="fa fa-facebook"></a>
+          </div>
           <h2>Frederick Kennedy</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='w-100'></div>
-        <div class='col-sm-2 col-sm-offset-5 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Jingbin Huang</h2>
           <h3>IEEE</h3>
         </div>
@@ -77,13 +116,19 @@
     <div class='container-fluid section'>
       <h1>Design</h1>
       <div class='row justify-content-center'>
-        <div class='col-sm-2 col-sm-offset-3 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Audrey Tu</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='col-sm-2 com-sm-offset-2 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Jacob Ng</h2>
           <h3>Theta Tau</h3>
         </div>
@@ -94,24 +139,35 @@
     <div class='container-fluid section'>
       <h1>Operations</h1>
       <div class='row justify-content-center'>
-        <div class='col-sm-2 col-sm-offset-2 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Samuel Chen</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Tao Lu</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Christopher Wang</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='w-100'></div>
-        <div class='col-sm-2 col-sm-offset-5 profile'>
-          <img src='./img/team/catcat.jpg' />
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
           <h2>Jonathan Myong</h2>
           <h3>IEEE</h3>
         </div>
@@ -122,51 +178,82 @@
     <div class='container-fluid section'>
       <h1>Website</h1>
       <div class='row justify-content-center'>
-        <div class='col-sm-2 col-sm-offset-2 profile'>
-          <a href="https://www.github.com/jeffreyxchan" target="_blank"><img src='./img/team/catcat.jpg'></a>
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/jeffreyxchan" class="fa fa-github"></a>
+          </div>
           <h2>Jeffrey Chan</h2>
           <h3>IEEE</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <a href="https://www.github.com/jordanyenucla" target="_blank"><img src='./img/team/catcat.jpg'></a>
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/jordanyenucla" class="fa fa-github"></a>
+          </div>
           <h2>Jordan Yen</h2>
           <h3>IEEE</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <a href="https://www.github.com/hsubrittany" target="_blank"><img src='./img/team/catcat.jpg'></a>
+        <div class='col-sm-3 no-padding '>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/hsubrittany" class="fa fa-github"></a>
+          </div>
           <h2>Brittany Hsu</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='w-100'></div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <a href="https://www.github.com/shihpatrick" target="_blank"><img src='./img/team/catcat.jpg'></a>
+
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/shihpatrick" class="fa fa-github"></a>
+          </div>
           <h2>Patrick Shih</h2>
           <h3>Theta Tau</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <a href="https://www.github.com/treycrossley" target="_blank"><img src='./img/team/catcat.jpg'></a>
+        <div class='w-100'></div>
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/treycrossley" class="fa fa-github"></a>
+          </div>
           <h2>Trey Crossley</h2>
           <h3>IEEE</h3>
         </div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <a href="https://www.github.com/sydney-ng" target="_blank"><img src='./img/team/catcat.jpg'></a>
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/sydney-ng" class="fa fa-github"></a>
+          </div>
           <h2>Sydney Ng</h2>
           <h3>IEEE</h3>
         </div>
-        <div class='w-100'></div>
-        <div class='col-sm-2 col-sm-offset-1 profile'>
-          <a href="https://www.github.com/arthurhaiying" target="_blank"><img src='./img/team/catcat.jpg'></a>
+
+        <div class='col-sm-3 no-padding'>
+          <div class='pic'><img src='./img/team/derrick-benson-old.jpg' />
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-user-circle"></a>
+            <a href="http://github.com/arthurhaiying" class="fa fa-github"></a>
+          </div>
           <h2>Haiying Huang</h2>
           <h3>IEEE</h3>
         </div>
       </div>
     </div>
 
-    <!-- Contact us footer-->
-    <div class='footer text-center'>
-      <h3 style='margin-top: 0;'>Contact us at <a href='mailto:team@ideahacks.la'>team@ideahacks.la</a></h3>
-      <p style='margin-bottom: 0;'>&copy; IDEA Hacks</p>
-    </div>
 
 </div>
 </body>

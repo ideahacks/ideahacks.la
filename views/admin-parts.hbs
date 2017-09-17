@@ -1,12 +1,43 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Parts - Admin</title>
+    <title>Parts - Admin</title>
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="/js/admin-parts.js"></script>
+
+		<!-- STYLESHEETS -->
+		<link rel='stylesheet' type='text/css' href='/css/style.css' />
 </head>
 <body>
-	{{#each parts}}
-		<h1>{{ this.partName }} </h1>
-		<p> {{ this.stock }} </p>
-	{{/each}}
+    <!-- NAVBAR -->
+    {{> navbar }}
+
+    <form>
+        <p>Part name</p>
+        <input class="part-name" type = "text" name="partName" required>
+        <p>Stock</p>
+        <input  class="stock" type="number" name="stock" required><br>
+        <p>Description</p>
+        <input class="description" type="text" name="description" required><br>
+      	<p>Returnable or Perishable Item</p>
+        <input type="radio" name="ReturnOrPerish" value="returnable" required>Returnable<br>
+        <input type="radio" name="ReturnOrPerish" value="perishable">Perishable<br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+	<h1 class='error-message'></h1>
+
+	<ul class='part-list'>
+ 		 {{#each parts}}
+		 <li>
+			<h1>{{ this.partName }} </h1>
+			<p> {{ this.stock }} </p>
+			<p> {{ this.type  }} </p>
+		 </li>
+		{{/each}}
+	</ul>
 </body>
 </html>

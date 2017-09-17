@@ -7,14 +7,22 @@ const getParts = (req, res) => {
 }
 
 const postParts = (req, res) => {
-  let pylon = new Part()
-  pylon.partName = 'MUST CONSTRUCT ADDITIONAL'
-  pylon.stock = 15
-  pylon.description = 'support structure for use in beams'
-  pylon.owners = []
-  pylon.save()
+  Part.find({ partName: req.body.partName }).then(parts => {
+    if (parts.length > 0) {
+      return res.json({ status: 'failure', message: 'Part already exists' })
+    }
 
-  res.json({ message: 'Received POST request' })
+    let newPart = new Part({
+      partName: req.body.partName,
+      stock: req.body.stock,
+      description: req.body.description,
+      owners: [],
+      type: req.body.type
+    })
+    newPart.save()
+
+    return res.json({ status: 'success', message: 'Success! Part has been created' })
+  })
 }
 
 const deleteParts = (req, res) => {

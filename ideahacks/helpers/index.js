@@ -1,5 +1,5 @@
-const authHelpers = require('./auth.js')
-
 module.exports = {
-  authHelpers
+  authHelpers: require('./auth.js'),
+  userFunctions: require('./userFunctions.js'),
+  routeHelpers: require('./routeHelpers.js')
 }
