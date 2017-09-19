@@ -1,36 +1,40 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+  <head>
     <title>Dashboard - Announcements</title>
-
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <!-- SOCKET IO -->
     <script src='/socket.io/socket.io.js'></script>
-
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-</head>
-<body>
+    <link rel='stylesheet' type='text/css' href='/css/announcements.css' />
+  </head>
+  <body>
     <!-- NAVBAR -->
     {{> navbar }}
-
     <div class='banner'>
-      <h1>Announcements</h1>
+      <h1 id = 'heading'>Announcements</h1>
     </div>
-    <ul class='announcements-list'>
-        {{#each announcements}}
+    <div class='container'>
+      <div class='dots-list'>
+        <div class='announcement'>
+          <ol>
+            {{#each announcements}}
             <li>
+              <div class='content'>
                 <h1>{{ this.header }}</h1>
                 <p>{{ this.body  }}</p>
                 <p>{{ this.category }}</p>
+              </div>
             </li>
-        {{/each}}
-    </ul>
-</body>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,88 @@
+body {
+  background-color: #fafafa;
+  padding: 100pt 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+}
+
+.announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  left: 10vw;
+}
+
+.announcement h1 {
+  color: #3185c0;
+}
+
+.content {
+  position: relative;
+  right: 10vw;
+  background-color: white;
+}
+
+#heading {
+  text-transform: uppercase;
+  font-style: italic;
+  display: flex;
+  padding-top: 10vh;
+  color: rgba(255, 183, 24, 0.3);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vw;
+  line-height: 6vw;
+  font-weight: 900;
+  padding-bottom: 0px;
+}
+
+/*---------------- DOTS LIST -----------------------------------------*/
+.dots-list {
+  width: 100%;
+}
+.dots-list ol {
+  padding-left: 50px;
+  position: relative;
+  margin-bottom: 20px;
+  list-style: none !important;
+}
+.dots-list ol li {
+  position: relative;
+  margin-top: 5em;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.dots-list ol li:before {
+  content: '';
+  background: #d8d8d8;
+  position: absolute;
+  width: 3px;
+  top: 1px;
+  bottom: -80px;
+  left: -24px;
+}
+
+.dots-list ol li:after {
+  content: '';
+  background: #ffb718;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  top: 1px;
+  left: -31px;
+}
+.dots-list ol li:last-child:before {
+  content: '';
+  background: #ffffff;
+}
