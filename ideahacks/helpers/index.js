@@ -1,5 +1,5 @@
 module.exports = {
   authHelpers: require('./auth.js'),
-  userFunctions: require('./userFunctions.js'),
+  formatters: require('./format'),
   routeHelpers: require('./routeHelpers.js')
 }
