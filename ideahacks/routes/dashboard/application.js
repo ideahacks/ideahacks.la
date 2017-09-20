@@ -1,4 +1,4 @@
-const formatUser = require('../../helpers').userFunctions.formatUser
+const formatUser = require('../../helpers').formatters.formatUser
 
 const getApplication = (req, res) => {
   req.user = formatUser(req.user)

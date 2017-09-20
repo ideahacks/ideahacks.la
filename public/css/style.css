@@ -50,14 +50,20 @@ h1.transparent-ucla-gold {
 h2 {
   font-family: 'Courier New', sans-serif;
   font-size: 36px;
+  margin: 0;
 }
 
 p {
+  font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
 /* BACKGROUNDS */
+.background-white {
+  background-color: white;
+}
+
 .background-grey {
   background-color: #fafafa;
 }
@@ -81,4 +87,11 @@ a:focus {
   text-decoration: none;
   color: #ffb718;
   font-size: 18px;
+}
+
+/* LIST ELEMENTS */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
 }

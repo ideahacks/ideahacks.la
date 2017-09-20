@@ -18,10 +18,9 @@ $(() => {
 function appendNewAnnouncement(announcementData) {
   // prettier-ignore
   let newAnnouncementHTML = [
-    '<li>',
-      '<h1>', announcementData.header, '</h1>',
+    '<li class="announcement text-center">',
+      '<h2 class="ucla-blue">', announcementData.header, '</h2>',
       '<p>', announcementData.body, '</p>',
-      '<p>', announcementData.category, '</p>',
     '</li>'
   ].join('')
 

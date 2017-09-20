@@ -1,88 +1,63 @@
-body {
-  background-color: #fafafa;
-  padding: 100pt 0;
+/* BANNER */
+.banner {
+  margin-top: 40px;
 }
 
-h1 {
-  text-align: center;
+.banner h1 {
+  line-height: 0.75;
 }
 
-.container {
-  background-color: white;
+@media (max-width: 620px) {
+  .banner h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 470px) {
+  .banner h1 {
+    font-size: 48px;
+  }
+}
+
+/* ANNOUNCEMENTS */
+.announcements-container {
+  margin-bottom: 75px;
+  padding: 0 30px;
+}
+
+.announcements-list {
+  padding-top: 100px;
 }
 
 .announcement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Courier New', Courier, monospace;
-  position: relative;
-  left: 10vw;
+  padding: 50px 0;
 }
 
-.announcement h1 {
-  color: #3185c0;
+.stats-string {
+  font-weight: bold;
 }
 
-.content {
-  position: relative;
-  right: 10vw;
-  background-color: white;
-}
-
-#heading {
-  text-transform: uppercase;
-  font-style: italic;
-  display: flex;
-  padding-top: 10vh;
-  color: rgba(255, 183, 24, 0.3);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 8vw;
-  line-height: 6vw;
-  font-weight: 900;
-  padding-bottom: 0px;
-}
-
-/*---------------- DOTS LIST -----------------------------------------*/
-.dots-list {
-  width: 100%;
-}
-.dots-list ol {
-  padding-left: 50px;
-  position: relative;
-  margin-bottom: 20px;
-  list-style: none !important;
-}
-.dots-list ol li {
-  position: relative;
-  margin-top: 5em;
-  margin-bottom: 20px;
-  padding-top: 10px;
-}
-
-.dots-list ol li:before {
+/* DOT ON THE TOP */
+.announcements-container::before {
   content: '';
-  background: #d8d8d8;
-  position: absolute;
-  width: 3px;
-  top: 1px;
-  bottom: -80px;
-  left: -24px;
-}
-
-.dots-list ol li:after {
-  content: '';
-  background: #ffb718;
+  background-color: #ffb718;
   position: absolute;
   width: 15px;
   height: 15px;
-  border-radius: 100%;
-  top: 1px;
-  left: -31px;
+  border-radius: 15px;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-51%, 60px);
 }
-.dots-list ol li:last-child:before {
+
+/* BARS THAT COME BEFORE EACH ANNOUNCEMENT */
+.announcement::before {
   content: '';
-  background: #ffffff;
+  position: absolute;
+  margin: 0 auto;
+  background: #d8d8d8;
+  width: 3px;
+  height: 60px;
+  left: 50%;
+  transform: translate(-50%, -140%);
 }
