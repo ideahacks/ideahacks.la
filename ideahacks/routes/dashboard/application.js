@@ -23,9 +23,8 @@ const postApplication = (req, res) => {
     req.user[key] = req.body[key]
   }
 
-  // process hasTeam and vehicleNeed
+  // process hasTeam
   req.user['hasTeam'] = req.body['hasTeam'] === 'YES'
-  req.user['vehicleNeed'] = req.body['vehicleNeed'] === 'YES'
 
   if (oldHasApplicationStatus === true) {
     req.user.hasApplication = true

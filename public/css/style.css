@@ -72,12 +72,22 @@ p {
 button {
   color: white;
   font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
   background-color: #ffb718;
-  border: none;
+  border: solid 2px #ffb718;
   border-radius: 5px;
   padding: 10px 60px;
   margin: 10px 0;
   text-transform: uppercase;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffb718;
 }
 
 /* LINKS */

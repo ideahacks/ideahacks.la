@@ -4,11 +4,6 @@ const formatUser = user => {
   } else {
     user.hasNoTeam = true
   }
-  if (user.vehicleNeed) {
-    user.doesNeedVehicle = true
-  } else {
-    user.doesNotNeedVehicle = true
-  }
 
   let numberOfTeammates = user.teammates.length
 
