@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel='stylsheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/style.css' />
     <link rel='stylesheet' href="/css/form.css" />
     <link rel='stylesheet' href='/css/dashboard-application.css' />
 
@@ -140,14 +140,6 @@
                 <div class='form-group col-md-5'>
                     <label>Any dietary restrictions or food allergies?</label>
                     <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
-                </div>
-                <div class='form-group col-md-5'>
-                    <label>Will you be bringing a vehicle and need parking?</label>
-                    <label class='sublabel'>(Note: Parking priority goes to non-UCLA students)</label>
-                    <select class='form-control' name='vehicleNeed'>
-                        <option {{#if user.doesNeedVehicle}}selected{{/if}}>YES</option>
-                        <option {{#if user.doesNotNeedVehicle}}selected{{/if}}>NO</option>
-                    </select>
                 </div>
             </fieldset>
         </div>

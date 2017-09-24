@@ -70,14 +70,28 @@ p {
 
 /* BUTTON */
 button {
-  color: white;
   font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
   background-color: #ffb718;
-  border: none;
+  color: white;
+
+  border: solid 2px #ffb718;
   border-radius: 5px;
+  outline: none;
+
   padding: 10px 60px;
   margin: 10px 0;
-  text-transform: uppercase;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffb718;
 }
 
 /* LINKS */
