@@ -1,7 +1,6 @@
 $(document).ready(function() {
-  // function fired whenever window scrolls
+  // logic that handles navbar backgorund color when scrolling down
   $(window).scroll(function() {
-    // if window scrolled more than 75px
     if ($(document).scrollTop() > 75) {
       $('.myNavbar').css('background-color', 'white')
       $('.myNavbar li a').css('color', 'black')
@@ -10,22 +9,15 @@ $(document).ready(function() {
       $('.myNavbar li a').css('color', 'white')
     }
   })
-})
 
-$(document).ready(function() {
-  $('a').on('click', function(event) {
+  // logic for smooth scrolling animation after tab is clicked
+  $('.myNavbar a, .mobile-nav-list a').click(function(e) {
     if (this.hash !== '') {
-      event.preventDefault()
-      var hash = this.hash
-      $('html, body').animate(
-        {
-          scrollTop: $(hash).offset().top
-        },
-        800,
-        function() {
-          window.location.hash = hash
-        }
-      )
+      e.preventDefault()
+      let hash = this.hash
+      $('html, body').animate({ scrollTop: $(hash).offset().top }, 400, () => {
+        window.location.hash = hash
+      })
     }
   })
 })
