@@ -50,28 +50,48 @@ h1.transparent-ucla-gold {
 h2 {
   font-family: 'Courier New', sans-serif;
   font-size: 36px;
+  margin: 0;
 }
 
 p {
+  font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
 /* BACKGROUNDS */
+.background-white {
+  background-color: white;
+}
+
 .background-grey {
   background-color: #fafafa;
 }
 
 /* BUTTON */
 button {
-  color: white;
   font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
   background-color: #ffb718;
-  border: none;
+  color: white;
+
+  border: solid 2px #ffb718;
   border-radius: 5px;
+  outline: none;
+
   padding: 10px 60px;
   margin: 10px 0;
-  text-transform: uppercase;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffb718;
 }
 
 /* LINKS */
@@ -81,4 +101,11 @@ a:focus {
   text-decoration: none;
   color: #ffb718;
   font-size: 18px;
+}
+
+/* LIST ELEMENTS */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
 }

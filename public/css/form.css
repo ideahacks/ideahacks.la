@@ -68,13 +68,3 @@
   background-color: transparent;
   resize: none;
 }
-
-/* BUTTON */
-.ideahacks-form button {
-  color: white;
-  font-size: 16px;
-  background-color: #ffb718;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 60px;
-}

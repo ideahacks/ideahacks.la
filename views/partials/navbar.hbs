@@ -1,6 +1,6 @@
 <div class='myNavbar'>
     <div class='brand-container'>
-        <a href='{{#if onAdmin}}/admin{{/if}}{{#if onDashboard}}/dashboard{{/if}}{{#if onMainOrTeam}}/{{/if}}'><img src='/img/navbar-icon.svg' width='300px' style='display: inline-block;' /></a>
+        <a href='{{#if onAdmin}}/admin{{/if}}{{#if onDashboard}}/dashboard{{/if}}{{#if onMainOrTeam}}/#showcase{{/if}}'><img src='/img/navbar-icon.svg' width='300px' style='display: inline-block;' /></a>
     </div>
     <div class='navbar-icon' onclick='toggleNavbarIconLogic(this)'>
         <div class="bar1"></div>
@@ -28,7 +28,7 @@
             <li><a href='/#schedule'>Schedule</a></li>
             <li><a href='/#faq'>FAQ</a></li>
             <li><a href='/#sponsors'>Sponsors</a></li>
-            <li><a href='/login'>Login</a></li>
+            <!-- <li><a href='/login'>Login</a></li> -->
         {{/if}}
     </ul>
 </div>
@@ -53,7 +53,7 @@
         <li><a href='/#schedule'>Schedule</a></li>
         <li><a href='/#faq'>FAQ</a></li>
         <li><a href='/#sponsors'>Sponsors</a></li>
-        <li><a href='/login'>Login</a></li>
+        <!-- <li><a href='/login'>Login</a></li> -->
     {{/if}}
 </ul>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">

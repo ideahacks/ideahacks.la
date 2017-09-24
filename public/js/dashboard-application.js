@@ -26,9 +26,6 @@ function getAndSendApplicationData(toggleHasApplication) {
       .text(),
     teammates: teammateEmails,
     foodRestrictions: $('input[name="foodRestrictions"]').val(),
-    vehicleNeed: $('select[name="vehicleNeed"]')
-      .find(':selected')
-      .text(),
     skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
     pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
     reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),

@@ -1,4 +1,4 @@
-const formatUser = require('../../helpers').userFunctions.formatUser
+const formatUser = require('../../helpers').formatters.formatUser
 
 const getApplication = (req, res) => {
   req.user = formatUser(req.user)
@@ -23,9 +23,8 @@ const postApplication = (req, res) => {
     req.user[key] = req.body[key]
   }
 
-  // process hasTeam and vehicleNeed
+  // process hasTeam
   req.user['hasTeam'] = req.body['hasTeam'] === 'YES'
-  req.user['vehicleNeed'] = req.body['vehicleNeed'] === 'YES'
 
   if (oldHasApplicationStatus === true) {
     req.user.hasApplication = true

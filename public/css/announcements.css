@@ -1,0 +1,63 @@
+/* BANNER */
+.banner {
+  margin-top: 40px;
+}
+
+.banner h1 {
+  line-height: 0.75;
+}
+
+@media (max-width: 620px) {
+  .banner h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 470px) {
+  .banner h1 {
+    font-size: 48px;
+  }
+}
+
+/* ANNOUNCEMENTS */
+.announcements-container {
+  margin-bottom: 75px;
+  padding: 0 30px;
+}
+
+.announcements-list {
+  padding-top: 100px;
+}
+
+.announcement {
+  padding: 50px 0;
+}
+
+.stats-string {
+  font-weight: bold;
+}
+
+/* DOT ON THE TOP */
+.announcements-container::before {
+  content: '';
+  background-color: #ffb718;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-51%, 60px);
+}
+
+/* BARS THAT COME BEFORE EACH ANNOUNCEMENT */
+.announcement::before {
+  content: '';
+  position: absolute;
+  margin: 0 auto;
+  background: #d8d8d8;
+  width: 3px;
+  height: 60px;
+  left: 50%;
+  transform: translate(-50%, -140%);
+}
