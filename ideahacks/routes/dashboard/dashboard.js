@@ -1,12 +1,19 @@
 const Announcement = require('../../db').Announcement
 const Part = require('../../db').Part
+const formatDate = require('../../helpers').formatters.formatDate
 
 const getDashboard = (req, res) => {
-  Announcement.find().then(announcements => {
-    announcements = announcements.reverse()
+  Announcement.find()
+    .populate('createdBy', 'firstName lastName')
+    .then(announcements => {
+      announcements = announcements.reverse()
 
-    res.render('dashboard-announcements', { announcements })
-  })
+      for (let ann of announcements) {
+        ann.formattedTimestamp = formatDate(ann.timestamp)
+      }
+
+      res.render('dashboard-announcements', { announcements })
+    })
 }
 
 const getParts = (req, res) => {

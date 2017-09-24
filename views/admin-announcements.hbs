@@ -6,23 +6,30 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <!-- SOCKET IO -->
     <script src='/socket.io/socket.io.js'></script>
 
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
+
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
+    <link rel='stylesheet' type='text/css' href='/css/announcements.css' />
 
     <!-- SCRIPTS -->
     <script src='/js/admin-announcements.js'></script>
 </head>
 
-<body>
+<body class='background-grey'>
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <div class='banner'>
-      <h1>Announcements</h1>
-    </div>
+    <!-- ANNOUNCEMENTS CREATION FORM -->
     <h1 class="error-message"></h1>
     <h1 class='user-typing-message'></h1>
     <form class='announcement-form'>
@@ -30,18 +37,24 @@
         <input type='text' name='announcement-header' required>
         <p>Body</p>
         <textarea rows='4' name='announcement-body' required></textarea>
-
-        <button type='submit'>Submit Announcement</button>
+        <div>
+            <button type='submit'>Submit Announcement</button>
+        </div>
     </form>
 
-    <ul class='announcements-list'>
+    <!-- BANNER -->
+    <div class='banner'>
+        <h1 class='transparent-ucla-gold'>Announcements</h1>
+    </div>
+    <div class='container announcements-container background-white'>
+        <ol class='announcements-list'>
         {{#each announcements}}
-            <li>
-                <h1>{{ this.header }}</h1>
+            <li class='announcement text-center'>
+                <h2 class='ucla-blue'>{{ this.header }}</h1>
                 <p>{{ this.body  }}</p>
-                <p>{{ this.category }}</p>
             </li>
         {{/each}}
-    </ul>
+        </ol>
+    </div>
 </body>
 </html>

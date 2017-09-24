@@ -1,11 +1,18 @@
 const Announcement = require('../../db').Announcement
+const formatDate = require('../../helpers').formatters.formatDate
 
 const getAnnouncements = (req, res) => {
-  Announcement.find().then(announcements => {
-    announcements = announcements.reverse()
+  Announcement.find()
+    .populate('createdBy', 'firstName lastName')
+    .then(announcements => {
+      announcements = announcements.reverse()
 
-    return res.render('admin-announcements', { announcements })
-  })
+      for (let ann of announcements) {
+        ann.formattedTimestamp = formatDate(ann.timestamp)
+      }
+
+      return res.render('admin-announcements', { announcements })
+    })
 }
 
 const postAnnouncements = (req, res) => {
