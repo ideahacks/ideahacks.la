@@ -8,7 +8,6 @@ $(document).ready(() => {
       description: $('.description').val(),
       type: $('input[name="ReturnOrConsume"]:checked').val()
     }
-    console.log(partsData.type)
 
     $.ajax({ url: '/admin/parts', type: 'POST', data: partsData }).done(results => {
       if (results.status === 'failure') {
