@@ -1,4 +1,4 @@
-const teamData = require('../../db').teamdata
+const teamData = require('../../db').teamData
 
 let getMain = (req, res) => {
   return res.render('index')
