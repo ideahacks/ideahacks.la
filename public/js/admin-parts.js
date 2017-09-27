@@ -6,8 +6,9 @@ $(document).ready(() => {
       partName: $('.part-name').val(),
       stock: $('.stock').val(),
       description: $('.description').val(),
-      type: $('input[name="ReturnOrPerish"]:checked').val()
+      type: $('input[name="ReturnOrConsume"]:checked').val()
     }
+    console.log(partsData.type)
 
     $.ajax({ url: '/admin/parts', type: 'POST', data: partsData }).done(results => {
       if (results.status === 'failure') {
@@ -15,8 +16,8 @@ $(document).ready(() => {
       } else {
         appendNewPart(partsData)
 
-        $('input').val('')
-        $('input').attr('checked', '')
+        $('input[type="text"]').val('')
+        $('input[type="number"]').val('')
       }
     })
   })
