@@ -6,7 +6,7 @@ $(document).ready(() => {
       partName: $('.part-name').val(),
       stock: $('.stock').val(),
       description: $('.description').val(),
-      type: $('input[name="ReturnOrPerish"]:checked').val()
+      type: $('input[name="ReturnOrConsume"]:checked').val()
     }
 
     $.ajax({ url: '/admin/parts', type: 'POST', data: partsData }).done(results => {
@@ -15,7 +15,8 @@ $(document).ready(() => {
       } else {
         appendNewPart(partsData)
 
-        $('input').val('')
+        $('input[type="text"]').val('')
+        $('input[type="number"]').val('')
         $('input').attr('checked', '')
       }
     })
