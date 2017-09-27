@@ -17,6 +17,7 @@ $(document).ready(() => {
 
         $('input[type="text"]').val('')
         $('input[type="number"]').val('')
+        $('input').attr('checked', '')
       }
     })
   })
