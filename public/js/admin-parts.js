@@ -29,17 +29,12 @@ $(document).ready(() => {
 })
 
 function appendNewPart(partData) {
+  // prettier-ignore
   let newPartHTML = [
     '<li>',
-    '<h1>',
-    partData.partName,
-    '</h1>',
-    '<p>',
-    partData.stock,
-    '</p>',
-    '<p>',
-    partData.type,
-    '</p>',
+      '<h1>',partData.partName,'</h1>',
+      '<p>',partData.stock,'</p>',
+      '<p>',partData.type,'</p>',
     '</li>'
   ]
 
