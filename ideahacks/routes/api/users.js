@@ -12,46 +12,11 @@ const getUserByEmail = (req, res) => {
   })
 }
 
-const getAcceptedUsers = (req, res) => {
-  var acceptedUsers = []
-  User.find({ applicationStatus: 'accepted' }).then(accepted => {
-    accepted.forEach(function(elem) {
-      acceptedUsers.push(elem.email)
-    })
-    return res.send(acceptedUsers.join(', '))
+const getUserEmailsByAcceptance = (req, res) => {
+  User.find({ applicationStatus: req.params.acceptance }, 'email').then(users => {
+    let emailList = users.map(user => user.email).join(', ')
+    return res.send(emailList)
   })
-}
-
-const getWaitlistedUsers = (req, res) => {
-  var waitlistedUsers = []
-  User.find({ applicationStatus: 'waitlisted' }).then(waitlist => {
-    waitlist.forEach(function(elem) {
-      waitlistedUsers.push(elem.email)
-    })
-    return res.send(waitlistedUsers.join(', '))
-  })
-}
-
-const getRejectedUsers = (req, res) => {
-  var rejectedUsers = []
-  User.find({ applicationStatus: 'rejected' }).then(rejected => {
-    rejected.forEach(function(elem) {
-      rejectedUsers.push(elem.email)
-    })
-    return res.send(rejectedUsers.join(', '))
-  })
-}
-
-const postUsers = (req, res) => {
-  let newUser = new User({
-    firstName: 'Trey',
-    lastName: 'Crossley',
-    email: 'jeffschan97@gmail.com',
-    password: 'jeffrey'
-  })
-  newUser.save()
-
-  return res.json({ message: 'Received POST request' })
 }
 
 const changeApplicationStatus = (req, res) => {
@@ -74,10 +39,7 @@ const deleteUsers = (req, res) => {
 module.exports = {
   getUsers,
   getUserByEmail,
-  getAcceptedUsers,
-  getWaitlistedUsers,
-  getRejectedUsers,
-  postUsers,
+  getUserEmailsByAcceptance,
   changeApplicationStatus,
   deleteUsers
 }
