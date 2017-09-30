@@ -65,31 +65,31 @@ img {
   color: white;
 }
 
-.fa-facebook {
+/*.fa-facebook {
   position: absolute;
   top: 50%;
   left: 60%;
   display: none;
-}
+}*/
 
 .fa-linkedin {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   display: none;
 }
 
 .fa-github {
   position: absolute;
   top: 50%;
-  left: 80%;
+  left: 75%;
   display: none;
 }
 
 .fa-user-circle {
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 25%;
   display: none;
 }
 

@@ -123,6 +123,7 @@ module.exports = [
         name: 'Brittany Hsu',
         organization: 'Theta Tau',
         picturePath: '/img/team/derrick-benson-old.jpg',
+        linkedin: 'https://www.linkedin.com/in/brittany-hsu-953b49143',
         github: 'https://github.com/hsubrittany'
       },
       {
