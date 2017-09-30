@@ -12,16 +12,11 @@ const getUserByEmail = (req, res) => {
   })
 }
 
-const postUsers = (req, res) => {
-  let newUser = new User({
-    firstName: 'Trey',
-    lastName: 'Crossley',
-    email: 'jeffschan97@gmail.com',
-    password: 'jeffrey'
+const getUserEmailsByAcceptance = (req, res) => {
+  User.find({ applicationStatus: req.params.acceptance }, 'email').then(users => {
+    let emailList = users.map(user => user.email).join(', ')
+    return res.send(emailList)
   })
-  newUser.save()
-
-  return res.json({ message: 'Received POST request' })
 }
 
 const changeApplicationStatus = (req, res) => {
@@ -44,7 +39,7 @@ const deleteUsers = (req, res) => {
 module.exports = {
   getUsers,
   getUserByEmail,
-  postUsers,
+  getUserEmailsByAcceptance,
   changeApplicationStatus,
   deleteUsers
 }
