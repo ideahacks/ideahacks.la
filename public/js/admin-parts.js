@@ -40,15 +40,6 @@ function appendNewPart(partData) {
     '<p>',
     partData.type,
     '</p>',
-    '<p>',
-    partData.manufacturer,
-    '</p>',
-    '<p>',
-    partData.manufacturerPartNumber,
-    '</p>',
-    '<p>',
-    partData.datasheet,
-    '</p>',
     '</li>'
   ]
 
