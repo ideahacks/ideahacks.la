@@ -6,7 +6,10 @@ $(document).ready(() => {
       partName: $('.part-name').val(),
       stock: $('.stock').val(),
       description: $('.description').val(),
-      type: $('input[name="ReturnOrConsume"]:checked').val()
+      type: $('input[name="ReturnOrConsume"]:checked').val(),
+      manufacturer: $('.manufacturer').val(),
+      manufacturerPartNumber: $('.partNumber').val(),
+      datasheet: $('.partNumber').val()
     }
 
     $.ajax({ url: '/admin/parts', type: 'POST', data: partsData }).done(results => {

@@ -1,6 +1,7 @@
 const express = require('express')
 const apiRouter = express.Router()
 const userApiHandlers = require('./users.js')
+const partApiHanders = require('./parts.js')
 
 // gets all users within the database
 apiRouter.get('/users', userApiHandlers.getUsers)
@@ -16,5 +17,7 @@ apiRouter.post('/users/change/application-status/:email/:newApplicationStatus', 
 
 // delete all users within the database
 apiRouter.delete('/users', userApiHandlers.deleteUsers)
+
+apiRouter.get('/parts', partApiHanders.getParts)
 
 module.exports = apiRouter
