@@ -29,7 +29,8 @@
   font-weight: 300;
 }
 
-.ideahacks-form label.sublabel {
+.ideahacks-form label.sublabel,
+.ideahacks-form label .sublabel {
   font-size: 15px;
 }
 
