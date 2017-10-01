@@ -25,6 +25,10 @@ body {
   color: #ffb718;
 }
 
+.white {
+  color: white;
+}
+
 /* TEXT */
 h1.transparent-ucla-blue,
 h1.transparent-ucla-gold {
@@ -53,6 +57,13 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 10px;
@@ -66,6 +77,10 @@ p {
 
 .background-grey {
   background-color: #fafafa;
+}
+
+.background-transparent-ucla-gold {
+  background-color: rgba(255, 183, 24, 0.2);
 }
 
 /* BUTTON */

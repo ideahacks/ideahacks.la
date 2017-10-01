@@ -1,7 +1,4 @@
-body {
-  padding-top: 75px; /* size of the navbar */
-}
-
+/* GENERAL ELEMENT STYLING */
 .myNavbar {
   position: fixed;
   top: 0;

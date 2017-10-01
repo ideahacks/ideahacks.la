@@ -9,15 +9,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
+
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel="stylesheet" type='text/css' href="css/index.css">
+    <link rel="stylesheet" type='text/css' href="/css/index.css">
 
     <!-- SCRIPTS -->
     <script src='/js/navbar-scroll.js'></script>
@@ -26,175 +26,94 @@
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <header id="showcase" class="tint">
-        <div id="content">
-            <img src="/img/index/LogoRedesign-yellow.svg"/>
-            <p>
-                <div id="loc">@UCLA Ackerman Grand Ballroom</div>
-                <div id="dayspan">January 12-14, 2018</div>
-                <div>Applications open Fall 2017</div>
-                <!-- <a href='/registration'><button>Apply Now!</button></a> -->
-            </p>
-        </div>
-    </header>
+    <!-- HERO BANNER -->
+    <div id="showcase" class="banner text-center">
+        <img src="/img/index/LogoRedesign-yellow.svg" />
+        <p>
+            <span class="location"><a href='http://bit.ly/2xFd2v3' target='_blank'>@UCLA Ackerman Grand Ballroom</a></span> <br />
+            <span class="white">January 12-14, 2018</span> <br />
+            <span class="white">Applications open Fall 2017</span> <br />
+            <!-- <a href='/registration'><button>Apply Now!</button></a> -->
+        </p>
+    </div>
 
+    <!-- ABOUT -->
     <div class="container" id="about">
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div id="left">
-                    <br/><br/>
                     <span id="tf">The first</span>
-                    <span id="hh">HARDWARE <br/> &ensp;HACKATHON</span>
+                    <span id="hh">HARDWARE<br/>&ensp;HACKATHON</span>
                     <span id="ot">on the</span>
                     <span id="wc">west coast</span>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <h4 class="title"><strong>About</strong></h4>
+                <h3>About</h3>
                 <p>For the fourth time in history, IEEE at UCLA and Theta Tau at UCLA are pleased to present to you California's largest college hardware-focused hackathon ever.</p>
                 <p>At IDEA Hacks we provide our hackers with tools, such as 3D printers, soldering stations, and other equipment free of charge. Not only will these hackers code, but also they will create tangible products from scratch in one weekend.</p>
                 <p>The theme for this year's hackathon is Home Automation! This means that you will be challenged to create something that relates to automating daily activities and chores found around the house.</p>
                 <a href="/team"><button>MEET THE TEAM</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-9"></div>
-            <div class="col-3">
-                <span id="hosted">hosted by</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-8 col-lg-9"></div>
-            <div class="col-2 col-lg-1">
-                <img src="/img/index/IMG_1531.JPG" id="ieee"/>
-            </div>
-            <div class="col-2 col-lg-1">
-                <img src="/img/index/IMG_1530.JPG" id="tt"/>
+                <!-- <div class='hosting'>
+                    <h3 style='text-align: center;'>Hosted By</h3>
+                    <div class="col-xs-6" style='text-align: right;'>
+                        <img src="/img/index/IMG_1531.JPG" id="ieee"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <img src="/img/index/IMG_1530.JPG" id="tt"/>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
 
-    <div class="container-fluid" id="schedule">
-        <h1 id="schedule-header">SCHEDULE</h1>
-        <div class="container" id="schedule-content">
+    <!-- SCHEDULE -->
+    <div class="container-fluid background-grey schedule" id="schedule">
+        <h1 class='transparent-ucla-blue'>SCHEDULE</h1>
+        <div class='schedule-content container' id="schedule-content">
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="title">
-                        <div class="day">Friday</div>
-                        <div class="day-num">Day 1</div>
+                <div class="col-sm-4">
+                    <div class='day-header'>
+                      <h3 class='ucla-gold'>Friday</h3>
+                      <h2 class='ucla-blue'>Day 1</h2>
                     </div>
                     <div class="dots-list">
                         <ol>
-                            <li>
-                                <div>
-                                    <strong>5:00PM - 7:00PM</strong> <br/>
-                                    Registration & Team Formation
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>5:30PM - 6:30PM</strong> <br/>
-                                    Texas Instruments Infosession
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>8:00PM - 9:00PM</strong><br/>
-                                    Opening Speeches & Presentations
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>9:00PM</strong> <br/>
-                                    Hacking Begins
-                                </div>
-                            </li>
+                            <li><p><strong>5:00PM - 7:00PM</strong> <br/>Registration & Team Formation</p></li>
+                            <li><p><strong>5:30PM - 6:30PM</strong> <br/>Texas Instruments Infosession</p></li>
+                            <li><p><strong>8:00PM - 9:00PM</strong><br/>Opening Speeches & Presentations</p></li>
+                            <li><p><strong>9:00PM</strong> <br/>Hacking Begins</p></li>
                         </ol>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="title">
-                        <div class="day">Saturday</div>
-                        <div class="day-num">Day 2</div>
+                <div class="col-sm-4">
+                    <div class='day-header'>
+                        <h3 class='ucla-gold'>Saturday</h3>
+                        <h2 class='ucla-blue'>Day 2</h2>
                     </div>
                     <div class="dots-list">
                         <ol>
-                            <li>
-                                <div>
-                                    <strong>7:00AM - 11:00AM</strong> <br/>
-                                    Breakfast
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>9:00AM - 11:00AM</strong> <br/>
-                                    iOS Workshop
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>12:00PM - 1:00PM</strong> <br/>
-                                    Lunch
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>1:00PM - 1:30PM</strong> <br/>
-                                    Mulesoft Infosession
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>4:00PM - 4:30PM</strong> <br/>
-                                    Engineering Panel
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>6:00PM - 8:00PM</strong> <br/>
-                                    Dinner
-                                </div>
-                            </li>
+                            <li><p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p></li>
+                            <li><p><strong>9:00AM - 11:00AM</strong> <br/> iOS Workshop</p></li>
+                            <li><p><strong>12:00PM - 1:00PM</strong> <br/> Lunch</p></li>
+                            <li><p><strong>1:00PM - 1:30PM</strong> <br/> Mulesoft Infosession</p></li>
+                            <li><p><strong>4:00PM - 4:30PM</strong> <br/> Engineering Panel</p></li>
+                            <li><p><strong>6:00PM - 8:00PM</strong> <br/> Dinner</p></li>
                         </ol>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="title">
-                        <div class="day">Sunday</div>
-                        <div class="day-num">Day 3</div>
+                <div class="col-sm-4">
+                    <div class='day-header'>
+                        <h3 class='ucla-gold'>Sunday</h3>
+                        <h2 class='ucla-blue'>Day 3</h2>
                     </div>
                     <div class="dots-list">
                         <ol>
-                            <li>
-                                <div>
-                                    <strong>7:00AM - 11:00AM</strong> <br/>
-                                    Breakfast
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>9:00AM</strong> <br/>
-                                    Hacking Ends
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>9:00AM - 9:30AM</strong> <br/>
-                                    Exhibition Setup
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>9:30AM - 11:00AM</strong> <br/>
-                                    Judging
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <strong>11:00AM - 1:00PM</strong> <br/>
-                                    Closing & Awards
-                                </div>
-                            </li>
+                            <li><p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p></li>
+                            <li><p><strong>9:00AM</strong> <br/> Hacking Ends</p></li>
+                            <li><p><strong>9:00AM - 9:30AM</strong> <br/> Exhibition Setup</p></li>
+                            <li><p><strong>9:30AM - 11:00AM</strong> <br/> Judging</p></li>
+                            <li><p><strong>11:00AM - 1:00PM</strong> <br/> Closing & Awards</p></li>
                         </ol>
                     </div>
                 </div>
@@ -202,19 +121,20 @@
         </div>
     </div>
 
-    <div class="container" id="faq">
-        <h1 id="faq-header">FAQ</h1>
+    <!-- FAQ -->
+    <div class="container faq" id="faq">
+        <h1 class='transparent-ucla-gold'>FAQ</h1>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6">
                 <section>
-                    <div class="title location">General</div>
+                    <h2 class='ucla-gold background-transparent-ucla-gold'>General</h2>
                     <h3>Who can attend?</h3>
                     <p>As we are still a young event, IDEA Hacks is primarily looking for UCLA students. However, all hackers are encouraged to apply as exceptions made on an application basis.</p>
                     <h3>I don't know anything about hardware!</h3>
                     <p>You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. There will also be mentors and other hardware experts ready to assist those who are having trouble bringing their hacks to life.</p>
                 </section>
                 <section>
-                    <div class="title location">Accommodations</div>
+                    <h2 class='ucla-gold background-transparent-ucla-gold'>Accommodations</h2>
                     <h3>How much does it cost?</h3>
                     <p>IDEA Hacks costs absolutely nothing to participate in. There is no reason not to come out, learn something new, and have fun!</p>
                     <h3>What should I bring?</h3>
@@ -227,14 +147,14 @@
             </div>
             <div class="col-12 col-sm-12 col-md-6">
                 <section>
-                    <div class="title location">Applications</div>
+                    <h2 class='ucla-gold background-transparent-ucla-gold'>Applications</h2>
                     <h3>How do I apply?</h3>
                     <p>Hackers can apply on this website! Applications usually open in the middle of Fall quarter and stay open up until a couple weeks before the hackathon. Make sure to keep an eye out for IDEA Hacks notifications on when to start applying. Applications are reviewed and accepted on a first come first serve basis, so apply early!</p>
                     <h3>What if I don't have a team?</h3>
                     <p>You are free to hack alone, but that's no fun! We encourage everyone to be on teams of around 4-5 hackers. Not only will you have more fun, but more equipment will be available for your use. That being said, we do hold a team formation session before hacking begins so that hackers can be successful in finding the right teammates.</p>
                 </section>
                 <section>
-                    <div class="title location">Miscellaneous</div>
+                    <h2 class='ucla-gold background-transparent-ucla-gold'>Miscellaneous</h2>
                     <h3>What tools and hardware will be provided for my team?</h3>
                     <p>If you would like to see a specific part or device at the hackathon, you can specify so on your application and we'll do our best to accomodate! When applications are released, there'll a listing of parts that you can look through.</p>
                     <h3>Where can I find the rubric?</h3>
@@ -248,6 +168,7 @@
         </div>
     </div>
 
+    <!-- SPONSORS -->
     <div class='background-grey sponsors' id='sponsors'>
         <h1 class='transparent-ucla-blue'>Sponsors</h1>
         <div class='sponsor-message'>

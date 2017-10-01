@@ -19,5 +19,6 @@ module.exports = {
   User,
   Team,
   Part,
-  Announcement
+  Announcement,
+  teamData: require('./data/team.js')
 }
