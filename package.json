@@ -11,7 +11,7 @@
     "format": "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css",
     "format-check": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css",
     "lint": "./node_modules/.bin/eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
-    "precommit": "lint-staged", 
+    "precommit": "lint-staged",
     "start": "node server.js",
     "test": "npm run format-check && npm run lint"
   },
