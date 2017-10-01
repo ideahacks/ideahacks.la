@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Team - IDEA Hacks</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - IDEA Hacks</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-  <!--Icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- CSS -->
-  <link rel='stylesheet' href="/css/team.css" />
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600i" rel="stylesheet">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600i" rel="stylesheet">
+    <!-- CSS -->
+    <link rel='stylesheet' href="/css/team.css" />
 </head>
 <body>
     <!-- NAVBAR -->
     {{> navbar }}
 
-  <div class='team-container container'>
-    <div class='header'>
-      <p>THE TEAM</p>
-    </div>
-    
-    {{#each teamData}}
-    <div class='container-fluid section'>
-      <h1>{{this.departmentName}}</h1>
-      <div class='row justify-content-center'>
-        {{#each this.teammates}}
-        <div class='col-sm-3 no-padding'>
+    <div class='team-container container'>
+        <div class='header'>
+          <p>THE TEAM</p>
+        </div>
 
-          <div class='pic'><img src='{{this.picturePath}}'/>
+        {{#each teamData}}
+        <div class='container-fluid section'>
+            <h1>{{this.departmentName}}</h1>
             <div class='row justify-content-center'>
-                {{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin"></a>{{/if}}
-                {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github"></a>{{/if}}
-                {{#if this.website}}<a href="{{this.website}}" target="_blank" class="fa fa-user-circle"></a>{{/if}}
+                {{#each this.teammates}}
+                <div class='col-sm-3 no-padding'>
+                    <div class='pic'>
+                      <img src='{{this.picturePath}}'/>
+                      <div class='row justify-content-center icon-row'>
+                          {{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}}
+                          {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}}
+                          {{#if this.website}}<a href="{{this.website}}" target="_blank" class="fa fa-user-circle fa-3x"></a>{{/if}}
+                      </div>
+                    </div>
+                    <h2>{{this.name}}</h2>
+                    <h3>{{this.organization}}</h3>
+                </div>
+                {{/each}}
             </div>
-          </div>
-        <h2>{{this.name}}</h2>
-        <h3>{{this.organization}}</h3>
-
-      </div>
-      {{/each}}
-      </div>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
-</div>
 </body>
 </html>
