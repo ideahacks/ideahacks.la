@@ -1,42 +1,67 @@
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h1 style='text-align: center;'><span name='firstName'></span> <span name='lastName'></span></h1>
+<div id="myModal" class="modal ideahacks-form">
+    <div class="modal-content container-fluid">
+        <h2 class='ucla-blue applicant-name'><span name='firstName'></span> <span name='lastName'></span></h2>
 
-        <p style='text-align: center;'>
-          <span name='phone'></span>
-          <span name='email'></span>
+        <p class='applicant-contact'>
+          <span class='fa fa-mobile'></span><span name='phone'></span>
+          <span class='fa fa-envelope-o'></span><span name='email'></span>
         </p>
 
-        <h1>Educational Information</h1>
-        <p>School: <span name='school'></span></p>
-        <p>Major: <span name='major'></span></p>
-        <p>Year: <span name='year'></span></p>
-        <p>Github: <span name='github'></span></p>
-        <p>LinkedIn: <span name='linkedin'></span></p>
+        <!-- EDUCATIONAL INFORMATION -->
+        <div class='application-section'>
+            <legend>Education Information</legend>
+            <fieldset>
+                <p class='col-sm-12'>School: <span name='school'></span></p>
+                <p class='col-sm-5'>Major: <span name='major'></span></p>
+                <p class='col-sm-5'>Year: <span name='year'></span></p>
+                <p class='col-sm-5'>Github: <span name='github'></span></p>
+                <p class='col-sm-6'>LinkedIn: <span name='linkedin'></span></p>
+            </fieldset>
+        </div>
 
-        <h1>Hackathon Information</h1>
-        <p>Skills and Experiences:</p>
-        <p><span name='skillsAndExperience'></span></p>
+        <!-- TEAM INFORMATION -->
+        <div class='application-section'>
+            <legend>Team Information</legend>
+            <fieldset>
+                <p>Has a team? <span name='hasTeam'></span></p>
+                <p>Teammate Emails:</p>
+                <p><span name='teammates' style='padding: 0;'></span></p>
+            </fieldset>
+        </div>
 
-        <p>Past Hackathon Experience:</p>
-        <p><span name='pastHackathonExperience'></span></p>
+        <!-- HACKATHON INFORMATION -->
+        <div class='application-section hackathon-information'>
+            <legend>Hackathon Information</legend>
+            <fieldset>
+                <p>Skills and Experiences:</p>
+                <p><span name='skillsAndExperience'></span></p>
 
-        <p>Reason for Participation:</p>
-        <p><span name='reasonForParticipation'></span></p>
+                <p>Past Hackathon Experience:</p>
+                <p><span name='pastHackathonExperience'></span></p>
 
-        <p>Theme Idea:</p>
-        <p><span name='themeIdea'></span></p>
+                <p>Reason for Participation:</p>
+                <p><span name='reasonForParticipation'></span></p>
 
-        <p>Desired Parts:</p>
-        <p><span name='desiredParts'></span></p>
+                <p>Theme Idea:</p>
+                <p><span name='themeIdea'></span></p>
+
+                <p>Desired Parts:</p>
+                <p><span name='desiredParts'></span></p>
+            </fieldset>
+        </div>
+
+        <!-- MISCELLANEOUS INFORMATION -->
+        <div class='application-section'>
+            <legend>Miscellaneous</legend>
+            <fieldset>
+                <p>Dietary Restrictions:</p>
+                <p><span name='foodRestrictions' style='padding: 0;'></span></p>
+            </fieldset>
+        </div>
 
         <div class='row'>
             <div class='col-md-3'>
                 <input type='radio' name='application-status-radio' value='rejected' /> Rejected <br />
-            </div>
-            <div class='col-md-3'>
-                <input type='radio' name='application-status-radio' value='waitlisted' /> Waitlisted <br />
             </div>
             <div class='col-md-3'>
                 <input type='radio' name='application-status-radio' value='pending' /> Pending <br />
@@ -47,3 +72,6 @@
         </div>
     </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' type='text/css' href='/css/form.css' />
+<link rel='stylesheet' type='text/css' href='/css/modals/application-review-modal.css' />

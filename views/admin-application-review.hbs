@@ -14,6 +14,9 @@
     <!-- SOCKET IO -->
     <script src='/socket.io/socket.io.js'></script>
 
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
+
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' type='text/css' href='/css/modal.css' />
@@ -21,33 +24,71 @@
 
     <!-- SCRIPTS -->
     <script src='/js/application-review-modal.js'></script>
+    <script src='/js/filter.js'></script>
 </head>
 <body>
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <div class='banner'>
-      <h1>Application Review</h1>
+    <!-- BANNER -->
+    <h1 class='transparent-ucla-blue banner'>Applications</h1>
+
+    <!-- STATS -->
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-3'>
+                <div class='stats-box'>
+                    <h1>27</h1>
+                    <h4>Applications</h4>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='stats-box'>
+                    <h1>27</h1>
+                    <h4>Applications</h4>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='stats-box'>
+                    <h1>27</h1>
+                    <h4>Applications</h4>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='stats-box'>
+                    <h1>27</h1>
+                    <h4>Applications</h4>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <ul class='application-list'>
+    <!-- FILTER -->
+    {{> filter }}
+
+    <!-- APPLICATION LIST -->
+    <ul class='application-list container filter-list'>
         {{#each applications}}
-            <li class='{{ this.email }} {{this.applicationStatus}} container-fluid' name='{{this.email}}'>
+            <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
                 <div class='row'>
-                    <div class='col-md-2'>
-                        <p>{{ this.firstName }} {{ this.lastName}}</p>
+                    <div class='col-sm-3 col-xs-6'>
+                        <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
                     </div>
-                    <div class='col-md-8'>
-                      <p>{{#if this.year }}{{ this.year }} year {{/if}} {{ this.school }} {{#if this.major}}studying {{ this.major }}{{/if}}</p>
+                    <div class='col-sm-3'>
+                      <p class='filter-key year'>{{#if this.year}}{{this.year}}{{/if}}</p>
                     </div>
-                    <div class='col-md-2'>
-                      <p class='application-status'>{{ this.applicationStatus }}</p>
+                    <div class='col-sm-3'>
+                      <p class='filter-key school'>{{#if this.school}}{{this.school}}{{/if}}</p>
+                    </div>
+                    <div class='col-sm-3 col-xs-6'>
+                      <p class='application-status filter-key'>{{ this.applicationStatus }}</p>
                     </div>
                 </div>
             </li>
         {{/each}}
     </ul>
 
+    <!-- APPLICATION MODAL -->
     {{> applicationModal }}
 </body>
 </html>

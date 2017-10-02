@@ -20,8 +20,9 @@
 .modal-content {
   background-color: #fefefe;
   margin: 100px auto;
-  padding: 20px;
+  padding: 30px 0;
   border: 1px solid #888;
+  border-radius: 0;
   width: 80%;
 }
 
