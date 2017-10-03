@@ -34,31 +34,25 @@
     <h1 class='transparent-ucla-blue banner'>Applications</h1>
 
     <!-- STATS -->
-    <div class='container'>
-        <div class='row'>
-            <div class='col-sm-3'>
-                <div class='stats-box'>
-                    <h1>27</h1>
-                    <h4>Applications</h4>
-                </div>
+    <div class='container' style='padding: 20px 0;'>
+        <div class='row stats-box-container'>
+            <div class='stats-box'>
+                <h1>{{numberApplications}}</h1>
+                <h4>Applications</h4>
             </div>
-            <div class='col-sm-3'>
-                <div class='stats-box'>
-                    <h1>27</h1>
-                    <h4>Applications</h4>
-                </div>
+            <div class='stats-box accepted-box'>
+                <h1>{{numberAccepted}}</h1>
+                <h4>Accepted</h4>
             </div>
-            <div class='col-sm-3'>
-                <div class='stats-box'>
-                    <h1>27</h1>
-                    <h4>Applications</h4>
-                </div>
+
+            <div class='stats-box rejected-box'>
+                <h1>{{numberRejected}}</h1>
+                <h4>Rejected</h4>
             </div>
-            <div class='col-sm-3'>
-                <div class='stats-box'>
-                    <h1>27</h1>
-                    <h4>Applications</h4>
-                </div>
+
+            <div class='stats-box pending-box'>
+                <h1>{{numberPending}}</h1>
+                <h4>Pending</h4>
             </div>
         </div>
     </div>
