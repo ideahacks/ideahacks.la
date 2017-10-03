@@ -37,3 +37,8 @@
 .hackathon-information span {
   padding: 0;
 }
+
+/* STATUS CONTROLS */
+.status-controls {
+  padding: 30px 0 15px;
+}

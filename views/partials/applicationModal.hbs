@@ -1,11 +1,34 @@
 <div id="myModal" class="modal ideahacks-form">
     <div class="modal-content container-fluid">
+        <!-- NAME -->
         <h2 class='ucla-blue applicant-name'><span name='firstName'></span> <span name='lastName'></span></h2>
 
+        <!-- CONTACT INFO -->
         <p class='applicant-contact'>
-          <span class='fa fa-mobile'></span><span name='phone'></span>
-          <span class='fa fa-envelope-o'></span><span name='email'></span>
+            <span class='fa fa-mobile'></span><span name='phone'></span>
+            <span class='fa fa-envelope-o'></span><span name='email'></span>
         </p>
+
+        <!-- STATUS CONTROLS -->
+        <div class='status-controls text-center'>
+            <div class='radio-button-group'>
+                <div class='radio-outer-square'><div class='radio-inner-square'></div></div><label>Pending</label>
+            </div>
+            <div class='radio-button-group'>
+                <div class='radio-outer-square'><div class='radio-inner-square'></div></div><label>Accepted</label>
+            </div>
+            <div class='radio-button-group'>
+                <div class='radio-outer-square'><div class='radio-inner-square'></div></div><label>Rejected</label>
+            </div>
+        </div>
+        <!-- REAL AND HIDDEN RADIO BUTTONS -->
+        <div class='row' style='display: none;'>
+            <div class='col-md-12'>
+                <input type='radio' name='application-status-radio' value='rejected' />
+                <input type='radio' name='application-status-radio' value='pending' />
+                <input type='radio' name='application-status-radio' value='accepted'/>
+            </div>
+        </div>
 
         <!-- EDUCATIONAL INFORMATION -->
         <div class='application-section'>
@@ -14,8 +37,8 @@
                 <p class='col-sm-12'>School: <span name='school'></span></p>
                 <p class='col-sm-5'>Major: <span name='major'></span></p>
                 <p class='col-sm-5'>Year: <span name='year'></span></p>
-                <p class='col-sm-5'>Github: <span name='github'></span></p>
-                <p class='col-sm-6'>LinkedIn: <span name='linkedin'></span></p>
+                <p class='col-sm-5'>Github: <a name='github-anchor' href='' target='_blank'><span name='github'></span></a></p>
+                <p class='col-sm-6'>LinkedIn: <a name='linkedin-anchor' href='' target='_blank'><span name='linkedin'></span></a></p>
             </fieldset>
         </div>
 
@@ -25,7 +48,7 @@
             <fieldset>
                 <p>Has a team? <span name='hasTeam'></span></p>
                 <p>Teammate Emails:</p>
-                <p><span name='teammates' style='padding: 0;'></span></p>
+                <p><span name='teammates' class='ucla-gold' style='padding: 0;'></span></p>
             </fieldset>
         </div>
 
@@ -58,20 +81,10 @@
                 <p><span name='foodRestrictions' style='padding: 0;'></span></p>
             </fieldset>
         </div>
-
-        <div class='row'>
-            <div class='col-md-3'>
-                <input type='radio' name='application-status-radio' value='rejected' /> Rejected <br />
-            </div>
-            <div class='col-md-3'>
-                <input type='radio' name='application-status-radio' value='pending' /> Pending <br />
-            </div>
-            <div class='col-md-3'>
-                <input type='radio' name='application-status-radio' value='accepted'/> Accepted <br />
-            </div>
-        </div>
     </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' type='text/css' href='/css/form.css' />
+<link rel='stylesheet' type='text/css' href='/css/radio.css' />
 <link rel='stylesheet' type='text/css' href='/css/modals/application-review-modal.css' />
+<script src='/js/radio.js'></script>

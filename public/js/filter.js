@@ -9,9 +9,9 @@ function filter() {
       })
     keyValue = keyValue.toUpperCase()
     if (keyValue.indexOf(searchBarValue.toUpperCase()) > -1) {
-      $(part).fadeIn(200)
+      $(part).fadeIn(300)
     } else {
-      $(part).fadeOut(200)
+      $(part).fadeOut(300)
     }
   }
 }

@@ -1,6 +1,7 @@
 $(() => {
   let modal = document.getElementById('myModal')
 
+  // when application clicked on, make API call, inject info into modal, and then display modal
   $('li').click(function() {
     let userEmail = $(this)
       .attr('class')
@@ -11,11 +12,23 @@ $(() => {
       for (let key in response) {
         $('*[name="' + key + '"]').text(response[key])
       }
+      $('a[name="github-anchor"]').attr('href', response.github)
+      $('a[name="linkedin-anchor"]').attr('href', response.linkedin)
       $('input[value="' + response['applicationStatus'] + '"]').attr('checked', 'checked')
+      $('.radio-outer-square').each(function(i, el) {
+        let labelText = $(el)
+          .next()
+          .html()
+          .toLowerCase()
+        if (labelText === response.applicationStatus) {
+          $(el).click()
+        }
+      })
       modal.style.display = 'block'
     })
   })
 
+  // when radio button is clicked, asynchronously change application status
   $('input[name="application-status-radio"]').click(function() {
     let userEmail = $('span[name="email"]').text()
     let oldApplicationStatus = $('li[name="' + userEmail + '"]')
@@ -31,6 +44,7 @@ $(() => {
     })
   })
 
+  // when user clicks outside the modal, hide the modal
   window.onclick = e => {
     if (e.target === modal) {
       modal.style.display = 'none'
