@@ -2,22 +2,22 @@ const User = require('../../db').User
 
 const getApplicationReview = (req, res) => {
   User.find({ hasApplication: true }).then(users => {
-    let numberApplications = users.length
-    let numberAccepted = 0
-    let numberRejected = 0
-    let numberPending = 0
-    for (let user of users) {
-      if (user.applicationStatus === 'accepted') numberAccepted++
-      else if (user.applicationStatus === 'pending') numberPending++
-      else if (user.applicationStatus === 'rejected') numberRejected++
-    }
+    let applicationStats = users.reduce(
+      (stats, user, index) => {
+        if (user.applicationStatus === 'accepted') stats.accepted++
+        else if (user.applicationStatus === 'pending') stats.pending++
+        else if (user.applicationStatus === 'rejected') stats.rejected++
+        return stats
+      },
+      { accepted: 0, rejected: 0, pending: 0 }
+    )
 
     res.render('admin-application-review.hbs', {
       applications: users,
-      numberApplications,
-      numberAccepted,
-      numberRejected,
-      numberPending
+      numberApplications: users.length,
+      numberAccepted: applicationStats.accepted,
+      numberRejected: applicationStats.rejected,
+      numberPending: applicationStats.pending
     })
   })
 }
