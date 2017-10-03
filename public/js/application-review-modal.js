@@ -52,10 +52,21 @@ $(() => {
   }
 })
 
+// logic that's fired when an application status changes
 function changeApplicationStatus(userEmail, oldApplicationStatus, newApplicationStatus) {
+  // change class
   let application = $('li[name="' + userEmail + '"]')
   application.removeClass(oldApplicationStatus)
   application.addClass(newApplicationStatus)
 
+  // change status text
   application.find('.application-status').text(newApplicationStatus)
+
+  // adjust status boxes
+  if (oldApplicationStatus !== newApplicationStatus) {
+    let oldApplicationStatusNumber = $('h1.number-' + oldApplicationStatus).text()
+    let newApplicationStatusNumber = $('h1.number-' + newApplicationStatus).text()
+    $('h1.number-' + oldApplicationStatus).text(parseInt(oldApplicationStatusNumber) - 1)
+    $('h1.number-' + newApplicationStatus).text(parseInt(newApplicationStatusNumber) + 1)
+  }
 }
