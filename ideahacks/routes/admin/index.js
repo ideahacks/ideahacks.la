@@ -14,7 +14,7 @@ adminRouter.get('/announcements', setResLocals, h.isAuthenticated, announcementH
 adminRouter.post('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.postAnnouncements)
 adminRouter.delete('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.nukeAnnouncements)
 
-adminRouter.get('/application-review', setResLocals, applicationReviewHandlers.getApplicationReview)
+adminRouter.get('/application-review', setResLocals, h.isAuthenticated, applicationReviewHandlers.getApplicationReview)
 
 adminRouter.get('/teams', setResLocals, h.isAuthenticated, teamHandlers.getTeams)
 adminRouter.post('/teams', setResLocals, h.isAuthenticated, teamHandlers.postTeams)
