@@ -13,33 +13,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/dashboard-parts.css' />
+    <link rel='stylesheet' type='text/css' href='/css/parts-list.css' />
 </head>
-<body>
+<body class='background-grey'>
     <!-- NAVBAR -->
     {{> navbar }}
+
+    <!-- BANNER -->
+    <div class='banner'>
+        <h1 class='transparent-ucla-blue'>Parts</h1>
+        <p class='text-center'>Use this tool to browse through parts, check whether certain parts are in stock, and to plan out how to integrate these parts into your hack! Click on any part for more information.</p>
+    </div>
 
     <!-- FILTER LIST -->
     {{> filter}}
 
-    <div class='row parts-list text-center'>
-      <h3 class='col-sm-3'>Part Name</h3>
-      <h3 class='col-sm-3'>Stock</h3>
-      <h3 class='col-sm-3'>Type</h3>
-      <h3 class='col-sm-3'>Description</h3>
-    </div>
-
-    <ul class='parts-list filter-list text-center'>
+    <!-- PARTS LIST -->
+    <ul class='parts-list filter-list'>
         {{#each parts}}
-            <li class='row'>
-                <p class='filter-key col-sm-3'>{{ this.partName }}</p>
-                <p class='filter-key col-sm-3'>{{ this.stock }}</p>
-                <p class='filter-key col-sm-3'>{{ this.type }}</p>
-                <p class='filter-key col-sm-3'>{{ this.description }}</p>
+            <li class='row part'>
+                <p class='filter-key col-sm-4 col-xs-6'>{{ this.partName }}</p>
+                <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
+                <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
             </li>
         {{/each}}
     </ul>
