@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('form').submit(e => {
+  $('.part-creation-form').submit(e => {
     e.preventDefault()
 
     let partsData = {

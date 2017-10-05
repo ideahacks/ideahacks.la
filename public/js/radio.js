@@ -7,7 +7,11 @@ $(() => {
       .next()
       .html()
       .toLowerCase()
+      .split(' ')
+      .join('-')
+
     $('input[type="radio"]').removeAttr('checked')
-    $('input[value="' + chosen + '"]').click()
+    $('input[type="radio"][value="' + chosen + '"]').click()
+    $('input[type="radio"][value="' + chosen + '"]').attr('checked', 'checked')
   })
 })
