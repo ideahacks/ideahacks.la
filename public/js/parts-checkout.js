@@ -1,7 +1,7 @@
 $(() => {
   let modal = document.getElementById('myModal')
 
-  // when application clicked on, make API call, inject info into modal, and then display modal
+  // when application clicked on, inject info into modal, and then display modal
   $('.part').click(function() {
     let partName = $(this)
       .find('.part-name')
@@ -31,7 +31,9 @@ $(() => {
       if (res.status === 'failure') {
         $('.parts-checkout-error-message').text(res.message)
       } else {
-        // TODO: asynchronously modify part on front end
+        // asynchronously change part stock on pages
+        changePartStock(partName, res.newStock)
+
         // clear out form fields and hide modal
         resetFormFields()
         modal.style.display = 'none'
@@ -48,7 +50,22 @@ $(() => {
   }
 })
 
+function changePartStock(partName, newStock) {
+  // finds the part on the page and updates it stock to the newStock
+  $('.part').each((i, el) => {
+    let elementName = $(el)
+      .find('.part-name')
+      .text()
+    if (elementName === partName) {
+      $(el)
+        .find('.part-stock')
+        .text(newStock + ' in Stock')
+    }
+  })
+}
+
 function resetFormFields() {
+  // resets the parts checkout form so that it's blank every time a user opens it
   $('input[name="teamNumber"]').val('')
   $('input[name="quantity"]').val('1')
   $('.radio-outer-square').removeClass('active')

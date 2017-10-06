@@ -29,7 +29,8 @@ const handlePartCheckout = (req, res) => {
 
           // check for duplicate part in team, then modify/shove part into team
           let foundDuplicate = false
-          for (let ownedPart of team.parts) {
+          for (let k = 0; k < team.parts.length; k++) {
+            let ownedPart = team.parts[k]
             if (ownedPart.partName === part.partName) {
               foundDuplicate = true
               if (req.params.action === 'returning') {
@@ -41,6 +42,10 @@ const handlePartCheckout = (req, res) => {
                   })
                 } else {
                   ownedPart.stock -= parseInt(req.params.quantity)
+                  if (ownedPart.stock === 0) {
+                    team.parts.splice(k, 1)
+                    k--
+                  }
                 }
               } else {
                 ownedPart.stock += parseInt(req.params.quantity)
@@ -67,7 +72,7 @@ const handlePartCheckout = (req, res) => {
               : parseInt(part.stock) - parseInt(req.params.quantity)
           part.save()
 
-          return res.json({ message: 'success' })
+          return res.json({ message: 'success', newStock: part.stock })
         })
         .catch(err => console.log(err))
     })
