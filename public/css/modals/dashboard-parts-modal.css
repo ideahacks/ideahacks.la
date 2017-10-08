@@ -1,0 +1,16 @@
+.modal-content {
+  padding: 10px 10%;
+}
+
+.modal-content p {
+  font-weight: bold;
+}
+
+.modal-content span {
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+span[name='description'] {
+  padding-left: 0;
+}

@@ -18,6 +18,9 @@
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' type='text/css' href='/css/parts-list.css' />
+    
+    <!-- SCRIPTS -->
+    <script src='/js/dashboard-parts-modal.js'></script>
 </head>
 <body class='background-grey'>
     <!-- NAVBAR -->
@@ -36,11 +39,12 @@
     <ul class='parts-list filter-list'>
         {{#each parts}}
             <li class='row part'>
-                <p class='filter-key col-sm-4 col-xs-6'>{{ this.partName }}</p>
+                <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
                 <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
                 <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
             </li>
         {{/each}}
     </ul>
+    {{> dashboardPartsModal }}
 </body>
 </html>

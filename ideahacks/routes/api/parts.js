@@ -6,6 +6,13 @@ const getParts = (req, res) => {
   })
 }
 
+const getPartsByName = (req, res) => {
+  Part.findOne({ partName: req.params.partName }).then(part => {
+    return res.json(part)
+  })
+}
+
 module.exports = {
-  getParts
+  getParts,
+  getPartsByName
 }

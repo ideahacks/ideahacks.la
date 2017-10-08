@@ -19,5 +19,6 @@ apiRouter.post('/users/change/application-status/:email/:newApplicationStatus', 
 apiRouter.delete('/users', userApiHandlers.deleteUsers)
 
 apiRouter.get('/parts', partApiHanders.getParts)
+apiRouter.get('/parts/name/:partName', partApiHanders.getPartsByName)
 
 module.exports = apiRouter
