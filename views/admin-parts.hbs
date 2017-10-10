@@ -2,19 +2,37 @@
 <html>
 <head>
     <title>Parts - Admin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="/js/admin-parts.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
 
 		<!-- STYLESHEETS -->
 		<link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/parts-list.css' />
+
+    <!-- SCRIPTS -->
+    <script src="/js/admin-parts.js"></script>
+    <script src='/js/parts-checkout.js'></script>
 </head>
 <body>
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <form>
+    <!-- BANNER -->
+    <div class='banner'>
+        <h1 class='transparent-ucla-blue'>Parts</h1>
+    </div>
+
+    <form class='part-creation-form'>
         <p>Part name</p>
         <input class="part-name" type = "text" name="partName" required>
         <p>Stock</p>
@@ -25,25 +43,32 @@
         <input type="radio" name="ReturnOrConsume" value="returnable" required>Must Return<br>
         <input type="radio" name="ReturnOrConsume" value="consumable">Consumable<br>
         <p>Manufacturer</p>
-        <input class="manufacturer" type="text" name="manufacturer" required><br>
+        <input class="manufacturer" type="text" name="manufacturer"><br>
         <p>Manufacturer Part #</p>
-        <input class="partNumber" type="text" name="partNumber" required><br>
+        <input class="partNumber" type="text" name="partNumber"><br>
         <p>Datasheet</p>
-        <input class="datasheet" type="text" name="datasheet" required><br>
+        <input class="datasheet" type="text" name="datasheet"><br>
 
         <button type="submit">Submit</button>
     </form>
 
-	<h1 class='error-message'></h1>
+    <h1 class='error-message'></h1>
 
-	<ul class='part-list'>
- 		 {{#each parts}}
-		 <li>
-			<h1>{{ this.partName }} </h1>
-			<p> {{ this.stock }} </p>
-			<p> {{ this.type  }} </p>
-		 </li>
-		{{/each}}
-	</ul>
+    <!-- FILTER LIST -->
+    {{> filter}}
+
+    <!-- PARTS LIST -->
+    <ul class='parts-list filter-list'>
+        {{#each parts}}
+            <li class='row part'>
+                <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
+                <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
+                <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
+            </li>
+        {{/each}}
+    </ul>
+
+    <!-- PARTS CHECKOUT MODAL -->
+    {{> partsCheckoutModal }}
 </body>
 </html>

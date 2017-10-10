@@ -1,0 +1,28 @@
+.modal-content {
+  padding: 30px 5% 40px;
+  width: 60%;
+}
+
+@media (max-width: 675px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal-content span {
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+span[name='description'] {
+  padding-left: 0;
+}

@@ -1,28 +1,84 @@
-.banner {
-  text-align: center;
+@media (max-width: 490px) {
+  h1.transparent-ucla-blue {
+    font-size: 60px;
+  }
 }
 
+/* STATS */
+.stats-box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-box {
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 0;
+  width: 200px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.stats-box h1 {
+  margin: 0;
+}
+
+.stats-box h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* APPLICATION LIST */
 .application-list {
   list-style: none;
-  padding: 0;
+  padding: 0 0 70px;
 }
 
-.application-list li:hover {
+.application {
+  padding: 15px 40px;
+  margin: 20px 0;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.application:hover {
   cursor: pointer;
 }
 
-.application-list li.accepted {
-  background-color: green;
+.application p {
+  margin: 0;
 }
 
-.application-list li.pending {
-  background-color: skyblue;
+.application.accepted,
+.accepted-box {
+  background-color: #34c13e;
 }
 
-.application-list li.rejected {
-  background-color: red;
+.application.pending,
+.pending-box {
+  background-color: #528bd5;
 }
 
-.application-list li.waitlisted {
-  background-color: gold;
+.application.rejected,
+.rejected-box {
+  background-color: #c83333;
+}
+
+.application .year,
+.application .school {
+  text-align: center;
+}
+
+.application .application-status {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .application .year,
+  .application .school {
+    display: none;
+  }
 }
