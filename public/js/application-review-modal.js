@@ -23,8 +23,9 @@ $(() => {
         if (labelText === response.applicationStatus) {
           $(el).click()
         }
+
+        modal.style.display = 'block'
       })
-      modal.style.display = 'block'
     })
   })
 

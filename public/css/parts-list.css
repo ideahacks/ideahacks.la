@@ -25,6 +25,10 @@
   margin: 0;
 }
 
+.part-type {
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .part-type {
     display: none;

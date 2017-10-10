@@ -21,6 +21,7 @@
 
     <!-- SCRIPTS -->
     <script src="/js/admin-parts.js"></script>
+    <script src='/js/parts-checkout.js'></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -31,7 +32,7 @@
         <h1 class='transparent-ucla-blue'>Parts</h1>
     </div>
 
-    <form>
+    <form class='part-creation-form'>
         <p>Part name</p>
         <input class="part-name" type = "text" name="partName" required>
         <p>Stock</p>
@@ -42,11 +43,11 @@
         <input type="radio" name="ReturnOrConsume" value="returnable" required>Must Return<br>
         <input type="radio" name="ReturnOrConsume" value="consumable">Consumable<br>
         <p>Manufacturer</p>
-        <input class="manufacturer" type="text" name="manufacturer" required><br>
+        <input class="manufacturer" type="text" name="manufacturer"><br>
         <p>Manufacturer Part #</p>
-        <input class="partNumber" type="text" name="partNumber" required><br>
+        <input class="partNumber" type="text" name="partNumber"><br>
         <p>Datasheet</p>
-        <input class="datasheet" type="text" name="datasheet" required><br>
+        <input class="datasheet" type="text" name="datasheet"><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -60,11 +61,14 @@
     <ul class='parts-list filter-list'>
         {{#each parts}}
             <li class='row part'>
-                <p class='filter-key col-sm-4 col-xs-6'>{{ this.partName }}</p>
+                <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
                 <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
                 <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
             </li>
         {{/each}}
     </ul>
+
+    <!-- PARTS CHECKOUT MODAL -->
+    {{> partsCheckoutModal }}
 </body>
 </html>

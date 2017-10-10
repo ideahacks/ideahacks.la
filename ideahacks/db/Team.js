@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const TeamSchema = new Schema({
   teamName: String,
   teamNumber: Number,
-  parts: [{ type: Schema.Types.ObjectId, ref: 'Part' }],
+  parts: [{ partName: String, stock: Number, partType: String }],
   members: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 })
 

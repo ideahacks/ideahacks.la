@@ -20,7 +20,7 @@ adminRouter.get('/teams', setResLocals, h.isAuthenticated, teamHandlers.getTeams
 adminRouter.post('/teams', setResLocals, h.isAuthenticated, teamHandlers.postTeams)
 adminRouter.delete('/teams', setResLocals, h.isAuthenticated, teamHandlers.deleteTeams)
 
-adminRouter.get('/parts', setResLocals, h.isAuthenticated, partsHandlers.getParts)
+adminRouter.get('/parts', setResLocals, /* h.isAuthenticated, */ partsHandlers.getParts)
 adminRouter.post('/parts', setResLocals, h.isAuthenticated, partsHandlers.postParts)
 adminRouter.delete('/parts', setResLocals, h.isAuthenticated, partsHandlers.deleteParts)
 
