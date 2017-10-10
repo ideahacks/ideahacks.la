@@ -23,7 +23,7 @@ apiRouter.delete('/users', userApiHandlers.deleteUsers)
 apiRouter.get('/parts', partApiHandlers.getParts)
 
 // gets a single part from the database by it's name
-apiRouter.get('/parts/:partName', partApiHandlers.getPartByName)
+apiRouter.get('/parts/name/:partName', partApiHandlers.getPartByName)
 
 // performs part return or checkout for a given quantity of parts and a team number
 apiRouter.post(
