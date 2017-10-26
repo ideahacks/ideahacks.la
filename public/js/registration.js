@@ -9,7 +9,7 @@ $(() => {
     }
 
     $.ajax({ url: '/registration', type: 'POST', data: registrationData }).done(response => {
-      if (response.status === 'success') location.href = '/' // redirects to main page
+      if (response.status === 'success') location.href = '/login' // redirect
 
       $('input[type="Password"]').val('')
       $('.error-message').html(response.message)
