@@ -56,6 +56,21 @@ const postRegistration = (req, res, next) => {
   })
 }
 
+const postConfirm = (req, res) => {
+  if (!req.user.isVerified) {
+    verifyEmail(req.user)
+    return res.json({
+      status: 'success',
+      message: 'A verification email has been resent to your account.'
+    })
+  } else {
+    return res.json({
+      status: 'failure',
+      message: 'This account has already been verified!'
+    })
+  }
+}
+
 const getVerify = (req, res) => {
   User.findOne({ verificationHash: req.params.hash }).then(user => {
     if (user) {
@@ -79,6 +94,7 @@ module.exports = {
   postLogin,
   getRegistration,
   postRegistration,
+  postConfirm,
   getVerify,
   getLogout
 }

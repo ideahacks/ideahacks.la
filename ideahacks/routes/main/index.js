@@ -16,6 +16,7 @@ mainRouter.get('/registration', authHandlers.getRegistration)
 mainRouter.post('/registration', authHandlers.postRegistration)
 
 mainRouter.get('/confirm', h.isAuthenticated, staticHandlers.getConfirm)
+mainRouter.post('/confirm', h.isAuthenticated, authHandlers.postConfirm)
 
 mainRouter.get('/verify/:hash', authHandlers.getVerify)
 
