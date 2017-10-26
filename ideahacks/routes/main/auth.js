@@ -1,6 +1,8 @@
+const crypto = require('crypto')
 const User = require('../../db').User
 const passport = require('passport')
 const bcrypt = require('bcrypt-nodejs')
+const verifyEmail = require('../../mailer').verifyEmail
 
 const getLogin = (req, res) => {
   return res.render('login')
@@ -25,8 +27,11 @@ const getRegistration = (req, res) => {
 }
 
 const postRegistration = (req, res, next) => {
+  let eduEmailRegex = new RegExp('.edu$') // registration email must end in .edu
   if (req.body.password !== req.body.passwordConfirm) {
     return res.json({ status: 'failure', message: 'Your passwords have to match!' })
+  } else if (!eduEmailRegex.test(req.body.email)) {
+    return res.json({ status: 'failure', message: 'The email you register with must be a .edu email!' })
   }
 
   User.findOne({ email: req.body.email }).then(user => {
@@ -37,14 +42,30 @@ const postRegistration = (req, res, next) => {
 
       let newUser = new User({
         email: req.body.email,
-        password: hashedPassword
+        password: hashedPassword,
+        verificationHash: crypto.randomBytes(24).toString('hex')
       })
       newUser.save()
+      verifyEmail(newUser)
+
       return res.json({
         status: 'success',
         message: 'Successfully registered a new user!'
       })
     })
+  })
+}
+
+const getVerify = (req, res) => {
+  User.findOne({ verificationHash: req.params.hash }).then(user => {
+    if (user) {
+      user.isVerified = true
+      user.verificationHash = ''
+      user.save()
+      return res.redirect('/dashboard')
+    } else {
+      return res.redirect('/')
+    }
   })
 }
 
@@ -58,5 +79,6 @@ module.exports = {
   postLogin,
   getRegistration,
   postRegistration,
+  getVerify,
   getLogout
 }
