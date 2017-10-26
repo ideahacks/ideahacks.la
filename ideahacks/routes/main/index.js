@@ -11,6 +11,7 @@ mainRouter.get('/team', setResLocals, staticHandlers.getTeam)
 
 mainRouter.get('/login', authHandlers.getLogin)
 mainRouter.post('/login', authHandlers.postLogin)
+mainRouter.post('/login/recoverPassword/:email', authHandlers.recoverPassword)
 
 mainRouter.get('/registration', authHandlers.getRegistration)
 mainRouter.post('/registration', authHandlers.postRegistration)

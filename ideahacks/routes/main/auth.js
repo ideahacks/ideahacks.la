@@ -3,6 +3,7 @@ const User = require('../../db').User
 const passport = require('passport')
 const bcrypt = require('bcrypt-nodejs')
 const verifyEmail = require('../../mailer').verifyEmail
+const sendPasswordRecoverEmail = require('../../mailer').recover
 
 const getLogin = (req, res) => {
   return res.render('login')
@@ -20,6 +21,15 @@ const postLogin = (req, res, next) => {
       return res.json({ status: 'success', message: 'Successfully logged in!' })
     })
   })(req, res, next)
+}
+
+const recoverPassword = (req, res) => {
+  User.findOne({ email: req.params.email }).then(user => {
+    if (!user) return res.json({ status: 'failure', message: "A user with that email doesn't exist!" })
+
+    sendPasswordRecoverEmail(user)
+    return res.json({ status: 'success', message: 'Your password has been sent to your email address.' })
+  })
 }
 
 const getRegistration = (req, res) => {
@@ -92,6 +102,7 @@ const getLogout = (req, res) => {
 module.exports = {
   getLogin,
   postLogin,
+  recoverPassword,
   getRegistration,
   postRegistration,
   postConfirm,
