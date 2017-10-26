@@ -1,4 +1,6 @@
 $(() => {
+  $('input[name="username"]').focus()
+
   $('form').submit(e => {
     e.preventDefault()
 
