@@ -11,11 +11,13 @@ mainRouter.get('/team', setResLocals, staticHandlers.getTeam)
 
 mainRouter.get('/login', authHandlers.getLogin)
 mainRouter.post('/login', authHandlers.postLogin)
+mainRouter.post('/login/recoverPassword/:email', authHandlers.recoverPassword)
 
 mainRouter.get('/registration', authHandlers.getRegistration)
 mainRouter.post('/registration', authHandlers.postRegistration)
 
 mainRouter.get('/confirm', h.isAuthenticated, staticHandlers.getConfirm)
+mainRouter.post('/confirm', h.isAuthenticated, authHandlers.postConfirm)
 
 mainRouter.get('/verify/:hash', authHandlers.getVerify)
 
