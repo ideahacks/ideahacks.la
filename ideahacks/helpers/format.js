@@ -19,6 +19,22 @@ const formatUser = user => {
     default:
       break
   }
+
+  switch (user.shirtSize) {
+    case 'S':
+      user.sizeSmall = true
+      break
+    case 'M':
+      user.sizeMedium = true
+      break
+    case 'L':
+      user.sizeLarge = true
+      break
+    case 'XL':
+      user.sizeXLarge = true
+      break
+  }
+
   return user
 }
 
