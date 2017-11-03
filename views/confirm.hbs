@@ -1,5 +1,20 @@
 <!DOCTYPE HTML>
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600i" rel="stylesheet">
+
 <html>
+<style>
+  /*html {
+    background-color: #fafafa;
+  }*/
+
+  body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+</style>
 <head>
   <title>Confirm - IDEA Hacks</title>
   <meta charset="utf-8" />
@@ -14,8 +29,11 @@
   <!-- SCRIPTS -->
   <script src='/js/confirm.js'></script>
 </head>
-<body>
-    <p>pls check your email and verify your account</p>
+<body class='background-grey'>
+    <div class="ucla-blue"><h2>Please confirm your account!</h2></div>
+    <p>A confirmation has been sent to your email address. Please check your inbox
+    and click on the unique link to verify your account.</p>
+    <p>Email taking too long? Usually .edu emails have a bit of delay to them. You can also try:</p>
     <button class='resend-verification'>Resend Verification Email</button>
     <p class='response'></p>
 </body>
