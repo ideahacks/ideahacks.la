@@ -31,14 +31,14 @@ $(document).ready(() => {
 function appendNewPart(partData) {
   // prettier-ignore
   let newPartHTML = [
-    '<li>',
-      '<h1>', partData.partName, '</h1>',
-      '<p>', partData.stock, '</p>',
-      '<p>', partData.type, '</p>',
+    '<li class="row part">',
+      '<p class="filter-key col-sm-4 col-xs-6 part-name">', partData.partName, '</p>',
+      '<p class="filter-key col-sm-4 col-xs-6 text-center part-stock">', partData.stock, ' in Stock</p>',
+      '<p class="filter-key col-sm-4 text-right part-type">', partData.type, '</p>',
     '</li>'
   ]
 
   newPartHTML = newPartHTML.join('')
 
-  $(newPartHTML).appendTo('.part-list')
+  $(newPartHTML).appendTo('.parts-list')
 }
