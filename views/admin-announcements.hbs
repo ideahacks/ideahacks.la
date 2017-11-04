@@ -49,8 +49,9 @@
     <div class='container announcements-container background-white'>
         <ol class='announcements-list'>
         {{#each announcements}}
-            <li class='announcement text-center'>
-                <h2 class='ucla-blue'>{{ this.header }}</h1>
+	<li class='announcement text-center' id='{{ this._id }}'> 
+	<div class= "x-icon"><button type="button" class='x-button'>X</button></div>
+		    <h2 class='ucla-blue'>{{ this.header }}</h1>
                 <p>{{ this.body  }}</p>
             </li>
         {{/each}}

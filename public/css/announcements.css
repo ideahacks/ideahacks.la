@@ -37,6 +37,11 @@
   font-weight: bold;
 }
 
+.x-icon {
+  position: relative;
+  left: 80%;
+}
+
 /* DOT ON THE TOP */
 .announcements-container::before {
   content: '';
