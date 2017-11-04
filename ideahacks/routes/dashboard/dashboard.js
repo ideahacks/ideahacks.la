@@ -22,7 +22,12 @@ const getParts = (req, res) => {
   })
 }
 
+const getMe = (req, res) => {
+  res.render('me', { user: req.user })
+}
+
 module.exports = {
   getDashboard,
-  getParts
+  getParts,
+  getMe
 }
