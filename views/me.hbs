@@ -20,6 +20,11 @@
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
+    <link rel='stylesheet' type='text/css' href='/css/me.css' />
+
+    <!-- SCRIPTS -->
+    <script src='/js/me.js'></script>
 </head>
 <body class='background-grey'>
     <!-- NAVBAR -->
@@ -49,6 +54,17 @@
         <a href='/logout'>
             <button>Logout</button>
         </a>
+    </div>
+
+    <!-- FEEDBACK FORM -->
+    <div class='feedback-form container-fluid text-center'>
+        <h2 class='ucla-blue'>Leave us some feedback!</h2>
+        <p>How are we doing? How's the user experience of the website?</p>
+        <form class='ideahacks-form' name='feedback-form'>
+            <textarea name='content' rows='3' required></textarea>
+            <button type='submit'>Send</button>
+        </form>
+        <p class='response-message'></p>
     </div>
 </body>
 </html>
