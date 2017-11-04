@@ -46,7 +46,7 @@ const deleteOneAnnouncement = (req, res) => {
     } else {
       return res.json({
         status: 'success',
-        message: req.params.id + 'has been deleted.'
+        message: req.params.id + ' has been deleted.'
       })
     }
   })
