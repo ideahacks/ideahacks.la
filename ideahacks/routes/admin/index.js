@@ -13,8 +13,8 @@ adminRouter.get('/announcements', setResLocals, h.isAuthenticated, announcementH
 adminRouter.post('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.postAnnouncements)
 adminRouter.delete('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.nukeAnnouncements)
 
-adminRouter.delete(
-  '/announcements/delete/:id',
+adminRouter.post(
+  '/announcements/delete/:_id',
   setResLocals,
   h.isAuthenticated,
   announcementHandlers.deleteOneAnnouncement
