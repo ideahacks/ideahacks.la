@@ -23,7 +23,7 @@ const postAnnouncements = (req, res) => {
   })
   newAnnouncement.save()
 
-  return res.json({ status: 'success', message: 'Successfully created new announcement!' })
+  return res.json({ status: 'success', message: 'Successfully created new announcement!', id: newAnnouncement._id })
 }
 
 const nukeAnnouncements = (req, res) => {
@@ -34,8 +34,27 @@ const nukeAnnouncements = (req, res) => {
   })
 }
 
+const deleteOneAnnouncement = (req, res) => {
+  let announcementID = req.params._id
+  Announcement.remove({ _id: announcementID }, err => {
+    if (err) {
+      console.log(err)
+      return res.json({
+        status: 'failure',
+        message: 'Failed to delete announcement from database!'
+      })
+    } else {
+      return res.json({
+        status: 'success',
+        message: announcementID + ' has been deleted.'
+      })
+    }
+  })
+}
+
 module.exports = {
   getAnnouncements,
   postAnnouncements,
-  nukeAnnouncements
+  nukeAnnouncements,
+  deleteOneAnnouncement
 }

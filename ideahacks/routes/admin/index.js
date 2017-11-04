@@ -9,18 +9,23 @@ const h = require('../../helpers').authHelpers
 const setResLocals = require('../../helpers').routeHelpers.setResLocals
 
 adminRouter.get('/', setResLocals, h.isAuthenticated, adminHandlers.getAdmin)
-
 adminRouter.get('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.getAnnouncements)
 adminRouter.post('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.postAnnouncements)
 adminRouter.delete('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.nukeAnnouncements)
 
-adminRouter.get('/application-review', setResLocals, h.isAuthenticated, applicationReviewHandlers.getApplicationReview)
+adminRouter.post(
+  '/announcements/delete/:_id',
+  setResLocals,
+  h.isAuthenticated,
+  announcementHandlers.deleteOneAnnouncement
+)
 
+adminRouter.get('/application-review', setResLocals, h.isAuthenticated, applicationReviewHandlers.getApplicationReview)
 adminRouter.get('/teams', setResLocals, h.isAuthenticated, teamHandlers.getTeams)
 adminRouter.post('/teams', setResLocals, h.isAuthenticated, teamHandlers.postTeams)
 adminRouter.delete('/teams', setResLocals, h.isAuthenticated, teamHandlers.deleteTeams)
 
-adminRouter.get('/parts', setResLocals, /* h.isAuthenticated, */ partsHandlers.getParts)
+adminRouter.get('/parts', setResLocals, h.isAuthenticated, partsHandlers.getParts)
 adminRouter.post('/parts', setResLocals, h.isAuthenticated, partsHandlers.postParts)
 adminRouter.delete('/parts', setResLocals, h.isAuthenticated, partsHandlers.deleteParts)
 
