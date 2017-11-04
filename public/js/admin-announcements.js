@@ -9,19 +9,20 @@ $(() => {
     }
 
     $.ajax({ url: '/admin/announcements', type: 'POST', data: announcementData }).done(response => {
-      appendNewAnnouncement(announcementData)
+      appendNewAnnouncement(announcementData, response.id)
       $('input, textarea').val('')
     })
   })
 
-  //deleting annoucement
-  $('.x-icon').on('click', deleteAnnouncement)
+  // deleting annoucement
+  $('.announcements-list').on('click', 'li p.x-icon', deleteAnnouncement)
 })
 
-function appendNewAnnouncement(announcementData) {
+function appendNewAnnouncement(announcementData, id) {
   // prettier-ignore
   let newAnnouncementHTML = [
     '<li class="announcement text-center">',
+      '<p class="x-icon text-right" id="', id , '">&times;</p>',
       '<h2 class="ucla-blue">', announcementData.header, '</h2>',
       '<p>', announcementData.body, '</p>',
     '</li>'

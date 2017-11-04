@@ -23,7 +23,7 @@ const postAnnouncements = (req, res) => {
   })
   newAnnouncement.save()
 
-  return res.json({ status: 'success', message: 'Successfully created new announcement!' })
+  return res.json({ status: 'success', message: 'Successfully created new announcement!', id: newAnnouncement._id })
 }
 
 const nukeAnnouncements = (req, res) => {
@@ -35,8 +35,7 @@ const nukeAnnouncements = (req, res) => {
 }
 
 const deleteOneAnnouncement = (req, res) => {
-  //access id in the route by using req.params.id
-  announcementID = req.params._id
+  let announcementID = req.params._id
   Announcement.remove({ _id: announcementID }, err => {
     if (err) {
       console.log(err)

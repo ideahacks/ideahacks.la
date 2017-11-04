@@ -27,7 +27,7 @@
 
 <body class='background-grey'>
     <!-- NAVBAR -->
-    {{ navbar }}
+    {{> navbar }}
 
     <!-- ANNOUNCEMENTS CREATION FORM -->
     <h1 class="error-message"></h1>
@@ -49,9 +49,9 @@
     <div class='container announcements-container background-white'>
         <ol class='announcements-list'>
         {{#each announcements}}
-	<li class='announcement text-center' id='{{ this._id }}'> 
-		<p class= "x-icon" id={{this._id}} >X</p>
-		    <h2 class='ucla-blue'>{{ this.header }}</h2>
+            <li class='announcement text-center' id='{{ this._id }}'>
+                <p class="x-icon text-right" id={{this._id}}>&times;</p>
+                <h2 class='ucla-blue'>{{ this.header }}</h2>
                 <p>{{ this.body }}</p>
             </li>
         {{/each}}

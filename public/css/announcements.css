@@ -38,8 +38,11 @@
 }
 
 .x-icon {
-  float: right;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  line-height: 0.5;
 }
 
 /* DOT ON THE TOP */
