@@ -27,7 +27,7 @@
 
 <body class='background-grey'>
     <!-- NAVBAR -->
-    {{> navbar }}
+    {{ navbar }}
 
     <!-- ANNOUNCEMENTS CREATION FORM -->
     <h1 class="error-message"></h1>
@@ -50,9 +50,9 @@
         <ol class='announcements-list'>
         {{#each announcements}}
 	<li class='announcement text-center' id='{{ this._id }}'> 
-	<div class= "x-icon"><button type="button" class='x-button'>X</button></div>
-		    <h2 class='ucla-blue'>{{ this.header }}</h1>
-                <p>{{ this.body  }}</p>
+		<p class= "x-icon">X</p>
+		    <h2 class='ucla-blue'>{{ this.header }}</h2>
+                <p>{{ this.body }}</p>
             </li>
         {{/each}}
         </ol>

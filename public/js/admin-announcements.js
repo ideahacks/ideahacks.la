@@ -13,6 +13,9 @@ $(() => {
       $('input, textarea').val('')
     })
   })
+
+  //deleting annoucement
+  $('.x-icon').on('click', deleteAnnouncement)
 })
 
 function appendNewAnnouncement(announcementData) {
@@ -25,4 +28,23 @@ function appendNewAnnouncement(announcementData) {
   ].join('')
 
   $(newAnnouncementHTML).prependTo('.announcements-list')
+}
+
+function deleteAnnouncement() {
+  if (confirm('Are you sure you want to delete this announcement?')) {
+    let id = $(this)
+      .parent()
+      .id()
+    let apiURL = '/admin/announcements/delete/' + id
+
+    $.ajax({ url: apiURL, type: 'POST' }).done(response => {
+      if (response.status === 'failure') {
+        $('.error-message').text(response.message)
+      } else if (response.status === 'success') {
+        $(this)
+          .parent()
+          .remove()
+      }
+    })
+  }
 }

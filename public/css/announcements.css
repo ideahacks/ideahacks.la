@@ -38,8 +38,8 @@
 }
 
 .x-icon {
-  position: relative;
-  left: 80%;
+  float: right;
+  cursor: pointer;
 }
 
 /* DOT ON THE TOP */
