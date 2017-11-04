@@ -192,16 +192,15 @@ section {
   padding: 30px 0;
 }
 
+.sponsor-row {
+  padding: 20px 0;
+}
+
+.sponsor-row .logo {
+  margin: 0 20px;
+}
+
 .sponsor-message {
   text-align: center;
   padding: 40px 0 20px;
-}
-
-.plat-logos {
-  display: block;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  max-width: 500px;
-  max-height: 500px;
 }
