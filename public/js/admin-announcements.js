@@ -32,7 +32,8 @@ function appendNewAnnouncement(announcementData) {
 
 function deleteAnnouncement() {
   if (confirm('Are you sure you want to delete this announcement?')) {
-    let id = $(this).parent()._id
+    let id = this.id
+
     let apiURL = '/admin/announcements/delete/' + id
 
     $.ajax({ url: apiURL, type: 'POST' }).done(response => {
