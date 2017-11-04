@@ -192,6 +192,14 @@ section {
   padding: 30px 0;
 }
 
+.sponsor-row {
+  padding: 20px 0;
+}
+
+.sponsor-row .logo {
+  margin: 0 20px;
+}
+
 .sponsor-message {
   text-align: center;
   padding: 40px 0 20px;
