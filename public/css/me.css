@@ -1,0 +1,13 @@
+.feedback-form {
+  padding: 50px 0;
+}
+
+.feedback-form textarea {
+  width: 50%;
+  margin: 10px 0;
+}
+
+.feedback-form button {
+  display: block;
+  margin: 10px auto;
+}

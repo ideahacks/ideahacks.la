@@ -12,4 +12,6 @@ dashboardRouter.post('/application', setResLocals, h.isVerified, applicationHand
 
 dashboardRouter.get('/parts', setResLocals, h.isVerified, dashboardHandlers.getParts)
 
+dashboardRouter.get('/me', setResLocals, h.isVerified, dashboardHandlers.getMe)
+
 module.exports = dashboardRouter
