@@ -34,8 +34,27 @@ const nukeAnnouncements = (req, res) => {
   })
 }
 
+const deleteOneAnnouncement = (req, res) => {
+  //access id in the route by using req.params.id
+  Announcement.remove({ _id: req.params.id }, err => {
+    if (err) {
+      console.log(err)
+      return res.json({
+        status: 'failure',
+        message: 'Failed to delete announcement from database!'
+      })
+    } else {
+      return res.json({
+        status: 'success',
+        message: req.params.id + 'has been deleted.'
+      })
+    }
+  })
+}
+
 module.exports = {
   getAnnouncements,
   postAnnouncements,
-  nukeAnnouncements
+  nukeAnnouncements,
+  deleteOneAnnouncement
 }
