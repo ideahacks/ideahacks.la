@@ -14,7 +14,7 @@ adminRouter.post('/announcements', setResLocals, h.isAuthenticated, announcement
 adminRouter.delete('/announcements', setResLocals, h.isAuthenticated, announcementHandlers.nukeAnnouncements)
 
 adminRouter.post(
-  '/announcements/delete/:_id',
+  '/admin/announcements/delete/:_id',
   setResLocals,
   h.isAuthenticated,
   announcementHandlers.deleteOneAnnouncement
