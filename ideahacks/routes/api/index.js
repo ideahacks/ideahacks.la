@@ -35,6 +35,6 @@ apiRouter.post(
   partApiHandlers.handlePartCheckout
 )
 
-apiRouter.get('/feedback', feedbackHandlers.postFeedback)
+apiRouter.post('/feedback', feedbackHandlers.postFeedback)
 
 module.exports = apiRouter
