@@ -26,14 +26,6 @@ const postAnnouncements = (req, res) => {
   return res.json({ status: 'success', message: 'Successfully created new announcement!', id: newAnnouncement._id })
 }
 
-const nukeAnnouncements = (req, res) => {
-  Announcement.remove().then(err => {
-    if (err) console.log(err)
-
-    return res.json({ message: 'received announcement delete request' })
-  })
-}
-
 const deleteOneAnnouncement = (req, res) => {
   let announcementID = req.params._id
   Announcement.remove({ _id: announcementID }, err => {
@@ -55,6 +47,5 @@ const deleteOneAnnouncement = (req, res) => {
 module.exports = {
   getAnnouncements,
   postAnnouncements,
-  nukeAnnouncements,
   deleteOneAnnouncement
 }

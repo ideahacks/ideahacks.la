@@ -2,6 +2,7 @@ const express = require('express')
 const apiRouter = express.Router()
 const userApiHandlers = require('./users.js')
 const partApiHandlers = require('./parts.js')
+const h = require('../../helpers').authHelpers
 const feedbackHandlers = require('./feedback.js')
 
 // gets all users within the database
@@ -14,10 +15,11 @@ apiRouter.get('/users/:email', userApiHandlers.getUserByEmail)
 apiRouter.get('/users/acceptance/:acceptance', userApiHandlers.getUserEmailsByAcceptance)
 
 // finds a user with the given email and changes their application tatus to the specified status
-apiRouter.post('/users/change/application-status/:email/:newApplicationStatus', userApiHandlers.changeApplicationStatus)
-
-// delete all users within the database
-apiRouter.delete('/users', userApiHandlers.deleteUsers)
+apiRouter.post(
+  '/users/change/application-status/:email/:newApplicationStatus',
+  h.isAdmin,
+  userApiHandlers.changeApplicationStatus
+)
 
 // PARTS API
 // gets all parts from the database
@@ -29,6 +31,7 @@ apiRouter.get('/parts/name/:partName', partApiHandlers.getPartByName)
 // performs part return or checkout for a given quantity of parts and a team number
 apiRouter.post(
   '/parts/action/:action/partName/:partName/quantity/:quantity/teamNumber/:teamNumber',
+  h.isAdmin,
   partApiHandlers.handlePartCheckout
 )
 

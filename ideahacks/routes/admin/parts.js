@@ -28,16 +28,7 @@ const postParts = (req, res) => {
   })
 }
 
-const deleteParts = (req, res) => {
-  Part.remove().then(err => {
-    if (err) console.log(err)
-
-    res.json({ message: 'Received DELETE request' })
-  })
-}
-
 module.exports = {
   getParts,
-  postParts,
-  deleteParts
+  postParts
 }
