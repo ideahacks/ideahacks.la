@@ -4,6 +4,7 @@ const User = require('./User.js')
 const Team = require('./Team.js')
 const Part = require('./Part.js')
 const Announcement = require('./Announcement.js')
+const Feedback = require('./Feedback.js')
 
 mongoose.connect(dbURI, {
   useMongoClient: true
@@ -20,5 +21,6 @@ module.exports = {
   Team,
   Part,
   Announcement,
+  Feedback,
   teamData: require('./data/team.js')
 }

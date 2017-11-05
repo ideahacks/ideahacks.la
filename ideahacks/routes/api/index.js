@@ -2,6 +2,7 @@ const express = require('express')
 const apiRouter = express.Router()
 const userApiHandlers = require('./users.js')
 const partApiHandlers = require('./parts.js')
+const feedbackHandlers = require('./feedback.js')
 
 // gets all users within the database
 apiRouter.get('/users', userApiHandlers.getUsers)
@@ -30,5 +31,7 @@ apiRouter.post(
   '/parts/action/:action/partName/:partName/quantity/:quantity/teamNumber/:teamNumber',
   partApiHandlers.handlePartCheckout
 )
+
+apiRouter.get('/feedback', feedbackHandlers.postFeedback)
 
 module.exports = apiRouter
