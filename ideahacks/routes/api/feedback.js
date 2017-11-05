@@ -1,12 +1,12 @@
-const Feedback = require('../../db').Feedback // import your Feedback schema
+const Feedback = require('../../db').Feedback
 
 const postFeedback = (req, res) => {
-  // creates a new Feedback object using data sent in the post request
   let newFeedback = new Feedback({
     content: req.body.content,
     user: req.user._id
   })
-  newFeedback.save() // saves the object into the database
+
+  newFeedback.save()
 
   return res.json({
     status: 'success',
@@ -14,7 +14,6 @@ const postFeedback = (req, res) => {
   })
 }
 
-// export your function
 module.exports = {
   postFeedback
 }

@@ -6,7 +6,7 @@ $(() => {
       content: $('textarea[name="content"]').val()
     }
 
-    $.ajax({ url: '/feedback', type: 'POST', data: formData }).done(res => {
+    $.ajax({ url: '/api/feedback', type: 'POST', data: formData }).done(res => {
       if (res.status === 'success') {
         $('textarea[name="content"]').val('')
         $('.response-message').text(res.message)
