@@ -77,14 +77,6 @@ const postTeams = (req, res) => {
     .catch(err => console.log(err))
 }
 
-const deleteTeams = (req, res) => {
-  Team.remove().then(err => {
-    if (err) console.log(err)
-
-    res.json({ message: 'delete request received' })
-  })
-}
-
 const deleteOneTeam = (req, res) => {
   let teamToDelete = req.params.teamName
   Team.remove({ teamName: teamToDelete }, err => {
@@ -106,6 +98,5 @@ const deleteOneTeam = (req, res) => {
 module.exports = {
   getTeams,
   postTeams,
-  deleteTeams,
   deleteOneTeam
 }
