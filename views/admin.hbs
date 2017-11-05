@@ -5,13 +5,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <!-- STYLESHEETS -->
   <link rel='stylesheet' type='text/css' href='/css/style.css' />
+  <link rel='stylesheet' type='text/css' href='/css/admin.css' />
 </head>
-<body>
+<body class='background-grey'>
     <!-- NAVBAR -->
     {{> navbar }}
 
     <p>Welcome to the Admin Panel!</p>
+
+    <!-- FEEDBACK LIST -->
+    <div class='feedback-wrapper'>
+        <h2 class='ucla-blue text-center'>Feedback</h2>
+        <ul class='container-fluid feedback-list'>
+            {{#each feedback}}
+            <li class='row'>
+                <div class='col-sm-3 text-center'>
+                    <p>{{ this.user.firstName }} {{ this.user.lastName }}</p>
+                    <p>{{ this.formattedTimestamp }}</p>
+                </div>
+                <div class='col-sm-9'>
+                    <p>{{ this.content }}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
 </body>
 </html>

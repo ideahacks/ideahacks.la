@@ -3,6 +3,7 @@ const apiRouter = express.Router()
 const userApiHandlers = require('./users.js')
 const partApiHandlers = require('./parts.js')
 const h = require('../../helpers').authHelpers
+const feedbackHandlers = require('./feedback.js')
 
 // gets all users within the database
 apiRouter.get('/users', userApiHandlers.getUsers)
@@ -33,5 +34,7 @@ apiRouter.post(
   h.isAdmin,
   partApiHandlers.handlePartCheckout
 )
+
+apiRouter.post('/feedback', feedbackHandlers.postFeedback)
 
 module.exports = apiRouter
