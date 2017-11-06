@@ -31,6 +31,9 @@ function getAndSendApplicationData(toggleHasApplication) {
     reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
     themeIdea: $('textarea[name="themeIdea"]').val(),
     desiredParts: $('input[name="desiredParts"]').val(),
+    shirtSize: $('select[name="shirtSize"]')
+      .find(':selected')
+      .text(),
     hasApplication: toggleHasApplication
   }
 

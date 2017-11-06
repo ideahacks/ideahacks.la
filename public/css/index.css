@@ -189,7 +189,15 @@ section {
 
 /* SPONSORS SECTION */
 .sponsors {
-  padding: 30px 0;
+  padding: 30px 20px;
+}
+
+.sponsor-row {
+  padding: 20px 0;
+}
+
+.sponsor-row .logo {
+  margin: 0 20px;
 }
 
 .sponsor-message {

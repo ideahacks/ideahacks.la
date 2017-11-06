@@ -1,14 +1,19 @@
 const teamData = require('../../db').teamData
 
-let getMain = (req, res) => {
+const getMain = (req, res) => {
   return res.render('index')
 }
 
-let getTeam = (req, res) => {
+const getTeam = (req, res) => {
   return res.render('team', { teamData })
+}
+
+const getConfirm = (req, res) => {
+  return res.render('confirm')
 }
 
 module.exports = {
   getMain,
-  getTeam
+  getTeam,
+  getConfirm
 }

@@ -8,19 +8,22 @@
   "main": "index.js",
   "scripts": {
     "development": "./node_modules/.bin/nodemon server.js",
-    "format":
-      "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
-    "format-check":
-      "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
-    "lint":
-      "./node_modules/.bin/eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "format": "./node_modules/.bin/prettier --single-quote --print-width=120 --no-semi --write ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
+    "format-check": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
+    "lint": "./node_modules/.bin/eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
     "precommit": "lint-staged",
     "start": "node server.js",
     "test": "npm run format-check && npm run lint"
   },
   "lint-staged": {
-    "*.js": ["npm run format", "git add"],
-    "*.css": ["npm run format", "git add"]
+    "*.js": [
+      "npm run format",
+      "git add"
+    ],
+    "*.css": [
+      "npm run format",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -33,6 +36,7 @@
   },
   "homepage": "https://github.com/IDEA-Hacks/ideahacks.la#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.1.4",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
@@ -48,11 +52,11 @@
   },
   "devDependencies": {
     "eslint": "^4.6.1",
-    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-prettier": "^2.6.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",

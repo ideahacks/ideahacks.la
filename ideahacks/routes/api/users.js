@@ -28,18 +28,9 @@ const changeApplicationStatus = (req, res) => {
   })
 }
 
-const deleteUsers = (req, res) => {
-  User.remove().then(err => {
-    if (err) console.log(err)
-
-    return res.json({ message: 'Received DELETE requets' })
-  })
-}
-
 module.exports = {
   getUsers,
   getUserByEmail,
   getUserEmailsByAcceptance,
-  changeApplicationStatus,
-  deleteUsers
+  changeApplicationStatus
 }

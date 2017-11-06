@@ -21,12 +21,15 @@ const UserSchema = new Schema({
   reasonForParticipation: { type: String, default: '' },
   themeIdea: { type: String, default: '' },
   desiredParts: { type: String, default: '' },
+  shirtSize: { type: String, default: 'M' },
 
   // boolean fields
   hasApplication: { type: Boolean, default: false },
   applicationStatus: { type: String, default: 'pending' },
 
   // auth fields
+  verificationHash: String,
+  isVerified: { type: Boolean, default: false },
   isAdmin: { type: Boolean, default: false }
 })
 

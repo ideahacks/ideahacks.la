@@ -54,6 +54,7 @@ h1.transparent-ucla-gold {
 h2 {
   font-family: 'Courier New', sans-serif;
   font-size: 36px;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -93,6 +94,7 @@ button {
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
 
   background-color: #ffb718;
   color: white;
