@@ -98,7 +98,7 @@ module.exports = [
       {
         name: 'Allison Kim',
         organization: 'Theta Tau',
-        picturePath: '/img/team/catcat.jpg'
+        picturePath: '/img/team/avatar-female.jpg'
       }
     ]
   },
@@ -196,14 +196,14 @@ module.exports = [
       {
         name: 'Trey Crossley',
         organization: 'IEEE',
-        picturePath: '/img/team/catcat.jpg',
+        picturePath: '/img/team/trey-crossley.png',
         linkedin: 'https://www.linkedin.com/in/sidney-trey-crossley-3384a7104',
         github: 'https://github.com/treycrossley'
       },
       {
         name: 'Sydney Ng',
         organization: 'IEEE',
-        picturePath: '/img/team/catcat.jpg',
+        picturePath: '/img/team/sydney-ng.png',
         github: 'https://github.com/sydney-ng'
       },
       {
