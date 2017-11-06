@@ -6,13 +6,13 @@ const h = require('../../helpers').authHelpers
 const feedbackHandlers = require('./feedback.js')
 
 // gets all users within the database
-apiRouter.get('/users', userApiHandlers.getUsers)
+apiRouter.get('/users', h.isAdmin, userApiHandlers.getUsers)
 
 // gets all the users in the database with a specific email
-apiRouter.get('/users/:email', userApiHandlers.getUserByEmail)
+apiRouter.get('/users/:email', h.isAdmin, userApiHandlers.getUserByEmail)
 
 // returns a comma separated list of accepted users' email
-apiRouter.get('/users/acceptance/:acceptance', userApiHandlers.getUserEmailsByAcceptance)
+apiRouter.get('/users/acceptance/:acceptance', h.isAdmin, userApiHandlers.getUserEmailsByAcceptance)
 
 // finds a user with the given email and changes their application tatus to the specified status
 apiRouter.post(
@@ -35,6 +35,6 @@ apiRouter.post(
   partApiHandlers.handlePartCheckout
 )
 
-apiRouter.post('/feedback', feedbackHandlers.postFeedback)
+apiRouter.post('/feedback', h.isVerified, feedbackHandlers.postFeedback)
 
 module.exports = apiRouter
