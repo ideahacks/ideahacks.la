@@ -196,11 +196,23 @@ section {
   padding: 20px 0;
 }
 
-.sponsor-row .logo {
+.sponsor-row img {
   margin: 0 20px;
 }
 
 .sponsor-message {
   text-align: center;
   padding: 40px 0 20px;
+}
+
+@media (max-width: 768px) {
+  .sponsor-row img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .sponsors h1 {
+    font-size: 60px;
+  }
 }

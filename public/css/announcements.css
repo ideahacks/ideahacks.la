@@ -7,6 +7,18 @@
   line-height: 0.75;
 }
 
+@media (max-width: 1200px) {
+  .banner h1 {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 760px) {
+  .banner h1 {
+    font-size: 80px;
+  }
+}
+
 @media (max-width: 620px) {
   .banner h1 {
     font-size: 60px;

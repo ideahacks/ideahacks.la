@@ -30,8 +30,7 @@
 }
 
 .nav-list li {
-  /*font-family: 'Source Sans Pro';*/
-  font-family: 'Helvetica Neueu', Helvetica, Arial, sans-serif; /* Bootstrap default font */
+  font-family: 'Source Sans Pro', 'Helvetica Neueu', sans-serif;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -40,6 +39,12 @@
   display: inline-block;
   padding: 23px 25px 27px;
 }
+
+/*@media (max-width: 1250px) {
+  .nav-list li a {
+    font-size: 12px;
+  }
+}*/
 
 .nav-list li:hover {
   text-decoration: underline;
@@ -103,7 +108,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 1015px) {
+@media (max-width: 1190px) {
   .navbar-icon {
     display: inline-block;
   }

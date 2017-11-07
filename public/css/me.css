@@ -3,8 +3,10 @@
 }
 
 .feedback-form textarea {
-  width: 50%;
+  /*width: 50%;*/
   margin: 10px 0;
+  max-width: 800px;
+  width: 80%;
 }
 
 .feedback-form button {
