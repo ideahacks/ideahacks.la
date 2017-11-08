@@ -203,7 +203,7 @@ module.exports = [
       {
         name: 'Sydney Ng',
         organization: 'IEEE',
-        picturePath: '/img/team/sydney-ng.png',
+        picturePath: '/img/team/sydney-ng.jpg',
         github: 'https://github.com/sydney-ng'
       },
       {
