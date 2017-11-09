@@ -53,7 +53,7 @@ module.exports = [
         name: 'Jingbin Huang',
         organization: 'IEEE',
         picturePath: '/img/team/jingbin.jpg',
-        linkedin: 'linkedin.com/in/jingbin-huang-77b3b0100'
+        linkedin: 'https://www.linkedin.com/in/jingbinhuang'
       },
       {
         name: 'Austin Zhang',
