@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const boolParser = require('express-query-boolean')
 const path = require('path')
 const favicon = require('serve-favicon')
 const hbs = require('hbs')
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'views')))
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.json())
+app.use(boolParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(ideahacks.session)

@@ -1,8 +1,29 @@
 const User = require('../../db').User
 
 const getUsers = (req, res) => {
-  User.find().then(users => {
-    return res.json(users)
+  // API endpoint that queries users from the database
+  //
+  // Sample API response:
+  // {
+  //   users: [{ User }, { User }, ...],
+  //   numberOfUsers: Number
+  // }
+
+  User.find(req.query).then(users => {
+    return res.json({ users, numberOfUsers: users.length })
+  })
+}
+
+const getUserEmails = (req, res) => {
+  // API endpoint that returns a list of emails based on query parameters.
+  // Meant to be readily copied into an email.
+  //
+  // Sample API response:
+  // email, email, email, email, ...
+
+  User.find(req.query, 'email').then(users => {
+    let emailList = users.map(user => user.email).join(', ')
+    return res.send(emailList)
   })
 }
 
@@ -30,6 +51,7 @@ const changeApplicationStatus = (req, res) => {
 
 module.exports = {
   getUsers,
+  getUserEmails,
   getUserByEmail,
   getUserEmailsByAcceptance,
   changeApplicationStatus

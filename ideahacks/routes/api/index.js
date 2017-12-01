@@ -8,6 +8,9 @@ const feedbackHandlers = require('./feedback.js')
 // gets all users within the database
 apiRouter.get('/users', h.isAdmin, userApiHandlers.getUsers)
 
+// returns a list of emails from users who fit the query parameters
+apiRouter.get('/users/emails', h.isAdmin, userApiHandlers.getUserEmails)
+
 // gets all the users in the database with a specific email
 apiRouter.get('/users/:email', h.isAdmin, userApiHandlers.getUserByEmail)
 

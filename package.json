@@ -40,6 +40,7 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "express-query-boolean": "^1.0.0",
     "express-session": "^1.15.5",
     "hbs": "^4.0.1",
     "hbs-utils": "0.0.4",
