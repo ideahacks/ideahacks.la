@@ -24,8 +24,8 @@ module.exports = [
       {
         name: 'AT&T',
         website: 'https://www.att.com/',
-        logo: COMPANY_LOGOS_DIR + 'att.jpg',
-        maxWidth: '200px'
+        logo: COMPANY_LOGOS_DIR + 'att.png',
+        maxWidth: '260px'
       },
       {
         name: 'Google',
