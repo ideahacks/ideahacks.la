@@ -1,7 +1,8 @@
 const teamData = require('../../db').teamData
+const sponsorsData = require('../../db').sponsorsData
 
 const getMain = (req, res) => {
-  return res.render('index')
+  return res.render('index', { sponsorsData })
 }
 
 const getTeam = (req, res) => {
