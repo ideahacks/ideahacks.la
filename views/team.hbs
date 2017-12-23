@@ -23,7 +23,7 @@
 
     <div class='team-container container'>
         <div class='header'>
-          <p>THE TEAM</p>
+            <p>THE TEAM</p>
         </div>
 
         {{#each teamData}}
@@ -33,12 +33,10 @@
                 {{#each this.teammates}}
                 <div class='col-sm-3 no-padding'>
                     <div class='pic'>
-                      <img src='{{this.picturePath}}'/>
-                      <div class='row justify-content-center icon-row'>
-                          {{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}}
-                          {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}}
-                          {{#if this.website}}<a href="{{this.website}}" target="_blank" class="fa fa-user-circle fa-3x"></a>{{/if}}
-                      </div>
+                        <img src='{{this.picturePath}}' />
+                        <div class='row justify-content-center icon-row'>
+                            {{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}} {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}} {{#if this.website}}<a href="{{this.website}}" target="_blank" class="fa fa-user-circle fa-3x"></a>{{/if}}
+                        </div>
                     </div>
                     <h2>{{this.name}}</h2>
                     <h3>{{this.organization}}</h3>

@@ -11,7 +11,7 @@
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/admin-teams.css'/>
+    <link rel='stylesheet' type='text/css' href='/css/admin-teams.css' />
 
     <!-- SCRIPTS -->
     <script src="/js/admin-teams.js"></script>
@@ -35,16 +35,16 @@
         <button type="submit" value="Submit">Submit</button>
     </form>
     <ul class='team-list'>
-      {{#each teams}}
-          <li>
+        {{#each teams}}
+        <li>
             <span class="delete-team">&times;</span>
             <h1 class="team-name">{{ this.teamName }}</h1>
             <h1>{{ this.teamNumber }}</h1>
             {{#each this.members}}
             <p>{{ this.email }}</p>
             {{/each}}
-          </li>
-      {{/each}}
+        </li>
+        {{/each}}
     </ul>
 </body>
 </html>
