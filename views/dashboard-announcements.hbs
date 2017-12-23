@@ -32,13 +32,13 @@
 
     <div class='container announcements-container background-white'>
         <ol class='announcements-list'>
-        {{#each announcements}}
+            {{#each announcements}}
             <li class='announcement text-center'>
                 <h2 class='ucla-blue'>{{ this.header }}</h1>
-                <p>{{ this.body  }}</p>
-                <p class='stats-string'>Created by {{ this.createdBy.firstName }} {{this.createdBy.lastName }} | {{ this.formattedTimestamp }}</p>
+                    <p>{{ this.body }}</p>
+                    <p class='stats-string'>Created by {{ this.createdBy.firstName }} {{this.createdBy.lastName }} | {{ this.formattedTimestamp }}</p>
             </li>
-        {{/each}}
+            {{/each}}
         </ol>
     </div>
 </body>

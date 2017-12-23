@@ -75,14 +75,20 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class='day-header'>
-                      <h3 class='ucla-gold'>Friday</h3>
-                      <h2 class='ucla-blue'>Day 1</h2>
+                        <h3 class='ucla-gold'>Friday</h3>
+                        <h2 class='ucla-blue'>Day 1</h2>
                     </div>
                     <div class="dots-list">
                         <ol>
-                            <li><p><strong>5:00PM - 7:00PM</strong> <br/>Registration & Team Formation</p></li>
-                            <li><p><strong>8:00PM - 9:00PM</strong><br/>Opening Speeches & Presentations</p></li>
-                            <li><p><strong>9:00PM</strong> <br/>Hacking Begins</p></li>
+                            <li>
+                                <p><strong>5:00PM - 7:00PM</strong> <br/>Registration & Team Formation</p>
+                            </li>
+                            <li>
+                                <p><strong>8:00PM - 9:00PM</strong><br/>Opening Speeches & Presentations</p>
+                            </li>
+                            <li>
+                                <p><strong>9:00PM</strong> <br/>Hacking Begins</p>
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -93,9 +99,15 @@
                     </div>
                     <div class="dots-list">
                         <ol>
-                            <li><p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p></li>
-                            <li><p><strong>12:00PM - 1:00PM</strong> <br/> Lunch</p></li>
-                            <li><p><strong>6:00PM - 8:00PM</strong> <br/> Dinner</p></li>
+                            <li>
+                                <p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p>
+                            </li>
+                            <li>
+                                <p><strong>12:00PM - 1:00PM</strong> <br/> Lunch</p>
+                            </li>
+                            <li>
+                                <p><strong>6:00PM - 8:00PM</strong> <br/> Dinner</p>
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -106,11 +118,21 @@
                     </div>
                     <div class="dots-list">
                         <ol>
-                            <li><p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p></li>
-                            <li><p><strong>9:00AM</strong> <br/> Hacking Ends</p></li>
-                            <li><p><strong>9:00AM - 9:30AM</strong> <br/> Exhibition Setup</p></li>
-                            <li><p><strong>9:30AM - 11:00AM</strong> <br/> Judging</p></li>
-                            <li><p><strong>11:00AM - 1:00PM</strong> <br/> Closing & Awards</p></li>
+                            <li>
+                                <p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p>
+                            </li>
+                            <li>
+                                <p><strong>9:00AM</strong> <br/> Hacking Ends</p>
+                            </li>
+                            <li>
+                                <p><strong>9:00AM - 9:30AM</strong> <br/> Exhibition Setup</p>
+                            </li>
+                            <li>
+                                <p><strong>9:30AM - 11:00AM</strong> <br/> Judging</p>
+                            </li>
+                            <li>
+                                <p><strong>11:00AM - 1:00PM</strong> <br/> Closing & Awards</p>
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -172,11 +194,10 @@
         <h1 class='transparent-ucla-blue'>Sponsors</h1>
 
         {{#each sponsorsData}}
-            <div class='row sponsor-row text-center {{this.tier}}'>
-                {{#each this.sponsors}}
-                    <a href='{{this.website}}' target='_blank'><img src='{{this.logo}}' style='max-width: {{this.maxWidth}};' /></a>
-                {{/each}}
-            </div>
+        <div class='row sponsor-row text-center {{this.tier}}'>
+            {{#each this.sponsors}}
+            <a href='{{this.website}}' target='_blank'><img src='{{this.logo}}' style='max-width: {{this.maxWidth}};' /></a> {{/each}}
+        </div>
         {{/each}}
 
         <div class='sponsor-message'>

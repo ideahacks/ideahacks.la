@@ -48,13 +48,13 @@
     </div>
     <div class='container announcements-container background-white'>
         <ol class='announcements-list'>
-        {{#each announcements}}
+            {{#each announcements}}
             <li class='announcement text-center' id='{{ this._id }}'>
                 <p class="x-icon text-right" id={{this._id}}>&times;</p>
                 <h2 class='ucla-blue'>{{ this.header }}</h2>
                 <p>{{ this.body }}</p>
             </li>
-        {{/each}}
+            {{/each}}
         </ol>
     </div>
 </body>
