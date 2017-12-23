@@ -10,7 +10,7 @@ const getUsers = (req, res) => {
   // }
 
   User.find(req.query).then(users => {
-    return res.json({ users, numberOfUsers: users.length })
+    return res.json({ users })
   })
 }
 
