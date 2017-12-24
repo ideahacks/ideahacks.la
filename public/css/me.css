@@ -1,3 +1,18 @@
+/*----------- OTHER CONTROLS -------------*/
+.button-container {
+  padding: 20px 60px;
+  margin: 0 10px;
+  border: solid 2px black;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.button-container button {
+  display: block;
+  margin: 20px auto;
+}
+
+/* ---------- FEEDBACK FORM --------------*/
 .feedback-form {
   padding: 50px 0;
 }
