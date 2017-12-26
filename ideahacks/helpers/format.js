@@ -43,7 +43,7 @@ const formatDate = date => {
   const dayList = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat']
   const monthList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
   let meridianSuffix = d.getHours() - 12 > 0 ? 'AM' : 'PM'
-  let hours = d.getHours() % 12 === 0 ? 12 : d.getHours() % 12
+  let hours = (d.getHours() - 4) % 12 === 0 ? 12 : d.getHours() % 12
 
   return [
     dayList[d.getDay()],
