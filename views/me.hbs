@@ -33,9 +33,7 @@
     <!-- TAKE ME TO ADMIN -->
     {{#if user.isAdmin}}
     <div class='container-fluid text-right'>
-        <a href='/admin'>
-            <button>Take me to Admin</button>
-        </a>
+        <a href='/admin'><button>Take me to Admin</button></a>
     </div>
     {{/if}}
 
@@ -44,25 +42,33 @@
         <h1 class='transparent-ucla-gold'>Account Details</h1>
     </div>
 
-    <!-- CONTENT -->
+    <!-- CHANGE PROFILE INFORMATION-->
     <div class='container text-center'>
-        <form class='ideahacks-form'>
-            <label>First Name:</label>
-            <input type='text' />
-            <label>Last Name:</label>
-            <input type='text' />
-            <label>Change Password:</label>
-            <input type='password' />
+        <form class='ideahacks-form profile-form'>
+            <h2 class='ucla-blue'>Update Profile Information</h2>
+            <div class='form-group row'>
+                <label class='col-md-5 text-right'>First Name:</label>
+                <input class='col-md-3 text-left' type='text' name='firstName' value='{{user.firstName}}' />
+            </div>
+            <div class='form-group row'>
+                <label class='col-md-5 text-right'>Last Name:</label>
+                <input class='col-md-3 text-left' type='text' name='lastName' value='{{user.lastName}}' />
+            </div>
+            <div class='form-group row'>
+                <label class='col-md-5 text-right'>Change Password:</label>
+                <input class='col-md-3 text-left' name='password' type='Password' />
+            </div>
+
+            <button type='submit'>Save Changes</button>
+            <p class='profile-form-message'></p>
         </form>
     </div>
 
-    <!-- LOGOUT -->
+    <!-- OTHER CONTROLS -->
     <div class='text-center'>
         <div class='button-container text-center'>
             <button class='check-out-button'>I'm leaving IDEA Hacks</button>
-            <a href='/logout'>
-                <button>Logout</button>
-            </a>
+            <a href='/logout'><button>Logout</button></a>
         </div>
     </div>
 

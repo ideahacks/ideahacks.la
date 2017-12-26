@@ -33,11 +33,14 @@ const getUserByEmail = (req, res) => {
   })
 }
 
-const getUserEmailsByAcceptance = (req, res) => {
-  User.find({ applicationStatus: req.params.acceptance }, 'email').then(users => {
-    let emailList = users.map(user => user.email).join(', ')
-    return res.send(emailList)
-  })
+const checkoutCurrentUser = (req, res) => {
+  // POST /api/currentuser/checkout handler that sets the current user's
+  // checkoutTime field to Date.now to mark down when they have permanently
+  // left the event
+
+  req.user['checkoutTime'] = Date.now()
+  req.user.save()
+  return res.json({ status: 'success', message: 'Checked user out of IDEA Hacks' })
 }
 
 const changeApplicationStatus = (req, res) => {
@@ -53,6 +56,6 @@ module.exports = {
   getUsers,
   getUserEmails,
   getUserByEmail,
-  getUserEmailsByAcceptance,
+  checkoutCurrentUser,
   changeApplicationStatus
 }

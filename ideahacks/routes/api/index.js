@@ -14,8 +14,7 @@ apiRouter.get('/users/emails', h.isAdmin, userApiHandlers.getUserEmails)
 // gets all the users in the database with a specific email
 apiRouter.get('/users/:email', h.isAdmin, userApiHandlers.getUserByEmail)
 
-// returns a comma separated list of accepted users' email
-apiRouter.get('/users/acceptance/:acceptance', h.isAdmin, userApiHandlers.getUserEmailsByAcceptance)
+apiRouter.post('/currentuser/checkout', h.isVerified, userApiHandlers.checkoutCurrentUser)
 
 // finds a user with the given email and changes their application tatus to the specified status
 apiRouter.post(
