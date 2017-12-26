@@ -47,6 +47,7 @@
   border-radius: 0;
   border: none;
   border-bottom: solid #d8d8d8 1px;
+  outline: none;
 
   box-shadow: none;
   background-color: transparent;

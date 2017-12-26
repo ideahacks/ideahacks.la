@@ -9,6 +9,12 @@ module.exports = [
         website: 'http://www.cypress.com/',
         logo: COMPANY_LOGOS_DIR + 'cypress.png',
         maxWidth: '500px'
+      },
+      {
+        name: 'Northrop Grumman',
+        website: 'http://www.northropgrumman.com/',
+        logo: COMPANY_LOGOS_DIR + 'northropgrumman.png',
+        maxWidth: '515px'
       }
     ]
   },
