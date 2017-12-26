@@ -14,5 +14,6 @@ dashboardRouter.get('/', setResLocals, h.isVerified, dashboardHandlers.getDashbo
 dashboardRouter.get('/parts', setResLocals, h.isVerified, dashboardHandlers.getParts)
 
 dashboardRouter.get('/me', setResLocals, h.isVerified, dashboardHandlers.getMe)
+dashboardRouter.post('/me', setResLocals, h.isVerified, dashboardHandlers.postMe)
 
 module.exports = dashboardRouter

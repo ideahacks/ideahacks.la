@@ -30,7 +30,11 @@ const UserSchema = new Schema({
   // auth fields
   verificationHash: String,
   isVerified: { type: Boolean, default: false },
-  isAdmin: { type: Boolean, default: false }
+  isAdmin: { type: Boolean, default: false },
+
+  // Check in/out fields
+  checkinTime: Date,
+  checkoutTime: Date
 })
 
 module.exports = mongoose.model('User', UserSchema)
