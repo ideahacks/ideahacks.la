@@ -1,8 +1,19 @@
-.feedback-wrapper {
+/*--------------- MAILING LISTS -----------------*/
+
+.mailing-list .email-list {
+  display: none;
+  background-color: lightgrey;
+}
+
+/*-------------- FEEDBACK LISTS ----------------*/
+
+.feedback-wrapper,
+.mailing-wrapper {
   padding: 25px 0 50px;
 }
 
-.feedback-list {
+.feedback-list,
+.mailing-list {
   max-width: 1200px;
 }
 
