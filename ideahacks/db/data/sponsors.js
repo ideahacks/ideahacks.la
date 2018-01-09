@@ -15,6 +15,12 @@ module.exports = [
         website: 'http://www.northropgrumman.com/',
         logo: COMPANY_LOGOS_DIR + 'northropgrumman.png',
         maxWidth: '515px'
+      },
+      {
+        name: 'Traction Labs LLC',
+        website: 'http://www.traction-labs.com/',
+        logo: COMPANY_LOGOS_DIR + 'tractionlabs.png',
+        maxWidth: '515px'
       }
     ]
   },
