@@ -3,16 +3,14 @@ $(() => {
 
   // display modal when clicking on part
   $('.part').click(function() {
-    let partName = $(this)
-      .find('.part-name')
-      .text()
-    let partsApiURL = '/api/parts/name/' + partName
+    const PARTS_API_URL = '/api/parts?_id=' + $(this).attr('id')
 
-    $.ajax({ url: partsApiURL, type: 'GET' }).done(partInfo => {
-      for (let data in partInfo) {
-        $('span[name="' + data + '"]').text(partInfo[data])
+    $.ajax({ url: PARTS_API_URL, type: 'GET' }).done(part => {
+      let partData = part[0] // Retrieve only the first part
+      for (let data in partData) {
+        $('span[name="' + data + '"]').text(partData[data])
       }
-      $('a[name="datasheet-link"]').attr('href', partInfo.datasheet)
+      $('a[name="datasheet-link"]').attr('href', partData.datasheet)
 
       modal.style.display = 'block'
     })

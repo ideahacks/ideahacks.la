@@ -38,7 +38,7 @@
     <!-- PARTS LIST -->
     <ul class='parts-list filter-list'>
         {{#each parts}}
-        <li class='row part'>
+        <li class='row part' id='{{this._id}}'>
             <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
             <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
             <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>

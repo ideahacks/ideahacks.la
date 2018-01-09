@@ -2,7 +2,7 @@ const Part = require('../../db').Part
 const Team = require('../../db').Team
 
 const getParts = (req, res) => {
-  Part.find().then(parts => {
+  Part.find(req.query).then(parts => {
     return res.json(parts)
   })
 }
