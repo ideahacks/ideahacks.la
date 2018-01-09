@@ -6,9 +6,9 @@ Received,Battery,AmazonBasics AAA Performance Alkaline Batteries (36-Pack),3,Con
 Received,Connector,Breadboard-Friendly 3.5mm Stereo Headphone Jack,25,Consumable,Adafruit,1699,https://www.adafruit.com/product/1699
 Received,Connector,2 x 2032 Coin Cell Battery Holder - 6V ,25,Consumable,Adafruit,783,https://www.adafruit.com/product/783
 Received,Connector,Small Alligator Clip Test Lead (set of 12),8,Consumable,Adafruit,1008,https://www.adafruit.com/product/1008
-Received,Connector,"22 GA RED HOOK UP WIRE, SOLID 100'",5,Consumable,All Electronics,22RD-100S,http://www.allelectronics.com/item/22rd-100s/22-ga-red-hook-up-wire-solid-100/1.html
-Received,Connector,"22 GA BLACK HOOK UP WIRE, SOLID 100'",5,Consumable,All Electronics,22BK-100S,http://www.allelectronics.com/item/22bk-100s/22-ga-black-hook-up-wire-solid-100/1.html
-Received,Connector,"22 GA GREEN HOOK UP WIRE, SOLID 100'",3,Consumable,All Electronics,22GN-100S,http://www.allelectronics.com/item/22gn-100s/22-ga-green-hook-up-wire-solid-100/1.html
+Received,Connector,22 GA RED HOOK UP WIRE  SOLID 100',5,Consumable,All Electronics,22RD-100S,http://www.allelectronics.com/item/22rd-100s/22-ga-red-hook-up-wire-solid-100/1.html
+Received,Connector,22 GA BLACK HOOK UP WIRE  SOLID 100',5,Consumable,All Electronics,22BK-100S,http://www.allelectronics.com/item/22bk-100s/22-ga-black-hook-up-wire-solid-100/1.html
+Received,Connector,22 GA GREEN HOOK UP WIRE  SOLID 100',3,Consumable,All Electronics,22GN-100S,http://www.allelectronics.com/item/22gn-100s/22-ga-green-hook-up-wire-solid-100/1.html
 Ordered,Connector,2x 40pcs Female to Female 2.54mm 0.1 in Jumper Wires F/F (2x40pcs),10,Consumable,Amazon,B00GSE2S98,https://www.amazon.com/40pcs-Female-2-54mm-Jumper-2x40pcs/dp/B01HJQ49MW/ref=sr_1_1?ie=UTF8&qid=1473210590&sr=8-1&keywords=dupont+female+to+female
 Received,Connector,JST 2mm PH - Angled Header,100,Consumable,Digi-Key,455-1719-ND,http://www.digikey.com/product-detail/en/S2B-PH-K-S(LF)(SN)/455-1719-ND/926626
 Received,Connector,"STRAP BATT ECON 9V I STYLE 6""LD",50,Consumable,Digi-Key,36-233-ND,http://www.digikey.com/product-detail/en/keystone-electronics/233/36-233-ND/68726
@@ -28,17 +28,17 @@ Received,Display,"Quad Alphanumeric Display - Red 0.54"" Digits w/ I2C Backpack"
 Received,Display,"1.3"" OLED Display",5,Consumable,Adafruit,938,https://www.adafruit.com/products/938
 Received,Display,5050 RGB Light Strip,5,Consumable,Amazon,B013OQX3JG,https://www.amazon.com/Blue-Wind-Waterproof-Changing-Flexible/dp/B013OQX3JG/ref=sr_1_5?ie=UTF8&qid=1476979229&sr=8-5&keywords=led+light+strip+rgb
 Received,Display,SparkFun Serial Enabled 16x2 LCD - White on Black 3.3V,15,Consumable,SparkFun,LCD-09067,https://www.sparkfun.com/products/9067
-Received,Electromechanical,"Zero-Peak Signal Buzzer Single Tone 4kHz Piezo 30V (Max) 60dB @ 3V, 10cm",20,Consumable,Digi-Key,445-2525-1-ND,http://www.digikey.com/product-detail/en/tdk-corporation/PS1240P02BT/445-2525-1-ND/935930
+Received,Electromechanical,Zero-Peak Signal Buzzer Single Tone 4kHz Piezo 30V (Max) 60dB @ 3V  10cm,20,Consumable,Digi-Key,445-2525-1-ND,http://www.digikey.com/product-detail/en/tdk-corporation/PS1240P02BT/445-2525-1-ND/935930
 Received,Electromechanical,H-Bridge L293D,10,Consumable,Mouser,511-L293D,http://www.mouser.com/ProductDetail/STMicroelectronics/L293D/?qs=sGAEpiMZZMtKB4wrjsn3lQPLAQzMALaB3m9VaEGxVKA%3d
 Received,Electromechanical,Power HD Micro Servo HD-1800A,20,Consumable,Pololu,1049,https://www.pololu.com/product/1049
-Received,Electromechanical,"120:1 Plastic Gearmotor, 90° Output",6,Consumable,Pololu,1121,https://www.pololu.com/product/1121
+Received,Electromechanical,120:1 Plastic Gearmotor  90° Output,6,Consumable,Pololu,1121,https://www.pololu.com/product/1121
 Received,Interface IC,Low Power Quad Operational Amplifier,20,Consumable,TI,LM324N,http://www.ti.com/lit/ds/symlink/lm224.pdf
 Received,Interface IC,LM 555 Timer,20,Consumable,TI,LM555CN/NOPB,http://www.ti.com/lit/ds/symlink/lm555.pdf
 Received,Interface IC,Digital-Latch Hall Effect Sensor,20,Consumable,TI,DRV5013,http://www.ti.com/lit/ds/slis150h/slis150h.pdf
 Received,Interface IC,SNx4HC5958-Bit Shift Registers With3-StateOutput Registers,20,Consumable,TI,SN74HC595N,http://www.ti.com/lit/ds/symlink/sn74hc595.pdf
 Received,Interface IC,SN754410 Quadruple Half-H Driver,40,Consumable,TI,SN74754410NE,http://www.ti.com/lit/ds/symlink/sn754410.pdf
 Received,Interface IC,FTDI Friend + extras - v1.0,10,Consumable,Adafruit,284,https://www.adafruit.com/product/284
-Received,Interface IC,"10 Bit Analog to Digital Converter 1, 2 Input 1 SAR 8-PDIP",10,Consumable,Digi-Key,MCP3002-I/P-ND,http://www.digikey.com/product-detail/en/microchip-technology/MCP3002-I-P/MCP3002-I-P-ND/319412
+Received,Interface IC,10 Bit Analog to Digital Converter 1  2 Input 1 SAR 8-PDIP,10,Consumable,Digi-Key,MCP3002-I/P-ND,http://www.digikey.com/product-detail/en/microchip-technology/MCP3002-I-P/MCP3002-I-P-ND/319412
 Received,Interface IC,Operational Amplifiers - Op Amps DIP-8 Dual Op Amp,100,Consumable,Mouser,512-LM358AN,http://www.mouser.com/ProductDetail/Fairchild-Semiconductor/LM358AN/?qs=%2fha2pyFaduh5FRQlJmYF7AYHBlvb5sC%2fUpkE26N9UCs%3d&utm_source=octopart&utm_medium=aggregator&utm_campaign=512-LM358AN&utm_content=Fairchild%20Semiconductor
 Received,Interface IC,SparkFun Logic Level Converter - Bi-Directional,15,Consumable,SparkFun,BOB-12009,https://www.sparkfun.com/products/12009
 Received,MCU,Raspberry Pi 3 - Model B,10,Return,Adafruit,3055,https://www.adafruit.com/products/3055
@@ -54,9 +54,9 @@ Received,Miscellaneous,SanDisk 16GB Mobile MicroSDHC Class 4 Flash Memory Card W
 Received,Miscellaneous,10pc. 5cmx7cm Prototype Board,6,Consumable,Amazon,BCBI5030,https://www.amazon.com/10Pcs-Prototype-Paper-Universal-Board/dp/B00ARTP1J4/ref=sr_1_3?ie=UTF8&qid=1478729734&sr=8-3&keywords=perfboard
 Received,Miscellaneous,5pc. 7cmx9am Prototype Board,6,Consumable,Amazon,B00K85FDH2,https://www.amazon.com/Uxcell-Prototyping-Universal-Breadboard-Stripboard/dp/B00K85FDH2/ref=sr_1_11?rps=1&ie=UTF8&qid=1481584467&sr=8-11&keywords=prototype+board+7+x+9&refinements=p_85%3A2470955011
 Received,Miscellaneous,Kester 44 Rosin Core Solder 63/37 0.80mm (0.031 inches) 1 lb. Spool,4,Consumable,Amazon,B0149K4JTY,https://www.amazon.com/Kester-Rosin-Solder-0-80mm-inches/dp/B0149K4JTY/ref=sr_1_2?s=hi&ie=UTF8&qid=1481586811&sr=1-2&refinements=p_n_feature_keywords_browse-bin%3A6072233011
-Received,Miscellaneous,"Aketek 3x Solderless BreadBoard, 400 tie-points",33,Consumable,Amazon,B01258UZMC,https://www.amazon.com/gp/product/B01258UZMC/ref=ox_sc_mini_detail?ie=UTF8&psc=1&smid=A2SSLHUTQUODGT
+Received,Miscellaneous,Aketek 3x Solderless BreadBoard  400 tie-points,33,Consumable,Amazon,B01258UZMC,https://www.amazon.com/gp/product/B01258UZMC/ref=ox_sc_mini_detail?ie=UTF8&psc=1&smid=A2SSLHUTQUODGT
 Received,Miscellaneous,Pololu Wheel 32×7mm Pair - Black,3,Consumable,Pololu,1087,https://www.pololu.com/product/1087
-Received,Miscellaneous,"555 Type, Timer/Oscillator (Single) IC 8-DIP (0.300"", 7.62mm)",30,Consumable,Digi-Key,LM555CNFS-ND,http://www.digikey.com/product-detail/en/fairchild-semiconductor/LM555CN/LM555CNFS-ND/458696
+Received,Miscellaneous,"555 Type  Timer/Oscillator (Single) IC 8-DIP (0.300""  7.62mm)",30,Consumable,Digi-Key,LM555CNFS-ND,http://www.digikey.com/product-detail/en/fairchild-semiconductor/LM555CN/LM555CNFS-ND/458696
 Received,Power,Adafruit Micro Lipo - USB LiIon/LiPoly charger,15,Consumable,Adafruit,1304,https://www.adafruit.com/product/1304
 Received,Power,Keten Raspberry Pi 3 Power Supply,10,Consumable,Amazon,B01K7EF2XS,https://www.amazon.com/Keten-Raspberry-Charger-Adapter-Android/dp/B01K7EF2XS/ref=pd_lpo_147_tr_t_3?_encoding=UTF8&psc=1&refRID=DHQP4XN5PF92PC73HMV6
 Received,Power,Linear Voltage Regulator IC Positive Fixed 1 Output 5V 1.5A TO-220AB,50,Consumable,Digi-Key,497-1443-5-ND,http://www.digikey.com/product-detail/en/L7805CV/497-1443-5-ND/585964?WT.z_cid=ref_octopart_dkc_buynow&site=us
@@ -68,7 +68,7 @@ Received,Sensor,Heart Rate Educational Starter Pack with Polar Wireless Sensors,
 Received,Sensor,Adafruit Ultimate GPS Breakout - 66 channel w/10 Hz ,3,Consumable,Adafruit,746,https://www.adafruit.com/products/746
 Received,Sensor,Temperature & Humidity Sensor Breakout Board,5,Consumable,Adafruit,1899,https://www.adafruit.com/product/1899
 Received,Sensor,IR Remote Sensor,5,Consumable,Adafruit,157,https://www.adafruit.com/products/157
-Received,Sensor,"Raspberry Pi Camera Module V2 - 8 Megapixel,1080p",5,Consumable,Amazon,B01ER2SKFS,https://www.amazon.com/dp/B01ER2SKFS/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=1944687522&pf_rd_s=lpo-top-stripe-1&pf_rd_t=201&pf_rd_i=B00E1GGE40&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=Q78YX5GG4P7G8SV42TQV
+Received,Sensor,Raspberry Pi Camera Module V2 - 8 Megapixel 1080p,5,Consumable,Amazon,B01ER2SKFS,https://www.amazon.com/dp/B01ER2SKFS/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=1944687522&pf_rd_s=lpo-top-stripe-1&pf_rd_t=201&pf_rd_i=B00E1GGE40&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=Q78YX5GG4P7G8SV42TQV
 Received,Sensor,Digital IR Temperature Sensor,10,Consumable,Digi-Key,MLX90615SSG-DAA-000-TU-ND,http://www.digikey.com/product-detail/en/melexis-technologies-nv/MLX90615SSG-DAA-000-TU/MLX90615SSG-DAA-000-TU-ND/2440563
 Received,Sensor,Digital One-Wire Temperature Sensor,20,Consumable,Digi-Key,DS18B20+-ND,http://www.digikey.com/product-detail/en/maxim-integrated/DS18B20-/DS18B20--ND/956983
 Received,Sensor,Analog Temperature Sensor,25,Consumable,Digi-Key,MCP9701A-E/TO-ND,http://www.digikey.com/product-detail/en/microchip-technology/MCP9701A-E-TO/MCP9701A-E-TO-ND/1212511
@@ -81,7 +81,7 @@ Received,Sensor,SparkFun Triple Axis Accelerometer Breakout ,10,Consumable,Spark
 Received,Sensor,MyoWare Muscle Sensor Development Kit,10,Consumable,SparkFun,KIT-13772,https://www.sparkfun.com/products/13772
 Received,Sensor,"Flex Sensor 2.2""",15,Consumable,SparkFun,SEN-10264,https://www.sparkfun.com/products/10264
 Received,Sensor,"Flex Sensor 4.5""",10,Consumable,SparkFun,SEN-08606,https://www.sparkfun.com/products/8606
-Received,Sensor,"Load Cell - 10kg, Straight Bar",5,Consumable,SparkFun,SEN-13329,https://www.sparkfun.com/products/13329
+Received,Sensor,Load Cell - 10kg  Straight Bar,5,Consumable,SparkFun,SEN-13329,https://www.sparkfun.com/products/13329
 Received,Sensor,SparkFun Load Cell Amplifier - HX711,5,Consumable,SparkFun,SEN-13879,https://www.sparkfun.com/products/13879
 Received,Sensor,SparkFun Capacitive Touch Breakout,10,Consumable,SparkFun,SEN-12041,https://www.sparkfun.com/products/12041
 Received,Sensor,SparkFun RGB and Gesture Sensor,5,Consumable,SparkFun,SEN-12787,https://www.sparkfun.com/products/12787

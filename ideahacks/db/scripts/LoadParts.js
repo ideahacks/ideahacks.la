@@ -28,6 +28,7 @@ fs.readFile(filePath, { encoding: 'utf-8' }, (err, data) => {
     }
 
     let splitLine = line.split(',')
+    console.log(splitLine[3])
     let newPart = new Part({
       partName: splitLine[2],
       stock: splitLine[3],
