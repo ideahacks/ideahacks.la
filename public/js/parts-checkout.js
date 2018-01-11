@@ -14,6 +14,7 @@ $(() => {
     $('span[name="partName"]').text(partName)
     $('span[name="current-stock"]').text(currentStock)
     $('.parts-checkout-form').attr('id', $(this).attr('id'))
+    $('span[name="part-owners"]').text('')
     modal.style.display = 'block'
 
     // When modal is launched, set the window's onclick handler
@@ -24,6 +25,13 @@ $(() => {
         modal.style.display = 'none'
       }
     }
+
+    let ownerApiUrl = '/api/parts/owners/' + $(this).attr('id')
+    $.ajax({ url: ownerApiUrl, type: 'GET' }).done(res => {
+      if (res.status === 'success') {
+        $('span[name="part-owners"]').text(res.owners.join(', '))
+      }
+    })
   })
 
   // parts checkout form logic

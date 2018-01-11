@@ -37,6 +37,9 @@ apiRouter.post(
   partApiHandlers.handlePartCheckout
 )
 
+// Returns a list of teams that have a certain part
+apiRouter.get('/parts/owners/:id', h.isAdmin, partApiHandlers.getPartOwners)
+
 apiRouter.post('/feedback', h.isVerified, feedbackHandlers.postFeedback)
 
 module.exports = apiRouter
