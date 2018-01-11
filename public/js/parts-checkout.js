@@ -13,26 +13,29 @@ $(() => {
 
     $('span[name="partName"]').text(partName)
     $('span[name="current-stock"]').text(currentStock)
+    $('.parts-checkout-form').attr('id', $(this).attr('id'))
     modal.style.display = 'block'
   })
 
   // parts checkout form logic
-  $('.parts-checkout-form').submit(e => {
+  $('.parts-checkout-form').submit(function(e) {
     e.preventDefault()
 
-    let partName = $('span[name="partName"]').text()
+    let partId = $(this).attr('id')
     let action = $('input[name="part-checkout-radio"][checked]').val()
     let quantity = $('input[name="quantity"]').val()
     let teamNumber = $('input[name="teamNumber"]').val()
     let apiUrl =
-      '/api/parts/action/' + action + '/partName/' + partName + '/quantity/' + quantity + '/teamNumber/' + teamNumber
+      '/api/parts/action/' + action + '/part/' + partId + '/quantity/' + quantity + '/teamNumber/' + teamNumber
+
+    console.log(apiUrl)
 
     $.ajax({ url: apiUrl, type: 'POST' }).done(res => {
       if (res.status === 'failure') {
         $('.parts-checkout-error-message').text(res.message)
       } else {
         // asynchronously change part stock on pages
-        changePartStock(partName, res.newStock)
+        changePartStock(partId, res.newStock)
 
         // clear out form fields and hide modal
         resetFormFields()
@@ -50,18 +53,11 @@ $(() => {
   }
 })
 
-function changePartStock(partName, newStock) {
+function changePartStock(partId, newStock) {
   // finds the part on the page and updates it stock to the newStock
-  $('.part').each((i, el) => {
-    let elementName = $(el)
-      .find('.part-name')
-      .text()
-    if (elementName === partName) {
-      $(el)
-        .find('.part-stock')
-        .text(newStock + ' in Stock')
-    }
-  })
+  $('.part#' + partId)
+    .find('.part-stock')
+    .text(newStock + ' in Stock')
 }
 
 function resetFormFields() {

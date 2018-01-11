@@ -14,11 +14,12 @@ const getPartByName = (req, res) => {
 }
 
 const handlePartCheckout = (req, res) => {
-  // ERROR CHECK: missing action
-  if (req.params.action === 'undefined') {
-    return res.json({ status: 'failure', message: 'You must specify an action to perform!' })
+  // ERROR CHECK: Missing parameters
+  if (req.params.action === 'undefined' || req.params.id === 'undefined') {
+    return res.json({ status: 'failure', message: 'Parts checkout parameters are missing!' })
   }
-  Part.findOne({ partName: req.params.partName })
+
+  Part.findOne({ _id: req.params.id })
     .then(part => {
       Team.findOne({ teamNumber: req.params.teamNumber })
         .then(team => {
