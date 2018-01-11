@@ -1,5 +1,5 @@
 $(() => {
-  let modal = document.getElementById('myModal')
+  let modal = document.getElementById('part-checkout-modal')
 
   // when application clicked on, inject info into modal, and then display modal
   $('.part').click(function() {
@@ -15,6 +15,15 @@ $(() => {
     $('span[name="current-stock"]').text(currentStock)
     $('.parts-checkout-form').attr('id', $(this).attr('id'))
     modal.style.display = 'block'
+
+    // When modal is launched, set the window's onclick handler
+    // to close the modal
+    window.onclick = e => {
+      if (e.target === modal) {
+        resetFormFields()
+        modal.style.display = 'none'
+      }
+    }
   })
 
   // parts checkout form logic
@@ -27,8 +36,6 @@ $(() => {
     let teamNumber = $('input[name="teamNumber"]').val()
     let apiUrl =
       '/api/parts/action/' + action + '/part/' + partId + '/quantity/' + quantity + '/teamNumber/' + teamNumber
-
-    console.log(apiUrl)
 
     $.ajax({ url: apiUrl, type: 'POST' }).done(res => {
       if (res.status === 'failure') {
@@ -43,14 +50,6 @@ $(() => {
       }
     })
   })
-
-  // when user clicks outside the modal, hide the modal
-  window.onclick = e => {
-    if (e.target === modal) {
-      resetFormFields()
-      modal.style.display = 'none'
-    }
-  }
 })
 
 function changePartStock(partId, newStock) {

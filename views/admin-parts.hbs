@@ -18,10 +18,12 @@
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' type='text/css' href='/css/parts-list.css' />
+    <link rel='stylesheet' type='text/css' href='/css/modals/parts-creation-modal.css' />
 
     <!-- SCRIPTS -->
     <script src="/js/admin-parts.js"></script>
     <script src='/js/parts-checkout.js'></script>
+    <script src='/js/part-creation.js'></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -32,27 +34,11 @@
         <h1 class='transparent-ucla-blue'>Parts</h1>
     </div>
 
-    <form class='part-creation-form'>
-        <p>Part name</p>
-        <input class="part-name" type="text" name="partName" required>
-        <p>Stock</p>
-        <input class="stock" type="number" name="stock" required><br>
-        <p>Description</p>
-        <input class="description" type="text" name="description" required><br>
-        <p>Returnable or Perishable Item</p>
-        <input type="radio" name="ReturnOrConsume" value="must return" required>Must Return<br>
-        <input type="radio" name="ReturnOrConsume" value="consumable">Consumable<br>
-        <p>Manufacturer</p>
-        <input class="manufacturer" type="text" name="manufacturer"><br>
-        <p>Manufacturer Part #</p>
-        <input class="partNumber" type="text" name="partNumber"><br>
-        <p>Datasheet</p>
-        <input class="datasheet" type="text" name="datasheet"><br>
+    {{> partsCreationModal }}
 
-        <button type="submit">Submit</button>
-    </form>
-
-    <h1 class='error-message'></h1>
+    <div class='content-wrapper text-right'>
+        <button title='Add Part'>+</button>
+    </div>
 
     <!-- FILTER LIST -->
     {{> filter}}

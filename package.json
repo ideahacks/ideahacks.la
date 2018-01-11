@@ -26,6 +26,9 @@
     "*.css": ["npm run format", "git add"],
     "*.hbs": ["npm run format-html", "git add"]
   },
+  "nodemonConfig": {
+    "ignore": ["public/*"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IDEA-Hacks/ideahacks.la.git"

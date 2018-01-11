@@ -130,3 +130,11 @@ ol {
   list-style: none;
   padding: 0;
 }
+
+/* WRAPPERS */
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
