@@ -1,8 +1,10 @@
 $(() => {
+  let checkoutSocket = io('/admin/parts') // open socket to the server
+
   let modal = document.getElementById('part-checkout-modal')
 
   // when application clicked on, inject info into modal, and then display modal
-  $('.part').click(function() {
+  $('.parts-list').on('click', 'li.part', function() {
     let partName = $(this)
       .find('.part-name')
       .text()
@@ -52,11 +54,19 @@ $(() => {
         // asynchronously change part stock on pages
         changePartStock(partId, res.newStock)
 
+        // Broadcast to other clients that a change has been made
+        checkoutSocket.emit('part transformation', { id: partId, stock: res.newStock })
+
         // clear out form fields and hide modal
         resetFormFields()
         modal.style.display = 'none'
       }
     })
+  })
+
+  // Listen for "part transformation" from socket and make adjustments to page
+  checkoutSocket.on('part transformation', transformation => {
+    changePartStock(transformation.id, transformation.stock)
   })
 })
 
