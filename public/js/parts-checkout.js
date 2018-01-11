@@ -1,8 +1,10 @@
 $(() => {
-  let modal = document.getElementById('myModal')
+  let checkoutSocket = io('/admin/parts') // open socket to the server
+
+  let modal = document.getElementById('part-checkout-modal')
 
   // when application clicked on, inject info into modal, and then display modal
-  $('.part').click(function() {
+  $('.parts-list').on('click', 'li.part', function() {
     let partName = $(this)
       .find('.part-name')
       .text()
@@ -13,26 +15,47 @@ $(() => {
 
     $('span[name="partName"]').text(partName)
     $('span[name="current-stock"]').text(currentStock)
+    $('.parts-checkout-form').attr('id', $(this).attr('id'))
+    $('span[name="part-owners"]').text('')
     modal.style.display = 'block'
+
+    // When modal is launched, set the window's onclick handler
+    // to close the modal
+    window.onclick = e => {
+      if (e.target === modal) {
+        resetFormFields()
+        modal.style.display = 'none'
+      }
+    }
+
+    let ownerApiUrl = '/api/parts/owners/' + $(this).attr('id')
+    $.ajax({ url: ownerApiUrl, type: 'GET' }).done(res => {
+      if (res.status === 'success') {
+        $('span[name="part-owners"]').text(res.owners.join(', '))
+      }
+    })
   })
 
   // parts checkout form logic
-  $('.parts-checkout-form').submit(e => {
+  $('.parts-checkout-form').submit(function(e) {
     e.preventDefault()
 
-    let partName = $('span[name="partName"]').text()
+    let partId = $(this).attr('id')
     let action = $('input[name="part-checkout-radio"][checked]').val()
     let quantity = $('input[name="quantity"]').val()
     let teamNumber = $('input[name="teamNumber"]').val()
     let apiUrl =
-      '/api/parts/action/' + action + '/partName/' + partName + '/quantity/' + quantity + '/teamNumber/' + teamNumber
+      '/api/parts/action/' + action + '/part/' + partId + '/quantity/' + quantity + '/teamNumber/' + teamNumber
 
     $.ajax({ url: apiUrl, type: 'POST' }).done(res => {
       if (res.status === 'failure') {
         $('.parts-checkout-error-message').text(res.message)
       } else {
         // asynchronously change part stock on pages
-        changePartStock(partName, res.newStock)
+        changePartStock(partId, res.newStock)
+
+        // Broadcast to other clients that a change has been made
+        checkoutSocket.emit('part transformation', { id: partId, stock: res.newStock })
 
         // clear out form fields and hide modal
         resetFormFields()
@@ -41,27 +64,17 @@ $(() => {
     })
   })
 
-  // when user clicks outside the modal, hide the modal
-  window.onclick = e => {
-    if (e.target === modal) {
-      resetFormFields()
-      modal.style.display = 'none'
-    }
-  }
+  // Listen for "part transformation" from socket and make adjustments to page
+  checkoutSocket.on('part transformation', transformation => {
+    changePartStock(transformation.id, transformation.stock)
+  })
 })
 
-function changePartStock(partName, newStock) {
+function changePartStock(partId, newStock) {
   // finds the part on the page and updates it stock to the newStock
-  $('.part').each((i, el) => {
-    let elementName = $(el)
-      .find('.part-name')
-      .text()
-    if (elementName === partName) {
-      $(el)
-        .find('.part-stock')
-        .text(newStock + ' in Stock')
-    }
-  })
+  $('.part#' + partId)
+    .find('.part-stock')
+    .text(newStock + ' in Stock')
 }
 
 function resetFormFields() {

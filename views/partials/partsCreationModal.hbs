@@ -1,0 +1,33 @@
+<div id='part-creation-modal' class='modal'>
+    <div class='modal-content container-fluid'>
+
+        <!-- Custom content wrapper -->
+        <div class='modal-content-wrapper'>
+            <h2 class='ucla-blue text-center'>Add a Part</h2>
+
+            <form class='part-creation-form'>
+                <p>Part name</p>
+                <input class="part-name" type="text" name="partName" required>
+                <p>Stock</p>
+                <input class="stock" type="number" name="stock" required><br>
+                <p>Description</p>
+                <input class="description" type="text" name="description" required><br>
+                <p>Returnable or Perishable Item</p>
+                <input type="radio" name="ReturnOrConsume" value="must return" required>Must Return<br>
+                <input type="radio" name="ReturnOrConsume" value="consumable">Consumable<br>
+                <p>Manufacturer</p>
+                <input class="manufacturer" type="text" name="manufacturer"><br>
+                <p>Manufacturer Part #</p>
+                <input class="partNumber" type="text" name="partNumber"><br>
+                <p>Datasheet</p>
+                <input class="datasheet" type="text" name="datasheet"><br>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <h1 class='error-message'></h1>
+        </div>
+
+    </div>
+</div>
+<link rel='stylesheet' type='text/css' href='/css/modals/parts-creation-modal.css' />

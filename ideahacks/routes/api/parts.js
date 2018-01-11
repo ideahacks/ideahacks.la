@@ -14,12 +14,18 @@ const getPartByName = (req, res) => {
 }
 
 const handlePartCheckout = (req, res) => {
-  // ERROR CHECK: missing action
-  if (req.params.action === 'undefined') {
-    return res.json({ status: 'failure', message: 'You must specify an action to perform!' })
+  // ERROR CHECK: Missing parameters
+  if (req.params.action === 'undefined' || req.params.id === 'undefined') {
+    return res.json({ status: 'failure', message: 'Parts checkout parameters are missing!' })
   }
-  Part.findOne({ partName: req.params.partName })
+
+  Part.findOne({ _id: req.params.id })
     .then(part => {
+      // ERROR CHECK: Checking out more parts than available
+      if (req.params.action === 'check-out' && req.params.quantity > part.stock) {
+        return res.json({ status: 'failure', message: 'Cannot check out more than what we have!' })
+      }
+
       Team.findOne({ teamNumber: req.params.teamNumber })
         .then(team => {
           // ERROR CHECK: non-existant team
@@ -79,8 +85,37 @@ const handlePartCheckout = (req, res) => {
     .catch(err => console.log(err))
 }
 
+const getPartOwners = (req, res) => {
+  if (!req.params.id) {
+    return res.json({ status: 'failure', message: 'You need to specify a part ID.' })
+  }
+
+  Part.findOne({ _id: req.params.id })
+    .then(part => {
+      let partName = part.partName // Retrieve the name of the part we're looking for
+      Team.find()
+        .then(teams => {
+          // Loop through all teams to see who has the part
+          let owners = []
+          for (let team of teams) {
+            for (let teamPart of team.parts) {
+              if (teamPart.partName === partName) {
+                owners.push(team.teamName + ': ' + teamPart.stock)
+                break
+              }
+            }
+          }
+
+          return res.json({ status: 'success', owners })
+        })
+        .catch(err => console.log(err))
+    })
+    .catch(err => console.log(err))
+}
+
 module.exports = {
   getParts,
   getPartByName,
-  handlePartCheckout
+  handlePartCheckout,
+  getPartOwners
 }

@@ -32,10 +32,13 @@ apiRouter.get('/parts/name/:partName', partApiHandlers.getPartByName)
 
 // performs part return or checkout for a given quantity of parts and a team number
 apiRouter.post(
-  '/parts/action/:action/partName/:partName/quantity/:quantity/teamNumber/:teamNumber',
+  '/parts/action/:action/part/:id/quantity/:quantity/teamNumber/:teamNumber',
   h.isAdmin,
   partApiHandlers.handlePartCheckout
 )
+
+// Returns a list of teams that have a certain part
+apiRouter.get('/parts/owners/:id', h.isAdmin, partApiHandlers.getPartOwners)
 
 apiRouter.post('/feedback', h.isVerified, feedbackHandlers.postFeedback)
 

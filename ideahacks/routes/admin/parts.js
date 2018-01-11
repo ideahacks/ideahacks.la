@@ -24,7 +24,7 @@ const postParts = (req, res) => {
     })
     newPart.save()
 
-    return res.json({ status: 'success', message: 'Success! Part has been created' })
+    return res.json({ status: 'success', message: 'Success! Part has been created', id: newPart._id })
   })
 }
 

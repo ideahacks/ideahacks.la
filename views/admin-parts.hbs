@@ -8,6 +8,9 @@
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
+    <!-- SOCKETIO -->
+    <script src='/socket.io/socket.io.js'></script>
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,10 +21,12 @@
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' type='text/css' href='/css/parts-list.css' />
+    <link rel='stylesheet' type='text/css' href='/css/modals/parts-creation-modal.css' />
 
     <!-- SCRIPTS -->
     <script src="/js/admin-parts.js"></script>
     <script src='/js/parts-checkout.js'></script>
+    <script src='/js/part-creation.js'></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -32,27 +37,11 @@
         <h1 class='transparent-ucla-blue'>Parts</h1>
     </div>
 
-    <form class='part-creation-form'>
-        <p>Part name</p>
-        <input class="part-name" type="text" name="partName" required>
-        <p>Stock</p>
-        <input class="stock" type="number" name="stock" required><br>
-        <p>Description</p>
-        <input class="description" type="text" name="description" required><br>
-        <p>Returnable or Perishable Item</p>
-        <input type="radio" name="ReturnOrConsume" value="must return" required>Must Return<br>
-        <input type="radio" name="ReturnOrConsume" value="consumable">Consumable<br>
-        <p>Manufacturer</p>
-        <input class="manufacturer" type="text" name="manufacturer"><br>
-        <p>Manufacturer Part #</p>
-        <input class="partNumber" type="text" name="partNumber"><br>
-        <p>Datasheet</p>
-        <input class="datasheet" type="text" name="datasheet"><br>
+    {{> partsCreationModal }}
 
-        <button type="submit">Submit</button>
-    </form>
-
-    <h1 class='error-message'></h1>
+    <div class='content-wrapper text-right'>
+        <button title='Add Part'>+</button>
+    </div>
 
     <!-- FILTER LIST -->
     {{> filter}}
@@ -60,7 +49,7 @@
     <!-- PARTS LIST -->
     <ul class='parts-list filter-list'>
         {{#each parts}}
-        <li class='row part'>
+        <li class='row part' id='{{this._id}}'>
             <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
             <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
             <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
