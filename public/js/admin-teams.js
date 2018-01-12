@@ -1,8 +1,20 @@
 $(document).ready(() => {
   let socket = io('/admin/teams') // open socket to the server
+  let modal = document.getElementById('team-creation-modal') // Team creation modal
 
   // deleting team from the page
   $('.team-list').on('click', 'li span.delete-team', deleteTeam)
+
+  // Logic that runs when the Add Team button is clicked
+  $('button[title="Add Team"]').click(function() {
+    modal.style.display = 'block'
+
+    window.onclick = e => {
+      if (e.target === modal) {
+        modal.style.display = 'none'
+      }
+    }
+  })
 
   // form submission logic
   $('form').submit(e => {
@@ -28,6 +40,9 @@ $(document).ready(() => {
         appendNewTeam(teamData)
         socket.emit('team created', teamData)
         $('input').val('')
+
+        // Hide the modal once form is submitted
+        modal.style.display = 'none'
       }
     })
   })
@@ -63,14 +78,15 @@ function appendNewTeam(teamData) {
   // prettier-ignore
   let newTeamHTML = [
     '<li>',
-      '<span class="delete-team">&times;</span>',
-      '<h1 class="team-name">',teamData.teamName,'</h1>',
-      '<h1>',teamData.teamNumber,'</h1>',
+      '<span class="delete-team text-right" style="display: block;">&times;</span>',
+      '<h2 class="ucla-blue team-name filter-key">',teamData.teamName,'</h1>',
+      '<h1 class="text-right filter-key">#',teamData.teamNumber,'</h1>',
+      '<h3>Team Members</h3>'
   ]
   for (let email of teamData.members) {
     newTeamHTML.push('<p>', email, '</p>')
   }
-  newTeamHTML.push('</li>')
+  newTeamHTML.push('<h3>Inventory</h3></li>')
   newTeamHTML = newTeamHTML.join('')
 
   $(newTeamHTML).prependTo('.team-list')

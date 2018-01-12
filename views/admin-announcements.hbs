@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Admin - Announcements</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -50,7 +52,7 @@
         <ol class='announcements-list'>
             {{#each announcements}}
             <li class='announcement text-center' id='{{ this._id }}'>
-                <p class="x-icon text-right" id={{this._id}}>&times;</p>
+                <p class="x-icon text-right" id={ {this._id}}>&times;</p>
                 <h2 class='ucla-blue'>{{ this.header }}</h2>
                 <p>{{ this.body }}</p>
             </li>

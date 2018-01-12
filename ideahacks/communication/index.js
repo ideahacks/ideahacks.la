@@ -10,6 +10,9 @@ const initializeSocketIO = io => {
     socket.on('no longer typing', () => {
       socket.broadcast.emit('no longer typing')
     })
+    socket.on('delete team', deletedTeam => {
+      socket.broadcast.emit('delete team', deletedTeam)
+    })
   })
 
   // Admin parts page's sockets
