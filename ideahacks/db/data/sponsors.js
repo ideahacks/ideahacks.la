@@ -46,5 +46,16 @@ module.exports = [
         maxWidth: '300px'
       }
     ]
+  },
+  {
+    tier: 'gold',
+    sponsors: [
+      {
+        name: 'Digikey',
+        website: 'https://www.digikey.com/',
+        logo: COMPANY_LOGOS_DIR + 'digikey.png',
+        maxWidth: '200px'
+      }
+    ]
   }
 ]
