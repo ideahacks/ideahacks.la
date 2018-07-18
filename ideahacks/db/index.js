@@ -1,9 +1,12 @@
 const dbURI = require('../config').dbURI
 const mongoose = require('mongoose')
 
-mongoose.connect(dbURI, {
-  useMongoClient: true
-})
+mongoose.connect(
+  dbURI,
+  {
+    useMongoClient: true
+  }
+)
 
 mongoose.Promise = global.Promise
 
