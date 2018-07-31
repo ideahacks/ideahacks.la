@@ -1,4 +1,14 @@
 .myNavbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  height: 66px;
+  overflow: hidden;
+
+  transition: background-color 0.3s ease;
   background-color: rgb(221, 128, 100);
 }
 
@@ -20,27 +30,40 @@
 
   text-transform: uppercase;
   letter-spacing: 2px;
+
   display: inline-block;
   padding: 14px 20px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-list li:hover {
   background-color: rgb(195, 109, 83);
+  color: white;
 }
 
 a {
   color: white;
 }
 
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 button {
   background-color: rgb(255, 183, 24);
-  border: rgb(255, 183, 24);
-  padding: 11px 18px 8px 19px;
+  border: 2px solid rgb(255, 183, 24);
+  padding: 10px 18px 5px 19px;
   border-radius: 7px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
   background-color: transparent;
   color: white;
   cursor: pointer;
+}
+
+#login:hover {
+  background-color: rgb(221, 128, 100);
 }
