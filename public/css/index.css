@@ -1,219 +1,32 @@
-/* CONTAINERS */
-.container,
-.container-fluid {
-  padding: 60pt 20px;
+.home-banner {
+  background-color: rgb(221, 128, 100);
 }
 
-/* HERO BANNER */
-.banner {
-  background: linear-gradient(rgba(0, 50, 160, 0.7), rgba(0, 50, 160, 0.7)),
-    url(/img/index/startup-photos.jpg) no-repeat center;
-  background-size: cover;
-  height: 95vh;
-
-  padding: 170px 10px 0;
+.banner-graphic {
+  width: 90%;
+  margin: 140px 0px 100px 50px;
 }
 
-.banner:after {
-  content: '';
-  position: absolute;
-  top: 95%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 0;
-  height: 0;
-  border-top: solid 35px rgba(0, 50, 160, 0.7);
-  border-left: solid 20px transparent;
-  border-right: solid 20px transparent;
+.header-graphic {
+  width: 70%;
+  margin-bottom: 40px;
 }
 
-.banner img {
-  padding-left: 70px;
-  width: 700px;
+.banner-details {
+  margin-top: 220px;
+  padding-right: 70px;
 }
 
-@media (max-width: 750px) {
-  .banner {
-    padding-top: 200px;
-  }
-  .banner img {
-    width: 400px;
-    padding-left: 40px;
-  }
+p,
+button {
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0px;
 }
 
-@media (max-width: 450px) {
-  .banner img {
-    width: 340px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-.banner p,
-.banner p a {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-.banner .location {
-  color: #ffb718 !important;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* ABOUT SECTION */
-#left {
-  padding: 80px 0 40px;
-}
-
-#left span {
-  font-family: 'Courier New', Courier, monospace;
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
-  line-height: 20pt;
-}
-
-#left #tf {
-  justify-content: flex-start;
-  text-indent: 2em;
-}
-
-#left #hh {
-  color: #ffb718;
-  font-size: 60px !important;
-  line-height: 48pt;
-}
-
-#left #ot {
-  text-indent: 2em;
-}
-
-#left #wc {
-  text-indent: 8em;
-}
-
-#hosted {
-  font-weight: 900;
-  font-size: 12pt;
-}
-
-.hosting {
-  margin: 40px 0 0;
-}
-
-#ieee {
-  width: 100px;
-  margin-top: 10px;
-}
-
-#tt {
-  width: 100px;
-}
-
-/* SCHEDULE SECTION */
-.schedule h1 {
-  line-height: 0.7;
-}
-
-@media (max-width: 380px) {
-  .schedule h1 {
-    font-size: 75px;
-  }
-}
-
-.schedule-content {
-  background-color: white;
-  padding: 0px 20px 15px;
-}
-
-.schedule .day-header {
-  padding: 20px;
-}
-
-/* FAQ SECTION */
-section {
-  padding: 0 20px;
-  padding-top: 10%;
-}
-
-.faq h1 {
-  line-height: 0.7;
-}
-
-.faq h2 {
-  display: inline-block;
-  padding: 0 10px;
-}
-
-/*---------------- DOTS LIST -----------------------------------------*/
-.dots-list {
-  width: 100%;
-}
-.dots-list ol {
-  padding-left: 50px;
-  position: relative;
+.location {
   margin-bottom: 20px;
-  list-style: none !important;
-}
-.dots-list ol li {
-  position: relative;
-  margin-top: 0em;
-  margin-bottom: 20px;
-}
-
-.dots-list ol li:before {
-  content: '';
-  background: #d8d8d8;
-  position: absolute;
-  width: 3px;
-  top: 1px;
-  bottom: -21px;
-  left: -24px;
-}
-.dots-list ol li:after {
-  content: '';
-  background: #ffb718;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  top: 1px;
-  left: -31px;
-}
-.dots-list ol li:last-child:before {
-  content: '';
-  background: #ffffff;
-}
-
-/* SPONSORS SECTION */
-.sponsors {
-  padding: 30px 20px;
-}
-
-.sponsor-row {
-  padding: 20px 0;
-}
-
-.sponsor-row img {
-  margin: 20px 30px;
-  width: 100%;
-}
-
-.sponsor-message {
-  text-align: center;
-  padding: 40px 0 20px;
-}
-
-@media (max-width: 768px) {
-  .sponsor-row img {
-    width: 80%;
-  }
-}
-
-@media (max-width: 400px) {
-  .sponsors h1 {
-    font-size: 60px;
-  }
 }
