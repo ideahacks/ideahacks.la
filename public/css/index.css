@@ -17,9 +17,9 @@
   padding-right: 70px;
 }
 
-p,
-button {
-  font-family: 'Josefin Sans';
+.date,
+.apply,
+.location {
   font-weight: bold;
   font-size: 14px;
   color: white;
@@ -29,4 +29,37 @@ button {
 
 .location {
   margin-bottom: 20px;
+}
+
+.schedule-section,
+.sponsors-section {
+  background-color: rgb(255, 255, 244);
+  padding: 20px 30px 20px 30px;
+}
+
+.section-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.day {
+  color: rgb(221, 128, 100);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.schedule {
+  border: solid 2px rgb(255, 183, 24);
+  border-radius: 7px;
+  color: rgb(221, 128, 100);
+  padding: 15px;
+}
+
+.faq-section {
+  background-color: rgb(221, 128, 100);
+  padding: 20px 30px 20px 30px;
+}
+
+.sponsors-section {
 }
