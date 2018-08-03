@@ -25,9 +25,8 @@
     <script src='/js/login.js'></script>
 </head>
 <body>
-    <div class="logo">
-        <a href='/'><img src="/img/navbar-icon.svg"></img></a>
-    </div>
+    <!-- NAVBAR -->
+    {{> navbar }}
 
     <div class="main_pic col-md-7">
         <img src="/img/index/main-graphic.png">
@@ -45,15 +44,9 @@
             <p class='error-message'></p>
             <button type="submit" class="login btn btn-lg btn-block">LOG IN</button>
         </form>
-        <!--             <form class='ideahacks-form'>
-            <input type="text" name="username" placeholder="Username" required />
-            <input type="Password" name="password" placeholder="Password" required />
-            <p class='error-message'></p>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">LOG IN</button>
-
-        </form> -->
-
-        <button type="button" class="register btn btn-lg btn-block">I don't have an account</button>
+        <a href='/registration'>
+            <button type="button" class="register btn btn-lg btn-block">I don't have an account</button>
+        </a>
         <p><a name='password-recover' style='cursor: pointer;'>Forgot your password?</a></p>
     </div>
 

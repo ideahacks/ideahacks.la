@@ -43,39 +43,45 @@ body {
   margin: 140px 0px 50px;
 }
 
+.form-side p {
+  text-align: center;
+  padding-right: 80pt;
+}
+
 /* INPUT */
 .ideahacks-form input,
 .ideahacks-form input:focus,
 .ideahacks-form input[readonly] {
-  padding: 20px 5pt;
-  margin-bottom: 10px;
+  padding: 25px 10pt;
+  margin-bottom: 10pt;
 
-  border-radius: 5px;
-  border: none;
+  border-radius: 10px;
 
-  outline: none;
-
-  box-shadow: none;
   background-color: white;
   width: 80%;
 }
 
-.ideahacks-form textarea {
+.ideahacks-form input::placeholder {
+  font-size: 17pt;
+  color: #ffb718;
+}
+
+.ideahacks-form label {
+  font-weight: 400;
+  padding-left: 10pt;
   color: white;
 }
 
-.words button {
-  margin: 20px 0;
-}
-
 .btn {
-  margin-bottom: 10pt;
+  border-radius: 10px;
+  margin: 15pt 0pt 10pt;
   width: 80%;
 }
 
 .btn.login {
   color: white;
   background-color: #ffb718;
+  padding: 12px 10pt;
 }
 
 .btn.register {
@@ -85,8 +91,12 @@ body {
 
 /* LINK STUFF */
 a,
-a:hover,
 a:active {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffb718;
 }
