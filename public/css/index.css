@@ -34,7 +34,7 @@
 .schedule-section,
 .sponsors-section {
   background-color: rgb(255, 255, 244);
-  padding: 20px 30px 20px 30px;
+  padding: 20px 90px 40px 90px;
 }
 
 .section-header {
@@ -54,11 +54,43 @@
   border-radius: 7px;
   color: rgb(221, 128, 100);
   padding: 15px;
+  margin: 0px 10px;
+  width: 31.5%;
+  overflow: auto;
+}
+
+.schedule p {
+  font-size: 16px;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 30%;
+  text-align: right;
 }
 
 .faq-section {
   background-color: rgb(221, 128, 100);
-  padding: 20px 30px 20px 30px;
+  padding: 20px 75px 40px 75px;
+}
+
+.questions h2 {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: solid rgb(255, 183, 24) 2px;
+  display: inline-block;
+}
+
+.questions p {
+  text-align: justify;
+  font-size: 15px;
 }
 
 .sponsors-section {

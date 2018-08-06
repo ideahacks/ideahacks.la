@@ -6,7 +6,7 @@
   display: block;
   width: 100%;
   height: 66px;
-  overflow: hidden;
+  overflow: visible;
 
   transition: background-color 0.3s ease;
   background-color: rgb(221, 128, 100);
@@ -47,6 +47,39 @@ a {
 a:hover {
   text-decoration: none;
   color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(195, 109, 83);
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+}
+
+.dropdown-content li {
+  padding: 10px 3px 10px 5px;
+}
+
+.dropdown-content a:hover {
+  color: rgb(229, 192, 181);
+  transition: color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 button {
