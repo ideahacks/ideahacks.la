@@ -1,9 +1,3 @@
-/* GLOBAL STUFF */
-.sign_up,
-.no_account_register {
-  font-family: 'Source Sans Pro';
-}
-
 /* FULL BODY STUFF */
 .fullscreen {
   height: 100%;
@@ -54,20 +48,19 @@ body {
 .ideahacks-form input[readonly] {
   padding: 25px 10pt;
   margin-bottom: 10pt;
-
   border-radius: 10px;
-
   background-color: white;
   width: 80%;
 }
 
 .ideahacks-form input::placeholder {
-  font-size: 17pt;
-  color: #ffb718;
+  color: rgba(255, 183, 24, 0.6);
+  font-family: 'Josefin Sans';
+  font-weight: 600;
 }
 
 .ideahacks-form label {
-  font-weight: 400;
+  font-weight: 500;
   padding-left: 10pt;
   color: white;
 }
@@ -80,13 +73,13 @@ body {
 
 .btn.login {
   color: white;
-  background-color: #ffb718;
+  background-color: rgb(255, 183, 24);
   padding: 12px 10pt;
 }
 
 .btn.register {
   color: white;
-  background-color: rgb(49, 133, 192);
+  background-color: #95b9cd;
 }
 
 /* LINK STUFF */
@@ -98,5 +91,5 @@ a:active {
 
 a:hover {
   text-decoration: none;
-  color: #ffb718;
+  color: rgb(255, 183, 24);
 }
