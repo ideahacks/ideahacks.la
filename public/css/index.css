@@ -31,6 +31,33 @@
   margin-bottom: 20px;
 }
 
+.home-theme {
+  background-color: blue;
+  padding: 90px;
+  text-align: center;
+}
+
+.home-theme h1 {
+  color: white;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.home-theme p {
+  color: white;
+  font-size: 15px;
+  padding: 0px 180px 15px 180px;
+}
+
+.theme-title {
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+.theme-graphic {
+  width: 45%;
+}
+
 .schedule-section,
 .sponsors-section {
   background-color: rgb(255, 255, 244);
