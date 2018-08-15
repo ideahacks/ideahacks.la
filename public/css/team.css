@@ -1,49 +1,112 @@
 body {
-  background-color: #fafafa;
+  background-color: #DD8064;
   color: black;
 }
 
 .header {
-  font-size: 130px;
-  font-style: italic;
-  font-weight: 600;
-  color: #3185c0;
-  opacity: 0.1;
-  line-height: 0.75;
-  position: relative;
-  top: 18px;
+  margin-top: 191px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 244px;
+  height: 53px;
 }
 
 .team-container {
   text-align: center;
-  font-family: Source Sans Pro;
+  font-family: 'Josefin Sans';
   padding-bottom: 100px;
 }
 
+p {
+  font-family: 'Josefin Sans';
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 50px;
+}
+
 h1 {
-  padding-top: 20px;
-  /*padding-bottom: 100px;*/
-  font-weight: 600;
-  font-size: 30px;
-  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 80px;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+}
+
+h1:before, h1:after {
+  background-color: #FFB718;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h1:before {
+  right: .5em;
+  margin-left: -50%;
+}
+
+h1:after {
+  left: .5em;
+  margin-right: -50%;
+}
+
+h4 {
+  color: white;
+  padding-top: 25px;
+  font-weight: 900;
+  font-size: 19px;
+  text-align: left;
+  line-height: 5px;
 }
 
 h2 {
-  padding-top: 15px;
-  font-weight: 600;
+  color: white;
+  padding-top: 0px;
+  line-height: 150%;
+  font-weight: 100;
   font-size: 19px;
+  text-align: left;
+}
+
+h2:after {
+  content: ' ';
+  display: block;
+  border: 1px solid #FFFFFF;
 }
 
 h3 {
+  color: white;
   font-size: 18px;
   font-weight: 200;
   padding-bottom: 20px;
+  text-align: left;
 }
 
 img {
   width: 100%;
   max-width: 350px;
 }
+
+.fa, .fa:hover {
+  color: white;
+  height: 10px !important;
+  display: inline-block;
+  text-decoration: none;
+}
+.fa-3x {
+    font-size: 30px;
+}
+
 
 .pic {
   filter: none;
@@ -54,53 +117,27 @@ img {
   -moz-transition: all 0.5s ease-in-out;
 }
 
-.pic:hover {
-  filter: grayscale();
-}
-
-.pic:hover .icon-row {
-  display: block;
-  color: white;
-}
-
-.icon-row {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translate(15px, -50%);
-  display: none;
-}
-
-.fa,
-.fa:hover {
-  padding: 10px 20px;
-  color: white;
-  display: inline-block;
-  text-decoration: none;
-}
-
 .no-padding {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 40;
+  padding-right: 40;
 }
 
 .container-fluid {
-  background-color: white;
+  /*background-color: white;*/
   /*width: 900px;*/
   padding-left: 40px;
   padding-right: 40px;
 }
 
 /* Media queries for mobile */
+
 @media (max-width: 667px) {
   .container-fluid {
     max-width: 290px;
   }
-
   .header {
     font-size: 100px;
   }
-
   h1 {
     font-size: 25px;
   }
