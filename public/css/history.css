@@ -1,0 +1,115 @@
+body {
+  background-color: #DD8064;
+  margin: 0px;
+}
+
+h2 {
+color: #DD8064;
+font-size: 30px;
+font-weight: bold;
+font-family: 'Josefin Sans', sans-serif;
+text-align: center;
+
+}
+
+h3 {
+  color: #DD8064;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+
+h4 {
+  color: #DD8064;
+  font-weight: bold;
+  font-weight: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p {
+  color: #DD8064;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#history_title {
+  height: auto;
+  width: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home_automation {
+  background-color: #FFFFF4;
+  padding:25px 50px 50px;
+}
+
+#intro {
+  background-color: #DD8064;
+  background-size: auto;
+}
+#intro_p {
+  color: White;
+  margin-top: 10px;
+  margin-right: 98px;
+  margin-left: 98px;
+  margin-bottom: 50px;
+}
+
+#intro_img {
+  float: left;
+  margin-right: 53px;
+  height: 40%;
+  width: 50%;
+}
+
+.places {
+  column-count: 3;
+  column-gap: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#sports_tech {
+  color: White;
+  padding: 25px 50px 50px;
+}
+
+.white_text {
+  color: White;
+}
+
+.fancy_lines {
+ overflow: hidden;
+ text-align: center;
+}
+.fancy_lines:before,
+.fancy_lines:after {
+ background-color: #FFB718;
+ content: "";
+ display: inline-block;
+ height: 5px;
+ position: relative;
+ vertical-align: middle;
+ width: 50%;
+}
+.fancy_lines:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+.fancy_lines:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+.sponsor_img > * {
+  margin: 10px;
+  vertical-align: middle;
+}
