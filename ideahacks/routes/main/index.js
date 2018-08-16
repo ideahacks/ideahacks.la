@@ -9,6 +9,8 @@ mainRouter.get('/', setResLocals, staticHandlers.getMain)
 
 mainRouter.get('/team', setResLocals, staticHandlers.getTeam)
 
+mainRouter.get('/history', setResLocals, staticHandlers.getHistory)
+
 mainRouter.get('/login', authHandlers.getLogin)
 mainRouter.post('/login', authHandlers.postLogin)
 mainRouter.post('/login/recoverPassword/:email', authHandlers.recoverPassword)
