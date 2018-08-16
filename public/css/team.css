@@ -1,15 +1,13 @@
 body {
-  background-color: #DD8064;
+  background-color: #dd8064;
   color: black;
 }
 
 .header {
-  margin-top: 191px;
+  margin: 160px 0px 15px 0px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 244px;
-  height: 53px;
+  width: 15%;
+  display: inline-block;
 }
 
 .team-container {
@@ -21,11 +19,9 @@ body {
 p {
   font-family: 'Josefin Sans';
   color: white;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
   text-align: center;
   line-height: 24px;
-  margin-top: 50px;
 }
 
 h1 {
@@ -40,9 +36,10 @@ h1 {
   line-height: 40px;
 }
 
-h1:before, h1:after {
-  background-color: #FFB718;
-  content: "";
+h1:before,
+h1:after {
+  background-color: #ffb718;
+  content: '';
   display: inline-block;
   height: 3px;
   position: relative;
@@ -51,12 +48,12 @@ h1:before, h1:after {
 }
 
 h1:before {
-  right: .5em;
+  right: 0.5em;
   margin-left: -50%;
 }
 
 h1:after {
-  left: .5em;
+  left: 0.5em;
   margin-right: -50%;
 }
 
@@ -81,7 +78,7 @@ h2 {
 h2:after {
   content: ' ';
   display: block;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 
 h3 {
@@ -92,21 +89,21 @@ h3 {
   text-align: left;
 }
 
-img {
+.team-photo {
   width: 100%;
   max-width: 350px;
 }
 
-.fa, .fa:hover {
+.fa,
+.fa:hover {
   color: white;
   height: 10px !important;
   display: inline-block;
   text-decoration: none;
 }
 .fa-3x {
-    font-size: 30px;
+  font-size: 30px;
 }
-
 
 .pic {
   filter: none;
