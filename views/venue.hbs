@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <title>Venue - IDEA Hacks</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,47 +16,51 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
   <!-- STYLESHEETS -->
+  <link rel='stylesheet' type='text/css' href='/css/style.css' />
   <link rel="stylesheet" type="text/css" href="/css/venue.css">
-</head>
-<body>
-  <!-- NAVBAR -->
-  <!--{{> navbar }}-->
 
-  <div class="top-container">
-      <h1>VENUE</h1>
-      <div class="small-container">
-        <h2>Where are we located?</h2>
+  <!-- SCRIPTS -->
+  <script src='/js/navbar-scroll.js'></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!-- NAVBAR -->
+  {{> navbar }}
+
+  <div class="container-fluid top-container">
+      <img class="venue-title" src="/img/venue/IH_Venue.png">
+      <div class="container-fluid">
+        <h1>Where are we located?</h1>
         <div class="col-12 col-lg-6">
           <img src="/img/venue/placehold1.png" alt="Map 1 placeholder">
         </div>
         <div class="col-12 col-lg-6 small-container yellow-border">
-          <h3>Directions</h3>
+          <h2>Directions</h2>
           <p>Information about how to get to UCLA. Information about how to get to UCLA. Information about how to get to UCLA. Information about how to get to UCLA.</p>
           <br/>
-          <h3>Parking</h3>
+          <h2>Parking</h2>
           <p>Information about how to get to UCLA. Information about how to get to UCLA. Information about how to get to UCLA. Information about how to get to UCLA.</p>
         </div>
       </div>
   </div>
   <div class="bottom-container" id="light-yellow">
     <div class="small-container">
-      <h2>Grand Ackerman Ballroom</h2>
+      <h1>Grand Ackerman Ballroom</h1>
       <div class="image-container">
         <img src="/img/venue/placehold2.png" alt="Map 2 placeholder">
       </div>
       <div class="small-container yellow-border">
         <div class="col-12 col-lg-6">
-          <h3>Bathrooms</h3>
+          <h2>Bathrooms</h2>
           <p>Information about bathrooms. Information about bathrooms. Information about bathrooms. Information about bathrooms.</p>
           <br/>
-          <h3>Soldering Stations</h3>
+          <h2>Soldering Stations</h2>
           <p>Information about soldering stations. Information about soldering stations. Information about soldering stations. Information about soldering stations.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <h3>Parts Table</h3>
+          <h2>Parts Table</h2>
           <p>Information about parts table. Information about parts table. Information about parts table. Information about parts table.</p>
           <br/>
-          <h3>Sleeping Area</h3>
+          <h2>Sleeping Area</h2>
           <p>Information about sleeping area. Information about sleeping area. Information about sleeping area. Information about sleeping area.</p>
         </div>
       </div>
