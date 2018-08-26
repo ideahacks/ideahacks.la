@@ -1,5 +1,5 @@
 body {
-  background-color: #DD8064;
+  background-color: #dd8064;
   color: black;
 }
 
@@ -28,21 +28,24 @@ p {
   margin-top: 50px;
 }
 
-h1 {
+.Categories {
   margin-top: 80px;
+  margin-bottom: 40px;
   overflow: hidden;
   text-align: center;
   font-family: 'Josefin Sans';
   color: white;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
   line-height: 40px;
+  text-transform: uppercase;
 }
 
-h1:before, h1:after {
-  background-color: #FFB718;
-  content: "";
+.Categories:before,
+.Categories:after {
+  background-color: #ffb718;
+  content: '';
   display: inline-block;
   height: 3px;
   position: relative;
@@ -50,17 +53,17 @@ h1:before, h1:after {
   width: 50%;
 }
 
-h1:before {
-  right: .5em;
+.Categories:before {
+  right: 0.5em;
   margin-left: -50%;
 }
 
-h1:after {
-  left: .5em;
+.Categories:after {
+  left: 0.5em;
   margin-right: -50%;
 }
 
-h4 {
+.Description {
   color: white;
   padding-top: 25px;
   font-weight: 900;
@@ -69,7 +72,7 @@ h4 {
   line-height: 5px;
 }
 
-h2 {
+.Club {
   color: white;
   padding-top: 0px;
   line-height: 150%;
@@ -78,13 +81,13 @@ h2 {
   text-align: left;
 }
 
-h2:after {
+.Club:after {
   content: ' ';
   display: block;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 
-h3 {
+.Logos {
   color: white;
   font-size: 18px;
   font-weight: 200;
@@ -97,16 +100,16 @@ img {
   max-width: 350px;
 }
 
-.fa, .fa:hover {
+.fa,
+.fa:hover {
   color: white;
   height: 10px !important;
   display: inline-block;
   text-decoration: none;
 }
 .fa-3x {
-    font-size: 30px;
+  font-size: 30px;
 }
-
 
 .pic {
   filter: none;
