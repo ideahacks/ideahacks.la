@@ -4,12 +4,10 @@ body {
 }
 
 .header {
-  margin-top: 191px;
+  margin: 160px 0px 15px 0px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 244px;
-  height: 53px;
+  width: 15%;
+  display: inline-block;
 }
 
 .team-container {
@@ -21,11 +19,9 @@ body {
 p {
   font-family: 'Josefin Sans';
   color: white;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
   text-align: center;
   line-height: 24px;
-  margin-top: 50px;
 }
 
 .Categories {
@@ -95,7 +91,7 @@ p {
   text-align: left;
 }
 
-img {
+.team-photo {
   width: 100%;
   max-width: 350px;
 }
