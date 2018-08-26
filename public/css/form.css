@@ -2,72 +2,28 @@
  * Global stylesheet for form elements
  */
 
-/* LEGEND */
-.ideahacks-form legend {
-  font-family: 'Courier New';
-  font-size: 26px;
-  width: auto;
-  padding: 10px 20px 10px 5%;
-  color: #3185c0;
-  border: none;
-  background-color: #d6e9f5;
-}
-
-/* FIELDSET */
-.ideahacks-form fieldset {
-  padding: 15px 5% 45px;
-}
-
-/* FORM-GROUP */
-.ideahacks-form .form-group {
-  margin: 30px 0;
+.ideahacks-form {
+  font-family: 'Josefin Sans';
 }
 
 /* LABEL */
 .ideahacks-form label {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.ideahacks-form label.sublabel,
-.ideahacks-form label .sublabel {
-  font-size: 15px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: white;
 }
 
 /* INPUT */
 .ideahacks-form input,
 .ideahacks-form input:focus,
 .ideahacks-form input[readonly] {
-  font-family: 'Source Sans Pro';
-  font-size: 20px;
-
-  padding: 20px 0;
-  margin-bottom: 10px;
-
-  border-radius: 0;
-  border: none;
-  border-bottom: solid #d8d8d8 1px;
-  outline: none;
-
-  box-shadow: none;
-  background-color: transparent;
+  border-radius: 12px;
+  background-color: white;
+  width: 80%;
 }
 
-.ideahacks-form select,
-.ideahacks-form select:focus {
-  box-shadow: none;
-}
-
-/* TEXTAREA */
-.ideahacks-form textarea,
-.ideahacks-form textarea:focus {
-  font-family: 'Source Sans Pro';
-  font-size: 20px;
-
-  border-radius: 0;
-  box-shadow: none;
-  border-color: #d8d8d8;
-  background-color: transparent;
-  resize: none;
-  outline: none;
+.ideahacks-form input::placeholder {
+  color: rgba(255, 183, 24, 0.6);
 }

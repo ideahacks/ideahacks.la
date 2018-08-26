@@ -7,18 +7,6 @@ body {
   background-color: rgb(221, 128, 100);
 }
 
-/* LOGO */
-.logo {
-  margin: 25px 0 0 50px;
-  width: 300px;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    margin: 25px auto;
-  }
-}
-
 /* COMPUTER IMAGE */
 .main_pic img {
   width: 90%;
@@ -33,53 +21,42 @@ body {
 
 /* FORM SIDE */
 .form-side {
-  padding-left: 30pt;
-  margin: 140px 0px 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
 }
 
 .form-side p {
   text-align: center;
-  padding-right: 80pt;
-}
-
-/* INPUT */
-.ideahacks-form input,
-.ideahacks-form input:focus,
-.ideahacks-form input[readonly] {
-  padding: 25px 10pt;
-  margin-bottom: 10pt;
-  border-radius: 10px;
-  background-color: white;
-  width: 80%;
-}
-
-.ideahacks-form input::placeholder {
-  color: rgba(255, 183, 24, 0.6);
-  font-family: 'Josefin Sans';
-  font-weight: 600;
-}
-
-.ideahacks-form label {
-  font-weight: 500;
-  padding-left: 10pt;
-  color: white;
 }
 
 .btn {
-  border-radius: 10px;
-  margin: 15pt 0pt 10pt;
+  border-radius: 12px;
+  margin-bottom: 10pt;
+  font-weight: bold;
   width: 80%;
+  height: 40px;
 }
 
 .btn.login {
-  color: white;
   background-color: rgb(255, 183, 24);
-  padding: 12px 10pt;
 }
 
 .btn.register {
-  color: white;
   background-color: #95b9cd;
+}
+
+.ideahacks-form {
+  margin-left: 12vh;
+}
+
+.ideahacks-form label {
+  margin-top: 10pt;
+  display: inline-block;
+}
+
+.form-control {
+  height: 40px;
 }
 
 /* LINK STUFF */
@@ -87,9 +64,24 @@ a,
 a:active {
   text-decoration: none;
   color: white;
+  font-style: bold;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 a:hover {
-  text-decoration: none;
-  color: rgb(255, 183, 24);
+  text-decoration: underline;
+}
+
+p,
+button {
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: white;
+}
+
+p {
+  margin-right: 20%;
 }
