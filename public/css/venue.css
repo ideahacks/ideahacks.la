@@ -30,28 +30,26 @@
   border-color: rgb(255, 183, 24);
 }
 
-h1,
-h2,
-p {
+#text {
   font-family: 'Josefin Sans';
   font-weight: bold;
   color: white;
   margin: 0;
 }
 
-h1,
-h2 {
+.section-title {
   text-transform: uppercase;
-}
-
-h1 {
   text-align: center;
   font-size: 32px;
   padding: 30px;
 }
 
-h2,
-p {
+.small-section-title{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.small-section{
   font-size: 14px;
 }
 
