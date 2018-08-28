@@ -1,30 +1,28 @@
-body {
-  background-color: #DD8064;
+#history_body {
+  background-color: #dd8064;
   margin: 0px;
 }
 
-h2 {
-color: #DD8064;
-font-size: 30px;
-font-weight: bold;
-font-family: 'Josefin Sans', sans-serif;
-text-align: center;
-
+.history_h2 {
+  color: #dd8064;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
 }
 
-h3 {
-  color: #DD8064;
+.history_h3 {
+  color: #dd8064;
   font-size: 25px;
   font-weight: bold;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
-
 }
 
-h4 {
-  color: #DD8064;
+.history_h4 {
+  color: #dd8064;
   font-weight: bold;
   font-weight: 20px;
   font-family: 'Josefin Sans', sans-serif;
@@ -32,8 +30,8 @@ h4 {
   margin-top: 10px;
 }
 
-p {
-  color: #DD8064;
+.history_p {
+  color: #dd8064;
   font-size: 20px;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -44,15 +42,16 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
 }
 
 #home_automation {
-  background-color: #FFFFF4;
-  padding:25px 50px 50px;
+  background-color: #fffff4;
+  padding: 25px 50px 50px;
 }
 
 #intro {
-  background-color: #DD8064;
+  background-color: #dd8064;
   background-size: auto;
 }
 #intro_p {
@@ -87,26 +86,26 @@ p {
 }
 
 .fancy_lines {
- overflow: hidden;
- text-align: center;
+  overflow: hidden;
+  text-align: center;
 }
 .fancy_lines:before,
 .fancy_lines:after {
- background-color: #FFB718;
- content: "";
- display: inline-block;
- height: 5px;
- position: relative;
- vertical-align: middle;
- width: 50%;
+  background-color: #ffb718;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
 }
 .fancy_lines:before {
- right: 0.5em;
- margin-left: -50%;
+  right: 0.5em;
+  margin-left: -50%;
 }
 .fancy_lines:after {
- left: 0.5em;
- margin-right: -50%;
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 .sponsor_img > * {
