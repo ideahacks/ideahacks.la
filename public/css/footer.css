@@ -1,0 +1,16 @@
+.myFooter {
+  background-color: rgb(221, 128, 100);
+}
+
+img {
+  width: 7%;
+  margin: 20px 10px;
+}
+
+.fb {
+  text-align: right;
+}
+
+.email {
+  text-align: left;
+}
