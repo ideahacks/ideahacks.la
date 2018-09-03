@@ -2,7 +2,8 @@
   background-color: rgb(221, 128, 100);
 }
 
-img {
+#fb,
+#mail {
   width: 7%;
   margin: 20px 10px;
 }
