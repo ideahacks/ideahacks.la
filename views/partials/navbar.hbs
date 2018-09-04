@@ -1,11 +1,18 @@
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> {{#if onMain}}
-<link rel='stylesheet' type='text/css' href='/css/navbar.css' /> {{/if}}
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/css/navbar.css' />
 <script src='/js/navbar.js'></script>
 
 <div class='myNavbar'>
     <div class='logo-container'>
-        <a href='{{#if onAdmin}}/admin{{/if}}{{#if onDashboard}}/dashboard{{/if}}{{#if onMainOrTeam}}/showcase{{/if}}'><img src='/img/navbar-icon.png' width='200px' style='display: inline-block;'/></a>
+        <a href='{{#if onAdmin}}/admin{{/if}}{{#if onDashboard}}/dashboard{{/if}}{{#if onMainOrTeam}}/{{/if}}'><img src='/img/navbar-icon.png' width='200px' style='display: inline-block;'/></a>
     </div>
+
+    <div class="navbar-icon" onclick="animateNavbar(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
     <ul class='navbar-list' id='navbar-list'>
         {{#if onAdmin}}
         <li><a href='/admin/announcements'>Announcements</a></li>
@@ -30,6 +37,32 @@
         <li><a href='/#faq'>FAQ</a></li>
         <li><a href='/#sponsors'>Sponsors</a></li>
         <li id='login'><a href="/login"><button>LOGIN</button></a></li>
+        {{/if}}
+    </ul>
+    <ul class='mobile-navbar-list' id='mobile-navbar-list'>
+        {{#if onAdmin}}
+        <li><a href='/admin/announcements'>Announcements</a></li>
+        <li><a href='/admin/application-review'>Application Review</a></li>
+        <li><a href='/admin/teams'>Teams</a></li>
+        <li><a href='/admin/parts'>Parts</a></li>
+        {{/if}} {{#if onDashboard}}
+        <li><a href='/dashboard'>Announcements</a></li>
+        <!-- <li><a href='/dashboard/application'>Application</a></li> -->
+        <li><a href='/dashboard/parts'>Parts List</a></li>
+        <li><a href='/dashboard/me'>Me</a></li>
+        {{/if}} {{#if onMainOrTeam}}
+        <div class='responsive-dropdown'>
+            <li><a>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
+            <div class='responsive-dropdown-content' id='responsive-content'>
+                <li><a href='/team'>Team</a></li>
+                <li><a href='/venue'>Venue</a></li>
+                <li><a href='/history'>History</a></li>
+            </div>
+        </div>
+        <li><a href='/#schedule'>Schedule</a></li>
+        <li><a href='/#faq'>FAQ</a></li>
+        <li><a href='/#sponsors'>Sponsors</a></li>
+        <li><a href="/login">LOGIN</a></li>
         {{/if}}
     </ul>
 </div>

@@ -1,5 +1,13 @@
+.wrapper {
+  max-width: 1280px;
+}
+
 .home-banner {
   background-color: rgb(221, 128, 100);
+}
+
+.carousel-indicators {
+  z-index: 1;
 }
 
 .banner-graphic {
@@ -29,34 +37,6 @@
 
 .location {
   margin-bottom: 20px;
-}
-
-.home-theme {
-  padding: 140px;
-  text-align: center;
-}
-
-.home-theme h1 {
-  color: white;
-  font-size: 25px;
-  padding-bottom: 10px;
-}
-
-.home-theme p {
-  color: white;
-  font-size: 15px;
-  padding: 0px 180px 15px 180px;
-}
-
-.theme-title {
-  width: 50%;
-  padding-bottom: 20px;
-  margin: auto;
-}
-
-.theme-graphic {
-  width: 45%;
-  margin: auto;
 }
 
 .home-video {
@@ -134,8 +114,24 @@
   margin-bottom: 50px;
 }
 
+.brochure-link {
+  color: rgb(221, 128, 100);
+  text-decoration: underline;
+}
+
+.brochure-link:hover {
+  color: rgb(255, 183, 24);
+}
+
 .logo {
   vertical-align: middle;
   width: 100%;
   margin-bottom: 60px;
+}
+
+@media (max-width: 990px) {
+  .faq-section,
+  .sponsors-section {
+    padding: 30px;
+  }
 }
