@@ -40,6 +40,7 @@ body {
 
 .btn.login {
   background-color: rgb(255, 183, 24);
+  margin-top: 15px;
 }
 
 .btn.register {

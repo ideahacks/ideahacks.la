@@ -34,13 +34,14 @@
 
     <div class="form-side col-md-5">
         <form class='ideahacks-form'>
+            <p class='error-message'></p>
+
             <label for="username">USERNAME</label>
-            <input type="text" class="form-control" id="username" placeholder="USERNAME" required>
+            <input type="text" class="form-control" name="username" id="username" placeholder="USERNAME" required>
 
             <label for="password">PASSWORD</label>
-            <input type="password" class="form-control" id="password" placeholder="PASSWORD" required>
+            <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" required>
 
-            <p class='error-message'></p>
             <button type="submit" class="login btn btn-block ">LOG IN</button>
             <a href='/registration'>
             <button type="button" class="register btn btn-block">I don't have an account</button>
