@@ -21,7 +21,7 @@
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <div class='team-container container'>
+    <div class='team-container container-fluid'>
         <img src="\img\team\IH_Team.png" alt="LOGO" class="header">
         <p>Meet the faces that made IDEA Hacks happen!</p>
 
@@ -35,7 +35,7 @@
                         <img class='team-photo' src='{{this.picturePath}}' />
                     </div>
                     <h4 class='Description'><b>{{this.name}}</b></h4>
-                    <h2 class = 'Club'>{{this.organization}}</h2>
+                    <h2 class='Club'>{{this.organization}}</h2>
                     <h3 class='Logos'>{{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}} {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}} </h3>
                 </div>
                 {{/each}}
@@ -43,5 +43,9 @@
         </div>
         {{/each}}
     </div>
+
+    <!-- FOOTER -->
+    {{> footer }}
+
 </body>
 </html>

@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-  margin: 160px 0px 15px 0px;
+  margin: 130px 0px 15px 0px;
   display: block;
   width: 15%;
   display: inline-block;
@@ -22,16 +22,17 @@ p {
   font-size: 20px;
   text-align: center;
   line-height: 24px;
+  margin-bottom: 75px;
 }
 
 .Categories {
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   overflow: hidden;
   text-align: center;
   font-family: 'Josefin Sans';
   color: white;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   line-height: 40px;
@@ -124,20 +125,30 @@ p {
 .container-fluid {
   /*background-color: white;*/
   /*width: 900px;*/
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 70px;
 }
 
 /* Media queries for mobile */
 
-@media (max-width: 667px) {
+@media (max-width: 1000px) {
   .container-fluid {
-    max-width: 290px;
+    padding: 0px 35px;
   }
   .header {
-    font-size: 100px;
+    width: 140px;
   }
-  h1 {
-    font-size: 25px;
+  .container {
+    padding: 0px;
+  }
+  .Categories {
+    font-size: 23px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+  .Club,
+  .Description {
+    font-size: 16px;
   }
 }
