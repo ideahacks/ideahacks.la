@@ -129,9 +129,38 @@
   margin-bottom: 60px;
 }
 
+.header-graphic-centered {
+  display: none;
+}
+
 @media (max-width: 990px) {
   .faq-section,
   .sponsors-section {
-    padding: 30px;
+    padding: 10px;
+  }
+  .banner-graphic {
+    display: none;
+  }
+  .banner-details {
+    text-align: center;
+    padding: 0;
+    margin-top: 110px;
+  }
+  .item {
+    height: 380px;
+  }
+  .home-video video {
+    width: 400px;
+  }
+  .home-video {
+    padding: 90px 0 0 0;
+  }
+  .header-graphic {
+    display: none;
+  }
+  .header-graphic-centered {
+    display: inline-block;
+    width: 300px;
+    margin-bottom: 30px;
   }
 }
