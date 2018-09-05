@@ -61,6 +61,7 @@
   color: rgb(221, 128, 100);
   font-weight: bold;
   font-size: 20px;
+  width: 100%;
 }
 
 .schedule {
@@ -69,7 +70,6 @@
   color: rgb(221, 128, 100);
   padding: 15px;
   margin: 0px 10px;
-  width: 31.5%;
   overflow: auto;
 }
 
@@ -144,8 +144,9 @@
 
 @media (max-width: 990px) {
   .faq-section,
-  .sponsors-section {
-    padding: 10px;
+  .sponsors-section,
+  .schedule-section {
+    padding: 10px 10px 35px 10px;
   }
   .banner-graphic {
     display: none;

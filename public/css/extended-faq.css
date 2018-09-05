@@ -20,6 +20,15 @@
   margin: 80px 0px 25px 17px;
 }
 
+.faq-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.faq-link:hover {
+  color: rgb(255, 183, 24);
+}
+
 @media (max-width: 990px) {
   .faq-section,
   .sponsors-section {
@@ -30,5 +39,6 @@
 @media (max-width: 450px) {
   .faq-header {
     width: 340px;
+    padding-right: 15px;
   }
 }

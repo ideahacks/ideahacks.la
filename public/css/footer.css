@@ -1,17 +1,10 @@
 .myFooter {
   background-color: rgb(221, 128, 100);
+  text-align: center;
 }
 
 #fb,
 #mail {
-  width: 7%;
+  width: 40px;
   margin: 20px 10px;
-}
-
-.fb {
-  text-align: right;
-}
-
-.email {
-  text-align: left;
 }
