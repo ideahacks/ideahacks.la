@@ -133,6 +133,15 @@
   display: none;
 }
 
+.faq-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.faq-link:hover {
+  color: rgb(255, 183, 24);
+}
+
 @media (max-width: 990px) {
   .faq-section,
   .sponsors-section {
