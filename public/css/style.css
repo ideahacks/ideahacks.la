@@ -18,6 +18,11 @@ li {
   color: white;
 }
 
+/*********** BACKGROUNDS **************************/
+.background-light-red {
+  background-color: rgb(236, 187, 172);
+}
+
 .wrapper,
 .myNavbar {
   max-width: 1280px;
