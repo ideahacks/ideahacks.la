@@ -21,30 +21,31 @@
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <div class='team-container container'>
-        <div class='header'>
-            <p>THE TEAM</p>
-        </div>
+    <div class='team-container container-fluid'>
+        <img src="\img\team\IH_Team.png" alt="LOGO" class="header">
+        <p>Meet the faces that made IDEA Hacks happen!</p>
 
         {{#each teamData}}
         <div class='container-fluid section'>
-            <h1>{{this.departmentName}}</h1>
+            <h1 class='Categories'>{{this.departmentName}}</h1>
             <div class='row justify-content-center'>
                 {{#each this.teammates}}
                 <div class='col-sm-3 no-padding'>
                     <div class='pic'>
-                        <img src='{{this.picturePath}}' />
-                        <div class='row justify-content-center icon-row'>
-                            {{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}} {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}} {{#if this.website}}<a href="{{this.website}}" target="_blank" class="fa fa-user-circle fa-3x"></a>{{/if}}
-                        </div>
+                        <img class='team-photo' src='{{this.picturePath}}' />
                     </div>
-                    <h2>{{this.name}}</h2>
-                    <h3>{{this.organization}}</h3>
+                    <h4 class='Description'><b>{{this.name}}</b></h4>
+                    <h2 class='Club'>{{this.organization}}</h2>
+                    <h3 class='Logos'>{{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}} {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}} </h3>
                 </div>
                 {{/each}}
             </div>
         </div>
         {{/each}}
     </div>
+
+    <!-- FOOTER -->
+    {{> footer }}
+
 </body>
 </html>
