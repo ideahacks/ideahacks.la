@@ -9,6 +9,10 @@ const getTeam = (req, res) => {
   return res.render('team', { teamData })
 }
 
+const getFAQ = (req, res) => {
+  return res.render('extended-faq')
+}
+
 const getConfirm = (req, res) => {
   return res.render('confirm')
 }
@@ -16,5 +20,6 @@ const getConfirm = (req, res) => {
 module.exports = {
   getMain,
   getTeam,
+  getFAQ,
   getConfirm
 }
