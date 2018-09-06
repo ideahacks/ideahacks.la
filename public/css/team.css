@@ -1,48 +1,110 @@
 body {
-  background-color: #fafafa;
+  background-color: #dd8064;
   color: black;
 }
 
 .header {
-  font-size: 130px;
-  font-style: italic;
-  font-weight: 600;
-  color: #3185c0;
-  opacity: 0.1;
-  line-height: 0.75;
-  position: relative;
-  top: 18px;
+  margin: 130px 0px 15px 0px;
+  display: block;
+  width: 15%;
+  display: inline-block;
 }
 
 .team-container {
   text-align: center;
-  font-family: Source Sans Pro;
+  font-family: 'Josefin Sans';
   padding-bottom: 100px;
 }
 
-h1 {
-  padding-top: 20px;
-  /*padding-bottom: 100px;*/
-  font-weight: 600;
-  font-size: 30px;
-  font-family: 'Source Sans Pro', sans-serif;
+p {
+  font-family: 'Josefin Sans';
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 75px;
 }
 
-h2 {
-  padding-top: 15px;
-  font-weight: 600;
+.Categories {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.Categories:before,
+.Categories:after {
+  background-color: #ffb718;
+  content: '';
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.Categories:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.Categories:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.Description {
+  color: white;
+  margin: 15px 0px 0px 0px;
+  font-weight: 900;
   font-size: 19px;
+  text-align: left;
 }
 
-h3 {
+.Club {
+  color: white;
+  padding-top: 0px;
+  line-height: 150%;
+  font-weight: 100;
+  font-size: 19px;
+  text-align: left;
+}
+
+.Club:after {
+  content: ' ';
+  display: block;
+  border: 1px solid #ffffff;
+}
+
+.Logos {
+  color: white;
   font-size: 18px;
   font-weight: 200;
   padding-bottom: 20px;
+  text-align: left;
 }
 
-img {
+.team-photo {
   width: 100%;
   max-width: 350px;
+}
+
+.fa,
+.fa:hover {
+  color: white;
+  height: 10px !important;
+  display: inline-block;
+  text-decoration: none;
+}
+.fa-3x {
+  font-size: 30px;
 }
 
 .pic {
@@ -54,54 +116,38 @@ img {
   -moz-transition: all 0.5s ease-in-out;
 }
 
-.pic:hover {
-  filter: grayscale();
-}
-
-.pic:hover .icon-row {
-  display: block;
-  color: white;
-}
-
-.icon-row {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translate(15px, -50%);
-  display: none;
-}
-
-.fa,
-.fa:hover {
-  padding: 10px 20px;
-  color: white;
-  display: inline-block;
-  text-decoration: none;
-}
-
 .no-padding {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 40;
+  padding-right: 40;
 }
 
 .container-fluid {
-  background-color: white;
+  /*background-color: white;*/
   /*width: 900px;*/
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 70px;
 }
 
 /* Media queries for mobile */
-@media (max-width: 667px) {
+
+@media (max-width: 1000px) {
   .container-fluid {
-    max-width: 290px;
+    padding: 0px 35px;
   }
-
   .header {
-    font-size: 100px;
+    width: 140px;
   }
-
-  h1 {
-    font-size: 25px;
+  .container {
+    padding: 0px;
+  }
+  .Categories {
+    font-size: 23px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+  .Club,
+  .Description {
+    font-size: 16px;
   }
 }
