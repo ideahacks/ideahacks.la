@@ -10,6 +10,8 @@ mainRouter.get('/', setResLocals, staticHandlers.getMain);
 mainRouter.get('/team', setResLocals, staticHandlers.getTeam);
 mainRouter.get('/venue', setResLocals, staticHandlers.getVenue);
 
+mainRouter.get('/extended-faq', setResLocals, staticHandlers.getFAQ);
+
 mainRouter.get('/login', authHandlers.getLogin);
 mainRouter.post('/login', authHandlers.postLogin);
 mainRouter.post('/login/recoverPassword/:email', authHandlers.recoverPassword);
