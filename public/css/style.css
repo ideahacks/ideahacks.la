@@ -17,3 +17,9 @@ li {
 .theme-white {
   color: white;
 }
+
+.wrapper,
+.myNavbar {
+  max-width: 1280px;
+  margin: auto;
+}
