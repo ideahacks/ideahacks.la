@@ -32,7 +32,7 @@ p {
   text-align: center;
   font-family: 'Josefin Sans';
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   line-height: 40px;
@@ -62,11 +62,10 @@ p {
 
 .Description {
   color: white;
-  padding-top: 25px;
+  margin: 15px 0px 0px 0px;
   font-weight: 900;
   font-size: 19px;
   text-align: left;
-  line-height: 5px;
 }
 
 .Club {
