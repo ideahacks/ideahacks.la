@@ -1,5 +1,4 @@
 body {
-  background-color: #dd8064;
   color: black;
 }
 
@@ -14,6 +13,7 @@ body {
   text-align: center;
   font-family: 'Josefin Sans';
   padding-bottom: 100px;
+  background-color: rgb(221, 128, 100);
 }
 
 p {
