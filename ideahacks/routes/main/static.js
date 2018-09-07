@@ -5,6 +5,10 @@ const getMain = (req, res) => {
   return res.render('index', { sponsorsData })
 }
 
+const getVenue = (req, res) => {
+  return res.render('venue')
+}
+
 const getTeam = (req, res) => {
   return res.render('team', { teamData })
 }
@@ -19,6 +23,7 @@ const getConfirm = (req, res) => {
 
 module.exports = {
   getMain,
+  getVenue,
   getTeam,
   getFAQ,
   getConfirm
