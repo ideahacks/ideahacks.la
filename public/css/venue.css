@@ -48,6 +48,12 @@
 
 .dir-link {
   text-decoration: underline;
+  color: white;
+}
+
+.dir-link:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .section-title {

@@ -6,6 +6,10 @@ li {
   font-family: 'Josefin Sans';
 }
 
+body {
+  background-color: rgb(236, 187, 172);
+}
+
 .theme-red {
   color: rgb(221, 128, 100);
 }
