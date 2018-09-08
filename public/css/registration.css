@@ -10,7 +10,7 @@ body {
 /* COMPUTER IMAGE */
 .main_pic img {
   width: 90%;
-  margin: 140px 0px 100px 50px;
+  margin: 140px 0px 100px 70px;
 }
 
 @media (max-width: 991px) {
@@ -23,7 +23,8 @@ body {
 .form-side {
   align-items: center;
   justify-content: center;
-  margin-top: 20vh;
+  margin-top: 160px;
+  padding-right: 0px;
 }
 
 .form-side p {
@@ -36,6 +37,7 @@ body {
   font-weight: bold;
   width: 80%;
   height: 40px;
+  padding: 10px;
 }
 
 .btn.login {
@@ -48,7 +50,7 @@ body {
 }
 
 .ideahacks-form {
-  margin-left: 12vh;
+  margin-left: 6vh;
 }
 
 .ideahacks-form label {
