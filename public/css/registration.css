@@ -13,12 +13,6 @@ body {
   margin: 140px 0px 100px 70px;
 }
 
-@media (max-width: 991px) {
-  .main_pic {
-    display: none;
-  }
-}
-
 /* FORM SIDE */
 .form-side {
   align-items: center;
@@ -31,22 +25,32 @@ body {
   text-align: center;
 }
 
-.btn {
+.login {
+  background-color: rgb(255, 183, 24);
+  margin-top: 15pt;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
   border-radius: 12px;
   margin-bottom: 10pt;
-  font-weight: bold;
   width: 80%;
   height: 40px;
   padding: 10px;
 }
 
-.btn.login {
-  background-color: rgb(255, 183, 24);
-  margin-top: 15px;
-}
-
-.btn.register {
+.register {
   background-color: #95b9cd;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  border-color: #95b9cd;
+  border-radius: 12px;
+  margin-bottom: 10pt;
+  width: 80%;
+  height: 40px;
+  padding: 10px;
 }
 
 .ideahacks-form {
@@ -87,4 +91,14 @@ button {
 
 p {
   margin-right: 20%;
+}
+
+@media (max-width: 991px) {
+  .main_pic {
+    display: none;
+  }
+
+  .ideahacks-form {
+    margin-left: 15%;
+  }
 }
