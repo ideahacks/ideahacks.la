@@ -27,13 +27,16 @@
     <!-- NAVBAR -->
     {{> navbar }}
 
+    <img id= "img-header" src="/img/registration/app-header.png" />
+
     <div class='ideahacks-form application-form container-fluid'>
         <!-- PERSONAL INFORMATION -->
         <div class='row'>
             <div class='header'>
-                <h3>Personal</h3>
+                <h3>Personal </h3>
+                <img id= "img-side" src="/img/registration/logo.png" />
             </div>
-            <fieldset class='col-md-12'>
+            <fieldset>
                 <div class='form-group col-md-5'>
                     <label>First Name*</label>
                     <input class='form-control' type='text' name='firstName' placeholder='First Name' value='{{user.firstName}}'>
@@ -58,7 +61,7 @@
             <div class='header'>
                 <h3>Education</h3>
             </div>
-            <fieldset class='col-md-12'>
+            <fieldset>
                 <div class='form-group col-md-10'>
                     <label>School*</label>
                     <input class='form-control' type='text' name='school' placeholder='School' value='{{user.school}}'>
@@ -79,6 +82,12 @@
                     <label>LinkedIn</label>
                     <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
                 </div>
+                <div class='form-group col-md-5'>
+                    <label>Resume</label>
+                    <span class='row'>
+                        <button class='resume'>Upload File</button>
+                    </span>
+                </div>
             </fieldset>
         </div>
 
@@ -87,21 +96,24 @@
             <div class='col header'>
                 <h3>Team Information</h3>
             </div>
-            <fieldset class='col-md-6'>
-                <div class='form-group'>
+            <fieldset>
+                <span class='row'>
+                <div class='form-group col-xs-12 col-md-5'>
                     <label>Do you have a team*</label>
                     <select class='form-control' name='hasTeam'>
                         <option {{#if user.hasATeam}}selected{{/if}}>YES</option>
                         <option {{#if user.hasNoTeam}}selected{{/if}}>NO</option>
                     </select>
                 </div>
-
-                <div class='form-group'>
+            </span>
+            <span class='row'>
+                <div class='form-group col-xs-12'>
                     <label>If so, what are your teammates' emails?</label>
-                    <input class='form-control teammate-email' type='email' name='tm-email1' value='{{user.teammateEmail1}}'>
-                    <input class='form-control teammate-email' type='email' name='tm-email2' value='{{user.teammateEmail2}}'>
-                    <input class='form-control teammate-email' type='email' name='tm-email3' value='{{user.teammateEmail3}}'>
+                    <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                    <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
+                    <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
                 </div>
+            </span>
             </fieldset>
         </div>
 
@@ -111,39 +123,39 @@
                 <h3>Short Answers</h3>
             </div>
             <fieldset>
-                <div class='form-group col-md-5 short-answer'>
+                <div class='form-group col-md-5 col-xs-10 short-answer'>
                     <label>Enter your Skills and Experiences*<!-- <span class='whitespace'>HACKATHON EXPERIEN</span> --></label>
                     <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
                 </div>
-                <div class='form-group col-md-6 short-answer'>
+                <div class='form-group col-md-6 col-xs-10 short-answer'>
                     <label>Why do you want to participate in IDEAHacks?</label>
                     <textarea class='form-control textarea' name='reasonForParticipation' rows='5'>{{user.reasonForParticipation}}</textarea>
                 </div>
-                <div class='form-group col-md-11 short-answer'>
+                <div class='form-group col-md-11 col-xs-10 short-answer'>
                     <label>Do you have an idea to hack for this year's theme?</label>
                     <label class='sublabel'>It's okay if you don't yet!</label>
-                    <textarea class='form-control textarea' name='themeIdea' rows='5'>{{user.themeIdea}}</textarea>
+                    <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
                 </div>
-                <div class='col-md-3'>
-                    <label>Do you have any past hackathon experience?</label>
+                <div class='col-lg-3'>
+                    <label style="text-align: left">Do you have any past hackathon experience?</label>
                 </div>
-                <div class='col-md-2'>
+                <div class='col-lg-2'>
                     <div class="form-check form-check-inline">
                         <label class="radio-inline"> 
-                            <input type="radio" name="pastExperience">Yes
+                            <input type="radio" name="pastExperience">&nbsp;&nbsp;Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="pastExperience">No
+                            <input type="radio" name="pastExperience">&nbsp;&nbsp;No
                         </label>
                     </div>
                 </div>
-                <div class='form-group col-md-6 short-answer'>
+                <div class='form-group col-lg-6 col-md-11 col-xs-10 short-answer'>
                     <label>If yes, please share your experience with us:</label>
                     <textarea class='form-control textarea' name='pastHackathonExperience' rows='5'>{{user.pastHackathonExperience}}</textarea>
                 </div>
-                <div class='form-group col-md-11 short-answer'>
+                <div class='form-group col-md-11 col-xs-10 short-answer'>
                     <label>What parts would you like to see at IDEA Hacks this year?</label>
-                    <textarea class='form-control textarea' name='desiredParts' rows='5'>{{user.desiredParts}}</textarea>
+                    <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
                 </div>
             </fieldset>
         </div>
@@ -158,29 +170,29 @@
                     <label>Any dietary restrictions or food allergies?</label>
                     <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
                 </div>
-                <div class='form-group col-md-10'>
+                <div class='form-group col-sm-10'>
                     <label>Will you need a travel reimbursement?</label>
                     <div class="form-check form-check-inline">
                         <label class="radio-inline"> 
-                            <input type="radio" name="reimbursement">Yes
+                            <input type="radio" name="reimbursement">&nbsp;&nbsp;Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="reimbursement">No
+                            <input type="radio" name="reimbursement">&nbsp;&nbsp;No
                         </label>
                     </div>
                 </div>
-                <div class='form-group col-md-10'>
+                <div class='form-group col-md-10 col-xs-10'>
                     <label>Will you bring a vehicle and need parking?</label>
                     <div class="form-check form-check-inline">
                         <label class="radio-inline"> 
-                            <input type="radio" name="parking">Yes
+                            <input type="radio" name="parking">&nbsp;&nbsp;Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="parking">No
+                            <input type="radio" name="parking">&nbsp;&nbsp;No
                         </label>
                     </div>
                 </div>
-                <div class='form-group col-md-3'>
+                <div class='form-group col-md-3 col-xs-10'>
                     <label>Shirt Size</label>
                     <select class='form-control' name='shirtSize'>
                         <option {{#if user.sizeSmall}}selected{{/if}}>S</option>

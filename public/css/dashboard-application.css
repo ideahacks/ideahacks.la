@@ -1,10 +1,34 @@
-/* LIGHT BULB IN THE BACKGROUND */
 body {
-  background: url('/img/large-transparent-bulb.svg') no-repeat fixed;
-  background-size: 600px;
-  background-position: 1000px 40px;
   background-color: rgb(221, 128, 100);
   text-transform: uppercase;
+}
+
+/* image responsiveness */
+#img-header {
+  width: 40%;
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10vh;
+}
+
+#img-side {
+  width: 12%;
+  position: absolute;
+  left: 88.3%;
+  top: 160px;
+  background-color: rgb(221, 128, 100);
+}
+
+@media (max-width: 980px) {
+  #img-side {
+    display: none;
+  }
+  #img-header{
+    margin-bottom: 5vh;
+    width: 50%;
+  }
 }
 
 .header {
@@ -35,11 +59,12 @@ div.header:after {
 }
 
 fieldset {
-  margin-left: 10%;
+  padding-left: 11%;
 }
 
 .radio-inline {
   margin-bottom: 2vh;
+  margin-right: 2%
 }
 
 @media (max-width: 1200px) {
@@ -51,11 +76,21 @@ fieldset {
   body {
     background-position: 400px 40px;
   }
+  .header h3 {
+    width: 70%;
+  }
+  div.header:after {
+
+  }
 }
 
 /* FORM FIELDS */
 .short-answer {
   margin: 0 0 50px;
+}
+
+textarea{
+  resize: none;
 }
 
 .whitespace {
@@ -70,6 +105,12 @@ fieldset {
   text-transform: none;
 }
 
+textarea::placeholder,
+input::placeholder {
+  text-transform: uppercase;
+  color: rgba(255, 183, 24, 0.6) !important;
+}
+
 @media (max-width: 828px) {
   .whitespace {
     display: none;
@@ -82,13 +123,22 @@ fieldset {
   padding-bottom: 30px;
 }
 
+.resume {
+  background-color: #95b9cd;
+  border-color: #95b9cd;
+  text-transform: uppercase;
+}
+
 .buttons button {
   margin: 0 60px;
+  background-color: #95b9cd;
+  border-color: #95b9cd;
 }
 
 @media (max-width: 583px) {
   .buttons {
     padding: 0 15px;
+
   }
 
   .buttons button {
