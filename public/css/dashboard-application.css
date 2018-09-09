@@ -3,6 +3,43 @@ body {
   background: url('/img/large-transparent-bulb.svg') no-repeat fixed;
   background-size: 600px;
   background-position: 1000px 40px;
+  background-color: rgb(221, 128, 100);
+  text-transform: uppercase;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  text-align: center;
+  display: inline-block;
+  border: none;
+  color: white;
+  background-color: #ffb718;
+  padding: 15px 0px;
+  width: 300px;
+  margin-left: 12%;
+}
+
+div.header:after {
+  height: 3px;
+  background: #ffb718;
+  content: '';
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: 35px;
+  z-index: -1;
+}
+
+fieldset {
+  margin-left: 10%;
+}
+
+.radio-inline {
+  margin-bottom: 2vh;
 }
 
 @media (max-width: 1200px) {
@@ -16,14 +53,6 @@ body {
   }
 }
 
-/* REQUIRED TEXT */
-.required-text {
-  color: #ffb718;
-  padding: 15px 5%;
-  margin-top: 20px;
-  font-size: 18px;
-}
-
 /* FORM FIELDS */
 .short-answer {
   margin: 0 0 50px;
@@ -31,6 +60,14 @@ body {
 
 .whitespace {
   color: transparent;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.sublabel {
+  text-transform: none;
 }
 
 @media (max-width: 828px) {
