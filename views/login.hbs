@@ -10,10 +10,11 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
     <!-- PERSONAL STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -24,33 +25,29 @@
     <script src='/js/login.js'></script>
 </head>
 <body>
-    <div class="logo">
-        <a href='/'><img src="/img/navbar-icon.svg"></img></a>
+    <!-- NAVBAR -->
+    {{> navbar }}
+
+    <div class="main_pic col-md-7">
+        <img src="/img/index/main-graphic.png">
     </div>
 
-    <div class="box container">
-        <div class="computer_picture col-md-6">
-            <img src="/img/registration/cloudComputerPhone.png">
-        </div>
+    <div class="form-side col-md-5">
+        <form class='ideahacks-form'>
+            <p class='error-message'></p>
 
-        <div class="words col-md-6">
-            <div class="register">
-                <span>Log In</span>
-            </div>
+            <label for="username">USERNAME</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="USERNAME" required>
 
-            <form class='ideahacks-form'>
-                <input type="text" name="username" placeholder="Email" required />
-                <input type="Password" name="password" placeholder="Password" required />
-                <p class='error-message'></p>
-                <button type='submit'>LOG IN</button>
-            </form>
+            <label for="password">PASSWORD</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" required>
 
-
-            <div class="no_account_register">
-                <p>Don't have an account? <a href='/registration'>Register!</a></p>
-                <p>Forgot your password? Type your email into the email field and click here: <a name='password-recover' style='cursor: pointer;'>Reset my password</a></p>
-            </div>
-        </div>
+            <button type="submit" class="login">LOG IN</button>
+            <br/>
+            <a href='/registration'><button type="button" class="register">I don't have an account</button></a>
+            <p><a name='password-recover' style='cursor: pointer;'>Forgot your password?</a></p>
+        </form>
     </div>
+
 </body>
 </html>
