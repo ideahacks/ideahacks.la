@@ -25,7 +25,7 @@ body {
   #img-side {
     display: none;
   }
-  #img-header{
+  #img-header {
     margin-bottom: 5vh;
     width: 50%;
   }
@@ -64,7 +64,7 @@ fieldset {
 
 .radio-inline {
   margin-bottom: 2vh;
-  margin-right: 2%
+  margin-right: 2%;
 }
 
 @media (max-width: 1200px) {
@@ -80,7 +80,6 @@ fieldset {
     width: 70%;
   }
   div.header:after {
-
   }
 }
 
@@ -89,7 +88,7 @@ fieldset {
   margin: 0 0 50px;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
@@ -138,7 +137,6 @@ input::placeholder {
 @media (max-width: 583px) {
   .buttons {
     padding: 0 15px;
-
   }
 
   .buttons button {
