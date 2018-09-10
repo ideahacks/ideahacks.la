@@ -1,5 +1,5 @@
-body {
-  background-color: #dd8064;
+.wrapper {
+  padding-top: 130px;
 }
 
 .introduction {
@@ -61,7 +61,6 @@ body {
   width: 22%;
   display: block;
   margin: auto;
-  margin-top: 130px;
   margin-bottom: 15px;
 }
 
@@ -115,7 +114,8 @@ body {
   margin-right: -50%;
 }
 
-.sponsor_img > * {
+.sponsor_img img {
+  display: inline-block;
   margin: 10px;
 }
 
