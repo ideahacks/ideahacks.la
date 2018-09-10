@@ -1,0 +1,152 @@
+body {
+  background-color: #dd8064;
+}
+
+.introduction {
+  margin-bottom: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.intro_p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.subtitle {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 75px;
+  margin-top: 0px;
+}
+
+.history_h2 {
+  color: #dd8064;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+
+.history_h3 {
+  color: #dd8064;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.history_h4 {
+  color: #dd8064;
+  font-weight: bold;
+  font-weight: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.history_p {
+  color: #dd8064;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  padding-top: 10px;
+}
+
+#history_title {
+  height: auto;
+  width: 22%;
+  display: block;
+  margin: auto;
+  margin-top: 130px;
+  margin-bottom: 15px;
+}
+
+#home_automation {
+  background-color: #fffff4;
+  padding: 25px 80px;
+}
+
+#intro {
+  background-color: #dd8064;
+  background-size: auto;
+}
+
+#intro_img {
+  width: 100%;
+}
+
+.places {
+  padding: 20px 0;
+}
+
+#sports_tech {
+  color: White;
+  padding: 25px 50px 50px;
+}
+
+.white_text {
+  color: White;
+}
+
+.fancy_lines {
+  overflow: hidden;
+  text-align: center;
+}
+.fancy_lines:before,
+.fancy_lines:after {
+  background-color: #ffb718;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.fancy_lines:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.fancy_lines:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.sponsor_img > * {
+  margin: 10px;
+}
+
+@media (max-width: 1000px) {
+  #history_title {
+    width: 230px;
+  }
+  .body {
+    padding: 0 35px;
+  }
+  .introduction {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .history_h2 {
+    border-bottom: solid #ffb718 3px;
+    margin-top: 0;
+  }
+  #intro_img {
+    padding-bottom: 30px;
+  }
+  .history_p {
+    padding-bottom: 20px;
+  }
+  .fancy_lines:before,
+  .fancy_lines:after {
+    display: none;
+  }
+  #home_automation,
+  #sports_tech {
+    padding: 25px 20px;
+  }
+}
