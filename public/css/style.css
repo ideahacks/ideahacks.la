@@ -27,6 +27,10 @@ body {
   background-color: rgb(236, 187, 172);
 }
 
+.background-red {
+  background-color: #dd8064;
+}
+
 .wrapper,
 .myNavbar {
   max-width: 1280px;
