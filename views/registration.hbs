@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
     <!-- PERSONAL STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -23,34 +23,38 @@
     <!-- SCRIPTS -->
     <script src='/js/registration.js'></script>
 </head>
+
 <body>
-    <div class="logo">
-        <a href='/'><img src="/img/navbar-icon.svg"></img></a>
+    <!-- NAVBAR -->
+    {{> navbar }}
+
+    <div class="main_pic col-md-7">
+        <img src="/img/index/main-graphic.png">
     </div>
 
-    <div class="box container">
-        <div class="computer_picture col-md-6">
-            <img src="/img/registration/cloudComputerPhone.png">
-        </div>
+    <div class="form-side col-md-5">
+        <form class='ideahacks-form'>
 
-        <div class="words col-md-6">
-            <div class="register">
-                <span>Register</span>
+            <p class='error-message'></p>
+
+            <label for="username">USERNAME</label>
+            <input type="text" name="email" class="form-control" id="username" placeholder="USERNAME" required>
+
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="PASSWORD" required>
+
+
+            <label for="password">CONFIRM PASSWORD</label>
+            <input type="password" name="password-confirm" class="form-control" placeholder="PASSWORD" required>
+
+            <button type="submit" class="login">SIGN UP</button>
+
+            <div>
+                <p><a href='/login'>Already have an account? Log in here!</a></p>
             </div>
 
-            <form class='ideahacks-form'>
-                <p>Please register with your .edu email!</p>
-                <input type="text" name="email" placeholder="Email" required />
-                <input type="Password" name="password" placeholder="Password" required />
-                <input type="Password" name="password-confirm" placeholder="Confirm Password" required />
-                <p class='error-message'></p>
-                <button type='submit'>SIGN UP</button>
-            </form>
-
-            <div class="no_account_register">
-                <p>Already have an account? <a href='/login'>Login!</a></p>
-            </div>
-        </div>
+        </form>
     </div>
+
 </body>
 </html>
