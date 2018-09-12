@@ -12,6 +12,8 @@ mainRouter.get('/venue', setResLocals, staticHandlers.getVenue)
 
 mainRouter.get('/extended-faq', setResLocals, staticHandlers.getFAQ)
 
+mainRouter.get('/history', setResLocals, staticHandlers.getHistory)
+
 mainRouter.get('/login', authHandlers.getLogin)
 mainRouter.post('/login', authHandlers.postLogin)
 mainRouter.post('/login/recoverPassword/:email', authHandlers.recoverPassword)
