@@ -1,5 +1,5 @@
 body {
-  background-color: #DD8064;
+  background-color: #dd8064;
   text-transform: uppercase;
 }
 
@@ -21,17 +21,16 @@ body {
 
 .dotted {
   border: 0 none;
-  border-top: 2px dashed #FFB718;
+  border-top: 2px dashed #ffb718;
   background: none;
   height: 0;
   width: 40%;
   margin-top: 2px;
 }
 
-
 /*----- CHANGE PROFILE INFORMATION -------*/
 .ideahacks-form {
-  background-color: #FFFFF4;
+  background-color: #fffff4;
   width: 70%;
   justify-content: center;
   text-align: center;
@@ -41,7 +40,7 @@ body {
 }
 
 .ideahacks-form label {
-  color: #DD8064;
+  color: #dd8064;
   text-decoration: bold;
   font-size: 20px;
   margin-bottom: 15px;
@@ -54,7 +53,7 @@ body {
   background-color: transparent;
   font-family: inherit;
   font-size: 20px;
-  color: #DD8064;
+  color: #dd8064;
   text-align: center;
   text-decoration: bold;
   width: 80%;
@@ -76,7 +75,7 @@ body {
 }
 
 .logout:hover {
-  color: #FFB718;
+  color: #ffb718;
 }
 
 @media (max-width: 991px) {
@@ -90,5 +89,3 @@ body {
     width: 70%;
   }
 }
-
-
