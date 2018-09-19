@@ -9,10 +9,10 @@
   "scripts": {
     "development": "nodemon server.js",
     "format": "npm run format-css && npm run format-html && npm run format-js",
-    "format-check": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
+    "format-check": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.json ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
     "format-css": "prettier --single-quote --print-width=120 --no-semi --write ./public/css/**.css ./public/css/modals/**.css",
     "format-html": "html-beautify -n=true -E=[] -r ./views/**.hbs ./views/partials/**.hbs",
-    "format-js": "prettier --single-quote --print-width=120 --no-semi --write ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "format-js": "prettier --single-quote --print-width=120 --no-semi --write ./**.json ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
     "lint": "eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
     "start": "node server.js",
     "test": "npm run format-check && npm run lint && mocha --exit ./tests"
