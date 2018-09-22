@@ -14,8 +14,9 @@
     "format-html": "html-beautify -n=true -E=[] -r ./views/**.hbs ./views/partials/**.hbs",
     "format-js": "prettier --single-quote --print-width=120 --no-semi --write ./**.json ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
     "lint": "eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+    "mocha": "mocha --recursive --exit ./tests/",
     "start": "node server.js",
-    "test": "npm run format-check && npm run lint && mocha --exit ./tests"
+    "test": "npm run format-check && npm run lint && npm run mocha"
   },
   "lint-staged": {
     "*.js": [
@@ -63,6 +64,7 @@
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.6.1",
     "eslint-config-prettier": "^2.6.0",
     "eslint-config-standard": "^10.2.1",
@@ -74,8 +76,11 @@
     "husky": "^0.14.3",
     "js-beautify": "^1.7.5",
     "lint-staged": "^4.0.4",
+    "mocha": "^5.2.0",
     "nodemon": "^1.11.0",
     "prettier": "^1.6.1",
-    "prettier-check": "^1.0.0"
+    "prettier-check": "^1.0.0",
+    "sinon": "^6.3.4",
+    "supertest": "^3.3.0"
   }
 }
