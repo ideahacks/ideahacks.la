@@ -2,4 +2,7 @@ language: node_js
 node_js:
  - 7
 env:
-  - NODE_ENV=production
+  - dbURI: DUMMY_URI
+  - sessionSecret: SECRET
+  - host: localhost:3000
+  - SENDGRID_API_KEY: DUMMY_KEY
