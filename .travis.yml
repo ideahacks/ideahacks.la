@@ -1,5 +1,9 @@
+env:
+  - NODE_ENV=test
+  - sessionSecret="SECRET"
+  - host="localhost:3000"
+  - SENDGRID_API_KEY="DUMMY_KEY"
+  - secure: jgyAbgJTR2KaqcX69v+WomZLOLoIFPAb+dsIk5+56y0OwsFl3j2P54yYM9Cq6GnG7JLPc6vI2kJmqipGvUu8j2tIXUThWtRFf0qQfNzBGfZFOHiOQTMTUWxhu4BlFWiNNxuwoDP5AefH0vYxuzpOx7V3KJAXW97J3+DjwR2cRoSujBM2vgVUyp9LG6E1WDVyJuswb7xCmN1q2Oxw+csbtyv5lzb1GfPP3FuNrTotXv6FMEWJhJPZk0+FXnXIwhGeTi1pQQ/HZhbZtRyr7xiOiXq3REcRtr/jMUxLeBu7pXh5tWidRFovCbAj+uA+Fd3UfiGouVT1Uu7KMeYsZzxNhmt5zMoEsz1V8jtTgF2C3+QEuGHKr+PAWqyw4OtJSnFy1IsLm4G6jrhhs4EOWywstaqxrmHo7AyMR9dcEgXrZLI4kQDPsxGfD1DGS7iAebsUJ+TVHlboybCDM5PSE8NOUro5yGB6YFpTMzTe+UJ2/R7KMaK0z8khLddM6Evj47Eh+KBgeYYenmxp9U+Fj0hGIXanhbyhE6Wieq9VP8zscyqmiHi3o3K8DTYh0cGNeau1a9Zn+Hn09hhUVddy1H42gSFaxGbyP+8F5qjpX+b3vtABS51Of1yKz2zI4zPdEw/smWEwqKIbNYIAi1/upMByoF/52qptZvPjYi5n+5cIUtA=
 language: node_js
 node_js:
- - 7
-env:
-  - NODE_ENV=test dbURI=D sessionSecret=S host="localhost:3000" SENDGRID_API_KEY=D
+- 7
