@@ -2,8 +2,8 @@ language: node_js
 node_js:
  - 7
 env:
-  - NODE_ENV: test
-  - DBURI: alsdkfjlaksjfl
-  - sessionSecret: "SECRET"
-  - host: "localhost:3000"
-  - SENDGRID_API_KEY: "DUMMY_KEY"
+  - NODE_ENV=test
+  - dbURI="DUMMY_URI"
+  - sessionSecret="SECRET"
+  - host="localhost:3000"
+  - SENDGRID_API_KEY="DUMMY_KEY"
