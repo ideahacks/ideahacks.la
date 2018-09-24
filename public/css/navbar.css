@@ -35,9 +35,11 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-list li:hover {
+.navbar-list li:hover,
+.dropdown:hover {
   background-color: rgb(195, 109, 83);
   color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #navbar-list a {
