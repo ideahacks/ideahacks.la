@@ -6,9 +6,13 @@ const favicon = require('serve-favicon')
 const hbs = require('hbs')
 const passport = require('passport')
 const hbsutils = require('hbs-utils')(hbs)
+const morgan = require('morgan')
+
 const ideahacks = require('./ideahacks')
 
 let app = express()
+
+app.use(morgan('dev'))
 
 app.set('port', process.env.PORT || 3000)
 app.set('view engine', 'hbs')
