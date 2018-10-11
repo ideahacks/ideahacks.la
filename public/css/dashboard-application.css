@@ -1,8 +1,70 @@
-/* LIGHT BULB IN THE BACKGROUND */
 body {
-  background: url('/img/large-transparent-bulb.svg') no-repeat fixed;
-  background-size: 600px;
-  background-position: 1000px 40px;
+  background-color: rgb(221, 128, 100);
+  text-transform: uppercase;
+}
+
+/* image responsiveness */
+#img-header {
+  width: 40%;
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10vh;
+}
+
+#img-side {
+  width: 12%;
+  position: absolute;
+  left: 88.3%;
+  top: 160px;
+  background-color: rgb(221, 128, 100);
+}
+
+@media (max-width: 980px) {
+  #img-side {
+    display: none;
+  }
+  #img-header {
+    margin-bottom: 5vh;
+    width: 50%;
+  }
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  text-align: center;
+  display: inline-block;
+  border: none;
+  color: white;
+  background-color: #ffb718;
+  padding: 15px 0px;
+  width: 300px;
+  margin-left: 12%;
+}
+
+div.header:after {
+  height: 3px;
+  background: #ffb718;
+  content: '';
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: 35px;
+  z-index: -1;
+}
+
+fieldset {
+  padding-left: 11%;
+}
+
+.radio-inline {
+  margin-bottom: 2vh;
+  margin-right: 2%;
 }
 
 @media (max-width: 1200px) {
@@ -14,14 +76,11 @@ body {
   body {
     background-position: 400px 40px;
   }
-}
-
-/* REQUIRED TEXT */
-.required-text {
-  color: #ffb718;
-  padding: 15px 5%;
-  margin-top: 20px;
-  font-size: 18px;
+  .header h3 {
+    width: 70%;
+  }
+  div.header:after {
+  }
 }
 
 /* FORM FIELDS */
@@ -29,8 +88,26 @@ body {
   margin: 0 0 50px;
 }
 
+textarea {
+  resize: none;
+}
+
 .whitespace {
   color: transparent;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.sublabel {
+  text-transform: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  text-transform: uppercase;
+  color: rgba(255, 183, 24, 0.6) !important;
 }
 
 @media (max-width: 828px) {
@@ -45,8 +122,16 @@ body {
   padding-bottom: 30px;
 }
 
+.resume {
+  background-color: #95b9cd;
+  border-color: #95b9cd;
+  text-transform: uppercase;
+}
+
 .buttons button {
   margin: 0 60px;
+  background-color: #95b9cd;
+  border-color: #95b9cd;
 }
 
 @media (max-width: 583px) {

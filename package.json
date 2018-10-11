@@ -7,7 +7,7 @@
   "description": "Website for UCLA's IDEA Hacks",
   "main": "index.js",
   "scripts": {
-    "development": "nodemon server.js",
+    "dev": "nodemon server.js",
     "format": "npm run format-css && npm run format-html && npm run format-js",
     "format-check": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.json ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
     "format-css": "prettier --single-quote --print-width=120 --no-semi --write ./public/css/**.css ./public/css/modals/**.css",
