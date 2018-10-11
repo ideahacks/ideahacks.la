@@ -1,22 +1,6 @@
 const bcrypt = require('bcrypt-nodejs')
 
-const Announcement = require('../../db').Announcement
 const Part = require('../../db').Part
-const formatDate = require('../../helpers').formatters.formatDate
-
-const getDashboard = (req, res) => {
-  Announcement.find()
-    .populate('createdBy', 'firstName lastName')
-    .then(announcements => {
-      announcements = announcements.reverse()
-
-      for (let ann of announcements) {
-        ann.formattedTimestamp = formatDate(ann.timestamp)
-      }
-
-      res.render('dashboard-announcements', { announcements })
-    })
-}
 
 const getParts = (req, res) => {
   Part.find().then(parts => {
@@ -64,7 +48,6 @@ const postMe = (req, res) => {
 }
 
 module.exports = {
-  getDashboard,
   getParts,
   getMe,
   postMe
