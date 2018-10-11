@@ -1,5 +1,5 @@
-const dbURI = require('../config').dbURI
-const mongoose = require('mongoose')
+const dbURI = require("../config").dbURI
+const mongoose = require("mongoose")
 
 mongoose.connect(
   dbURI,
@@ -10,16 +10,15 @@ mongoose.connect(
 
 mongoose.Promise = global.Promise
 
-mongoose.connection.on('error', err => {
-  console.log('Mongoose error: ', err)
+mongoose.connection.on("error", err => {
+  console.log("Mongoose error: ", err)
 })
 
 module.exports = {
-  User: require('./User.js'),
-  Team: require('./Team.js'),
-  Part: require('./Part.js'),
-  Announcement: require('./Announcement.js'),
-  Feedback: require('./Feedback.js'),
-  teamData: require('./data/team.js'),
-  sponsorsData: require('./data/sponsors.js')
+  User: require("./User.js"),
+  Team: require("./Team.js"),
+  Part: require("./Part.js"),
+  Feedback: require("./Feedback.js"),
+  teamData: require("./data/team.js"),
+  sponsorsData: require("./data/sponsors.js")
 }
