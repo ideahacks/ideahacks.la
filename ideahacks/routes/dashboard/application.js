@@ -25,6 +25,7 @@ const postApplication = (req, res) => {
 
   // process hasTeam
   req.user['hasTeam'] = req.body['hasTeam'] === 'YES'
+  req.user['teammates'] = req.body.teammates ? req.body.teammates : []
 
   if (oldHasApplicationStatus === true) {
     req.user.hasApplication = true
