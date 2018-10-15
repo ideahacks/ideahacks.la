@@ -18,7 +18,6 @@ module.exports = {
   User: require('./User.js'),
   Team: require('./Team.js'),
   Part: require('./Part.js'),
-  Announcement: require('./Announcement.js'),
   Feedback: require('./Feedback.js'),
   teamData: require('./data/team.js'),
   sponsorsData: require('./data/sponsors.js')
