@@ -14,7 +14,15 @@
 
 .logo-container {
   display: inline-block;
-  padding: 12px 45px;
+  padding: 12px 50px;
+}
+
+.dashboard {
+  margin-top: 12px;
+}
+
+.me {
+  margin-right: 40px;
 }
 
 .navbar-list {
