@@ -7,6 +7,10 @@ body {
   background-color: rgb(221, 128, 100);
 }
 
+.forgot-pass:hover {
+  color: white;
+}
+
 /* COMPUTER IMAGE */
 .main_pic img {
   width: 90%;

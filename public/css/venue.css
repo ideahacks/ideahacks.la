@@ -3,6 +3,7 @@
   padding-bottom: 50px;
   padding-left: 65px;
   padding-right: 65px;
+  min-height: 95vh;
 }
 
 .venue-title {
