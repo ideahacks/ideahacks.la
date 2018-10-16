@@ -6,7 +6,7 @@ body {
 #welcome-img {
   margin-top: 120px;
   margin-bottom: 40px;
-  width: 30%;
+  width: 28%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -34,7 +34,7 @@ body {
   width: 70%;
   justify-content: center;
   text-align: center;
-  padding: 30px 0px 45px;
+  padding: 30px 0px 30px;
   border-radius: 18px;
   margin: 20px 15%;
 }
@@ -62,7 +62,7 @@ body {
 .text-center button {
   width: 35%;
   text-transform: uppercase;
-  margin: 3vh 0% 2vh;
+  margin: 1.5vh 0% 2vh;
 }
 
 .save-button {
@@ -80,7 +80,7 @@ body {
 
 @media (max-width: 991px) {
   #welcome-img {
-    width: 50%;
+    width: 250px;
   }
   .dotted {
     width: 80%;
