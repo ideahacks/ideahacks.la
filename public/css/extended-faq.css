@@ -1,6 +1,7 @@
 .faq-section {
   background-color: rgb(221, 128, 100);
   padding: 20px 75px 40px 75px;
+  min-height: 95vh;
 }
 
 .questions h2 {

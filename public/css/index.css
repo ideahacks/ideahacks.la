@@ -86,11 +86,11 @@
 }
 
 .left {
-  width: 70%;
+  width: 60%;
 }
 
 .right {
-  width: 30%;
+  width: 40%;
   text-align: right;
 }
 
@@ -129,8 +129,13 @@
 
 .logo {
   vertical-align: middle;
-  width: 100%;
-  margin-bottom: 60px;
+  width: 44%;
+  margin: 30px 20px;
+}
+
+.small-logo {
+  width: 15%;
+  margin: 30px 20px;
 }
 
 .header-graphic-centered {
