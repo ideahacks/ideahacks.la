@@ -26,39 +26,39 @@
 
 <body>
 
-  <div class='wrapper'>
-    <!-- NAVBAR -->
-    {{> navbar }}
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <div class="main_pic col-md-7">
-        <img src="/img/index/main-graphic.png">
+        <div class="main_pic col-md-7">
+            <img src="/img/index/main-graphic.png">
+        </div>
+
+        <div class="form-side col-md-5">
+            <form class='ideahacks-form'>
+
+                <p class='error-message'></p>
+
+                <label for="username">USERNAME</label>
+                <input type="text" name="email" class="form-control" id="username" placeholder="USERNAME" required>
+
+                <label for="password">PASSWORD</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="PASSWORD" required>
+
+
+                <label for="password">CONFIRM PASSWORD</label>
+                <input type="password" name="password-confirm" class="form-control" placeholder="PASSWORD" required>
+
+                <button type="submit" class="login">SIGN UP</button>
+
+                <div>
+                    <p><a href='/login'>Already have an account? Log in here!</a></p>
+                </div>
+
+            </form>
+        </div>
+
     </div>
-
-    <div class="form-side col-md-5">
-        <form class='ideahacks-form'>
-
-            <p class='error-message'></p>
-
-            <label for="username">USERNAME</label>
-            <input type="text" name="email" class="form-control" id="username" placeholder="USERNAME" required>
-
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="PASSWORD" required>
-
-
-            <label for="password">CONFIRM PASSWORD</label>
-            <input type="password" name="password-confirm" class="form-control" placeholder="PASSWORD" required>
-
-            <button type="submit" class="login">SIGN UP</button>
-
-            <div>
-                <p><a href='/login'>Already have an account? Log in here!</a></p>
-            </div>
-
-        </form>
-    </div>
-
-  </div>
 
 </body>
 </html>
