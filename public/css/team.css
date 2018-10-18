@@ -124,11 +124,7 @@ p {
 .container-fluid {
   /*background-color: white;*/
   /*width: 900px;*/
-  padding: 0px 70px;
-}
-
-.team {
-  padding-bottom: 40px;
+  padding: 0 70px;
 }
 
 /* Media queries for mobile */
