@@ -26,31 +26,31 @@
 </head>
 <body>
 
-  <div class='wrapper'>
-    <!-- NAVBAR -->
-    {{> navbar }}
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <div class="main_pic col-md-7">
-        <img src="/img/index/main-graphic.png">
+        <div class="main_pic col-md-7">
+            <img src="/img/index/main-graphic.png">
+        </div>
+
+        <div class="form-side col-md-5">
+            <form class='ideahacks-form'>
+                <p class='error-message'></p>
+
+                <label for="username">USERNAME</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="USERNAME" required>
+
+                <label for="password">PASSWORD</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" required>
+
+                <button type="submit" class="login">LOG IN</button>
+                <br/>
+                <a href='/registration'><button type="button" class="register">I don't have an account</button></a>
+                <p><a class='forgot-pass' name='password-recover' style='cursor: pointer;'>Forgot your password?</a></p>
+            </form>
+        </div>
     </div>
-
-    <div class="form-side col-md-5">
-        <form class='ideahacks-form'>
-            <p class='error-message'></p>
-
-            <label for="username">USERNAME</label>
-            <input type="text" class="form-control" name="username" id="username" placeholder="USERNAME" required>
-
-            <label for="password">PASSWORD</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" required>
-
-            <button type="submit" class="login">LOG IN</button>
-            <br/>
-            <a href='/registration'><button type="button" class="register">I don't have an account</button></a>
-            <p><a class='forgot-pass' name='password-recover' style='cursor: pointer;'>Forgot your password?</a></p>
-        </form>
-    </div>
-  </div>
 
 </body>
 </html>
