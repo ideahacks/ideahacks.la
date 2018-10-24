@@ -14,11 +14,11 @@ mainRouter.get('/extended-faq', setResLocals, staticHandlers.getFAQ)
 
 mainRouter.get('/history', setResLocals, staticHandlers.getHistory)
 
-mainRouter.get('/login', authHandlers.getLogin)
+mainRouter.get('/login', setResLocals, authHandlers.getLogin)
 mainRouter.post('/login', authHandlers.postLogin)
 mainRouter.post('/login/recoverPassword/:email', authHandlers.recoverPassword)
 
-mainRouter.get('/registration', authHandlers.getRegistration)
+mainRouter.get('/registration', setResLocals, authHandlers.getRegistration)
 mainRouter.post('/registration', authHandlers.postRegistration)
 
 mainRouter.get('/confirm', h.isAuthenticated, staticHandlers.getConfirm)
