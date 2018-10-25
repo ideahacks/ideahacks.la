@@ -1,3 +1,13 @@
+.white-box {
+  background-color: rgb(255, 255, 244);
+  height: 40px;
+}
+
+.red-box {
+  background-color: rgb(221, 128, 100);
+  height: 40px;
+}
+
 .home-banner {
   background-color: rgb(221, 128, 100);
 }
@@ -33,7 +43,7 @@
 
 .about-section {
   background-color: rgb(255, 255, 244);
-  padding: 20px 100px 40px 100px;
+  padding: 20px 100px 0px 100px;
 }
 
 .description {
@@ -51,7 +61,7 @@
 .schedule-section,
 .sponsors-section {
   background-color: rgb(221, 128, 100);
-  padding: 20px 90px 40px 90px;
+  padding: 20px 90px 0px 90px;
 }
 
 .section-header {
@@ -96,7 +106,7 @@
 
 .faq-section {
   background-color: rgb(255, 255, 244);
-  padding: 20px 75px 40px 75px;
+  padding: 20px 75px 0px 75px;
 }
 
 .questions h2 {
