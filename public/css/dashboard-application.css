@@ -42,8 +42,9 @@ body {
   color: white;
   background-color: #ffb718;
   padding: 12px 0px 9px 0px;
-  width: 300px;
-  font-size: 20px;
+  width: 220px;
+  font-size: 17px;
+  font-weight: bold;
   margin-left: 12%;
 }
 
