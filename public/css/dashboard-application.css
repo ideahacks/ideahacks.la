@@ -3,6 +3,32 @@ body {
   text-transform: uppercase;
 }
 
+.submission {
+  background-color: rgb(255, 255, 244);
+  margin: 0px 150px;
+  border-radius: 5px;
+  padding: 40px 20px 30px 20px;
+}
+
+.submission p {
+  color: rgb(221, 128, 100);
+  font-weight: bold;
+}
+
+.street-graphic {
+  padding-top: 30px;
+  width: 500px;
+}
+
+@media (max-width: 860px) {
+  .submission {
+    margin: 0px 40px;
+  }
+  .street-graphic {
+    display: none;
+  }
+}
+
 /* image responsiveness */
 #img-header {
   width: 30%;
