@@ -25,13 +25,13 @@
 </head>
 <body>
 
-    {{#if user.hasApplication}}
-
     <!-- NAVBAR -->
     <div class='wrapper'>
         {{> navbar }}
 
         <img id="img-header" src="/img/registration/app-header.png" />
+
+        {{#if user.hasApplication}}
 
         <div class='text-center container-fluid submission'>
             <p> Way to go! You successfully submitted your application for IDEA Hacks 2019! </p>
@@ -41,15 +41,7 @@
 
         </div>
 
-    </div>
-
-    {{else}}
-
-    <!-- NAVBAR -->
-    <div class='wrapper'>
-        {{> navbar }}
-
-        <img id="img-header" src="/img/registration/app-header.png" />
+        {{else}}
 
         <div class='ideahacks-form application-form container-fluid'>
             <!-- PERSONAL INFORMATION -->
@@ -222,9 +214,9 @@
             <p class="submit-message" style='color: transparent;'></p>
         </div>
 
+        {{/if}}
+
     </div>
 
-
-    {{/if}}
 </body>
 </html>
