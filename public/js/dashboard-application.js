@@ -1,18 +1,20 @@
 $(() => {
-  $(".submit-application").click(() => getAndSendApplicationData(true))
+  $('.submit-application').click(() => getAndSendApplicationData(true));
 
-  $(".save-application").click(() => getAndSendApplicationData(false))
+  $('.save-application').click(() => getAndSendApplicationData(false));
 
-  $("input, textarea, select").focus(() => $(".submit-message").css("color", "transparent"))
-})
+  $('input, textarea, select').focus(() =>
+    $('.submit-message').css('color', 'transparent')
+  );
+});
 
 // getAndSendApplicationData grabs all the form entires, puts them into a single objects,
 // and sends it over to the POST /dashboard/application endpoint for saving
 function getAndSendApplicationData(toggleHasApplication) {
-  let teammateEmails = []
-  $(".teammate-email").each((i, el) => {
-    if (el.value !== "") teammateEmails.push(el.value)
-  })
+  let teammateEmails = [];
+  $('.teammate-email').each((i, el) => {
+    if (el.value !== '') teammateEmails.push(el.value);
+  });
 
   let applicationData = {
     firstName: $('input[name="firstName"]').val(),
@@ -24,23 +26,28 @@ function getAndSendApplicationData(toggleHasApplication) {
     github: $('input[name="github"]').val(),
     linkedin: $('input[name="linkedin"]').val(),
     hasTeam: $('select[name="hasTeam"]')
-      .find(":selected")
+      .find(':selected')
       .text(),
     teammates: teammateEmails,
     foodRestrictions: $('input[name="foodRestrictions"]').val(),
     skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
-    pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
+    pastHackathonExperience: $(
+      'textarea[name="pastHackathonExperience"]'
+    ).val(),
     reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
     themeIdea: $('textarea[name="themeIdea"]').val(),
     desiredParts: $('textarea[name="desiredParts"]').val(),
     shirtSize: $('select[name="shirtSize"]')
-      .find(":selected")
+      .find(':selected')
       .text(),
     hasApplication: toggleHasApplication
-  }
+  };
 
-  $.ajax({ url: "/dashboard/application", type: "POST", data: applicationData }).done(response => {
-    $(".submit-message").text(response.message)
-    $(".submit-message").css("color", "#ffb718")
-  })
+  $.ajax({
+    url: '/dashboard/application',
+    type: 'POST',
+    data: applicationData
+  }).done(response => {
+    location.reload();
+  });
 }

@@ -47,7 +47,6 @@ const postApplication = (req, res) => {
       message: 'You have sucessfully saved!'
     });
   } else {
-    console.log('you submitted something bro');
     return res.json({
       status: 'success',
       message: 'You have sucessfully submitted!'
