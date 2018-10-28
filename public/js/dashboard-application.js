@@ -25,6 +25,7 @@ function getAndSendApplicationData(toggleHasApplication) {
     year: $('input[name="year"]').val(),
     github: $('input[name="github"]').val(),
     linkedin: $('input[name="linkedin"]').val(),
+    resume: $('input[name="resume"]').val(),
     hasTeam: $('select[name="hasTeam"]')
       .find(':selected')
       .text(),

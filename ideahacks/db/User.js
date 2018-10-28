@@ -13,6 +13,7 @@ const UserSchema = new Schema({
   year: { type: String, default: '' },
   github: { type: String, default: '' },
   linkedin: { type: String, default: '' },
+  resume: { type: String, default: '' },
   hasTeam: { type: Boolean, default: false },
   teammates: { type: [String], default: [] },
   foodRestrictions: { type: String, default: '' },

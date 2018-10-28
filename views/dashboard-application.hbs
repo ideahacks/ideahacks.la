@@ -29,9 +29,7 @@
     <div class='wrapper'>
         {{> navbar }}
 
-        <img id="img-header" src="/img/registration/app-header.png" />
-
-        {{#if user.hasApplication}}
+        <img id="img-header" src="/img/registration/app-header.png" /> {{#if user.hasApplication}}
 
         <div class='text-center container-fluid submission'>
             <p> Way to go! You successfully submitted your application for IDEA Hacks 2019! </p>
@@ -95,6 +93,10 @@
                     <div class='form-group col-md-5'>
                         <label>LinkedIn</label>
                         <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
+                    </div>
+                    <div class='form-group col-md-5'>
+                        <label>Resume Link</label>
+                        <input class='form-control' type='url' name='resume' placeholder='Link to Resume' value='{{user.resume}}'>
                     </div>
                 </fieldset>
             </div>
