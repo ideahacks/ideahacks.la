@@ -97,6 +97,7 @@ button {
   padding: 10px 18px 5px 19px;
   border-radius: 7px;
   color: white;
+  font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -225,5 +226,6 @@ button:hover {
   }
   .mobile-navbar-list a {
     padding: 15px 200px 15px 20px;
+    font-size: 14px;
   }
 }
