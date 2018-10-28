@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
   // user and application info
@@ -13,6 +13,7 @@ const UserSchema = new Schema({
   year: { type: String, default: '' },
   github: { type: String, default: '' },
   linkedin: { type: String, default: '' },
+  resume: { type: String, default: '' },
   hasTeam: { type: Boolean, default: false },
   teammates: { type: [String], default: [] },
   foodRestrictions: { type: String, default: '' },
@@ -35,6 +36,6 @@ const UserSchema = new Schema({
   // Check in/out fields
   checkinTime: Date,
   checkoutTime: Date
-})
+});
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('User', UserSchema);
