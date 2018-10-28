@@ -39,7 +39,6 @@
   letter-spacing: 2px;
 
   display: inline-block;
-  padding: 14px 20px 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -51,6 +50,8 @@
 }
 
 #navbar-list a {
+  display: inline-block;
+  padding: 14px 20px 10px;
   color: white;
   font-size: 14px;
 }
@@ -76,12 +77,9 @@
 }
 
 .dropdown-content a {
-  display: block;
-  color: white;
-}
-
-.dropdown-content li {
+  display: inline-block;
   padding: 10px 3px 10px 5px;
+  color: white;
 }
 
 .dropdown-content a:hover {
@@ -164,13 +162,14 @@ button:hover {
 }
 
 .mobile-navbar-list li {
-  padding: 15px 50px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold;
 }
 
 .mobile-navbar-list a {
+  display: inline-block;
+  padding: 15px 50px;
   margin-left: 28px;
   color: white;
 }
@@ -201,7 +200,8 @@ button:hover {
   color: white;
   font-size: 18px;
   transition: 0.3s ease;
-  margin-right: 20px;
+  margin-right: 40px;
+  margin-top: 15px;
 }
 
 @media (max-width: 980px) {
@@ -223,7 +223,7 @@ button:hover {
   .navbar-icon {
     right: 20px;
   }
-  .mobile-navbar-list li {
-    padding: 15px 20px;
+  .mobile-navbar-list a {
+    padding: 15px 200px 15px 20px;
   }
 }
