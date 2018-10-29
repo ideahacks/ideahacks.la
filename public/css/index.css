@@ -58,10 +58,14 @@
   margin-top: 12px;
 }
 
-.schedule-section,
-.sponsors-section {
+.schedule-section {
   background-color: rgb(221, 128, 100);
   padding: 20px 90px 0px 90px;
+}
+
+.sponsors-section {
+  background-color: rgb(221, 128, 100);
+  padding: 20px 10px 0px 10px;
 }
 
 .section-header {
@@ -137,14 +141,20 @@
   color: rgb(255, 183, 24);
 }
 
-.logo {
+.platinum-logo {
   vertical-align: middle;
-  width: 44%;
-  margin: 30px 20px;
+  width: 35%;
+  margin: 30px 10px;
+}
+
+.gold-logo {
+  vertical-align: middle;
+  width: 20%;
+  margin: 30px 10px;
 }
 
 .small-logo {
-  width: 15%;
+  width: 10%;
   margin: 30px 20px;
 }
 
@@ -194,5 +204,19 @@
   }
   .location {
     display: none;
+  }
+  .platinum-logo {
+    width: 300px;
+    margin: 20px 10px;
+  }
+
+  .gold-logo {
+    width: 200px;
+    margin: 30px 10px;
+  }
+
+  .small-logo {
+    width: 100px;
+    margin: 30px 20px;
   }
 }
