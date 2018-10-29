@@ -12,9 +12,9 @@
   padding: 25px 0 50px;
 }
 
-.feedback-list,
 .mailing-list {
   max-width: 1200px;
+  list-style: none;
 }
 
 .feedback-list li {
