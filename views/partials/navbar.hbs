@@ -15,7 +15,11 @@
 
     <ul class='navbar-list' id='navbar-list'>
         {{#if onAdmin}}
-        <li><a href='/admin/application-review'>Application Review</a></li>
+        <li class='dashboard'><a href='/admin/application-review'>Application Review</a></li>
+        <li><a href='/admin'>Mailing Lists</a></li>
+        <a href='/dashboard'>
+            <button class='main-button'>MAIN WEBSITE</button>
+        </a>
         <!-- <li><a href='/admin/teams'>Teams</a></li>
         <li><a href='/admin/parts'>Parts</a></li> -->
         {{/if}} {{#if onDashboard}}
@@ -40,6 +44,8 @@
     <ul class='mobile-navbar-list' id='mobile-navbar-list'>
         {{#if onAdmin}}
         <li><a href='/admin/application-review'>Application Review</a></li>
+        <li><a href='/admin'>Mailing Lists</a></li>
+        <li><a href='/dashboard'>Main Website</a></li>
         <!-- <li><a href='/admin/teams'>Teams</a></li>
         <li><a href='/admin/parts'>Parts</a></li> -->
         {{/if}} {{#if onDashboard}}

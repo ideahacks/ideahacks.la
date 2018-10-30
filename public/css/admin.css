@@ -2,7 +2,13 @@
 
 .mailing-list .email-list {
   display: none;
-  background-color: lightgrey;
+  background-color: rgb(255, 255, 244);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mailing-header {
+  padding-top: 100px;
 }
 
 /*-------------- FEEDBACK LISTS ----------------*/

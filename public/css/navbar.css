@@ -12,6 +12,12 @@
   background-color: rgb(221, 128, 100);
 }
 
+.main-button {
+  margin-right: 20px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
 .logo-container {
   display: inline-block;
   padding: 12px 50px;
