@@ -4,6 +4,11 @@
   }
 }
 
+.banner {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
 /* STATS */
 .stats-box-container {
   display: flex;
@@ -53,7 +58,7 @@
 
 .application.accepted,
 .accepted-box {
-  background-color: #34c13e;
+  background-color: #66cc66;
 }
 
 .application.pending,

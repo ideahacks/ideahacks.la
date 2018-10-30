@@ -21,50 +21,23 @@
     <!-- SCRIPTS -->
     <script src='/js/admin.js'></script>
 </head>
-<body class='background-grey'>
-    <!-- NAVBAR -->
-    {{> navbar }}
+<body class='background-red'>
+    <div class="wrapper">
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <!-- BACK TO MAIN WEBSITE -->
-    <div class='container-fluid text-right'>
-        <a href='/dashboard'>
-            <button>Back to main website</button>
-        </a>
-    </div>
-
-    <!-- HEADER -->
-    <h1 class='transparent-ucla-blue'>Admin</h1>
-
-    <!-- MAILING LIST -->
-    <div class='mailing-wrapper'>
-        <h2 class='ucla-blue text-center'>Mailing Lists</h2>
-        <ul class='container mailing-list'>
-            {{#each mailingLists }}
-            <li class='row'>
-                <h3 class='email-list-name text-center'>{{ this.name }} <span class='glyphicon glyphicon-menu-down'></span></h3>
-                <p class='email-list'>{{ this.list }}</p>
-            </li>
-            {{/each}}
-        </ul>
-    </div>
-
-    <!-- FEEDBACK LIST -->
-    <div class='feedback-wrapper'>
-        <h2 class='ucla-blue text-center'>Feedback</h2>
-        <ul class='container-fluid feedback-list'>
-            {{#each feedback}}
-            <li class='row'>
-                <div class='col-sm-3 text-center'>
-                    <p>{{ this.user.firstName }} {{ this.user.lastName }}</p>
-                    <p>{{ this.user.email }}</p>
-                    <p>{{ this.formattedTimestamp }}</p>
-                </div>
-                <div class='col-sm-9'>
-                    <p>{{ this.content }}</p>
-                </div>
-            </li>
-            {{/each}}
-        </ul>
+        <!-- MAILING LIST -->
+        <div class='mailing-wrapper'>
+            <h2 class='mailing-header text-center'>Mailing Lists</h2>
+            <ul class='container mailing-list'>
+                {{#each mailingLists }}
+                <li class='row'>
+                    <h3 class='email-list-name text-center'>{{ this.name }} <span class='glyphicon glyphicon-menu-down'></span></h3>
+                    <p class='email-list'>{{ this.list }}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </body>
 </html>
