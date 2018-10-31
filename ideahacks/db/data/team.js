@@ -13,7 +13,7 @@ module.exports = [
         name: 'Nihar Tamhankar',
         organization: 'IEEE',
         picturePath: '/img/team/Nihar.jpg',
-        linkedin: 'https://www.linkedin.com/in/nihar-tamhankar/',
+        linkedin: 'https://www.linkedin.com/in/nihar-tamhankar/'
       },
       {
         name: 'Saman Hashemipour',
@@ -35,7 +35,7 @@ module.exports = [
         github: 'https://github.com/benhe2011'
       },
       {
-        name: 'Amy Tu',//done
+        name: 'Amy Tu', //done
         organization: 'IEEE',
         picturePath: '/img/team/jeffrey-chan.jpg',
         linkedin: '',
@@ -46,7 +46,7 @@ module.exports = [
         organization: 'Theta Tau',
         picturePath: '/img/team/jeffrey-chan.jpg',
         linkedin: '',
-        github: '',
+        github: ''
       },
       {
         name: 'Jonathan Song',
@@ -97,9 +97,7 @@ module.exports = [
         organization: 'IEEE',
         picturePath: '/img/team/Erin_Pool.jpg',
         linkedin: ''
-      },
-
-
+      }
     ]
   },
   {
@@ -166,7 +164,7 @@ module.exports = [
       {
         name: 'Jingbin Huang',
         organization: 'IEEE',
-        picturePath: '/img/team/Jingbin.jpg',
+        picturePath: '/img/team/jingbin.jpg',
         linkedin: 'https://www.linkedin.com/in/jingbinhuang/'
       },
       {
@@ -269,8 +267,7 @@ module.exports = [
         organization: 'IEEE',
         picturePath: '/img/team/jeffrey-chan.jpg',
         github: ''
-      },
-
+      }
     ]
   }
-]
+];
