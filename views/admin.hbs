@@ -26,9 +26,13 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
+        <div class='text-center'>
+            <img class="mailing-header" src="/img/admin/IH_MailingList.png">
+            <h1 class='description'> Mailing lists categorized by application status</h1>
+        </div>
+
         <!-- MAILING LIST -->
         <div class='mailing-wrapper'>
-            <h2 class='mailing-header text-center'>Mailing Lists</h2>
             <ul class='container mailing-list'>
                 {{#each mailingLists }}
                 <li class='row'>

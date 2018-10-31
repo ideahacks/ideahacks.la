@@ -34,13 +34,6 @@
         </div>
     </div>
 
-    <!-- TAKE ME TO ADMIN -->
-    {{#if user.isAdmin}}
-    <div class='container text-right' style='padding: 80px 0 0 0;'>
-        <a href='/admin'><button>Take me to Admin</button></a>
-    </div>
-    {{/if}}
-
     <div class='container'>
         <img id='welcome-img' src='/img/welcome.png' />
         <h3 id='welcome-name'>{{user.firstName}} {{user.lastName}}</h3>

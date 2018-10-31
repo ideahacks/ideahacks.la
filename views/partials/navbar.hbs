@@ -18,7 +18,7 @@
         <li class='dashboard'><a href='/admin/application-review'>Application Review</a></li>
         <li><a href='/admin'>Mailing Lists</a></li>
         <a href='/dashboard'>
-            <button class='main-button'>MAIN WEBSITE</button>
+            <button class='main-button'>MY DASHBOARD</button>
         </a>
         <!-- <li><a href='/admin/teams'>Teams</a></li>
         <li><a href='/admin/parts'>Parts</a></li> -->
@@ -26,6 +26,11 @@
         <li class='dashboard'><a href='/dashboard/application'>Application</a></li>
         <!-- <li class='dashboard'><a href='/dashboard/parts'>Parts List</a></li> -->
         <li class='dashboard me'><a href='/dashboard/me'>Me</a></li>
+        {{#if user.isAdmin}}
+        <a href='/admin'>
+            <button class='admin-button'>ADMIN</button>
+        </a>
+        {{/if}}
         {{/if}} {{#if onMain}}
         <div class='dropdown'>
             <li><a href='/#about'>About</a></li>
@@ -45,13 +50,16 @@
         {{#if onAdmin}}
         <li><a href='/admin/application-review'>Application Review</a></li>
         <li><a href='/admin'>Mailing Lists</a></li>
-        <li><a href='/dashboard'>Main Website</a></li>
+        <li><a href='/dashboard'>My Dashboard</a></li>
         <!-- <li><a href='/admin/teams'>Teams</a></li>
         <li><a href='/admin/parts'>Parts</a></li> -->
         {{/if}} {{#if onDashboard}}
         <li><a href='/dashboard/application'>Application</a></li>
         <!-- <li><a href='/dashboard/parts'>Parts List</a></li> -->
         <li><a href='/dashboard/me'>Me</a></li>
+        {{#if user.isAdmin}}
+        <li><a href='/admin'>ADMIN</a></li>
+        {{/if}}
         {{/if}} {{#if onMain}}
         <div class='responsive-dropdown'>
             <li><a>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>

@@ -8,7 +8,19 @@
 }
 
 .mailing-header {
-  padding-top: 100px;
+  padding-top: 130px;
+  width: 25%;
+}
+
+.description {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 990px) {
+  .mailing-header {
+    width: 270px;
+  }
 }
 
 /*-------------- FEEDBACK LISTS ----------------*/

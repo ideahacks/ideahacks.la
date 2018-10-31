@@ -18,6 +18,11 @@
   font-weight: bold;
 }
 
+.admin-button {
+  margin-right: 45px;
+  font-weight: bold;
+}
+
 .logo-container {
   display: inline-block;
   padding: 12px 50px;
@@ -28,7 +33,7 @@
 }
 
 .me {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .navbar-list {

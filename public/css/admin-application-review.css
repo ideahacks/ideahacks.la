@@ -5,8 +5,19 @@
 }
 
 .banner {
-  padding-top: 100px;
+  padding-top: 130px;
+  width: 30%;
+}
+
+.description {
   padding-bottom: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 990px) {
+  .banner {
+    width: 300px;
+  }
 }
 
 /* STATS */
