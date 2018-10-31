@@ -13,7 +13,7 @@ module.exports = [
         name: 'Nihar Tamhankar',
         organization: 'IEEE',
         picturePath: '/img/team/Nihar.jpg',
-        linkedin: 'https://www.linkedin.com/in/nihar-tamhankar/',
+        linkedin: 'https://www.linkedin.com/in/nihar-tamhankar/'
       },
       {
         name: 'Saman Hashemipour',
@@ -34,32 +34,32 @@ module.exports = [
         linkedin: 'https://www.linkedin.com/in/ben-c-he/',
         github: 'https://github.com/benhe2011'
       },
-      {
-        name: 'Amy Tu',//done
-        organization: 'IEEE',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: '',
-        github: 'http://github.com/ayemetoo'
-      },
-      {
-        name: 'Anna Zhong',
-        organization: 'Theta Tau',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: '',
-        github: '',
-      },
-      {
-        name: 'Jonathan Song',
-        organization: 'Theta Tau',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: 'https://www.linkedin.com/in/jonathan-song-122b93127/'
-      },
-      {
-        name: 'Hersh Joshi',
-        organization: 'IEEE',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: ''
-      },
+      // {
+      //   name: 'Amy Tu', //done
+      //   organization: 'IEEE',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: '',
+      //   github: 'http://github.com/ayemetoo'
+      // },
+      // {
+      //   name: 'Anna Zhong',
+      //   organization: 'Theta Tau',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: '',
+      //   github: ''
+      // },
+      // {
+      //   name: 'Jonathan Song',
+      //   organization: 'Theta Tau',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: 'https://www.linkedin.com/in/jonathan-song-122b93127/'
+      // },
+      // {
+      //   name: 'Hersh Joshi',
+      //   organization: 'IEEE',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: ''
+      // },
       {
         name: 'Nikki Woo',
         organization: 'IEEE',
@@ -86,20 +86,18 @@ module.exports = [
         picturePath: '/img/team/Bill.jpg',
         linkedin: 'https://www.linkedin.com/in/byanga65/'
       },
-      {
-        name: 'Ronald Liu',
-        organization: 'IEEE',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: ''
-      },
+      // {
+      //   name: 'Ronald Liu',
+      //   organization: 'IEEE',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: ''
+      // },
       {
         name: 'Erin Pool',
         organization: 'IEEE',
         picturePath: '/img/team/Erin_Pool.jpg',
         linkedin: ''
-      },
-
-
+      }
     ]
   },
   {
@@ -169,18 +167,18 @@ module.exports = [
         picturePath: '/img/team/Jingbin.jpg',
         linkedin: 'https://www.linkedin.com/in/jingbinhuang/'
       },
-      {
-        name: 'Chris Wang',
-        organization: 'Theta Tau',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: ''
-      },
-      {
-        name: 'Brian Shih',
-        organization: 'Theta Tau',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: ''
-      },
+      // {
+      //   name: 'Chris Wang',
+      //   organization: 'Theta Tau',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: ''
+      // },
+      // {
+      //   name: 'Brian Shih',
+      //   organization: 'Theta Tau',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: ''
+      // },
       {
         name: 'Tao Lu',
         organization: 'Theta Tau',
@@ -192,13 +190,13 @@ module.exports = [
         organization: 'IEEE',
         picturePath: '/img/team/Jonathan_Myong.jpg',
         linkedin: 'https://www.linkedin.com/in/jonathan-myong-831343121'
-      },
-      {
-        name: 'Kyle Okazaki',
-        organization: 'Theta Tau',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        linkedin: ''
       }
+      // {
+      //   name: 'Kyle Okazaki',
+      //   organization: 'Theta Tau',
+      //   picturePath: '/img/team/jeffrey-chan.jpg',
+      //   linkedin: ''
+      // }
     ]
   },
   {
@@ -263,14 +261,7 @@ module.exports = [
         picturePath: '/img/team/Patrick_Shih.jpg',
         linkedin: 'https://www.linkedin.com/in/shihpatrick/',
         github: 'https://github.com/shihpatrick'
-      },
-      {
-        name: 'Jeffrey Chan',
-        organization: 'IEEE',
-        picturePath: '/img/team/jeffrey-chan.jpg',
-        github: ''
-      },
-
+      }
     ]
   }
-]
+];
