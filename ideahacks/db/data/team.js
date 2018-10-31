@@ -150,7 +150,7 @@ module.exports = [
       {
         name: 'Jacob Ng',
         organization: 'Theta Tau',
-        picturePath: '/img/team/jeffrey-chan.jpg'
+        picturePath: '/img/team/Jacob_Ng.jpg'
       },
       {
         name: 'Jeannie Hur',
@@ -190,7 +190,7 @@ module.exports = [
       {
         name: 'Jonathon Myong',
         organization: 'IEEE',
-        picturePath: '/img/team/jeffrey-chan.jpg',
+        picturePath: '/img/team/Jonathan_Myong.jpg',
         linkedin: 'https://www.linkedin.com/in/jonathan-myong-831343121'
       },
       {
