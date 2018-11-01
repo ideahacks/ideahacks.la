@@ -2,6 +2,7 @@
   background-color: rgb(255, 255, 244);
   padding: 10px 20px;
   border-radius: 10px;
+  margin: 200px 100px;
 }
 
 button {
@@ -22,4 +23,10 @@ button:hover {
 
 body {
   background-color: rgb(221, 128, 100);
+}
+
+@media (max-width: 990px) {
+  .confirm {
+    margin: 150px 10px;
+  }
 }
