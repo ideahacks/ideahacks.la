@@ -28,49 +28,49 @@
 </head>
 <body>
 
-  <div class='wrapper'>
-    <!-- NAVBAR -->
-    {{> navbar }}
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <div class='container'>
-        <img id='welcome-img' src='/img/welcome.png' />
-        <h3 id='welcome-name'>{{user.firstName}} {{user.lastName}}</h3>
-        <hr class='dotted'>
-    </div>
+        <div class='container'>
+            <img id='welcome-img' src='/img/welcome.png' />
+            <h3 id='welcome-name'>{{user.firstName}} {{user.lastName}}</h3>
+            <hr class='dotted'>
+        </div>
 
-    <!-- CHANGE PROFILE INFORMATION-->
-    <div class='container text-center'>
-        <div class='ideahacks-form'>
-            <form class='profile-form'>
-                <p class='profile-form-message'></p>
-                <div class='form-group'>
-                    <div class='row'>
-                        <label class='text-right'>Email</label>
+        <!-- CHANGE PROFILE INFORMATION-->
+        <div class='container text-center'>
+            <div class='ideahacks-form'>
+                <form class='profile-form'>
+                    <p class='profile-form-message'></p>
+                    <div class='form-group'>
+                        <div class='row'>
+                            <label class='text-right'>Email</label>
+                        </div>
+                        <div class='row'>
+                            <input class='text-left' type='email' name='email' value='{{user.email}}' />
+                            <hr class="dotted" />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='row'>
+                            <label class='text-right'>Password</label>
+                        </div>
+                        <div class='row'>
+                            <input class='text-left' name='password' type='Password' />
+                            <hr class='dotted' />
+                        </div>
                     </div>
                     <div class='row'>
-                        <input class='text-left' type='email' name='email' value='{{user.email}}' />
-                        <hr class="dotted" />
+                        <button type='submit' class='save-button'>Save Changes</button>
                     </div>
-                </div>
-                <div class='form-group'>
-                    <div class='row'>
-                        <label class='text-right'>Password</label>
-                    </div>
-                    <div class='row'>
-                        <input class='text-left' name='password' type='Password' />
-                        <hr class='dotted' />
-                    </div>
-                </div>
+                </form>
                 <div class='row'>
-                    <button type='submit' class='save-button'>Save Changes</button>
+                    <a href='/logout'><button>Logout</button></a>
                 </div>
-            </form>
-            <div class='row'>
-                <a href='/logout'><button>Logout</button></a>
             </div>
         </div>
     </div>
-  </div>
 
 </body>
 </html>
