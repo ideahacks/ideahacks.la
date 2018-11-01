@@ -29,9 +29,7 @@
         {{#if user.isAdmin}}
         <a href='/admin'>
             <button class='admin-button'>ADMIN</button>
-        </a>
-        {{/if}}
-        {{/if}} {{#if onMain}}
+        </a> {{/if}} {{/if}} {{#if onMain}}
         <div class='dropdown'>
             <li><a href='/#about'>About</a></li>
             <div class='dropdown-content'>
@@ -59,8 +57,7 @@
         <li><a href='/dashboard/me'>Me</a></li>
         {{#if user.isAdmin}}
         <li><a href='/admin'>ADMIN</a></li>
-        {{/if}}
-        {{/if}} {{#if onMain}}
+        {{/if}} {{/if}} {{#if onMain}}
         <div class='responsive-dropdown'>
             <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
             <div class='responsive-dropdown-content' id='responsive-content'>
