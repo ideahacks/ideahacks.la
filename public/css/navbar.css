@@ -50,7 +50,7 @@
   letter-spacing: 2px;
 
   display: inline-block;
-  padding: 14px 20px 10px;
+  padding: 14px 10px 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -61,7 +61,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#navbar-list a {
+.navbar-list a {
+  padding: 0px 10px 0px;
   color: white;
   font-size: 14px;
 }
