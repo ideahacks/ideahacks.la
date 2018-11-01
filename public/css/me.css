@@ -1,43 +1,92 @@
+body {
+  background-color: #dd8064;
+  text-transform: uppercase;
+}
+
+#welcome-img {
+  margin-top: 105px;
+  margin-bottom: 20px;
+  width: 28%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome-name {
+  color: white;
+  text-align: center;
+  text-transform: none;
+  font-family: 'Josefin Sans';
+}
+
+.dotted {
+  border: 0 none;
+  border-top: 2px dashed #ffb718;
+  background: none;
+  height: 0;
+  width: 40%;
+  margin-top: 2px;
+}
+
 /*----- CHANGE PROFILE INFORMATION -------*/
+.ideahacks-form {
+  background-color: #fffff4;
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+  border-radius: 18px;
+  margin: 20px 15%;
+}
+
+.ideahacks-form label {
+  color: #dd8064;
+  text-decoration: bold;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
 
 .ideahacks-form input,
 .ideahacks-form input:focus {
-  padding: 2px 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 17px;
+  color: #dd8064;
+  text-align: center;
+  text-decoration: bold;
+  width: 60%;
 }
 
-.profile-form {
-  margin: 30px 0 80px;
+.text-center button {
+  width: 35%;
+  text-transform: uppercase;
+  margin: 1.5vh 0% 2vh;
+  font-weight: bold;
 }
 
-/*----------- OTHER CONTROLS -------------*/
-
-.button-container {
-  padding: 20px 60px;
-  margin: 0 10px;
-  border: solid 2px black;
-  border-radius: 10px;
-  display: inline-block;
+.save-button {
+  background-color: #95b9cd;
+  border-color: #95b9cd;
 }
 
-.button-container button {
-  display: block;
-  margin: 20px auto;
+.save-button:hover {
+  color: #95b9cd;
 }
 
-/* ---------- FEEDBACK FORM --------------*/
-
-.feedback-form {
-  padding: 50px 0;
+.logout:hover {
+  color: #ffb718;
 }
 
-.feedback-form textarea {
-  /*width: 50%;*/
-  margin: 10px 0;
-  max-width: 800px;
-  width: 80%;
-}
-
-.feedback-form button {
-  display: block;
-  margin: 10px auto;
+@media (max-width: 991px) {
+  #welcome-img {
+    width: 250px;
+  }
+  .dotted {
+    width: 80%;
+  }
+  .text-center button {
+    width: 70%;
+  }
 }

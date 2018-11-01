@@ -4,6 +4,22 @@
   }
 }
 
+.banner {
+  padding-top: 130px;
+  width: 30%;
+}
+
+.description {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 990px) {
+  .banner {
+    width: 300px;
+  }
+}
+
 /* STATS */
 .stats-box-container {
   display: flex;
@@ -18,6 +34,7 @@
   padding: 20px 0;
   width: 200px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 .stats-box h1 {
@@ -36,6 +53,7 @@
 }
 
 .application {
+  border-radius: 10px;
   padding: 15px 40px;
   margin: 20px 0;
   color: white;
@@ -53,7 +71,7 @@
 
 .application.accepted,
 .accepted-box {
-  background-color: #34c13e;
+  background-color: #66cc66;
 }
 
 .application.pending,

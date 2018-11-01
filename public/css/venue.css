@@ -1,0 +1,90 @@
+.top-container {
+  background-color: rgb(221, 128, 100);
+  padding-bottom: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  min-height: 95vh;
+}
+
+.venue-title {
+  display: block;
+  margin: auto;
+  margin-top: 125px;
+  width: 205px;
+}
+
+.venue-image {
+  width: 95%;
+  padding: 0px;
+}
+
+.bottom-container {
+  background-color: white;
+  overflow: hidden;
+  padding: 0px 60px;
+  display: none;
+}
+
+.small-container {
+  padding: 20px 20px;
+  overflow: hidden;
+}
+
+.image-container {
+  padding-bottom: 30px;
+}
+
+.yellow-border {
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(255, 183, 24);
+}
+
+#text {
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.dir-link {
+  text-decoration: underline;
+  color: white;
+}
+
+.dir-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 20px;
+  padding: 7px 0px 80px 0px;
+}
+
+.small-section-title {
+  padding-bottom: 15px;
+  font-size: 19px;
+}
+
+.small-section {
+  font-size: 15px;
+}
+
+#light-yellow h1,
+#light-yellow h2,
+#light-yellow p {
+  color: #dd8064;
+}
+
+@media (max-width: 1000px) {
+  .venue-image {
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  .top-container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}

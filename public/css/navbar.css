@@ -1,60 +1,135 @@
-body {
-  padding-top: 75px; /* size of the navbar */
-}
-
 .myNavbar {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 
   display: block;
   width: 100%;
-  height: 75px;
-  overflow: hidden;
-  background-color: white;
+  height: 66px;
+  overflow: visible;
 
   transition: background-color 0.3s ease;
+  background-color: rgb(221, 128, 100);
 }
 
-.brand-container {
+.main-button {
+  margin-right: 20px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.admin-button {
+  margin-right: 45px;
+  font-weight: bold;
+}
+
+.logo-container {
   display: inline-block;
   padding: 12px 50px;
 }
 
-.brand-container img {
-  width: 300px;
+.dashboard {
+  margin-top: 12px;
 }
 
-.nav-list {
+.me {
+  margin-right: 20px;
+}
+
+.navbar-list {
   float: right;
   list-style: none;
   margin: 0;
   padding: 0 25px;
 }
 
-.nav-list li {
-  font-family: 'Source Sans Pro', 'Helvetica Neueu', sans-serif;
-  font-size: 18px;
+.navbar-list li {
   font-weight: bold;
+
   text-transform: uppercase;
   letter-spacing: 2px;
 
   display: inline-block;
-  padding: 23px 25px 27px;
+  padding: 14px 10px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-list li:hover {
-  text-decoration: underline;
+.navbar-list li:hover,
+.dropdown:hover {
+  background-color: rgb(195, 109, 83);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ICON AND ICON ANIMATION */
+.navbar-list a {
+  padding: 0px 10px 0px;
+  color: white;
+  font-size: 14px;
+}
+
+.navbar-list a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(195, 109, 83);
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+}
+
+.dropdown-content li {
+  padding: 10px 3px 10px 5px;
+}
+
+.dropdown-content a:hover {
+  color: rgb(229, 192, 181);
+  transition: color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button {
+  background-color: rgb(255, 183, 24);
+  border: 2px solid rgb(255, 183, 24);
+  padding: 10px 18px 5px 19px;
+  border-radius: 7px;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+#login:hover {
+  background-color: rgb(221, 128, 100);
+}
 
 .navbar-icon {
   display: none;
   cursor: pointer;
   position: absolute;
   right: 30px;
-  padding: 16px 0 0 0;
+  padding: 14px 20px 0 0;
 }
 
 .bar1,
@@ -62,54 +137,90 @@ body {
 .bar3 {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: white;
   margin: 6px 0;
   transition: 0.4s;
 }
 
+/* Rotate first bar */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
+/* Fade out the second bar */
 .change .bar2 {
   opacity: 0;
 }
 
+/* Rotate last bar */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-/* MOBILE NAVBAR LIST */
-
-.mobile-nav-list {
+.mobile-navbar-list {
   position: fixed;
   z-index: 2;
-  top: 75px;
+  top: 66px;
   width: 100%;
   height: 0;
   overflow-x: hidden;
 
-  background-color: white;
+  background-color: rgb(221, 128, 100);
+  opacity: 0.8;
   list-style: none;
   padding: 0;
 
   transition: 0.3s;
 }
 
-.mobile-nav-list li {
+.mobile-navbar-list li {
   padding: 15px 50px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-@media (max-width: 1190px) {
+.mobile-navbar-list a {
+  margin-left: 28px;
+  color: white;
+}
+
+.mobile-navbar-list a:hover {
+  text-decoration: none;
+}
+
+.mobile-navbar-list li:hover {
+  background-color: rgb(195, 109, 83);
+}
+
+.responsive-dropdown-content {
+  display: none;
+  background-color: rgb(195, 109, 83);
+}
+
+.responsive-dropdown-content a:hover {
+  color: rgb(229, 192, 181);
+}
+
+.responsive-dropdown .responsive-dropdown-content.active {
+  display: block;
+}
+
+#dropdown-arrow {
+  float: right;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s ease;
+  margin-right: 20px;
+}
+
+@media (max-width: 980px) {
   .navbar-icon {
     display: inline-block;
   }
-  .nav-list {
+  .navbar-list {
     display: none;
   }
 }
@@ -124,22 +235,7 @@ body {
   .navbar-icon {
     right: 20px;
   }
-  .mobile-nav-list li {
+  .mobile-navbar-list li {
     padding: 15px 20px;
   }
-}
-
-/* LINK STUFF */
-
-.myNavbar li a,
-.myNavbar li a:hover,
-.myNavbar li a:visited,
-.brand-container a,
-.brand-container a:hover,
-.brand-container a:visited,
-.mobile-nav-list li a,
-.mobile-nav-list li a:hover,
-.mobile-nav-list li a:visited {
-  color: black;
-  text-decoration: none;
 }

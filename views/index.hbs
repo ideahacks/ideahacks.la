@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -23,188 +23,238 @@
     <script src='/js/navbar-scroll.js'></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- NAVBAR -->
-    {{> navbar }}
 
-    <!-- HERO BANNER -->
-    <div id="showcase" class="banner text-center">
-        <img src="/img/index/LogoRedesign-yellow.svg" />
-        <p>
-            <span class="location"><a href='http://bit.ly/2xFd2v3' target='_blank'>@UCLA Ackerman Grand Ballroom</a></span> <br />
-            <span class="white">January 18-20, 2019</span> <br />
-            <!-- <span class='white'>Applications due December 23rd, 2017!</span> <br /> -->
-            <!-- <span class="white">Applications open Fall 2017</span> <br /> -->
-            <!-- <a href='/registration'><button>Apply Now!</button></a> -->
-        </p>
-    </div>
+    <div class='wrapper'>
 
-    <!-- ABOUT -->
-    <div class="container" id="about">
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <div id="left">
-                    <span id="tf">The first</span>
-                    <span id="hh">HARDWARE<br/>&ensp;HACKATHON</span>
-                    <span id="ot">on the</span>
-                    <span id="wc">west coast</span>
-                </div>
+        <!-- NAVBAR -->
+        {{> navbar }}
+
+        <!-- BANNER -->
+        <div class='container-fluid home-banner'>
+
+            <div class='col-md-7'>
+                <img class='banner-graphic' src="/img/index/main-graphic.png">
             </div>
-            <div class="col-12 col-lg-6">
-                <h3>About</h3>
-                <p>For the fifth time in history, IEEE at UCLA and Theta Tau at UCLA are pleased to present to you California's largest college hardware-focused hackathon ever.</p>
-                <p>At IDEA Hacks we provide our hackers with tools, such as 3D printers, soldering stations, and other equipment free of charge. Not only will these hackers code, but also they will create tangible products from scratch in one weekend.</p>
-                <p>The theme for this year's hackathon is Travel Upgrade! This means that you will be challenged to create something that relates to upgrading the challenges found in commuting, travelling, and more.</p>
-                <a href="/team"><button>MEET THE TEAM</button></a>
-                <!-- <div class='hosting'>
-                    <h3 style='text-align: center;'>Hosted By</h3>
-                    <div class="col-xs-6" style='text-align: right;'>
-                        <img src="/img/index/IMG_1531.JPG" id="ieee"/>
-                    </div>
-                    <div class="col-xs-6">
-                        <img src="/img/index/IMG_1530.JPG" id="tt"/>
-                    </div>
-                </div> -->
+
+            <div class='col-md-5 text-right banner-details'>
+                <img class='header-graphic' src="/img/index/ideahacks-header.png">
+                <img class='header-graphic-centered' src="/img/index/centered-travel.png">
+                <p class="date">January 18 - 20, 2019</p>
+                <p class="location">Grand Ackerman Ballroom, UC Los Angeles</p>
+                <a href='/registration'><button class='apply'>Apply Now</button></a>
             </div>
+
         </div>
-    </div>
 
-    <!-- SCHEDULE -->
-    <div class="container-fluid background-grey schedule" id="schedule">
-        <h1 class='transparent-ucla-blue'>SCHEDULE</h1>
-        <div class='schedule-content container' id="schedule-content">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class='day-header'>
-                        <h3 class='ucla-gold'>Friday</h3>
-                        <h2 class='ucla-blue'>Day 1</h2>
-                    </div>
-                    <div class="dots-list">
-                        <ol>
-                            <li>
-                                <p><strong>5:00PM - 7:00PM</strong> <br/>Registration & Team Formation</p>
-                            </li>
-                            <li>
-                                <p><strong>8:00PM - 9:00PM</strong><br/>Opening Speeches & Presentations</p>
-                            </li>
-                            <li>
-                                <p><strong>9:00PM</strong> <br/>Hacking Begins</p>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class='day-header'>
-                        <h3 class='ucla-gold'>Saturday</h3>
-                        <h2 class='ucla-blue'>Day 2</h2>
-                    </div>
-                    <div class="dots-list">
-                        <ol>
-                            <li>
-                                <p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p>
-                            </li>
-                            <li>
-                                <p><strong>12:00PM - 1:00PM</strong> <br/> Lunch</p>
-                            </li>
-                            <li>
-                                <p><strong>6:00PM - 8:00PM</strong> <br/> Dinner</p>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class='day-header'>
-                        <h3 class='ucla-gold'>Sunday</h3>
-                        <h2 class='ucla-blue'>Day 3</h2>
-                    </div>
-                    <div class="dots-list">
-                        <ol>
-                            <li>
-                                <p><strong>7:00AM - 11:00AM</strong> <br/> Breakfast</p>
-                            </li>
-                            <li>
-                                <p><strong>9:00AM</strong> <br/> Hacking Ends</p>
-                            </li>
-                            <li>
-                                <p><strong>9:00AM - 9:30AM</strong> <br/> Exhibition Setup</p>
-                            </li>
-                            <li>
-                                <p><strong>9:30AM - 11:00AM</strong> <br/> Judging</p>
-                            </li>
-                            <li>
-                                <p><strong>11:00AM - 1:00PM</strong> <br/> Closing & Awards</p>
-                            </li>
-                        </ol>
-                    </div>
+        <div id='about' class='red-box'></div>
+
+        <!-- ABOUT -->
+
+        <div class='container-fluid about-section'>
+            <h1 class='theme-red section-header'> ABOUT</h1>
+            <div class='col-md-7'>
+                <p class='description'>
+                    For the sixth time in history, IEEE at UCLA and Theta Tau at UCLA are pleased to present to you California's largest college hardware-focused hackathon ever. <br/><br/> At IDEA Hacks we provide our hackers with tools, such as 3D printers, soldering stations, and other equipment free of charge. Not only will these hackers code, but also they will create tangible products from scratch in one weekend. <br/><br/> The theme for this year's hackathon is Travel Upgrade! This means that you will be challenged to create something that relates to upgrading the challenges found in commuting, travelling, and more.
+                </p>
+            </div>
+            <div class='col-md-5'>
+                <div class='home-video'>
+                    <video width='400px' controls>
+                   <source src='ieee_final_edit.mp4'>
+                   </video>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- FAQ -->
-    <div class="container faq" id="faq">
-        <h1 class='transparent-ucla-gold'>FAQ</h1>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-6">
-                <section>
-                    <h2 class='ucla-gold background-transparent-ucla-gold'>General</h2>
-                    <h3>Who can attend?</h3>
-                    <p>As we are still a young event, IDEA Hacks is primarily looking for UCLA students. However, all hackers are encouraged to apply as exceptions made on an application basis.</p>
-                    <h3>I don't know anything about hardware!</h3>
-                    <p>You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. There will also be mentors and other hardware experts ready to assist those who are having trouble bringing their hacks to life.</p>
-                </section>
-                <section>
-                    <h2 class='ucla-gold background-transparent-ucla-gold'>Accommodations</h2>
-                    <h3>How much does it cost?</h3>
-                    <p>IDEA Hacks costs absolutely nothing to participate in. There is no reason not to come out, learn something new, and have fun!</p>
-                    <h3>What should I bring?</h3>
-                    <p>A valid ID is required for admission into Ackerman Grand Ballroom, so don't forget to bring it! If you don't live around UCLA, we recommend bringing necessary toiletries and a sleeping bag. We will have a sleeping/break room for hackers that want to relax and get some fresh air.</p>
-                    <h3>Will food be provided?</h3>
-                    <p>Yes! Meals for all of the days of the hackathon will be provided for all hackers and participants. Please notify us of allergies or food preferences within your application and we'll do our best to accomodate.</p>
-                    <h3>Will there be a free shirt?</h3>
-                    <p>Yes! Very free, very shirt. Specify your size on our application.</p>
-                    <h3>How about travel costs?</h3>
-                    <p>Unfortunately, we will not be able to cover transportation costs for this year's event. If you plan on bringing a vehicle, we will include a map of UCLA's parking lots.</p>
-                </section>
+        <div id='schedule' class='white-box'></div>
+
+        <!-- SCHEDULE -->
+
+        <div class='container-fluid schedule-section'>
+            <h1 class='theme-offwhite section-header'> SCHEDULE </h1>
+
+            <div class='col-md-4'>
+                <h2 class='day text-center'>Friday, January 18</h2>
+                <div class='schedule'>
+
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Registration & Team Formation</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>6 - 8 PM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-xs-5">
+                            <p>Opening Speeches</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>8 - 9 PM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Hacking Begins</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>9 PM</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6">
-                <section>
-                    <h2 class='ucla-gold background-transparent-ucla-gold'>Applications</h2>
-                    <h3>How do I apply?</h3>
-                    <p>Hackers can apply on this website! Applications usually open in the middle of Fall quarter and stay open up until a couple weeks before the hackathon. Make sure to keep an eye out for IDEA Hacks notifications on when to start applying. Applications are reviewed and accepted on a first come first serve basis, so apply early!</p>
-                    <h3>What if I don't have a team?</h3>
-                    <p>You are free to hack alone, but that's no fun! We encourage everyone to be on teams of around 4-5 hackers. Not only will you have more fun, but more equipment will be available for your use. That being said, we do hold a team formation session before hacking begins so that hackers can be successful in finding the right teammates.</p>
-                </section>
-                <section>
-                    <h2 class='ucla-gold background-transparent-ucla-gold'>Miscellaneous</h2>
-                    <h3>What tools and hardware will be provided for my team?</h3>
-                    <p>If you would like to see a specific part or device at the hackathon, you can specify so on your application and we'll do our best to accomodate! When applications are released, there'll a listing of parts that you can look through.</p>
-                    <h3>Where can I find the rubric?</h3>
-                    <p>We're still working on the rubric, but we'll put it up as soon as we're done!</p>
-                    <h3>How can I check out parts during the Hackathon?</h3>
-                    <p>During the hackathon, you can simply approach our parts station and request a part from one of our volunteers. If in stock, our volunteers will check the part out to your team.</p>
-                    <h3>How do I contact IDEA Hacks?</h3>
-                    <p>Email us at <a href='mailto:team@ideahacks.la'>team@ideahacks.la!</a> We would love to hear from you!</p>
-                </section>
+            <div class='col-md-4'>
+                <h2 class='day text-center'>Saturday, January 19</h2>
+                <div class='schedule'>
+
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Breakfast Served</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>7 - 10 AM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-xs-5">
+                            <p>Lunch Served</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>12 - 2 PM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Dinner Served</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>6:30 - 8 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-md-4'>
+                <h2 class='day text-center'>Sunday, January 20</h2>
+                <div class='schedule'>
+
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Breakfast Served</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>7 - 10 AM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-xs-5">
+                            <p>Hacking Ends</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>9 AM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Exhibition Setup</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>9 - 9:30 AM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Judging</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>9:30 - 11 AM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Judging Finals</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>11 - 12:30 PM</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-5'>
+                            <p>Closing & Awards</p>
+                        </div>
+                        <div class="col-xs-5 col-xs-offset-2 text-right">
+                            <p>12:30 - 1 PM</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div id='faq' class='red-box'></div>
+
+        <!-- FAQ -->
+
+        <div class='container-fluid faq-section'>
+            <h1 class='theme-red section-header'> FAQ </h1>
+            <div class='questions theme-red col-md-6'>
+                <h2>WHO CAN ATTEND?</h2>
+                <p>All students interested are encouraged to apply. Although we primarily cater to UCLA engineering students, every application will be considered.</p>
+                <h2>WHAT IF I DON'T KNOW ANYTHING ABOUT HARDWARE?</h2>
+                <p>You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. There will also be mentors and other hardware experts ready to assist those who are having trouble bringing their hacks to life.</p>
+                <h2>WHAT DO HACKERS GAIN FROM PARTICIPATING?</h2>
+                <p>In addition to being completely free, we will provide hackers free meals, a free shirt, a room to sleep in, and a chance to win a prize! The top three teams’ members will each receive a prize. Even more valuable, at our hackathon you will gain project experience and learn something new!</p>
+                <h2>WHAT SHOULD I BRING?</h2>
+                <p>A valid ID such as a student ID is required for admission into Ackerman Grand Ballroom. If you don't live around UCLA, we recommend bringing necessary toiletries and a sleeping bag.</p>
+                <h2>WHAT ABOUT TRAVEL COSTS?</h2>
+                <p>Unfortunately, we will not be able to cover transportation costs for this year's event. If you’re looking for details about the venue, look here. [insert link to “venue” page]</p>
+                <h2>HOW DO I CONTACT IDEA HACKS?</h2>
+                <p>Email us at <a class='faq-link' href='mailto:team@ideahacks.la'>team@ideahacks.la</a>! You can also like our Facebook page and follow us on Instagram.</p>
+            </div>
+            <div class='questions theme-red col-md-6'>
+                <h2>HOW DO I APPLY?</h2>
+                <p>Hackers can apply on this website! Applications will be out by early November, and will close in mid-December. To get an email reminder once the application gets sent out, like our Facebook page here. [link to Facebook page] Applications are reviewed and accepted on a first come first served basis, so apply early!</p>
+                <h2>WHAT IF I DON'T HAVE A TEAM?</h2>
+                <p>You are free to hack alone, but that's no fun! We encourage everyone to be on teams of around 4-5 hackers. If you do not sign up with a team, we hold a team formation session before hacking begins.</p>
+                <h2>WHAT TOOLS AND HARDWARE WILL BE PROVIDED FOR MY TEAM?</h2>
+                <p>If you would like to see a specific part or device at the hackathon, you can specify it on your application and we'll do our best to accommodate! When applications are released, we will also release a list of parts. In addition, keep in mind that you are not allowed to bring any hardware of your own to the hackathon.</p>
+                <h2>HOW CAN I CHECK OUT PARTS DURING THE HACKATHON?</h2>
+                <p>During the hackathon, you can simply approach our parts station and request a part from one of our volunteers. If it’s in stock, our volunteers will check the part out to your team.</p>
+                <h2>HAVE MORE QUESTIONS?</h2>
+                <p>Check out our <a class='faq-link' href='/extended-faq'>extended FAQ</a>.</p>
+            </div>
+        </div>
+
+        <div id='sponsors' class='white-box'></div>
+
+        <!-- SPONSORS -->
+
+        <div class='container-fluid sponsors-section'>
+            <h1 class='theme-offwhite section-header'> SPONSORS </h1>
+            <p>Interested in sponsoring? <br/> Check out our sponsorship brochure <a class='brochure-link' href='/files/19-sponsorship-packet.pdf' target='_blank'>here</a>!</p>
+            <div class='text-center'>
+                <a href='http://www.ti.com/' target='_blank'><img class='platinum-logo' src="/img/company_logos/ti.png"></a>
+                <a href='https://www.northropgrumman.com/' target='_blank'><img class='platinum-logo' src="/img/company_logos/northropgrumman.png"></a>
+                <a href='https://microduinoinc.com/' target='_blank'><img class='platinum-logo' src="/img/company_logos/microduino.png"></a>
+            </div>
+            <div class='text-center'>
+
+                <a href='https://www.qualcomm.com/' target='_blank'><img class='gold-logo' src="/img/company_logos/qualcomm.png"></a>
+            </div>
+            <div class='text-center'>
+                <a href='https://www.bjsrestaurants.com/' target='_blank'><img class='small-logo' src="/img/company_logos/bjs.png"></a>
+                <a href='http://bellapita.com/' target='_blank'><img class='small-logo' src="/img/company_logos/bellapita.png"></a>
+                <a href='https://www.mammachia.com/' target='_blank'><img class='small-logo' src="/img/company_logos/mamma_chia.png"></a>
+                <a href='https://rhythmsuperfoods.com/' target='_blank'><img class='small-logo' src="/img/company_logos/rhythm.png"></a>
+                <a href='https://amplifysnackbrands.com' target='_blank'><img class='small-logo' src="/img/company_logos/amplify.png"></a>
+                <a href='https://800degrees.com/' target='_blank'><img class='small-logo' src="/img/company_logos/800.png"></a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        {{> footer }}
+
     </div>
 
-    <!-- SPONSORS -->
-    <div class='background-grey sponsors container-fluid' id='sponsors'>
-        <h1 class='transparent-ucla-blue'>Sponsors</h1>
 
-        <!--         {{#each sponsorsData}}
-        <div class='row sponsor-row text-center {{this.tier}}'>
-            {{#each this.sponsors}}
-            <a href='{{this.website}}' target='_blank'><img src='{{this.logo}}' style='max-width: {{this.maxWidth}};' /></a> {{/each}}
-        </div>
-        {{/each}} -->
-
-        <div class='sponsor-message'>
-            <h2 class='ucla-blue'>Interested in Sponsoring?</h2>
-            <p>View and download our sponsorship packet <a href='/files/19-sponsorship-packet.pdf' target='_blank'>here!</a></p>
-            <p>Contact us at <a href='mailto:sponsor@ideahacks.la'>sponsor@ideahacks.la</a> for more information</p>
-        </div>
-    </div>
 </body>
 </html>

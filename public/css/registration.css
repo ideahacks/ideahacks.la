@@ -1,108 +1,107 @@
-/* GLOBAL STUFF */
-.sign_up,
-.no_account_register {
-  font-family: 'Source Sans Pro';
-}
-
 /* FULL BODY STUFF */
 .fullscreen {
   height: 100%;
 }
 
 body {
-  background: linear-gradient(rgba(0, 50, 160, 0.7), rgba(0, 50, 160, 0.7)),
-    url(/img/registration/startup-photos.jpg) no-repeat center center scroll;
-  background-size: cover;
+  background-color: rgb(221, 128, 100);
 }
 
-/* LOGO */
-.logo {
-  margin: 25px 0 0 50px;
-  width: 300px;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    margin: 25px auto;
-  }
-}
-
-/* REGISTRATION BOX */
-.box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  max-width: 900px;
-  background-color: white;
-  border-radius: 15px;
-  padding: 30px 0px;
-  text-align: center;
+.forgot-pass:hover {
+  color: white;
 }
 
 /* COMPUTER IMAGE */
-.computer_picture img {
-  width: 300px;
-  padding-top: 10px;
-}
-
-@media (max-width: 991px) {
-  .computer_picture {
-    display: none;
-  }
+.main_pic img {
+  width: 90%;
+  margin: 140px 0px 100px 70px;
 }
 
 /* FORM SIDE */
-.words {
-  padding: 20px 40px;
+.form-side {
+  align-items: center;
+  justify-content: center;
+  margin-top: 160px;
+  padding-right: 0px;
+}
+
+.form-side p {
+  text-align: center;
+}
+
+.login {
+  background-color: rgb(255, 183, 24);
+  margin-top: 15pt;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 12px;
+  margin-bottom: 10pt;
+  width: 80%;
+  height: 40px;
+  padding: 10px;
 }
 
 .register {
-  color: #ffb718;
-  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
-  letter-spacing: 2px;
-  background-color: #fff3e6;
-  font-size: 30px;
-  padding: 0 20px;
-  margin-bottom: 25px;
+  background-color: #95b9cd;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  border-color: #95b9cd;
+  border-radius: 12px;
+  margin-bottom: 10pt;
+  width: 80%;
+  height: 40px;
+  padding: 10px;
+}
+
+.ideahacks-form {
+  margin-left: 6vh;
+}
+
+.ideahacks-form label {
+  margin-top: 10pt;
   display: inline-block;
 }
 
-.ideahacks-form input,
-.ideahacks-form input:focus,
-.ideahacks-form input[readonly] {
-  font-family: 'Source Sans Pro';
-  font-size: 15px;
-
-  padding: 5px 0;
-  margin-bottom: 15px;
-
-  border-radius: 0;
-  border: none;
-  border-bottom: solid #d8d8d8 1px;
-
-  box-shadow: none;
-  background-color: white;
-  display: block;
-  width: 100%;
-
-  outline: none;
-}
-
-.words button {
-  margin: 20px 0;
-}
-
-.no_account_register {
-  color: black;
-  font-size: 15px;
+.form-control {
+  height: 40px;
 }
 
 /* LINK STUFF */
 a,
-a:hover,
 a:active {
   text-decoration: none;
-  color: #ffb718;
+  color: white;
+  font-style: bold;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p,
+button {
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  line-height: 18px;
+  color: white;
+}
+
+p {
+  margin-right: 20%;
+}
+
+@media (max-width: 991px) {
+  .main_pic {
+    display: none;
+  }
+
+  .ideahacks-form {
+    margin-left: 15%;
+  }
 }

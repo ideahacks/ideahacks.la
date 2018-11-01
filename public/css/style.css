@@ -1,140 +1,38 @@
-/* GLOBAL STYLESHEET: STYLE.CSS
- * This stylesheet is meant to included on mostly all pages so that all pages
- * conform to a similar style, such as fonts and text sizing.
- * Please be cautious with only including global stylings in this file
- */
+p,
+h1,
+h2,
+button,
+li {
+  font-family: 'Josefin Sans';
+}
 
 body {
-  margin: 0;
+  background-color: rgb(236, 187, 172);
 }
 
-/* COLORS */
-.transparent-ucla-blue {
-  color: rgba(49, 133, 192, 0.2);
+.theme-red {
+  color: rgb(221, 128, 100);
 }
 
-.transparent-ucla-gold {
-  color: rgba(255, 183, 24, 0.2);
+.theme-offwhite {
+  color: rgb(255, 255, 244);
 }
 
-.ucla-blue {
-  color: #3185c0;
-}
-
-.ucla-gold {
-  color: #ffb718;
-}
-
-.white {
+.theme-white {
   color: white;
 }
 
-/* TEXT */
-h1.transparent-ucla-blue,
-h1.transparent-ucla-gold {
-  font-family: 'Source Sans Pro';
-  font-weight: bold;
-  font-style: italic;
-  font-size: 150px;
-
-  text-align: center;
-  text-transform: uppercase;
-
-  margin: 0;
-  padding: 0;
+/*********** BACKGROUNDS **************************/
+.background-light-red {
+  background-color: rgb(236, 187, 172);
 }
 
-@media (max-width: 850px) {
-  h1.transparent-ucla-blue,
-  h1.transparent-ucla-gold {
-    font-size: 80px;
-  }
+.background-red {
+  background-color: #dd8064;
 }
 
-h2 {
-  font-family: 'Courier New', sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  margin: 0;
-}
-
-h3 {
-  font-family: 'Source Sans Pro', sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-h4 {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-p {
-  font-family: 'Source Sans Pro', sans-serif;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-/* BACKGROUNDS */
-.background-white {
-  background-color: white;
-}
-
-.background-grey {
-  background-color: #fafafa;
-}
-
-.background-transparent-ucla-gold {
-  background-color: rgba(255, 183, 24, 0.2);
-}
-
-/* BUTTON */
-button {
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: 'Source Sans Pro', sans-serif;
-
-  background-color: #ffb718;
-  color: white;
-
-  border: solid 2px #ffb718;
-  border-radius: 5px;
-  outline: none;
-
-  padding: 10px 60px;
-  margin: 10px 0;
-
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: transparent;
-  color: #ffb718;
-}
-
-/* LINKS */
-a,
-a:hover,
-a:focus {
-  text-decoration: none;
-  color: #ffb718;
-  font-size: 18px;
-}
-
-/* LIST ELEMENTS */
-ul,
-ol {
-  list-style: none;
-  padding: 0;
-}
-
-/* WRAPPERS */
-
-.content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 10px;
+.wrapper,
+.myNavbar {
+  max-width: 1280px;
+  margin: auto;
 }

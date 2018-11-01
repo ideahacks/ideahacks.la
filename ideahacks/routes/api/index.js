@@ -3,7 +3,6 @@ const apiRouter = express.Router()
 const userApiHandlers = require('./users.js')
 const partApiHandlers = require('./parts.js')
 const h = require('../../helpers').authHelpers
-const feedbackHandlers = require('./feedback.js')
 
 // gets all users within the database
 apiRouter.get('/users', h.isAdmin, userApiHandlers.getUsers)
@@ -39,7 +38,5 @@ apiRouter.post(
 
 // Returns a list of teams that have a certain part
 apiRouter.get('/parts/owners/:id', h.isAdmin, partApiHandlers.getPartOwners)
-
-apiRouter.post('/feedback', h.isVerified, feedbackHandlers.postFeedback)
 
 module.exports = apiRouter

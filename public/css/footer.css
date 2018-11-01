@@ -1,0 +1,19 @@
+.myFooter {
+  background-color: rgb(255, 255, 244);
+  text-align: center;
+}
+
+#fb {
+  width: 40px;
+  margin: 20px 10px;
+}
+
+#mail {
+  width: 29px;
+  margin: 20px 50px 22px 50px;
+}
+
+#insta {
+  width: 26px;
+  margin: 20px 16px;
+}
