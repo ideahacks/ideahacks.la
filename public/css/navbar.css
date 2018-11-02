@@ -50,7 +50,7 @@
   letter-spacing: 2px;
 
   display: inline-block;
-  padding: 14px 10px 10px;
+  padding: 14px 22px 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -62,7 +62,6 @@
 }
 
 .navbar-list a {
-  padding: 0px 10px 0px;
   color: white;
   font-size: 14px;
 }
@@ -93,7 +92,7 @@
 }
 
 .dropdown-content li {
-  padding: 10px 3px 10px 5px;
+  padding: 10px 0px 10px 5px;
 }
 
 .dropdown-content a:hover {
@@ -219,9 +218,13 @@ button:hover {
 @media (max-width: 980px) {
   .navbar-icon {
     display: inline-block;
+    padding-right: 0px;
   }
   .navbar-list {
     display: none;
+  }
+  .logo-container {
+    padding: 12px 20px;
   }
 }
 
