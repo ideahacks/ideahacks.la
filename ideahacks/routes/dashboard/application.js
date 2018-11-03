@@ -6,13 +6,6 @@ const getApplication = (req, res) => {
 }
 
 const postApplication = (req, res) => {
-  if (req.body.teammates !== undefined && req.body.teammates.length >= 1 && req.body.hasTeam === 'NO') {
-    return res.json({
-      status: 'failure',
-      message: 'You have a team!'
-    })
-  }
-
   let oldHasApplicationStatus = req.user.hasApplication
   for (let key in req.body) {
     req.user[key] = req.body[key]
