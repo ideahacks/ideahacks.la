@@ -93,6 +93,12 @@ p {
   margin-top: 0px;
 }
 
+.center-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .team-photo {
   width: 100%;
   max-width: 350px;
