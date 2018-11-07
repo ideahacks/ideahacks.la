@@ -143,7 +143,7 @@ p {
 
 @media (max-width: 1000px) {
   .container-fluid {
-    padding: 0px 35px;
+    padding: 0px 20px;
   }
   .header {
     width: 140px;
