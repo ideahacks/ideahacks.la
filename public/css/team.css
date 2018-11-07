@@ -93,6 +93,12 @@ p {
   margin-top: 0px;
 }
 
+.center-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .team-photo {
   width: 100%;
   max-width: 350px;
@@ -137,7 +143,7 @@ p {
 
 @media (max-width: 1000px) {
   .container-fluid {
-    padding: 0px 35px;
+    padding: 0px 20px;
   }
   .header {
     width: 140px;
