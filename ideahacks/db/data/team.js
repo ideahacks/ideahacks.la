@@ -34,13 +34,13 @@ module.exports = [
         linkedin: 'https://www.linkedin.com/in/ben-c-he/',
         github: 'https://github.com/benhe2011'
       },
-      // {
-      //   name: 'Amy Tu', //done
-      //   organization: 'IEEE',
-      //   picturePath: '/img/team/jeffrey-chan.jpg',
-      //   linkedin: '',
-      //   github: 'http://github.com/ayemetoo'
-      // },
+      {
+        name: 'Amy Tu',
+        organization: 'IEEE',
+        picturePath: '/img/team/Amy_Tu.jpg',
+        linkedin: '',
+        github: 'http://github.com/ayemetoo'
+      },
       // {
       //   name: 'Anna Zhong',
       //   organization: 'Theta Tau',
@@ -264,4 +264,4 @@ module.exports = [
       }
     ]
   }
-]
+];

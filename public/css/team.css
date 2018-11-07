@@ -22,7 +22,7 @@ p {
   font-size: 20px;
   text-align: center;
   line-height: 24px;
-  margin-bottom: 75px;
+  margin-bottom: 45px;
 }
 
 .Categories {
@@ -75,6 +75,7 @@ p {
   font-weight: 100;
   font-size: 19px;
   text-align: left;
+  margin-top: 0px;
 }
 
 .Club:after {
@@ -89,6 +90,7 @@ p {
   font-weight: 200;
   padding-bottom: 20px;
   text-align: left;
+  margin-top: 0px;
 }
 
 .team-photo {
@@ -148,7 +150,7 @@ p {
   }
   p {
     font-size: 18px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   .Club,
   .Description {
