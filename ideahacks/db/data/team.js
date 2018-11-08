@@ -131,7 +131,8 @@ module.exports = [
         name: 'Henry Kou',
         organization: 'IEEE',
         picturePath: '/img/team/Henry_Kou.jpg',
-        linkedin: 'https://www.linkedin.com/in/henry-kou-08108914a/'
+        linkedin: 'https://www.linkedin.com/in/henry-kou-08108914a/',
+        github: 'https://github.com/kenryhou2'
       }
     ]
   },
