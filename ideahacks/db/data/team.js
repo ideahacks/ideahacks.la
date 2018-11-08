@@ -36,7 +36,7 @@ module.exports = [
       },
       {
         name: 'Amy Tu',
-        organization: 'IEEE',
+        organization: 'Theta Tau',
         picturePath: '/img/team/Amy_Tu.jpg',
         linkedin: '',
         github: 'http://github.com/ayemetoo'
@@ -48,12 +48,12 @@ module.exports = [
       //   linkedin: '',
       //   github: ''
       // },
-      // {
-      //   name: 'Jonathan Song',
-      //   organization: 'Theta Tau',
-      //   picturePath: '/img/team/jeffrey-chan.jpg',
-      //   linkedin: 'https://www.linkedin.com/in/jonathan-song-122b93127/'
-      // },
+      {
+        name: 'Jonathan Song',
+        organization: 'Theta Tau',
+        picturePath: '/img/team/Jonathan_Song.jpg',
+        linkedin: 'https://www.linkedin.com/in/jonathan-song-122b93127/'
+      },
       // {
       //   name: 'Hersh Joshi',
       //   organization: 'IEEE',
@@ -126,6 +126,13 @@ module.exports = [
         organization: 'IEEE',
         picturePath: '/img/team/Christine_Chen.jpg',
         linkedin: 'https://www.linkedin.com/in/christine-chen-08b405111'
+      },
+      {
+        name: 'Henry Kou',
+        organization: 'IEEE',
+        picturePath: '/img/team/Henry_Kou.jpg',
+        linkedin: 'https://www.linkedin.com/in/henry-kou-08108914a/',
+        github: 'https://github.com/kenryhou2'
       }
     ]
   },
