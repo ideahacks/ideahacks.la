@@ -36,7 +36,7 @@ module.exports = [
       },
       {
         name: 'Amy Tu',
-        organization: 'IEEE',
+        organization: 'Theta Tau',
         picturePath: '/img/team/Amy_Tu.jpg',
         linkedin: '',
         github: 'http://github.com/ayemetoo'
