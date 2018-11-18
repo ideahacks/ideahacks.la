@@ -147,6 +147,12 @@
   margin: 30px 10px;
 }
 
+.green-logo {
+  vertical-align: middle;
+  width: 23%;
+  margin: 30px 10px;
+}
+
 .gold-logo {
   vertical-align: middle;
   width: 20%;
@@ -209,7 +215,9 @@
     width: 300px;
     margin: 20px 10px;
   }
-
+  .green-logo {
+    width: 220px;
+  }
   .gold-logo {
     width: 200px;
     margin: 30px 10px;
