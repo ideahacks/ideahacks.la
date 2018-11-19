@@ -3,6 +3,15 @@ body {
   text-transform: uppercase;
 }
 
+.deadline {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 6vh;
+}
+
 .submission {
   background-color: rgb(255, 255, 244);
   margin: 0px 150px;
@@ -36,7 +45,6 @@ body {
   margin-top: 130px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10vh;
 }
 
 #img-side {
