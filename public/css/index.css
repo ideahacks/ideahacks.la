@@ -29,12 +29,17 @@
 
 .date,
 .apply,
-.location {
+.location,
+.deadline {
   font-weight: bold;
   font-size: 14px;
   color: white;
   text-transform: uppercase;
   margin: 0px;
+}
+
+.deadline {
+  padding-top: 20px;
 }
 
 .location {
@@ -210,6 +215,9 @@
   }
   .location {
     display: none;
+  }
+  .date {
+    padding-bottom: 15px;
   }
   .platinum-logo {
     width: 300px;

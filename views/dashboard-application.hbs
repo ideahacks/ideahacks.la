@@ -29,7 +29,10 @@
     <div class='wrapper'>
         {{> navbar }}
 
-        <img id="img-header" src="/img/registration/app-header.png" /> {{#if user.hasApplication}}
+        <img id="img-header" src="/img/registration/app-header.png" />
+        <p class="deadline text-center">Applications due on December 1st</p>
+
+        {{#if user.hasApplication}}
 
         <div class='text-center container-fluid submission'>
             <p> Way to go! You successfully submitted your application for IDEA Hacks 2019! </p>
@@ -40,6 +43,7 @@
         </div>
 
         {{else}}
+
 
         <div class='ideahacks-form application-form container-fluid'>
             <!-- PERSONAL INFORMATION -->
