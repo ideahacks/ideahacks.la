@@ -1,11 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const TeamSchema = new Schema({
-  teamName: String,
-  teamNumber: Number,
-  parts: [{ partName: String, stock: Number, partType: String }],
-  members: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+	teamName: String,
+	teamNumber: Number,
+	parts: [{ partName: String, stock: Number, partType: String }],
+	members: [{ type: Schema.Types.ObjectId, ref: "User" }]
 })
 
-module.exports = mongoose.model('Team', TeamSchema)
+module.exports = mongoose.model("Team", TeamSchema)
