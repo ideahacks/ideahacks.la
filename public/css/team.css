@@ -1,165 +1,165 @@
 body {
-  color: black;
+	color: black;
 }
 
 .header {
-  margin: 130px 0px 15px 0px;
-  display: block;
-  width: 15%;
-  display: inline-block;
+	margin: 130px 0px 15px 0px;
+	display: block;
+	width: 15%;
+	display: inline-block;
 }
 
 .team-container {
-  text-align: center;
-  font-family: 'Josefin Sans';
-  padding-bottom: 100px;
-  background-color: rgb(221, 128, 100);
+	text-align: center;
+	font-family: "Josefin Sans";
+	padding-bottom: 100px;
+	background-color: rgb(221, 128, 100);
 }
 
 p {
-  font-family: 'Josefin Sans';
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  line-height: 24px;
-  margin-bottom: 45px;
+	font-family: "Josefin Sans";
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	line-height: 24px;
+	margin-bottom: 45px;
 }
 
 .Categories {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  text-align: center;
-  font-family: 'Josefin Sans';
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 40px;
-  text-transform: uppercase;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	text-align: center;
+	font-family: "Josefin Sans";
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	text-transform: uppercase;
 }
 
 .Categories:before,
 .Categories:after {
-  background-color: #ffb718;
-  content: '';
-  display: inline-block;
-  height: 3px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
+	background-color: #ffb718;
+	content: "";
+	display: inline-block;
+	height: 3px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
 }
 
 .Categories:before {
-  right: 0.5em;
-  margin-left: -50%;
+	right: 0.5em;
+	margin-left: -50%;
 }
 
 .Categories:after {
-  left: 0.5em;
-  margin-right: -50%;
+	left: 0.5em;
+	margin-right: -50%;
 }
 
 .Description {
-  color: white;
-  margin: 15px 0px 0px 0px;
-  font-weight: 900;
-  font-size: 19px;
-  text-align: left;
+	color: white;
+	margin: 15px 0px 0px 0px;
+	font-weight: 900;
+	font-size: 19px;
+	text-align: left;
 }
 
 .Club {
-  color: white;
-  padding-top: 0px;
-  line-height: 150%;
-  font-weight: 100;
-  font-size: 19px;
-  text-align: left;
-  margin-top: 0px;
+	color: white;
+	padding-top: 0px;
+	line-height: 150%;
+	font-weight: 100;
+	font-size: 19px;
+	text-align: left;
+	margin-top: 0px;
 }
 
 .Club:after {
-  content: ' ';
-  display: block;
-  border: 1px solid #ffffff;
+	content: " ";
+	display: block;
+	border: 1px solid #ffffff;
 }
 
 .Logos {
-  color: white;
-  font-size: 18px;
-  font-weight: 200;
-  padding-bottom: 20px;
-  text-align: left;
-  margin-top: 0px;
+	color: white;
+	font-size: 18px;
+	font-weight: 200;
+	padding-bottom: 20px;
+	text-align: left;
+	margin-top: 0px;
 }
 
 .center-block {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 
 .team-photo {
-  width: 100%;
-  max-width: 350px;
+	width: 100%;
+	max-width: 350px;
 }
 
 .fa,
 .fa:hover {
-  color: white;
-  height: 10px !important;
-  display: inline-block;
-  text-decoration: none;
+	color: white;
+	height: 10px !important;
+	display: inline-block;
+	text-decoration: none;
 }
 .fa-3x {
-  font-size: 30px;
+	font-size: 30px;
 }
 
 .pic {
-  filter: none;
-  position: relative;
-  overflow: auto;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
+	filter: none;
+	position: relative;
+	overflow: auto;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
 }
 
 .no-padding {
-  padding-left: 40;
-  padding-right: 40;
+	padding-left: 40;
+	padding-right: 40;
 }
 
 .container-fluid {
-  /*background-color: white;*/
-  /*width: 900px;*/
-  padding: 0px 70px;
+	/*background-color: white;*/
+	/*width: 900px;*/
+	padding: 0px 70px;
 }
 
 .team {
-  padding-bottom: 40px;
+	padding-bottom: 40px;
 }
 
 /* Media queries for mobile */
 
 @media (max-width: 1000px) {
-  .container-fluid {
-    padding: 0px 20px;
-  }
-  .header {
-    width: 140px;
-  }
-  .container {
-    padding: 0px;
-  }
-  .Categories {
-    font-size: 23px;
-  }
-  p {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  .Club,
-  .Description {
-    font-size: 16px;
-  }
+	.container-fluid {
+		padding: 0px 20px;
+	}
+	.header {
+		width: 140px;
+	}
+	.container {
+		padding: 0px;
+	}
+	.Categories {
+		font-size: 23px;
+	}
+	p {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	.Club,
+	.Description {
+		font-size: 16px;
+	}
 }

@@ -1,33 +1,33 @@
 $(() => {
-  $('input[name="username"]').focus()
+	$('input[name="username"]').focus()
 
-  // handle login form submission
-  $('form').submit(e => {
-    e.preventDefault()
+	// handle login form submission
+	$("form").submit(e => {
+		e.preventDefault()
 
-    let loginData = {
-      username: $('input[name="username"]').val(),
-      password: $('input[name="password"]').val()
-    }
+		let loginData = {
+			username: $('input[name="username"]').val(),
+			password: $('input[name="password"]').val()
+		}
 
-    $.ajax({ url: '/login', type: 'POST', data: loginData }).done(response => {
-      if (response.status === 'success') location.href = '/dashboard'
+		$.ajax({ url: "/login", type: "POST", data: loginData }).done(response => {
+			if (response.status === "success") location.href = "/dashboard"
 
-      $('.error-message').text(response.message)
-    })
-  })
+			$(".error-message").text(response.message)
+		})
+	})
 
-  $('input').focus(() => $('.error-message').text(''))
+	$("input").focus(() => $(".error-message").text(""))
 
-  // password recovery logic
-  $('a[name="password-recover"]').click(() => {
-    const email = $('input[name="username"]').val()
-    if (email) {
-      $.ajax({ url: '/login/recoverPassword/' + email, type: 'POST' }).done(response => {
-        $('.error-message').text(response.message)
-      })
-    } else {
-      $('.error-message').text('Please enter your email into the email field to recover your password!')
-    }
-  })
+	// password recovery logic
+	$('a[name="password-recover"]').click(() => {
+		const email = $('input[name="username"]').val()
+		if (email) {
+			$.ajax({ url: "/login/recoverPassword/" + email, type: "POST" }).done(response => {
+				$(".error-message").text(response.message)
+			})
+		} else {
+			$(".error-message").text("Please enter your email into the email field to recover your password!")
+		}
+	})
 })

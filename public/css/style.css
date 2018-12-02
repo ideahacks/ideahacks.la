@@ -3,36 +3,36 @@ h1,
 h2,
 button,
 li {
-  font-family: 'Josefin Sans';
+	font-family: "Josefin Sans";
 }
 
 body {
-  background-color: rgb(236, 187, 172);
+	background-color: rgb(236, 187, 172);
 }
 
 .theme-red {
-  color: rgb(221, 128, 100);
+	color: rgb(221, 128, 100);
 }
 
 .theme-offwhite {
-  color: rgb(255, 255, 244);
+	color: rgb(255, 255, 244);
 }
 
 .theme-white {
-  color: white;
+	color: white;
 }
 
 /*********** BACKGROUNDS **************************/
 .background-light-red {
-  background-color: rgb(236, 187, 172);
+	background-color: rgb(236, 187, 172);
 }
 
 .background-red {
-  background-color: #dd8064;
+	background-color: #dd8064;
 }
 
 .wrapper,
 .myNavbar {
-  max-width: 1280px;
-  margin: auto;
+	max-width: 1280px;
+	margin: auto;
 }

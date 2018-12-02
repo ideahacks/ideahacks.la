@@ -1,92 +1,92 @@
 body {
-  background-color: #dd8064;
-  text-transform: uppercase;
+	background-color: #dd8064;
+	text-transform: uppercase;
 }
 
 #welcome-img {
-  margin-top: 105px;
-  margin-bottom: 20px;
-  width: 28%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	margin-top: 105px;
+	margin-bottom: 20px;
+	width: 28%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #welcome-name {
-  color: white;
-  text-align: center;
-  text-transform: none;
-  font-family: 'Josefin Sans';
+	color: white;
+	text-align: center;
+	text-transform: none;
+	font-family: "Josefin Sans";
 }
 
 .dotted {
-  border: 0 none;
-  border-top: 2px dashed #ffb718;
-  background: none;
-  height: 0;
-  width: 40%;
-  margin-top: 2px;
+	border: 0 none;
+	border-top: 2px dashed #ffb718;
+	background: none;
+	height: 0;
+	width: 40%;
+	margin-top: 2px;
 }
 
 /*----- CHANGE PROFILE INFORMATION -------*/
 .ideahacks-form {
-  background-color: #fffff4;
-  width: 70%;
-  justify-content: center;
-  text-align: center;
-  padding: 30px 0px 30px 0px;
-  border-radius: 18px;
-  margin: 20px 15%;
+	background-color: #fffff4;
+	width: 70%;
+	justify-content: center;
+	text-align: center;
+	padding: 30px 0px 30px 0px;
+	border-radius: 18px;
+	margin: 20px 15%;
 }
 
 .ideahacks-form label {
-  color: #dd8064;
-  text-decoration: bold;
-  font-size: 17px;
-  margin-bottom: 15px;
+	color: #dd8064;
+	text-decoration: bold;
+	font-size: 17px;
+	margin-bottom: 15px;
 }
 
 .ideahacks-form input,
 .ideahacks-form input:focus {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: 17px;
-  color: #dd8064;
-  text-align: center;
-  text-decoration: bold;
-  width: 60%;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: 17px;
+	color: #dd8064;
+	text-align: center;
+	text-decoration: bold;
+	width: 60%;
 }
 
 .text-center button {
-  width: 35%;
-  text-transform: uppercase;
-  margin: 1.5vh 0% 2vh;
-  font-weight: bold;
+	width: 35%;
+	text-transform: uppercase;
+	margin: 1.5vh 0% 2vh;
+	font-weight: bold;
 }
 
 .save-button {
-  background-color: #95b9cd;
-  border-color: #95b9cd;
+	background-color: #95b9cd;
+	border-color: #95b9cd;
 }
 
 .save-button:hover {
-  color: #95b9cd;
+	color: #95b9cd;
 }
 
 .logout:hover {
-  color: #ffb718;
+	color: #ffb718;
 }
 
 @media (max-width: 991px) {
-  #welcome-img {
-    width: 250px;
-  }
-  .dotted {
-    width: 80%;
-  }
-  .text-center button {
-    width: 70%;
-  }
+	#welcome-img {
+		width: 250px;
+	}
+	.dotted {
+		width: 80%;
+	}
+	.text-center button {
+		width: 70%;
+	}
 }
