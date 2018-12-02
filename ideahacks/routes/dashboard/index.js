@@ -1,7 +1,7 @@
 const express = require("express")
 const dashboardRouter = express.Router()
 const dashboardHandlers = require("./dashboard.js")
-const applicationHandlers = require("./application.js")
+// const applicationHandlers = require("./application.js")
 const h = require("../../helpers").authHelpers
 const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
