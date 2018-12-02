@@ -1,25 +1,25 @@
 $(() => {
-  let modal = document.getElementById('partsModal')
+	let modal = document.getElementById("partsModal")
 
-  // display modal when clicking on part
-  $('.part').click(function() {
-    const PARTS_API_URL = '/api/parts?_id=' + $(this).attr('id')
+	// display modal when clicking on part
+	$(".part").click(function() {
+		const PARTS_API_URL = "/api/parts?_id=" + $(this).attr("id")
 
-    $.ajax({ url: PARTS_API_URL, type: 'GET' }).done(part => {
-      let partData = part[0] // Retrieve only the first part
-      for (let data in partData) {
-        $('span[name="' + data + '"]').text(partData[data])
-      }
-      $('a[name="datasheet-link"]').attr('href', partData.datasheet)
+		$.ajax({ url: PARTS_API_URL, type: "GET" }).done(part => {
+			let partData = part[0] // Retrieve only the first part
+			for (let data in partData) {
+				$('span[name="' + data + '"]').text(partData[data])
+			}
+			$('a[name="datasheet-link"]').attr("href", partData.datasheet)
 
-      modal.style.display = 'block'
-    })
-  })
+			modal.style.display = "block"
+		})
+	})
 
-  // closes modal when clicking outside
-  window.onclick = e => {
-    if (e.target === modal) {
-      modal.style.display = 'none'
-    }
-  }
+	// closes modal when clicking outside
+	window.onclick = e => {
+		if (e.target === modal) {
+			modal.style.display = "none"
+		}
+	}
 })

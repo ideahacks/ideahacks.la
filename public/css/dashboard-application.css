@@ -1,188 +1,188 @@
 body {
-  background-color: rgb(221, 128, 100);
-  text-transform: uppercase;
+	background-color: rgb(221, 128, 100);
+	text-transform: uppercase;
 }
 
 .deadline {
-  font-weight: bold;
-  font-size: 14px;
-  color: white;
-  text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 6vh;
+	font-weight: bold;
+	font-size: 14px;
+	color: white;
+	text-transform: uppercase;
+	margin-top: 20px;
+	margin-bottom: 6vh;
 }
 
 .submission {
-  background-color: rgb(255, 255, 244);
-  margin: 0px 150px;
-  border-radius: 5px;
-  padding: 40px 20px 30px 20px;
+	background-color: rgb(255, 255, 244);
+	margin: 0px 150px;
+	border-radius: 5px;
+	padding: 40px 20px 30px 20px;
 }
 
 .submission p {
-  color: rgb(221, 128, 100);
-  font-weight: bold;
+	color: rgb(221, 128, 100);
+	font-weight: bold;
 }
 
 .street-graphic {
-  padding-top: 30px;
-  width: 500px;
+	padding-top: 30px;
+	width: 500px;
 }
 
 @media (max-width: 860px) {
-  .submission {
-    margin: 0px 40px;
-  }
-  .street-graphic {
-    display: none;
-  }
+	.submission {
+		margin: 0px 40px;
+	}
+	.street-graphic {
+		display: none;
+	}
 }
 
 /* image responsiveness */
 #img-header {
-  width: 30%;
-  display: block;
-  margin-top: 130px;
-  margin-left: auto;
-  margin-right: auto;
+	width: 30%;
+	display: block;
+	margin-top: 130px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #img-side {
-  width: 12%;
-  position: absolute;
-  left: 88.3%;
-  top: 160px;
-  background-color: rgb(221, 128, 100);
+	width: 12%;
+	position: absolute;
+	left: 88.3%;
+	top: 160px;
+	background-color: rgb(221, 128, 100);
 }
 
 @media (max-width: 980px) {
-  #img-side {
-    display: none;
-  }
-  #img-header {
-    margin-bottom: 5vh;
-    width: 330px;
-  }
+	#img-side {
+		display: none;
+	}
+	#img-header {
+		margin-bottom: 5vh;
+		width: 330px;
+	}
 }
 
 .header {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .header h3 {
-  text-align: center;
-  display: inline-block;
-  border: none;
-  color: white;
-  background-color: #ffb718;
-  padding: 12px 0px 9px 0px;
-  width: 220px;
-  font-size: 17px;
-  font-weight: bold;
-  margin-left: 12%;
+	text-align: center;
+	display: inline-block;
+	border: none;
+	color: white;
+	background-color: #ffb718;
+	padding: 12px 0px 9px 0px;
+	width: 220px;
+	font-size: 17px;
+	font-weight: bold;
+	margin-left: 12%;
 }
 
 div.header:after {
-  height: 3px;
-  background: #ffb718;
-  content: '';
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  bottom: 35px;
-  z-index: -1;
+	height: 3px;
+	background: #ffb718;
+	content: "";
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	bottom: 35px;
+	z-index: -1;
 }
 
 fieldset {
-  padding-left: 11%;
+	padding-left: 11%;
 }
 
 .radio-inline {
-  margin-bottom: 2vh;
-  margin-right: 2%;
+	margin-bottom: 2vh;
+	margin-right: 2%;
 }
 
 @media (max-width: 1200px) {
-  body {
-    background-position: 550px 40px;
-  }
+	body {
+		background-position: 550px 40px;
+	}
 }
 @media (max-width: 650px) {
-  body {
-    background-position: 400px 40px;
-  }
-  .header h3 {
-    width: 70%;
-  }
-  div.header:after {
-  }
+	body {
+		background-position: 400px 40px;
+	}
+	.header h3 {
+		width: 70%;
+	}
+	div.header:after {
+	}
 }
 
 /* FORM FIELDS */
 .short-answer {
-  margin: 0 0 50px;
+	margin: 0 0 50px;
 }
 
 textarea {
-  resize: none;
+	resize: none;
 }
 
 .whitespace {
-  color: transparent;
+	color: transparent;
 }
 
 .form-control {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .sublabel {
-  text-transform: none;
+	text-transform: none;
 }
 
 textarea::placeholder,
 input::placeholder {
-  text-transform: uppercase;
-  color: rgba(255, 183, 24, 0.6) !important;
+	text-transform: uppercase;
+	color: rgba(255, 183, 24, 0.6) !important;
 }
 
 @media (max-width: 828px) {
-  .whitespace {
-    display: none;
-  }
+	.whitespace {
+		display: none;
+	}
 }
 
 /* BUTTONS */
 .buttons {
-  text-align: center;
-  padding-bottom: 30px;
+	text-align: center;
+	padding-bottom: 30px;
 }
 
 .resume {
-  background-color: #95b9cd;
-  border-color: #95b9cd;
-  text-transform: uppercase;
+	background-color: #95b9cd;
+	border-color: #95b9cd;
+	text-transform: uppercase;
 }
 
 .buttons button {
-  margin: 0 60px;
-  background-color: #95b9cd;
-  border-color: #95b9cd;
+	margin: 0 60px;
+	background-color: #95b9cd;
+	border-color: #95b9cd;
 }
 
 @media (max-width: 583px) {
-  .buttons {
-    padding: 0 15px;
-  }
+	.buttons {
+		padding: 0 15px;
+	}
 
-  .buttons button {
-    width: 100%;
-    margin: 15px 0;
-  }
+	.buttons button {
+		width: 100%;
+		margin: 15px 0;
+	}
 }
 
 /* SUBMIT MESSAGE */
 .submit-message {
-  text-align: center;
-  padding: 0 0 50px;
+	text-align: center;
+	padding: 0 0 50px;
 }

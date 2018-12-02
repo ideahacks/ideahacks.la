@@ -3,28 +3,28 @@
  */
 
 .ideahacks-form {
-  font-family: 'Josefin Sans';
+	font-family: "Josefin Sans";
 }
 
 /* LABEL */
 .ideahacks-form label {
-  text-align: center;
-  font-size: 15px;
-  line-height: 18px;
-  text-transform: none;
-  font-weight: normal;
-  color: white;
+	text-align: center;
+	font-size: 15px;
+	line-height: 18px;
+	text-transform: none;
+	font-weight: normal;
+	color: white;
 }
 
 /* INPUT */
 .ideahacks-form input,
 .ideahacks-form input:focus,
 .ideahacks-form input[readonly] {
-  border-radius: 12px;
-  background-color: white;
-  width: 80%;
+	border-radius: 12px;
+	background-color: white;
+	width: 80%;
 }
 
 .ideahacks-form input::placeholder {
-  color: rgba(255, 183, 24, 0.6);
+	color: rgba(255, 183, 24, 0.6);
 }

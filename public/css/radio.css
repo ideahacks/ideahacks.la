@@ -1,27 +1,27 @@
 .radio-button-group,
 .radio-outer-square,
 .radio-button-group p {
-  display: inline-block;
+	display: inline-block;
 }
 
 .radio-outer-square {
-  width: 40px;
-  height: 40px;
-  border: solid 1px #ffb718;
+	width: 40px;
+	height: 40px;
+	border: solid 1px #ffb718;
 }
 
 .radio-outer-square.active .radio-inner-square {
-  width: 25px;
-  height: 25px;
-  margin: 7px;
-  background-color: #ffb718;
+	width: 25px;
+	height: 25px;
+	margin: 7px;
+	background-color: #ffb718;
 }
 
 .radio-button-group label {
-  height: 40px;
-  margin: -38px 0 0 140px;
-  display: block;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  color: black;
+	height: 40px;
+	margin: -38px 0 0 140px;
+	display: block;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: bold;
+	color: black;
 }
