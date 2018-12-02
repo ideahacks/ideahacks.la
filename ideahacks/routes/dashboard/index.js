@@ -5,11 +5,11 @@ const applicationHandlers = require('./application.js')
 const h = require('../../helpers').authHelpers
 const setResLocals = require('../../helpers').routeHelpers.setResLocals
 
-dashboardRouter.get('/', setResLocals, h.isVerified, applicationHandlers.getApplication)
+dashboardRouter.get('/', setResLocals, h.isVerified, dashboardHandlers.getMe)
 
 // Disabled application routes due to end of application period
-dashboardRouter.get('/application', setResLocals, h.isVerified, applicationHandlers.getApplication)
-dashboardRouter.post('/application', setResLocals, h.isVerified, applicationHandlers.postApplication)
+// dashboardRouter.get('/application', setResLocals, h.isVerified, applicationHandlers.getApplication)
+// dashboardRouter.post('/application', setResLocals, h.isVerified, applicationHandlers.postApplication)
 
 dashboardRouter.get('/parts', setResLocals, h.isVerified, dashboardHandlers.getParts)
 
