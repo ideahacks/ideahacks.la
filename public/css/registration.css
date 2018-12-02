@@ -1,107 +1,107 @@
 /* FULL BODY STUFF */
 .fullscreen {
-  height: 100%;
+	height: 100%;
 }
 
 body {
-  background-color: rgb(221, 128, 100);
+	background-color: rgb(221, 128, 100);
 }
 
 .forgot-pass:hover {
-  color: white;
+	color: white;
 }
 
 /* COMPUTER IMAGE */
 .main_pic img {
-  width: 90%;
-  margin: 140px 0px 100px 70px;
+	width: 90%;
+	margin: 140px 0px 100px 70px;
 }
 
 /* FORM SIDE */
 .form-side {
-  align-items: center;
-  justify-content: center;
-  margin-top: 160px;
-  padding-right: 0px;
+	align-items: center;
+	justify-content: center;
+	margin-top: 160px;
+	padding-right: 0px;
 }
 
 .form-side p {
-  text-align: center;
+	text-align: center;
 }
 
 .login {
-  background-color: rgb(255, 183, 24);
-  margin-top: 15pt;
-  font-weight: bold;
-  font-size: 14px;
-  color: white;
-  text-transform: uppercase;
-  border-radius: 12px;
-  margin-bottom: 10pt;
-  width: 80%;
-  height: 40px;
-  padding: 10px;
+	background-color: rgb(255, 183, 24);
+	margin-top: 15pt;
+	font-weight: bold;
+	font-size: 14px;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 12px;
+	margin-bottom: 10pt;
+	width: 80%;
+	height: 40px;
+	padding: 10px;
 }
 
 .register {
-  background-color: #95b9cd;
-  font-weight: bold;
-  font-size: 14px;
-  color: white;
-  text-transform: uppercase;
-  border-color: #95b9cd;
-  border-radius: 12px;
-  margin-bottom: 10pt;
-  width: 80%;
-  height: 40px;
-  padding: 10px;
+	background-color: #95b9cd;
+	font-weight: bold;
+	font-size: 14px;
+	color: white;
+	text-transform: uppercase;
+	border-color: #95b9cd;
+	border-radius: 12px;
+	margin-bottom: 10pt;
+	width: 80%;
+	height: 40px;
+	padding: 10px;
 }
 
 .ideahacks-form {
-  margin-left: 6vh;
+	margin-left: 6vh;
 }
 
 .ideahacks-form label {
-  margin-top: 10pt;
-  display: inline-block;
+	margin-top: 10pt;
+	display: inline-block;
 }
 
 .form-control {
-  height: 40px;
+	height: 40px;
 }
 
 /* LINK STUFF */
 a,
 a:active {
-  text-decoration: none;
-  color: white;
-  font-style: bold;
-  font-size: 13px;
-  line-height: 13px;
+	text-decoration: none;
+	color: white;
+	font-style: bold;
+	font-size: 13px;
+	line-height: 13px;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 p,
 button {
-  font-family: 'Josefin Sans';
-  font-weight: bold;
-  line-height: 18px;
-  color: white;
+	font-family: "Josefin Sans";
+	font-weight: bold;
+	line-height: 18px;
+	color: white;
 }
 
 p {
-  margin-right: 20%;
+	margin-right: 20%;
 }
 
 @media (max-width: 991px) {
-  .main_pic {
-    display: none;
-  }
+	.main_pic {
+		display: none;
+	}
 
-  .ideahacks-form {
-    margin-left: 15%;
-  }
+	.ideahacks-form {
+		margin-left: 15%;
+	}
 }

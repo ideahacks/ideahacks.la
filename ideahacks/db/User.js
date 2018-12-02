@@ -1,41 +1,41 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema({
-  // user and application info
-  email: String,
-  password: String,
-  firstName: { type: String, default: '' },
-  lastName: { type: String, default: '' },
-  phone: { type: String, default: '' },
-  school: { type: String, default: '' },
-  major: { type: String, default: '' },
-  year: { type: String, default: '' },
-  github: { type: String, default: '' },
-  linkedin: { type: String, default: '' },
-  resume: { type: String, default: '' },
-  hasTeam: { type: Boolean, default: false },
-  teammates: { type: [String], default: [] },
-  foodRestrictions: { type: String, default: '' },
-  skillsAndExperience: { type: String, default: '' },
-  pastHackathonExperience: { type: String, default: '' },
-  reasonForParticipation: { type: String, default: '' },
-  themeIdea: { type: String, default: '' },
-  desiredParts: { type: String, default: '' },
-  shirtSize: { type: String, default: 'M' },
+	// user and application info
+	email: String,
+	password: String,
+	firstName: { type: String, default: "" },
+	lastName: { type: String, default: "" },
+	phone: { type: String, default: "" },
+	school: { type: String, default: "" },
+	major: { type: String, default: "" },
+	year: { type: String, default: "" },
+	github: { type: String, default: "" },
+	linkedin: { type: String, default: "" },
+	resume: { type: String, default: "" },
+	hasTeam: { type: Boolean, default: false },
+	teammates: { type: [String], default: [] },
+	foodRestrictions: { type: String, default: "" },
+	skillsAndExperience: { type: String, default: "" },
+	pastHackathonExperience: { type: String, default: "" },
+	reasonForParticipation: { type: String, default: "" },
+	themeIdea: { type: String, default: "" },
+	desiredParts: { type: String, default: "" },
+	shirtSize: { type: String, default: "M" },
 
-  // boolean fields
-  hasApplication: { type: Boolean, default: false },
-  applicationStatus: { type: String, default: 'pending' },
+	// boolean fields
+	hasApplication: { type: Boolean, default: false },
+	applicationStatus: { type: String, default: "pending" },
 
-  // auth fields
-  verificationHash: String,
-  isVerified: { type: Boolean, default: false },
-  isAdmin: { type: Boolean, default: false },
+	// auth fields
+	verificationHash: String,
+	isVerified: { type: Boolean, default: false },
+	isAdmin: { type: Boolean, default: false },
 
-  // Check in/out fields
-  checkinTime: Date,
-  checkoutTime: Date
+	// Check in/out fields
+	checkinTime: Date,
+	checkoutTime: Date
 })
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model("User", UserSchema)

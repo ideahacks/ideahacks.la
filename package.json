@@ -1,87 +1,88 @@
 {
-  "name": "ideahacks.la",
-  "version": "3.0.0",
-  "engines": {
-    "node": "8.x.x"
-  },
-  "description": "Website for UCLA's IDEA Hacks",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon server.js",
-    "format": "npm run format-css && npm run format-html && npm run format-js",
-    "format-check": "./node_modules/prettier-check/cli.js --single-quote --print-width=120 --no-semi ./**.json ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js ./public/css/**.css ./public/css/modals/**.css",
-    "format-css": "prettier --single-quote --print-width=120 --no-semi --write ./public/css/**.css ./public/css/modals/**.css",
-    "format-html": "html-beautify -n=true -E=[] -r ./views/**.hbs ./views/partials/**.hbs",
-    "format-js": "prettier --single-quote --print-width=120 --no-semi --write ./**.json ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
-    "lint": "eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
-    "mocha": "mocha --recursive --exit ./tests/",
-    "start": "node server.js",
-    "test": "npm run format-check && npm run lint && npm run mocha"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run format",
-      "git add"
-    ],
-    "*.css": [
-      "npm run format",
-      "git add"
-    ],
-    "*.hbs": [
-      "npm run format-html",
-      "git add"
-    ]
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "public/*"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IDEA-Hacks/ideahacks.la.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IDEA-Hacks/ideahacks.la/issues"
-  },
-  "homepage": "https://github.com/IDEA-Hacks/ideahacks.la#readme",
-  "dependencies": {
-    "@sendgrid/mail": "^6.1.4",
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "express-query-boolean": "^1.0.0",
-    "express-session": "^1.15.5",
-    "hbs": "^4.0.1",
-    "hbs-utils": "0.0.4",
-    "mongoose": "^4.11.3",
-    "morgan": "^1.9.1",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "path": "^0.12.7",
-    "serve-favicon": "^2.4.3",
-    "socket.io": "^2.0.3"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^4.6.1",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "husky": "^0.14.3",
-    "js-beautify": "^1.7.5",
-    "lint-staged": "^4.0.4",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.11.0",
-    "prettier": "^1.6.1",
-    "prettier-check": "^1.0.0",
-    "sinon": "^6.3.4",
-    "supertest": "^3.3.0"
-  }
+	"name": "ideahacks.la",
+	"version": "3.0.0",
+	"engines": {
+		"node": "8.x.x"
+	},
+	"description": "Website for UCLA's IDEA Hacks",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon server.js",
+		"format": "npm run format-css && npm run format-html && npm run format-js",
+		"format-check": "find . -type f \\( -name \"*.js\" -or -name \"*.json\" -or -name \"*.css\" \\) -not -path \"./node_modules/**\" | xargs prettier-check",
+		"format-css": "find . -type f -name \"*.css\" -not -path \"./node_modules/**\" | xargs prettier --write",
+		"format-html": "html-beautify -n=true -E=[] -r ./views/**.hbs ./views/partials/**.hbs",
+		"format-js": "find . -type f \\( -name \"*.js\" -or -name \"*.json\" \\) -not -path \"./node_modules/**\" | xargs prettier --write",
+		"lint": "eslint --fix --quiet ./**.js ./ideahacks/**.js ./ideahacks/**/**.js ./ideahacks/**/**/**.js",
+		"mocha": "mocha --recursive --exit ./tests/",
+		"prepush": "npm run format",
+		"start": "node server.js",
+		"test": "npm run format-check && npm run lint && npm run mocha"
+	},
+	"lint-staged": {
+		"*.js": [
+			"npm run format",
+			"git add"
+		],
+		"*.css": [
+			"npm run format",
+			"git add"
+		],
+		"*.hbs": [
+			"npm run format-html",
+			"git add"
+		]
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"public/*"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/IDEA-Hacks/ideahacks.la.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/IDEA-Hacks/ideahacks.la/issues"
+	},
+	"homepage": "https://github.com/IDEA-Hacks/ideahacks.la#readme",
+	"dependencies": {
+		"@sendgrid/mail": "^6.1.4",
+		"bcrypt-nodejs": "0.0.3",
+		"body-parser": "^1.17.2",
+		"express": "^4.15.3",
+		"express-query-boolean": "^1.0.0",
+		"express-session": "^1.15.5",
+		"hbs": "^4.0.1",
+		"hbs-utils": "0.0.4",
+		"mongoose": "^4.11.3",
+		"morgan": "^1.9.1",
+		"passport": "^0.4.0",
+		"passport-local": "^1.0.0",
+		"path": "^0.12.7",
+		"serve-favicon": "^2.4.3",
+		"socket.io": "^2.0.3"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"eslint": "^4.6.1",
+		"eslint-config-prettier": "^2.6.0",
+		"eslint-config-standard": "^10.2.1",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-node": "^5.1.1",
+		"eslint-plugin-prettier": "^2.3.1",
+		"eslint-plugin-promise": "^3.5.0",
+		"eslint-plugin-standard": "^3.0.1",
+		"husky": "^0.14.3",
+		"js-beautify": "^1.7.5",
+		"lint-staged": "^4.0.4",
+		"mocha": "^5.2.0",
+		"nodemon": "^1.11.0",
+		"prettier": "^1.6.1",
+		"prettier-check": "^2.0.0",
+		"sinon": "^6.3.4",
+		"supertest": "^3.3.0"
+	}
 }

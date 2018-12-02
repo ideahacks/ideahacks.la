@@ -3,36 +3,36 @@
  */
 
 .filter-container {
-  text-align: center;
-  padding: 20px 0 0;
+	text-align: center;
+	padding: 20px 0 0;
 }
 
 .filter-label {
-  font-size: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-right: 15px;
+	font-size: 20px;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-right: 15px;
 }
 
 .filter,
 .filter:focus,
 .filter:hover {
-  font-family: 'Source Sans Pro';
-  font-size: 20px;
+	font-family: "Source Sans Pro";
+	font-size: 20px;
 
-  margin: 10px 0;
-  padding: 5px 0;
+	margin: 10px 0;
+	padding: 5px 0;
 
-  border-radius: 0;
-  border: none;
-  border-bottom: solid #d8d8d8 1px;
+	border-radius: 0;
+	border: none;
+	border-bottom: solid #d8d8d8 1px;
 
-  width: 40%;
-  min-width: 250px;
+	width: 40%;
+	min-width: 250px;
 
-  box-shadow: none;
-  background-color: transparent;
+	box-shadow: none;
+	background-color: transparent;
 
-  outline: none; /* disables blue highlight on macs */
+	outline: none; /* disables blue highlight on macs */
 }

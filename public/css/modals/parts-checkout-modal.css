@@ -1,27 +1,27 @@
 .parts-checkout-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px 0 20px;
-  font-family: 'Source Sans Pro', sans-serif;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 30px 0 20px;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .parts-checkout-form label {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .parts-checkout-form input {
-  width: 60%;
-  border: none;
-  border-bottom: solid 1px #d8d8d8;
-  margin: 5px 10px;
-  outline: none;
-  font-size: 20px;
+	width: 60%;
+	border: none;
+	border-bottom: solid 1px #d8d8d8;
+	margin: 5px 10px;
+	outline: none;
+	font-size: 20px;
 }
 
 .controls {
-  margin: 20px 0;
+	margin: 20px 0;
 }
 
 .button-wrapper {
-  margin: 50px 0 20px;
+	margin: 50px 0 20px;
 }
