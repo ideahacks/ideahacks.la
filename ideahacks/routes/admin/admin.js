@@ -16,7 +16,8 @@ const getAdmin = (req, res) => {
 					{
 						accepted: { name: "Accepted", list: [] },
 						pending: { name: "Pending", list: [] },
-						rejected: { name: "Rejected", list: [] }
+						rejected: { name: "Rejected", list: [] },
+						waitlisted: { name: "Waitlisted", list: [] }
 					}
 				)
 
