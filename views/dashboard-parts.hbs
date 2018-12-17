@@ -22,20 +22,46 @@
     <!-- SCRIPTS -->
     <script src='/js/dashboard-parts-modal.js'></script>
 </head>
-<body class='background-grey'>
+<body>
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <!-- BANNER -->
+    <div class='container-fluid checkout-body'>
+
+    <div class='sidebar col-md-2'>
+        <p class='search-bar'>Search for a part:</p>
+        {{> filter}}
+        <p class='category-header'>Browse by category</p>
+        <p class='part-category'>ALL</p>
+        <p class='part-category'>Dev Kits</p>
+        <p class='part-category'>Batteries</p>
+        <p class='part-category'>Power</p>
+        <p class='part-category'>Microcontrollers</p>
+        <p class='part-category'>FPGAs</p>
+        <p class='part-category'>Sensors</p>
+        <p class='part-category'>Connectors</p>
+    </div>
+
+    <div class='text-center col-md-10'>
+          <h1 class='parts-header'>ALL PARTS</h1>
+
+
+    </div>
+
+    </div>
+
+    <!--
+
+    BANNER
     <div class='banner'>
         <h1 class='transparent-ucla-blue'>Parts</h1>
         <p class='text-center'>Use this tool to browse through parts, check whether certain parts are in stock, and to plan out how to integrate these parts into your hack! Click on any part for more information.</p>
     </div>
 
-    <!-- FILTER LIST -->
+    FILTER LIST
     {{> filter}}
 
-    <!-- PARTS LIST -->
+    PARTS LIST
     <ul class='parts-list filter-list'>
         {{#each parts}}
         <li class='row part' id='{{this._id}}'>
@@ -46,5 +72,8 @@
         {{/each}}
     </ul>
     {{> dashboardPartsModal }}
+
+    -->
+
 </body>
 </html>

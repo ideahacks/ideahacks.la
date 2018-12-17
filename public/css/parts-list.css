@@ -1,40 +1,31 @@
-/* BANNER */
-.banner {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 10px;
+.checkout-body {
+	padding-top: 90px;
+	background-color: #dd8064;
+	padding-left: 40px;
 }
 
-/* PARTS LIST */
-.parts-list {
-	list-style: none;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px 10px 50px;
+.sidebar {
+	color: white;
 }
 
-.part {
-	background-color: white;
-	margin: 20px 0;
-	padding: 10px 20px;
+.search-bar {
 	font-weight: bold;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+	font-size: 14px;
+	margin: 0px;
 }
 
-.part p {
-	margin: 0;
-}
-
-.part-type {
+.category-header {
+	font-weight: bold;
 	text-transform: uppercase;
+	margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-	.part-type {
-		display: none;
-	}
+.part-category {
+}
 
-	.part-stock {
-		text-align: right;
-	}
+.parts-header {
+	color: white;
+	margin: 0px;
+	font-size: 30px;
+	font-weight: bold;
 }
