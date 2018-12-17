@@ -9,10 +9,12 @@ const getApplicationReview = (req, res) => {
 					if (user.applicationStatus === "accepted") stats.accepted++
 					else if (user.applicationStatus === "pending") stats.pending++
 					else if (user.applicationStatus === "rejected") stats.rejected++
+
 					else if (user.applicationStatus === "waitlisted") stats.waitlisted++
 					return stats
 				},
 				{ accepted: 0, rejected: 0, pending: 0, waitlisted: 0 }
+
 			)
 
 			res.render("admin-application-review.hbs", {
@@ -20,7 +22,9 @@ const getApplicationReview = (req, res) => {
 				numberApplications: users.length,
 				numberAccepted: applicationStats.accepted,
 				numberRejected: applicationStats.rejected,
+
 				numberWaitlisted: applicationStats.waitlisted,
+
 				numberPending: applicationStats.pending
 			})
 		})
