@@ -82,13 +82,11 @@
 .application.rejected,
 .rejected-box {
 	background-color: #c83333;
-
 }
 
 .application.waitlisted,
 .waitlisted-box {
 	background-color: rgb(255, 183, 24);
-
 }
 
 .application .year,
