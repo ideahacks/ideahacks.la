@@ -32,32 +32,25 @@
     <!-- NAVBAR -->
     {{> navbar }}
 
-    <!-- BANNER -->
     <div class='banner'>
-        <h1 class='transparent-ucla-blue'>Parts</h1>
+      <h1>Parts Checkout</h1>
+      <p>Hello, welcome to the parts checkout system</p>
     </div>
 
-    {{> partsCreationModal }}
-
-    <div class='content-wrapper text-right'>
-        <button title='Add Part'>+</button>
+    <div class='col-md-6 text-center'>
+      <div class='checkout'>
+      <p>To check out a part</p>
+      <h1>Scan a part<h1>
+      </div>
     </div>
 
-    <!-- FILTER LIST -->
-    {{> filter}}
+    <div class='col-md-6 text-center'>
+      <div class='checkin'>
+      <p>To check in a part</p>
+      <h1>Enter a team #<h1>
+      </div>
+    </div>
 
-    <!-- PARTS LIST -->
-    <ul class='parts-list filter-list'>
-        {{#each parts}}
-        <li class='row part' id='{{this._id}}'>
-            <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
-            <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
-            <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
-        </li>
-        {{/each}}
-    </ul>
 
-    <!-- PARTS CHECKOUT MODAL -->
-    {{> partsCheckoutModal }}
 </body>
 </html>
