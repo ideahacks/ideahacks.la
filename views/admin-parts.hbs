@@ -37,12 +37,17 @@
         <p>Hello, welcome to the parts checkout system</p>
     </div>
 
-    <div class='text-center'>
+    <div class='input-form text-center'>
         <div class='checkout'>
             <h1 id='checkout-prompt'>Check out a part</h1>
             <form id='barcode-input' style="display:none;">
               Scan the part's barcode below <br> <br>
               <input type="text" name="barcode">
+              <br> <br>
+            </form>
+            <form id='team-input' style="display:none;">
+              Enter the team # below <br> <br>
+              <input type="text" name="team">
             </form>
         </div>
     </div>
@@ -50,10 +55,6 @@
     <div class='text-center'>
         <div class='checkin'>
             <h1 id='checkin-prompt'>Check in a part</h1>
-            <form id='team-input' style="display:none;">
-              Enter the team # below <br> <br>
-              <input type="text" name="team">
-            </form>
         </div>
     </div>
 
