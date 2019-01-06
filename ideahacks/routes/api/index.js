@@ -1,7 +1,6 @@
 const express = require("express")
 const apiRouter = express.Router()
 const userApiHandlers = require("./users.js")
-const partApiHandlers = require("./parts.js")
 const h = require("../../helpers").authHelpers
 
 // gets all users within the database
@@ -22,21 +21,22 @@ apiRouter.post(
 	userApiHandlers.changeApplicationStatus
 )
 
-// PARTS API
-// gets all parts from the database
-apiRouter.get("/parts", partApiHandlers.getParts)
-
-// gets a single part from the database by it's name
-apiRouter.get("/parts/name/:partName", partApiHandlers.getPartByName)
-
-// performs part return or checkout for a given quantity of parts and a team number
-apiRouter.post(
-	"/parts/action/:action/part/:id/quantity/:quantity/teamNumber/:teamNumber",
-	h.isAdmin,
-	partApiHandlers.handlePartCheckout
-)
-
-// Returns a list of teams that have a certain part
-apiRouter.get("/parts/owners/:id", h.isAdmin, partApiHandlers.getPartOwners)
+// POTENTIALLY DEAD CODE
+// // PARTS API
+// // gets all parts from the database
+// apiRouter.get("/parts", partApiHandlers.getParts)
+//
+// // gets a single part from the database by it's name
+// apiRouter.get("/parts/name/:partName", partApiHandlers.getPartByName)
+//
+// // performs part return or checkout for a given quantity of parts and a team number
+// apiRouter.post(
+// 	"/parts/action/:action/part/:id/quantity/:quantity/teamNumber/:teamNumber",
+// 	h.isAdmin,
+// 	partApiHandlers.handlePartCheckout
+// )
+//
+// // Returns a list of teams that have a certain part
+// apiRouter.get("/parts/owners/:id", h.isAdmin, partApiHandlers.getPartOwners)
 
 module.exports = apiRouter
