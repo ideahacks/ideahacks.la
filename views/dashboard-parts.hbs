@@ -33,36 +33,40 @@
         {{> filter}}
         <p class='category-header'>Browse by category</p>
         <p class='part-category'>ALL</p>
-        <p class='part-category'>Dev Kits</p>
-        <p class='part-category'>Batteries</p>
-        <p class='part-category'>Connectors</p>
-        <p class='part-category'>Displays</p>
-        <p class='part-category'>Interface ICs</p>
-        <p class='part-category'>Sensors</p>
-        <p class='part-category'>User Interfaces</p>
-        <p class='part-category'>Power</p>
-        <p class='part-category'>Wireless</p>
-        <p class='part-category'>Discrete Semiconductors</p>
-        <p class='part-category'>Electromechanical</p>
-        <p class='part-category'>Discrete</p>
-        <p class='part-category'>Microcontrollers</p>
-        <p class='part-category'>FPGAs</p>
-        <p class='part-category'>Miscellaneous</p>
+        <p class='part-category filter-key'>Dev Kits</p>
+        <p class='part-category filter-key'>Batteries</p>
+        <p class='part-category filter-key'>Connectors</p>
+        <p class='part-category filter-key'>Displays</p>
+        <p class='part-category filter-key'>Interface ICs</p>
+        <p class='part-category filter-key'>Sensors</p>
+        <p class='part-category filter-key'>User Interfaces</p>
+        <p class='part-category filter-key'>Power</p>
+        <p class='part-category filter-key'>Wireless</p>
+        <p class='part-category filter-key'>Discrete Semiconductors</p>
+        <p class='part-category filter-key'>Electromechanical</p>
+        <p class='part-category filter-key'>Discrete</p>
+        <p class='part-category filter-key'>Microcontrollers</p>
+        <p class='part-category filter-key'>FPGAs</p>
+        <p class='part-category filter-key'>Miscellaneous</p>
     </div>
 
     <div class='parts-container text-center col-md-10'>
           <h1 class='parts-header'>ALL PARTS</h1>
           <p class='parts-subtitle'>Click on a part to see more detailed information</p>
-
+    <div class='filter-list'>
           {{#each parts}}
           <div class='text-left col-md-3'>
             <div>
                 <img class='part' src='/img/team/Ben_He.jpg' />
             </div>
-            <p class='part-details text-left'>{{this.partName}}</p>
+            <p class='part-details filter-key text-left'>{{this.partName}}</p>
             <p class='part-details text-left'>Quantity: {{this.stock}}</p>
           </div>
           {{/each}}
+
+        </div>
+
+          {{> dashboardPartsModal }}
     </div>
 
     </div>
