@@ -20,12 +20,31 @@
 	margin-top: 20px;
 }
 
-.part-category {
-}
-
 .parts-header {
 	color: white;
-	margin: 0px;
 	font-size: 30px;
 	font-weight: bold;
+	margin: 0px;
+}
+
+.parts-subtitle {
+	margin: 0px 0px 5px 0px;
+	color: white;
+}
+
+.part {
+	width: 200px;
+	border: 2px solid white;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.parts-container {
+	padding-left: 0px;
+	margin-bottom: 100px;
+}
+
+.part-details {
+	margin: 0px;
+	color: white;
 }
