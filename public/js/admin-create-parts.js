@@ -7,6 +7,8 @@ $(() => {
 		let part = {
 			partName: $('input[name="part-name"]').val(),
 			barcode: $('input[name="part-barcode"]').val(),
+			datasheet: $('input[name="part-datasheet"]').val(),
+			type: $('input[name="part-type"]').val(),
 			description: $('textarea[name="part-description"]').val()
 		}
 
