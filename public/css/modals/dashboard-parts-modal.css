@@ -1,5 +1,5 @@
 .modal-content {
-	padding: 30px 5% 40px;
+	padding: 25px 0px;
 	width: 60%;
 }
 
@@ -9,13 +9,13 @@
 	}
 }
 
-.modal-content h2 {
-	margin-bottom: 20px;
+.picture {
+	width: 200px;
 }
 
 .modal-content p {
 	font-weight: bold;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .modal-content span {

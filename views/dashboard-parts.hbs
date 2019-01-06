@@ -57,14 +57,14 @@
           {{#each parts}}
           <div class='text-left col-md-3'>
             <div>
-                <img class='part' src='/img/team/Ben_He.jpg' />
+                <img class='part' id='{{this._id}}' src='/img/team/Ben_He.jpg' />
             </div>
             <p class='part-details filter-key text-left'>{{this.partName}}</p>
             <p class='part-details text-left'>Quantity: {{this.stock}}</p>
           </div>
           {{/each}}
 
-        </div>
+    </div>
 
           {{> dashboardPartsModal }}
     </div>

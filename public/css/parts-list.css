@@ -5,7 +5,7 @@
 }
 
 .sidebar {
-	color: white;
+	color: rgb(255, 255, 244);
 }
 
 .search-bar {
@@ -21,7 +21,7 @@
 }
 
 .parts-header {
-	color: white;
+	color: rgb(255, 255, 244);
 	font-size: 30px;
 	font-weight: bold;
 	margin: 0px;
@@ -29,14 +29,18 @@
 
 .parts-subtitle {
 	margin: 0px 0px 5px 0px;
-	color: white;
+	color: rgb(255, 255, 244);
 }
 
 .part {
 	width: 200px;
-	border: 2px solid white;
+	border: 2px solid rgb(255, 255, 244);
 	margin-bottom: 5px;
 	margin-top: 20px;
+}
+
+.part:hover {
+	cursor: pointer;
 }
 
 .parts-container {
@@ -46,5 +50,5 @@
 
 .part-details {
 	margin: 0px;
-	color: white;
+	color: rgb(255, 255, 244);
 }
