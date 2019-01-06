@@ -8,9 +8,6 @@
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-    <!-- SOCKETIO -->
-    <script src='/socket.io/socket.io.js'></script>
-
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -22,6 +19,8 @@
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' type='text/css' href='/css/create-parts.css' />
 
+    <!-- SCRIPTS -->
+    <script src="/js/admin-create-parts.js"></script>
 </head>
 <body>
 
@@ -34,21 +33,17 @@
     </div>
 
     <div class='form text-center'>
-        <form>
-            Part Name:<br>
-            <input type="text" name="part-name">
+        <form class='create-parts-form'>
+            <label>PartName:</label><br />
+            <input type="text" name="part-name"> <br />
+
+            <label>Description:</label><br />
+            <textarea type="text" rows='4' name="part-description"></textarea> <br />
+
+            <label>Barcode (scan below):</label><br />
+            <input type="text" name="part-barcode"><br />
+            <button class='submit-button'>Create</button>
         </form>
-        <form>
-            Description: <br>
-            <textarea type="text" rows='4' name="part-descrip"> </textarea>
-        </form>
-        <form>
-            Barcode (scan below): <br>
-            <input type="text" name="part-barcode">
-        </form>
-        <button class='submit-button'>
-      Create
-    </button>
     </div>
 
 </body>

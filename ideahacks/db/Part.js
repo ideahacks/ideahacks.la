@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const PartSchema = new Schema({
 	partName: String,
 	stock: Number,
+	barcode: String,
 	description: String,
 	type: { type: String, default: "must return" },
 	manufacturer: { type: String, default: "" },
