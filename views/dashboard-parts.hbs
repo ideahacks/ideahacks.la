@@ -28,46 +28,46 @@
 
     <div class='container-fluid checkout-body'>
 
-    <div class='sidebar col-md-2'>
-        <p class='search-bar'>Search for a part:</p>
-        {{> filter}}
-        <p class='category-header'>Browse by category</p>
-        <p class='part-category'>ALL</p>
-        <p class='part-category filter-key'>Dev Kits</p>
-        <p class='part-category filter-key'>Batteries</p>
-        <p class='part-category filter-key'>Connectors</p>
-        <p class='part-category filter-key'>Displays</p>
-        <p class='part-category filter-key'>Interface ICs</p>
-        <p class='part-category filter-key'>Sensors</p>
-        <p class='part-category filter-key'>User Interfaces</p>
-        <p class='part-category filter-key'>Power</p>
-        <p class='part-category filter-key'>Wireless</p>
-        <p class='part-category filter-key'>Discrete Semiconductors</p>
-        <p class='part-category filter-key'>Electromechanical</p>
-        <p class='part-category filter-key'>Discrete</p>
-        <p class='part-category filter-key'>Microcontrollers</p>
-        <p class='part-category filter-key'>FPGAs</p>
-        <p class='part-category filter-key'>Miscellaneous</p>
-    </div>
+        <div class='sidebar col-md-2'>
+            <p class='search-bar'>Search for a part:</p>
+            {{> filter}}
+            <p class='category-header'>Browse by category</p>
+            <p class='part-category'>ALL</p>
+            <p class='part-category filter-key'>Dev Kits</p>
+            <p class='part-category filter-key'>Batteries</p>
+            <p class='part-category filter-key'>Connectors</p>
+            <p class='part-category filter-key'>Displays</p>
+            <p class='part-category filter-key'>Interface ICs</p>
+            <p class='part-category filter-key'>Sensors</p>
+            <p class='part-category filter-key'>User Interfaces</p>
+            <p class='part-category filter-key'>Power</p>
+            <p class='part-category filter-key'>Wireless</p>
+            <p class='part-category filter-key'>Discrete Semiconductors</p>
+            <p class='part-category filter-key'>Electromechanical</p>
+            <p class='part-category filter-key'>Discrete</p>
+            <p class='part-category filter-key'>Microcontrollers</p>
+            <p class='part-category filter-key'>FPGAs</p>
+            <p class='part-category filter-key'>Miscellaneous</p>
+        </div>
 
-    <div class='parts-container text-center col-md-10'>
-          <h1 class='parts-header'>ALL PARTS</h1>
-          <p class='parts-subtitle'>Click on a part to see more detailed information</p>
-    <div class='filter-list'>
-          {{#each parts}}
-          <div class='text-left col-md-3'>
-            <div>
-                <img class='part' id='{{this._id}}' src='/img/team/Ben_He.jpg' />
+        <div class='parts-container text-center col-md-10'>
+            <h1 class='parts-header'>ALL PARTS</h1>
+            <p class='parts-subtitle'>Click on a part to see more detailed information</p>
+            <div class='filter-list'>
+                {{#each parts}}
+                <div class='text-left col-md-3'>
+                    <div>
+                        <img class='part' id='{{this._id}}' src='/img/team/Ben_He.jpg' />
+                    </div>
+                    <p class='part-details filter-key text-left'>{{this.partName}}</p>
+                    <p class='part-details text-left'>Quantity: {{this.stock}}</p>
+                </div>
+                {{/each}}
+
             </div>
-            <p class='part-details filter-key text-left'>{{this.partName}}</p>
-            <p class='part-details text-left'>Quantity: {{this.stock}}</p>
-          </div>
-          {{/each}}
 
-    </div>
-
-          {{> dashboardPartsModal }}
-    </div>
+            {{> dashboardPartsModal }}
+        </div>
 
     </div>
 
