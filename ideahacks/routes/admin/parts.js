@@ -10,6 +10,10 @@ const createParts = (req, res) => {
 	return res.render("admin-create-parts")
 }
 
+const teamParts = (req, res) => {
+	return res.render("admin-team-parts")
+}
+
 const postParts = (req, res) => {
 	Part.find({ partName: req.body.partName }).then(parts => {
 		if (parts.length > 0) {
@@ -35,5 +39,6 @@ const postParts = (req, res) => {
 module.exports = {
 	getParts,
 	postParts,
-	createParts
+	createParts,
+	teamParts
 }
