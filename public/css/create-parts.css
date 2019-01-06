@@ -15,9 +15,13 @@ form {
 	font-weight: bold;
 }
 
+label {
+	margin-top: 10px;
+}
+
 .form {
 	background-color: white;
-	margin: 0px 300px;
+	margin: 0px 300px 100px 300px;
 	border-radius: 15px;
 	padding: 20px 0px;
 }
