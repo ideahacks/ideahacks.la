@@ -28,16 +28,16 @@ function getParts(req, res) {
 }
 
 /**
- * GET /api/parts/:partName returns a single Part with a matching partName
- * @returns a single Part
- * @throws 404 if Part not found, 500 on any other error
+ * GET /api/parts/:barcode returns a single part with the matching barcode
+ * @returns a single part
+ * @throws 404 if part not found, 500 on any other error
  */
-partsRouter.get("/api/parts/:partName", isVerified, getPartByName)
+partsRouter.get("/api/parts/:barcode", isAdmin, getPartByBarcode)
 
-function getPartByName(req, res) {
-	Part.findOne({ partName: req.params.partName })
+function getPartByBarcode(req, res) {
+	Part.findOne({ barcode: req.params.barcode })
 		.then(part => {
-			// If Part does not exist, return not found
+			// If part doesn't exist, return not found
 			if (!part) {
 				return res.status(c.StatusNotFound).send(c.MessageNotFound)
 			}
@@ -75,6 +75,39 @@ function createPart(req, res) {
 			let newPart = new Part(req.body)
 
 			newPart
+				.save()
+				.then(() => {
+					return res.send(c.MessageOK)
+				})
+				.catch(err => {
+					return res.status(c.StatusInternalError).send(err)
+				})
+		})
+		.catch(err => {
+			return res.status(c.StatusInternalError).send(err)
+		})
+}
+
+/**
+ * PUT /api/parts/:barcode edits the part with the matching barcode
+ * given the edited values within the request body
+ * @returns 200 on successful edit
+ * @throws 404 on part not found, 500 on any other error
+ */
+partsRouter.put("/api/parts/:barcode", isAdmin, editPartWithBarcode)
+
+function editPartWithBarcode(req, res) {
+	Part.findOne({ barcode: req.params.barcode })
+		.then(part => {
+			// If part doesn't exist, return not found
+			if (!part) {
+				return res.status(c.StatusNotFound).send("Part with barcode does not exist")
+			}
+
+			// Update part with given info and save
+			let updatedPart = Object.assign(part, req.body)
+
+			updatedPart
 				.save()
 				.then(() => {
 					return res.send(c.MessageOK)
