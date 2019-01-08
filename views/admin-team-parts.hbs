@@ -37,13 +37,13 @@
     <div class='wrapper'>
         <ul class='filter-list'>
             {{#each teams}}
-                <div class='team'>
-                    <h1 class='filter-key'>Team {{ this.teamNumber }}</h1>
-                    <h2>Parts Owned:</h2>
-                    {{#each this.parts }}
-                        <p class='filter-key'>{{ this }}</p>
-                    {{/each}}
-                </div>
+            <div class='team'>
+                <h1 class='filter-key'>Team {{ this.teamNumber }}</h1>
+                <h2>Parts Owned:</h2>
+                {{#each this.parts }}
+                <p class='filter-key'>{{ this }}</p>
+                {{/each}}
+            </div>
             {{/each}}
         </ul>
     </div>
