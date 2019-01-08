@@ -24,24 +24,29 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  {{> navbar }}
+    <!-- NAVBAR -->
+    {{> navbar }}
 
-  <div class='banner'>
-      <h1>TEAM PARTS</h1>
-      <p>View what parts each team has checked out here!</p>
-      <form>
-        <form class='create-parts-form'>
-            <label>SEARCH FOR A TEAM:</label> <br>
-            <input type="text">
-      </form>
-  </div>
+    <div class='banner'>
+        <h1>TEAM PARTS</h1>
+        <p>View what parts each team has checked out here!</p>
 
-  <div class='text-left col-md-3'>
-      <div>
-          <img class='part' src='/img/team/Ben_He.jpg'>
-      </div>
-      <p class='text-left'>part</p>
-  </div>
+        {{> filter }}
+    </div>
+
+    <div class='wrapper'>
+        <ul class='filter-list'>
+            {{#each teams}}
+                <div class='team'>
+                    <h1 class='filter-key'>Team {{ this.teamNumber }}</h1>
+                    <h2>Parts Owned:</h2>
+                    {{#each this.parts }}
+                        <p class='filter-key'>{{ this }}</p>
+                    {{/each}}
+                </div>
+            {{/each}}
+        </ul>
+    </div>
 
 </body>
+</html>
