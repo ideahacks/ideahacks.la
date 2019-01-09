@@ -24,9 +24,7 @@
     <link rel='stylesheet' type='text/css' href='/css/modals/parts-creation-modal.css' />
 
     <!-- SCRIPTS -->
-    <script src="/js/admin-parts.js"></script>
     <script src='/js/parts-checkout.js'></script>
-    <script src='/js/part-creation.js'></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -44,10 +42,8 @@
                 Scan the part's barcode below <br> <br>
                 <input type="text" name="barcode">
                 <br> <br>
-            </form>
-            <form id='team-input' style="display:none;">
-                Enter the team # below <br> <br>
-                <input type="text" name="team">
+                    Enter the team # below <br> <br>
+                <input type="text" name="team-number">
             </form>
         </div>
     </div>
@@ -59,14 +55,8 @@
     </div>
 
     <div class='text-center'>
-        <button id='in-button' style="display:none;">
-        Check in
-      </button>
-        <button id='out-button' style="display:none;">
-        Check out
-      </button>
+        <button id='in-button' style="display:none;">Check in</button>
+        <button id='out-button' style="display:none;">Check out</button>
     </div>
-
-
 </body>
 </html>
