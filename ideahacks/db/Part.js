@@ -5,8 +5,9 @@ const PartSchema = new Schema({
 	partName: String,
 	stock: { type: Number, min: 0 },
 	barcode: String,
+	category: String,
 	description: String,
-	type: { type: String, default: "must return" },
+	type: { type: String, default: "returnable" },
 	manufacturer: { type: String, default: "" },
 	manufacturerPartNumber: { type: String, default: "" },
 	datasheet: { type: String, default: "" }

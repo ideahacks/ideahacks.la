@@ -9,7 +9,9 @@ $(() => {
 			barcode: $('input[name="part-barcode"]').val(),
 			datasheet: $('input[name="part-datasheet"]').val(),
 			type: $('input[name="part-type"]').val(),
-			description: $('textarea[name="part-description"]').val()
+			description: $('input[name="part-description"]').val(),
+			stock: $('input[name="part-stock"]').val(),
+			category: $('input[name="part-category"]').val()
 		}
 
 		// Hit the POST /api/parts endpoint with the part
