@@ -10,7 +10,8 @@ const PartSchema = new Schema({
 	type: { type: String, default: "returnable" },
 	manufacturer: { type: String, default: "" },
 	manufacturerPartNumber: { type: String, default: "" },
-	datasheet: { type: String, default: "" }
+	datasheet: { type: String, default: "" },
+	imageUrl: String
 })
 
 module.exports = mongoose.model("Part", PartSchema)

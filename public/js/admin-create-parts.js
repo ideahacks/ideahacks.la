@@ -11,7 +11,8 @@ $(() => {
 			type: $('input[name="part-type"]').val(),
 			description: $('input[name="part-description"]').val(),
 			stock: $('input[name="part-stock"]').val(),
-			category: $('input[name="part-category"]').val()
+			category: $('input[name="part-category"]').val(),
+			imageUrl: $('input[name="part-image"]').val()
 		}
 
 		// Hit the POST /api/parts endpoint with the part
