@@ -3,5 +3,6 @@ module.exports = {
 	apiRouter: require("./api"),
 	mainRouter: require("./main"),
 	dashboardRouter: require("./dashboard"),
-	partsRouter: require("./api/parts")
+	partsRouter: require("./api/parts"),
+	teamRouter: require("./api/teams")
 }

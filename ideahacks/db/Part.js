@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const PartSchema = new Schema({
 	partName: String,
-	stock: Number,
+	stock: { type: Number, min: 0 },
 	barcode: String,
 	description: String,
 	type: { type: String, default: "must return" },
