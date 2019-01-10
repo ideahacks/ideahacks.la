@@ -20,6 +20,14 @@
 	margin-top: 20px;
 }
 
+.part-category {
+	cursor: pointer;
+}
+
+.part-category:hover {
+	opacity: 0.5;
+}
+
 .parts-header {
 	color: rgb(255, 255, 244);
 	font-size: 30px;
