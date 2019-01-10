@@ -42,7 +42,8 @@
 
 .part {
 	width: 200px;
-	border: 2px solid rgb(255, 255, 244);
+	height: 200px;
+	border: 10px solid rgb(255, 255, 244);
 	margin-bottom: 5px;
 	margin-top: 20px;
 }
