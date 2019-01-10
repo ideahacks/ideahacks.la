@@ -58,7 +58,7 @@
                 {{#each parts}}
                 <div class='text-left col-md-3' id='{{this.category}}'>
                     <div>
-                        <img class='part' id='{{this._id}}' src='https://cdn.shopify.com/s/files/1/0174/1800/products/a000005_iso_1_bb99e4b5-0a4c-420b-8dd8-859ea094c6fc_1024x1024.jpg?v=1530375387' />
+                        <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
                     </div>
                     <p class='part-details filter-key text-left'>{{this.partName}}</p>
                     <p class='part-details text-left'>Quantity: {{this.stock}}</p>
@@ -71,31 +71,6 @@
         </div>
 
     </div>
-
-    <!--
-
-    BANNER
-    <div class='banner'>
-        <h1 class='transparent-ucla-blue'>Parts</h1>
-        <p class='text-center'>Use this tool to browse through parts, check whether certain parts are in stock, and to plan out how to integrate these parts into your hack! Click on any part for more information.</p>
-    </div>
-
-    FILTER LIST
-    {{> filter}}
-
-    PARTS LIST
-    <ul class='parts-list filter-list'>
-        {{#each parts}}
-        <li class='row part' id='{{this._id}}'>
-            <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
-            <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
-            <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
-        </li>
-        {{/each}}
-    </ul>
-    {{> dashboardPartsModal }}
-
-    -->
 
 </body>
 </html>
