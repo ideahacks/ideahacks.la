@@ -30,21 +30,24 @@
     <div class='banner'>
         <h1>TEAM PARTS</h1>
         <p>View what parts each team has checked out here!</p>
-
         {{> filter }}
     </div>
 
-    <div class='wrapper'>
+
+    <div class='wrapper text-center container-fluid'>
         <ul class='filter-list'>
-            {{#each teams}}
+          {{#each teams}}
+          <div class='col-md-3'>
             <div class='team'>
-                <h1 class='filter-key'>Team {{ this.teamNumber }}</h1>
-                <h2>Parts Owned:</h2>
+                <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
+                <div class='container-fluid parts-list'>
                 {{#each this.parts }}
-                <p class='filter-key'>{{ this }}</p>
+                  <p class='text-center part-name filter-key'>{{ this }}</p>
                 {{/each}}
+              </div>
             </div>
-            {{/each}}
+          </div>
+          {{/each}}
         </ul>
     </div>
 

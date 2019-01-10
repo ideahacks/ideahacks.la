@@ -2,11 +2,15 @@
 	margin-top: 130px;
 	margin-bottom: 30px;
 	text-align: center;
-	color: white;
+	color: rgb(255, 255, 244);
 }
 
 body {
 	background-color: rgb(221, 128, 100);
+}
+
+.banner p {
+	margin: 0px;
 }
 
 form {
@@ -26,5 +30,30 @@ input {
 }
 
 .team {
-	margin: 50px 0;
+	margin: 10px 0;
+	background-color: rgb(255, 255, 244);
+	border-radius: 7px;
+	height: 150px;
+	padding: 10px 0px;
+}
+
+.wrapper {
+	margin-right: 40px;
+	margin-bottom: 100px;
+}
+
+.parts-list {
+	margin-top: 10px;
+	max-height: 90px;
+	overflow: scroll;
+}
+
+.part-name {
+	margin: 0px;
+}
+
+.team-number {
+	color: rgb(255, 183, 24);
+	font-size: 25px;
+	margin: 0px;
 }
