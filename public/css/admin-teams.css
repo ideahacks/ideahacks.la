@@ -34,7 +34,7 @@ input {
 	background-color: rgb(255, 255, 244);
 	border-radius: 7px;
 	height: 150px;
-	padding: 10px 0px;
+	padding: 14px 0px;
 }
 
 .wrapper {
@@ -54,6 +54,6 @@ input {
 
 .team-number {
 	color: rgb(255, 183, 24);
-	font-size: 25px;
+	font-size: 20px;
 	margin: 0px;
 }
