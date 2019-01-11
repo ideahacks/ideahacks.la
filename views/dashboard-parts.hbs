@@ -61,8 +61,10 @@
                         <div>
                             <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
                         </div>
+                        <div class='detail-section container-fluid'>
                         <p class='part-details filter-key text-left'>{{this.partName}}</p>
-                        <p class='part-details text-left'>Quantity: {{this.stock}}</p>
+                        <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
+                        </div>
                     </div>
                     {{/each}}
 
