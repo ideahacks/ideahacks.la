@@ -1,3 +1,48 @@
+/* BANNER */
+body {
+	background-color: rgb(221, 128, 100);
+}
+
+form {
+	font-family: "Josefin Sans";
+}
+
+.banner {
+	margin-top: 130px;
+	margin-bottom: 70px;
+	text-align: center;
+	color: white;
+}
+
+.banner h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.banner p {
+	font-size: 20px;
+}
+
+.checkout,
+.checkin {
+	background-color: rgb(255, 255, 244);
+	border-radius: 20px;
+	margin: 50px 450px;
+	padding: 20px 0px;
+}
+
+#checkout-prompt:hover,
+#checkin-prompt:hover {
+	cursor: pointer;
+	color: rgb(255, 183, 24);
+}
+
+.checkout h1,
+.checkin h1 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .checkout-body {
 	padding-top: 90px;
 	background-color: #dd8064;
@@ -61,4 +106,6 @@
 .part-details {
 	margin: 0px;
 	color: rgb(255, 255, 244);
+
+@media (max-width: 768px) {
 }

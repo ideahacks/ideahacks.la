@@ -166,11 +166,21 @@
 
 .small-logo {
 	width: 10%;
+
 	margin: 30px 15px;
 }
 
 .coffee-logo {
 	width: 5%;
+}
+
+.hci-logo {
+	width: 5%;
+}
+
+.yerba-logo {
+	margin-left: 35px;
+	width: 10%;
 }
 
 .header-graphic-centered {
@@ -234,7 +244,11 @@
 		width: 200px;
 		margin: 30px 10px;
 	}
-	.coffee-logo {
+	.yerba-logo {
+		width: 90px;
+	}
+	.coffee-logo,
+	.hci-logo {
 		width: 65px;
 		margin: 20px 20px;
 	}

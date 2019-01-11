@@ -84,6 +84,11 @@
 	background-color: #c83333;
 }
 
+.application.waitlisted,
+.waitlisted-box {
+	background-color: rgb(255, 183, 24);
+}
+
 .application .year,
 .application .school {
 	text-align: center;

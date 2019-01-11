@@ -3,7 +3,16 @@
  */
 
 .filter-container {
-	text-align: left;
+	text-align: center;
+	padding: 20px 0 0;
+}
+
+.filter-label {
+	font-size: 16px;
+	font-family: "Josefin Sans";
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0px;
 }
 
 .filter,
