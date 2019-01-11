@@ -1,35 +1,15 @@
 <div id="partsModal" class="modal parts-form">
     <div class="container-fluid modal-content">
-        <h2 class="ucla-blue part-name text-center"><span name="partName"></span></h2>
-        <div class="row">
-            <div class="col-md-7">
-                <p class="stock-amount">AMOUNT IN STOCK:<span name="stock"></span></p>
-            </div>
-            <div class="col-md-5">
-                <p class="type"> TYPE:<span name="type"></span></p>
-            </div>
+        <div class='col-sm-4'>
+            <img class='picture' src='{{this.imageUrl}}' />
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="part-description">DESCRIPTION: <br>
-                    <span name="description"></span>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="manufacturer">MANUFACTURER: <span name="manufacturer"></span></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="part-number">PART NUMBER:<span name="manufacturerPartNumber"></span></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="datasheet">DATASHEET: <a name="datasheet-link"><span name="datasheet"></span></a></p>
-            </div>
+        <div class='text-left col-sm-8'>
+            <p>PART:<span name="partName"></p>
+        <p>DESCRIPTION: <span name="description"></span></p>
+            <p>DATASHEET: <span name="datasheet"></span></p>
+            <p>TYPE:<span name="type"></span></p>
+            <p>CATEGORY:</span>
+            </p>
         </div>
     </div>
 </div>

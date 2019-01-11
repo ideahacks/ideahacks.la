@@ -6,7 +6,7 @@ function filter() {
 	 */
 
 	let searchBarValue = $("input.filter").val()
-	for (let part of $("ul.filter-list").children()) {
+	for (let part of $(".filter-list").children()) {
 		let keyValue = ""
 		$(part)
 			.find(".filter-key")
@@ -15,9 +15,9 @@ function filter() {
 			})
 		keyValue = keyValue.toUpperCase()
 		if (keyValue.indexOf(searchBarValue.toUpperCase()) > -1) {
-			$(part).fadeIn(300)
+			$(part).fadeIn(0)
 		} else {
-			$(part).fadeOut(300)
+			$(part).fadeOut(0)
 		}
 	}
 }

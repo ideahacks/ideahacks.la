@@ -27,35 +27,39 @@
     <script src='/js/parts-checkout.js'></script>
 </head>
 <body>
-    <!-- NAVBAR -->
-    {{> navbar }}
 
-    <div class='banner'>
-        <h1>Parts Checkout</h1>
-        <p>Hello, welcome to the parts checkout system</p>
-    </div>
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <div class='input-form text-center'>
-        <div class='checkout'>
-            <h1 id='checkout-prompt'>Check out a part</h1>
-            <form id='barcode-input' style="display:none;">
-                Scan the part's barcode below <br> <br>
-                <input type="text" name="barcode">
-                <br> <br> Enter the team # below <br> <br>
-                <input type="text" name="team-number">
-            </form>
+        <div class='banner'>
+            <h1>Parts Checkout</h1>
+            <p>Hello, welcome to the parts checkout system</p>
         </div>
-    </div>
 
-    <div class='text-center'>
-        <div class='checkin'>
-            <h1 id='checkin-prompt'>Check in a part</h1>
+        <div class='input-form text-center'>
+            <div class='checkout'>
+                <h1 id='checkout-prompt'>Check out a part</h1>
+                <form id='barcode-input' style="display:none;">
+                    Scan the part's barcode below <br> <br>
+                    <input type="text" name="barcode">
+                    <br> <br> Enter the team # below <br> <br>
+                    <input type="text" name="team-number">
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div class='text-center'>
-        <button id='in-button' style="display:none;">Check in</button>
-        <button id='out-button' style="display:none;">Check out</button>
+        <div class='text-center'>
+            <div class='checkin'>
+                <h1 id='checkin-prompt'>Check in a part</h1>
+            </div>
+        </div>
+
+        <div class='text-center'>
+            <button id='in-button' style="display:none;">Check in</button>
+            <button id='out-button' style="display:none;">Check out</button>
+        </div>
+
     </div>
 </body>
 </html>

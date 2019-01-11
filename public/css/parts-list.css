@@ -7,6 +7,10 @@ form {
 	font-family: "Josefin Sans";
 }
 
+label {
+	display: none;
+}
+
 .banner {
 	margin-top: 130px;
 	margin-bottom: 70px;
@@ -41,6 +45,71 @@ form {
 .checkin h1 {
 	font-weight: bold;
 	font-size: 20px;
+}
+
+.checkout-body {
+	padding-top: 90px;
+	background-color: #dd8064;
+	padding-left: 40px;
+}
+
+.sidebar {
+	color: rgb(255, 255, 244);
+}
+
+.search-bar {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0px;
+}
+
+.category-header {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.part-category {
+	cursor: pointer;
+}
+
+.part-category:hover {
+	opacity: 0.5;
+}
+
+.parts-header {
+	color: rgb(255, 255, 244);
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0px;
+}
+
+.parts-subtitle {
+	margin: 0px 0px 5px 0px;
+	color: rgb(255, 255, 244);
+}
+
+.part {
+	width: 200px;
+	height: 200px;
+	border: 10px solid rgb(255, 255, 244);
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.part:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.parts-container {
+	padding: 0px 50px;
+	margin-bottom: 100px;
+}
+
+.part-details {
+	margin: 0px;
+	color: rgb(255, 255, 244);
 }
 
 @media (max-width: 768px) {
