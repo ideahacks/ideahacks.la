@@ -26,43 +26,43 @@
 
     <div class='wrapper'>
 
-    <!-- NAVBAR -->
-    {{> navbar }}
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <div class='banner'>
-        <h1>CREATE A PART</h1>
-        <p>Hello, you can add new parts to inventory here!</p>
+        <div class='banner'>
+            <h1>CREATE A PART</h1>
+            <p>Hello, you can add new parts to inventory here!</p>
+        </div>
+
+        <div class='form text-center'>
+            <form class='create-parts-form'>
+                <label>PartName:</label><br />
+                <input type="text" name="part-name"> <br />
+
+                <label>Link to image:</label><br />
+                <input type="text" name="part-image"> <br />
+
+                <label>Description:</label><br />
+                <textarea type="text" rows='4' name="part-description"></textarea> <br />
+
+                <label>Stock:</label><br />
+                <input type="text" name="part-stock"> <br />
+
+                <label>Datasheet:</label><br />
+                <input type="text" name="part-datasheet"> <br />
+
+                <label>Type (Returnable/Consumable):</label><br />
+                <input type="text" name="part-type"> <br />
+
+                <label>Category:</label><br />
+                <input type="text" name="part-category"> <br />
+
+                <label>Barcode (scan below):</label><br />
+                <input type="text" name="part-barcode"><br />
+                <button class='submit-button'>Create</button>
+            </form>
+        </div>
+
     </div>
-
-    <div class='form text-center'>
-        <form class='create-parts-form'>
-            <label>PartName:</label><br />
-            <input type="text" name="part-name"> <br />
-
-            <label>Link to image:</label><br />
-            <input type="text" name="part-image"> <br />
-
-            <label>Description:</label><br />
-            <textarea type="text" rows='4' name="part-description"></textarea> <br />
-
-            <label>Stock:</label><br />
-            <input type="text" name="part-stock"> <br />
-
-            <label>Datasheet:</label><br />
-            <input type="text" name="part-datasheet"> <br />
-
-            <label>Type (Returnable/Consumable):</label><br />
-            <input type="text" name="part-type"> <br />
-
-            <label>Category:</label><br />
-            <input type="text" name="part-category"> <br />
-
-            <label>Barcode (scan below):</label><br />
-            <input type="text" name="part-barcode"><br />
-            <button class='submit-button'>Create</button>
-        </form>
-    </div>
-
-  </div>
 
 </body>

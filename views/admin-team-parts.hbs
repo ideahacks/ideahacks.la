@@ -25,35 +25,35 @@
 <body>
 
     <div class='wrapper'>
-    <!-- NAVBAR -->
-    {{> navbar }}
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <div class='banner'>
-        <h1>TEAM PARTS</h1>
-        <p>View what parts each team has checked out here!</p>
-        <p class='filter-description'>(You can filter by team number or part name)</p>
-        {{> filter }}
-    </div>
+        <div class='banner'>
+            <h1>TEAM PARTS</h1>
+            <p>View what parts each team has checked out here!</p>
+            <p class='filter-description'>(You can filter by team number or part name)</p>
+            {{> filter }}
+        </div>
 
 
-    <div class='text-center container-fluid'>
-        <ul class='filter-list'>
-            {{#each teams}}
-            <div class='col-md-3'>
-                <div class='team'>
-                    <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
-                    <div class='container-fluid parts-list'>
-                        {{#each this.parts }}
-                        <p class='text-center part-name filter-key'>{{ this }}</p>
-                        {{/each}}
+        <div class='text-center container-fluid'>
+            <ul class='filter-list'>
+                {{#each teams}}
+                <div class='col-md-3'>
+                    <div class='team'>
+                        <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
+                        <div class='container-fluid parts-list'>
+                            {{#each this.parts }}
+                            <p class='text-center part-name filter-key'>{{ this }}</p>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            {{/each}}
-        </ul>
-    </div>
+                {{/each}}
+            </ul>
+        </div>
 
-  </div>
+    </div>
 
 </body>
 </html>
