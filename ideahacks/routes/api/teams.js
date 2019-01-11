@@ -107,6 +107,11 @@ function editTeam(req, res) {
 			// Update team with info in request body and save
 			let updatedTeam = Object.assign(team, req.body)
 
+			// HACK: empty lists don't go through, so we have this check
+			if (!req.body.parts) {
+				team.parts = []
+			}
+
 			updatedTeam
 				.save()
 				.then(() => {

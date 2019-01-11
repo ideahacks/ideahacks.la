@@ -1,0 +1,35 @@
+.banner {
+	margin-top: 130px;
+	margin-bottom: 30px;
+	text-align: center;
+	color: white;
+}
+
+body {
+	background-color: rgb(221, 128, 100);
+}
+
+form {
+	font-family: "Josefin Sans";
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+label {
+	margin-top: 10px;
+}
+
+.form {
+	background-color: white;
+	margin: 0px 300px 100px 300px;
+	border-radius: 15px;
+	padding: 20px 0px;
+}
+
+textarea {
+	width: 400px;
+}
+
+.submit-button {
+	margin-top: 40px;
+}

@@ -74,6 +74,11 @@ function createPart(req, res) {
 
 			let newPart = new Part(req.body)
 
+			// HACK: Empty string comes through from the front end, but it should default to returnable
+			if (newPart.type === "") {
+				newPart.type = "returnable"
+			}
+
 			newPart
 				.save()
 				.then(() => {

@@ -1,40 +1,47 @@
 /* BANNER */
+body {
+	background-color: rgb(221, 128, 100);
+}
+
+form {
+	font-family: "Josefin Sans";
+}
+
 .banner {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 10px;
+	margin-top: 130px;
+	margin-bottom: 70px;
+	text-align: center;
+	color: white;
 }
 
-/* PARTS LIST */
-.parts-list {
-	list-style: none;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px 10px 50px;
-}
-
-.part {
-	background-color: white;
-	margin: 20px 0;
-	padding: 10px 20px;
-	font-weight: bold;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-}
-
-.part p {
-	margin: 0;
-}
-
-.part-type {
+.banner h1 {
 	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.banner p {
+	font-size: 20px;
+}
+
+.checkout,
+.checkin {
+	background-color: rgb(255, 255, 244);
+	border-radius: 20px;
+	margin: 50px 450px;
+	padding: 20px 0px;
+}
+
+#checkout-prompt:hover,
+#checkin-prompt:hover {
+	cursor: pointer;
+	color: rgb(255, 183, 24);
+}
+
+.checkout h1,
+.checkin h1 {
+	font-weight: bold;
+	font-size: 20px;
 }
 
 @media (max-width: 768px) {
-	.part-type {
-		display: none;
-	}
-
-	.part-stock {
-		text-align: right;
-	}
 }

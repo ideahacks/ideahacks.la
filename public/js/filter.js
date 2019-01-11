@@ -1,8 +1,8 @@
 function filter() {
 	/**
 	 * Filter Logic
-	 * Requires a <ul> element with class filter-list
-	 * Filters <li> elements based on child elements having the class filter-key
+	 * Requires a <ul> element with the class "filter-list"
+	 * Filters <li> elements based on child elements having the class "filter-key"
 	 */
 
 	let searchBarValue = $("input.filter").val()
