@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Team Parts - Admin</title>
+    <title>Teams - Admin</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,6 +24,7 @@
 </head>
 <body>
 
+    <div class='wrapper'>
     <!-- NAVBAR -->
     {{> navbar }}
 
@@ -35,7 +36,7 @@
     </div>
 
 
-    <div class='wrapper text-center container-fluid'>
+    <div class='text-center container-fluid'>
         <ul class='filter-list'>
             {{#each teams}}
             <div class='col-md-3'>
@@ -51,6 +52,8 @@
             {{/each}}
         </ul>
     </div>
+
+  </div>
 
 </body>
 </html>
