@@ -7,6 +7,10 @@ form {
 	font-family: "Josefin Sans";
 }
 
+label {
+	display: none;
+}
+
 .banner {
 	margin-top: 130px;
 	margin-bottom: 70px;

@@ -4,7 +4,10 @@
 
 .filter-container {
 	text-align: center;
-	padding: 20px 0 0;
+}
+
+input {
+	color: white;
 }
 
 .filter-label {

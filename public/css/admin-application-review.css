@@ -12,12 +12,21 @@
 .description {
 	padding-bottom: 20px;
 	font-size: 20px;
+	color: white;
 }
 
 @media (max-width: 990px) {
 	.banner {
 		width: 300px;
 	}
+}
+
+label {
+	color: white;
+}
+
+input {
+	text-align: center;
 }
 
 /* STATS */

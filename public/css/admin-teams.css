@@ -9,8 +9,9 @@ body {
 	background-color: rgb(221, 128, 100);
 }
 
-.banner p {
-	margin: 0px;
+.filter-description {
+	margin-top: 0px;
+	margin-bottom: 15px;
 }
 
 form {
