@@ -111,7 +111,7 @@ function editTeam(req, res) {
 			if (!req.body.parts) {
 				team.parts = []
 			}
-    
+
 			updatedTeam
 				.save()
 				.then(() => {
