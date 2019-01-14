@@ -18,8 +18,8 @@
 
 /* Modal Content/Box */
 .modal-content {
-	background-color: #fefefe;
-	margin: 100px auto;
+	background-color: rgb(255, 255, 244);
+	margin: 160px auto;
 	padding: 30px 20px;
 	border: 1px solid #888;
 	border-radius: 0;

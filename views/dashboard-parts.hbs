@@ -21,30 +21,61 @@
 
     <!-- SCRIPTS -->
     <script src='/js/dashboard-parts-modal.js'></script>
+    <script src='/js/admin-parts.js'></script>
 </head>
-<body class='background-grey'>
-    <!-- NAVBAR -->
-    {{> navbar }}
+<body>
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
 
-    <!-- BANNER -->
-    <div class='banner'>
-        <h1 class='transparent-ucla-blue'>Parts</h1>
-        <p class='text-center'>Use this tool to browse through parts, check whether certain parts are in stock, and to plan out how to integrate these parts into your hack! Click on any part for more information.</p>
+        <div class='container-fluid checkout-body'>
+
+            <div class='sidebar col-md-2'>
+                <p class='search-bar'>Search for a part:</p>
+                {{> filter}}
+                <p class='category-header'>Browse by category</p>
+                <p class='part-category'>ALL</p>
+                <p class='part-category'>Dev Kit</p>
+                <p class='part-category'>Battery</p>
+                <p class='part-category'>Connector</p>
+                <p class='part-category'>Display</p>
+                <p class='part-category'>Interface IC</p>
+                <p class='part-category'>Sensors</p>
+                <p class='part-category'>User Interface</p>
+                <p class='part-category'>Power</p>
+                <p class='part-category'>Wireless</p>
+                <p class='part-category'>Discrete Semiconductor</p>
+                <p class='part-category'>Electromechanical</p>
+                <p class='part-category'>Discrete</p>
+                <p class='part-category'>Microcontroller</p>
+                <p class='part-category'>FPGA</p>
+                <p class='part-category'>Miscellaneous</p>
+            </div>
+
+            <div class='parts-container text-center col-md-10'>
+                <h1 class='parts-header'>PARTS</h1>
+                <p class='parts-subtitle'>Click on a part to see more detailed information</p>
+                <div class='filter-list'>
+                    {{#each parts}}
+                    <div class='text-left col-md-3' id='{{this.category}}'>
+                        <div>
+                            <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
+                        </div>
+                        <div class='detail-section container-fluid'>
+                            <p class='part-details filter-key text-left'>{{this.partName}}</p>
+                            <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+
+                {{> dashboardPartsModal }}
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- FILTER LIST -->
-    {{> filter}}
-
-    <!-- PARTS LIST -->
-    <ul class='parts-list filter-list'>
-        {{#each parts}}
-        <li class='row part' id='{{this._id}}'>
-            <p class='filter-key col-sm-4 col-xs-6 part-name'>{{ this.partName }}</p>
-            <p class='filter-key col-sm-4 col-xs-6 text-center part-stock'>{{ this.stock }} in Stock</p>
-            <p class='filter-key col-sm-4 text-right part-type'>{{ this.type }}</p>
-        </li>
-        {{/each}}
-    </ul>
-    {{> dashboardPartsModal }}
 </body>
 </html>

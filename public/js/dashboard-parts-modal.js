@@ -10,7 +10,9 @@ $(() => {
 			for (let data in partData) {
 				$('span[name="' + data + '"]').text(partData[data])
 			}
-			$('a[name="datasheet-link"]').attr("href", partData.datasheet)
+			$('a[name="datasheet"]').text(partData.datasheet)
+			$('a[name="datasheet"]').attr("href", partData.datasheet)
+			$('img[name="partimg"]').attr("src", partData.imageUrl)
 
 			modal.style.display = "block"
 		})

@@ -1,40 +1,121 @@
 /* BANNER */
-.banner {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 10px;
+body {
+	background-color: rgb(221, 128, 100);
 }
 
-/* PARTS LIST */
-.parts-list {
-	list-style: none;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px 10px 50px;
+form {
+	font-family: "Josefin Sans";
+}
+
+label {
+	display: none;
+}
+
+.banner {
+	margin-top: 130px;
+	margin-bottom: 70px;
+	text-align: center;
+	color: white;
+}
+
+.banner h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.banner p {
+	font-size: 20px;
+}
+
+.checkout,
+.checkin {
+	background-color: rgb(255, 255, 244);
+	border-radius: 20px;
+	margin: 50px 450px;
+	padding: 20px 0px;
+}
+
+#checkout-prompt:hover,
+#checkin-prompt:hover {
+	cursor: pointer;
+	color: rgb(255, 183, 24);
+}
+
+.checkout h1,
+.checkin h1 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.checkout-body {
+	padding-top: 90px;
+	background-color: #dd8064;
+	padding-left: 40px;
+}
+
+.sidebar {
+	color: rgb(255, 255, 244);
+}
+
+.search-bar {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0px;
+}
+
+.category-header {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.part-category {
+	cursor: pointer;
+}
+
+.part-category:hover {
+	opacity: 0.5;
+}
+
+.parts-header {
+	color: rgb(255, 255, 244);
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0px;
+}
+
+.parts-subtitle {
+	margin: 0px 0px 5px 0px;
+	color: rgb(255, 255, 244);
 }
 
 .part {
-	background-color: white;
-	margin: 20px 0;
-	padding: 10px 20px;
-	font-weight: bold;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+	width: 200px;
+	height: 200px;
+	border: 10px solid rgb(255, 255, 244);
+	margin-bottom: 5px;
+	margin-top: 20px;
 }
 
-.part p {
-	margin: 0;
+.part:hover {
+	cursor: pointer;
+	opacity: 0.8;
 }
 
-.part-type {
-	text-transform: uppercase;
+.parts-container {
+	padding: 0px 50px;
+	margin-bottom: 100px;
+}
+
+.part-details {
+	margin: 0px;
+	color: rgb(255, 255, 244);
+}
+
+.detail-section {
+	height: 90px;
+	padding: 0px;
 }
 
 @media (max-width: 768px) {
-	.part-type {
-		display: none;
-	}
-
-	.part-stock {
-		text-align: right;
-	}
 }

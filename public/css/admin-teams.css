@@ -1,13 +1,55 @@
-.delete-team {
-	color: #aaa;
-	font-size: 28px;
-	font-weight: bold;
-	margin: 0px 5px;
+.banner {
+	margin-top: 130px;
+	margin-bottom: 30px;
+	text-align: center;
+	color: rgb(255, 255, 244);
 }
 
-.delete-team:hover,
-.delete-team:focus {
+body {
+	background-color: rgb(221, 128, 100);
+}
+
+.filter-description {
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+form {
+	font-family: "Josefin Sans";
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+input {
 	color: black;
-	text-decoration: none;
-	cursor: pointer;
+	text-align: center;
+	width: 40px;
+}
+
+.part {
+	width: 200px;
+}
+
+.team {
+	margin: 10px 0;
+	background-color: rgb(255, 255, 244);
+	border-radius: 7px;
+	height: 150px;
+	padding: 14px 0px;
+}
+
+.parts-list {
+	margin-top: 10px;
+	max-height: 90px;
+	overflow: scroll;
+}
+
+.part-name {
+	margin: 0px;
+}
+
+.team-number {
+	color: rgb(255, 183, 24);
+	font-size: 20px;
+	margin: 0px;
 }

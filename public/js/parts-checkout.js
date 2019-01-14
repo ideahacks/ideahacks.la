@@ -1,86 +1,142 @@
 $(() => {
-	let checkoutSocket = io("/admin/parts") // open socket to the server
+	// When checkout is selected, display next step
+	$("#checkout-prompt").click(function() {
+		$(".checkin").hide()
+		$("#barcode-input").show()
+		$(this).hide()
+		$("#team-input").show()
 
-	let modal = document.getElementById("part-checkout-modal")
-
-	// when application clicked on, inject info into modal, and then display modal
-	$(".parts-list").on("click", "li.part", function() {
-		let partName = $(this)
-			.find(".part-name")
-			.text()
-		let currentStock = $(this)
-			.find(".part-stock")
-			.text()
-			.split(" in Stock")[0]
-
-		$('span[name="partName"]').text(partName)
-		$('span[name="current-stock"]').text(currentStock)
-		$(".parts-checkout-form").attr("id", $(this).attr("id"))
-		$('span[name="part-owners"]').text("")
-		modal.style.display = "block"
-
-		// When modal is launched, set the window's onclick handler
-		// to close the modal
-		window.onclick = e => {
-			if (e.target === modal) {
-				resetFormFields()
-				modal.style.display = "none"
-			}
-		}
-
-		let ownerApiUrl = "/api/parts/owners/" + $(this).attr("id")
-		$.ajax({ url: ownerApiUrl, type: "GET" }).done(res => {
-			if (res.status === "success") {
-				$('span[name="part-owners"]').text(res.owners.join(", "))
-			}
-		})
+		$("#out-button").show()
 	})
 
-	// parts checkout form logic
-	$(".parts-checkout-form").submit(function(e) {
-		e.preventDefault()
+	// When checkin is selected, display next step
+	$("#checkin-prompt").click(function() {
+		$(".checkin").hide()
+		$("#barcode-input").show()
+		$("#checkout-prompt").hide()
+		$("#team-input").show()
 
-		let partId = $(this).attr("id")
-		let action = $('input[name="part-checkout-radio"][checked]').val()
-		let quantity = $('input[name="quantity"]').val()
-		let teamNumber = $('input[name="teamNumber"]').val()
-		let apiUrl =
-			"/api/parts/action/" + action + "/part/" + partId + "/quantity/" + quantity + "/teamNumber/" + teamNumber
-
-		$.ajax({ url: apiUrl, type: "POST" }).done(res => {
-			if (res.status === "failure") {
-				$(".parts-checkout-error-message").text(res.message)
-			} else {
-				// asynchronously change part stock on pages
-				changePartStock(partId, res.newStock)
-
-				// Broadcast to other clients that a change has been made
-				checkoutSocket.emit("part transformation", { id: partId, stock: res.newStock })
-
-				// clear out form fields and hide modal
-				resetFormFields()
-				modal.style.display = "none"
-			}
-		})
+		$("#in-button").show()
 	})
 
-	// Listen for "part transformation" from socket and make adjustments to page
-	checkoutSocket.on("part transformation", transformation => {
-		changePartStock(transformation.id, transformation.stock)
+	// When check-out or check-in button clicked, run this monstorous piece of logic
+	$("button").click(function() {
+		// Grab some information from the form
+		let barcode = $('input[name="barcode"]').val()
+		let teamNumber = $('input[name="team-number"]').val()
+		let buttonId = $(this).attr("id")
+
+		// Check for part existance
+		$.get("/api/parts/" + barcode)
+			.then(part => {
+				// Check if part stock is already 0
+				if (part.stock === 0 && buttonId === "out-button") {
+					errorHandler("Part has 0 stock!")
+				}
+
+				// Check for team existance
+				$.get("/api/teams/" + teamNumber)
+					.then(team => {
+						// If checking in, check if the team has the part to check in
+						if (buttonId === "in-button") {
+							let idx = team.parts.indexOf(part.partName)
+							if (idx === -1) {
+								errorHandler("Team doesn't have this part to check in!")
+							}
+						}
+
+						// Make edits to the part by incrementing/decrementing stock
+						if (buttonId === "in-button") {
+							part.stock += 1
+						} else {
+							part.stock -= 1
+						}
+
+						// Make edits to the team by adding/removing the part
+						if (buttonId === "out-button") {
+							// Add/remove part from team's parts
+							team.parts.push(part.partName)
+						} else {
+							let idx = team.parts.indexOf(part.partName)
+							team.parts.splice(idx, 1) // Removes part from team
+						}
+
+						// Use PUT endpoint to edit team
+						$.ajax({ url: "/api/teams/" + teamNumber, type: "PUT", data: team })
+							.then(() => {
+								// Use PUT endpoint to edit part
+								$.ajax({ url: "/api/parts/" + barcode, type: "PUT", data: part })
+									.then(() => {
+										successHandler()
+									})
+									.catch(err => {
+										errorHandler(err)
+									})
+							})
+							.catch(err => {
+								errorHandler(err)
+							})
+					})
+					.catch(() => {
+						// Team doesn't exist
+
+						// Checking in when team doesn't exist, that's a problem
+						if (buttonId === "in-button") {
+							errorHandler("Team doesn't have this part!")
+						}
+
+						// Make edits to the part by incrementing/decrementing stock
+						if (buttonId === "in-button") {
+							part.stock += 1
+						} else {
+							part.stock -= 1
+						}
+
+						// Create a new team
+						let newTeam = {
+							teamNumber,
+							parts: [part.partName]
+						}
+
+						$.post("/api/teams", newTeam)
+							.then(() => {
+								$.ajax({ url: "/api/parts/" + barcode, type: "PUT", data: part })
+									.then(() => {
+										successHandler()
+									})
+									.catch(err => {
+										errorHandler(err)
+									})
+							})
+							.catch(err => {
+								errorHandler(err)
+							})
+					})
+			})
+			.catch(err => {
+				// Part does not exist
+				errorHandler(err)
+			})
 	})
 })
 
-function changePartStock(partId, newStock) {
-	// finds the part on the page and updates it stock to the newStock
-	$(".part#" + partId)
-		.find(".part-stock")
-		.text(newStock + " in Stock")
+// Attempts to log the given error as well as exits the script
+function errorHandler(err) {
+	$(".input-form").html("")
+	$(".input-form").html("<p>There was an error with your request: " + err + ". Redirecting...</p>")
+	$(this).hide()
+
+	setTimeout(location.reload.bind(location), 3000)
+
+	// Exits script
+	throw new Error(err)
 }
 
-function resetFormFields() {
-	// resets the parts checkout form so that it's blank every time a user opens it
-	$('input[name="teamNumber"]').val("")
-	$('input[name="quantity"]').val("1")
-	$(".radio-outer-square").removeClass("active")
-	$(".parts-checkout-error-message").text("")
+// successHandler is the logic that runs when everything doesn't blow up
+function successHandler() {
+	$(".input-form").html("")
+	$(".input-form").html("<p>Your request was successful! Redirecting...</p>")
+	$(this).hide()
+
+	setTimeout(location.reload.bind(location), 1000)
 }
