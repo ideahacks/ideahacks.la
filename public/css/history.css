@@ -13,6 +13,10 @@
 	text-align: justify;
 }
 
+.places img {
+	border-radius: 10px;
+}
+
 .subtitle {
 	color: white;
 	font-size: 20px;
@@ -76,6 +80,7 @@
 
 #intro_img {
 	width: 100%;
+	border-radius: 10px;
 }
 
 .places {
