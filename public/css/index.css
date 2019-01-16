@@ -29,7 +29,7 @@
 
 .date,
 .apply,
-.location,
+.agb,
 .deadline {
 	font-weight: bold;
 	font-size: 14px;
@@ -40,10 +40,6 @@
 
 .deadline {
 	padding-top: 20px;
-}
-
-.location {
-	margin-bottom: 20px;
 }
 
 .about-section {
