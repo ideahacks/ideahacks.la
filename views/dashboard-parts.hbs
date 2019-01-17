@@ -63,7 +63,11 @@
                         </div>
                         <div class='detail-section container-fluid'>
                             <p class='part-details filter-key text-left'>{{this.partName}}</p>
+                            {{#if this.isConsumable}}
+                            <p class='part-details quantity text-left'>Quantity: Limited Stock</p>
+                            {{else}}
                             <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
+                            {{/if}}
                         </div>
                     </div>
                     {{/each}}

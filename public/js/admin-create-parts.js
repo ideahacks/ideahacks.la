@@ -12,7 +12,8 @@ $(() => {
 			description: $('textarea[name="part-description"]').val(),
 			stock: $('input[name="part-stock"]').val(),
 			category: $('input[name="part-category"]').val(),
-			imageUrl: $('input[name="part-image"]').val()
+			imageUrl: $('input[name="part-image"]').val(),
+			isConsumable: $('input[name="part-consumable"]').val()
 		}
 
 		// Hit the POST /api/parts endpoint with the part
