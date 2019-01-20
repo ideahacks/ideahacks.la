@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt-nodejs")
 
 const Part = require("../../db").Part
+const { Team } = require("../../db")
 
 const getParts = (req, res) => {
 	Part.find().then(parts => {
@@ -47,8 +48,15 @@ const postMe = (req, res) => {
 	})
 }
 
+const getTeams = (req, res) => {
+	Team.find().then(teams => {
+		res.render("dashboard-team-parts", { teams })
+	})
+}
+
 module.exports = {
 	getParts,
 	getMe,
-	postMe
+	postMe,
+	getTeams
 }
