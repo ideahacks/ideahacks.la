@@ -1,8 +1,8 @@
 const express = require("express")
 
-const { Team } = require("../../db")
-const c = require("../constants")
-const { isAdmin } = require("../../helpers/auth")
+const { Team } = require("../db")
+const c = require("./constants")
+const { isAdmin } = require("../helpers/auth")
 
 // teamRouter controls endpoints that manages the team resource
 let teamRouter = express.Router()

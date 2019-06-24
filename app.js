@@ -45,10 +45,10 @@ app.use(passport.session())
 // Routes
 app.use(ideahacks.routes.mainRouter)
 app.use("/admin", ideahacks.routes.adminRouter)
-app.use("/api", ideahacks.routes.apiRouter)
 app.use("/dashboard", ideahacks.routes.dashboardRouter)
 app.use(ideahacks.routes.partsRouter)
 app.use(ideahacks.routes.teamRouter)
+app.use(ideahacks.routes.userRouter)
 app.use((req, res) => {
 	res.status(404).render("error", { status: res.statusCode })
 })
