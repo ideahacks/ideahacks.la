@@ -3,6 +3,8 @@ const passport = require("passport")
 const LocalStrategy = require("passport-local").Strategy
 const bcrypt = require("bcrypt-nodejs")
 
+// initializePassport is a function that initializes the passport module with
+// information such as which strategy to use and how to authenticate a user.
 const initializePassport = () => {
 	passport.serializeUser((user, done) => {
 		done(null, user.email)

@@ -5,7 +5,9 @@ const config = require("../config")
 
 sgMail.setApiKey(config.SENDGRID_API_KEY)
 
-module.exports = user => {
+// recover is a function that resets a user's password with a temporary one,
+// and sends the user their new temp password
+function recover(user) {
 	let tempPassword = crypto.randomBytes(6).toString("hex")
 
 	bcrypt.hash(tempPassword, null, null, (err, hashedPassword) => {
@@ -24,3 +26,5 @@ module.exports = user => {
 
 	sgMail.send(msg)
 }
+
+module.exports = recover
