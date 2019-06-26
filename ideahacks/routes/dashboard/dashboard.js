@@ -42,9 +42,14 @@ const postMe = (req, res) => {
 		if (req.body.newPassword !== "") {
 			req.user.password = hashedPassword
 		}
-		req.user.save()
-
-		return res.json({ status: "success", message: "Successfully saved profile changes." })
+		req.user
+			.save()
+			.then(() => {
+				return res.json({ status: "success", message: "Successfully saved profile changes." })
+			})
+			.catch(err => {
+				return res.send(err)
+			})
 	})
 }
 

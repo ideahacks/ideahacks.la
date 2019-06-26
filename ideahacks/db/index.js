@@ -2,18 +2,14 @@
 // persistent database connection
 
 const mongoose = require("mongoose")
-
 const { dbURI } = require("../config")
 
 // successfulConnectionMessage is logged on successful connection to the db
 const successfulConnectionMessage = "Successfully connected to the database!"
 
-mongoose.connect(
-	dbURI,
-	{
-		useMongoClient: true
-	}
-)
+mongoose.connect(dbURI, {
+	useMongoClient: true
+})
 
 // Plug in global promise library
 mongoose.Promise = global.Promise
@@ -31,7 +27,6 @@ module.exports = {
 	User: require("./User.js"),
 	Team: require("./Team.js"),
 	Part: require("./Part.js"),
-	Feedback: require("./Feedback.js"),
 	teamData: require("./data/team.js"),
 	sponsorsData: require("./data/sponsors.js")
 }

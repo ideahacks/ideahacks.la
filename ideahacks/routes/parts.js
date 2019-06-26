@@ -1,8 +1,8 @@
 const express = require("express")
 
-const { Part } = require("../../db")
-const c = require("../constants")
-const { isVerified, isAdmin } = require("../../helpers/auth")
+const { Part } = require("../db")
+const c = require("./constants")
+const { isVerified, isAdmin } = require("../helpers/auth")
 
 // partsRouter controls endpoints that manages the parts resource
 let partsRouter = express.Router()
