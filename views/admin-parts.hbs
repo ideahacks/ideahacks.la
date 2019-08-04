@@ -37,7 +37,7 @@
             <p>Hello, welcome to the parts checkout system</p>
         </div>
 
-        <div class='checkout-container text-center'>
+        {{!-- <div class='checkout-container text-center'>
             <div class='checkout'>
                 <h1 id='checkout-prompt'>To check out a part</h1>
                 <h2>Enter Team #</h2>
@@ -54,12 +54,25 @@
                 </form>
             </div>
 
-        </div>
+        </div> --}}
 
-        {{!-- <div class='text-center' id='checkout-scan'>
+        {{!-- <div id='checkout-scan' class='text-center'>
             <h1>You have decided to CHECK OUT a part</h1>
             <h2>Scan a part</h2>
-            <div id="scan-quantity">
+            <div class="scan-quantity">
+                <p>If multiple of the same part,<br>enter a quantity:</p>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>    
+        </div> --}}
+
+        <div class='text-center' id='checkin-scan'>
+            <h1>You have decided to CHECK IN a part</h1>
+            <h2>Scan a part</h2>
+            <div class="scan-quantity">
                 <p>If multiple of the same part,<br>enter a quantity:</p>
                 <select>
                     <option value="1">1</option>
@@ -67,13 +80,19 @@
                     <option value="3">3</option>
                 </select>
             </div>
-            
-        </div> --}}
-
-            <div>
-            
-            </div>
         </div>
+
+        <div id='go-back' class='text-center'>
+            <p>Made a mistake?</p>
+            <button>Go back</button>
+        </div>
+
+        {{!-- <div id='success'>
+            <h1>Thank You</h1>
+            <button>More items to scan?</button>
+            <p>Otherwise you will be redirected in 3 seconds</p>
+        </div> --}}
+    </div>
         
         <div class='text-center'>
             <button id='in-button' style="display:none;">Check in</button>

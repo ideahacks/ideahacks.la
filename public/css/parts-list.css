@@ -33,9 +33,8 @@ label {
 }
 
 .checkout-container {
-	margin: auto;
-	height: 400px;
-	padding: 0px 120px;
+	margin: 0 auto;
+	max-width: 1000px;
 	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
@@ -51,19 +50,22 @@ label {
 	line-height: 50px;
 }
 
-#checkout-scan {
+#checkout-scan,
+#checkin-scan {
 	margin: auto;
+	margin-bottom: 50px;
 	background-color: #40698F;
 	border-radius: 40px;
-	width: 991px;
-	height: 306px;
+	max-width: 991px;
+	min-height: 306px;
 	padding: 40px 0px;
 	line-height: 50px;
 }
 
 .checkout h1,
 .checkin h1,
-#checkout-scan h1 {
+#checkout-scan h1,
+#checkin-scan h1 {
 	font-weight: bold;
 	font-size: 36px;
 	color: #70BFE6;
@@ -71,20 +73,23 @@ label {
 
 .checkout h2,
 .checkin h2,
-#checkout-scan h2 {
+#checkout-scan h2,
+#checkin-scan h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 36px;
 	color: #FBF3F0;
 }
 
-#checkout-scan p {
+#checkout-scan p,
+#checkin-scan p {
 	font-size: 36px;
 	color: #70BFE6;
 	display: inline;
 }
 
-#checkout-scan select {
+#checkout-scan select,
+#checkin-scan select {
 	width: 63px;
 	height: 56px;
 	margin-left: 40px;
@@ -107,12 +112,37 @@ label {
 	outline: none;
 }
 
-#scan-quantity {
+.scan-quantity {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
+#go-back p,
+#success p {
+	font-size: 24px;
+	line-height: 34px;
+	color: #70BFE6;
+}
+
+#go-back button,
+#success button {
+	background: #F2CCB5;
+	border-radius: 18px;
+	border: none;
+	font-size: 36px;
+}
+
+#success {
+	margin: 270px auto;
+}
+
+#success h1 {
+	text-transform: uppercase;
+	font-size: 144px;
+	margin-bottom: 0px;
+	line-height: 0.8em;
+}
 .checkout-body {
 	padding-top: 90px;
 	background-color: #dd8064;
@@ -185,7 +215,9 @@ label {
 
 @media (max-width: 1150px) {
 	.checkout-container {
+		margin: 0 auto;
 		flex-direction: column;
-		height: 900px;
+		height: 700px;
+		align-items: center;
 	}
 }
