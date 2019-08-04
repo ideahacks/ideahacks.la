@@ -1,6 +1,6 @@
 /* BANNER */
 body {
-	background-color: rgb(221, 128, 100);
+	background-color: #FBF3F0;
 }
 
 form {
@@ -12,39 +12,105 @@ label {
 }
 
 .banner {
-	margin-top: 130px;
-	margin-bottom: 70px;
+	margin-top: 116px;
+	margin-bottom: 50px;
 	text-align: center;
 	color: white;
 }
 
 .banner h1 {
 	text-transform: uppercase;
-	font-weight: bold;
+	font-size: 45px;
+	font-weight: bolder;
+	color: black;
 }
 
 .banner p {
-	font-size: 20px;
+	font-size: 24px;
+	font-weight: lighter;
+	line-height: 31px;
+	color: black;
+}
+
+.checkout-container {
+	margin: auto;
+	height: 400px;
+	padding: 0px 120px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
 }
 
 .checkout,
-.checkin {
-	background-color: rgb(255, 255, 244);
-	border-radius: 20px;
-	margin: 50px 450px;
-	padding: 20px 0px;
+.checkin{
+	background-color: #40698F;
+	border-radius: 40px;
+	height: 327px;
+	width: 448px;
+	padding: 40px 0px;
+	line-height: 50px;
 }
 
-#checkout-prompt:hover,
-#checkin-prompt:hover {
-	cursor: pointer;
-	color: rgb(255, 183, 24);
+#checkout-scan {
+	margin: auto;
+	background-color: #40698F;
+	border-radius: 40px;
+	width: 991px;
+	height: 306px;
+	padding: 40px 0px;
+	line-height: 50px;
 }
 
 .checkout h1,
-.checkin h1 {
+.checkin h1,
+#checkout-scan h1 {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 36px;
+	color: #70BFE6;
+}
+
+.checkout h2,
+.checkin h2,
+#checkout-scan h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 36px;
+	color: #FBF3F0;
+}
+
+#checkout-scan p {
+	font-size: 36px;
+	color: #70BFE6;
+	display: inline;
+}
+
+#checkout-scan select {
+	width: 63px;
+	height: 56px;
+	margin-left: 40px;
+	border-radius: 0px;
+	border: none;
+}
+.checkout form,
+.checkin form {
+	margin-top: 25px;
+}
+
+.checkout input[type="text"],
+.checkin input[type="text"] {
+	width: 188px;
+	background: transparent;
+	font-size: 36px;
+	border: none;
+	border-bottom: 1px solid #FBF3F0;
+	text-align: center;
+	outline: none;
+}
+
+#scan-quantity {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .checkout-body {
@@ -117,5 +183,9 @@ label {
 	padding: 0px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
+	.checkout-container {
+		flex-direction: column;
+		height: 900px;
+	}
 }

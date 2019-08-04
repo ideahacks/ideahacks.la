@@ -37,29 +37,48 @@
             <p>Hello, welcome to the parts checkout system</p>
         </div>
 
-        <div class='input-form text-center'>
+        <div class='checkout-container text-center'>
             <div class='checkout'>
-                <h1 id='checkout-prompt'>Check out a part</h1>
-                <form id='barcode-input' style="display:none;">
-                    Scan the part's barcode below <br> <br>
-                    <input type="text" name="barcode">
-                    <br> <br> Enter the team # below <br> <br>
+                <h1 id='checkout-prompt'>To check out a part</h1>
+                <h2>Enter Team #</h2>
+                <form id='checkout-team-input'>
                     <input type="text" name="team-number">
                 </form>
             </div>
+
+            <div class='checkin'>
+                <h1 id='checkin-prompt'>To check in a part</h1>
+                <h2>ENTER TEAM #</h2>
+                <form>
+                    <input type="text" name="team-number">
+                </form>
+            </div>
+
         </div>
 
-        <div class='text-center'>
-            <div class='checkin'>
-                <h1 id='checkin-prompt'>Check in a part</h1>
+        {{!-- <div class='text-center' id='checkout-scan'>
+            <h1>You have decided to CHECK OUT a part</h1>
+            <h2>Scan a part</h2>
+            <div id="scan-quantity">
+                <p>If multiple of the same part,<br>enter a quantity:</p>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            
+        </div> --}}
+
+            <div>
+            
             </div>
         </div>
-
+        
         <div class='text-center'>
             <button id='in-button' style="display:none;">Check in</button>
             <button id='out-button' style="display:none;">Check out</button>
         </div>
-
     </div>
 </body>
 </html>

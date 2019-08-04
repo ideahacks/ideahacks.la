@@ -1,30 +1,35 @@
 $(() => {
 	// When checkout is selected, display next step
-	$("#checkout-prompt").click(function() {
-		$(".checkin").hide()
-		$("#barcode-input").show()
-		$(this).hide()
-		$("#team-input").show()
+	// $("#checkout-prompt").click(function() {
+	// 	$(".checkin").hide()
+	// 	$("#barcode-input").show()
+	// 	$(this).hide()
+	// 	$("#team-input").show()
 
-		$("#out-button").show()
-	})
+	// 	$("#out-button").show()
+	// })
 
-	// When checkin is selected, display next step
-	$("#checkin-prompt").click(function() {
-		$(".checkin").hide()
-		$("#barcode-input").show()
-		$("#checkout-prompt").hide()
-		$("#team-input").show()
+	// // When checkin is selected, display next step
+	// $("#checkin-prompt").click(function() {
+	// 	$(".checkin").hide()
+	// 	$("#barcode-input").show()
+	// 	$("#checkout-prompt").hide()
+	// 	$("#team-input").show()
 
-		$("#in-button").show()
-	})
+	// 	$("#in-button").show()
+	// })
+	
+	// $("#checkout-team-input").submit(function () {
+	// 	$(".checkout").hide()
+	// 	$(".checkin").hide()
+	// 	$("#checkout-scan").show()
+	// })
 
 	// When check-out or check-in button clicked, run this monstorous piece of logic
-	$("button").click(function() {
+	$("form").submit(function() {
 		// Grab some information from the form
-		let barcode = $('input[name="barcode"]').val()
 		let teamNumber = $('input[name="team-number"]').val()
-		let buttonId = $(this).attr("id")
+		//let buttonId = $(this).attr("id")
 
 		// Check for part existance
 		$.get("/api/parts/" + barcode)
