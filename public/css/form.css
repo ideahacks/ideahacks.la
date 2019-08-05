@@ -22,7 +22,6 @@
 .ideahacks-form input[readonly] {
 	border-radius: 12px;
 	background-color: white;
-	position: absolute;
 	width: 80%;
 }
 
