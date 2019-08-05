@@ -115,14 +115,17 @@
                             <div class='form-group col-xs-12 col-md-5'>
                                 <label>Do you have a team*</label>
                                 <select class='form-control' name='hasTeam'>
-                                    <option {{#if user.hasATeam}} selected{{/if}}>YES </option> <option {{#if user.hasNoTeam}} selected{{/if}}>NO </option> </select> </div> </span> <span class='row'>
-                                        <div class='form-group col-xs-12'>
-                                            <label>If so, what are your teammates' emails?</label>
-                                            <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                                            <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
-                                            <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
-                                            <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'>
-                                        </div>
+                                    <option {{#if user.hasATeam}} selected{{/if}}>YES </option>
+                                    <option {{#if user.hasNoTeam}} selected{{/if}}>NO </option>
+                                </select> </div>
+                        </span> <span class='row'>
+                            <div class='form-group col-xs-12'>
+                                <label>If so, what are your teammates' emails?</label>
+                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                                <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
+                                <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
+                                <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'>
+                            </div>
                         </span>
                     </fieldset>
                 </div>
@@ -194,13 +197,19 @@
                         <div class='form-group col-md-3 col-xs-10'>
                             <label>Shirt Size</label>
                             <select class='form-control' name='shirtSize'>
-                                <option {{#if user.sizeSmall}} selected{{/if}}>S </option> <option {{#if user.sizeMedium}} selected{{/if}}>M </option> <option {{#if user.sizeLarge}} selected{{/if}}>L </option> <option {{#if user.sizeXLarge}} selected{{/if}}>XL </option> </select> </div> </fieldset> </div> <!-- BUTTONS -->
-                                    <div class='buttons row'>
-                                        <!--<button class='save-application'>SAVE</button> -->
-                                        <button class='submit-application'>SUBMIT</button>
-                                    </div>
-                                    <p class="submit-message" style='color: transparent;'></p>
-                        </div>
+                                <option {{#if user.sizeSmall}} selected{{/if}}>S </option>
+                                <option {{#if user.sizeMedium}} selected{{/if}}>M </option>
+                                <option {{#if user.sizeLarge}} selected{{/if}}>L </option>
+                                <option {{#if user.sizeXLarge}} selected{{/if}}>XL </option>
+                            </select> </div>
+                    </fieldset>
+                </div> <!-- BUTTONS -->
+                <div class='buttons row'>
+                    <!--<button class='save-application'>SAVE</button> -->
+                    <button class='submit-application'>SUBMIT</button>
+                </div>
+                <p class="submit-message" style='color: transparent;'></p>
+            </div>
 
         {{/if}}
 

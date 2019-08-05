@@ -4,11 +4,11 @@
 }
 
 body {
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 }
 
 .forgot-pass:hover {
-	color: white;
+	color: #2A2D4E;
 }
 
 /* COMPUTER IMAGE */
@@ -30,7 +30,7 @@ body {
 }
 
 .login {
-	background-color: #40698F;
+	background-color: #40698f;
 	margin-top: 15pt;
 	font-weight: bold;
 	font-size: 25px;

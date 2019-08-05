@@ -3,17 +3,17 @@
  */
 
 .ideahacks-form {
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 }
 
 /* LABEL */
 .ideahacks-form label {
 	text-align: center;
-	font-size: 15px;
-	line-height: 18px;
+	font-size: 25px;
+	line-height: 29px;
 	text-transform: none;
 	font-weight: normal;
-	color: white;
+	color: #40698F;
 }
 
 /* INPUT */
@@ -26,5 +26,5 @@
 }
 
 .ideahacks-form input::placeholder {
-	color: rgba(255, 183, 24, 0.6);
+	color: #F2CCB5;
 }
