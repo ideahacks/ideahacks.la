@@ -23,10 +23,7 @@
 	border-radius: 12px;
 	background-color: white;
 	position: absolute;
-	width: 364px;
-	height: 54px;
-	left: 950px;
-	top: 242px;
+	width: 80%;
 }
 
 .ideahacks-form input::placeholder {
