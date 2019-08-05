@@ -1,15 +1,15 @@
 .white-box {
-	background-color: rgb(255, 255, 244);
+	background-color: rgb(242, 204, 181);
 	height: 40px;
 }
 
 .red-box {
-	background-color: rgb(221, 128, 100);
+	background-color: rgb(251, 243, 240);
 	height: 40px;
 }
 
 .home-banner {
-	background-color: rgb(221, 128, 100);
+	background-color: rgb(251, 243, 240);
 }
 
 .banner-graphic {
@@ -33,7 +33,7 @@
 .deadline {
 	font-weight: bold;
 	font-size: 14px;
-	color: white;
+	color: rgb(32, 71, 164);
 	text-transform: uppercase;
 	margin: 0px;
 }
@@ -43,13 +43,13 @@
 }
 
 .about-section {
-	background-color: rgb(255, 255, 244);
+	background-color: rgb(242, 204, 181);
 	padding: 20px 100px 0px 100px;
 }
 
 .description {
 	text-align: justify;
-	color: rgb(221, 128, 100);
+	color: rgb(42, 45, 78);
 	margin-top: 12px;
 }
 
@@ -60,16 +60,17 @@
 }
 
 .schedule-section {
-	background-color: rgb(221, 128, 100);
+	background-color: rgb(251, 243, 240);
 	padding: 20px 90px 0px 90px;
 }
 
 .sponsors-section {
-	background-color: rgb(221, 128, 100);
+	background-color: rgb(251, 243, 240);
 	padding: 20px 10px 0px 10px;
 }
 
 .section-header {
+	color: rgb(42, 45, 78);
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -77,16 +78,16 @@
 }
 
 .day {
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 	font-weight: bold;
 	font-size: 20px;
 	width: 100%;
 }
 
 .schedule {
-	border: solid 2px rgb(255, 183, 24);
+	border: solid 3px rgb(242, 204, 181);
 	border-radius: 7px;
-	color: rgb(255, 255, 244);
+	color: rgb(64, 105, 143);
 	padding: 15px;
 	margin: 0px 10px;
 	overflow: auto;
@@ -110,18 +111,19 @@
 }
 
 .faq-section {
-	background-color: rgb(255, 255, 244);
+	background-color: rgb(242, 204, 181);
 	padding: 20px 75px 0px 75px;
 }
 
 .questions h2 {
+	color: rgb(42, 45, 78);
 	font-size: 20px;
 	font-weight: bold;
-	border-bottom: solid rgb(255, 183, 24) 2px;
 	display: inline-block;
 }
 
 .questions p {
+	color: rgb(64, 105, 143);
 	text-align: justify;
 	font-size: 15px;
 }
@@ -129,17 +131,17 @@
 .sponsors-section p {
 	text-align: center;
 	font-size: 20px;
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 	margin-bottom: 50px;
 }
 
 .brochure-link {
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 	text-decoration: underline;
 }
 
 .brochure-link:hover {
-	color: rgb(255, 183, 24);
+	text-decoration: none;
 }
 
 .platinum-logo {
@@ -184,12 +186,12 @@
 }
 
 .faq-link {
-	color: rgb(221, 128, 100);
+	color: rgb(64, 105, 143);
 	text-decoration: underline;
 }
 
 .faq-link:hover {
-	color: rgb(255, 183, 24);
+	text-decoration: none;
 }
 
 @media (max-width: 990px) {
