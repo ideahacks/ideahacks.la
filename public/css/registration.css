@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: rgb(221, 128, 100);
+	background-color: #FBF3F0;
 }
 
 .forgot-pass:hover {
@@ -30,10 +30,10 @@ body {
 }
 
 .login {
-	background-color: rgb(255, 183, 24);
+	background-color: #40698F;
 	margin-top: 15pt;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 25px;
 	color: white;
 	text-transform: uppercase;
 	border-radius: 12px;
@@ -86,8 +86,8 @@ a:hover {
 
 p,
 button {
-	font-family: "Josefin Sans";
-	font-weight: bold;
+	font-family: "Roboto Condensed";
+	font-weight: normal;
 	line-height: 18px;
 	color: white;
 }
