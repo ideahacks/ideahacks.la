@@ -13,7 +13,7 @@
 	line-height: 29px;
 	text-transform: none;
 	font-weight: normal;
-	color: #40698F;
+	color: #40698f;
 }
 
 /* INPUT */
@@ -22,9 +22,13 @@
 .ideahacks-form input[readonly] {
 	border-radius: 12px;
 	background-color: white;
-	width: 80%;
+	position: absolute;
+	width: 364px;
+	height: 54px;
+	left: 950px;
+	top: 242px;
 }
 
 .ideahacks-form input::placeholder {
-	color: #F2CCB5;
+	color: #f2ccb5;
 }
