@@ -1,10 +1,11 @@
 /* BANNER */
 body {
-	background-color: rgb(221, 128, 100);
+	//background-color: rgb(221, 128, 100);
+	background-color: rgb(251, 243, 240);
 }
 
 form {
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 }
 
 label {
@@ -29,7 +30,8 @@ label {
 
 .checkout,
 .checkin {
-	background-color: rgb(255, 255, 244);
+	//background-color: rgb(255, 255, 244);
+	backgrournd-color: rgb(42, 45, 78);
 	border-radius: 20px;
 	margin: 50px 450px;
 	padding: 20px 0px;
@@ -49,12 +51,13 @@ label {
 
 .checkout-body {
 	padding-top: 90px;
-	background-color: #dd8064;
+	background-color: rgb(251, 243, 240);
 	padding-left: 40px;
 }
 
 .sidebar {
-	color: rgb(255, 255, 244);
+	//color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .search-bar {
@@ -78,21 +81,27 @@ label {
 }
 
 .parts-header {
-	color: rgb(255, 255, 244);
-	font-size: 30px;
+	//color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
+	font-size: 70px;
 	font-weight: bold;
 	margin: 0px;
 }
 
 .parts-subtitle {
 	margin: 0px 0px 5px 0px;
-	color: rgb(255, 255, 244);
+	//color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .part {
 	width: 200px;
 	height: 200px;
-	border: 10px solid rgb(255, 255, 244);
+	//border: 10px solid rgb(242, 204, 181);
+    border-right: 15px solid rgb(242, 204, 181);
+    border-left: 15px solid rgb(242, 204, 181);
+    border-top: 8px solid rgb(242, 204, 181);
+    border-bottom: 8px solid rgb(242, 204, 181);	
 	margin-bottom: 5px;
 	margin-top: 20px;
 }
@@ -109,7 +118,8 @@ label {
 
 .part-details {
 	margin: 0px;
-	color: rgb(255, 255, 244);
+	//color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .detail-section {

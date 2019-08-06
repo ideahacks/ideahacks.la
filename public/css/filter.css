@@ -4,10 +4,12 @@
 
 .filter-container {
 	text-align: center;
+	//color: #FF0000; 
 }
 
 input {
 	color: white;
+	//color: #FF0000; 
 }
 
 .filter-label {
@@ -15,6 +17,7 @@ input {
 	font-family: "Josefin Sans";
 	font-weight: bold;
 	text-transform: uppercase;
+	//color: #FF0000; 
 	margin: 0px;
 }
 
@@ -23,15 +26,14 @@ input {
 .filter:hover {
 	font-family: "Josefin Sans";
 	font-size: 14px;
-
 	margin: 0px 0px 10px 0px;
 
 	border-radius: 0;
 	border: none;
-	border-bottom: solid #d8d8d8 1px;
-
+	//border-bottom: solid #d8d8d8 1px;
+    border-bottom: solid #204784 2px;
 	width: 3%;
-	min-width: 170px;
+	min-width: 180px;
 
 	box-shadow: none;
 	background-color: transparent;
