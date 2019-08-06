@@ -37,7 +37,7 @@
             <p>Hello, welcome to the parts checkout system</p>
         </div>
 
-        {{!-- <div class='checkout-container text-center'>
+        <div class='checkout-container text-center'>
             <div class='checkout'>
                 <h1 id='checkout-prompt'>To check out a part</h1>
                 <h2>Enter Team #</h2>
@@ -49,32 +49,32 @@
             <div class='checkin'>
                 <h1 id='checkin-prompt'>To check in a part</h1>
                 <h2>ENTER TEAM #</h2>
-                <form>
+                <form id='checkin-team-input'>
                     <input type="text" name="team-number">
                 </form>
             </div>
 
-        </div> --}}
+        </div>
 
-        {{!-- <div id='checkout-scan' class='text-center'>
+        <div id='checkout-scan' class='text-center' style="display: none;">
             <h1>You have decided to CHECK OUT a part</h1>
             <h2>Scan a part</h2>
             <div class="scan-quantity">
                 <p>If multiple of the same part,<br>enter a quantity:</p>
-                <select>
+                <select id="checkout-quantity-dropdown">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
             </div>    
-        </div> --}}
+        </div>
 
-        <div class='text-center' id='checkin-scan'>
+        <div class='text-center' id='checkin-scan' style="display: none;">
             <h1>You have decided to CHECK IN a part</h1>
             <h2>Scan a part</h2>
             <div class="scan-quantity">
                 <p>If multiple of the same part,<br>enter a quantity:</p>
-                <select>
+                <select id="checkin-quantity-dropdown">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -82,22 +82,25 @@
             </div>
         </div>
 
-        <div id='go-back' class='text-center'>
+        <div id='go-back' class='text-center' style="display: none">
             <p>Made a mistake?</p>
-            <button>Go back</button>
+            <button id='go-back-button'>Go back</button>
         </div>
 
-        {{!-- <div id='success'>
+        <div class='success' id='checkout-success' style="display: none">
             <h1>Thank You</h1>
-            <button>More items to scan?</button>
+            <button id="checkout-more-items">More items to scan?</button>
             <p>Otherwise you will be redirected in 3 seconds</p>
-        </div> --}}
+        </div>
+
+        <div class='success' id='checkin-success' style="display: none">
+            <h1>Thank You</h1>
+            <button id="checkin-more-items">More items to scan?</button>
+            <p>Otherwise you will be redirected in 3 seconds</p>
+        </div>
     </div>
         
-        <div class='text-center'>
-            <button id='in-button' style="display:none;">Check in</button>
-            <button id='out-button' style="display:none;">Check out</button>
-        </div>
+        
     </div>
 </body>
 </html>
