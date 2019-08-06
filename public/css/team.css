@@ -11,13 +11,13 @@ body {
 
 .team-container {
 	text-align: center;
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 	padding-bottom: 100px;
 	background-color: rgb(221, 128, 100);
 }
 
 p {
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 	color: white;
 	font-size: 20px;
 	text-align: center;
@@ -30,12 +30,11 @@ p {
 	margin-bottom: 20px;
 	overflow: hidden;
 	text-align: center;
-	font-family: "Josefin Sans";
-	color: white;
-	font-size: 25px;
-	font-weight: bold;
+	font-family: "Roboto Condensed";
+	color: #2A2D4E;
+	font-size: 75px;
+	line-height: 90px;
 	text-align: center;
-	line-height: 40px;
 	text-transform: uppercase;
 }
 
@@ -61,10 +60,12 @@ p {
 }
 
 .Description {
-	color: white;
+	color: #2047A4;
+	font-family: "Roboto Condensed";
 	margin: 15px 0px 0px 0px;
-	font-weight: 900;
-	font-size: 19px;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 29px;
 	text-align: left;
 }
 
