@@ -13,7 +13,7 @@ body {
 	text-align: center;
 	font-family: "Roboto Condensed";
 	padding-bottom: 100px;
-	background-color: rgb(221, 128, 100);
+	background-color: #FBF3F0;
 }
 
 p {
@@ -25,28 +25,30 @@ p {
 	margin-bottom: 45px;
 }
 
+.Title {
+	margin-top: 113px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	text-align: center;
+	font-family: "Roboto Condensed";
+	color: #2A2D4E;
+	font-size: 105px;
+	line-height: 126px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 .Categories {
 	margin-top: 30px;
 	margin-bottom: 20px;
 	overflow: hidden;
 	text-align: center;
 	font-family: "Roboto Condensed";
-	color: #2A2D4E;
-	font-size: 75px;
+	color: #2a2d4e;
+	font-size: 70px;
 	line-height: 90px;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-.Categories:before,
-.Categories:after {
-	background-color: #ffb718;
-	content: "";
-	display: inline-block;
-	height: 3px;
-	position: relative;
-	vertical-align: middle;
-	width: 50%;
 }
 
 .Categories:before {
@@ -59,39 +61,26 @@ p {
 	margin-right: -50%;
 }
 
+.Lead {
+	color: black;
+	font-family: "Roboto Condensed";
+	font-size: 30px;
+	font-weight: 200;
+	padding-bottom: 20px;
+	text-align: left;
+	margin-top: 0px;
+	text-align: center;
+}
+
 .Description {
-	color: #2047A4;
+	color: #2047a4;
 	font-family: "Roboto Condensed";
 	margin: 15px 0px 0px 0px;
 	font-weight: normal;
 	font-size: 25px;
 	line-height: 29px;
-	text-align: left;
-}
-
-.Club {
-	color: white;
-	padding-top: 0px;
-	line-height: 150%;
-	font-weight: 100;
-	font-size: 19px;
-	text-align: left;
-	margin-top: 0px;
-}
-
-.Club:after {
-	content: " ";
-	display: block;
-	border: 1px solid #ffffff;
-}
-
-.Logos {
-	color: white;
-	font-size: 18px;
-	font-weight: 200;
-	padding-bottom: 20px;
-	text-align: left;
-	margin-top: 0px;
+	text-align: center;
+	padding-bottom: 20px; 
 }
 
 .center-block {
