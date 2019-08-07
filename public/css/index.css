@@ -13,7 +13,7 @@
 }
 
 .banner-desktop-graphic {
-	width: 80%;
+	width: 70%;
 	margin: 10px 100px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .banner-title {
-	font-size: 50px;
+	font-size: 35px;
 	font-weight: bold;
 	color: rgb(32, 71, 164);
 	text-transform: uppercase;
@@ -39,7 +39,7 @@
 .apply,
 .agb,
 .deadline {
-	font-size: 30px;
+	font-size: 20px;
 	color: rgb(32, 71, 164);
 	margin: 0px;
 }
@@ -50,9 +50,9 @@
 	background-color: rgb(32, 71, 164);
 	border: 2px solid rgb(32, 71, 164);
 	margin-top:	20px;
-    padding: 0px 15px;
-    border-radius: 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 5px 20px;
+  border-radius: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .apply:hover {
