@@ -8,7 +8,6 @@ const h = require("../../helpers").authHelpers
 mainRouter.get("/", setResLocals, staticHandlers.getMain)
 
 mainRouter.get("/team", setResLocals, staticHandlers.getTeam)
-mainRouter.get("/venue", setResLocals, staticHandlers.getVenue)
 
 mainRouter.get("/extended-faq", setResLocals, staticHandlers.getFAQ)
 
