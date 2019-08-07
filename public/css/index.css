@@ -1,9 +1,9 @@
-.white-box {
+.tan-box {
 	background-color: rgb(242, 204, 181);
 	height: 40px;
 }
 
-.red-box {
+.white-box {
 	background-color: rgb(251, 243, 240);
 	height: 40px;
 }
@@ -21,11 +21,6 @@
 	width: 90%;
 	margin: 10px 0px;
 	display: none;
-}
-
-.header-graphic {
-	width: 70%;
-	margin-bottom: 40px;
 }
 
 .banner-details {
@@ -119,19 +114,6 @@
 	font-size: 16px;
 }
 
-.column {
-	float: left;
-}
-
-.left {
-	width: 60%;
-}
-
-.right {
-	width: 40%;
-	text-align: right;
-}
-
 .faq-section {
 	background-color: rgb(242, 204, 181);
 	padding: 20px 75px 0px 75px;
@@ -148,6 +130,15 @@
 	color: rgb(64, 105, 143);
 	text-align: justify;
 	font-size: 15px;
+}
+
+.faq-link {
+	color: rgb(64, 105, 143);
+	text-decoration: underline;
+}
+
+.faq-link:hover {
+	text-decoration: none;
 }
 
 .sponsors-section p {
@@ -207,15 +198,6 @@
 	display: none;
 }
 
-.faq-link {
-	color: rgb(64, 105, 143);
-	text-decoration: underline;
-}
-
-.faq-link:hover {
-	text-decoration: none;
-}
-
 @media (max-width: 990px) {
 	.faq-section,
 	.about-section,
@@ -247,14 +229,6 @@
 	.home-video {
 		text-align: center;
 		margin-top: 20px;
-	}
-	.header-graphic {
-		display: none;
-	}
-	.header-graphic-centered {
-		display: inline-block;
-		width: 300px;
-		margin-bottom: 30px;
 	}
 	.location {
 		display: none;
