@@ -14,7 +14,13 @@
 
 .banner-desktop-graphic {
 	width: 70%;
-	margin: 10px 100px;
+	margin: 10px 0px;
+}
+
+.banner-tablet-graphic {
+	width: 70%;
+	margin: 10px 0px;
+	display: none;
 }
 
 .banner-mobile-graphic {
@@ -28,11 +34,9 @@
 }
 
 .banner-title {
-	font-size: 35px;
-	font-weight: bold;
-	color: rgb(32, 71, 164);
-	text-transform: uppercase;
-	margin-top: 90px;
+	height: 35px;
+	margin-top: 100px;
+	margin-bottom: 20px;
 }
 
 .date,
@@ -88,17 +92,14 @@
 }
 
 .section-header {
-	color: rgb(42, 45, 78);
-	font-size: 50px;
-	margin-bottom: 20px;
-	text-align: center;
+	height: 60px;
+	margin: 20px 0px;
 }
 
 .day {
-	color: rgb(42, 45, 78);
-	font-weight: bold;
-	font-size: 25px;
-	width: 100%;
+	height: 30px;
+	margin-top: 25px;
+	margin-bottom: 10px;
 }
 
 .schedule {
@@ -205,14 +206,21 @@
 	.schedule-section {
 		padding: 10px 10px 35px 10px;
 	}
+	.banner-title {
+		height: initial;
+		width: 90%;
+	}
 	.banner-desktop-graphic {
 		display: none;
 	}
-	.banner-mobile-graphic {
+	.banner-tablet-graphic {
 		display: initial;
 	}
+	.banner-mobile-graphic {
+		display: none;
+	}
 	.banner-details {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 	.date,
 	.apply,
@@ -220,8 +228,8 @@
 	.deadline {
 		font-size: 20px;
 	}
-	.banner-title {
-		font-size: 30px;
+	.section-header {
+		height: 50px;
 	}
 	.home-video video {
 		width: 300px;
@@ -229,6 +237,9 @@
 	.home-video {
 		text-align: center;
 		margin-top: 20px;
+	}
+	.day {
+		height: 20px;
 	}
 	.location {
 		display: none;
@@ -255,5 +266,33 @@
 	.small-logo {
 		width: 110px;
 		margin: 20px 20px;
+	}
+}
+
+@media (max-width: 450px) {
+	.banner-title {
+		height: 13px;
+		width: initial;
+	}
+	.banner-desktop-graphic {
+		display: none;
+	}
+	.banner-tablet-graphic {
+		display: none;
+	}
+	.banner-mobile-graphic {
+		display: initial;
+	}
+	.date,
+	.apply,
+	.agb,
+	.deadline {
+		font-size: 16px;
+	}
+	.section-header {
+		height: 45px;
+	}
+	.day {
+		height: 18px;
 	}
 }
