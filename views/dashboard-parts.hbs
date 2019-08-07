@@ -57,19 +57,19 @@
                 <p class='parts-subtitle'>Click on a part to see more detailed information</p>
                 <div class='filter-list'>
                     {{#each parts}}
-                        <div class='text-left col-md-3' id='{{this.category}}'>
-                            <div>
-                                <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
-                            </div>
-                            <div class='detail-section container-fluid'>
-                                <p class='part-details filter-key text-left'>{{this.partName}}</p>
-                                {{#if this.isConsumable}}
-                                    <p class='part-details quantity text-left'>Quantity: Limited Stock</p>
-                                {{else}}
-                                    <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
-                                {{/if}}
-                            </div>
+                    <div class='text-left col-md-3' id='{{this.category}}'>
+                        <div>
+                            <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
                         </div>
+                        <div class='detail-section container-fluid'>
+                            <p class='part-details filter-key text-left'>{{this.partName}}</p>
+                            {{#if this.isConsumable}}
+                            <p class='part-details quantity text-left'>Quantity: Limited Stock</p>
+                            {{else}}
+                            <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
+                            {{/if}}
+                        </div>
+                    </div>
 
                     {{/each}}
 
