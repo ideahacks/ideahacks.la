@@ -12,9 +12,15 @@
 	background-color: rgb(251, 243, 240);
 }
 
-.banner-graphic {
+.banner-desktop-graphic {
+	width: 80%;
+	margin: 10px 100px;
+}
+
+.banner-mobile-graphic {
 	width: 90%;
-	margin: 140px 0px 80px 70px;
+	margin: 10px 0px;
+	display: none;
 }
 
 .header-graphic {
@@ -23,23 +29,40 @@
 }
 
 .banner-details {
-	margin-top: 220px;
-	padding-right: 90px;
+	margin-top: 10px;
+}
+
+.banner-title {
+	font-size: 50px;
+	font-weight: bold;
+	color: rgb(32, 71, 164);
+	text-transform: uppercase;
+	margin-top: 90px;
 }
 
 .date,
 .apply,
 .agb,
 .deadline {
-	font-weight: bold;
-	font-size: 14px;
+	font-size: 30px;
 	color: rgb(32, 71, 164);
-	text-transform: uppercase;
 	margin: 0px;
 }
 
-.deadline {
-	padding-top: 20px;
+.apply {
+	color: white;
+	text-transform: uppercase;
+	background-color: rgb(32, 71, 164);
+	border: 2px solid rgb(32, 71, 164);
+	margin-top:	20px;
+    padding: 0px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.apply:hover {
+	background-color: transparent;
+	color: rgb(32, 71, 164);
 }
 
 .about-section {
@@ -71,8 +94,7 @@
 
 .section-header {
 	color: rgb(42, 45, 78);
-	font-size: 30px;
-	font-weight: bold;
+	font-size: 50px;
 	margin-bottom: 20px;
 	text-align: center;
 }
@@ -80,7 +102,7 @@
 .day {
 	color: rgb(42, 45, 78);
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 25px;
 	width: 100%;
 }
 
@@ -201,17 +223,26 @@
 	.schedule-section {
 		padding: 10px 10px 35px 10px;
 	}
-	.banner-graphic {
+	.banner-desktop-graphic {
 		display: none;
 	}
+	.banner-mobile-graphic {
+		display: initial;
+	}
 	.banner-details {
-		text-align: center;
-		padding: 0;
-		margin-top: 110px;
 		margin-bottom: 40px;
 	}
+	.date,
+	.apply,
+	.agb,
+	.deadline {
+		font-size: 20px;
+	}
+	.banner-title {
+		font-size: 30px;
+	}
 	.home-video video {
-		width: 310px;
+		width: 300px;
 	}
 	.home-video {
 		text-align: center;
@@ -227,9 +258,6 @@
 	}
 	.location {
 		display: none;
-	}
-	.date {
-		padding-bottom: 15px;
 	}
 	.platinum-logo {
 		width: 300px;
