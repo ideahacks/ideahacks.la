@@ -161,7 +161,7 @@ button:hover {
 	height: 0;
 	overflow-x: hidden;
 
-	background-color: rgb(221, 128, 100);
+	background-color: #2A2D4E;
 	opacity: 0.8;
 	list-style: none;
 	padding: 0;
@@ -186,16 +186,12 @@ button:hover {
 }
 
 .mobile-navbar-list li:hover {
-	background-color: rgb(195, 109, 83);
+	background-color: #40698F;
 }
 
 .responsive-dropdown-content {
 	display: none;
-	background-color: rgb(195, 109, 83);
-}
-
-.responsive-dropdown-content a:hover {
-	color: rgb(229, 192, 181);
+	background-color: #CF8D65;
 }
 
 .responsive-dropdown .responsive-dropdown-content.active {
