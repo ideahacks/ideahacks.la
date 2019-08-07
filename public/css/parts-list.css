@@ -1,14 +1,22 @@
 /* BANNER */
 body {
-	background-color: #FBF3F0;
-}
-
-form {
-	font-family: "Josefin Sans";
+	background-color: #fbf3f0;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 label {
 	display: none;
+}
+
+
+input[type="text"] {
+	font-weight: bold;
+	font-size: 36px;
+	color: #fbf3f0;
+	text-align: center;
+	background: transparent;
+	border: none;
+	outline: none;
 }
 
 .banner {
@@ -20,9 +28,10 @@ label {
 
 .banner h1 {
 	text-transform: uppercase;
-	font-size: 45px;
-	font-weight: bolder;
+	font-size: 56px;
+	font-weight: 800;
 	color: black;
+	letter-spacing: 0.1em;
 }
 
 .banner p {
@@ -41,8 +50,8 @@ label {
 }
 
 .checkout,
-.checkin{
-	background-color: #40698F;
+.checkin {
+	background-color: #40698f;
 	border-radius: 40px;
 	height: 327px;
 	width: 448px;
@@ -54,7 +63,7 @@ label {
 #checkin-scan {
 	margin: auto;
 	margin-bottom: 50px;
-	background-color: #40698F;
+	background-color: #40698f;
 	border-radius: 40px;
 	max-width: 991px;
 	min-height: 306px;
@@ -68,34 +77,42 @@ label {
 #checkin-scan h1 {
 	font-weight: bold;
 	font-size: 36px;
-	color: #70BFE6;
+	color: #70bfe6;
 }
 
 .checkout h2,
-.checkin h2,
-#checkout-scan h2,
-#checkin-scan h2 {
+.checkin h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 36px;
-	color: #FBF3F0;
+	color: #fbf3f0;
+}
+
+::placeholder {
+	text-transform: uppercase;
+	color: #fbf3f0;
 }
 
 #checkout-scan p,
 #checkin-scan p {
 	font-size: 36px;
-	color: #70BFE6;
+	color: #70bfe6;
 	display: inline;
 }
 
-#checkout-scan select,
-#checkin-scan select {
+#checkout-quantity,
+#checkin-quantity {
 	width: 63px;
 	height: 56px;
-	margin-left: 40px;
+	margin-left: 30px;
 	border-radius: 0px;
-	border: none;
+	border: 1px solid rgb(216, 216, 216);
+	border-right: none;
+	font-size: 24px;
+	border-radius: 15px 0 0 15px;
+	text-align: center;
 }
+
 .checkout form,
 .checkin form {
 	margin-top: 25px;
@@ -104,12 +121,7 @@ label {
 .checkout input[type="text"],
 .checkin input[type="text"] {
 	width: 188px;
-	background: transparent;
-	font-size: 36px;
-	border: none;
-	border-bottom: 1px solid #FBF3F0;
-	text-align: center;
-	outline: none;
+	border-bottom: 1px solid #fbf3f0;
 }
 
 .scan-quantity {
@@ -118,16 +130,23 @@ label {
 	justify-content: center;
 }
 
+.submit-button {
+	display: inline-block;
+	width: 63px;
+	height: 56px;
+	border-radius: 0 15px 15px 0;
+}
+
 #go-back p,
 .success p {
 	font-size: 24px;
 	line-height: 34px;
-	color: #70BFE6;
+	color: #70bfe6;
 }
 
 #go-back button,
 .success button {
-	background: #F2CCB5;
+	background: #f2ccb5;
 	border-radius: 18px;
 	border: none;
 	font-size: 36px;
@@ -138,12 +157,12 @@ label {
 #go-back button:hover,
 .success button:hover {
 	background-color: transparent;
-	color: #F2CCB5;
+	color: #f2ccb5;
 	cursor: pointer;
 }
 
 .success {
-	margin: 300px	 auto;
+	margin: 300px auto;
 }
 
 .success h1 {
