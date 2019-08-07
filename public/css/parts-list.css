@@ -1,13 +1,12 @@
 /* BANNER */
 body {
 	background-color: #fbf3f0;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
 }
 
 label {
 	display: none;
 }
-
 
 input[type="text"] {
 	font-weight: bold;
@@ -39,6 +38,10 @@ input[type="text"] {
 	font-weight: lighter;
 	line-height: 31px;
 	color: black;
+}
+
+.banner img {
+	width: 580px;
 }
 
 .checkout-container {
