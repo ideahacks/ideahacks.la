@@ -1,8 +1,8 @@
 module.exports = {
 	adminRouter: require("./admin"),
-	apiRouter: require("./api"),
 	mainRouter: require("./main"),
 	dashboardRouter: require("./dashboard"),
-	partsRouter: require("./api/parts"),
-	teamRouter: require("./api/teams")
+	partsRouter: require("./parts"),
+	teamRouter: require("./teams"),
+	userRouter: require("./users")
 }

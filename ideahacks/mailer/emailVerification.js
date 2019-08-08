@@ -3,7 +3,10 @@ const config = require("../config")
 
 sgMail.setApiKey(config.SENDGRID_API_KEY)
 
-module.exports = user => {
+// verify is a function that sends a user the link they need to click on in order
+// to verify their account (isVerfied: false => true)
+// The link has the form http://ideahacks.la/verify/{user.verificationHash}
+function verifyEmail(user) {
 	const msg = {
 		to: user.email,
 		from: "team@ideahacks.la",
@@ -20,3 +23,5 @@ module.exports = user => {
 
 	sgMail.send(msg)
 }
+
+module.exports = verifyEmail

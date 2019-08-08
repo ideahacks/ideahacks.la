@@ -2,7 +2,6 @@
 // persistent database connection
 
 const mongoose = require("mongoose")
-
 const { dbURI } = require("../config")
 
 // successfulConnectionMessage is logged on successful connection to the db
@@ -28,7 +27,6 @@ module.exports = {
 	User: require("./User.js"),
 	Team: require("./Team.js"),
 	Part: require("./Part.js"),
-	Feedback: require("./Feedback.js"),
 	teamData: require("./data/team.js"),
 	sponsorsData: require("./data/sponsors.js")
 }
