@@ -239,7 +239,7 @@
 		margin-top: 20px;
 	}
 	.day {
-		height: 20px;
+		height: 25px;
 	}
 	.location {
 		display: none;
@@ -293,6 +293,6 @@
 		height: 45px;
 	}
 	.day {
-		height: 18px;
+		height: 20px;
 	}
 }
