@@ -1,6 +1,7 @@
 /* BANNER */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin, latin-ext);
+
 body {
-	//background-color: rgb(221, 128, 100);
 	background-color: rgb(251, 243, 240);
 }
 
@@ -30,7 +31,6 @@ label {
 
 .checkout,
 .checkin {
-	//background-color: rgb(255, 255, 244);
 	backgrournd-color: rgb(42, 45, 78);
 	border-radius: 20px;
 	margin: 50px 450px;
@@ -56,7 +56,6 @@ label {
 }
 
 .sidebar {
-	//color: rgb(255, 255, 244);
 	color: rgb(42, 45, 78);
 }
 
@@ -81,27 +80,24 @@ label {
 }
 
 .parts-header {
-	//color: rgb(255, 255, 244);
 	color: rgb(42, 45, 78);
-	font-size: 70px;
+	font-size: 50px;
 	font-weight: bold;
 	margin: 0px;
 }
 
 .parts-subtitle {
 	margin: 0px 0px 5px 0px;
-	//color: rgb(255, 255, 244);
 	color: rgb(42, 45, 78);
 }
 
 .part {
 	width: 200px;
 	height: 200px;
-	//border: 10px solid rgb(242, 204, 181);
-    border-right: 15px solid rgb(242, 204, 181);
-    border-left: 15px solid rgb(242, 204, 181);
-    border-top: 8px solid rgb(242, 204, 181);
-    border-bottom: 8px solid rgb(242, 204, 181);	
+	border-right: 10px solid rgb(242, 204, 181);
+	border-left: 10px solid rgb(242, 204, 181);
+	border-top: 10px solid rgb(242, 204, 181);
+	border-bottom: 10px solid rgb(242, 204, 181);
 	margin-bottom: 5px;
 	margin-top: 20px;
 }
@@ -118,7 +114,6 @@ label {
 
 .part-details {
 	margin: 0px;
-	//color: rgb(255, 255, 244);
 	color: rgb(42, 45, 78);
 }
 

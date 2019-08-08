@@ -4,12 +4,10 @@
 
 .filter-container {
 	text-align: center;
-	//color: #FF0000; 
 }
 
 input {
 	color: white;
-	//color: #FF0000; 
 }
 
 .filter-label {
@@ -17,7 +15,6 @@ input {
 	font-family: "Josefin Sans";
 	font-weight: bold;
 	text-transform: uppercase;
-	//color: #FF0000; 
 	margin: 0px;
 }
 
@@ -30,10 +27,9 @@ input {
 
 	border-radius: 0;
 	border: none;
-	//border-bottom: solid #d8d8d8 1px;
-    border-bottom: solid #204784 2px;
+	border-bottom: solid #204784 1px;
 	width: 3%;
-	min-width: 180px;
+	min-width: 170px;
 
 	box-shadow: none;
 	background-color: transparent;
