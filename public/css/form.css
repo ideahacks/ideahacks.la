@@ -9,10 +9,12 @@
 /* LABEL */
 .ideahacks-form label {
 	text-align: center;
-	font-size: 25px;
-	line-height: 29px;
+	font-size: 20px;
+	line-height: 20px;
 	text-transform: none;
 	font-weight: normal;
+	margin-left: 5px;
+	margin-bottom: 5px;
 	color: #40698f;
 }
 
@@ -23,6 +25,7 @@
 	border-radius: 12px;
 	background-color: white;
 	width: 80%;
+	margin-bottom: 0px;
 }
 
 .ideahacks-form input::placeholder {

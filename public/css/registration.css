@@ -7,14 +7,19 @@ body {
 	background-color: #fbf3f0;
 }
 
+.forgot-pass {
+	color: #40698F;
+}
+
 .forgot-pass:hover {
 	color: #2a2d4e;
 }
 
 /* COMPUTER IMAGE */
 .main_pic img {
-	width: 90%;
-	margin: 140px 0px 100px 70px;
+	width: 105%;
+	height: 105%;
+	margin: 125px 0px 70px 0px;
 }
 
 /* FORM SIDE */
@@ -32,8 +37,8 @@ body {
 .login {
 	background-color: #40698f;
 	margin-top: 15pt;
-	font-weight: bold;
-	font-size: 25px;
+	font-weight: normal;
+	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
 	border-radius: 12px;
@@ -44,7 +49,7 @@ body {
 }
 
 .register {
-	background-color: #95b9cd;
+	background-color: #2A2D4E;
 	font-weight: bold;
 	font-size: 14px;
 	color: white;
@@ -87,9 +92,17 @@ a:hover {
 p,
 button {
 	font-family: "Roboto Condensed";
-	font-weight: normal;
-	line-height: 18px;
+	font-weight: thin;
+	line-height: 13px;
+	font-size: 13px;
 	color: white;
+	text-align: left;
+	padding-left: 5px;
+}
+
+p,
+error-message {
+	color: #40698F;
 }
 
 p {
