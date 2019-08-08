@@ -62,7 +62,7 @@ input[type="text"] {
 	line-height: 50px;
 }
 
-#checkout-scan,
+#barcode-scan,
 #checkin-scan {
 	margin: auto;
 	margin-bottom: 50px;
@@ -76,7 +76,7 @@ input[type="text"] {
 
 .checkout h1,
 .checkin h1,
-#checkout-scan h1,
+#barcode-scan h1,
 #checkin-scan h1 {
 	font-weight: bold;
 	font-size: 36px;
@@ -96,7 +96,7 @@ input[type="text"] {
 	color: #fbf3f0;
 }
 
-#checkout-scan p,
+#barcode-scan p,
 #checkin-scan p {
 	font-size: 36px;
 	color: #70bfe6;

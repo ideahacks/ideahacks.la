@@ -22,50 +22,40 @@ $(() => {
 	// $("#checkout-team-input").submit(function () {
 	// 	$(".checkout").hide()
 	// 	$(".checkin").hide()
-	// 	$("#checkout-scan").show()
+	// 	$("#barcode-scan").show()
 	// })
 
 	$("#checkout-team-input").submit(function() {
 		$(".checkout-container").hide()
-		$("#checkout-scan").show()
+		$("#barcode-scan h1").text("You have decided to CHECK OUT a part")
+		$(".barcode-form").attr("id", "out-button")
+		$('.checkout input[type="text"]').attr("name", "team-number")
+		$("#barcode-scan").show()
 		$("#go-back").show()
 		return false
 	})
 
 	$("#checkin-team-input").submit(function() {
 		$(".checkout-container").hide()
-		$("#checkin-scan").show()
+		$("#barcode-scan h1").text("You have decided to CHECK IN a part")
+		$(".barcode-form").attr("id", "in-button")
+		$('.checkin input[type="text"]').attr("name", "team-number")
+		$("#barcode-scan").show()
 		$("#go-back").show()
 		return false
 	})
 
 	$("#go-back-button").click(function() {
 		$("#go-back").hide()
-		$("#checkout-scan").hide()
+		$("#barcode-scan").hide()
 		$("#checkin-scan").hide()
 		$(".checkout-container").show()
 	})
 
-	// $("#checkout-quantity-dropdown").change(function() {
-	// 	$("#checkout-scan").hide()
-	// 	$("#go-back").hide()
-	// 	$(".banner").hide()
-	// 	$("#checkout-success").show()
-	// 	document.querySelector(".wrapper").classList.add("centered")
-	// })
-
-	// $("#checkin-quantity-dropdown").change(function() {
-	// 	$("#checkin-scan").hide()
-	// 	$("#go-back").hide()
-	// 	$(".banner").hide()
-	// 	$("#checkin-success").show()
-	// 	document.querySelector(".wrapper").classList.add("centered")
-	// })
-
 	$("#checkout-more-items").click(function() {
 		$("#checkout-success").hide()
 		$(".banner").show()
-		$("#checkout-scan").show()
+		$("#barcode-scan").show()
 		$("#go-back").show()
 	})
 
@@ -79,20 +69,35 @@ $(() => {
 	// When check-out or check-in button clicked, run this monstorous piece of logic
 	$(".barcode-form").submit(function() {
 		// Grab some information from the form
+		let barcode = $('input[name="barcode"]').val()
 		let teamNumber = $('input[name="team-number"]').val()
-		//let buttonId = $(this).attr("id")
+		let buttonId = $(this).attr("id")
+		let quantity = Number($('input[name="quantity"]').val())
+		if (quantity <= 0) {
+			errorHandler("Please input a positive number!")
+		}
 
-		// Check for part existance
-		$.get("/api/parts/" + barcode)
+		for (var i = 0; i < quantity; i++) {
+				// Check for part existence
+			$.get("/api/parts/" + barcode)
 			.then(part => {
-				// Check if part stock is already 0
 				if (part.stock === 0 && buttonId === "out-button") {
 					errorHandler("Part has 0 stock!")
+				} else if (part.stock < quantity && buttonId === "out-button") {
+					errorHandler("Quantity requested exceeds available parts!")
 				}
-
 				// Check for team existance
 				$.get("/api/teams/" + teamNumber)
 					.then(team => {
+						var partCount = 0
+						for (var i = 0; i < team.parts.length; i++) {
+							if (team.parts[i] === part.partName) {
+								partCount++;
+							}
+						}
+						// if (part.stock < partCount) {
+						// 	errorHandler("Team doesn't have that quantity of the part")
+						// }
 						// If checking in, check if the team has the part to check in
 						if (buttonId === "in-button") {
 							let idx = team.parts.indexOf(part.partName)
@@ -126,10 +131,12 @@ $(() => {
 										successHandler()
 									})
 									.catch(err => {
+										alert("here1");
 										errorHandler(err)
 									})
 							})
 							.catch(err => {
+								alert("here2");
 								errorHandler(err)
 							})
 					})
@@ -161,25 +168,30 @@ $(() => {
 										successHandler()
 									})
 									.catch(err => {
+										alert("here3");
 										errorHandler(err)
 									})
 							})
 							.catch(err => {
+								alert("here4");
 								errorHandler(err)
 							})
 					})
 			})
 			.catch(err => {
 				// Part does not exist
+				alert("here5");
 				errorHandler(err)
 			})
+		}
+		
 	})
 })
 
 // Attempts to log the given error as well as exits the script
 function errorHandler(err) {
-	$(".input-form").html("")
-	$(".input-form").html("<p>There was an error with your request: " + err + ". Redirecting...</p>")
+	$("#barcode-scan").html("")
+	$("#barcode-scan").html("<p>There was an error with your request: " + err + ". Redirecting...</p>")
 	$(this).hide()
 
 	setTimeout(location.reload.bind(location), 3000)
@@ -190,9 +202,10 @@ function errorHandler(err) {
 
 // successHandler is the logic that runs when everything doesn't blow up
 function successHandler() {
-	$(".input-form").html("")
-	$(".input-form").html("<p>Your request was successful! Redirecting...</p>")
-	$(this).hide()
-
-	setTimeout(location.reload.bind(location), 1000)
+	$(".success").show()
+	$(".banner").hide()
+	$("#go-back").hide()
+	$("#barcode-scan").hide()
+	$(document).scrollTop(0)
+	setTimeout(location.reload.bind(location), 3000)
 }

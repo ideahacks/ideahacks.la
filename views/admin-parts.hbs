@@ -42,7 +42,7 @@
                 <h1 id='checkout-prompt'>To check out a part</h1>
                 <h2>Enter Team #</h2>
                 <form id='checkout-team-input'>
-                    <input type="text" name="team-number">
+                    <input type="text">
                 </form>
             </div>
 
@@ -50,31 +50,19 @@
                 <h1 id='checkin-prompt'>To check in a part</h1>
                 <h2>ENTER TEAM #</h2>
                 <form id='checkin-team-input'>
-                    <input type="text" name="team-number">
+                    <input type="text">
                 </form>
             </div>
 
         </div>
 
-        <div id='checkout-scan' class='text-center' style="display: none;">
-            <h1>You have decided to CHECK OUT a part</h1>
-            <form class="barcode-form">
+        <div id='barcode-scan' class='text-center' style="display: none;">
+            <h1></h1>
+            <form class="barcode-form" onsubmit="return false">
                 <input type="text" name="barcode" placeholder="SCAN A PART">
                 <div class="scan-quantity">
                     <p>If multiple of the same part,<br>enter a quantity:</p>
                     <input type="number" id="checkout-quantity" name="quantity">
-                    <input type="submit" class="submit-button">
-                </div>
-            </form>
-        </div>
-
-        <div class='text-center' id='checkin-scan' style="display: none;">
-            <h1>You have decided to CHECK IN a part</h1>
-            <form class="barcode-form">
-                <input type="text" name="barcode" placeholder="SCAN A PART">
-                <div class="scan-quantity">
-                    <p>If multiple of the same part,<br>enter a quantity:</p>
-                    <input type="number" id="checkin-quantity">
                     <input type="submit" class="submit-button">
                 </div>
             </form>
@@ -91,11 +79,6 @@
             <p>Otherwise you will be redirected in 3 seconds</p>
         </div>
 
-        <div class='success' id='checkin-success' style="display: none">
-            <h1>Thank You</h1>
-            <button id="checkin-more-items">More items to scan?</button>
-            <p>Otherwise you will be redirected in 3 seconds</p>
-        </div>
     </div>
 
 
