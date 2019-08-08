@@ -8,7 +8,7 @@ body {
 }
 
 .forgot-pass {
-	color: #40698f;
+	color: #2a2d4e;
 }
 
 .forgot-pass:hover {
@@ -40,6 +40,7 @@ body {
 	font-weight: normal;
 	font-size: 20px;
 	color: white;
+	border-color: #40698f;
 	text-transform: uppercase;
 	border-radius: 12px;
 	margin-bottom: 10pt;
@@ -48,18 +49,30 @@ body {
 	padding: 10px;
 }
 
+.login:hover {
+	background-color: #fbf3f0;
+	color: #40698f;
+	cursor: pointer;
+}
+
 .register {
 	background-color: #2a2d4e;
 	font-weight: bold;
 	font-size: 14px;
 	color: white;
 	text-transform: uppercase;
-	border-color: #95b9cd;
+	border-color: #2a2d4e;
 	border-radius: 12px;
 	margin-bottom: 10pt;
 	width: 80%;
 	height: 40px;
 	padding: 10px;
+}
+
+.register:hover {
+	background-color: #fbf3f0;
+	color: #2a2d4e;
+	cursor: pointer;
 }
 
 .ideahacks-form {
