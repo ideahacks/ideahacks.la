@@ -34,19 +34,20 @@ input[type="text"] {
 }
 
 .banner p {
-	font-size: 24px;
+	margin-top: 10px;
+	font-size: 20px;
 	font-weight: lighter;
 	line-height: 31px;
 	color: black;
 }
 
 .banner img {
-	width: 580px;
+	width: 370px;
 }
 
 .checkout-container {
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 900px;
 	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
@@ -56,8 +57,8 @@ input[type="text"] {
 .checkin {
 	background-color: #40698f;
 	border-radius: 40px;
-	height: 327px;
-	width: 448px;
+	height: 280px;
+	width: 400px;
 	padding: 40px 0px;
 	line-height: 50px;
 }
@@ -79,7 +80,7 @@ input[type="text"] {
 #checkout-scan h1,
 #checkin-scan h1 {
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 25px;
 	color: #70bfe6;
 }
 
@@ -87,7 +88,7 @@ input[type="text"] {
 .checkin h2 {
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 30px;
 	color: #fbf3f0;
 }
 
@@ -98,7 +99,7 @@ input[type="text"] {
 
 #checkout-scan p,
 #checkin-scan p {
-	font-size: 36px;
+	font-size: 25px;
 	color: #70bfe6;
 	display: inline;
 }
@@ -107,11 +108,11 @@ input[type="text"] {
 #checkin-quantity {
 	width: 63px;
 	height: 56px;
-	margin-left: 30px;
+	margin-left: 20px;
 	border-radius: 0px;
 	border: 1px solid rgb(216, 216, 216);
 	border-right: none;
-	font-size: 24px;
+	font-size: 25px;
 	border-radius: 15px 0 0 15px;
 	text-align: center;
 }
@@ -128,6 +129,7 @@ input[type="text"] {
 }
 
 .scan-quantity {
+	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -248,7 +250,7 @@ input[type="text"] {
 	.checkout-container {
 		margin: 0 auto;
 		flex-direction: column;
-		height: 700px;
+		height: 600px;
 		align-items: center;
 	}
 }
