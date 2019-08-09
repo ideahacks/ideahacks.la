@@ -1,6 +1,7 @@
 module.exports = [
 	{
 		departmentName: "Team Captains",
+		teamPath: "/img/team/team captains.png",
 		teammates: [
 			{
 				name: "Serene Kamal",
@@ -26,6 +27,8 @@ module.exports = [
 	},
 	{
 		departmentName: "Corporate",
+		teamPath: "/img/team/corporate.png",
+		teamLead: "Roselyn Lee",
 		teammates: [
 			{
 				name: "Benjamin He",
@@ -102,6 +105,8 @@ module.exports = [
 	},
 	{
 		departmentName: "Design",
+		teamPath: "/img/team/design.png",
+		teamLead: "Albert Han",
 		teammates: [
 			{
 				name: "Michelle Lam",
@@ -138,6 +143,8 @@ module.exports = [
 	},
 	{
 		departmentName: "Food",
+		teamPath: "/img/team/food.png",
+		teamLead: "Subhodh Madala",
 		teammates: [
 			{
 				name: "Michelle Tan",
@@ -167,6 +174,8 @@ module.exports = [
 	},
 	{
 		departmentName: "Operations",
+		teamPath: "/img/team/operations.png",
+		teamLead: "Tao Lu",
 		teammates: [
 			{
 				name: "Jingbin Huang",
@@ -233,6 +242,8 @@ module.exports = [
 	},
 	{
 		departmentName: "Website",
+		teamPath: "/img/team/operations.png",
+		teamLead: "Kathy Daniels",
 		teammates: [
 			{
 				name: "Chester Hulse",
