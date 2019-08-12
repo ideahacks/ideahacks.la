@@ -117,11 +117,10 @@ input[type="text"] {
 	height: 56px;
 	margin-left: 20px;
 	border-radius: 0px;
-	border: 1px solid rgb(216, 216, 216);
-	border-right: none;
+	border: 3px solid rgb(216, 216, 216);
 	font-size: 25px;
-	border-radius: 15px 0 0 15px;
 	text-align: center;
+	outline: none;
 }
 
 .checkout form,
@@ -136,17 +135,11 @@ input[type="text"] {
 }
 
 .scan-quantity {
-	margin-top: 10px;
+	margin-top: 0px;
+	margin-bottom: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.submit-button {
-	display: inline-block;
-	width: 63px;
-	height: 56px;
-	border-radius: 0 15px 15px 0;
 }
 
 #go-back p,
@@ -157,19 +150,35 @@ input[type="text"] {
 }
 
 #go-back button,
-.success button {
+.success button,
+.submit-button {
 	background: #f2ccb5;
 	border-radius: 18px;
 	border: none;
 	font-size: 36px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 	outline: none;
+	color: white;
 }
 
 #go-back button:hover,
 .success button:hover {
 	background-color: transparent;
 	color: #f2ccb5;
+	cursor: pointer;
+}
+
+.submit-button {
+	display: inline-block;
+	width: 150px;
+	height: 56px;
+	border-radius: 10px;
+	text-transform: uppercase;
+}
+
+.submit-button:hover {
+	background-color: transparent;
+	color: white;
 	cursor: pointer;
 }
 

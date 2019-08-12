@@ -1,24 +1,29 @@
 $(() => {
 	//Team number is inputted for check out
-	$("#checkout-team-input").submit(function() {
-		$(".checkout-container").hide()
-		$("#barcode-scan h1").text("You have decided to CHECK OUT a part")
-		$(".barcode-form").attr("id", "out-button")
-		$('.checkout input[type="text"]').attr("name", "team-number")
-		$("#barcode-scan").show()
-		$("#go-back").show()
-		return false
+	$("#checkout-team-input").keypress(function(e) {
+		if (e.which === 13) {
+			$(".checkout-container").hide()
+			$("#barcode-scan h1").text("You have decided to CHECK OUT a part")
+			$(".barcode-form").attr("id", "out-button")
+			$('.checkout input[type="text"]').attr("name", "team-number")
+			$("#barcode-scan").show()
+			$("#go-back").show()
+			return false
+		}
 	})
 
 	//Team number is inputted for check in 
-	$("#checkin-team-input").submit(function() {
-		$(".checkout-container").hide()
-		$("#barcode-scan h1").text("You have decided to CHECK IN a part")
-		$(".barcode-form").attr("id", "in-button")
-		$('.checkin input[type="text"]').attr("name", "team-number")
-		$("#barcode-scan").show()
-		$("#go-back").show()
-		return false
+	$("#checkin-team-input").keypress(function(e) {
+		if (e.which === 13) {
+			$(".checkout-container").hide()
+			$("#barcode-scan h1").text("You have decided to CHECK IN a part")
+			$(".barcode-form").attr("id", "in-button")
+			$('.checkin input[type="text"]').attr("name", "team-number")
+			$("#barcode-scan").show()
+			$("#go-back").show()
+			return false
+		}
+		
 	})
 
 	//Return back to original page with check out and check in options
@@ -44,7 +49,6 @@ $(() => {
 		// Grab some information from the form
 		let barcode = $('input[name="barcode"]').val()
 		let teamNumber = $('input[name="team-number"]').val()
-		alert(teamNumber)
 		let buttonId = $(this).attr("id")
 		let quantity = Number($('input[name="quantity"]').val())
 		if (quantity <= 0) {
@@ -115,12 +119,10 @@ $(() => {
 										successHandler()
 									})
 									.catch(err => {
-										alert("here1");
 										errorHandler(err)
 									})
 							})
 							.catch(err => {
-								alert("here2");
 								errorHandler(err)
 							})
 					})
@@ -156,19 +158,16 @@ $(() => {
 										successHandler()
 									})
 									.catch(err => {
-										alert("here3");
 										errorHandler(err)
 									})
 							})
 							.catch(err => {
-								alert("here4");
 								errorHandler(err)
 							})
 					})
 			})
 			.catch(err => {
 				// Part does not exist
-				alert("here5");
 				errorHandler(err)
 			})	
 		
