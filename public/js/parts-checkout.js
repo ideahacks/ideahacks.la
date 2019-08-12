@@ -12,7 +12,7 @@ $(() => {
 		}
 	})
 
-	//Team number is inputted for check in 
+	//Team number is inputted for check in
 	$("#checkin-team-input").keypress(function(e) {
 		if (e.which === 13) {
 			$(".checkout-container").hide()
@@ -23,7 +23,6 @@ $(() => {
 			$("#go-back").show()
 			return false
 		}
-		
 	})
 
 	//Return back to original page with check out and check in options
@@ -54,18 +53,22 @@ $(() => {
 		if (quantity <= 0) {
 			errorHandler("Please input a positive number!")
 		}
-					// Check for part existence
-			$.get("/api/parts/" + barcode)
+		// Check for part existence
+		$.get("/api/parts/" + barcode)
 			.then(part => {
 				if (part.stock === 0 && buttonId === "out-button") {
 					errorHandler("Part has 0 stock!")
 				} else if (part.stock < quantity && buttonId === "out-button") {
 					errorHandler("Quantity requested exceeds available parts!")
-				} 
+				}
 				// Check for team existance
 				$.get("/api/teams/" + teamNumber)
 					.then(team => {
-						let idx = team.parts.map(function(p){return p.name}).indexOf(part.partName)
+						let idx = team.parts
+							.map(function(p) {
+								return p.name
+							})
+							.indexOf(part.partName)
 						//If checking in, check if the team has the part to check in
 						if (buttonId === "in-button") {
 							//let idx = team.parts.indexOf(part.partName)
@@ -98,10 +101,9 @@ $(() => {
 								team.parts[idx].quantity += quantity
 							}
 						} else {
-							
 							//let idx = team.parts.indexOf(part.partName)
 							//let idx = team.parts.map(function(p){return p.name}).indexOf(part.partName)
-							
+
 							if (team.parts[idx].quantity - quantity === 0) {
 								team.parts.splice(idx, 1)
 							} else {
@@ -144,10 +146,12 @@ $(() => {
 						// Create a new team
 						let newTeam = {
 							teamNumber,
-							parts: [{
-								name: part.partName,
-								quantity: quantity
-							}] 
+							parts: [
+								{
+									name: part.partName,
+									quantity: quantity
+								}
+							]
 							//[part.partName]
 						}
 
@@ -169,10 +173,8 @@ $(() => {
 			.catch(err => {
 				// Part does not exist
 				errorHandler(err)
-			})	
-		
+			})
 	})
-		
 })
 
 // Attempts to log the given error as well as exits the script
