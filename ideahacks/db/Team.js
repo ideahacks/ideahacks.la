@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const TeamSchema = new Schema({
 	teamNumber: Number,
-	parts: [String]
+	parts: [{name: String, quantity: Number}]
 })
 
 module.exports = mongoose.model("Team", TeamSchema)

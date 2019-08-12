@@ -1,30 +1,5 @@
 $(() => {
-	// When checkout is selected, display next step
-	// $("#checkout-prompt").click(function() {
-	// 	$(".checkin").hide()
-	// 	$("#barcode-input").show()
-	// 	$(this).hide()
-	// 	$("#team-input").show()
-
-	// 	$("#out-button").show()
-	// })
-
-	// // When checkin is selected, display next step
-	// $("#checkin-prompt").click(function() {
-	// 	$(".checkin").hide()
-	// 	$("#barcode-input").show()
-	// 	$("#checkout-prompt").hide()
-	// 	$("#team-input").show()
-
-	// 	$("#in-button").show()
-	// })
-
-	// $("#checkout-team-input").submit(function () {
-	// 	$(".checkout").hide()
-	// 	$(".checkin").hide()
-	// 	$("#barcode-scan").show()
-	// })
-
+	//Team number is inputted for check out
 	$("#checkout-team-input").submit(function() {
 		$(".checkout-container").hide()
 		$("#barcode-scan h1").text("You have decided to CHECK OUT a part")
@@ -35,6 +10,7 @@ $(() => {
 		return false
 	})
 
+	//Team number is inputted for check in 
 	$("#checkin-team-input").submit(function() {
 		$(".checkout-container").hide()
 		$("#barcode-scan h1").text("You have decided to CHECK IN a part")
@@ -45,10 +21,14 @@ $(() => {
 		return false
 	})
 
+	//Return back to original page with check out and check in options
 	$("#go-back-button").click(function() {
 		$("#go-back").hide()
 		$("#barcode-scan").hide()
+		$('#barcode-scan input[type="text"]').val("")
 		$("#checkin-scan").hide()
+		$('.checkout input[type="text"]').val("")
+		$('.checkin input[type="text"]').val("")
 		$(".checkout-container").show()
 	})
 
@@ -59,67 +39,71 @@ $(() => {
 		$("#go-back").show()
 	})
 
-	$("#checkin-more-items").click(function() {
-		$("#checkin-success").hide()
-		$(".banner").show()
-		$("#checkin-scan").show()
-		$("#go-back").show()
-	})
-
 	// When check-out or check-in button clicked, run this monstorous piece of logic
 	$(".barcode-form").submit(function() {
 		// Grab some information from the form
 		let barcode = $('input[name="barcode"]').val()
 		let teamNumber = $('input[name="team-number"]').val()
+		alert(teamNumber)
 		let buttonId = $(this).attr("id")
 		let quantity = Number($('input[name="quantity"]').val())
 		if (quantity <= 0) {
 			errorHandler("Please input a positive number!")
 		}
-
-		for (var i = 0; i < quantity; i++) {
-				// Check for part existence
+					// Check for part existence
 			$.get("/api/parts/" + barcode)
 			.then(part => {
 				if (part.stock === 0 && buttonId === "out-button") {
 					errorHandler("Part has 0 stock!")
 				} else if (part.stock < quantity && buttonId === "out-button") {
 					errorHandler("Quantity requested exceeds available parts!")
-				}
+				} 
 				// Check for team existance
 				$.get("/api/teams/" + teamNumber)
 					.then(team => {
-						var partCount = 0
-						for (var i = 0; i < team.parts.length; i++) {
-							if (team.parts[i] === part.partName) {
-								partCount++;
-							}
-						}
-						// if (part.stock < partCount) {
-						// 	errorHandler("Team doesn't have that quantity of the part")
-						// }
-						// If checking in, check if the team has the part to check in
+						let idx = team.parts.map(function(p){return p.name}).indexOf(part.partName)
+						//If checking in, check if the team has the part to check in
 						if (buttonId === "in-button") {
-							let idx = team.parts.indexOf(part.partName)
+							//let idx = team.parts.indexOf(part.partName)
 							if (idx === -1) {
 								errorHandler("Team doesn't have this part to check in!")
+							} else if (team.parts[idx].quantity < quantity) {
+								errorHandler("Team does not have that quantity of parts!")
 							}
 						}
 
 						// Make edits to the part by incrementing/decrementing stock
 						if (buttonId === "in-button") {
-							part.stock += 1
+							part.stock += quantity
 						} else {
-							part.stock -= 1
+							part.stock -= quantity
 						}
 
 						// Make edits to the team by adding/removing the part
 						if (buttonId === "out-button") {
 							// Add/remove part from team's parts
-							team.parts.push(part.partName)
+							//team.parts.push(part.partName)
+							//let idx = team.parts.map(function(p){return p.name}).indexOf(part.partName)
+							// Creates a new part object if the part doesn't exist, increments quantity otherwise
+							if (idx === -1) {
+								team.parts.push({
+									name: part.partName,
+									quantity: quantity
+								})
+							} else {
+								team.parts[idx].quantity += quantity
+							}
 						} else {
-							let idx = team.parts.indexOf(part.partName)
-							team.parts.splice(idx, 1) // Removes part from team
+							
+							//let idx = team.parts.indexOf(part.partName)
+							//let idx = team.parts.map(function(p){return p.name}).indexOf(part.partName)
+							
+							if (team.parts[idx].quantity - quantity === 0) {
+								team.parts.splice(idx, 1)
+							} else {
+								team.parts[idx].quantity -= quantity
+							}
+							//team.parts.splice(idx, 1) // Removes part from team
 						}
 
 						// Use PUT endpoint to edit team
@@ -142,23 +126,27 @@ $(() => {
 					})
 					.catch(() => {
 						// Team doesn't exist
-
+						debugger
 						// Checking in when team doesn't exist, that's a problem
 						if (buttonId === "in-button") {
-							errorHandler("Team doesn't have this part!")
+							errorHandler("Team doesn't exist or quantity exceeds what the team has!")
 						}
 
 						// Make edits to the part by incrementing/decrementing stock
 						if (buttonId === "in-button") {
-							part.stock += 1
+							part.stock += quantity
 						} else {
-							part.stock -= 1
+							part.stock -= quantity
 						}
 
 						// Create a new team
 						let newTeam = {
 							teamNumber,
-							parts: [part.partName]
+							parts: [{
+								name: part.partName,
+								quantity: quantity
+							}] 
+							//[part.partName]
 						}
 
 						$.post("/api/teams", newTeam)
@@ -182,10 +170,10 @@ $(() => {
 				// Part does not exist
 				alert("here5");
 				errorHandler(err)
-			})
-		}
+			})	
 		
 	})
+		
 })
 
 // Attempts to log the given error as well as exits the script
@@ -206,6 +194,7 @@ function successHandler() {
 	$(".banner").hide()
 	$("#go-back").hide()
 	$("#barcode-scan").hide()
+	$('#barcode-scan input[type="text"]').val("")
 	$(document).scrollTop(0)
 	setTimeout(location.reload.bind(location), 3000)
 }
