@@ -70,7 +70,6 @@ input[type="text"] {
 #barcode-scan,
 #checkin-scan {
 	margin: auto;
-
 	margin-bottom: 50px;
 	background-color: #40698f;
 	border-radius: 40px;

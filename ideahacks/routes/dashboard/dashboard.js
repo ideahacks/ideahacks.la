@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt-nodejs")
 
 const Part = require("../../db").Part
 const { Team } = require("../../db")
+const { User } = require("../../db")
 
 const getParts = (req, res) => {
 	Part.find().then(parts => {
@@ -59,9 +60,18 @@ const getTeams = (req, res) => {
 	})
 }
 
+const getMyParts = (req, res) => {
+	User.find({email : req.user.email}).then(user => {
+		Team.find({teamNumber: user[0]._doc.teamNumber}).then(team => {
+			let parts = team[0]._doc.parts
+			res.render("dashboard-my-parts", { parts })
+		})
+	})
+}
 module.exports = {
 	getParts,
 	getMe,
 	postMe,
-	getTeams
+	getTeams,
+	getMyParts
 }

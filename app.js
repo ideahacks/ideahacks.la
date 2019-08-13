@@ -25,7 +25,7 @@ hbs.registerPartial("dashboardPartsModal", path.join(__dirname, "/views/partials
 hbs.registerPartial("filter", path.join(__dirname, "/views/partials/filter.hbs"))
 hbs.registerPartial("partsCheckoutModal", path.join(__dirname, "/views/partials/partsCheckoutModal.hbs"))
 hbs.registerPartial("partsCreationModal", path.join(__dirname, "/views/partials/partsCreationModal.hbs"))
-hbs.registerPartial("teamCreationModal", path.join(__dirname, "/views/partials/teamCreatinoModal.hbs"))
+hbs.registerPartial("teamCreationModal", path.join(__dirname, "/views/partials/teamCreationModal.hbs"))
 hbsutils.registerWatchedPartials(path.join(__dirname, "/views/partials"))
 
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")))
