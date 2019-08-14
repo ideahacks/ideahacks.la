@@ -61,11 +61,18 @@ const getTeams = (req, res) => {
 }
 
 const getMyParts = (req, res) => {
-	User.find({email : req.user.email}).then(user => {
-		Team.find({teamNumber: user[0]._doc.teamNumber}).then(team => {
-			let parts = team[0]._doc.parts
-			res.render("dashboard-my-parts", { parts })
-		})
+	User.find({ email: req.user.email }).then(user => {
+		let hasTeam = user[0]._doc.hasTeam
+		if (hasTeam) {
+			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
+				let parts = team[0]._doc.parts
+				let hasTeam = team[0]._doc.hasTeam
+				
+				res.render("dashboard-my-parts", { parts })
+			})
+		} else {
+			res.render("<h1>You are not part of a team!</h1>");
+		}
 	})
 }
 module.exports = {

@@ -1,60 +1,56 @@
 body {
-    font-family: "Roboto Condensed", sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
 }
 
-.wrapper {
-    max-width: 1000px;
-    min-height: 500px;
-}
 .banner {
-    margin-top: 130px;
-    margin-bottom: 30px;
-    padding-left: 15px;
-    color: black;
+	margin-top: 130px;
+	margin-bottom: 30px;
+	padding-left: 15px;
+	color: black;
 }
 .banner h1 {
-    text-transform: uppercase;
-    font-size: 54px;
-    font-weight: bold;
-    color: #2A2D4E;
+	text-transform: uppercase;
+	font-size: 54px;
+	font-weight: bold;
+	color: #2a2d4e;
 }
 
 .parts-list {
-    margin: auto;
-    max-width: 1000px;
-    min-height: 500px;
+	margin: auto;
+	max-width: 1000px;
+	min-height: 500px;
 }
 
 .parts-list {
-    border-bottom: 3px solid #70BFE6;
+	border-bottom: 3px solid #70bfe6;
 }
 
 #labels {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
 }
 
 #labels h1 {
-    font-size: 42px;
-    line-height: 60px;
-    color: #2A2D4E;
+	font-size: 42px;
+	line-height: 60px;
+	color: #2a2d4e;
 }
 
 #labels h2 {
-    font-size: 42px;
-    line-height: 60px;
-    color: #40698F;
+	font-size: 42px;
+	line-height: 60px;
+	color: #40698f;
 }
 
 #part-entry {
-    display: flex;
-    justify-content: space-between;
-    font-size: 24px;
-    border-bottom: 3px solid #70BFE6;
-    margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 24px;
+	border-bottom: 3px solid #70bfe6;
+	margin-bottom: 10px;
 }
 
-#part-entry:nth-child(2n+1) {
-    border-bottom: 3px solid #F2CCB5;
+#part-entry:nth-child(2n + 1) {
+	border-bottom: 3px solid #f2ccb5;
 }
