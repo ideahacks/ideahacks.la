@@ -13,6 +13,11 @@ label {
 	display: none;
 }
 
+.parts-title {
+	width: 150px;
+	margin: 20px;
+}
+
 .banner {
 	margin-top: 130px;
 	margin-bottom: 70px;
@@ -53,6 +58,7 @@ label {
 	padding-top: 90px;
 	background-color: rgb(251, 243, 240);
 	padding-left: 40px;
+	padding-bottom: 90px;
 }
 
 .sidebar {
