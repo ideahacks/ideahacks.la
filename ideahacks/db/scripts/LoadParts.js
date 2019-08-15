@@ -6,9 +6,12 @@ const filePath = path.join(__dirname, "parts.csv")
 const dbURI = require("../../config").dbURI
 const Part = require("../Part.js")
 
-mongoose.connect(dbURI, {
-	useMongoClient: true
-})
+mongoose.connect(
+	dbURI,
+	{
+		useMongoClient: true
+	}
+)
 
 mongoose.Promise = global.Promise
 
