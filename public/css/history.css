@@ -25,15 +25,15 @@
 }
 
 .places img {
-	border-radius: 10px;
+	padding-top: 15px;
 }
 
-.history_h3 {
-	font-size: 19px;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 0px;
+.places h2 {
+	margin-top: 10px;
+}
+
+.place {
+	margin: 10px 0px;
 }
 
 .history_h4 {
@@ -60,6 +60,11 @@
 
 .places {
 	padding: 20px 0;
+}
+
+.year-title {
+	height: 40px;
+	margin: 10px 0px 20px 0px;
 }
 
 #nineteen {
