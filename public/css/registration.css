@@ -17,8 +17,7 @@ body {
 
 /* COMPUTER IMAGE */
 .main_pic img {
-	width: 105%;
-	height: 105%;
+	width: 100%;
 	margin: 125px 0px 70px 0px;
 }
 
@@ -38,7 +37,7 @@ body {
 	background-color: #40698f;
 	margin-top: 15pt;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 18px;
 	color: white;
 	border-color: #40698f;
 	text-transform: uppercase;
