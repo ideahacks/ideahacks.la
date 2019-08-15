@@ -67,11 +67,11 @@ const getMyParts = (req, res) => {
 			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
 				let parts = team[0]._doc.parts
 				let hasTeam = team[0]._doc.hasTeam
-				
+
 				res.render("dashboard-my-parts", { parts })
 			})
 		} else {
-			res.render("<h1>You are not part of a team!</h1>");
+			res.render("dashboard-my-parts-none")
 		}
 	})
 }
