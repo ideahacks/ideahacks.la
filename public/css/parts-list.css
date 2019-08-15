@@ -1,25 +1,21 @@
 /* BANNER */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin, latin-ext);
+
 body {
-	background-color: #fbf3f0;
-	font-family: "Roboto Condensed", sans-serif;
+	background-color: rgb(251, 243, 240);
+}
+
+form {
+	font-family: "Roboto Condensed";
 }
 
 label {
 	display: none;
 }
 
-input[type="text"] {
-	font-weight: bold;
-	font-size: 36px;
-	color: #fbf3f0;
-	text-align: center;
-	background: transparent;
-	border: none;
-	outline: none;
-}
-
-.wrapper {
-	padding-bottom: 100px;
+.parts-title {
+	width: 150px;
+	margin: 20px;
 }
 
 .banner {
@@ -59,12 +55,10 @@ input[type="text"] {
 
 .checkout,
 .checkin {
-	background-color: #40698f;
-	border-radius: 40px;
-	height: 280px;
-	width: 400px;
-	padding: 40px 0px;
-	line-height: 50px;
+	background-color: rgb(42, 45, 78);
+	border-radius: 20px;
+	margin: 50px 450px;
+	padding: 20px 0px;
 }
 
 #barcode-scan,
@@ -192,12 +186,13 @@ input[type="text"] {
 }
 .checkout-body {
 	padding-top: 90px;
-	background-color: #dd8064;
+	background-color: rgb(251, 243, 240);
 	padding-left: 40px;
+	padding-bottom: 90px;
 }
 
 .sidebar {
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .search-bar {
@@ -220,22 +215,25 @@ input[type="text"] {
 	opacity: 0.5;
 }
 
-.parts-header {
-	color: rgb(255, 255, 244);
-	font-size: 30px;
+/*.parts-header {
+	color: rgb(42, 45, 78);
+	font-size: 50px;
 	font-weight: bold;
 	margin: 0px;
-}
+}*/
 
 .parts-subtitle {
 	margin: 0px 0px 5px 0px;
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .part {
 	width: 200px;
 	height: 200px;
-	border: 10px solid rgb(255, 255, 244);
+	border-right: 10px solid rgb(242, 204, 181);
+	border-left: 10px solid rgb(242, 204, 181);
+	border-top: 10px solid rgb(242, 204, 181);
+	border-bottom: 10px solid rgb(242, 204, 181);
 	margin-bottom: 5px;
 	margin-top: 20px;
 }
@@ -252,7 +250,7 @@ input[type="text"] {
 
 .part-details {
 	margin: 0px;
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .detail-section {
