@@ -106,7 +106,7 @@
 button {
 	background-color: transparent;
 	border: 2px solid white;
-	padding: 10px 20px;
+	padding: 8px 20px;
 	border-radius: 7px;
 	color: white;
 	transition: background-color 0.3s ease, color 0.3s ease;
