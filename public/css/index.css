@@ -55,7 +55,6 @@
 	border: 2px solid rgb(32, 71, 164);
 	margin-top: 20px;
 	padding: 5px 20px;
-	border-radius: 40px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -92,7 +91,7 @@
 }
 
 .section-header {
-	height: 60px;
+	height: 45px;
 	margin: 20px 0px;
 }
 
