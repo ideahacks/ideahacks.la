@@ -1,0 +1,6 @@
+{
+  "dbURI": "mongodb://developer:jeffreyisbae420@ds115583.mlab.com:15583/ideahacks-test",
+  "sessionSecret": "jeffreyisbae420",
+  "host": "localhost:3000",
+  "SENDGRID_API_KEY": "INSERT_API_KEY_HERE"
+}
