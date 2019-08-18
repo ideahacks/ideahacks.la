@@ -17,12 +17,8 @@ body {
 
 /* COMPUTER IMAGE */
 .main_pic img {
-<<<<<<< HEAD
-	width: 105%;
 	height: 105%;
-=======
-	width: 100%;
->>>>>>> 9b004651a8a636dc5381220cf4b76accccd680af
+	width: 105%;
 	margin: 125px 0px 70px 0px;
 }
 
