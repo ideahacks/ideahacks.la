@@ -12,7 +12,7 @@ input {
 
 .filter-label {
 	font-size: 16px;
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0px;
@@ -21,7 +21,7 @@ input {
 .filter,
 .filter:focus,
 .filter:hover {
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 	font-size: 14px;
 	margin: 0px 0px 10px 0px;
 
