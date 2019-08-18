@@ -30,22 +30,21 @@
         {{> navbar }}
 
         <div class='team-container team container-fluid'>
-            <img src="\img\team\team.png" alt="LOGO" class="Title">
-            {{#each teamData}}
-                <div class='container-fluid section'>
-                    {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
-                    <h2 class='Lead'>{{#if this.teamLead}}Lead: {{this.teamLead}}{{/if}} </h2>
-                    <div class='row center-block'>
-                        {{#each this.teammates}}
-                            <div class='col-sm-3 no-padding'>
-                                <div class='pic'>
-                                    <img class='team-photo' src='{{this.picturePath}}'/>
-                                </div>
-                                <h4 class='Description'><b>{{this.name}}</b></h4>
-                            </div>
-                        {{/each}}
+            <img src="\img\team\team.png" alt="LOGO" class="Title"> {{#each teamData}}
+            <div class='container-fluid section'>
+                {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
+                <h2 class='Lead'>{{#if this.teamLead}}Lead: {{this.teamLead}}{{/if}} </h2>
+                <div class='row center-block'>
+                    {{#each this.teammates}}
+                    <div class='col-sm-3 no-padding'>
+                        <div class='pic'>
+                            <img class='team-photo' src='{{this.picturePath}}' />
+                        </div>
+                        <h4 class='Description'><b>{{this.name}}</b></h4>
                     </div>
+                    {{/each}}
                 </div>
+            </div>
             {{/each}}
         </div>
 
