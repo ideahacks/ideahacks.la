@@ -6,8 +6,8 @@
 }
 
 button {
-	background-color: #2A2D4E;
-	border: 2px solid #2A2D4E;
+	background-color: #2a2d4e;
+	border: 2px solid #2a2d4e;
 	padding: 10px 18px 7px 19px;
 	border-radius: 7px;
 	color: white;
@@ -17,12 +17,12 @@ button {
 
 button:hover {
 	background-color: transparent;
-	color: #2A2D4E;
+	color: #2a2d4e;
 	cursor: pointer;
 }
 
 body {
-	background-color: #F2CCB5;
+	background-color: #f2ccb5;
 }
 
 @media (max-width: 990px) {
