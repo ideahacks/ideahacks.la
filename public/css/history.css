@@ -83,18 +83,6 @@
 	padding: 25px 50px 50px;
 }
 
-#sixteen {
-	background-color: #10253F;
-	color: #70BFE6;
-	padding: 25px 50px 50px;
-}
-
-#fifteen {
-	background-color: black;
-	color: #BDBDBD;
-	padding: 25px 50px 50px;
-}
-
 .old-logo {
 	padding: 0px 30px;
 }
@@ -105,10 +93,6 @@
 
 .sponsor-header {
 	color: #FBF3F0;
-}
-
-#fifteen .sponsor-header {
-	color: black;
 }
 
 .sponsor_img img {
@@ -136,9 +120,7 @@
 	}
 	#nineteen, 
 	#eighteen, 
-	#seventeen, 
-	#sixteen, 
-	#fifteen {
+	#seventeen {
 		padding: 25px 20px;
 	}
 	.old-logo {
@@ -152,9 +134,5 @@
 	#seventeen .year-title {
 		width: 90%;
 		height: auto;
-	}
-	#sixteen .year-title,
-	#fifteen .year-title {
-		height: 30px;
 	}
 }
