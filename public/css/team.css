@@ -3,9 +3,9 @@ body {
 }
 
 .header {
-	margin: 70px 0px 15px 0px;
+	margin: 50px 0px 15px 0px;
 	display: block;
-	max-height: 60px; 
+	max-height: 45px;
 	display: inline-block;
 }
 
@@ -26,16 +26,16 @@ p {
 }
 
 .Title {
-	margin: 130px 0px 15px 0px;
+	margin: 130px 0px 0px 0px;
 	display: block;
-	max-height: 80px; 
+	max-height: 55px;
 	display: inline-block;
 }
 
 .Lead {
 	color: black;
 	font-family: "Roboto Condensed";
-	font-size: 27px;
+	font-size: 25px;
 	font-weight: 200;
 	padding-bottom: 20px;
 	text-align: left;
@@ -108,7 +108,7 @@ p {
 		padding: 0px 20px;
 	}
 	.Title {
-		max-height: 35px;
+		max-height: 50px;
 	}
 	.header {
 		max-height: 30px;
@@ -120,10 +120,10 @@ p {
 		font-size: 20px;
 	}
 	p {
-		font-size: 18px;
+		font-size: 25px;
 		margin-bottom: 30px;
 	}
 	.Description {
-		font-size: 16px;
+		font-size: 20px;
 	}
 }
