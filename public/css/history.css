@@ -3,6 +3,11 @@
 	background-color: #FBF3F0;
 }
 
+.wrapper h2 {
+	font-size: 25px;
+	margin-top: 10px;
+}
+
 #intro {
 	background-color: #dd8064;
 	background-size: auto;
@@ -28,10 +33,6 @@
 	padding-top: 15px;
 }
 
-.places h2 {
-	margin-top: 10px;
-}
-
 .place {
 	margin: 10px 0px;
 }
@@ -51,11 +52,8 @@
 }
 
 #history_title {
-	height: auto;
 	width: 22%;
-	display: block;
-	margin: auto;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 .places {
@@ -74,14 +72,14 @@
 }
 
 #eighteen {
-	background-color: #181820;
-	color: white;
+	background-color: #97C1EB;
+	color: black;
 	padding: 25px 50px 50px;
 }
 
 #seventeen {
-	background-color: #97C1EB;
-	color: black;
+	background-color: #181820;
+	color: white;
 	padding: 25px 50px 50px;
 }
 
@@ -97,6 +95,14 @@
 	padding: 25px 50px 50px;
 }
 
+.old-logo {
+	padding: 0px 30px;
+}
+
+.old-logo img {
+	margin: 30% 0px;
+}
+
 .sponsor-header {
 	color: #FBF3F0;
 }
@@ -110,7 +116,7 @@
 	margin: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
 	#history_title {
 		width: 230px;
 	}
@@ -121,10 +127,6 @@
 		margin-left: 0;
 		margin-right: 0;
 		margin-bottom: 20px;
-	}
-	.history_h2 {
-		border-bottom: solid #ffb718 3px;
-		margin-top: 0;
 	}
 	#intro_img {
 		padding-bottom: 30px;
@@ -138,5 +140,21 @@
 	#sixteen, 
 	#fifteen {
 		padding: 25px 20px;
+	}
+	.old-logo {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	#nineteen .year-title,
+	#eighteen .year-title,
+	#seventeen .year-title {
+		width: 90%;
+		height: auto;
+	}
+	#sixteen .year-title,
+	#fifteen .year-title {
+		height: 30px;
 	}
 }
