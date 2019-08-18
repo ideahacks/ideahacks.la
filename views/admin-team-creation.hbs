@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Parts - Admin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <!-- SOCKETIO -->
+    <script src='/socket.io/socket.io.js'></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/admin-team-creation.css' />
+
+
+    <!-- SCRIPTS -->
+    <script src='/js/admin-team-creation.js'></script>
+
+</head>
+<body>
+
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
+        <div class="banner text-center">
+            <h1>Team Creation</h1>
+        </div>
+
+        <div class="container">
+            <form class="create-new-team">
+                Team Number:
+                <input type="text" name="team-number">
+                <br>
+                Members: 
+                <p>Full names. Separate names with commas (no spaces after the commmas).</p>
+                <textarea id="members-list" name="members"></textarea>
+                <br>
+                <input type="submit" class="submit-button">
+            </form>
+        </div>
+        
+        
+
+    </div>
+</body>
+</html>

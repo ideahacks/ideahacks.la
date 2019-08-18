@@ -13,6 +13,16 @@ label {
 	display: none;
 }
 
+input[type="text"] {
+	font-weight: bold;
+	font-size: 36px;
+	color: #fbf3f0;
+	text-align: center;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
 .parts-title {
 	width: 150px;
 	margin: 20px;
@@ -57,15 +67,17 @@ label {
 .checkin {
 	background-color: rgb(42, 45, 78);
 	border-radius: 20px;
-	margin: 50px 450px;
+	margin: 50px 0px;
 	padding: 20px 0px;
+	height: 250px;
+	width: 350px;
 }
 
 #barcode-scan,
 #checkin-scan {
 	margin: auto;
 	margin-bottom: 50px;
-	background-color: #40698f;
+	background-color: rgb(42, 45, 78);
 	border-radius: 40px;
 	max-width: 991px;
 	min-height: 306px;
@@ -154,7 +166,8 @@ label {
 }
 
 #go-back button:hover,
-.success button:hover {
+.success button:hover,
+.submit-button:hover {
 	background-color: transparent;
 	color: #f2ccb5;
 	cursor: pointer;
