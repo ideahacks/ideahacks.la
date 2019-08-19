@@ -61,6 +61,7 @@ teamRouter.post("/api/teams", isAdmin, createTeam)
 function createTeam(req, res) {
 	// Check if given team has a teamNumber
 	let teamNumber = req.body.teamNumber
+
 	if (!teamNumber) {
 		return res.status(c.StatusInternalError).send("Missing team number!")
 	}

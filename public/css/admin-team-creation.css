@@ -3,14 +3,17 @@ form {
 }
 
 textarea {
+    color: black;
     width: 300px;
     height: 100px;
     outline: none;
     font-size: 18px;
     border: 1px solid gray;
+    margin-bottom: 5px;
 }
 
 input[type="text"] {
+    color: black;
     width: 50px;
     text-align: center;
     outline: none;
@@ -19,6 +22,13 @@ input[type="text"] {
 
 form p {
     font-size: 18px;
+}
+.container {
+    max-width: 800px;
+    background-color: rgb(42, 45, 78);
+    color: white;
+    padding: 30px;
+    border-radius: 50px;
 }
 
 .banner {
