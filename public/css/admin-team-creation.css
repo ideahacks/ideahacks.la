@@ -1,5 +1,5 @@
 form {
-    font-size: 24px;
+    font-size: 32px;
 }
 
 textarea {
@@ -21,7 +21,7 @@ input[type="text"] {
 }
 
 form p {
-    font-size: 18px;
+    font-size: 20px;
 }
 .container {
     max-width: 800px;

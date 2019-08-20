@@ -54,7 +54,6 @@ $(() => {
                 })
                     })
                     .catch((err) => {
-                        alert('here');
                         errorHandler(err);
                     })
             })
@@ -71,7 +70,7 @@ function errorHandler(err) {
 	setTimeout(location.reload.bind(location), 3000);
 
 	// Exits script
-	throw new Error(err.message);
+	throw new Error(err);
 }
 
 // successHandler is the logic that runs when everything doesn't blow up
