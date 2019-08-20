@@ -17,7 +17,7 @@
 
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
-    <link rel='stylesheet' href="../css/form.css" />
+    <link rel='stylesheet' href="../css/application.css" />
     <link rel='stylesheet' href='../css/dashboard-application.css' />
 
     <!-- SCRIPTS -->
@@ -28,9 +28,12 @@
     <!-- NAVBAR -->
     <div class='wrapper'>
         {{> navbar }}
-
-        <img id="img-header" src="/img/registration/app-header.png" />
-        <p class="deadline text-center">Applications due on December 1st</p>
+        <div class='top-box'></div>
+        <div class = 'application-form'>
+          <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
+          <img id="img-header" src="/img/registration/2020_registration.png" />
+        </div>
+        <!-- <p class="deadline text-center">Applications due on December 1st</p> -->
 
         {{#if user.hasApplication}}
 
@@ -50,7 +53,7 @@
                 <div class='row'>
                     <div class='header'>
                         <h3>Personal </h3>
-                        <img id="img-side" src="/img/registration/logo.png" />
+                        <!-- <img id="img-side" src="/img/registration/logo.png" /> -->
                     </div>
                     <fieldset>
                         <div class='form-group col-md-5'>
@@ -70,8 +73,11 @@
                             <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
                         </div>
                     </fieldset>
-                </div>
 
+                </div>
+                <div class='sublabel note'>
+                    <label>Note: All items with * are mandatory.</label>
+                </div>
                 <!-- EDUCATIONAL INFORMATION -->
                 <div class='row'>
                     <div class='header'>
@@ -86,10 +92,22 @@
                             <label>Major*</label>
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
                         </div>
+                        <div class='form-group col-md-5 col-xs-12'>
+                            <label>Year*</label>
+                            <select class='form-control' name='year'>
+                              <option {{#if user.yearFreshman}} selected{{/if}}>Freshman </option>
+                              <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore </option>
+                              <option {{#if user.yearJunior}} selected{{/if}}>Junior </option>
+                              <option {{#if user.yearSenior}} selected{{/if}}>Senior </option>
+                              <option {{#if user.yearHighSchool}} selected{{/if}}>High School </option>
+                              <option {{#if user.yearGraduate}} selected{{/if}}>Graduate </option>
+                              <option {{#if user.yearOther}} selected{{/if}}>Other </option>
+                        </select> </div>
+                        <!--
                         <div class='form-group col-md-5'>
                             <label>Year*</label>
                             <input class='form-control' type='text' name='year' placeholder='Year' value='{{user.year}}'>
-                        </div>
+                        </div> -->
                         <div class='form-group col-md-5'>
                             <label>GitHub</label>
                             <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
@@ -100,7 +118,7 @@
                         </div>
                         <div class='form-group col-md-5'>
                             <label>Resume Link</label>
-                            <input class='form-control' type='url' name='resume' placeholder='Link to Resume' value='{{user.resume}}'>
+                            <input class='form-control' type='file' name='resume' placeholder='Link to Resume' value='{{user.resume}}'>
                         </div>
                     </fieldset>
                 </div>
@@ -111,19 +129,43 @@
                         <h3>Team Information</h3>
                     </div>
                     <fieldset>
-                        <span class='row'>
-                            <div class='form-group col-xs-12 col-md-5'>
-                                <label>Do you have a team*</label>
+                        <!-- <span class='row'> -->
+                            <div class='form-group col-xs-10 col-md-5'>
+                                <label>Do you have a team?*</label>
                                 <select class='form-control' name='hasTeam'>
                                     <option {{#if user.hasATeam}} selected{{/if}}>YES </option>
                                     <option {{#if user.hasNoTeam}} selected{{/if}}>NO </option>
                                 </select> </div>
-                        </span> <span class='row'>
+                        <!-- </span>--> <span class='row'>
                             <div class='form-group col-xs-12'>
-                                <label>If so, what are your teammates' emails?</label>
-                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                                <label>If so, what are your teammates' names and emails?</label>
+                                <!-- <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
                                 <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
                                 <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
+                                <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'> -->
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name1' placeholder='name' value='{{user.teammateName1}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
+                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name2' placeholder='name' value='{{user.teammateName2}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
+                                <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name3' placeholder='name' value='{{user.teammateName3}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
+                                <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name4' placeholder='name' value='{{user.teammateName4}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
                                 <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'>
                             </div>
                         </span>
@@ -142,18 +184,30 @@
                             <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
                         </div>
                         <div class='form-group col-md-6 col-xs-10 short-answer'>
-                            <label>Why do you want to participate in IDEAHacks?</label>
+                            <label>Why do you want to participate in IDEAHacks?*</label>
                             <textarea class='form-control textarea' name='reasonForParticipation' rows='5'>{{user.reasonForParticipation}}</textarea>
                         </div>
                         <div class='form-group col-md-11 col-xs-10 short-answer'>
                             <label>Do you have an idea to hack for this year's theme?</label>
-                            <label class='sublabel'>It's okay if you don't yet!</label>
+                            <label class='sublabel'>(It's okay if you don't yet!)</label>
                             <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
                         </div>
+                        <span class='row'>
+                            <div class='form-group col-xs-10 col-md-5'>
+                                <label>Do you have any past hackathon experience?*</label>
+                                <select class='form-control' name='hasHackathonExperience'>
+                                    <option {{#if user.hasExperience}} selected{{/if}}>YES </option>
+                                    <option {{#if user.hasNoExperience}} selected{{/if}}>NO </option>
+                                </select> </div>
+                        </span> <span class='row'>
                         <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label style="text-align: left">Do you have any past hackathon experience?</label>
+                            <label style="text-align: left">If so, please share you experience with us.</label>
                             <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
                         </div>
+                        <!-- <div class='form-group col-md-11 col-xs-10 short-answer'>
+                            <label style="text-align: left">Do you have any past hackathon experience?</label>
+                            <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
+                        </div> -->
                         <div class='form-group col-md-11 col-xs-10 short-answer'>
                             <label>What parts would you like to see at IDEA Hacks this year?</label>
                             <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
@@ -171,6 +225,25 @@
                             <label>Any dietary restrictions or food allergies?</label>
                             <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
                         </div>
+                        <span class='row'>
+                            <div class='form-group col-xs-10 col-md-5'>
+                                <label>Will you need a travel reimbursement?</label>
+                                <select class='form-control' name='needsReimbursement'>
+                                    <option {{#if user.doesNeedReimbursement}} selected{{/if}}>YES </option>
+                                    <option {{#if user.doesNotNeedReimbursement}} selected{{/if}}>NO </option>
+                                </select> </div>
+                        </span>
+                        <span>
+                            <div class='form-group col-xs-10 col-md-5'>
+                                <label>Will you bring a vehicle and need parking?</label>
+                                <div class='sublabel'>
+                                    <label>(NOTE: Priority goes to non-UCLA students.)</label>
+                                </div>
+                                <select class='form-control' name='needsParking'>
+                                    <option {{#if user.doesNeedParking}} selected{{/if}}>YES </option>
+                                    <option {{#if user.doesNotNeedParking}} selected{{/if}}>NO </option>
+                                </select> </div>
+                        </span>
                         {{!--
                     <div class='form-group col-sm-10'>
                         <label>Will you need a travel reimbursement?</label>
@@ -194,6 +267,7 @@
                                 </label>
                         </div>
                     </div> --}}
+                    <span class='row'></span>
                         <div class='form-group col-md-3 col-xs-10'>
                             <label>Shirt Size</label>
                             <select class='form-control' name='shirtSize'>
@@ -202,6 +276,7 @@
                                 <option {{#if user.sizeLarge}} selected{{/if}}>L </option>
                                 <option {{#if user.sizeXLarge}} selected{{/if}}>XL </option>
                             </select> </div>
+
                     </fieldset>
                 </div>
                 <!-- BUTTONS -->
@@ -215,6 +290,7 @@
         {{/if}}
 
     </div>
+
 
 </body>
 </html>
