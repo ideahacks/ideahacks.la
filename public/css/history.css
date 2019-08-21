@@ -180,4 +180,7 @@
 		width: 90%;
 		height: auto;
 	}
+	.sponsor-img img {
+		width: 116px;
+	}
 }
