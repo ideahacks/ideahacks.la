@@ -107,6 +107,7 @@
 	color: #FBF3F0;
 	width: 90%;
 	float: none;
+	white-space: normal;
 }
 
 .history-year .btn:active {
@@ -114,7 +115,7 @@
 }
 
 .history-year .btn .glyphicon-chevron-down {
-	margin-left: 50%;
+	float: right;
 	transition: transform 0.3s ease;
 }
 
