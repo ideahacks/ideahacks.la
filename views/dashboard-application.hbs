@@ -29,9 +29,9 @@
     <div class='wrapper'>
         {{> navbar }}
         <div class='top-box'></div>
-        <div class = 'application-form'>
-          <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
-          <img id="img-header" src="/img/registration/2020_registration.png" />
+        <div class='application-form'>
+            <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
+            <img id="img-header" src="/img/registration/2020_registration.png" />
         </div>
         <!-- <p class="deadline text-center">Applications due on December 1st</p> -->
 
@@ -84,42 +84,57 @@
                         <h3>Education</h3>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-10'>
-                            <label>School*</label>
-                            <input class='form-control' type='text' name='school' placeholder='School' value='{{user.school}}'>
-                        </div>
+                      <div class='form-group col-md-5'>
+                          <label>School*</label>
+                          <select class='form-control' name='school'>
+                              <option {{#if user.UCLA}} selected{{/if}}>University of California, Los Angeles </option>
+                              <option {{#if user.UCB}} selected{{/if}}>University of California, Berkeley </option>
+                              <option {{#if user.UCD}} selected{{/if}}>University of California, Davis </option>
+                              <option {{#if user.UCI}} selected{{/if}}>University of California, Irvine </option>
+                              <option {{#if user.UCM}} selected{{/if}}>University of California, Merced </option>
+                              <option {{#if user.UCR}} selected{{/if}}>University of California, Riverside </option>
+                              <option {{#if user.UCSD}} selected{{/if}}>University of California, San Diego </option>
+                              <option {{#if user.UCSB}} selected{{/if}}>University of California, Santa Barbara </option>
+                              <option {{#if user.UCSC}} selected{{/if}}>University of California, Santa Cruz </option>
+                              <option {{#if user.USC}} selected{{/if}}>University of Southern California </option>
+                              <option {{#if user.schoolOther}} selected{{/if}}>Other </option>
+                          </select> </div>
+                      <div class='form-group col-md-5'>
+                              <label>GitHub</label>
+                              <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
+                      </div>
+                      <div class='form-group col-md-5'>
+                              <label>If Other, please specify.</label>
+                              <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
+                      </div>
+                      <div class='form-group col-md-5'>
+                          <label>LinkedIn</label>
+                          <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
+                      </div>
                         <div class='form-group col-md-5'>
                             <label>Major*</label>
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
-                        </div>
-                        <div class='form-group col-md-5 col-xs-12'>
-                            <label>Year*</label>
-                            <select class='form-control' name='year'>
-                              <option {{#if user.yearFreshman}} selected{{/if}}>Freshman </option>
-                              <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore </option>
-                              <option {{#if user.yearJunior}} selected{{/if}}>Junior </option>
-                              <option {{#if user.yearSenior}} selected{{/if}}>Senior </option>
-                              <option {{#if user.yearHighSchool}} selected{{/if}}>High School </option>
-                              <option {{#if user.yearGraduate}} selected{{/if}}>Graduate </option>
-                              <option {{#if user.yearOther}} selected{{/if}}>Other </option>
-                        </select> </div>
-                        <!--
-                        <div class='form-group col-md-5'>
-                            <label>Year*</label>
-                            <input class='form-control' type='text' name='year' placeholder='Year' value='{{user.year}}'>
-                        </div> -->
-                        <div class='form-group col-md-5'>
-                            <label>GitHub</label>
-                            <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>LinkedIn</label>
-                            <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
                         </div>
                         <div class='form-group col-md-5'>
                             <label>Resume Link</label>
                             <input class='form-control' type='file' name='resume' placeholder='Link to Resume' value='{{user.resume}}'>
                         </div>
+                        <div class='form-group col-md-5 col-xs-12'>
+                            <label>Year*</label>
+                            <select class='form-control' name='year'>
+                                <option {{#if user.yearFreshman}} selected{{/if}}>Freshman </option>
+                                <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore </option>
+                                <option {{#if user.yearJunior}} selected{{/if}}>Junior </option>
+                                <option {{#if user.yearSenior}} selected{{/if}}>Senior </option>
+                                <option {{#if user.yearHighSchool}} selected{{/if}}>High School </option>
+                                <option {{#if user.yearGraduate}} selected{{/if}}>Graduate </option>
+                                <option {{#if user.yearOther}} selected{{/if}}>Other </option>
+                            </select> </div>
+                        <!--
+                        <div class='form-group col-md-5'>
+                            <label>Year*</label>
+                            <input class='form-control' type='text' name='year' placeholder='Year' value='{{user.year}}'>
+                        </div> -->
                     </fieldset>
                 </div>
 
@@ -130,12 +145,12 @@
                     </div>
                     <fieldset>
                         <!-- <span class='row'> -->
-                            <div class='form-group col-xs-10 col-md-5'>
-                                <label>Do you have a team?*</label>
-                                <select class='form-control' name='hasTeam'>
-                                    <option {{#if user.hasATeam}} selected{{/if}}>YES </option>
-                                    <option {{#if user.hasNoTeam}} selected{{/if}}>NO </option>
-                                </select> </div>
+                        <div class='form-group col-xs-10 col-md-5'>
+                            <label>Do you have a team?*</label>
+                            <select class='form-control' name='hasTeam'>
+                                <option {{#if user.hasATeam}} selected{{/if}}>YES </option>
+                                <option {{#if user.hasNoTeam}} selected{{/if}}>NO </option>
+                            </select> </div>
                         <!-- </span>--> <span class='row'>
                             <div class='form-group col-xs-12'>
                                 <label>If so, what are your teammates' names and emails?</label>
@@ -200,18 +215,18 @@
                                     <option {{#if user.hasNoExperience}} selected{{/if}}>NO </option>
                                 </select> </div>
                         </span> <span class='row'>
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label style="text-align: left">If so, please share you experience with us.</label>
-                            <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
-                        </div>
-                        <!-- <div class='form-group col-md-11 col-xs-10 short-answer'>
+                            <div class='form-group col-md-11 col-xs-10 short-answer'>
+                                <label style="text-align: left">If so, please share you experience with us.</label>
+                                <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
+                            </div>
+                            <!-- <div class='form-group col-md-11 col-xs-10 short-answer'>
                             <label style="text-align: left">Do you have any past hackathon experience?</label>
                             <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
                         </div> -->
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label>What parts would you like to see at IDEA Hacks this year?</label>
-                            <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
-                        </div>
+                            <div class='form-group col-md-11 col-xs-10 short-answer'>
+                                <label>What parts would you like to see at IDEA Hacks this year?</label>
+                                <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
+                            </div>
                     </fieldset>
                 </div>
 
@@ -242,7 +257,8 @@
                                 <select class='form-control' name='needsParking'>
                                     <option {{#if user.doesNeedParking}} selected{{/if}}>YES </option>
                                     <option {{#if user.doesNotNeedParking}} selected{{/if}}>NO </option>
-                                </select> </div>
+                                </select>
+                            </div>
                         </span>
                         {{!--
                     <div class='form-group col-sm-10'>
@@ -267,7 +283,7 @@
                                 </label>
                         </div>
                     </div> --}}
-                    <span class='row'></span>
+                        <span class='row'></span>
                         <div class='form-group col-md-3 col-xs-10'>
                             <label>Shirt Size</label>
                             <select class='form-control' name='shirtSize'>

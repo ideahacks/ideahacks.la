@@ -1,15 +1,15 @@
 body {
 	/* background-color: #FBF3F0; */
-	background-color: #F2CCB5;
+	background-color: #f2ccb5;
 	text-transform: uppercase;
 }
 
 .application-form {
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 }
 
 .application-form label {
-	color: #2A2D4E;
+	color: #2a2d4e;
 }
 
 .note {
@@ -58,13 +58,13 @@ body {
 }
 
 .top-box {
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 	height: 130px;
 }
 
 /* image responsiveness */
 #img-header-top {
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 	width: 80%;
 	display: block;
 	/* margin-top: 130px; */
@@ -79,7 +79,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 50px;
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 }
 
 #img-side {
@@ -109,7 +109,7 @@ body {
 	display: inline-block;
 	border: none;
 	color: white;
-	background-color: #40698F;
+	background-color: #40698f;
 	padding: 12px 0px 9px 0px;
 	width: 250px;
 	height: 45px;
@@ -183,7 +183,7 @@ textarea {
 textarea::placeholder,
 input::placeholder {
 	text-transform: uppercase;
-	color: #FBF3F0 !important;
+	color: #fbf3f0 !important;
 }
 
 @media (max-width: 828px) {
@@ -206,8 +206,8 @@ input::placeholder {
 
 .buttons button {
 	margin: 0 60px;
-	background-color: #2A2D4E;
-	border-color: #2A2D4E;
+	background-color: #2a2d4e;
+	border-color: #2a2d4e;
 	width: 200px;
 }
 

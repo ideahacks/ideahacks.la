@@ -45,10 +45,10 @@ function getAndSendApplicationData(toggleHasApplication) {
 		shirtSize: $('select[name="shirtSize"]')
 			.find(":selected")
 			.text(),
-		needTravelReimbursement: $('select[name=needsReimbursement]')
+		needTravelReimbursement: $("select[name=needsReimbursement]")
 			.find(":selected")
 			.text(),
-		needParking: $('select[name=needsParking]')
+		needParking: $("select[name=needsParking]")
 			.find(":selected")
 			.text(),
 		hasApplication: toggleHasApplication

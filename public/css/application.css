@@ -27,6 +27,14 @@
 	margin-bottom: 0px;
 }
 
+.ideahacks-form select {
+	border-radius: 12px;
+	background-color: white;
+	width: 80%;
+	margin-bottom: 0px;
+
+}
+
 .teammate-name {
 	width: 90%;
 	border-radius: 12px;
