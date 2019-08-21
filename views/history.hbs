@@ -10,6 +10,7 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='/js/history.js'></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,7 +41,7 @@
         </div>
 
         <!-- 2019 -->
-        <div id="nineteen">
+        <div id="nineteen" class="history-year clearfix">
             <div class="text-center">
                 <img class="year-title" src="/img/history/2019 - travel upgrade.png" alt="2019 - Travel Upgrade">
             </div>
@@ -71,26 +72,37 @@
                         Project: With a special glove, users can use sign language to change the color of an LED.<br></p>
                 </div>
             </div>
-            <div class='container'>
-                <div class="col-sm-12" style='display: block;'>
-                    <h2 class="sponsor-header">2018 SPONSORS</h2>
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2019's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
                 </div>
-            </div>
-            <div class="sponsor_img text-center container">
-                <img src="/img/history/att.png" alt="at&t_logo" width="20%">
-                <img src="/img/history/tractionlabs.png" alt="traction_labs_logo" width="20%">
-                <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
-                <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
-                <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
-                <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
-                <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
-                <img src="/img/history/google.png" alt="google_logo" width="20%">
-                <img src="/img/history/cypress.png" alt="cypress_logo" width="20%">
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
+                        <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
+                        <img src="/img/history/microduino.png" alt="microduino_logo" width="20%">
+                        <img src="/img/history/tgif.png" alt="the_green_initiative_logo" width="20%">
+                        <img src="/img/history/google.png" alt="google_logo" width="20%">
+                        <img src="/img/history/qualcomm.png" alt="qualcomm_logo" width="20%">
+                        <img src="/img/history/bellapita.png" alt="bella_pita_logo" width="20%">
+                        <img src="/img/history/mamma_chia.png" alt="mamma_chia_logo" width="20%">
+                        <img src="/img/history/rhythm.png" alt="rhythm_logo" width="20%">
+                        <img src="/img/history/amplify.png" alt="amplify_logo" width="20%">
+                        <img src="/img/history/coffee.png" alt="better_than_coffee_logo" width="20%">
+                        <img src="/img/history/800.png" alt="800_logo" width="20%">
+                        <img src="/img/history/hci.png" alt="UCLA_healthy_campus_logo" width="20%">
+                        <img src="/img/history/yerba.png" alt="guayaki_logo" width="20%">
+                        <img src="/img/history/EPIC.png" alt="epic_logo" width="20%">
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- 2018 -->
-        <div id="eighteen">
+        <div id="eighteen" class="history-year clearfix">
             <div class="text-center">
                 <img class="year-title" src="/img/history/2018 - home automation.png" alt="2018 - Home Automation">
             </div>
@@ -118,26 +130,31 @@
                         Team: Chris Hailey, Ishan Shah, Joel Joseph, Adithya Bellathur, Janeline Wong<br><br>
                         Project: Using ultra sonic sensors, capacitive touch and facial recognition to reduce the likely hood of cooking fires.</div>
             </div>
-            <div class='container'>
-                <div class="col-sm-12" style='display: block;'>
-                    <h2 class="sponsor-header">2018 SPONSORS</h2>
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2018's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
                 </div>
-            </div>
-            <div class="sponsor_img text-center container">
-                <img src="/img/history/att.png" alt="at&t_logo" width="20%">
-                <img src="/img/history/tractionlabs.png" alt="traction_labs_logo" width="20%">
-                <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
-                <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
-                <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
-                <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
-                <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
-                <img src="/img/history/google.png" alt="google_logo" width="20%">
-                <img src="/img/history/cypress.png" alt="cypress_logo" width="20%">
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img src="/img/history/att.png" alt="at&t_logo" width="20%">
+                        <img src="/img/history/tractionlabs.png" alt="traction_labs_logo" width="20%">
+                        <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
+                        <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
+                        <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
+                        <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
+                        <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
+                        <img src="/img/history/google.png" alt="google_logo" width="20%">
+                        <img src="/img/history/cypress.png" alt="cypress_logo" width="20%">
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- 2017 -->
-        <div id="seventeen">
+        <div id="seventeen" class="history-year clearfix">
             <div class="text-center">
                 <img class="year-title" src="/img/history/2017 - sports tech.png" alt="2017 - Sports Technology">
             </div>
@@ -167,25 +184,32 @@
                         Project: Spiro is a device designed to help people better manage anxiety. Using an elastic chestband to alert you to irregular breathing potentially, the paired app and smartwatch guides the user through a self-regulation breathing exercise. Using customizable colors and soft lighting, the device helps a user take a step back from their situation and just breathe.
                 </div>
             </div>
-            <div class="col-sm-12">
-                <h2 class="sponsor-header">2017 SPONSORS</h2>
-            </div>
-            <div class="sponsor_img text-center">
-                <img src="/img/history/xilinx.png" alt="xilinx_logo" width="20%">
-                <img src="/img/history/microduino.png" alt="microduino_logo" width="20%">
-                <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
-                <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
-                <img src="/img/history/att.png" alt="at&t_logo" width="20%">
-                <img src="/img/history/namecheap-logo.png" alt="namecheap_logo" width="10%">
-                <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
-                <img src="/img/history/newmatter.png" alt="new_matter_logo" width="20%">
-                <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
-                <img src="/img/history/mulesoft.png" alt="mulesoft_logo" width="20%">
-                <img src="/img/history/qualcomm.png" alt="qualcomm_logo" width="20%">
-                <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
-                <img src="/img/history/atmel.png" alt="atmel_logo" width="20%">
-                <img src="/img/history/Altera.png" alt="altera_logo" width="20%">
-                <img src="/img/history/make-school.png" alt="make_school_logo" width="20%">
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2017's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img src="/img/history/xilinx.png" alt="xilinx_logo" width="20%">
+                        <img src="/img/history/microduino.png" alt="microduino_logo" width="20%">
+                        <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
+                        <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
+                        <img src="/img/history/att.png" alt="at&t_logo" width="20%">
+                        <img src="/img/history/namecheap-logo.png" alt="namecheap_logo" width="10%">
+                        <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
+                        <img src="/img/history/newmatter.png" alt="new_matter_logo" width="20%">
+                        <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
+                        <img src="/img/history/mulesoft.png" alt="mulesoft_logo" width="20%">
+                        <img src="/img/history/qualcomm.png" alt="qualcomm_logo" width="20%">
+                        <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
+                        <img src="/img/history/atmel.png" alt="atmel_logo" width="20%">
+                        <img src="/img/history/Altera.png" alt="altera_logo" width="20%">
+                        <img src="/img/history/make-school.png" alt="make_school_logo" width="20%">
+                    </div>
+                </div>
             </div>
         </div>
 

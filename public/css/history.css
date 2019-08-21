@@ -71,10 +71,18 @@
 	padding: 25px 50px 50px;
 }
 
+#nineteen .btn {
+	background: #FFB718;
+}
+
 #eighteen {
 	background-color: #97C1EB;
 	color: black;
 	padding: 25px 50px 50px;
+}
+
+#eighteen .btn {
+	background: #0B214B;
 }
 
 #seventeen {
@@ -83,17 +91,60 @@
 	padding: 25px 50px 50px;
 }
 
+#seventeen .btn {
+	background: #3185C0;
+}
+
 .old-logo {
 	padding: 0px 30px;
 }
 
-.sponsor-header {
+.history-year .btn {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 25px;
+	text-align: left;
 	color: #FBF3F0;
+	width: 90%;
+	float: none;
 }
 
-.sponsor_img img {
+.history-year .btn:active {
+	box-shadow: none;
+}
+
+.history-year .btn .glyphicon-chevron-down {
+	margin-left: 50%;
+	transition: transform 0.3s ease;
+}
+
+.history-year .btn .glyphicon-chevron-down::before {
+	vertical-align: middle;
+}
+
+.chevron-rotate {
+	transform: rotate(180deg);
+}
+
+.sponsor-img {
+	display: none;
+}
+
+.sponsor-img img {
 	display: inline-block;
 	margin: 10px;
+}
+
+.sponsor-img div {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 0;
+	background: rgba(251, 243, 240, 0.9);
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.sponsor-visible {
+	display: initial;
 }
 
 @media (max-width: 992px) {
@@ -114,9 +165,7 @@
 	.history_p {
 		padding-bottom: 20px;
 	}
-	#nineteen, 
-	#eighteen, 
-	#seventeen {
+	.history-year {
 		padding: 25px 20px;
 	}
 	.old-logo {
@@ -125,9 +174,7 @@
 }
 
 @media (max-width: 768px) {
-	#nineteen .year-title,
-	#eighteen .year-title,
-	#seventeen .year-title {
+	.history-year .year-title {
 		width: 90%;
 		height: auto;
 	}
