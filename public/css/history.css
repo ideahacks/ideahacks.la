@@ -30,7 +30,8 @@
 }
 
 .places img {
-	padding-top: 15px;
+	margin-top: 15px;
+	border-radius: 10%;
 }
 
 .place {
