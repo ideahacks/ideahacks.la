@@ -225,16 +225,16 @@ input::placeholder {
 }
 
 .file-upload {
-    background-color: #2A2D4E;
-    display: inline-block;
-    padding: 8px 12px;
-    cursor: pointer;
-		border-radius: 12px;
+	background-color: #2a2d4e;
+	display: inline-block;
+	padding: 8px 12px;
+	cursor: pointer;
+	border-radius: 12px;
 }
 
 .file-upload:hover {
 	background-color: transparent;
-	 border-color: #2A2D4E;
+	border-color: #2a2d4e;
 }
 
 @media (max-width: 583px) {
@@ -271,7 +271,7 @@ input::placeholder {
 	margin-left: 5px;
 	margin-bottom: 5px;
 	/* color: #40698f; */
-	color: #2A2D4E;
+	color: #2a2d4e;
 }
 
 /* INPUT */
@@ -289,7 +289,6 @@ input::placeholder {
 	background-color: white;
 	width: 80%;
 	margin-bottom: 0px;
-
 }
 
 .ideahacks-form input::placeholder {

@@ -14,9 +14,10 @@ function getAndSendApplicationData(toggleHasApplication) {
 		if (el.value !== "") teammateEmails.push(el.value)
 	})
 	let school_entry = $('input[name="school_other"]').val()
-	if (school_entry == "") school_entry = $('input[name="school"]')
-		.find(":selected")
-		.text()
+	if (school_entry == "")
+		school_entry = $('input[name="school"]')
+			.find(":selected")
+			.text()
 	let applicationData = {
 		firstName: $('input[name="firstName"]').val(),
 		lastName: $('input[name="lastName"]').val(),
