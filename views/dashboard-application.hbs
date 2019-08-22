@@ -17,7 +17,7 @@
 
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
-    <link rel='stylesheet' href="../css/application.css" />
+    <!-- <link rel='stylesheet' href="../css/application.css" /> -->
     <link rel='stylesheet' href='../css/dashboard-application.css' />
 
     <!-- SCRIPTS -->
@@ -116,8 +116,16 @@
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
                         </div>
                         <div class='form-group col-md-5'>
-                            <label>Resume Link</label>
-                            <input class='form-control' type='file' name='resume' placeholder='Link to Resume' value='{{user.resume}}'>
+                            <label>Resume*</label>
+                            <span class="row"></span>
+                            <!-- <label class="file-upload" style="color: white; margin-left: 15px;">
+                                <a href= "https://www.google.com" target = "_blank">
+                                UPLOAD YOUR FILE HERE
+                              </a>
+                                </label> -->
+                                <a href = "https://www.google.com"><button class='file-upload' style = "margin-left: 15px">
+                                  UPLOAD YOUR FILE HERE </button></a>
+                            <!-- <input class='form-control' type='file' name='resume' placeholder='Link to Resume' value='{{user.resume}}'> -->
                         </div>
                         <div class='form-group col-md-5 col-xs-12'>
                             <label>Year*</label>
@@ -241,7 +249,7 @@
                             <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
                         </div>
                         <span class='row'>
-                            <div class='form-group col-xs-10 col-md-5'>
+                            <div class='form-group col-xs-10 col-md-6'>
                                 <label>Will you need a travel reimbursement?</label>
                                 <select class='form-control' name='needsReimbursement'>
                                     <option {{#if user.doesNeedReimbursement}} selected{{/if}}>YES </option>
@@ -249,7 +257,7 @@
                                 </select> </div>
                         </span>
                         <span>
-                            <div class='form-group col-xs-10 col-md-5'>
+                            <div class='form-group col-xs-10 col-md-6'>
                                 <label>Will you bring a vehicle and need parking?</label>
                                 <div class='sublabel'>
                                     <label>(NOTE: Priority goes to non-UCLA students.)</label>

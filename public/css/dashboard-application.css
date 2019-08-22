@@ -12,6 +12,15 @@ body {
 	color: #2a2d4e;
 }
 
+.application-form a {
+	color: white;
+	text-decoration: none;
+}
+
+.application-form a:hover {
+	color: #2a2d4e;
+}
+
 .note {
 	text-align: right;
 	padding-right: 50px;
@@ -215,6 +224,19 @@ input::placeholder {
 	background-color: transparent;
 }
 
+.file-upload {
+    background-color: #2A2D4E;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+		border-radius: 12px;
+}
+
+.file-upload:hover {
+	background-color: transparent;
+	 border-color: #2A2D4E;
+}
+
 @media (max-width: 583px) {
 	.buttons {
 		padding: 0 15px;
@@ -230,4 +252,46 @@ input::placeholder {
 .submit-message {
 	text-align: center;
 	padding: 0 0 50px;
+}
+
+/* GLOBAL STYLESHEET: FORM.CSS
+ * Global stylesheet for form elements
+ */
+
+.ideahacks-form {
+	font-family: "Roboto Condensed";
+}
+
+/* LABEL */
+.ideahacks-form label {
+	text-align: center;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	/* color: #40698f; */
+	color: #2A2D4E;
+}
+
+/* INPUT */
+.ideahacks-form input,
+.ideahacks-form input:focus,
+.ideahacks-form input[readonly] {
+	border-radius: 12px;
+	background-color: white;
+	width: 80%;
+	margin-bottom: 0px;
+}
+
+.ideahacks-form select {
+	border-radius: 12px;
+	background-color: white;
+	width: 80%;
+	margin-bottom: 0px;
+
+}
+
+.ideahacks-form input::placeholder {
+	color: #f2ccb5;
 }

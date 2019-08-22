@@ -35,11 +35,16 @@
 
 }
 
-.teammate-name {
-	width: 90%;
-	border-radius: 12px;
-	background-color: white;
-	margin-bottom: 0px;
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+    background-color: #2A2D4E;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+		border-radius: 12px;
 }
 
 .ideahacks-form input::placeholder {
