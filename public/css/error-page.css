@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:700);
 .idea_hacks_banner {
-	font-family: "Source Sans Pro", sans-serif;
-	color: #ffc301;
+	font-family: "Raleway", sans-serif;
+	color: #d95b5f;
 	padding-left: 25px;
 	width: 25%;
 	text-align: center;
@@ -15,18 +16,21 @@
 	text-align: center;
 	font-size: 460%;
 	font-weight: bold;
-	color: #ffc301;
+	color: #53aad4;
 }
 
 .return_main_page_button {
 	text-align: center;
-	font-size: 200%;
-	color: #ffffff;
-	background-color: #5599cd;
-	padding-left: 50px;
-	padding-right: 50px;
+	font-size: 100%;
+	color: #d95b5f;
+	background-color: #312740;
+	padding-left: 20px;
+	padding-right: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	border-radius: 40px;
+	border-width: 3px;
+	border-color: #d95b5f;
 }
 
 .return_main_page_link {
@@ -35,8 +39,8 @@
 }
 
 body {
-	font-family: "Source Sans Pro", sans-serif;
-	background-color: #10253f;
+	font-family: "Raleway", sans-serif;
+	background-color: #312740;
 }
 
 .messages {
