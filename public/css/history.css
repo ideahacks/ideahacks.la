@@ -24,6 +24,10 @@
 	text-align: justify;
 }
 
+.places {
+	padding: 20px 0;
+}
+
 .places img {
 	margin-top: 15px;
 }
@@ -38,8 +42,10 @@
 	margin: 10px 0px;
 }
 
-.places {
-	padding: 20px 0;
+.place p {
+	font-size: 15px;
+	text-align: justify;
+	padding-top: 10px;
 }
 
 .year-title {
