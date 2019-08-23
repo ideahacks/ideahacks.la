@@ -3,14 +3,9 @@
 	background-color: #FBF3F0;
 }
 
-.wrapper h2 {
-	font-size: 25px;
-	margin-top: 10px;
-}
-
-#intro {
-	background-color: #dd8064;
-	background-size: auto;
+#history_title {
+	width: 22%;
+	margin-bottom: 25px;
 }
 
 #intro_img {
@@ -31,30 +26,16 @@
 
 .places img {
 	margin-top: 15px;
-	border-radius: 10%;
+}
+
+.places h2 {
+	font-size: 20px;
+	margin-top: 10px;
+	padding: 0 15px;
 }
 
 .place {
 	margin: 10px 0px;
-}
-
-.history_h4 {
-	font-weight: bold;
-	font-weight: 20px;
-	text-align: center;
-	margin-top: 10px;
-}
-
-.history_p {
-	font-size: 20px;
-	font-size: 15px;
-	text-align: justify;
-	padding-top: 10px;
-}
-
-#history_title {
-	width: 22%;
-	margin-bottom: 25px;
 }
 
 .places {
@@ -66,10 +47,13 @@
 	margin: 10px 0px 20px 0px;
 }
 
+.history-year {
+	padding: 25px 50px 50px;
+}
+
 #nineteen {
 	background-color: #DD8064;
 	color: white;
-	padding: 25px 50px 50px;
 }
 
 #nineteen .btn {
@@ -79,7 +63,6 @@
 #eighteen {
 	background-color: #97C1EB;
 	color: black;
-	padding: 25px 50px 50px;
 }
 
 #eighteen .btn {
@@ -89,7 +72,6 @@
 #seventeen {
 	background-color: #181820;
 	color: white;
-	padding: 25px 50px 50px;
 }
 
 #seventeen .btn {
@@ -102,7 +84,7 @@
 
 .history-year .btn {
 	font-family: "Roboto Condensed", sans-serif;
-	font-size: 25px;
+	font-size: 20px;
 	text-align: left;
 	color: #FBF3F0;
 	width: 90%;
@@ -150,11 +132,11 @@
 }
 
 @media (max-width: 992px) {
+	.wrapper {
+		padding-top: 100px;
+	}
 	#history_title {
 		width: 230px;
-	}
-	.body {
-		padding: 0 35px;
 	}
 	.introduction {
 		margin-left: 0;
@@ -162,10 +144,7 @@
 		margin-bottom: 20px;
 	}
 	#intro_img {
-		padding-bottom: 30px;
-	}
-	.history_p {
-		padding-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	.history-year {
 		padding: 25px 20px;
