@@ -74,11 +74,11 @@ module.exports = [
 				picturePath: "/img/team/Jack_Bailey.jpg"
 			},
 			{
-				name: "Sharon Cha", 
+				name: "Sharon Cha",
 				picturePath: "/img/team/Sharon_Cha.jpg"
 			},
 			{
-				name: "Brittany Ham", 
+				name: "Brittany Ham",
 				picturePath: "/img/team/Brittany_Ham.jpg"
 			}
 		]
@@ -90,50 +90,50 @@ module.exports = [
 		teammates: [
 			{
 				name: "Tao Lu",
-				picturePath: "/img/team/Tao_Lu.jpg",
+				picturePath: "/img/team/Tao_Lu.jpg"
 			},
 			{
 				name: "Peter Oh",
-				picturePath: "/img/team/Peter_Oh.jpg",
-			}, 
+				picturePath: "/img/team/Peter_Oh.jpg"
+			},
 			{
-				name: "Bruno Bombassaro", 
+				name: "Bruno Bombassaro",
 				picturePath: "/img/team/Bruno_Bombassaro.jpg"
 			},
 			{
-				name: "Henry Kou", 
+				name: "Henry Kou",
 				picturePath: "/img/team/Henry_Kou.jpg"
 			},
 			{
-				name: "Justin Jianto", 
+				name: "Justin Jianto",
 				picturePath: "/img/team/Justin_Jianto.jpg"
 			},
 			{
-				name: "Kenny Chan", 
+				name: "Kenny Chan",
 				picturePath: "/img/team/Kenny_Chan.jpg"
 			},
 			{
-				name: "Grace Tang", 
+				name: "Grace Tang",
 				picturePath: "/img/team/Grace_Tang.jpg"
 			},
 			{
-				name: "David Baum", 
+				name: "David Baum",
 				picturePath: "/img/team/David_Baum.jpg"
 			},
 			{
-				name: "Hayato Kato", 
+				name: "Hayato Kato",
 				picturePath: "/img/team/Hayato_Kato.jpg"
-			}, 
+			},
 			{
-				name: "Kevin Chen", 
+				name: "Kevin Chen",
 				picturePath: "/img/team/Kevin_Chen.jpg"
-			}, 
+			},
 			{
-				name: "Jonathan Nguyen", 
+				name: "Jonathan Nguyen",
 				picturePath: "/img/team/Jonathan_Nguyen.jpg"
-			}, 
+			},
 			{
-				name: "Ivan Gomez Siu", 
+				name: "Ivan Gomez Siu",
 				picturePath: "/img/team/Ivan_Gomez_Siu.jpg"
 			}
 		]
@@ -144,73 +144,73 @@ module.exports = [
 		teamLead: "Roselyn Lee",
 		teammates: [
 			{
-				name: "Roselyn Lee", 
+				name: "Roselyn Lee",
 				picturePath: "/img/team/Roselyn_Lee.jpg"
 			},
 			{
-				name: "Andrew Li", 
+				name: "Andrew Li",
 				picturePath: "/img/team/Andrew_Li.jpg"
 			},
 			{
-				name: "Lucas Wolter", 
+				name: "Lucas Wolter",
 				picturePath: "/img/team/Lucas_Wolter.jpg"
 			},
 			{
-				name: "Michael Wang", 
+				name: "Michael Wang",
 				picturePath: "/img/team/Michael_Wang.jpg"
 			},
 			{
-				name: "Jasanpreet Pandher", 
+				name: "Jasanpreet Pandher",
 				picturePath: "/img/team/Jasanpreet_Pandher.jpg"
 			},
 			{
-				name: "Christian Yu", 
+				name: "Christian Yu",
 				picturePath: "/img/team/Christian_Yu.jpg"
-			}, 
+			},
 			{
-				name: "Taylor Keppel", 
+				name: "Taylor Keppel",
 				picturePath: "/img/team/Taylor_Keppel.jpg"
 			},
 			{
-				name: "Jasmine Trinh", 
+				name: "Jasmine Trinh",
 				picturePath: "/img/team/Jamine_Trinh.jpg"
 			},
 			{
-				name: "Eric Zhang", 
+				name: "Eric Zhang",
 				picturePath: "/img/team/Eric_Zhang.jpg"
 			},
 			{
-				name: "David Kao", 
+				name: "David Kao",
 				picturePath: "/img/team/David_Kao.jpg"
 			},
 			{
-				name: "Raj Intwala", 
+				name: "Raj Intwala",
 				picturePath: "/img/team/Raj_Intwala.jpg"
 			},
 			{
-				name: "Soumya Uppuganti", 
+				name: "Soumya Uppuganti",
 				picturePath: "/img/team/Soumya_Uppunganti.jpg"
 			},
 			{
-				name: "Rohith Kodukula", 
+				name: "Rohith Kodukula",
 				picturePath: "/img/team/Rohith_Kodukula.jpg"
 			},
 			{
-				name: "Vince Wu", 
+				name: "Vince Wu",
 				picturePath: "/img/team/Vince_Wu.jpg"
 			},
 			{
-				name: "Jay Park", 
+				name: "Jay Park",
 				picturePath: "/img/team/Jay_Park.jpg"
 			},
 			{
-				name: "Darren Ait Kaci Azzou", 
+				name: "Darren Ait Kaci Azzou",
 				picturePath: "/img/team/Darren_Ait_Kaci_Azzou.jpg"
 			},
 			{
-				name: "Alethea Sung Miller", 
+				name: "Alethea Sung Miller",
 				picturePath: "/img/team/Alethea_Sung_Miller.jpg"
-			}	
+			}
 		]
 	},
 	{
@@ -219,23 +219,23 @@ module.exports = [
 		teamLead: "Albert Han",
 		teammates: [
 			{
-				name: "Albert Han", 
+				name: "Albert Han",
 				picturePath: "/img/team/Albert_Han.jpg"
 			},
 			{
-				name: "Beryl Sui", 
+				name: "Beryl Sui",
 				picturePath: "/img/team/Beryl_Sui.jpg"
 			},
 			{
-				name: "Evelyn Chiappe", 
+				name: "Evelyn Chiappe",
 				picturePath: "/img/team/Evelyn_Chiappe.jgp"
 			},
 			{
-				name: "Ryan Lin", 
+				name: "Ryan Lin",
 				picturePath: "/img/team/Ryan_Lin.jpg"
 			},
 			{
-				name: "Claire Ko", 
+				name: "Claire Ko",
 				picturePath: "/img/team/Claire_Ko.jpg"
 			}
 		]

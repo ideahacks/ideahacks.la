@@ -5,7 +5,7 @@ body {
 .header {
 	margin: 70px 0px 15px 0px;
 	display: block;
-	max-height: 60px; 
+	max-height: 60px;
 	display: inline-block;
 }
 
@@ -28,7 +28,7 @@ p {
 .Title {
 	margin: 130px 0px 15px 0px;
 	display: block;
-	max-height: 80px; 
+	max-height: 80px;
 	display: inline-block;
 }
 
