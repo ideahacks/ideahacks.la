@@ -9,6 +9,8 @@ const postApplication = (req, res) => {
 	let oldHasApplicationStatus = req.user.hasApplication
 	for (let key in req.body) {
 		req.user[key] = req.body[key]
+		console.log(req.user[key])
+		console.log(req.body[key])
 	}
 
 	// process hasTeam
