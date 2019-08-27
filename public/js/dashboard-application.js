@@ -18,6 +18,14 @@ function getAndSendApplicationData(toggleHasApplication) {
 		school_entry = $('input[name="school"]')
 			.find(":selected")
 			.text()
+	// check that mandatory fields filled out
+	if ($('input[name="firstName"]').val() == "" || $('input[name="lastName"]').val() == "" || $('input[name="phone"]').val() == "" ||
+ 		$('input[name="major"]').val() == "" || $('textarea[name="skillsAndExperience"]').val() == "" ||
+			$('textarea[name="reasonForParticipation"]').val() == "") {
+				alert("Please fill out required fields before submitting application.")
+				return false
+			}
+
 	let applicationData = {
 		firstName: $('input[name="firstName"]').val(),
 		lastName: $('input[name="lastName"]').val(),

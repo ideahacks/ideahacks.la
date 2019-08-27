@@ -100,20 +100,32 @@
                                 <option {{#if user.schoolOther}} selected{{/if}}>Other </option>
                             </select> </div>
                         <div class='form-group col-md-5'>
-                            <label>GitHub</label>
-                            <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>If Other, please specify.</label>
-                            <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>LinkedIn</label>
-                            <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
+                                <label>If Other, please specify.</label>
+                                <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
                         </div>
                         <div class='form-group col-md-5'>
                             <label>Major*</label>
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
+                        </div>
+                        <div class='form-group col-md-5 col-xs-12'>
+                            <label>Year*</label>
+                            <select class='form-control' name='year'>
+                                <option {{#if user.yearFreshman}} selected{{/if}}>Freshman </option>
+                                <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore </option>
+                                <option {{#if user.yearJunior}} selected{{/if}}>Junior </option>
+                                <option {{#if user.yearSenior}} selected{{/if}}>Senior </option>
+                                <option {{#if user.yearHighSchool}} selected{{/if}}>High School </option>
+                                <option {{#if user.yearGraduate}} selected{{/if}}>Graduate </option>
+                                <option {{#if user.yearOther}} selected{{/if}}>Other </option>
+                          </select> </div>
+                        <div class='form-group col-md-5'>
+                            <label>GitHub</label>
+                            <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
+                        </div>
+
+                        <div class='form-group col-md-5'>
+                            <label>LinkedIn</label>
+                            <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
                         </div>
                         <div class='form-group col-md-5'>
                             <label>Resume*</label>
@@ -127,17 +139,7 @@
                                     UPLOAD YOUR FILE HERE </button></a>
                             <!-- <input class='form-control' type='file' name='resume' placeholder='Link to Resume' value='{{user.resume}}'> -->
                         </div>
-                        <div class='form-group col-md-5 col-xs-12'>
-                            <label>Year*</label>
-                            <select class='form-control' name='year'>
-                                <option {{#if user.yearFreshman}} selected{{/if}}>Freshman </option>
-                                <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore </option>
-                                <option {{#if user.yearJunior}} selected{{/if}}>Junior </option>
-                                <option {{#if user.yearSenior}} selected{{/if}}>Senior </option>
-                                <option {{#if user.yearHighSchool}} selected{{/if}}>High School </option>
-                                <option {{#if user.yearGraduate}} selected{{/if}}>Graduate </option>
-                                <option {{#if user.yearOther}} selected{{/if}}>Other </option>
-                            </select> </div>
+
                         <!--
                         <div class='form-group col-md-5'>
                             <label>Year*</label>
@@ -304,7 +306,7 @@
                     </fieldset>
                 </div>
                 <!-- BUTTONS -->
-                <div class='buttons row col-xs-8'>
+                <div class='buttons row'>
                     <!--<button class='save-application'>SAVE</button> -->
                     <button class='submit-application'>SUBMIT</button>
                 </div>
