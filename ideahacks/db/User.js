@@ -19,7 +19,7 @@ const UserSchema = new Schema({
 	teammates_names: { type: [String], default: [] },
 	foodRestrictions: { type: String, default: "" },
 	skillsAndExperience: { type: String, default: "" },
-	hasPastHackathonExperience: {type: Boolean, default: false},
+	hasPastHackathonExperience: { type: Boolean, default: false },
 	pastHackathonExperience: { type: String, default: "" },
 	reasonForParticipation: { type: String, default: "" },
 	themeIdea: { type: String, default: "" },
