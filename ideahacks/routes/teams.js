@@ -127,4 +127,16 @@ function editTeam(req, res) {
 		})
 }
 
+teamRouter.delete("/api/teams", isAdmin, deleteTeam)
+
+function deleteTeam(req, res) {
+	Team.deleteOne( { teamNumber: req.body.teamNumber })
+		.then(() => {
+			return res.send(c.MessageOK);
+		})
+		.catch(err => {
+			return res.status(c.StatusInternalError).send(err);
+		})
+}
+
 module.exports = teamRouter

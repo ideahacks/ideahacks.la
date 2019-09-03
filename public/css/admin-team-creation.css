@@ -1,45 +1,47 @@
 form {
-    font-size: 32px;
+	font-size: 32px;
 }
 
 textarea {
-    color: black;
-    width: 300px;
-    height: 100px;
-    outline: none;
-    font-size: 18px;
-    border: 1px solid gray;
-    margin-bottom: 5px;
+	color: black;
+	width: 300px;
+	height: 100px;
+	outline: none;
+	font-size: 18px;
+	border: 1px solid gray;
+	margin-bottom: 5px;
 }
 
 input[type="text"] {
-    color: black;
-    width: 50px;
-    text-align: center;
-    outline: none;
-    border: 1px solid grey;
+	color: black;
+	width: 50px;
+	text-align: center;
+	outline: none;
+	border: 1px solid grey;
 }
 
 form p {
-    font-size: 20px;
+	font-size: 20px;
 }
-.container {
-    max-width: 800px;
-    background-color: rgb(42, 45, 78);
-    color: white;
-    padding: 30px;
-    border-radius: 50px;
+
+#team-input {
+	max-width: 400px;
+	margin: auto;
+	background-color: rgb(42, 45, 78);
+	color: white;
+	padding: 30px;
+	border-radius: 50px;
 }
 
 .banner {
-    margin-top: 116px;
+	margin-top: 116px;
 }
 
 .banner h1 {
-    font-size: 54px;
-    font-weight: bolder;
-    color: rgb(42, 45, 78);
-    margin-bottom: 50px;
+	font-size: 54px;
+	font-weight: bolder;
+	color: rgb(42, 45, 78);
+	margin-bottom: 50px;
 }
 
 .submit-button {
@@ -49,9 +51,9 @@ form p {
 	font-size: 24px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 	outline: none;
-    color: white;
-    width: 100px;
-    height: 50px;
+	color: white;
+	width: 100px;
+	height: 50px;
 }
 
 .submit-button:hover {

@@ -37,19 +37,26 @@
         </div>
 
         <div class="container text-center">
-            <form class="create-new-team" onsubmit="return false;">
-                Team Number:
-                <input type="text" name="team-number">
-                <br>
-                Members: 
-                <p>Enter emails here. Separate them with commas (no spaces after the commas).</p>
-                <textarea id="members-list" name="members"></textarea>
-                <br>
-                <input type="submit" class="submit-button">
-            </form>
+            <div id="team-input">
+                <form id="team-submit" onsubmit="return false;">
+                    Team Number:
+                    <input type="text" name="team-number" required>
+                </form>
+            </div>
+                
+            <div id="users-input" style="display: none;">
+                 <form onsubmit="return false;">
+                    Members:
+                    <p>Enter emails here. Separate them with commas (no spaces after the commas).</p>
+                    <textarea id="members-list" name="members" required></textarea>
+                    <br>
+                    <input type="submit" class="submit-button">
+                </form>
+            </div>
+            
         </div>
-        
-        
+
+
 
     </div>
 </body>
