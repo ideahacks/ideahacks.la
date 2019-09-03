@@ -1,8 +1,8 @@
 $(() => {
-	let teamNumber;
+	let teamNumber
 	$("#team-submit").submit(function(event) {
-		event.stopPropagation();
-		teamNumber = $('input[name="team-number"').val();
+		event.stopPropagation()
+		teamNumber = $('input[name="team-number"').val()
 		//Create the team
 		//Check if team number is already taken
 		$.get("/api/teams/" + teamNumber)
@@ -15,12 +15,12 @@ $(() => {
 				team = {
 					teamNumber: teamNumber
 				}
-				alert('here2');
+				alert("here2")
 				//Creates team
 				$.ajax({ url: "/api/teams", type: "POST", data: team })
 					.then(() => {
-						$('#team-input').hide();
-						$('#users-input').show();
+						$("#team-input").hide()
+						$("#users-input").show()
 					})
 					.catch(err => {
 						errorHandler(err)
@@ -28,11 +28,11 @@ $(() => {
 			})
 	})
 
-	$('#users-input').submit(function() {
+	$("#users-input").submit(function() {
 		let memberEmails = $('textarea[name="members"]')
-		.val()
-		.split(",");
-		var membersProcessed = 0;
+			.val()
+			.split(",")
+		var membersProcessed = 0
 
 		memberEmails.forEach(email => {
 			$.get("/api/users/" + email)
@@ -41,28 +41,27 @@ $(() => {
 						alert("here")
 						return errorHandler("Email " + member.email + " is already associated with a team!")
 					} else {
-						membersProcessed++;
+						membersProcessed++
 						if (membersProcessed === memberEmails.length) {
-							membersProcessed = 0;
+							membersProcessed = 0
 							memberEmails.forEach(email => {
 								//Loop through members to see if each exists
 								$.get("/api/users/" + email)
 									.then(member => {
 										alert(member.email)
 										//Check if the member is already part of a team
-										
-										member.hasTeam = true;
-										member.teamNumber = teamNumber;
-										membersProcessed++;
-										
-										$.ajax({ url: "/api/users/" + email, type: "PUT", data: member })
-											.catch(err => {
-												//deleteTeam(teamNumber);
-												return errorHandler(err)
-											})
-										
+
+										member.hasTeam = true
+										member.teamNumber = teamNumber
+										membersProcessed++
+
+										$.ajax({ url: "/api/users/" + email, type: "PUT", data: member }).catch(err => {
+											//deleteTeam(teamNumber);
+											return errorHandler(err)
+										})
+
 										if (membersProcessed === memberEmails.length) {
-											successHandler();
+											successHandler()
 										}
 									})
 									.catch(err => {
@@ -70,53 +69,51 @@ $(() => {
 										//deleteTeam(teamNumber);
 										errorHandler(err)
 									})
-							})					
+							})
 						}
 					}
 				})
 				.catch(err => {
 					//Email doesn't exist
-					deleteTeam(teamNumber);
-					return errorHandler(err);
+					deleteTeam(teamNumber)
+					return errorHandler(err)
 				})
 		})
-			
-				// $.ajax({ url: "/api/teams", type: "PUT", data: team })
-				// 	.then(() => {
-				// 		//For each member of the team, add the team number to the database
-				// 		memberEmails.forEach(email => {
-				// 			$.get("/api/users/" + email)
-				// 				.then(user => {
-				// 					user.hasTeam = true
-				// 					user.teamNumber = teamNumber
-				// 					$.ajax({ url: "/api/users/" + email, type: "PUT", data: user })
-				// 						.catch(err => {
-				// 							return errorHandler(err)
-				// 						})
-				// 					team.
-				// 				})
-				// 				.catch(err => {
-				// 					return errorHandler(err)
-				// 				})
-				// 		})
-				// 		successHandler();
-				// 	})
-				// 	.catch(err => {
-				// 		errorHandler(err)
-				// 	})
-				// })
-			
-		
-	})
 
+		// $.ajax({ url: "/api/teams", type: "PUT", data: team })
+		// 	.then(() => {
+		// 		//For each member of the team, add the team number to the database
+		// 		memberEmails.forEach(email => {
+		// 			$.get("/api/users/" + email)
+		// 				.then(user => {
+		// 					user.hasTeam = true
+		// 					user.teamNumber = teamNumber
+		// 					$.ajax({ url: "/api/users/" + email, type: "PUT", data: user })
+		// 						.catch(err => {
+		// 							return errorHandler(err)
+		// 						})
+		// 					team.
+		// 				})
+		// 				.catch(err => {
+		// 					return errorHandler(err)
+		// 				})
+		// 		})
+		// 		successHandler();
+		// 	})
+		// 	.catch(err => {
+		// 		errorHandler(err)
+		// 	})
+		// })
+	})
 })()
 
 function deleteTeam(teamNumber) {
-	alert(teamNumber);
-	$.ajax( { 
-		url: '/api/teams', 
-		type: 'DELETE', 
-		data: { teamNumber: teamNumber } })
+	alert(teamNumber)
+	$.ajax({
+		url: "/api/teams",
+		type: "DELETE",
+		data: { teamNumber: teamNumber }
+	})
 }
 
 // Attempts to log the given error as well as exits the script
@@ -125,7 +122,7 @@ function errorHandler(err) {
 	$(this).hide()
 
 	setTimeout(location.reload.bind(location), 3000)
-	alert('here3');
+	alert("here3")
 	// Exits script
 	throw new Error(err)
 }
