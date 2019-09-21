@@ -26,6 +26,7 @@
 
 .places {
 	padding: 20px 0;
+	margin: 0 auto;
 }
 
 .places img {
@@ -39,7 +40,7 @@
 }
 
 .place {
-	margin: 10px 0px;
+	margin: 20px 0px;
 }
 
 .place p {
@@ -49,8 +50,8 @@
 }
 
 .year-title {
-	height: 40px;
-	margin: 10px 0px 20px 0px;
+	height: 30px;
+	margin: 20px 0;
 }
 
 .history-year {
@@ -80,12 +81,23 @@
 	color: white;
 }
 
+#seventeen .old-logo img {
+	height: 100px;
+}
+
 #seventeen .btn {
 	background: #3185C0;
 }
 
 .old-logo {
-	padding: 0px 30px;
+	position: absolute;
+	margin: -25px -50px;
+	padding: 20px;
+}
+
+.old-logo img {
+	height: 80px;
+	width: auto;
 }
 
 .history-year .btn {
@@ -137,7 +149,7 @@
 	display: initial;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) {		/*sm size*/
 	.wrapper {
 		padding-top: 100px;
 	}
@@ -160,10 +172,14 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {		/*xs size*/
 	.history-year .year-title {
 		width: 90%;
 		height: auto;
+	}
+	.places img {
+		width: 70%;
+		margin: 15px auto 0 auto;
 	}
 	.sponsor-img img {
 		width: 116px;
