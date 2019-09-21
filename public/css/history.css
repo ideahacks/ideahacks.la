@@ -10,7 +10,7 @@
 
 #intro_img {
 	width: 100%;
-	border-radius: 10px;
+	border-radius: 4px;
 }
 
 .introduction {
@@ -31,6 +31,7 @@
 
 .places img {
 	margin-top: 15px;
+	border-radius: 4px;
 }
 
 .places h2 {
@@ -176,9 +177,9 @@
 	.history-year .year-title {
 		width: 90%;
 		height: auto;
+		margin-bottom: 10px;
 	}
 	.places img {
-		width: 70%;
 		margin: 15px auto 0 auto;
 	}
 	.sponsor-img img {
