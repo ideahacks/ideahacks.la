@@ -1,7 +1,7 @@
 .wrapper {
 	padding-top: 130px;
-	background-color: #FBF3F0;
-	color: #2A2D4E;
+	background-color: #fbf3f0;
+	color: #2a2d4e;
 }
 
 #history_title {
@@ -62,18 +62,18 @@
 
 #nineteen,
 #seventeen {
-	background-color: #F2CCB5;
+	background-color: #f2ccb5;
 }
 
 #nineteen .old-logo,
 #nineteen .btn {
-	background: #DD8064;
+	background: #dd8064;
 }
 
 #eighteen .old-logo,
 #eighteen .btn {
-	background: #97C1EB;
-	color: #2A2D4E;
+	background: #97c1eb;
+	color: #2a2d4e;
 }
 
 #eighteen .sponsor-img div {
@@ -105,7 +105,7 @@
 	font-family: "Roboto Condensed", sans-serif;
 	font-size: 20px;
 	text-align: left;
-	color: #FBF3F0;
+	color: #fbf3f0;
 	width: 90%;
 	float: none;
 	white-space: normal;
@@ -141,7 +141,7 @@
 	width: 90%;
 	margin: 0 auto;
 	padding: 10px 0;
-	background: #FBF3F0;
+	background: #fbf3f0;
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
@@ -163,7 +163,8 @@
 	}
 }
 
-@media (max-width: 992px) {		/*sm size*/
+@media (max-width: 992px) {
+	/*sm size*/
 	.wrapper {
 		padding-top: 100px;
 	}
@@ -186,7 +187,8 @@
 	}
 }
 
-@media (max-width: 768px) {		/*xs size*/
+@media (max-width: 768px) {
+	/*xs size*/
 	.history-year .year-title {
 		width: 90%;
 		height: auto;
