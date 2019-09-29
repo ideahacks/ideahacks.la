@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -30,21 +30,17 @@
         {{> navbar }}
 
         <div class='team-container team container-fluid'>
-            <img src="\img\team\IH_Team.png" alt="LOGO" class="header">
-            <p>Meet the faces that made IDEA Hacks happen!</p>
-
-            {{#each teamData}}
+            <img src="\img\team\team.png" alt="LOGO" class="Title"> {{#each teamData}}
             <div class='container-fluid section'>
-                <h1 class='Categories'>{{this.departmentName}}</h1>
+                {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
+                <h2 class='Lead'>{{#if this.teamLead}}Lead: {{this.teamLead}}{{/if}} </h2>
                 <div class='row center-block'>
                     {{#each this.teammates}}
                     <div class='col-sm-3 no-padding'>
                         <div class='pic'>
-                            <img class='team-photo' src='{{this.picturePath}}' />
+                            <img class='team-photo' src='/img/team/dummy.png' />
                         </div>
                         <h4 class='Description'><b>{{this.name}}</b></h4>
-                        <h2 class='Club'>{{this.organization}}</h2>
-                        <h3 class='Logos'>{{#if this.linkedin}}<a href="{{this.linkedin}}" target="_blank" class="fa fa-linkedin-square fa-3x"></a>{{/if}} {{#if this.github}}<a href="{{this.github}}" target="_blank" class="fa fa-github fa-3x"></a>{{/if}} </h3>
                     </div>
                     {{/each}}
                 </div>

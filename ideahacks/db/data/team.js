@@ -1,273 +1,242 @@
 module.exports = [
 	{
 		departmentName: "Team Captains",
-		teammates: [
-			{
-				name: "Serene Kamal",
-				organization: "IEEE",
-				picturePath: "/img/team/Serene_Kamal.jpg",
-				linkedin: "https://linkedin.com/in/serene-kamal",
-				github: ""
-			},
-			{
-				name: "Nihar Tamhankar",
-				organization: "IEEE",
-				picturePath: "/img/team/Nihar.jpg",
-				linkedin: "https://www.linkedin.com/in/nihar-tamhankar/"
-			},
-			{
-				name: "Saman Hashemipour",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Saman.jpg",
-				linkedin: "",
-				github: ""
-			}
-		]
-	},
-	{
-		departmentName: "Corporate",
-		teammates: [
-			{
-				name: "Benjamin He",
-				organization: "IEEE",
-				picturePath: "/img/team/Ben_He.jpg",
-				linkedin: "https://www.linkedin.com/in/ben-c-he/",
-				github: "https://github.com/benhe2011"
-			},
-			{
-				name: "Amy Tu",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Amy_Tu.jpg",
-				linkedin: "",
-				github: "http://github.com/ayemetoo"
-			},
-			// {
-			//   name: 'Anna Zhong',
-			//   organization: 'Theta Tau',
-			//   picturePath: '/img/team/jeffrey-chan.jpg',
-			//   linkedin: '',
-			//   github: ''
-			// },
-			{
-				name: "Jonathan Song",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Jonathan_Song.jpg",
-				linkedin: "https://www.linkedin.com/in/jonathan-song-122b93127/"
-			},
-			// {
-			//   name: 'Hersh Joshi',
-			//   organization: 'IEEE',
-			//   picturePath: '/img/team/jeffrey-chan.jpg',
-			//   linkedin: ''
-			// },
-			{
-				name: "Nikki Woo",
-				organization: "IEEE",
-				picturePath: "/img/team/Nikki_Woo.jpg",
-				linkedin: "https://www.linkedin.com/in/nikki-woo-can-do/",
-				github: "https://github.com/nikkiwoo"
-			},
-			{
-				name: "Jasmine Trinh",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Jasmine.jpg",
-				linkedin: "https://www.linkedin.com/in/jasmine-trinh-88b846149"
-			},
-			{
-				name: "Samiha Rahman",
-				organization: "IEEE",
-				picturePath: "/img/team/Samiha.jpg",
-				linkedin: "https://www.linkedin.com/in/SamihaNRahman/",
-				github: "www.github.com/samihar"
-			},
-			{
-				name: "Bill Yang",
-				organization: "IEEE",
-				picturePath: "/img/team/Bill.jpg",
-				linkedin: "https://www.linkedin.com/in/byanga65/"
-			},
-			// {
-			//   name: 'Ronald Liu',
-			//   organization: 'IEEE',
-			//   picturePath: '/img/team/jeffrey-chan.jpg',
-			//   linkedin: ''
-			// },
-			{
-				name: "Erin Pool",
-				organization: "IEEE",
-				picturePath: "/img/team/Erin_Pool.jpg",
-				linkedin: ""
-			}
-		]
-	},
-	{
-		departmentName: "Design",
+		teamPath: "/img/team/captains.png",
 		teammates: [
 			{
 				name: "Michelle Lam",
-				organization: "IEEE",
-				picturePath: "/img/team/Michelle_Lam.jpg",
-				linkedin: "https://www.linkedin.com/in/laammichelle"
+				picturePath: "/img/team/Michelle_Lam.jpg"
 			},
 			{
-				name: "Jacqueline Lam",
-				organization: "IEEE",
-				picturePath: "/img/team/Jackie_Lam.jpg",
-				linkedin: "www.linkedin.com/in/jacqueline-lam-685b44156"
+				name: "Saman Hashemipour",
+				picturePath: "/img/team/Saman_Hashemipour.jpg"
 			},
-			{
-				name: "Stella Huang",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Stella_Huang.jpg",
-				github: "https://github.com/stehuang"
-			},
-			{
-				name: "Christine Chen",
-				organization: "IEEE",
-				picturePath: "/img/team/Christine_Chen.jpg",
-				linkedin: "https://www.linkedin.com/in/christine-chen-08b405111"
-			},
-			{
-				name: "Henry Kou",
-				organization: "IEEE",
-				picturePath: "/img/team/Henry_Kou.jpg",
-				linkedin: "https://www.linkedin.com/in/henry-kou-08108914a/",
-				github: "https://github.com/kenryhou2"
-			}
-		]
-	},
-	{
-		departmentName: "Food",
-		teammates: [
 			{
 				name: "Michelle Tan",
-				organization: "IEEE",
-				picturePath: "/img/team/Michelle_Tan.jpg",
-				linkedin: "https://www.linkedin.com/in/michellektan",
-				github: "https://github.com/michellektan"
-			},
-			{
-				name: "Erica Xie",
-				organization: "IEEE",
-				picturePath: "/img/team/Erica_Xie.jpg",
-				linkedin: "http://linkedin.com/in/erica-xie"
-			},
-			{
-				name: "Jacob Ng",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Jacob_Ng.jpg"
-			},
-			{
-				name: "Jeannie Hur",
-				organization: "IEEE",
-				picturePath: "/img/team/Jeannie.jpg",
-				linkedin: "https://www.linkedin.com/in/jeannie-hur/"
-			}
-		]
-	},
-	{
-		departmentName: "Operations",
-		teammates: [
-			{
-				name: "Jingbin Huang",
-				organization: "IEEE",
-				picturePath: "/img/team/jingbin.jpg",
-				linkedin: "https://www.linkedin.com/in/jingbinhuang/"
-			},
-			// {
-			//   name: 'Chris Wang',
-			//   organization: 'Theta Tau',
-			//   picturePath: '/img/team/jeffrey-chan.jpg',
-			//   linkedin: ''
-			// },
-			// {
-			//   name: 'Brian Shih',
-			//   organization: 'Theta Tau',
-			//   picturePath: '/img/team/jeffrey-chan.jpg',
-			//   linkedin: ''
-			// },
-			{
-				name: "Tao Lu",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Tao.jpg",
-				linkedin: ""
-			},
-			{
-				name: "Jonathon Myong",
-				organization: "IEEE",
-				picturePath: "/img/team/Jonathan_Myong.jpg",
-				linkedin: "https://www.linkedin.com/in/jonathan-myong-831343121"
-			}
-			// {
-			//   name: 'Kyle Okazaki',
-			//   organization: 'Theta Tau',
-			//   picturePath: '/img/team/jeffrey-chan.jpg',
-			//   linkedin: ''
-			// }
-		]
-	},
-	{
-		departmentName: "Parts",
-		teammates: [
-			{
-				name: "Shalin Shah",
-				organization: "IEEE",
-				picturePath: "/img/team/Shalin_Shah.jpg",
-				linkedin: "https://www.linkedin.com/in/shalinbshah"
-			},
-			{
-				name: "Alex Graening", //questionable
-				organization: "IEEE",
-				picturePath: "/img/team/Alex_G.jpg",
-				linkedin: "https://www.linkedin.com/in/alexander-graening-b66227139/",
-				github: "https://github.com/alexandergraening"
-			},
-			{
-				name: "Sahil Gandhi",
-				organization: "IEEE",
-				picturePath: "/img/team/Sahil_Gandhi.jpg",
-				linkedin: "https://www.linkedin.com/in/sahilmgandhi",
-				github: "https://github.com/sahilmgandhi"
+				picturePath: "/img/team/Michelle_Tan.jpg"
 			}
 		]
 	},
 	{
 		departmentName: "Website",
+		teamPath: "/img/team/website.png",
+		teamLead: "Kathy Daniels",
 		teammates: [
 			{
-				name: "Chester Hulse",
-				organization: "IEEE",
-				picturePath: "/img/team/Chester_Hulse.jpg",
-				linkedin: "https://www.linkedin.com/in/chester-hulse-89b795172/",
-				github: "https://github.com/chulse"
+				name: "Kathy Daniels",
+				picturePath: "/img/team/Kathy_Daniels.jpg"
+			},
+			{
+				name: "Eugene Lo",
+				picturePath: "/img/team/Eugene_Lo.jpg"
+			},
+			{
+				name: "Nikki Woo",
+				picturePath: "/img/team/Nikki_Woo.jpg"
+			},
+			{
+				name: "Robert Peralta",
+				picturePath: "/img/team/Robert_Peralta.jpg"
+			},
+			{
+				name: "Maggie Huang",
+				picturePath: "/img/team/Maggie_Huang.jpg"
+			},
+			{
+				name: "Audrey Pham",
+				picturePath: "/img/team/Audrey_Pham.jpg"
+			}
+		]
+	},
+	{
+		departmentName: "Food",
+		teamPath: "/img/team/food.png",
+		teamLead: "Subhodh Madala",
+		teammates: [
+			{
+				name: "Subhodh Madala",
+				picturePath: "/img/team/Subhodh_Madala.jpg"
+			},
+			{
+				name: "Fred Chu",
+				picturePath: "/img/team/Fred_Chu.jpg"
+			},
+			{
+				name: "James King",
+				picturePath: "/img/team/James_King.jpg"
 			},
 			{
 				name: "Justine Bailey",
-				organization: "IEEE",
-				picturePath: "/img/team/Justine_Bailey.jpg",
-				linkedin: "www.linkedin.com/in/justine-bailey",
-				github: "https://github.com/JuBailey"
+				picturePath: "/img/team/Justine_Bailey.jpg"
 			},
 			{
-				name: "Kathy Daniels",
-				organization: "IEEE",
-				picturePath: "/img/team/Kathy_Daniels.png",
-				linkedin: "https://www.linkedin.com/in/kathy-daniels/",
-				github: "https://github.com/danielskathyd"
+				name: "Jack Bailey",
+				picturePath: "/img/team/Jack_Bailey.jpg"
 			},
 			{
-				name: "Michelle Du",
-				organization: "IEEE",
-				picturePath: "/img/team/Michelle_Du.jpg",
-				linkedin: "https://www.linkedin.com/in/michelle-du-3222a6133/",
-				github: ""
+				name: "Sharon Cha",
+				picturePath: "/img/team/Sharon_Cha.jpg"
 			},
 			{
-				name: "Patrick Shih",
-				organization: "Theta Tau",
-				picturePath: "/img/team/Patrick_Shih.jpg",
-				linkedin: "https://www.linkedin.com/in/shihpatrick/",
-				github: "https://github.com/shihpatrick"
+				name: "Brittany Ham",
+				picturePath: "/img/team/Brittany_Ham.jpg"
+			}
+		]
+	},
+	{
+		departmentName: "Operations",
+		teamPath: "/img/team/operations.png",
+		teamLead: "Tao Lu",
+		teammates: [
+			{
+				name: "Tao Lu",
+				picturePath: "/img/team/Tao_Lu.jpg"
+			},
+			{
+				name: "Peter Oh",
+				picturePath: "/img/team/Peter_Oh.jpg"
+			},
+			{
+				name: "Bruno Bombassaro",
+				picturePath: "/img/team/Bruno_Bombassaro.jpg"
+			},
+			{
+				name: "Henry Kou",
+				picturePath: "/img/team/Henry_Kou.jpg"
+			},
+			{
+				name: "Justin Jianto",
+				picturePath: "/img/team/Justin_Jianto.jpg"
+			},
+			{
+				name: "Kenny Chan",
+				picturePath: "/img/team/Kenny_Chan.jpg"
+			},
+			{
+				name: "Grace Tang",
+				picturePath: "/img/team/Grace_Tang.jpg"
+			},
+			{
+				name: "David Baum",
+				picturePath: "/img/team/David_Baum.jpg"
+			},
+			{
+				name: "Hayato Kato",
+				picturePath: "/img/team/Hayato_Kato.jpg"
+			},
+			{
+				name: "Kevin Chen",
+				picturePath: "/img/team/Kevin_Chen.jpg"
+			},
+			{
+				name: "Jonathan Nguyen",
+				picturePath: "/img/team/Jonathan_Nguyen.jpg"
+			},
+			{
+				name: "Ivan Gomez Siu",
+				picturePath: "/img/team/Ivan_Gomez_Siu.jpg"
+			}
+		]
+	},
+	{
+		departmentName: "Corporate",
+		teamPath: "/img/team/corporate.png",
+		teamLead: "Roselyn Lee",
+		teammates: [
+			{
+				name: "Roselyn Lee",
+				picturePath: "/img/team/Roselyn_Lee.jpg"
+			},
+			{
+				name: "Andrew Li",
+				picturePath: "/img/team/Andrew_Li.jpg"
+			},
+			{
+				name: "Lucas Wolter",
+				picturePath: "/img/team/Lucas_Wolter.jpg"
+			},
+			{
+				name: "Michael Wang",
+				picturePath: "/img/team/Michael_Wang.jpg"
+			},
+			{
+				name: "Jasanpreet Pandher",
+				picturePath: "/img/team/Jasanpreet_Pandher.jpg"
+			},
+			{
+				name: "Christian Yu",
+				picturePath: "/img/team/Christian_Yu.jpg"
+			},
+			{
+				name: "Taylor Keppel",
+				picturePath: "/img/team/Taylor_Keppel.jpg"
+			},
+			{
+				name: "Jasmine Trinh",
+				picturePath: "/img/team/Jamine_Trinh.jpg"
+			},
+			{
+				name: "Eric Zhang",
+				picturePath: "/img/team/Eric_Zhang.jpg"
+			},
+			{
+				name: "David Kao",
+				picturePath: "/img/team/David_Kao.jpg"
+			},
+			{
+				name: "Raj Intwala",
+				picturePath: "/img/team/Raj_Intwala.jpg"
+			},
+			{
+				name: "Soumya Uppuganti",
+				picturePath: "/img/team/Soumya_Uppunganti.jpg"
+			},
+			{
+				name: "Rohith Kodukula",
+				picturePath: "/img/team/Rohith_Kodukula.jpg"
+			},
+			{
+				name: "Vince Wu",
+				picturePath: "/img/team/Vince_Wu.jpg"
+			},
+			{
+				name: "Jay Park",
+				picturePath: "/img/team/Jay_Park.jpg"
+			},
+			{
+				name: "Darren Ait Kaci Azzou",
+				picturePath: "/img/team/Darren_Ait_Kaci_Azzou.jpg"
+			},
+			{
+				name: "Alethea Sung Miller",
+				picturePath: "/img/team/Alethea_Sung_Miller.jpg"
+			}
+		]
+	},
+	{
+		departmentName: "Design",
+		teamPath: "/img/team/design.png",
+		teamLead: "Albert Han",
+		teammates: [
+			{
+				name: "Albert Han",
+				picturePath: "/img/team/Albert_Han.jpg"
+			},
+			{
+				name: "Beryl Sui",
+				picturePath: "/img/team/Beryl_Sui.jpg"
+			},
+			{
+				name: "Evelyn Chiappe",
+				picturePath: "/img/team/Evelyn_Chiappe.jgp"
+			},
+			{
+				name: "Ryan Lin",
+				picturePath: "/img/team/Ryan_Lin.jpg"
+			},
+			{
+				name: "Claire Ko",
+				picturePath: "/img/team/Claire_Ko.jpg"
 			}
 		]
 	}
