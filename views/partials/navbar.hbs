@@ -28,7 +28,7 @@
                 <button class='main-button'>MY DASHBOARD</button>
             </a> {{/if}} {{#if onDashboard}}
 
-        <!-- APPS ARE CLOSED -->
+        <!-- APPLICATION -->
         <li class='dashboard'><a href='/dashboard/application'>Application</a></li>
 
         <!-- TEAMS -->
@@ -64,30 +64,34 @@
         <li><a href='/admin/parts'>Parts</a></li> -->
         {{/if}} {{#if onDashboard}}
 
-        <!-- APPS ARE CLOSED -->
-        <li><a href='/dashboard/application'>Application</a></li>
+        <<<<<<< HEAD <!-- APPS ARE CLOSED -->
+            <!-- <li><a href='/dashboard/application'>Application</a></li> -->
+            =======
+            <!-- APPS ARE CLOSED -->
+            <li><a href='/dashboard/application'>Application</a></li>
+            >>>>>>> f69d8585407edd5add0ea4cb5fcc9564cf1ebf3d
 
-        <!-- TEAMS -->
-        <li><a href='/dashboard/teams'>Teams</a></li>
+            <!-- TEAMS -->
+            <li><a href='/dashboard/teams'>Teams</a></li>
 
-        <!-- PARTS LIST -->
-        <li><a href='/dashboard/parts'>Parts List</a></li>
+            <!-- PARTS LIST -->
+            <li><a href='/dashboard/parts'>Parts List</a></li>
 
-        <li><a href='/dashboard/me'>Me</a></li>
-        {{#if user.isAdmin}}
-        <li><a href='/admin'>ADMIN</a></li>
-        {{/if}} {{/if}} {{#if onMain}}
-        <div class='responsive-dropdown'>
-            <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
-            <div class='responsive-dropdown-content' id='responsive-content'>
-                <li><a href='/team'>Team</a></li>
-                <li><a href='/history'>History</a></li>
+            <li><a href='/dashboard/me'>Me</a></li>
+            {{#if user.isAdmin}}
+            <li><a href='/admin'>ADMIN</a></li>
+            {{/if}} {{/if}} {{#if onMain}}
+            <div class='responsive-dropdown'>
+                <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
+                <div class='responsive-dropdown-content' id='responsive-content'>
+                    <li><a href='/team'>Team</a></li>
+                    <li><a href='/history'>History</a></li>
+                </div>
             </div>
-        </div>
-        <li><a href='/#schedule'>Schedule</a></li>
-        <li><a href='/#faq'>FAQ</a></li>
-        <li><a href='/#sponsors'>Sponsors</a></li>
-        <li><a href="/login">LOGIN</a></li>
-        {{/if}}
+            <li><a href='/#schedule'>Schedule</a></li>
+            <li><a href='/#faq'>FAQ</a></li>
+            <li><a href='/#sponsors'>Sponsors</a></li>
+            <li><a href="/login">LOGIN</a></li>
+            {{/if}}
     </ul>
 </div>
