@@ -13,11 +13,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
-    <link rel='stylesheet' href="../css/form.css" />
+    <!-- <link rel='stylesheet' href="../css/application.css" /> -->
     <link rel='stylesheet' href='../css/dashboard-application.css' />
 
     <!-- SCRIPTS -->
@@ -28,136 +28,215 @@
     <!-- NAVBAR -->
     <div class='wrapper'>
         {{> navbar }}
-
-        <img id="img-header" src="/img/registration/app-header.png" />
-        <p class="deadline text-center">Applications due on December 1st</p>
+        <div class='top-box'></div>
+        <div class='application-form'>
+            <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
+            <img id="img-header" src="/img/registration/2020_registration.png" />
+        </div>
+        <!-- <p class="deadline text-center">Applications due on December 1st</p> -->
 
         {{#if user.hasApplication}}
 
-            <div class='text-center container-fluid submission'>
-                <p> Way to go! You successfully submitted your application for IDEA Hacks 2019! </p>
-                <p> Have questions? Contact us at team@ideahacks.la </p>
-
-                <img class="street-graphic" src="/img/index/travgraphic.png" />
-
-            </div>
+        <div class='text-center container-fluid submission'>
+            <p> Way to go! You successfully submitted your application for IDEA Hacks 2019! </p>
+            <p> Have questions? Contact us at team@ideahacks.la </p>
+            <img class='banner-desktop-graphic' src="/img/registration/submission.png">
+            <img class='banner-tablet-graphic' src="/img/registration/submission_ipad.png">
+            <img class='banner-mobile-graphic' src="/img/registration/submission_mobile.png">
+        </div>
 
         {{else}}
 
 
-            <div class='ideahacks-form application-form container-fluid'>
-                <!-- PERSONAL INFORMATION -->
-                <div class='row'>
-                    <div class='header'>
-                        <h3>Personal </h3>
-                        <img id="img-side" src="/img/registration/logo.png" />
-                    </div>
-                    <fieldset>
-                        <div class='form-group col-md-5'>
-                            <label>First Name*</label>
-                            <input class='form-control' type='text' name='firstName' placeholder='First Name' value='{{user.firstName}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>Last Name*</label>
-                            <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>Phone Number*</label>
-                            <input class='form-control' type='tel' name='phone' placeholder='(XXX) XXX - XXXX' value='{{user.phone}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>Email Address*</label>
-                            <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
-                        </div>
-                    </fieldset>
+        <div class='ideahacks-form application-form container-fluid'>
+            <!-- PERSONAL INFORMATION -->
+            <div class='row'>
+                <div class='header'>
+                    <h3>Personal </h3>
+                    <!-- <img id="img-side" src="/img/registration/logo.png" /> -->
                 </div>
-
-                <!-- EDUCATIONAL INFORMATION -->
-                <div class='row'>
-                    <div class='header'>
-                        <h3>Education</h3>
+                <fieldset>
+                    <div class='form-group col-md-5'>
+                        <label>First Name*</label>
+                        <input class='form-control' type='text' name='firstName' placeholder='First Name' value='{{user.firstName}}'>
                     </div>
-                    <fieldset>
-                        <div class='form-group col-md-10'>
-                            <label>School*</label>
-                            <input class='form-control' type='text' name='school' placeholder='School' value='{{user.school}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>Major*</label>
-                            <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
-                        </div>
+                    <div class='form-group col-md-5'>
+                        <label>Last Name*</label>
+                        <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
+                    </div>
+                    <div class='form-group col-md-5'>
+                        <label>Phone Number*</label>
+                        <input class='form-control' type='tel' name='phone' placeholder='(XXX) XXX - XXXX' value='{{user.phone}}'>
+                    </div>
+                    <div class='form-group col-md-5'>
+                        <label>Email Address*</label>
+                        <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
+                    </div>
+                </fieldset>
+
+            </div>
+            <div class='sublabel note'>
+                <label>Note: All items with * are mandatory.</label>
+            </div>
+            <!-- EDUCATIONAL INFORMATION -->
+            <div class='row'>
+                <div class='header'>
+                    <h3>Education</h3>
+                </div>
+                <fieldset>
+                    <div class='form-group col-md-5'>
+                        <label>School*</label>
+                        <select class='form-control' name='school'>
+                                <option {{#if user.UCLA}} selected{{/if}}>University of California, Los Angeles</option>
+                                <option {{#if user.UCB}} selected{{/if}}>University of California, Berkeley</option>
+                                <option {{#if user.UCD}} selected{{/if}}>University of California, Davis</option>
+                                <option {{#if user.UCI}} selected{{/if}}>University of California, Irvine</option>
+                                <option {{#if user.UCM}} selected{{/if}}>University of California, Merced</option>
+                                <option {{#if user.UCR}} selected{{/if}}>University of California, Riverside</option>
+                                <option {{#if user.UCSD}} selected{{/if}}>University of California, San Diego</option>
+                                <option {{#if user.UCSB}} selected{{/if}}>University of California, Santa Barbara</option>
+                                <option {{#if user.UCSC}} selected{{/if}}>University of California, Santa Cruz</option>
+                                <option {{#if user.USC}} selected{{/if}}>University of Southern California</option>
+                                <option {{#if user.schoolOther}} selected{{/if}}>Other</option>
+                            </select> </div>
+                    <div class='form-group col-md-5'>
+                        <label>If Other, please specify.</label>
+                        <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
+                    </div>
+                    <div class='form-group col-md-5'>
+                        <label>Major*</label>
+                        <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
+                    </div>
+                    <div class='form-group col-md-5 col-xs-12'>
+                        <label>Year*</label>
+                        <select class='form-control' name='year'>
+                                <option {{#if user.yearFreshman}} selected{{/if}}>Freshman</option>
+                                <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore</option>
+                                <option {{#if user.yearJunior}} selected{{/if}}>Junior</option>
+                                <option {{#if user.yearSenior}} selected{{/if}}>Senior</option>
+                                <option {{#if user.yearHighSchool}} selected{{/if}}>High School</option>
+                                <option {{#if user.yearGraduate}} selected{{/if}}>Graduate</option>
+                                <option {{#if user.yearOther}} selected{{/if}}>Other</option>
+                            </select> </div>
+                    <div class='form-group col-md-5'>
+                        <label>GitHub</label>
+                        <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
+                    </div>
+
+                    <div class='form-group col-md-5'>
+                        <label>LinkedIn</label>
+                        <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
+                    </div>
+                    <div class='form-group col-md-5'>
+                        <label>Resume*</label>
+                        <span class="row"></span>
+                        <!-- <label class="file-upload" style="color: white; margin-left: 15px;">
+                                <a href= "https://www.google.com" target = "_blank">
+                                UPLOAD YOUR FILE HERE
+                              </a>
+                                </label> -->
+                        <a href="https://forms.gle/Vptk66aMhcvkRxoL7" target="_blank"><button class='file-upload' style="margin-left: 15px">
+                                    UPLOAD YOUR FILE HERE </button></a>
+                        <!-- <input class='form-control' type='file' name='resume' placeholder='Link to Resume' value='{{user.resume}}'> -->
+                    </div>
+
+                    <!--
                         <div class='form-group col-md-5'>
                             <label>Year*</label>
                             <input class='form-control' type='text' name='year' placeholder='Year' value='{{user.year}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>GitHub</label>
-                            <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>LinkedIn</label>
-                            <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>Resume Link</label>
-                            <input class='form-control' type='url' name='resume' placeholder='Link to Resume' value='{{user.resume}}'>
-                        </div>
-                    </fieldset>
-                </div>
+                        </div> -->
+                </fieldset>
+            </div>
 
-                <!-- TEAM INFORMATION -->
-                <div class='row'>
-                    <div class='col header'>
-                        <h3>Team Information</h3>
-                    </div>
-                    <fieldset>
-                        <span class='row'>
-                            <div class='form-group col-xs-12 col-md-5'>
-                                <label>Do you have a team*</label>
-                                <select class='form-control' name='hasTeam'>
-                                    <option {{#if user.hasATeam}} selected{{/if}}>YES </option>
-                                    <option {{#if user.hasNoTeam}} selected{{/if}}>NO </option>
-                                </select> </div>
-                        </span> <span class='row'>
+            <!-- TEAM INFORMATION -->
+            <div class='row'>
+                <div class='col header'>
+                    <h3>Team Information</h3>
+                </div>
+                <fieldset>
+                    <!-- <span class='row'> -->
+                    <div class='form-group col-xs-10 col-md-5'>
+                        <label>Do you have a team?*</label>
+                        <select class='form-control' name='hasTeam'>
+                                <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
+                                <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
+                            </select> </div>
+                    <!-- </span>--><span class='row'>
                             <div class='form-group col-xs-12'>
-                                <label>If so, what are your teammates' emails?</label>
-                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                                <label>If so, what are your teammates' names and emails?</label>
+                                <!-- <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
                                 <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
                                 <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
+                                <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'> -->
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name1' placeholder='name' value='{{user.teammateName1}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
+                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name2' placeholder='name' value='{{user.teammateName2}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
+                                <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name3' placeholder='name' value='{{user.teammateName3}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
+                                <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
+                            </div>
+                            <div class='form-group col-md-5 col-xs-10'>
+                                <input class='form-control teammate-name' type='text' name='tm-name4' placeholder='name' value='{{user.teammateName4}}'>
+                            </div>
+                            <div class='form-group col-md-7 col-xs-10'>
                                 <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'>
                             </div>
                         </span>
-                    </fieldset>
-                </div>
+                </fieldset>
+            </div>
 
-                <!-- HACKATHON INFORMATION -->
-                <div class='row'>
-                    <div class='header'>
-                        <h3>Short Answers</h3>
-                    </div>
-                    <fieldset>
-                        <div class='form-group col-md-5 col-xs-10 short-answer'>
-                            <label>Enter your Skills and Experiences*
+            <!-- HACKATHON INFORMATION -->
+            <div class='row'>
+                <div class='header'>
+                    <h3>Short Answers</h3>
+                </div>
+                <fieldset>
+                    <div class='form-group col-md-5 col-xs-10 short-answer'>
+                        <label>Enter your Skills and Experiences*
                                 <!-- <span class='whitespace'>HACKATHON EXPERIEN</span> --></label>
-                            <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
-                        </div>
-                        <div class='form-group col-md-6 col-xs-10 short-answer'>
-                            <label>Why do you want to participate in IDEAHacks?</label>
-                            <textarea class='form-control textarea' name='reasonForParticipation' rows='5'>{{user.reasonForParticipation}}</textarea>
-                        </div>
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label>Do you have an idea to hack for this year's theme?</label>
-                            <label class='sublabel'>It's okay if you don't yet!</label>
-                            <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
-                        </div>
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
+                        <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
+                    </div>
+                    <div class='form-group col-md-6 col-xs-10 short-answer'>
+                        <label>Why do you want to participate in IDEAHacks?*</label>
+                        <textarea class='form-control textarea' name='reasonForParticipation' rows='5'>{{user.reasonForParticipation}}</textarea>
+                    </div>
+                    <div class='form-group col-md-11 col-xs-10 short-answer'>
+                        <label>Do you have an idea to hack for this year's theme?</label>
+                        <label class='sublabel'>(It's okay if you don't yet!)</label>
+                        <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
+                    </div>
+                    <div class='form-group col-md-11 col-xs-10 short-answer'>
+                        <label>What parts would you like to see at IDEA Hacks this year?</label>
+                        <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
+                    </div>
+                    <span class='row'>
+                            <div class='form-group col-xs-10 col-md-5'>
+                                <label>Do you have any past hackathon experience?*</label>
+                                <select class='form-control' name='hasHackathonExperience'>
+                                    <option {{#if user.hasExperience}} selected{{/if}}>YES</option>
+                                    <option {{#if user.hasNoExperience}} selected{{/if}}>NO</option>
+                                </select> </div>
+                        </span> <span class='row'>
+                            <div class='form-group col-md-11 col-xs-10 short-answer'>
+                                <label style="text-align: left">If so, please share you experience with us.</label>
+                                <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
+                            </div>
+                            <!-- <div class='form-group col-md-11 col-xs-10 short-answer'>
                             <label style="text-align: left">Do you have any past hackathon experience?</label>
                             <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
-                        </div>
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label>What parts would you like to see at IDEA Hacks this year?</label>
-                            <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
-                        </div>
+                        </div> -->
                     </fieldset>
                 </div>
 
@@ -168,10 +247,32 @@
                     </div>
                     <fieldset>
                         <div class='form-group col-md-10'>
-                            <label>Any dietary restrictions or food allergies?</label>
+                            <label>Any dietary restrictions or food allergies?*</label>
+                            <div class='sublabel'>
+                                <label>(Put N/A if none.)</label>
+                            </div>
                             <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
                         </div>
-                        {{!--
+                        <!-- <span class='row'>
+                            <div class='form-group col-xs-10 col-md-6'>
+                                <label>Will you need a travel reimbursement?</label>
+                                <select class='form-control' name='needsReimbursement'>
+                                    <option {{#if user.doesNeedReimbursement}} selected{{/if}}>YES</option>
+                                    <option {{#if user.doesNotNeedReimbursement}} selected{{/if}}>NO</option>
+                                </select> </div>
+                        </span> -->
+                    <span>
+                            <div class='form-group col-xs-10 col-md-6'>
+                                <label>Will you bring a vehicle and need parking?</label>
+                                <div class='sublabel'>
+                                    <label>(NOTE: Priority goes to non-UCLA students.)</label>
+                                </div>
+                                <select class='form-control' name='needsParking'>
+                                    <option {{#if user.doesNeedParking}} selected{{/if}}>YES</option>
+                                    <option {{#if user.doesNotNeedParking}} selected{{/if}}>NO</option>
+                                </select>
+                            </div>
+                        </span> {{!--
                     <div class='form-group col-sm-10'>
                         <label>Will you need a travel reimbursement?</label>
                         <div class="form-check form-check-inline">
@@ -194,27 +295,30 @@
                                 </label>
                         </div>
                     </div> --}}
-                        <div class='form-group col-md-3 col-xs-10'>
-                            <label>Shirt Size</label>
-                            <select class='form-control' name='shirtSize'>
-                                <option {{#if user.sizeSmall}} selected{{/if}}>S </option>
-                                <option {{#if user.sizeMedium}} selected{{/if}}>M </option>
-                                <option {{#if user.sizeLarge}} selected{{/if}}>L </option>
-                                <option {{#if user.sizeXLarge}} selected{{/if}}>XL </option>
+                    <span class='row'></span>
+                    <div class='form-group col-md-3 col-xs-10'>
+                        <label>Shirt Size*</label>
+                        <select class='form-control' name='shirtSize'>
+                                <option {{#if user.sizeSmall}} selected{{/if}}>S</option>
+                                <option {{#if user.sizeMedium}} selected{{/if}}>M</option>
+                                <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
+                                <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
                             </select> </div>
-                    </fieldset>
-                </div>
-                <!-- BUTTONS -->
-                <div class='buttons row'>
-                    <!--<button class='save-application'>SAVE</button> -->
-                    <button class='submit-application'>SUBMIT</button>
-                </div>
-                <p class="submit-message" style='color: transparent;'></p>
+
+                </fieldset>
             </div>
+            <!-- BUTTONS -->
+            <div class='buttons row'>
+                <!--<button class='save-application'>SAVE</button> -->
+                <button class='submit-application'>SUBMIT</button>
+            </div>
+            <p class="submit-message" style='color: transparent;'></p>
+        </div>
 
         {{/if}}
 
     </div>
+
 
 </body>
 </html>
