@@ -26,9 +26,9 @@ p {
 }
 
 .Title {
-	margin: 130px 0px 0px 0px;
+	margin: 130px 0px 20px 0px;
 	display: block;
-	max-height: 55px;
+	max-height: 45px;
 	display: inline-block;
 }
 

@@ -5,8 +5,8 @@
 }
 
 #history_title {
-	width: 20%;
-	margin-bottom: 40px;
+	max-height: 45px;
+	margin-bottom: 50px;
 }
 
 #intro_img {
