@@ -1,6 +1,6 @@
 .idea_hacks_banner {
-	font-family: "Source Sans Pro", sans-serif;
-	color: #ffc301;
+	font-family: "Roboto Condensed";
+	color: #40698f;
 	padding-left: 25px;
 	width: 25%;
 	text-align: center;
@@ -35,8 +35,8 @@
 }
 
 body {
-	font-family: "Source Sans Pro", sans-serif;
-	background-color: #10253f;
+	font-family: "Roboto Condensed";
+	background-color: #fbf3f0;
 }
 
 .messages {

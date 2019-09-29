@@ -1,13 +1,13 @@
 .confirm {
-	background-color: rgb(255, 255, 244);
+	background-color: white;
 	padding: 10px 20px;
 	border-radius: 10px;
 	margin: 200px 100px;
 }
 
 button {
-	background-color: rgb(255, 183, 24);
-	border: 2px solid rgb(255, 183, 24);
+	background-color: #2a2d4e;
+	border: 2px solid #2a2d4e;
 	padding: 10px 18px 7px 19px;
 	border-radius: 7px;
 	color: white;
@@ -17,12 +17,12 @@ button {
 
 button:hover {
 	background-color: transparent;
-	color: rgb(255, 183, 24);
+	color: #2a2d4e;
 	cursor: pointer;
 }
 
 body {
-	background-color: rgb(221, 128, 100);
+	background-color: #f2ccb5;
 }
 
 @media (max-width: 990px) {
