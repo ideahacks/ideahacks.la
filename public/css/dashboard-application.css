@@ -113,6 +113,7 @@ body {
 	#img-side {
 		display: none;
 	}
+	#img-header-top,
 	#img-header {
 		/* margin-bottom: 5vh; */
 		width: 80%;
@@ -250,7 +251,7 @@ input::placeholder {
 
 @media (max-width: 583px) {
 	.buttons {
-		padding: 0 15px;
+		padding: 0 60px;
 	}
 
 	.buttons button {
