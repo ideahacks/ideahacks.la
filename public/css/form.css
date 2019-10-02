@@ -11,10 +11,21 @@
 	text-align: center;
 	font-size: 18px;
 	line-height: 20px;
+	text-transform: none;
 	font-weight: normal;
 	margin-left: 5px;
 	margin-bottom: 5px;
-	color: #40698f;
+}
+
+.ideahacks-form legend {
+	background-color: rgba(49,133,192,0.1);
+	color: #3185C0;
+	width: max-content;
+	height: 40px;
+	padding-right: 150px;
+	padding-top: 5px;
+	display: inline-block;
+
 }
 
 /* INPUT */

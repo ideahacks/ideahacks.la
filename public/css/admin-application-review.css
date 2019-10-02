@@ -4,7 +4,7 @@
 	}
 }
 .background {
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 }
 
 .banner {
@@ -47,12 +47,11 @@ input {
 	padding: 10px;
 	width: 215px;
 	height: 125px;
-
 }
 
 .stats-box h1 {
 	margin: 0px 0px 0px 0px;
-	text-align: center;	
+	text-align: center;
 	font-size: 60px;
 	font-weight: bold;
 	padding-bottom: 0px;
@@ -90,22 +89,22 @@ input {
 
 .application.accepted,
 .accepted-box {
-	background-color: #75C791;
+	background-color: #75c791;
 }
 
 .application.pending,
 .pending-box {
-	background-color: #75B4C7;
+	background-color: #75b4c7;
 }
 
 .application.rejected,
 .rejected-box {
-	background-color: #D46C6C;
+	background-color: #d46c6c;
 }
 
 .application.waitlisted,
 .waitlisted-box {
-	background-color: #F2C94C;
+	background-color: #f2c94c;
 }
 
 .application .year,
