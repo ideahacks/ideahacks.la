@@ -47,6 +47,7 @@ input {
 	padding: 10px;
 	width: 215px;
 	height: 125px;
+	margin: 10px;
 }
 
 .stats-box h1 {
@@ -61,7 +62,7 @@ input {
 	font-family: "Roboto Condensed";
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 2.5vw;
 	padding-top: 0px;
 }
 
@@ -85,6 +86,7 @@ input {
 
 .application p {
 	margin: 0;
+	font-size: 1.3vw;
 }
 
 .application.accepted,
@@ -117,9 +119,12 @@ input {
 	text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
 	.application .year,
 	.application .school {
 		display: none;
+	}
+	.application p {
+		font-size: 4vw;
 	}
 }
