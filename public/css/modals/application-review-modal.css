@@ -1,5 +1,5 @@
 .modal-content {
-	background-color: #FBF3F0;
+	background-color: #fbf3f0;
 }
 .applicant-name {
 	text-align: center;
@@ -23,18 +23,18 @@
 	margin: 30px 0 0;
 }
 
-
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 0px 50px;
+	margin: 0 0 5px;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
 	padding: 0 10px;
-	color: #40698F;
+	color: #40698f;
 }
 
 .hackathon-information span {
