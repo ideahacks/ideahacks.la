@@ -7,14 +7,14 @@
 .radio-outer-square {
 	width: 40px;
 	height: 40px;
-	border: 1px solid #40698F;
+	border: 1px solid #40698f;
 }
 
 .radio-outer-square.active .radio-inner-square {
 	width: 25px;
 	height: 25px;
 	margin: 7px;
-	background-color: #40698F;
+	background-color: #40698f;
 }
 
 .radio-button-group label {
