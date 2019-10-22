@@ -57,7 +57,7 @@
 		"express-session": "^1.16.2",
 		"hbs": "^4.0.4",
 		"hbs-utils": "0.0.4",
-		"mongoose": "^4.13.18",
+		"mongoose": "^5.7.6",
 		"morgan": "^1.9.1",
 		"passport": "^0.4.0",
 		"passport-local": "^1.0.0",
