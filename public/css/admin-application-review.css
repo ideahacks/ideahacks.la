@@ -9,7 +9,7 @@
 
 .banner {
 	padding-top: 130px;
-	width: 45%;
+	width: 35%;
 }
 
 .description {
@@ -62,7 +62,7 @@ input {
 	font-family: "Roboto Condensed";
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 2.5vw;
+	font-size: 25px;
 	padding-top: 0px;
 }
 
@@ -126,5 +126,8 @@ input {
 	}
 	.application p {
 		font-size: 4vw;
+	}
+	.stats-box h4 {
+		font-size: 2.5vw;
 	}
 }
