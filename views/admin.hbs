@@ -21,7 +21,7 @@
     <!-- SCRIPTS -->
     <script src='/js/admin.js'></script>
 </head>
-<body class='background-red'>
+<body>
     <div class="wrapper">
         <!-- NAVBAR -->
         {{> navbar }}
@@ -35,10 +35,10 @@
         <div class='mailing-wrapper'>
             <ul class='container mailing-list'>
                 {{#each mailingLists }}
-                    <li class='row'>
-                        <h3 class='email-list-name text-center'>{{ this.name }} <span class='glyphicon glyphicon-menu-down'></span></h3>
-                        <p class='email-list'>{{ this.list }}</p>
-                    </li>
+                <li class='row'>
+                    <h3 class='email-list-name text-center'>{{ this.name }} <span class='glyphicon glyphicon-menu-down'></span></h3>
+                    <p class='email-list'>{{ this.list }}</p>
+                </li>
                 {{/each}}
             </ul>
         </div>

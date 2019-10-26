@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='/js/history.js'></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,116 +22,182 @@
 </head>
 <body class='background-light-red'>
 
-    <div class='wrapper background-red'>
+    <div class='wrapper'>
+
+        <!-- NAVBAR -->
         {{> navbar}}
 
-        <div class='text-center'>
-            <img id="history_title" src="/img/history/IH_History.png" alt="history title image">
-            <h1 class="subtitle" id="text">Learn more about California's largest college hardware-focused hackathon!</h1>
-        </div>
-        <div class="introduction container-fluid">
-            <div class="col-sm-6">
-                <img id="intro_img" src="/img/history/intro_pic.jpg" alt="historical picture">
+        <div id="intro">
+            <div class='text-center'>
+                <img id="history_title" src="/img/history/history.png" alt="history title image">
             </div>
-            <div class="col-sm-6">
-                <p class="intro_p white_text">
-                    IDEA Hacks was founded in 2014 by members of UCLA IEEE and Theta Tau Upsilon Delta. Ever since our first hackathon in January 2015, IDEA Hacks’ vision has been to provide engineering students with a space to learn, create, and inspire one another. As the first and largest hardware hackathon in California, we encourage interdisciplinary teams to build hands-on components as opposed to a software hackathon. <br> <br> Throughout the years we’ve increased the breadth of our event, and at our last hackathon over 200 hackers participated. Our goals are to benefit the engineering community and the community as a whole by promoting innovation in areas that matter. Featured projects include an ASL Recognition Platform, Light-Up Frisbee, and many more!</p>
-            </div>
-        </div>
-
-        <div id="home_automation">
-            <h2 class="history_h2 fancy_lines">2018 - HOME AUTOMATION</h2>
-            <div class="places">
-                <div class="col-sm-4">
-                    <h3 class="history_h3">FIRST PLACE</h3>
-                    <h4 class="history_h4">ASL Recognition Platform</h4>
-                    <img src="/img/history/2018_1stPlace.JPG" alt="2018 first place" width="100%" height="100%">
-                    <p class="history_p"><b>PRIZE: </b> Monoprice 3-D printer<br><br>
-                        <b>TEAM: </b> Julian Mendel, Mark Nasielski, Serene Kamal, Michelle Du, Eric Sarnoff Espinosa<br><br>
-                        <b>PROJECT: </b> With a special glove, users can use sign language to change the color of an LED.<br></p>
+            <div class="introduction container-fluid">
+                <div class="col-sm-6">
+                    <img id="intro_img" src="/img/history/collage.png" alt="historical picture">
                 </div>
-                <div class="col-sm-4">
-                    <h3 class="history_h3">SECOND PLACE</h3>
-                    <h4 class="history_h4">Less Stress Dress</h4>
-                    <img src="/img/history/2018_2ndPlace.JPG" alt="2018 second place" width="100%" height="100%">
-                    <p class="history_p"><b>PRIZE: </b> Amazon Echo<br><br>
-                        <b>TEAM: </b> Jimmy Byrne, Josh Ren, Anshul Aggarwal, Nina Chikanov, Allison Doami<br><br>
-                        <b>PROJECT: </b> Aimed at visually impaired people, this project takes current weather information around the world to choose the perfect outfit for the user.</p>
+                <div class="col-sm-6">
+                    <p class="intro_p">
+                        IDEA Hacks was founded in 2014 by members of UCLA IEEE and Theta Tau Upsilon Delta. Ever since our first hackathon in January 2015, IDEA Hacks’ vision has been to provide engineering students with a space to learn, create, and inspire one another. As the first and largest hardware hackathon in California, we encourage interdisciplinary teams to build hands-on components as opposed to a software hackathon. <br> <br> Throughout the years we’ve increased the breadth of our event, and at our last hackathon almost 300 hackers participated. Our goals are to benefit the engineering community and the community as a whole by promoting innovation in areas that matter. Featured projects include an ASL Recognition Platform, a Light-Up Frisbee, and many more! Take a look at past winners, sponsors, and themes to see where we've come from!</p>
                 </div>
-                <div class="col-sm-4">
-                    <h3 class="history_h3">THIRD PLACE</h3>
-                    <h4 class="history_h4">Safe Stove</h4>
-                    <img src="/img/history/2018_3rdPlace.JPG" alt="2018 third place" width="100%" height="100%">
-                    <p class="history_p"><b>PRIZE:</b> Quadcopter drone<br><br>
-                        <b>TEAM:</b> Chris Hailey, Ishan Shah, Joel Joseph, Adithya Bellathur, Janeline Wong<br><br>
-                        <b>PROJECT:</b> Using ultra sonic sensors, capacitive touch and facial recognition to reduce the likely hood of cooking fires.</p>
-                </div>
-            </div>
-            <div class='container'>
-                <div class="col-sm-12" style='display: block;'>
-                    <h2 class="history_h2 fancy_lines">2018 SPONSORS</h2>
-                </div>
-            </div>
-            <div class="sponsor_img text-center container">
-                <img src="/img/history/att.png" alt="at&t_logo" width="20%">
-                <img src="/img/history/tractionlabs.png" alt="traction_labs_logo" width="20%">
-                <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
-                <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
-                <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
-                <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
-                <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
-                <img src="/img/history/google.png" alt="google_logo" width="20%">
-                <img src="/img/history/cypress.png" alt="cypress_logo" width="20%">
             </div>
         </div>
 
-        <div id="sports_tech">
-            <h2 class="history_h2 white_text fancy_lines">2017 - SPORTS TECHNOLOGY</h2>
-            <div class="places">
-                <div class="col-sm-4">
-                    <h3 class="history_h3 white_text">FIRST PLACE</h3>
-                    <h4 class="history_h4 white_text">Light-Up Frisbee</h4>
-                    <img src="/img/history/2017_1stPlace.jpg" alt="2017 first place" width="100%" height="100%">
-                    <p class="history_p white_text"><b>PRIZE: </b>New Matter 3-D printer<br><br>
-                        <b>TEAM: </b>Andrew Chen, Matthew Wong, Robert Zalog, and Christine Chen (not pictured)<br><br>
-                        <b>PROJECT: </b>A ‘smart’ Frisbee that measures angular velocity while it is being thrown and gives feedback to the user once it is caught. Uses an Arduino that signals to the user through RGB LEDs.</p>
+        <!-- 2019 -->
+        <div id="nineteen" class="history-year clearfix">
+            <div class="old-logo text-center">
+                <img src="/img/history/2019 Logo.png" alt="Logo for 2019" width="100%">
+            </div>
+            <div class="text-center">
+                <img class="year-title" src="/img/history/2019 - travel upgrade.png" alt="2019 - Travel Upgrade">
+            </div>
+
+            <div class="places col-xs-12 row">
+                <div class="place col-sm-4 text-center">
+                    <h2>First Place: Pop 'n Lock</h2>
+                    <img src="/img/history/2019_1stPlace.JPG" alt="2019 first place" width="100%">
+                    <p> Prize: Microduino mCookie Kit<br><br> Team: Matthew Wang, Ashvin Nagarajan, Jeff Anderson, Allison Chen, Juan Banchs<br><br> Project: Our project was a Smart Lock that used an industry standard ball-bearing lock design and an arduino powered RFID sensor so that the consumer could lock and unlock the lock using only a BruinCard. We used CAD models and 3D printed the housing for the mechanical and electrical components. We presented it as a improvement upon existing smart locks that are susceptible to malware and those that are not physically secure.<br></p>
                 </div>
-                <div class="col-sm-4">
-                    <h3 class="history_h3 white_text">SECOND PLACE</h3>
-                    <h4 class="history_h4 white_text">Rundora</h4>
-                    <img src="/img/history/2017_2ndPlace.jpg" alt="2017second place" width="100%" height="100%">
-                    <p class="history_p white_text"><b>PRIZE: </b>Amazon Echo<br><br>
-                        <b>TEAM: </b>Tim Ling, Shuang Feng, Jingxian Xu, and Tianyu Deng<br><br>
-                        <b>PROJECT: </b>Device changes the tempo of the music based on the heart rate of the runner.</p>
+                <div class="place col-sm-4 text-center">
+                    <h2>Second Place: Braille Translator</h2>
+                    <img src="/img/history/2019_2ndPlace.JPG" alt="2019 second place" width="100%">
+                    <p> Prize: Amazon Echo<br><br> Team: Garo Mazmanian, Tanmaya Hada, Pranav Balgi, Peter Oh, Hersh Joshi<br><br> Project: The braille reader reads braille of one script, translates it, and then speaks it out in the listener's native tongue. This aims to make travel more accessible to the blind population by allowing the blind to understand braille in a different language.<br></p>
                 </div>
-                <div class="col-sm-4">
-                    <h3 class="history_h3 white_text">THIRD PLACE</h3>
-                    <h4 class="history_h4 white_text">Spiro</h4>
-                    <img src="/img/history/2017_3rdPlace.jpg" alt="2017 third place" width="100%" height="100%">
-                    <p class="history_p white_text"><b>PRIZE: </b>Mechanical Keyboard<br><br>
-                        <b>TEAM: </b>Andrew Arifin, Sean Oh, Jonathan Hurwitz, and Robert Devlin<br><br>
-                        <b>PROJECT: </b>Spiro is a device designed to help people better manage anxiety. Using an elastic chestband to alert you to irregular breathing potentially, the paired app and smartwatch guides the user through a self-regulation breathing exercise. Using customizable colors and soft lighting, the device helps a user take a step back from their situation and just breathe.<br><br></p>
+                <div class="place col-sm-4 text-center">
+                    <h2>Third Place: 3feet</h2>
+                    <img src="/img/history/2019_3rdPlace.JPG" alt="2019 third place" width="100%">
+                    <p> Prize: Eraseable notebook<br><br> Team: Shriniket Buche, Bochi Lin, Jae Hyeong Park, Richard DeAmicis, Wei Dong<br><br> Project: 3feet is a hardware and software bicycle and electric scooter protection system. The system utilizes a number of sensors on the bicycle to record when automobiles are approaching. The rider is notified by a vibration in the handlebars when a vehicle is approaching and a system of lights attempt to notify the vehicle of the riders presence. Another sensor detects when a crash has occurred and sets off an auditory and visual alarm in the event the rider is knocked out and lying in the middle of the street. The most valuable feature of the system is the 3feet detection. If a vehicle breaks the 3feet law, the hardware notifies the software running on the users cell phone. An incident report is generated and stored on a database. This information can then be shared with city planners and other organizations so changes to the infrastructure can be made before someone dies, not after as is too <br></p>
                 </div>
             </div>
-            <div class="col-sm-12">
-                <h2 class="history_h2 white_text fancy_lines">2017 SPONSORS</h2>
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2019's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img class="sponsor-logo" src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
+                        <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
+                        <img src="/img/history/microduino.png" alt="microduino_logo" width="20%">
+                        <img src="/img/history/tgif.png" alt="the_green_initiative_logo" width="20%">
+                        <img src="/img/history/google.png" alt="google_logo" width="20%">
+                        <img src="/img/history/qualcomm.png" alt="qualcomm_logo" width="20%">
+                        <img src="/img/history/bellapita.png" alt="bella_pita_logo" width="20%">
+                        <img src="/img/history/mamma_chia.png" alt="mamma_chia_logo" width="20%">
+                        <img src="/img/history/rhythm.png" alt="rhythm_logo" width="20%">
+                        <img src="/img/history/amplify.png" alt="amplify_logo" width="20%">
+                        <img src="/img/history/coffee.png" alt="better_than_coffee_logo" width="20%">
+                        <img src="/img/history/800.png" alt="800_logo" width="20%">
+                        <img src="/img/history/hci.png" alt="UCLA_healthy_campus_logo" width="20%">
+                        <img src="/img/history/yerba.png" alt="guayaki_logo" width="20%">
+                        <img src="/img/history/EPIC.png" alt="epic_logo" width="20%">
+                    </div>
+                </div>
             </div>
-            <div class="sponsor_img text-center">
-                <img src="/img/history/xilinx.png" alt="xilinx_logo" width="20%">
-                <img src="/img/history/microduino.png" alt="microduino_logo" width="20%">
-                <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
-                <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
-                <img src="/img/history/att.png" alt="at&t_logo" width="20%">
-                <img src="/img/history/namecheap-logo.png" alt="namecheap_logo" width="10%">
-                <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
-                <img src="/img/history/newmatter.png" alt="new_matter_logo" width="20%">
-                <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
-                <img src="/img/history/mulesoft.png" alt="mulesoft_logo" width="20%">
-                <img src="/img/history/qualcomm.png" alt="qualcomm_logo" width="20%">
-                <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
-                <img src="/img/history/atmel.png" alt="atmel_logo" width="20%">
-                <img src="/img/history/Altera.png" alt="altera_logo" width="20%">
-                <img src="/img/history/make-school.png" alt="make_school_logo" width="20%">
+        </div>
+
+        <!-- 2018 -->
+        <div id="eighteen" class="history-year clearfix">
+            <div class="old-logo text-center">
+                <img src="/img/history/2018 Logo.png" alt="Logo for 2018" width="100%">
+            </div>
+            <div class="text-center">
+                <img class="year-title" src="/img/history/2018 - home automation.png" alt="2018 - Home Automation">
+            </div>
+
+            <div class="places col-xs-12 row">
+                <div class="place col-sm-4 text-center">
+                    <h2>First Place: ASL Recognition Platform</h2>
+                    <img src="/img/history/2018_1stPlace.JPG" alt="2018 first place" width="100%">
+                    <p> Prize: Monoprice 3-D printer<br><br> Team: Julian Mendel, Mark Nasielski, Serene Kamal, Michelle Du, Eric Sarnoff Espinosa<br><br> Project: With a special glove, users can use sign language to change the color of an LED.<br></p>
+                </div>
+                <div class="place col-sm-4 text-center">
+                    <h2>Second Place: Less Stress Dress</h2>
+                    <img src="/img/history/2018_2ndPlace.JPG" alt="2018 second place" width="100%">
+                    <p> Prize: Amazon Echo<br><br> Team: Jimmy Byrne, Josh Ren, Anshul Aggarwal, Nina Chikanov, Allison Doami<br><br> Project: Aimed at visually impaired people, this project takes current weather information around the world to choose the perfect outfit for the user.
+                </div>
+                <div class="place col-sm-4 text-center">
+                    <h2>Third Place: Safe Stove</h2>
+                    <img src="/img/history/2018_3rdPlace.JPG" alt="2018 third place" width="100%">
+                    <p> Prize: Quadcopter drone<br><br> Team: Chris Hailey, Ishan Shah, Joel Joseph, Adithya Bellathur, Janeline Wong<br><br> Project: Using ultrasonic sensors, capacitive touch and facial recognition to reduce the likely hood of cooking fires.</p>
+                </div>
+            </div>
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2018's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img src="/img/history/att.png" alt="at&t_logo" width="20%">
+                        <img src="/img/history/tractionlabs.png" alt="traction_labs_logo" width="20%">
+                        <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
+                        <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
+                        <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
+                        <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
+                        <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
+                        <img src="/img/history/google.png" alt="google_logo" width="20%">
+                        <img src="/img/history/cypress.png" alt="cypress_logo" width="20%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2017 -->
+        <div id="seventeen" class="history-year clearfix">
+            <div class="old-logo text-center">
+                <img src="/img/history/2017 Logo.jpg" alt="Logo for 2017" width="100%">
+            </div>
+            <div class="text-center">
+                <img class="year-title" src="/img/history/2017 - sports tech.png" alt="2017 - Sports Technology">
+            </div>
+
+            <div class="places col-xs-12 row">
+                <div class="place col-sm-4 text-center">
+                    <h2>First Place: Light-Up Frisbee</h2>
+                    <img src="/img/history/2017_1stPlace.JPG" alt="2017 first place" width="100%">
+                    <p> Prize: New Matter 3-D printer<br><br> Team: Andrew Chen, Matthew Wong, Robert Zalog, and Christine Chen (not pictured)<br><br> Project: A ‘smart’ Frisbee that measures angular velocity while it is being thrown and gives feedback to the user once it is caught. Uses an Arduino that signals to the user through RGB LEDs.<br></p>
+                </div>
+                <div class="place col-sm-4 text-center">
+                    <h2>Second Place: Rundora</h2>
+                    <img src="/img/history/2017_2ndPlace.JPG" alt="2017 second place" width="100%">
+                    <p> Prize: Amazon Echo<br><br> Team: Tim Ling, Shuang Feng, Jingxian Xu, and Tianyu Deng<br><br> Project: Device changes the tempo of the music based on the heart rate of the runner.<br></p>
+                </div>
+                <div class="place col-sm-4 text-center">
+                    <h2>Third Place: Spiro</h2>
+                    <img src="/img/history/2017_3rdPlace.JPG" alt="2017 third place" width="100%">
+                    <p> Prize: Mechanical keyboard<br><br> Team: Andrew Arifin, Sean Oh, Jonathan Hurwitz, and Robert Devlin<br><br> Project: Spiro is a device designed to help people better manage anxiety. Using an elastic chestband to alert you to irregular breathing potentially, the paired app and smartwatch guides the user through a self-regulation breathing exercise. Using customizable colors and soft lighting, the device helps a user take a step back from their situation and just breathe.
+                </div>
+            </div>
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2017's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img src="/img/history/xilinx.png" alt="xilinx_logo" width="20%">
+                        <img src="/img/history/microduino.png" alt="microduino_logo" width="20%">
+                        <img src="/img/history/Northrop-Grumman.png" alt="northrop_gruman_logo" width="20%">
+                        <img src="/img/history/biotronik.png" alt="biotronik_logo" width="20%">
+                        <img src="/img/history/att.png" alt="at&t_logo" width="20%">
+                        <img src="/img/history/namecheap-logo.png" alt="namecheap_logo" width="10%">
+                        <img src="/img/history/amazon-labs126.png" alt="amazon_lab126_logo" width="20%">
+                        <img src="/img/history/newmatter.png" alt="new_matter_logo" width="20%">
+                        <img src="/img/history/Texas-Instruments.png" alt="texas_instruments_logo" width="20%">
+                        <img src="/img/history/mulesoft.png" alt="mulesoft_logo" width="20%">
+                        <img src="/img/history/qualcomm.png" alt="qualcomm_logo" width="20%">
+                        <img src="/img/history/digikey.png" alt="digi-key_logo" width="20%">
+                        <img src="/img/history/atmel.png" alt="atmel_logo" width="20%">
+                        <img src="/img/history/Altera.png" alt="altera_logo" width="20%">
+                        <img src="/img/history/make-school.png" alt="make_school_logo" width="20%">
+                    </div>
+                </div>
             </div>
         </div>
 

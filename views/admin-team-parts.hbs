@@ -39,16 +39,16 @@
         <div class='text-center container-fluid'>
             <ul class='filter-list'>
                 {{#each teams}}
-                    <div class='col-md-3'>
-                        <div class='team'>
-                            <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
-                            <div class='container-fluid parts-list'>
-                                {{#each this.parts }}
-                                    <p class='text-center part-name filter-key'>{{ this.name }} x{{ this.quantity }}</p>
-                                {{/each}}
-                            </div>
+                <div class='col-md-3'>
+                    <div class='team'>
+                        <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
+                        <div class='container-fluid parts-list'>
+                            {{#each this.parts }}
+                            <p class='text-center part-name filter-key'>{{ this.name }} x{{ this.quantity }}</p>
+                            {{/each}}
                         </div>
                     </div>
+                </div>
         </div>
         {{/each}}
         </ul>

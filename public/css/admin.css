@@ -2,14 +2,14 @@
 
 .mailing-list .email-list {
 	display: none;
-	background-color: rgb(255, 255, 244);
+	background-color: #fbf3f0;
 	padding: 10px;
 	border-radius: 10px;
 }
 
 .mailing-header {
 	padding-top: 130px;
-	width: 25%;
+	width: 30%;
 }
 
 .description {

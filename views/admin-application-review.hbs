@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -23,15 +23,14 @@
     <script src='/js/application-review-modal.js'></script>
     <script src='/js/filter.js'></script>
 </head>
-<body class='background-red'>
+<body class='background'>
     <div class='wrapper'>
         <!-- NAVBAR -->
         {{> navbar }}
 
         <!-- BANNER -->
         <div class='text-center'>
-            <img class="banner" src="/img/admin/IH_App.png">
-            <h1 class='description'>Application review and database</h1>
+            <img class="banner" src="/img/admin/applications.png">
         </div>
 
         <!-- STATS -->
@@ -69,22 +68,22 @@
         <!-- APPLICATION LIST -->
         <ul class='application-list container filter-list'>
             {{#each applications}}
-                <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
-                    <div class='row'>
-                        <div class='col-sm-3 col-xs-6'>
-                            <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
-                        </div>
-                        <div class='col-sm-3'>
-                            <p class='filter-key year'>{{#if this.year}}{{this.year}}{{/if}}</p>
-                        </div>
-                        <div class='col-sm-3'>
-                            <p class='filter-key school'>{{#if this.school}}{{this.school}}{{/if}}</p>
-                        </div>
-                        <div class='col-sm-3 col-xs-6'>
-                            <p class='application-status filter-key'>{{ this.applicationStatus }}</p>
-                        </div>
+            <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
+                <div class='row'>
+                    <div class='col-sm-3 col-xs-6'>
+                        <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
                     </div>
-                </li>
+                    <div class='col-sm-3'>
+                        <p class='filter-key year'>{{#if this.year}}{{this.year}}{{/if}}</p>
+                    </div>
+                    <div class='col-sm-3'>
+                        <p class='filter-key school'>{{#if this.school}}{{this.school}}{{/if}}</p>
+                    </div>
+                    <div class='col-sm-3 col-xs-6'>
+                        <p class='application-status filter-key'>{{ this.applicationStatus }}</p>
+                    </div>
+                </div>
+            </li>
             {{/each}}
         </ul>
     </div>

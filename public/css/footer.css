@@ -3,6 +3,11 @@
 	text-align: center;
 }
 
+.myFooter a:hover {
+	text-decoration: none;
+	color: initial;
+}
+
 #fb {
 	width: 40px;
 	margin: 20px 10px;
