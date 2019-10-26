@@ -15,7 +15,7 @@ label {
 
 input[type="text"] {
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 20px;
 	color: #fbf3f0;
 	text-align: center;
 	background: transparent;
@@ -29,10 +29,7 @@ input[type="text"] {
 }
 
 .banner {
-	margin-top: 116px;
-	margin-bottom: 50px;
 	text-align: center;
-	color: white;
 }
 
 .banner h1 {
@@ -52,7 +49,8 @@ input[type="text"] {
 }
 
 .banner img {
-	width: 370px;
+	padding-top: 130px;
+	width: 43%;
 }
 
 .checkout-container {
@@ -76,12 +74,13 @@ input[type="text"] {
 #barcode-scan,
 #checkin-scan {
 	margin: auto;
-	margin-bottom: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	background-color: rgb(42, 45, 78);
 	border-radius: 40px;
-	max-width: 991px;
+	max-width: 800px;
 	min-height: 306px;
-	padding: 40px 0px;
+	padding: 20px 0px;
 	line-height: 50px;
 }
 
@@ -96,9 +95,8 @@ input[type="text"] {
 
 .checkout h2,
 .checkin h2 {
-	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 25px;
 	color: #fbf3f0;
 }
 
@@ -117,12 +115,12 @@ input[type="text"] {
 
 #checkout-quantity,
 #checkin-quantity {
-	width: 63px;
-	height: 56px;
+	width: 50px;
+	height: 40px;
 	margin-left: 20px;
 	border-radius: 0px;
 	border: 3px solid rgb(216, 216, 216);
-	font-size: 25px;
+	font-size: 18px;
 	text-align: center;
 	outline: none;
 }
@@ -146,6 +144,10 @@ input[type="text"] {
 	justify-content: center;
 }
 
+#go-back {
+	margin-bottom: 30px;
+}
+
 #go-back p,
 .success p {
 	font-size: 24px;
@@ -157,11 +159,10 @@ input[type="text"] {
 .success button,
 .submit-button {
 	background: #f2ccb5;
-	border-radius: 18px;
-	border: none;
-	font-size: 36px;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	font-size: 20px;
 	outline: none;
+	border: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
 	color: white;
 }
 
@@ -169,6 +170,7 @@ input[type="text"] {
 .success button:hover,
 .submit-button:hover {
 	background-color: transparent;
+	border: 1px solid #f2ccb5;
 	color: #f2ccb5;
 	cursor: pointer;
 }
@@ -176,7 +178,7 @@ input[type="text"] {
 .submit-button {
 	display: inline-block;
 	width: 150px;
-	height: 56px;
+	height: 50px;
 	border-radius: 10px;
 	text-transform: uppercase;
 }
@@ -188,15 +190,17 @@ input[type="text"] {
 }
 
 .success {
-	margin: 300px auto;
+	margin-top: 200px;
+	text-align: center;
 }
 
 .success h1 {
 	text-transform: uppercase;
-	font-size: 144px;
-	margin-bottom: 0px;
+	font-size: 100px;
+	margin: 50px 0 10px 0;
 	line-height: 0.8em;
 }
+
 .checkout-body {
 	padding-top: 90px;
 	background-color: rgb(251, 243, 240);
@@ -227,13 +231,6 @@ input[type="text"] {
 .part-category:hover {
 	opacity: 0.5;
 }
-
-/*.parts-header {
-	color: rgb(42, 45, 78);
-	font-size: 50px;
-	font-weight: bold;
-	margin: 0px;
-}*/
 
 .parts-subtitle {
 	margin: 0px 0px 5px 0px;

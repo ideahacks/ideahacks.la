@@ -8,7 +8,7 @@ const getTeams = (req, res) => {
 }
 
 const getTeamCreation = (req, res) => {
-	res.render("admin-team-creation")
+	return res.render("admin-team-creation")
 }
 
 const postTeams = (req, res) => {
