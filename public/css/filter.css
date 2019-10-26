@@ -8,6 +8,7 @@
 
 input {
 	color: black;
+	width: 200px;
 }
 
 .filter-label {
@@ -16,6 +17,7 @@ input {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0px;
+	color: black;
 }
 
 .filter,
@@ -28,7 +30,7 @@ input {
 	border-radius: 0;
 	border: none;
 	border-bottom: solid #204784 1px;
-	width: 3%;
+	width: 45%;
 	min-width: 170px;
 
 	box-shadow: none;
