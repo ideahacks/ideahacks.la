@@ -38,22 +38,22 @@
         </div>
 
         <div class='admin-button'>
-          {{#if user.isAdmin}}
-          <a href='/admin'><button>ADMIN ACCESS</button></a>
-          {{/if}}
+            {{#if user.isAdmin}}
+            <a href='/admin'><button>ADMIN ACCESS</button></a> {{/if}}
         </div>
 
         <!-- CHANGE PROFILE INFORMATION-->
         <div class='container text-center'>
             <div class='ideahacks-form'>
-              <label>Team Number</label><p class='team-number'>{{user.teamNumber}}</p>
-              <label>Teammates</label>
-              <div class='user-info'>
-                {{#each user.teammates_names}}
-                <p>{{this}}</p>
-                {{/each}}
-              </div>
-              <hr class='border'>
+                <label>Team Number</label>
+                <p class='team-number'>{{user.teamNumber}}</p>
+                <label>Teammates</label>
+                <div class='user-info'>
+                    {{#each user.teammates_names}}
+                    <p>{{this}}</p>
+                    {{/each}}
+                </div>
+                <hr class='border'>
                 <form class='profile-form'>
                     <p class='profile-form-message'></p>
                     <div class='form-group'>

@@ -37,10 +37,7 @@
         <!-- DASHBOARD ACCESS -->
         <a href='/dashboard'>
             <button class='main-button'>MY DASHBOARD</button>
-        </a>
-        {{/if}}
-
-        {{#if onDashboard}}
+        </a> {{/if}} {{#if onDashboard}}
 
         <!-- APPLICATION -->
         <li class='dashboard'><a href='/dashboard/application'>Application</a></li>
@@ -54,9 +51,7 @@
         <!-- PROFILE -->
         <li class='dashboard me'><a href='/dashboard/me'>Me</a></li>
 
-        {{/if}}
-
-        {{#if onMain}}
+        {{/if}} {{#if onMain}}
         <div class='dropdown'>
             <li><a href='/#about'>About</a></li>
             <div class='dropdown-content'>
