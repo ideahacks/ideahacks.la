@@ -15,7 +15,6 @@ $(() => {
 				team = {
 					teamNumber: teamNumber
 				}
-				alert("here2")
 				//Creates team
 				$.ajax({ url: "/api/teams", type: "POST", data: team })
 					.then(() => {
@@ -38,7 +37,6 @@ $(() => {
 			$.get("/api/users/" + email)
 				.then(member => {
 					if (member.hasTeam) {
-						alert("here")
 						return errorHandler("Email " + member.email + " is already associated with a team!")
 					} else {
 						membersProcessed++
@@ -48,7 +46,6 @@ $(() => {
 								//Loop through members to see if each exists
 								$.get("/api/users/" + email)
 									.then(member => {
-										alert(member.email)
 										//Check if the member is already part of a team
 
 										member.hasTeam = true
@@ -108,7 +105,6 @@ $(() => {
 })()
 
 function deleteTeam(teamNumber) {
-	alert(teamNumber)
 	$.ajax({
 		url: "/api/teams",
 		type: "DELETE",
@@ -122,7 +118,6 @@ function errorHandler(err) {
 	$(this).hide()
 
 	setTimeout(location.reload.bind(location), 3000)
-	alert("here3")
 	// Exits script
 	throw new Error(err)
 }
