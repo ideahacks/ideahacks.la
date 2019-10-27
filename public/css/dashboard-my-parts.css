@@ -9,6 +9,11 @@ body {
 	color: black;
 }
 
+.no-team {
+	font-size: 20px;
+	color: #2a2d4e;
+}
+
 .banner img {
 	width: 20%;
 }
