@@ -6,6 +6,10 @@
 	color: #2a2d4e;
 }
 
+.banner img {
+	width: 35%;
+}
+
 form {
 	font-family: "Roboto Condensed";
 	margin-bottom: 10px;
