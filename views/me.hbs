@@ -37,6 +37,12 @@
             <h3 id='welcome-name'>{{user.firstName}} {{user.lastName}}</h3>
         </div>
 
+        <div class='admin-button'>
+          {{#if user.isAdmin}}
+          <a href='/admin'><button>ADMIN ACCESS</button></a>
+          {{/if}}
+        </div>
+
         <!-- CHANGE PROFILE INFORMATION-->
         <div class='container text-center'>
             <div class='ideahacks-form'>

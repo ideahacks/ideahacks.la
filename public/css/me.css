@@ -14,6 +14,22 @@
 	font-family: "Roboto Condensed";
 }
 
+.admin-button {
+	text-align: center;
+}
+
+.admin-button button {
+	background-color: #d46c6c;
+	border: 1px solid #d46c6c;
+	color: #5d3131;
+}
+
+.admin-button button:hover {
+	background-color: #5d3131;
+	border: 1px solid #5d3131;
+	color: #d46c6c;
+}
+
 /*----- CHANGE PROFILE INFORMATION -------*/
 .ideahacks-form {
 	background-color: #40698f;
