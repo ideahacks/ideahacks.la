@@ -221,10 +221,6 @@
                                 <label style="text-align: left">If so, please share you experience with us.</label>
                                 <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
                             </div>
-                            <!-- <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label style="text-align: left">Do you have any past hackathon experience?</label>
-                            <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
-                        </div> -->
                     </fieldset>
                 </div>
 
@@ -241,14 +237,7 @@
                             </div>
                             <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
                         </div>
-                        <!-- <span class='row'>
-                            <div class='form-group col-xs-10 col-md-6'>
-                                <label>Will you need a travel reimbursement?</label>
-                                <select class='form-control' name='needsReimbursement'>
-                                    <option {{#if user.doesNeedReimbursement}} selected{{/if}}>YES</option>
-                                    <option {{#if user.doesNotNeedReimbursement}} selected{{/if}}>NO</option>
-                                </select> </div>
-                        </span> -->
+
                     <span>
                             <div class='form-group col-xs-10 col-md-6'>
                                 <label>Will you bring a vehicle and need parking?</label>
@@ -260,29 +249,7 @@
                                     <option {{#if user.doesNotNeedParking}} selected{{/if}}>NO</option>
                                 </select>
                             </div>
-                        </span> {{!--
-                    <div class='form-group col-sm-10'>
-                        <label>Will you need a travel reimbursement?</label>
-                        <div class="form-check form-check-inline">
-                            <label class="radio-inline">
-                                    <input type="radio" name="reimbursement">&nbsp;&nbsp;Yes
-                                </label>
-                            <label class="radio-inline">
-                                    <input type="radio" name="reimbursement">&nbsp;&nbsp;No
-                                </label>
-                        </div>
-                    </div>
-                    <div class='form-group col-md-10 col-xs-10'>
-                        <label>Will you bring a vehicle and need parking?</label>
-                        <div class="form-check form-check-inline">
-                            <label class="radio-inline">
-                                    <input type="radio" name="parking">&nbsp;&nbsp;Yes
-                                </label>
-                            <label class="radio-inline">
-                                    <input type="radio" name="parking">&nbsp;&nbsp;No
-                                </label>
-                        </div>
-                    </div> --}}
+                        </span>
                     <span class='row'></span>
                     <div class='form-group col-md-3 col-xs-10'>
                         <label>Shirt Size*</label>
@@ -297,7 +264,6 @@
             </div>
             <!-- BUTTONS -->
             <div class='buttons row'>
-                <!--<button class='save-application'>SAVE</button> -->
                 <button class='submit-application'>SUBMIT</button>
             </div>
             <p class="submit-message" style='color: transparent;'></p>

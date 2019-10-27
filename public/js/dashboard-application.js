@@ -60,10 +60,6 @@ function getAndSendApplicationData(toggleHasApplication) {
 		lastName: $('input[name="lastName"]').val(),
 		phone: $('input[name="phone"]').val(),
 		school: school_entry,
-		// school: $('input[name="school"]')
-		// 	.find(":selected")
-		// 	.text(),
-		// school_other: $('input[name="school_other"]').val(),
 		major: $('input[name="major"]').val(),
 		year: $('select[name="year"]')
 			.find(":selected")
