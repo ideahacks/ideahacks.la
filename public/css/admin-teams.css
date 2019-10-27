@@ -3,11 +3,11 @@
 	margin-bottom: 30px;
 	text-align: center;
 	color: black;
+	font-size: 18px;
 }
 
-.banner h1 {
-	font-size: 45px;
-	font-weight: bolder;
+.banner img {
+	width: 30%;
 }
 
 body {
