@@ -9,8 +9,6 @@ mainRouter.get("/", setResLocals, staticHandlers.getMain)
 
 mainRouter.get("/team", setResLocals, staticHandlers.getTeam)
 
-mainRouter.get("/extended-faq", setResLocals, staticHandlers.getFAQ)
-
 mainRouter.get("/history", setResLocals, staticHandlers.getHistory)
 
 mainRouter.get("/login", setResLocals, authHandlers.getLogin)
