@@ -14,8 +14,25 @@
 	font-family: "Roboto Condensed";
 }
 
+.team-number {
+	color: white;
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
 .admin-button {
 	text-align: center;
+}
+
+.border {
+	width: 80%;
+}
+
+.user-info {
+	text-align: center;
+	color: white;
+	margin: auto;
+	font-size: 18px;
 }
 
 .admin-button button {
@@ -44,8 +61,7 @@
 .ideahacks-form label {
 	color: #70bfe6;
 	text-decoration: bold;
-	font-size: 17px;
-	margin-bottom: 15px;
+	font-size: 18px;
 }
 
 .ideahacks-form input,
@@ -53,7 +69,7 @@
 	border: none;
 	outline: none;
 	font-family: inherit;
-	font-size: 17px;
+	font-size: 18px;
 	color: black;
 	text-align: center;
 	text-decoration: bold;
