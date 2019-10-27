@@ -45,6 +45,7 @@
         <!-- CHANGE PROFILE INFORMATION-->
         <div class='container text-center'>
             <div class='ideahacks-form'>
+              {{#if user.hasTeam}}
                 <label>Team Number</label>
                 <p class='team-number'>{{user.teamNumber}}</p>
                 <label>Teammates</label>
@@ -53,6 +54,9 @@
                     <p>{{this}}</p>
                     {{/each}}
                 </div>
+                {{else}}
+                <p class='no-team'>Looks like you don't have a team yet!</p>
+                {{/if}}
                 <hr class='border'>
                 <form class='profile-form'>
                     <p class='profile-form-message'></p>

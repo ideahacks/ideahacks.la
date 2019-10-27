@@ -139,19 +139,6 @@ body {
 	border-radius: 0px 25px 25px 0px;
 }
 
-/* took out line through header */
-/* div.header:after {
-	height: 3px;
-	background: #FC7071;
-	content: "";
-	width: 13%;
-	right: 550px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
-	bottom: 35px;
-	z-index: -1;
-} */
 
 fieldset {
 	padding-left: 11%;
@@ -203,7 +190,7 @@ textarea {
 textarea::placeholder,
 input::placeholder {
 	text-transform: uppercase;
-	color: #fbf3f0 !important;
+	color: #b1b1b1 !important;
 }
 
 @media (max-width: 828px) {
