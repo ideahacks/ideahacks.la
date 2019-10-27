@@ -28,8 +28,8 @@ input[type="text"] {
 	background-color: rgb(42, 45, 78);
 	color: white;
 	padding: 20px;
-	font-size: 25px;
-	border-radius: 30px;
+	font-size: 20px;
+	border-radius: 20px;
 }
 
 #users-input {
@@ -39,7 +39,11 @@ input[type="text"] {
 	color: white;
 	padding: 20px;
 	font-size: 18px;
-	border-radius: 30px;
+	border-radius: 20px;
+}
+
+#users-input h1 {
+	font-size: 25px;
 }
 
 .banner {
@@ -47,19 +51,19 @@ input[type="text"] {
 }
 
 .team-creation-banner {
-	width: 40%;
+	width: 35%;
 }
 
 .submit-button {
 	background: #f2ccb5;
 	border: none;
-	border-radius: 10px;
+	border-radius: 7px;
 	font-size: 20px;
+	font-family: "Roboto Condensed";
 	transition: background-color 0.3s ease, color 0.3s ease;
 	outline: none;
 	color: white;
 	width: 100px;
-	height: 50px;
 }
 
 .submit-button:hover {

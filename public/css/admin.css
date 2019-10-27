@@ -2,19 +2,19 @@
 
 .mailing-list .email-list {
 	display: none;
-	background-color: #fbf3f0;
+	background-color: white;
 	padding: 10px;
 	border-radius: 10px;
 }
 
 .mailing-header {
 	padding-top: 130px;
-	width: 30%;
+	width: 25%;
 }
 
 .description {
-	font-size: 20px;
-	padding-bottom: 20px;
+	font-size: 18px;
+	margin-top: 10px;
 }
 
 @media (max-width: 990px) {
@@ -27,7 +27,7 @@
 
 .feedback-wrapper,
 .mailing-wrapper {
-	padding: 25px 0 50px;
+	padding: 20px 0 50px;
 }
 
 .mailing-list {
