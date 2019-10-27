@@ -33,23 +33,22 @@
         <!-- NAVBAR -->
         {{> navbar }}
         <div class="banner text-center">
-            <h1>Team Creation</h1>
+            <img class='team-creation-banner' src="/img/admin/teamcreation.png">
         </div>
 
         <div class="container text-center">
             <div id="team-input">
+                <p>Enter a new team #</p>
                 <form id="team-submit" onsubmit="return false;">
-                    Team Number:
                     <input type="text" name="team-number" required>
                 </form>
             </div>
 
             <div id="users-input" style="display: none;">
+                <h1>Member emails</h1>
+                <p>Separate with commas (no spaces)</p>
                 <form onsubmit="return false;">
-                    Members:
-                    <p>Enter emails here. Separate them with commas (no spaces after the commas).</p>
                     <textarea id="members-list" name="members" required></textarea>
-                    <br>
                     <input type="submit" class="submit-button">
                 </form>
             </div>

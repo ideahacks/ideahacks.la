@@ -3,21 +3,14 @@ body {
 }
 
 .banner {
-	margin: auto;
-	max-width: 1020px;
-	margin-top: 130px;
-	margin-bottom: 30px;
+	text-align: center;
+	margin-top: 110px;
+	margin-bottom: 10px;
 	color: black;
 }
-.banner h1 {
-	text-transform: uppercase;
-	font-size: 54px;
-	font-weight: bold;
-	color: #2a2d4e;
-}
 
-.banner p {
-	font-size: 48px;
+.banner img {
+	width: 25%;
 }
 
 .parts-list {
@@ -33,11 +26,10 @@ body {
 #labels {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 30px;
 }
 
 #labels h1 {
-	font-size: 42px;
+	font-size: 25px;
 	line-height: 60px;
 	color: #2a2d4e;
 }

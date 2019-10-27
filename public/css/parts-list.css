@@ -13,7 +13,7 @@ label {
 	display: none;
 }
 
-input[type="text"] {
+.admin-input {
 	font-weight: bold;
 	font-size: 20px;
 	color: #fbf3f0;
@@ -30,6 +30,10 @@ input[type="text"] {
 
 .banner {
 	text-align: center;
+}
+
+.parts-banner {
+	margin: 30px 0 20px 0;
 }
 
 .banner h1 {

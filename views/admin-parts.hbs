@@ -42,7 +42,7 @@
                 <h1 id='checkout-prompt'>To CHECK OUT a part</h1>
                 <h2>Enter Team #</h2>
                 <form id='checkout-team-input'>
-                    <input type="text">
+                    <input class='admin-input' type="text">
                 </form>
             </div>
 
@@ -50,7 +50,7 @@
                 <h1 id='checkin-prompt'>To CHECK IN a part</h1>
                 <h2>Enter Team #</h2>
                 <form id='checkin-team-input'>
-                    <input type="text">
+                    <input class='admin-input' type="text">
                 </form>
             </div>
 
@@ -59,7 +59,7 @@
         <div id='barcode-scan' class='text-center' style="display: none;">
             <h1></h1>
             <form class="barcode-form" onsubmit="return false">
-                <input type="text" name="barcode" placeholder="SCAN A PART">
+                <input class='admin-input' type="text" name="barcode" placeholder="SCAN A PART">
                 <div class="scan-quantity">
                     <p>Enter a quantity:</p>
                     <input type="number" id="checkout-quantity" name="quantity">
