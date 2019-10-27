@@ -1,4 +1,5 @@
 const formatUser = require("../../helpers").formatters.formatUser
+const c = require("../constants")
 
 const getApplication = (req, res) => {
 	req.user = formatUser(req.user)
@@ -9,8 +10,6 @@ const postApplication = (req, res) => {
 	let oldHasApplicationStatus = req.user.hasApplication
 	for (let key in req.body) {
 		req.user[key] = req.body[key]
-		// console.log(req.user[key])
-		// console.log(req.body[key])
 	}
 
 	// process hasTeam
@@ -22,19 +21,15 @@ const postApplication = (req, res) => {
 	} else if (oldHasApplicationStatus === false && req.body.hasApplication === "true") {
 		req.user.hasApplication = true
 	}
-	req.user.save()
-
-	if (req.body.hasApplication === "false") {
-		return res.json({
-			status: "success",
-			message: "You have sucessfully saved!"
+	req.user
+		.save()
+		.then(() => {
+			return res.status(c.StatusOK).send("Successfully submitted!")
 		})
-	} else {
-		return res.json({
-			status: "success",
-			message: "You have sucessfully submitted!"
+		.catch(err => {
+			console.log(err)
+			return res.status(c.StatusInternalError).send(c.MessageInternalError + err)
 		})
-	}
 }
 
 module.exports = {
