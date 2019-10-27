@@ -95,4 +95,38 @@ function changeApplicationStatus(req, res) {
 		})
 }
 
+/**
+ * PUT /api/users/:email edits the user with the matching email
+ * given the edited values within the requst body.
+ * @returns 200 on successful edit
+ * @returns 404 on team not found, 500 on any other error
+ */
+
+userRouter.put("/api/users/:email", isAdmin, editUser)
+
+function editUser(req, res) {
+	User.findOne({ email: req.params.email })
+		.then(user => {
+			// If team does not exist, return not found
+			if (!user) {
+				return res.status(c.StatusNotFound).send("User with given email does not exist")
+			}
+
+			// Update team with info in request body and save
+			let updatedUser = Object.assign(user, req.body)
+
+			updatedUser
+				.save()
+				.then(() => {
+					return res.send(c.MessageOK)
+				})
+				.catch(err => {
+					return res.status(c.StatusInternalError).send(err)
+				})
+		})
+		.catch(err => {
+			return res.status(c.StatusInternalError).send(err)
+		})
+}
+
 module.exports = userRouter

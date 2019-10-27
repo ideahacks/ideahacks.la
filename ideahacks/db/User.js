@@ -15,6 +15,7 @@ const UserSchema = new Schema({
 	linkedin: { type: String, default: "" },
 	//resume: { type: String, default: "" },
 	hasTeam: { type: Boolean, default: false },
+	teamNumber: { type: Number, default: -1 },
 	teammates: { type: [String], default: [] },
 	teammates_names: { type: [String], default: [] },
 	foodRestrictions: { type: String, default: "" },

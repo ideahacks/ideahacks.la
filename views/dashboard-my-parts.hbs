@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Teams - Admin</title>
+    <title>My Team</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,44 +17,35 @@
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/admin-teams.css' />
+    <link rel='stylesheet' type='text/css' href='/css/dashboard-my-parts.css' />
 
     <!-- SCRIPTS -->
-    <script src="/js/admin-create-parts.js"></script>
 </head>
 <body>
-
-    <div class='wrapper'>
+    <div class="wrapper">
         <!-- NAVBAR -->
         {{> navbar }}
 
         <div class='banner'>
-            <img src='/img/admin/teamparts.png'>
-            <p>View what parts each team has checked out here!</p>
-            <p class='filter-description'>(You can filter by team number or part name)</p>
-            {{> filter }}
+            <img src='/img/myparts.png'>
         </div>
 
 
         <div class='text-center container-fluid'>
-            <ul class='filter-list'>
-                {{#each teams}}
-                <div class='col-md-3'>
-                    <div class='team'>
-                        <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
-                        <div class='container-fluid parts-list'>
-                            {{#each this.parts }}
-                            <p class='text-center part-name filter-key'>{{ this.name }} x{{ this.quantity }}</p>
-                            {{/each}}
-                        </div>
-                    </div>
+            <div class='parts-list'>
+                <div id='labels'>
+                    <h1>Name of Item</h1>
+                    <h1>Quantity</h1>
+                </div>
+                {{#each parts}}
+                <div id='part-entry'>
+                    <p>{{ this.name }}</p>
+                    <p>{{ this.quantity}}</p>
                 </div>
                 {{/each}}
-            </ul>
+            </div>
         </div>
-
     </div>
-
 
 </body>
 </html>

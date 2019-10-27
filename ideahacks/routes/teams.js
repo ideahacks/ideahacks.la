@@ -61,6 +61,7 @@ teamRouter.post("/api/teams", isAdmin, createTeam)
 function createTeam(req, res) {
 	// Check if given team has a teamNumber
 	let teamNumber = req.body.teamNumber
+
 	if (!teamNumber) {
 		return res.status(c.StatusInternalError).send("Missing team number!")
 	}
@@ -120,6 +121,18 @@ function editTeam(req, res) {
 				.catch(err => {
 					return res.status(c.StatusInternalError).send(err)
 				})
+		})
+		.catch(err => {
+			return res.status(c.StatusInternalError).send(err)
+		})
+}
+
+teamRouter.delete("/api/teams", isAdmin, deleteTeam)
+
+function deleteTeam(req, res) {
+	Team.deleteOne({ teamNumber: req.body.teamNumber })
+		.then(() => {
+			return res.send(c.MessageOK)
 		})
 		.catch(err => {
 			return res.status(c.StatusInternalError).send(err)
