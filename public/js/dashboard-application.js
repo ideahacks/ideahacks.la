@@ -19,7 +19,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		if (el.value !== "") teammateNames.push(el.value)
 	})
 
-	//find school entry
+	// find school entry
 	let school_entry = $('select[name="school"]')
 		.find(":selected")
 		.text()
@@ -55,6 +55,15 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
+	let hasExperience = false
+	if (
+		$('select[name="hasHackathonExperience"]')
+			.find(":selected")
+			.text() == "YES"
+	) {
+		hasExperience = true
+	}
+
 	let applicationData = {
 		firstName: $('input[name="firstName"]').val(),
 		lastName: $('input[name="lastName"]').val(),
@@ -74,9 +83,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		teammates_names: teammateNames,
 		foodRestrictions: $('input[name="foodRestrictions"]').val(),
 		skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
-		hasPastHackathonExperience: $('select[name="hasHackathonExperience"]')
-			.find(":selected")
-			.text(),
+		hasPastHackathonExperience: hasExperience,
 		pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
 		reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
 		themeIdea: $('textarea[name="themeIdea"]').val(),
@@ -84,9 +91,6 @@ function getAndSendApplicationData(toggleHasApplication) {
 		shirtSize: $('select[name="shirtSize"]')
 			.find(":selected")
 			.text(),
-		// needTravelReimbursement: $('select[name="needsReimbursement"]')
-		// 	.find(":selected")
-		// 	.text(),
 		needParking: $('select[name="needsParking"]')
 			.find(":selected")
 			.text(),
