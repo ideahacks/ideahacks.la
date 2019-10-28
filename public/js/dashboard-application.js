@@ -45,8 +45,12 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
-	if ($('select[name="hasHackathonExperience"]').find(":selected").text() == "YES" &&
-		$('textarea[name="pastHackathonExperience"]').val() == "") {
+	if (
+		$('select[name="hasHackathonExperience"]')
+			.find(":selected")
+			.text() == "YES" &&
+		$('textarea[name="pastHackathonExperience"]').val() == ""
+	) {
 		alert("Please specify your past hackathon experience.")
 		return false
 	}
