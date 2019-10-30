@@ -4,8 +4,11 @@ $(() => {
 	$("form").submit(e => {
 		e.preventDefault()
 
+		//make email case insensitive
+		let email_nocase = $('input[name="email"]').val().toLowerCase()
+
 		let registrationData = {
-			email: $('input[name="email"]').val(),
+			email: email_nocase,
 			password: $('input[name="password"]').val(),
 			passwordConfirm: $('input[name="password-confirm"]').val()
 		}
