@@ -7,7 +7,12 @@ li {
 }
 
 body {
-	background-color: #fbf3f0;
+	background-color: #f2ccb585;
+}
+
+.wrapper {
+	 background-color: #fbf3f0;
+	 flex-grow: 1;
 }
 
 .theme-red {
@@ -23,9 +28,6 @@ body {
 }
 
 /*********** BACKGROUNDS **************************/
-.background-light-red {
-	background-color: rgb(236, 187, 172);
-}
 
 .background-red {
 	background-color: #dd8064;
