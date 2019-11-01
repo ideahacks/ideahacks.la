@@ -6,7 +6,9 @@ $(() => {
 		e.preventDefault()
 
 		//make username case insensitive
-		let username_nocase = $('input[name="username"]').val().toLowerCase()
+		let username_nocase = $('input[name="username"]')
+			.val()
+			.toLowerCase()
 
 		let loginData = {
 			username: username_nocase,

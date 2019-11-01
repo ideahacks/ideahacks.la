@@ -5,7 +5,9 @@ $(() => {
 		e.preventDefault()
 
 		//make email case insensitive
-		let email_nocase = $('input[name="email"]').val().toLowerCase()
+		let email_nocase = $('input[name="email"]')
+			.val()
+			.toLowerCase()
 
 		let registrationData = {
 			email: email_nocase,
