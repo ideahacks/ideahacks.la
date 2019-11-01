@@ -1,9 +1,3 @@
-body {
-	/* background-color: #FBF3F0; */
-	background-color: #f2ccb5;
-	text-transform: uppercase;
-}
-
 @media (max-width: 1024px) {
 	body {
 		background-color: #fbf3f0;

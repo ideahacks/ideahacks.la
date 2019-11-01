@@ -73,7 +73,7 @@
 	z-index: 1;
 	width: 100%;
 	overflow: auto;
-	background-color: #f2ccb5;
+	background-color: rgb(64, 105, 143);
 }
 
 .dropdown-content a {
@@ -86,7 +86,7 @@
 }
 
 .dropdown-content a:hover {
-	color: #40698f;
+	color: #f2ccb5;
 	transition: color 0.3s ease, color 0.3s ease;
 }
 

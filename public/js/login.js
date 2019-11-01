@@ -5,8 +5,13 @@ $(() => {
 	$("form").submit(e => {
 		e.preventDefault()
 
+		//make username case insensitive
+		let username_nocase = $('input[name="username"]')
+			.val()
+			.toLowerCase()
+
 		let loginData = {
-			username: $('input[name="username"]').val(),
+			username: username_nocase,
 			password: $('input[name="password"]').val()
 		}
 
