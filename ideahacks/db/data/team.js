@@ -1,7 +1,7 @@
 module.exports = [
 	{
 		departmentName: "Directors",
-		teamPath: "/img/team/captains.png",
+		teamPath: "/img/team/directors.png",
 		teammates: [
 			{
 				name: "Michelle Lam",
