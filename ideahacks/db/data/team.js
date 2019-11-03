@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		departmentName: "Team Captains",
+		departmentName: "Directors",
 		teamPath: "/img/team/captains.png",
 		teammates: [
 			{
@@ -123,6 +123,10 @@ module.exports = [
 			{
 				name: "Ivan Gomez Siu",
 				picturePath: "/img/team/Ivan_Gomez_Siu.jpg"
+			},
+			{
+				name: "Angela Shiu",
+				picturePath: "/img/team/Angela_Shiu.jpg"
 			}
 		]
 	},
