@@ -76,6 +76,10 @@ module.exports = [
 			{
 				name: "Sharon Cha",
 				picturePath: "/img/team/Sharon_Cha.jpg"
+			},
+			{
+				name: "Erica Xie",
+				picturePath: "/img/team/Erica_Xie.jpg"
 			}
 		]
 	},
@@ -127,6 +131,10 @@ module.exports = [
 			{
 				name: "Angela Shiu",
 				picturePath: "/img/team/Angela_Shiu.jpg"
+			},
+			{
+				name: "Chester Hulse",
+				picturePath: "/img/team/Chester_Hulse.jpg"
 			}
 		]
 	},
@@ -189,6 +197,10 @@ module.exports = [
 			{
 				name: "Ryan Lin",
 				picturePath: "/img/team/Ryan_Lin.jpg"
+			},
+			{
+				name: "Evelyn Chiappe",
+				picturePath: "/img/team/Evelyn_Chiappe.jpg"
 			}
 		]
 	}
