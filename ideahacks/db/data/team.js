@@ -76,10 +76,6 @@ module.exports = [
 			{
 				name: "Sharon Cha",
 				picturePath: "/img/team/Sharon_Cha.jpg"
-			},
-			{
-				name: "Brittany Ham",
-				picturePath: "/img/team/Brittany_Ham.jpg"
 			}
 		]
 	},
@@ -109,16 +105,8 @@ module.exports = [
 				picturePath: "/img/team/Justin_Jianto.jpg"
 			},
 			{
-				name: "Kenny Chan",
-				picturePath: "/img/team/Kenny_Chan.jpg"
-			},
-			{
 				name: "Grace Tang",
 				picturePath: "/img/team/Grace_Tang.jpg"
-			},
-			{
-				name: "David Baum",
-				picturePath: "/img/team/David_Baum.jpg"
 			},
 			{
 				name: "Hayato Kato",
@@ -156,24 +144,12 @@ module.exports = [
 				picturePath: "/img/team/Lucas_Wolter.jpg"
 			},
 			{
-				name: "Michael Wang",
-				picturePath: "/img/team/Michael_Wang.jpg"
-			},
-			{
 				name: "Jasanpreet Pandher",
 				picturePath: "/img/team/Jasanpreet_Pandher.jpg"
 			},
 			{
-				name: "Christian Yu",
-				picturePath: "/img/team/Christian_Yu.jpg"
-			},
-			{
 				name: "Taylor Keppel",
 				picturePath: "/img/team/Taylor_Keppel.jpg"
-			},
-			{
-				name: "Jasmine Trinh",
-				picturePath: "/img/team/Jamine_Trinh.jpg"
 			},
 			{
 				name: "Eric Zhang",
@@ -184,28 +160,8 @@ module.exports = [
 				picturePath: "/img/team/David_Kao.jpg"
 			},
 			{
-				name: "Raj Intwala",
-				picturePath: "/img/team/Raj_Intwala.jpg"
-			},
-			{
-				name: "Soumya Uppuganti",
-				picturePath: "/img/team/Soumya_Uppunganti.jpg"
-			},
-			{
-				name: "Rohith Kodukula",
-				picturePath: "/img/team/Rohith_Kodukula.jpg"
-			},
-			{
-				name: "Vince Wu",
-				picturePath: "/img/team/Vince_Wu.jpg"
-			},
-			{
 				name: "Jay Park",
 				picturePath: "/img/team/Jay_Park.jpg"
-			},
-			{
-				name: "Darren Ait Kaci Azzou",
-				picturePath: "/img/team/Darren_Ait_Kaci_Azzou.jpg"
 			},
 			{
 				name: "Alethea Sung Miller",
@@ -227,16 +183,8 @@ module.exports = [
 				picturePath: "/img/team/Beryl_Sui.jpg"
 			},
 			{
-				name: "Evelyn Chiappe",
-				picturePath: "/img/team/Evelyn_Chiappe.jgp"
-			},
-			{
 				name: "Ryan Lin",
 				picturePath: "/img/team/Ryan_Lin.jpg"
-			},
-			{
-				name: "Claire Ko",
-				picturePath: "/img/team/Claire_Ko.jpg"
 			}
 		]
 	}
