@@ -69,6 +69,7 @@ const getMyParts = (req, res) => {
 		}
 	})
 }
+
 module.exports = {
 	getParts,
 	getMe,
