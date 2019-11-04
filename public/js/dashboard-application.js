@@ -27,6 +27,23 @@ function getAndSendApplicationData(toggleHasApplication) {
 		school_entry = $('input[name="school_other"]').val()
 	}
 
+	if (school_entry == "") {
+		alert("Please specify your school.")
+		return false
+	}
+
+	// get gender
+	let gender_entry = $('select[name="gender"]')
+		.find(":selected")
+		.text()
+	if (gender_entry == "Other") {
+		gender_entry = $('input[name="gender_other"]').val()
+	}
+
+	if (gender_entry == "") {
+		alert("Please specify your self-identified gender.")
+		return false
+	}
 	// check that mandatory fields filled out
 	if (
 		$('input[name="firstName"]').val() == "" ||
@@ -40,10 +57,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		alert("Please fill out required fields before submitting application.")
 		return false
 	}
-	if (school_entry == "") {
-		alert("Please specify your school.")
-		return false
-	}
+
 
 	if (
 		$('select[name="hasHackathonExperience"]')
@@ -73,6 +87,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		year: $('select[name="year"]')
 			.find(":selected")
 			.text(),
+		gender: gender_entry,
 		github: $('input[name="github"]').val(),
 		linkedin: $('input[name="linkedin"]').val(),
 		resume: $('input[name="resume"]').val(),
