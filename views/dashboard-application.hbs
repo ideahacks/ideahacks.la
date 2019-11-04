@@ -72,6 +72,19 @@
                         <label>Email Address*</label>
                         <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
                     </div>
+                    <div class='form-group col-md-5'>
+                        <label>Gender*</label>
+                        <select class='form-control' name='gender'>
+                                <option {{#if user.female}} selected{{/if}}>Female</option>
+                                <option {{#if user.male}} selected{{/if}}>Male</option>
+                                <option {{#if user.prefer_not_to_say}} selected{{/if}}>Prefer Not To Say</option>
+                                <option {{#if user.gender_other}} selected{{/if}}>Other</option>
+                        </select>
+                    </div>
+                    <div class='form-group col-md-5'>
+                        <label>If Other, please specify.</label>
+                        <input class='form-control' type='text' name='gender_other' placeholder='Other' value='{{user.gender_other}}'>
+                    </div>
                 </fieldset>
 
             </div>
