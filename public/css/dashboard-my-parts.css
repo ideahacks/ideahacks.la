@@ -1,0 +1,58 @@
+body {
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.banner {
+	text-align: center;
+	margin-top: 110px;
+	margin-bottom: 10px;
+	color: black;
+}
+
+.no-team {
+	font-size: 20px;
+	color: #2a2d4e;
+}
+
+.banner img {
+	width: 20%;
+}
+
+.parts-list {
+	margin: auto;
+	max-width: 1000px;
+	min-height: 500px;
+}
+
+.parts-list {
+	border-bottom: 3px solid #70bfe6;
+}
+
+#labels {
+	display: flex;
+	justify-content: space-between;
+}
+
+#labels h1 {
+	font-size: 20px;
+	line-height: 60px;
+	color: #2a2d4e;
+}
+
+#labels h2 {
+	font-size: 20px;
+	line-height: 60px;
+	color: #40698f;
+}
+
+#part-entry {
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	border-bottom: 3px solid #70bfe6;
+	margin-bottom: 10px;
+}
+
+#part-entry:nth-child(2n + 1) {
+	border-bottom: 3px solid #f2ccb5;
+}

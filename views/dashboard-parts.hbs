@@ -29,47 +29,47 @@
         {{> navbar }}
 
         <div class='container-fluid checkout-body'>
+            <div align="center">
+                <img class='parts-banner' src="/img/parts.png">
+            </div>
 
             <div class='sidebar col-md-2'>
-                <p class='search-bar'>Search for a part:</p>
+                <p class='search-bar'>SEARCH FOR A PART:</p>
                 {{> filter}}
                 <p class='category-header'>Browse by category</p>
                 <p class='part-category'>ALL</p>
                 <p class='part-category'>Dev Kit</p>
-                <p class='part-category'>Battery</p>
-                <p class='part-category'>Connector</p>
-                <p class='part-category'>Display</p>
-                <p class='part-category'>Interface IC</p>
-                <p class='part-category'>Sensors</p>
-                <p class='part-category'>User Interface</p>
+                <p class='part-category'>Batteries</p>
                 <p class='part-category'>Power</p>
-                <p class='part-category'>Wireless</p>
-                <p class='part-category'>Discrete Semiconductor</p>
-                <p class='part-category'>Electromechanical</p>
-                <p class='part-category'>Discrete</p>
                 <p class='part-category'>Microcontroller</p>
                 <p class='part-category'>FPGA</p>
+                <p class='part-category'>Sensor</p>
+                <p class='part-category'>Connector</p>
+                <p class='part-category'>Memory</p>
+                <p class='part-category'>Display</p>
+                <p class='part-category'>Interface IC</p>
+                <p class='part-category'>User Interface</p>
+                <p class='part-category'>Discrete Semiconductor</p>
+                <p class='part-category'>Electromechanical</p>
                 <p class='part-category'>Miscellaneous</p>
             </div>
 
             <div class='parts-container text-center col-md-10'>
-                <h1 class='parts-header'>PARTS</h1>
-                <p class='parts-subtitle'>Click on a part to see more detailed information</p>
                 <div class='filter-list'>
                     {{#each parts}}
-                        <div class='text-left col-md-3' id='{{this.category}}'>
-                            <div>
-                                <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
-                            </div>
-                            <div class='detail-section container-fluid'>
-                                <p class='part-details filter-key text-left'>{{this.partName}}</p>
-                                {{#if this.isConsumable}}
-                                    <p class='part-details quantity text-left'>Quantity: Limited Stock</p>
-                                {{else}}
-                                    <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
-                                {{/if}}
-                            </div>
+                    <div class='text-left col-md-3' id='{{this.category}}'>
+                        <div>
+                            <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
                         </div>
+                        <div class='detail-section container-fluid'>
+                            <p class='part-details filter-key text-left'>{{this.partName}}</p>
+                            {{#if this.isConsumable}}
+                            <p class='part-details quantity text-left'>Quantity: Limited Stock</p>
+                            {{else}}
+                            <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
+                            {{/if}}
+                        </div>
+                    </div>
 
                     {{/each}}
 

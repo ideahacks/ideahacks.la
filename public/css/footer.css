@@ -1,6 +1,11 @@
 .myFooter {
-	background-color: rgb(255, 255, 244);
+	background-color: #2a2d4e;
 	text-align: center;
+}
+
+.myFooter a:hover {
+	text-decoration: none;
+	color: initial;
 }
 
 #fb {

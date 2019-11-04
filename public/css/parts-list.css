@@ -1,60 +1,32 @@
 /* BANNER */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin, latin-ext);
+
 body {
-	background-color: rgb(221, 128, 100);
+	background-color: rgb(251, 243, 240);
 }
 
 form {
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 }
 
 label {
 	display: none;
 }
 
-.banner {
-	margin-top: 130px;
-	margin-bottom: 70px;
-	text-align: center;
-	color: white;
-}
-
-.banner h1 {
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-.banner p {
-	font-size: 20px;
-}
-
-.checkout,
-.checkin {
-	background-color: rgb(255, 255, 244);
-	border-radius: 20px;
-	margin: 50px 450px;
-	padding: 20px 0px;
-}
-
-#checkout-prompt:hover,
-#checkin-prompt:hover {
-	cursor: pointer;
-	color: rgb(255, 183, 24);
-}
-
-.checkout h1,
-.checkin h1 {
-	font-weight: bold;
-	font-size: 20px;
+.parts-banner {
+	margin: 30px 0 20px 0;
+	height: 45px;
 }
 
 .checkout-body {
 	padding-top: 90px;
-	background-color: #dd8064;
+	background-color: rgb(251, 243, 240);
 	padding-left: 40px;
+	padding-bottom: 90px;
 }
 
 .sidebar {
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .search-bar {
@@ -77,22 +49,18 @@ label {
 	opacity: 0.5;
 }
 
-.parts-header {
-	color: rgb(255, 255, 244);
-	font-size: 30px;
-	font-weight: bold;
-	margin: 0px;
-}
-
 .parts-subtitle {
 	margin: 0px 0px 5px 0px;
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .part {
 	width: 200px;
 	height: 200px;
-	border: 10px solid rgb(255, 255, 244);
+	border-right: 10px solid rgb(242, 204, 181);
+	border-left: 10px solid rgb(242, 204, 181);
+	border-top: 10px solid rgb(242, 204, 181);
+	border-bottom: 10px solid rgb(242, 204, 181);
 	margin-bottom: 5px;
 	margin-top: 20px;
 }
@@ -109,7 +77,7 @@ label {
 
 .part-details {
 	margin: 0px;
-	color: rgb(255, 255, 244);
+	color: rgb(42, 45, 78);
 }
 
 .detail-section {
@@ -117,5 +85,11 @@ label {
 	padding: 0px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
+	.checkout-container {
+		margin: 0 auto;
+		flex-direction: column;
+		height: 600px;
+		align-items: center;
+	}
 }

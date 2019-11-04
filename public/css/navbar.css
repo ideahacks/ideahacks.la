@@ -9,17 +9,12 @@
 	overflow: visible;
 
 	transition: background-color 0.3s ease;
-	background-color: rgb(221, 128, 100);
+	background-color: #2a2d4e;
 }
 
 .main-button {
 	margin-right: 20px;
 	margin-left: 15px;
-	font-weight: bold;
-}
-
-.admin-button {
-	margin-right: 45px;
 	font-weight: bold;
 }
 
@@ -30,10 +25,6 @@
 
 .dashboard {
 	margin-top: 12px;
-}
-
-.me {
-	margin-right: 20px;
 }
 
 .navbar-list {
@@ -54,15 +45,14 @@
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-list li:hover,
 .dropdown:hover {
-	background-color: rgb(195, 109, 83);
+	background-color: #40698f;
 	color: white;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-list a {
-	color: white;
+	color: #f2ccb5;
 	font-size: 14px;
 }
 
@@ -83,7 +73,7 @@
 	z-index: 1;
 	width: 100%;
 	overflow: auto;
-	background-color: rgb(195, 109, 83);
+	background-color: rgb(64, 105, 143);
 }
 
 .dropdown-content a {
@@ -96,7 +86,7 @@
 }
 
 .dropdown-content a:hover {
-	color: rgb(229, 192, 181);
+	color: #f2ccb5;
 	transition: color 0.3s ease, color 0.3s ease;
 }
 
@@ -105,22 +95,18 @@
 }
 
 button {
-	background-color: rgb(255, 183, 24);
-	border: 2px solid rgb(255, 183, 24);
-	padding: 10px 18px 5px 19px;
+	background-color: transparent;
+	border: 2px solid white;
+	padding: 8px 20px;
 	border-radius: 7px;
 	color: white;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-	background-color: transparent;
-	color: white;
+	background-color: white;
+	color: #2a2d4e;
 	cursor: pointer;
-}
-
-#login:hover {
-	background-color: rgb(221, 128, 100);
 }
 
 .navbar-icon {
@@ -166,7 +152,7 @@ button:hover {
 	height: 0;
 	overflow-x: hidden;
 
-	background-color: rgb(221, 128, 100);
+	background-color: #2a2d4e;
 	opacity: 0.8;
 	list-style: none;
 	padding: 0;
@@ -191,16 +177,12 @@ button:hover {
 }
 
 .mobile-navbar-list li:hover {
-	background-color: rgb(195, 109, 83);
+	background-color: #40698f;
 }
 
 .responsive-dropdown-content {
 	display: none;
-	background-color: rgb(195, 109, 83);
-}
-
-.responsive-dropdown-content a:hover {
-	color: rgb(229, 192, 181);
+	background-color: #cf8d65;
 }
 
 .responsive-dropdown .responsive-dropdown-content.active {

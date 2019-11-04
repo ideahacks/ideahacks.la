@@ -3,6 +3,9 @@
 		font-size: 60px;
 	}
 }
+.background {
+	background-color: #fbf3f0;
+}
 
 .banner {
 	padding-top: 130px;
@@ -33,6 +36,7 @@ input {
 .stats-box-container {
 	display: flex;
 	justify-content: space-between;
+	padding-top: 50px;
 }
 
 .stats-box {
@@ -40,19 +44,24 @@ input {
 	color: white;
 	text-align: center;
 	display: inline-block;
-	padding: 20px 0;
-	width: 200px;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
+	padding: 10px;
+	width: 215px;
+	height: 125px;
+	margin: 10px;
 }
 
 .stats-box h1 {
-	margin: 0;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	font-size: 60px;
+	font-weight: bold;
+	padding-bottom: 0px;
 }
 
 .stats-box h4 {
-	text-transform: uppercase;
-	font-weight: bold;
+	font-family: "Roboto Condensed";
+	font-size: 25px;
+	padding-top: 0px;
 }
 
 /* APPLICATION LIST */
@@ -62,12 +71,11 @@ input {
 }
 
 .application {
-	border-radius: 10px;
 	padding: 15px 40px;
 	margin: 20px 0;
 	color: white;
-	font-weight: bold;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+	font-size: 17px;
+	font-family: "Roboto Condensed";
 }
 
 .application:hover {
@@ -76,26 +84,27 @@ input {
 
 .application p {
 	margin: 0;
+	font-size: 1.3vw;
 }
 
 .application.accepted,
 .accepted-box {
-	background-color: #66cc66;
+	background-color: #75c791;
 }
 
 .application.pending,
 .pending-box {
-	background-color: #528bd5;
+	background-color: #75b4c7;
 }
 
 .application.rejected,
 .rejected-box {
-	background-color: #c83333;
+	background-color: #d46c6c;
 }
 
 .application.waitlisted,
 .waitlisted-box {
-	background-color: rgb(255, 183, 24);
+	background-color: #f2c94c;
 }
 
 .application .year,
@@ -108,9 +117,15 @@ input {
 	text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
 	.application .year,
 	.application .school {
 		display: none;
+	}
+	.application p {
+		font-size: 4vw;
+	}
+	.stats-box h4 {
+		font-size: 2.5vw;
 	}
 }

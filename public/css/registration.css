@@ -4,17 +4,22 @@
 }
 
 body {
-	background-color: rgb(221, 128, 100);
+	background-color: #fbf3f0;
+}
+
+.forgot-pass {
+	color: #2a2d4e;
 }
 
 .forgot-pass:hover {
-	color: white;
+	color: #2a2d4e;
 }
 
 /* COMPUTER IMAGE */
 .main_pic img {
-	width: 90%;
-	margin: 140px 0px 100px 70px;
+	height: 105%;
+	width: 105%;
+	margin: 125px 0px 70px 0px;
 }
 
 /* FORM SIDE */
@@ -30,11 +35,13 @@ body {
 }
 
 .login {
-	background-color: rgb(255, 183, 24);
+	background-color: #40698f;
 	margin-top: 15pt;
-	font-weight: bold;
-	font-size: 14px;
-	color: white;
+	font-weight: normal;
+	<<<<<<<headfont-size: 20px;
+	=======font-size: 18px;
+	>>>>>>>9b004651a8a636dc5381220cf4b76accccd680afcolor: white;
+	border-color: #40698f;
 	text-transform: uppercase;
 	border-radius: 12px;
 	margin-bottom: 10pt;
@@ -43,18 +50,30 @@ body {
 	padding: 10px;
 }
 
+.login:hover {
+	background-color: #fbf3f0;
+	color: #40698f;
+	cursor: pointer;
+}
+
 .register {
-	background-color: #95b9cd;
+	background-color: #2a2d4e;
 	font-weight: bold;
 	font-size: 14px;
 	color: white;
 	text-transform: uppercase;
-	border-color: #95b9cd;
+	border-color: #2a2d4e;
 	border-radius: 12px;
 	margin-bottom: 10pt;
 	width: 80%;
 	height: 40px;
 	padding: 10px;
+}
+
+.register:hover {
+	background-color: #fbf3f0;
+	color: #2a2d4e;
+	cursor: pointer;
 }
 
 .ideahacks-form {
@@ -86,10 +105,18 @@ a:hover {
 
 p,
 button {
-	font-family: "Josefin Sans";
-	font-weight: bold;
-	line-height: 18px;
+	font-family: "Roboto Condensed";
+	font-weight: thin;
+	line-height: 13px;
+	font-size: 13px;
 	color: white;
+	text-align: left;
+	padding-left: 5px;
+}
+
+p,
+error-message {
+	color: #40698f;
 }
 
 p {

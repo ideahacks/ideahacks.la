@@ -1,0 +1,189 @@
+.banner {
+	text-align: center;
+}
+
+.banner h1 {
+	text-transform: uppercase;
+	font-size: 56px;
+	font-weight: 800;
+	color: black;
+	letter-spacing: 0.1em;
+}
+
+.banner p {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: lighter;
+	line-height: 31px;
+	color: black;
+}
+
+.banner img {
+	padding-top: 140px;
+	width: 35%;
+}
+
+form {
+	font-family: "Roboto Condensed";
+}
+
+label {
+	display: none;
+}
+
+.admin-input {
+	font-weight: bold;
+	font-size: 20px;
+	color: #fbf3f0;
+	text-align: center;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.checkout-container {
+	margin: 0 auto;
+	max-width: 900px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+.checkout,
+.checkin {
+	background-color: rgb(42, 45, 78);
+	border-radius: 20px;
+	margin: 50px 0px;
+	padding: 20px 0px;
+	height: 200px;
+	width: 350px;
+}
+
+#barcode-scan,
+#checkin-scan {
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: rgb(42, 45, 78);
+	border-radius: 40px;
+	max-width: 800px;
+	min-height: 306px;
+	padding: 20px 0px;
+	line-height: 50px;
+}
+
+.checkout h1,
+.checkin h1,
+#barcode-scan h1,
+#checkin-scan h1 {
+	font-weight: bold;
+	font-size: 20px;
+	color: #70bfe6;
+}
+
+.checkout h2,
+.checkin h2 {
+	font-weight: bold;
+	font-size: 20px;
+	color: #fbf3f0;
+}
+
+::placeholder {
+	text-transform: uppercase;
+	color: #fbf3f0;
+}
+
+#barcode-scan p,
+#checkin-scan p {
+	font-size: 20px;
+	color: #70bfe6;
+	display: inline;
+}
+
+#checkout-quantity,
+#checkin-quantity {
+	width: 50px;
+	height: 40px;
+	margin-left: 20px;
+	border-radius: 0px;
+	border: 3px solid rgb(216, 216, 216);
+	font-size: 18px;
+	text-align: center;
+	outline: none;
+}
+
+.checkout form,
+.checkin form {
+	margin-top: 25px;
+}
+
+.checkout input[type="text"],
+.checkin input[type="text"] {
+	width: 188px;
+	border-bottom: 1px solid #fbf3f0;
+}
+
+.scan-quantity {
+	margin-top: 0px;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#go-back {
+	margin-bottom: 30px;
+}
+
+#go-back p,
+.success p {
+	font-size: 20px;
+	line-height: 34px;
+	color: #70bfe6;
+}
+
+#go-back button,
+.success button,
+.submit-button {
+	background: #f2ccb5;
+	font-size: 20px;
+	outline: none;
+	border: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	color: white;
+}
+
+#go-back button:hover,
+.success button:hover,
+.submit-button:hover {
+	background-color: transparent;
+	border: 1px solid #f2ccb5;
+	color: #f2ccb5;
+	cursor: pointer;
+}
+
+.submit-button {
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px;
+	text-transform: uppercase;
+}
+
+.submit-button:hover {
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+}
+
+.success {
+	margin-top: 200px;
+	text-align: center;
+}
+
+.success h1 {
+	text-transform: uppercase;
+	font-size: 100px;
+	margin: 50px 0 10px 0;
+	line-height: 0.8em;
+}

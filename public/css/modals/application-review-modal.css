@@ -1,10 +1,14 @@
+.modal-content {
+	background-color: #fbf3f0;
+}
 .applicant-name {
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .applicant-contact {
 	text-align: center;
-	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .applicant-contact span[name="phone"] {
@@ -19,26 +23,38 @@
 	margin: 30px 0 0;
 }
 
-.application-section fieldset {
-	padding-bottom: 20px;
-}
-
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
+	padding: 0px 50px;
+	margin: 0 0 5px;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
 	padding: 0 10px;
+	color: #40698f;
 }
 
 .hackathon-information span {
 	padding: 0;
 }
 
+.hackathon-information legend {
+	padding-left: 50px;
+}
+
+.misc legend {
+	padding-left: 50px;
+}
+
 /* STATUS CONTROLS */
 .status-controls {
 	padding: 30px 0 15px;
+}
+
+i {
+	padding-left: 20px;
+	padding-right: 5px;
 }

@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt-nodejs")
 
 const Part = require("../../db").Part
 const { Team } = require("../../db")
+const { User } = require("../../db")
 
 const getParts = (req, res) => {
 	Part.find().then(parts => {
@@ -42,15 +43,30 @@ const postMe = (req, res) => {
 		if (req.body.newPassword !== "") {
 			req.user.password = hashedPassword
 		}
-		req.user.save()
-
-		return res.json({ status: "success", message: "Successfully saved profile changes." })
+		req.user
+			.save()
+			.then(() => {
+				return res.json({ status: "success", message: "Successfully saved profile changes." })
+			})
+			.catch(err => {
+				return res.send(err)
+			})
 	})
 }
 
-const getTeams = (req, res) => {
-	Team.find().then(teams => {
-		res.render("dashboard-team-parts", { teams })
+const getMyParts = (req, res) => {
+	User.find({ email: req.user.email }).then(user => {
+		let hasTeam = user[0]._doc.hasTeam
+		if (hasTeam) {
+			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
+				let parts = team[0]._doc.parts
+				let hasTeam = team[0]._doc.hasTeam
+
+				res.render("dashboard-my-parts", { parts })
+			})
+		} else {
+			res.render("dashboard-my-parts-none")
+		}
 	})
 }
 
@@ -58,5 +74,5 @@ module.exports = {
 	getParts,
 	getMe,
 	postMe,
-	getTeams
+	getMyParts
 }

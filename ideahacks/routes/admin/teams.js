@@ -7,6 +7,10 @@ const getTeams = (req, res) => {
 	})
 }
 
+const getTeamCreation = (req, res) => {
+	return res.render("admin-team-creation")
+}
+
 const postTeams = (req, res) => {
 	if (req.body.teamName === "" || req.body.teamNumber === "" || req.body.members === undefined) {
 		return res.json({
@@ -94,6 +98,7 @@ const deleteOneTeam = (req, res) => {
 
 module.exports = {
 	getTeams,
+	getTeamCreation,
 	postTeams,
 	deleteOneTeam
 }

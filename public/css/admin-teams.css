@@ -2,11 +2,16 @@
 	margin-top: 130px;
 	margin-bottom: 30px;
 	text-align: center;
-	color: rgb(255, 255, 244);
+	color: black;
+	font-size: 18px;
+}
+
+.banner img {
+	width: 25%;
 }
 
 body {
-	background-color: rgb(221, 128, 100);
+	background-color: #fbf3f0;
 }
 
 .filter-description {
@@ -32,10 +37,11 @@ input {
 
 .team {
 	margin: 10px 0;
-	background-color: rgb(255, 255, 244);
-	border-radius: 7px;
+	background-color: #40698f;
+	border-radius: 10px;
 	height: 150px;
 	padding: 14px 0px;
+	color: white;
 }
 
 .parts-list {
@@ -49,7 +55,7 @@ input {
 }
 
 .team-number {
-	color: rgb(255, 183, 24);
+	color: #70bfe6;
 	font-size: 20px;
 	margin: 0px;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Admin Team</title>
+    <title>Teams - Admin</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -47,19 +47,19 @@
     <!-- TEAMS LIST -->
     <ul class='team-list filter-list content-wrapper list'>
         {{#each teams}}
-            <li>
-                <span class="delete-team text-right" style='display: block;'>&times;</span>
-                <h2 class="ucla-blue team-name filter-key">{{ this.teamName }}</h2>
-                <h1 class='text-right filter-key'>#{{ this.teamNumber }}</h1>
-                <h3>Team Members</h3>
-                {{#each this.members}}
-                    <p class='filter-key'>{{ this.email }}</p>
-                {{/each}}
-                <h3>Inventory</h3>
-                {{#each this.parts }}
-                    <p class='filter-key'>{{ this.partName }}: {{ this.stock }}</p>
-                {{/each}}
-            </li>
+        <li>
+            <span class="delete-team text-right" style='display: block;'>&times;</span>
+            <h2 class="ucla-blue team-name filter-key">{{ this.teamName }}</h2>
+            <h1 class='text-right filter-key'>#{{ this.teamNumber }}</h1>
+            <h3>Team Members</h3>
+            {{#each this.members}}
+            <p class='filter-key'>{{ this.email }}</p>
+            {{/each}}
+            <h3>Inventory</h3>
+            {{#each this.parts }}
+            <p class='filter-key'>{{ this.partName }}: {{ this.stock }}</p>
+            {{/each}}
+        </li>
         {{/each}}
     </ul>
 </body>
