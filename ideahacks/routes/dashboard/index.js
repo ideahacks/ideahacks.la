@@ -13,7 +13,7 @@ dashboardRouter.post("/application", setResLocals, h.isVerified, applicationHand
 
 // dashboardRouter.get("/parts", setResLocals, h.isVerified, dashboardHandlers.getParts)
 
-dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
+// dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
 
 dashboardRouter.get("/me", setResLocals, h.isVerified, dashboardHandlers.getMe)
 dashboardRouter.post("/me", setResLocals, h.isVerified, dashboardHandlers.postMe)
