@@ -15,7 +15,7 @@ const UserSchema = new Schema({
 	github: { type: String, default: "" },
 	linkedin: { type: String, default: "" },
 	hasTeam: { type: Boolean, default: false },
-	teamNumber: { type: Number, default: 0 },
+	teamNumber: { type: Number, default: -1 },
 	teammates: { type: [String], default: [] },
 	teammates_names: { type: [String], default: [] },
 	foodRestrictions: { type: String, default: "" },
