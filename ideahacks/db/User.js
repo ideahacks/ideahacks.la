@@ -11,7 +11,7 @@ const UserSchema = new Schema({
 	school: { type: String, default: "University of California, Los Angeles" },
 	major: { type: String, default: "" },
 	year: { type: String, default: "Freshman" },
-	gender: {type: String, default: "Female"},
+	gender: { type: String, default: "Female" },
 	github: { type: String, default: "" },
 	linkedin: { type: String, default: "" },
 	//resume: { type: String, default: "" },

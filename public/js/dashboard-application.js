@@ -58,7 +58,6 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
-
 	if (
 		$('select[name="hasHackathonExperience"]')
 			.find(":selected")
