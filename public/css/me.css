@@ -1,36 +1,64 @@
-body {
-	background-color: #dd8064;
-	text-transform: uppercase;
-}
-
 #welcome-img {
 	margin-top: 105px;
 	margin-bottom: 20px;
-	width: 28%;
+	width: 25%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#welcome-name {
-	color: white;
-	text-align: center;
-	text-transform: none;
-	font-family: "Josefin Sans";
+.profile-container {
+	padding-bottom: 100px;
 }
 
-.dotted {
-	border: 0 none;
-	border-top: 2px dashed #ffb718;
-	background: none;
-	height: 0;
-	width: 40%;
-	margin-top: 2px;
+#welcome-name {
+	color: #2a2d4e;
+	text-align: center;
+	text-transform: none;
+	font-family: "Roboto Condensed";
+}
+
+.no-team {
+	font-size: 18px;
+	color: white;
+}
+
+.team-number {
+	color: white;
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+.admin-button {
+	text-align: center;
+}
+
+.border {
+	width: 80%;
+}
+
+.user-info {
+	text-align: center;
+	color: white;
+	margin: auto;
+	font-size: 18px;
+}
+
+.admin-button button {
+	background-color: #d46c6c;
+	border: 1px solid #d46c6c;
+	color: #5d3131;
+}
+
+.admin-button button:hover {
+	background-color: #5d3131;
+	border: 1px solid #5d3131;
+	color: #d46c6c;
 }
 
 /*----- CHANGE PROFILE INFORMATION -------*/
 .ideahacks-form {
-	background-color: #fffff4;
+	background-color: #40698f;
 	width: 70%;
 	justify-content: center;
 	text-align: center;
@@ -40,20 +68,18 @@ body {
 }
 
 .ideahacks-form label {
-	color: #dd8064;
+	color: #70bfe6;
 	text-decoration: bold;
-	font-size: 17px;
-	margin-bottom: 15px;
+	font-size: 18px;
 }
 
 .ideahacks-form input,
 .ideahacks-form input:focus {
 	border: none;
 	outline: none;
-	background-color: transparent;
 	font-family: inherit;
-	font-size: 17px;
-	color: #dd8064;
+	font-size: 18px;
+	color: black;
 	text-align: center;
 	text-decoration: bold;
 	width: 60%;
@@ -73,6 +99,7 @@ body {
 
 .save-button:hover {
 	color: #95b9cd;
+	border-color: white;
 }
 
 .logout:hover {

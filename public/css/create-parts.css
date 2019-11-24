@@ -2,25 +2,27 @@
 	margin-top: 130px;
 	margin-bottom: 30px;
 	text-align: center;
-	color: white;
+	font-size: 18px;
+	color: #2a2d4e;
 }
 
-body {
-	background-color: rgb(221, 128, 100);
+.banner img {
+	width: 30%;
 }
 
 form {
-	font-family: "Josefin Sans";
+	font-family: "Roboto Condensed";
 	margin-bottom: 10px;
 	font-weight: bold;
 }
 
 label {
 	margin-top: 10px;
+	color: #70bfe6;
 }
 
 .form {
-	background-color: white;
+	background-color: #40698f;
 	margin: 0px 300px 100px 300px;
 	border-radius: 15px;
 	padding: 20px 0px;
@@ -32,4 +34,6 @@ textarea {
 
 .submit-button {
 	margin-top: 40px;
+	background-color: #70bfe6;
+	border: 1px solid #70bfe6;
 }

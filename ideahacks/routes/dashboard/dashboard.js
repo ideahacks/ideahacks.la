@@ -54,12 +54,6 @@ const postMe = (req, res) => {
 	})
 }
 
-const getTeams = (req, res) => {
-	Team.find().then(teams => {
-		res.render("dashboard-team-parts", { teams })
-	})
-}
-
 const getMyParts = (req, res) => {
 	User.find({ email: req.user.email }).then(user => {
 		let hasTeam = user[0]._doc.hasTeam
@@ -75,10 +69,10 @@ const getMyParts = (req, res) => {
 		}
 	})
 }
+
 module.exports = {
 	getParts,
 	getMe,
 	postMe,
-	getTeams,
 	getMyParts
 }

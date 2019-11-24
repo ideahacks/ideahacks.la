@@ -23,7 +23,7 @@
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' href="/css/team.css" />
 </head>
-<body class='background-light-red'>
+<body>
     <div class='wrapper'>
 
         <!-- NAVBAR -->
@@ -38,7 +38,7 @@
                     {{#each this.teammates}}
                     <div class='col-sm-3 no-padding'>
                         <div class='pic'>
-                            <img class='team-photo' src='/img/team/dummy.png' />
+                            <img class='team-photo' src='{{this.picturePath}}' />
                         </div>
                         <h4 class='Description'><b>{{this.name}}</b></h4>
                     </div>

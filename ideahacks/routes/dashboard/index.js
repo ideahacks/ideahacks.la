@@ -5,19 +5,19 @@ const applicationHandlers = require("./application.js")
 const h = require("../../helpers").authHelpers
 const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
-dashboardRouter.get("/", setResLocals, h.isVerified, dashboardHandlers.getMe)
+dashboardRouter.get("/", setResLocals, h.isVerified, applicationHandlers.getApplication)
 
 // Disabled application routes due to end of application period
 dashboardRouter.get("/application", setResLocals, h.isVerified, applicationHandlers.getApplication)
 dashboardRouter.post("/application", setResLocals, h.isVerified, applicationHandlers.postApplication)
 
-dashboardRouter.get("/parts", setResLocals, h.isVerified, dashboardHandlers.getParts)
+// dashboardRouter.get("/parts", setResLocals, h.isVerified, dashboardHandlers.getParts)
 
-dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
+// dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
 
 dashboardRouter.get("/me", setResLocals, h.isVerified, dashboardHandlers.getMe)
 dashboardRouter.post("/me", setResLocals, h.isVerified, dashboardHandlers.postMe)
 
-dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
+// dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
 
 module.exports = dashboardRouter

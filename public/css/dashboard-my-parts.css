@@ -9,8 +9,13 @@ body {
 	color: black;
 }
 
+.no-team {
+	font-size: 20px;
+	color: #2a2d4e;
+}
+
 .banner img {
-	width: 25%;
+	width: 20%;
 }
 
 .parts-list {
@@ -29,13 +34,13 @@ body {
 }
 
 #labels h1 {
-	font-size: 25px;
+	font-size: 20px;
 	line-height: 60px;
 	color: #2a2d4e;
 }
 
 #labels h2 {
-	font-size: 42px;
+	font-size: 20px;
 	line-height: 60px;
 	color: #40698f;
 }
@@ -43,7 +48,7 @@ body {
 #part-entry {
 	display: flex;
 	justify-content: space-between;
-	font-size: 24px;
+	font-size: 18px;
 	border-bottom: 3px solid #70bfe6;
 	margin-bottom: 10px;
 }

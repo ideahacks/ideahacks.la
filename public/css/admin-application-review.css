@@ -9,7 +9,7 @@
 
 .banner {
 	padding-top: 130px;
-	width: 35%;
+	width: 30%;
 }
 
 .description {
@@ -60,8 +60,6 @@ input {
 
 .stats-box h4 {
 	font-family: "Roboto Condensed";
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 25px;
 	padding-top: 0px;
 }
