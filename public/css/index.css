@@ -114,8 +114,18 @@
 	font-size: 16px;
 }
 
-.schedule.extra {
-	border: none
+.schedule.note {
+	border: none;
+}
+
+.hanging-indent {
+	margin-bottom: 5px;
+	padding-left: 45px;
+	text-indent: -45px;
+}
+
+.indented {
+	padding-left: 45px;
 }
 
 .faq-section {
