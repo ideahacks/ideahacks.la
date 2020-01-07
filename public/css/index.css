@@ -114,6 +114,10 @@
 	font-size: 16px;
 }
 
+.schedule.extra {
+	border: none
+}
+
 .faq-section {
 	background-color: rgb(242, 204, 181);
 	padding: 20px 75px 0px 75px;
