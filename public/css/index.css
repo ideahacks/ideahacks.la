@@ -114,6 +114,31 @@
 	font-size: 16px;
 }
 
+.schedule.note {
+	border: none;
+}
+
+.note p {
+	margin-bottom: 5px
+}
+
+.hanging-indent {
+	padding-left: 45px;
+	text-indent: -45px;
+}
+
+.indented {
+	padding-left: 45px;
+}
+
+.double-indented {
+	padding-left: 65px;
+}
+
+.note .extra {
+	font-size: 14px;
+}
+
 .faq-section {
 	background-color: rgb(242, 204, 181);
 	padding: 20px 75px 0px 75px;
