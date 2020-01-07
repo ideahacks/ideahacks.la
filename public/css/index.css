@@ -118,14 +118,25 @@
 	border: none;
 }
 
+.note p {
+	margin-bottom: 5px
+}
+
 .hanging-indent {
-	margin-bottom: 5px;
 	padding-left: 45px;
 	text-indent: -45px;
 }
 
 .indented {
 	padding-left: 45px;
+}
+
+.double-indented {
+	padding-left: 65px;
+}
+
+.note .extra {
+	font-size: 14px;
 }
 
 .faq-section {
