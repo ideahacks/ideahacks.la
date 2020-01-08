@@ -7,7 +7,7 @@ const partsHandlers = require("./parts")
 const h = require("../../helpers").authHelpers
 const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
-adminRouter.get("/", setResLocals, h.isAdmin, adminHandlers.getAdmin)
+adminRouter.get("/", setResLocals, h.isAdmin, partsHandlers.getParts)
 
 adminRouter.get("/application-review", setResLocals, h.isAdmin, applicationReviewHandlers.getApplicationReview)
 adminRouter.get("/teams", setResLocals, h.isAdmin, teamHandlers.getTeams)

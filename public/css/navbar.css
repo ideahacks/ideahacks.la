@@ -13,18 +13,19 @@
 }
 
 .main-button {
+	margin-top: 12px;
 	margin-right: 20px;
 	margin-left: 15px;
 	font-weight: bold;
 }
 
+.me {
+	margin-top: 12px;
+}
+
 .logo-container {
 	display: inline-block;
 	padding: 12px 50px;
-}
-
-.dashboard {
-	margin-top: 12px;
 }
 
 .navbar-list {
