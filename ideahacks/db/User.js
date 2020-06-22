@@ -4,10 +4,10 @@ const Schema = mongoose.Schema
 const UserSchema = new Schema({
 	// user and application info
 	email: { type: String, unique: true },
-	password: { type: String, default: ""},
+	password: { type: String, default: "" },
 	firstName: { type: String, default: "" },
 	lastName: { type: String, default: "" },
-	googleID: {type: String, unique: true, default: ""},
+	googleID: { type: String, unique: true, default: "" },
 	phone: { type: String, default: "" },
 	school: { type: String, default: "University of California, Los Angeles" },
 	major: { type: String, default: "" },
