@@ -23,6 +23,25 @@ const postLogin = (req, res, next) => {
 	})(req, res, next)
 }
 
+const getLoginGoogle = (req, res, next) => {
+	passport.authenticate("google", {
+		scope: ["profile", "email"],
+		hd: "g.ucla.edu"
+	})(req, res, next)
+}
+
+const googleLoginCallback = (req, res, next) => {
+	passport.authenticate("google", (err, user, info) => {
+		// TODO: Properly handle failure (get res to frontend?)
+		if (!user) return res.json({ status: "failure", message: "Google login failed!" })
+
+		req.login(user, err => {
+			if (err) return next(err)
+			return res.redirect("/dashboard")
+		})
+	})(req, res, next)
+}
+
 const recoverPassword = (req, res) => {
 	User.findOne({ email: req.params.email }).then(user => {
 		if (!user) return res.json({ status: "failure", message: "A user with that email doesn't exist!" })
@@ -102,6 +121,8 @@ const getLogout = (req, res) => {
 module.exports = {
 	getLogin,
 	postLogin,
+	getLoginGoogle,
+	googleLoginCallback,
 	recoverPassword,
 	getRegistration,
 	postRegistration,
