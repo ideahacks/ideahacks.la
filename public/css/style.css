@@ -3,38 +3,34 @@ h1,
 h2,
 button,
 li {
-	font-family: "Roboto Condensed";
+	font-family: "Roboto", sans-serif;
 }
 
 body {
-	background-color: #f2ccb585;
+	background-color: #ffe4af;
 }
 
 .wrapper {
-	background-color: #fbf3f0;
+	background-color: #fafafa;
 	flex-grow: 1;
-}
-
-.theme-red {
-	color: rgb(221, 128, 100);
-}
-
-.theme-offwhite {
-	color: rgb(255, 255, 244);
-}
-
-.theme-white {
-	color: white;
-}
-
-/*********** BACKGROUNDS **************************/
-
-.background-red {
-	background-color: #dd8064;
 }
 
 .wrapper,
 .myNavbar {
 	max-width: 1280px;
 	margin: auto;
+}
+
+/*** Background Colors ***/
+
+.theme-yellow {
+	background-color: #fcd282;
+}
+
+.theme-blue {
+	background-color: #50b5dd;
+}
+
+.theme-light-blue {
+	background-color: #d1ebfa;
 }
