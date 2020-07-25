@@ -23,8 +23,6 @@ hbs.registerPartial("footer", path.join(__dirname, "/views/partials/footer.hbs")
 hbs.registerPartial("applicationModal", path.join(__dirname, "/views/partials/applicationModal.hbs"))
 hbs.registerPartial("dashboardPartsModal", path.join(__dirname, "/views/partials/dashboardPartsModal.hbs"))
 hbs.registerPartial("filter", path.join(__dirname, "/views/partials/filter.hbs"))
-hbs.registerPartial("partsCheckoutModal", path.join(__dirname, "/views/partials/partsCheckoutModal.hbs"))
-hbs.registerPartial("partsCreationModal", path.join(__dirname, "/views/partials/partsCreationModal.hbs"))
 hbs.registerPartial("teamCreationModal", path.join(__dirname, "/views/partials/teamCreationModal.hbs"))
 hbsutils.registerWatchedPartials(path.join(__dirname, "/views/partials"))
 
