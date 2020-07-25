@@ -10,7 +10,9 @@ const successfulConnectionMessage = "Successfully connected to the database!"
 mongoose.connect(
 	dbURI,
 	{
-		useMongoClient: true
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true
 	}
 )
 
