@@ -1,12 +1,5 @@
-p,
-h1,
-h2,
-button,
-li {
-	font-family: "Roboto", sans-serif;
-}
-
 body {
+	font-family: "Roboto", sans-serif;
 	background-color: #ffe4af;
 }
 
