@@ -101,6 +101,7 @@ button {
 	padding: 8px 20px;
 	border-radius: 7px;
 	color: white;
+	text-transform: uppercase;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
