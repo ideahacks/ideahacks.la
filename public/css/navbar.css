@@ -8,20 +8,8 @@
 	height: 66px;
 	overflow: visible;
 
-	transition: background-color 0.3s ease;
 	background-image: url("/img/gradient.png");
 	background-size: cover;
-}
-
-.main-button {
-	margin-top: 12px;
-	margin-right: 20px;
-	margin-left: 15px;
-	font-weight: bold;
-}
-
-.me {
-	margin-top: 12px;
 }
 
 .logo-container {
@@ -37,10 +25,7 @@
 }
 
 .navbar-list li {
-	font-weight: bold;
-
 	text-transform: uppercase;
-	letter-spacing: 2px;
 
 	display: inline-block;
 	padding: 14px 22px 10px;
@@ -54,7 +39,7 @@
 }
 
 .navbar-list a {
-	color: #f2ccb5;
+	color: #2b2b2b;
 	font-size: 14px;
 }
 
@@ -96,20 +81,27 @@
 	display: block;
 }
 
-button {
+.myNavbar button {
+	font-family: Roboto, sans-serif;
+	line-height: initial;
+	font-size: 14px;
+	text-align: center;
+
 	background-color: transparent;
-	border: 2px solid white;
+	border: 1.5px solid #2b2b2b;
 	padding: 8px 20px;
 	border-radius: 7px;
-	color: white;
+	color: #2b2b2b;
 	text-transform: uppercase;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
-	background-color: white;
-	color: #2a2d4e;
+.myNavbar button:hover {
+	background-color: #50b5dd;
+	color: white;
+	border: 1.5px solid #50b5dd;
 	cursor: pointer;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-icon {
