@@ -26,26 +26,24 @@
 
 .navbar-list li {
 	text-transform: uppercase;
-
 	display: inline-block;
-	padding: 14px 22px 10px;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	padding: 15px 22px;
 }
 
 .dropdown:hover {
-	background-color: #40698f;
+	background-color: #d1ebfa;
 	color: white;
-	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-list a {
 	color: #2b2b2b;
 	font-size: 14px;
+	transition: color 0.3s ease;
 }
 
 .navbar-list a:hover {
 	text-decoration: none;
-	color: white;
+	color: #50b5dd;
 }
 
 .dropdown {
@@ -60,20 +58,20 @@
 	z-index: 1;
 	width: 100%;
 	overflow: auto;
-	background-color: rgb(64, 105, 143);
+	background-color: #d1ebfa;
 }
 
 .dropdown-content a {
 	display: block;
-	color: white;
+	color: #2b2b2b;
 }
 
 .dropdown-content li {
-	padding: 10px 0px 10px 5px;
+	padding: 10px 0px 10px;
 }
 
 .dropdown-content a:hover {
-	color: #f2ccb5;
+	color: #50b5dd;
 	transition: color 0.3s ease, color 0.3s ease;
 }
 
