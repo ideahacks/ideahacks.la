@@ -26,13 +26,13 @@
 
 .navbar-list li {
 	text-transform: uppercase;
+	font-weight: bold;
 	display: inline-block;
 	padding: 15px 22px;
 }
 
 .dropdown:hover {
-	background-color: #d1ebfa;
-	color: white;
+	background-color: #50b5dd;
 }
 
 .navbar-list a {
@@ -43,7 +43,7 @@
 
 .navbar-list a:hover {
 	text-decoration: none;
-	color: #50b5dd;
+	color: white;
 }
 
 .dropdown {
@@ -58,7 +58,7 @@
 	z-index: 1;
 	width: 100%;
 	overflow: auto;
-	background-color: #d1ebfa;
+	background-color: #50b5dd;
 }
 
 .dropdown-content a {
@@ -71,7 +71,7 @@
 }
 
 .dropdown-content a:hover {
-	color: #50b5dd;
+	color: white;
 	transition: color 0.3s ease, color 0.3s ease;
 }
 
