@@ -8,7 +8,9 @@ const { dbURI } = require("../config")
 const successfulConnectionMessage = "Successfully connected to the database!"
 
 mongoose.connect(dbURI, {
-	useMongoClient: true
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useCreateIndex: true
 })
 
 // Plug in global promise library
