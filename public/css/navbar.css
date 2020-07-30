@@ -8,6 +8,7 @@
 	height: 66px;
 	overflow: visible;
 
+	background-color: #fafafa;
 	background-image: url("/img/gradient.png");
 	background-size: cover;
 }
