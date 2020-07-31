@@ -38,9 +38,8 @@ body {
 	background-color: #40698f;
 	margin-top: 15pt;
 	font-weight: normal;
-	<<<<<<<headfont-size: 20px;
-	=======font-size: 18px;
-	>>>>>>>9b004651a8a636dc5381220cf4b76accccd680afcolor: white;
+	font-size: 18px;
+	color: white;
 	border-color: #40698f;
 	text-transform: uppercase;
 	border-radius: 12px;
