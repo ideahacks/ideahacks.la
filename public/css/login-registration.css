@@ -21,6 +21,10 @@ hr {
 	width: 70%;
 }
 
+#google {
+	height: 40px;
+}
+
 .warning {
 	margin-top: 5px;
 	font-size: 12px;
