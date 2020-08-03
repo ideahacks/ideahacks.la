@@ -107,8 +107,9 @@ button {
 	padding-left: 5px;
 }
 
-error-message {
-	color: #40698f;
+.error-message {
+	color: #e1489a;
+	margin-bottom: 0px;
 }
 
 @media (max-width: 520px) {
