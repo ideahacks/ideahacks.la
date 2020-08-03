@@ -37,11 +37,11 @@ $(() => {
 	})
 
 	// google button animation
-	$('#google').on("mousedown touchstart", function() {
+	$("#google").on("mousedown touchstart", function() {
 		this.src = "/img/login/google-pressed.png"
 	})
 
 	$(window).on("mouseup touchend", function() {
-		$('#google').attr("src", "/img/login/google.png")
+		$("#google").attr("src", "/img/login/google.png")
 	})
 })
