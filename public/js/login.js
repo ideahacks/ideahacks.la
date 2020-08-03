@@ -41,7 +41,7 @@ $(() => {
 		this.src = "/img/login/google-pressed.png"
 	})
 
-	$('#google').on("mouseup touchend", function() {
-		this.src = "/img/login/google.png"
+	$(window).on("mouseup touchend", function() {
+		$('#google').attr("src", "/img/login/google.png")
 	})
 })
