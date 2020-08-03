@@ -7,7 +7,6 @@ const UserSchema = new Schema({
 	password: { type: String, default: "" },
 	firstName: { type: String, default: "" },
 	lastName: { type: String, default: "" },
-	googleID: { type: String, unique: true, default: "" },
 	phone: { type: String, default: "" },
 	school: { type: String, default: "University of California, Los Angeles" },
 	major: { type: String, default: "" },

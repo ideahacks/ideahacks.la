@@ -51,11 +51,10 @@ const initializePassport = () => {
 		if (profile._json.hd !== "g.ucla.edu") {
 			return done(null, false, { message: "Email must be @g.ucla.edu." })
 		}
-		User.findOne({ googleID: profile.id }).then(user => {
+		User.findOne({ email: profile.emails[0].value }).then(user => {
 			if (!user) {
 				let newUser = new User({
 					email: profile.emails[0].value,
-					googleID: profile.id,
 					verificationHash: crypto.randomBytes(24).toString("hex")
 				})
 				newUser.save()
