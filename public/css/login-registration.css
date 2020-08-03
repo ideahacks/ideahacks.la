@@ -110,3 +110,9 @@ button {
 error-message {
 	color: #40698f;
 }
+
+@media (max-width: 520px) {
+	.background {
+		padding: 20px 30px
+	}
+}
