@@ -43,14 +43,13 @@ const initializePassport = () => {
 	const strategyOptions = {
 		clientID: GOOGLE_CLIENT_ID,
 		clientSecret: GOOGLE_CLIENT_SECRET,
-		// TODO: change to "http://ideahacks.la/login/google/callback"
-		callbackURL: "http://localhost:3000/login/google/callback"
+		callbackURL: "/login/google/callback",
+		proxy: true
 	}
 
 	const googleAuthProcessor = (accessToken, refreshToken, profile, done) => {
-		// TODO: Remove ucla.edu if can't be used to log in
-		if (profile._json.hd !== "ucla.edu" && profile._json.hd !== "g.ucla.edu") {
-			return done(null, false, { message: "Email must be ucla.edu or g.ucla.edu." })
+		if (profile._json.hd !== "g.ucla.edu") {
+			return done(null, false, { message: "Email must be @g.ucla.edu." })
 		}
 		User.findOne({ googleID: profile.id }).then(user => {
 			if (!user) {

@@ -6,7 +6,11 @@ const verifyEmail = require("../../mailer").verifyEmail
 const sendPasswordRecoverEmail = require("../../mailer").recover
 
 const getLogin = (req, res) => {
-	return res.render("login")
+	let gError = req.session.gError
+	req.session.gError = null
+	return res.render("login", {
+		gError: gError
+	})
 }
 
 const postLogin = (req, res, next) => {
@@ -32,8 +36,15 @@ const getLoginGoogle = (req, res, next) => {
 
 const googleLoginCallback = (req, res, next) => {
 	passport.authenticate("google", (err, user, info) => {
-		// TODO: Properly handle failure (get res to frontend?)
-		if (!user) return res.json({ status: "failure", message: "Google login failed!" })
+		if (user === false) {
+			req.session.gError = "Google email must be @g.ucla.edu"
+			return res.redirect("/login")
+		}
+
+		if (user === null) {
+			req.session.gError = "Google login failed"
+			return res.redirect("/login")
+		}
 
 		req.login(user, err => {
 			if (err) return next(err)
