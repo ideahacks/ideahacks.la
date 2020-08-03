@@ -35,4 +35,13 @@ $(() => {
 			$(".error-message").text("Please enter your email into the email field to recover your password!")
 		}
 	})
+
+	// google button animation
+	$('#google').on("mousedown touchstart", function() {
+		this.src = "/img/login/google-pressed.png"
+	})
+
+	$('#google').on("mouseup touchend", function() {
+		this.src = "/img/login/google.png"
+	})
 })

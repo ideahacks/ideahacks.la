@@ -3,23 +3,27 @@
 	height: 100%;
 }
 
-body {
-	background-color: #fbf3f0;
+/* BACKGROUND */
+.background {
+	margin-top: 160px;
+	padding: 20px 75px;
+
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	text-align: center;
 }
 
-.forgot-pass {
-	color: #2a2d4e;
+/* GOOGLE LOGIN */
+hr {
+	border-top-color: #2b2b2b;
+	width: 70%;
 }
 
-.forgot-pass:hover {
-	color: #2a2d4e;
-}
-
-/* COMPUTER IMAGE */
-.main_pic img {
-	height: 105%;
-	width: 105%;
-	margin: 125px 0px 70px 0px;
+.warning {
+	margin-top: 5px;
+	font-size: 12px;
 }
 
 /* FORM SIDE */
@@ -35,53 +39,36 @@ body {
 }
 
 .login {
-	background-color: #40698f;
+	background-color: transparent;
 	margin-top: 15pt;
 	font-weight: normal;
-	font-size: 18px;
-	color: white;
-	border-color: #40698f;
+	font-size: 14px;
+	color: #50b5dd;
+	border: 1.5px solid #50b5dd;
 	text-transform: uppercase;
-	border-radius: 12px;
+	border-radius: 10px;
 	margin-bottom: 10pt;
-	width: 80%;
-	height: 40px;
-	padding: 10px;
+	padding: 8px 20px;
 }
 
 .login:hover {
-	background-color: #fbf3f0;
-	color: #40698f;
-	cursor: pointer;
-}
-
-.register {
-	background-color: #2a2d4e;
-	font-weight: bold;
-	font-size: 14px;
+	background-color: #50b5dd;
 	color: white;
-	text-transform: uppercase;
-	border-color: #2a2d4e;
-	border-radius: 12px;
-	margin-bottom: 10pt;
-	width: 80%;
-	height: 40px;
-	padding: 10px;
-}
-
-.register:hover {
-	background-color: #fbf3f0;
-	color: #2a2d4e;
 	cursor: pointer;
+	transition: 0.3s ease;
 }
 
-.ideahacks-form {
-	margin-left: 6vh;
-}
+/* FORM */
 
 .ideahacks-form label {
 	margin-top: 10pt;
-	display: inline-block;
+	float: left;
+}
+
+.ideahacks-form input,
+.ideahacks-form input:focus,
+.ideahacks-form input[readonly] {
+	width: 100%;
 }
 
 .form-control {
@@ -92,42 +79,30 @@ body {
 a,
 a:active {
 	text-decoration: none;
-	color: white;
-	font-style: bold;
-	font-size: 13px;
-	line-height: 13px;
+	color: #50b5dd;
+	font-size: 14px;
+	line-height: inherit;
 }
 
 a:hover {
 	text-decoration: underline;
-}
-
-p,
-button {
-	font-family: "Roboto Condensed";
-	font-weight: thin;
-	line-height: 13px;
-	font-size: 13px;
-	color: white;
-	text-align: left;
-	padding-left: 5px;
-}
-
-p,
-error-message {
-	color: #40698f;
+	color: #e1489a;
+	cursor: pointer;
 }
 
 p {
-	margin-right: 20%;
+	color: #2b2b2b;
+	line-height: initial;
 }
 
-@media (max-width: 991px) {
-	.main_pic {
-		display: none;
-	}
+button {
+	line-height: initial;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	padding-left: 5px;
+}
 
-	.ideahacks-form {
-		margin-left: 15%;
-	}
+error-message {
+	color: #40698f;
 }
