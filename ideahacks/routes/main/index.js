@@ -30,5 +30,4 @@ mainRouter.get("/verify/:hash", authHandlers.getVerify)
 
 mainRouter.get("/logout", authHandlers.getLogout)
 
-
 module.exports = mainRouter
