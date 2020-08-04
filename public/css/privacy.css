@@ -41,3 +41,9 @@ h1 {
 	color: #e1489a;
 	cursor: pointer;
 }
+
+@media (max-width: 500px) {
+    .background {
+        margin-top: 100px;
+    }
+}
