@@ -11,6 +11,8 @@ mainRouter.get("/team", setResLocals, staticHandlers.getTeam)
 
 mainRouter.get("/history", setResLocals, staticHandlers.getHistory)
 
+mainRouter.get("/privacy", setResLocals, staticHandlers.getPrivacy)
+
 mainRouter.get("/login", setResLocals, authHandlers.getLogin)
 mainRouter.post("/login", authHandlers.postLogin)
 mainRouter.post("/login/recoverPassword/:email", authHandlers.recoverPassword)
@@ -27,5 +29,6 @@ mainRouter.post("/confirm", h.isAuthenticated, authHandlers.postConfirm)
 mainRouter.get("/verify/:hash", authHandlers.getVerify)
 
 mainRouter.get("/logout", authHandlers.getLogout)
+
 
 module.exports = mainRouter

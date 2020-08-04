@@ -17,9 +17,14 @@ const getConfirm = (req, res) => {
 	return res.render("confirm")
 }
 
+const getPrivacy = (req, res) => {
+	return res.render("privacy")
+}
+
 module.exports = {
 	getMain,
 	getTeam,
 	getHistory,
-	getConfirm
+	getConfirm,
+	getPrivacy
 }
