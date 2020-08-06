@@ -43,7 +43,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
-    .background {
-        margin-top: 100px;
-    }
+	.background {
+		margin-top: 100px;
+	}
 }
