@@ -53,6 +53,7 @@ button:hover {
 /* APPLICATION STATUS */
 
 .background {
+	position: relative;
 	width: fit-content;
 	margin: 40px auto;
 	padding: 20px 70px;
