@@ -12,21 +12,21 @@ const getParts = (req, res) => {
 
 const getMe = (req, res) => {
 	let statusColor = ""
-	switch(req.user.applicationStatus) {
+	switch (req.user.applicationStatus) {
 		case "pending":
 			statusColor = "#50b5dd"
-			break;
+			break
 		case "accepted":
 			statusColor = "#acddc9"
-			break;
+			break
 		case "waitlisted":
 			statusColor = "#e8cc83"
-			break;
+			break
 		case "rejected":
 			statusColor = "#eab664"
-			break;
+			break
 	}
-	res.render("me", { 
+	res.render("me", {
 		user: req.user,
 		statusColor: statusColor
 	})

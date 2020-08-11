@@ -1,5 +1,5 @@
 #welcome {
-	font-family: 'Source Code Pro', monospace;
+	font-family: "Source Code Pro", monospace;
 	font-weight: bold;
 	font-size: 52px;
 	color: #50b5dd;
@@ -38,13 +38,13 @@ button:hover {
 	margin: 5px 0;
 }
 
-.admin{
+.admin {
 	background-color: #d46c6c;
 	border: 1px solid #d46c6c;
 	color: #5d3131;
 }
 
-.admin:hover{
+.admin:hover {
 	background-color: #5d3131;
 	border: 1px solid #5d3131;
 	color: #d46c6c;

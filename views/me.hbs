@@ -49,13 +49,13 @@
 
             <div class="status-container">
                 {{#if user.hasApplication}}
-                <div class="status" style="background-color: {{statusColor}};">{{user.applicationStatus}}</div>
+                    <div class="status" style="background-color: {{statusColor}};">{{user.applicationStatus}}</div>
                 {{else}}
-                <div class="status no-application">No Application</div>
+                    <div class="status no-application">No Application</div>
                 {{/if}}
             </div>
             {{#unless user.hasApplication}}
-            <a href="/application" class="apply"><button>Apply Now!</button></a>
+                <a href="/application" class="apply"><button>Apply Now!</button></a>
             {{/unless}}
         </div>
     </div>
