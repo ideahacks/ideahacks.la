@@ -93,3 +93,23 @@ button:hover {
 .apply {
 	display: block;
 }
+
+@media (max-width: 550px) {
+	.button-container button {
+		padding: 8px;
+	}
+
+	.background {
+		padding: 10px 20px;
+	}
+
+	.background h1 {
+		font-size: 26px;
+	}
+
+	.status {
+		padding: 30px 10px;
+		width: 250px;
+		font-size: 24px;
+	}
+}
