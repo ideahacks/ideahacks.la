@@ -11,7 +11,25 @@ const getParts = (req, res) => {
 }
 
 const getMe = (req, res) => {
-	res.render("me", { user: req.user })
+	let statusColor = ""
+	switch(req.user.applicationStatus) {
+		case "pending":
+			statusColor = "#50b5dd"
+			break;
+		case "accepted":
+			statusColor = "#acddc9"
+			break;
+		case "waitlisted":
+			statusColor = "#e8cc83"
+			break;
+		case "rejected":
+			statusColor = "#eab664"
+			break;
+	}
+	res.render("me", { 
+		user: req.user,
+		statusColor: statusColor
+	})
 }
 
 const postMe = (req, res) => {
