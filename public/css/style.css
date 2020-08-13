@@ -7,6 +7,7 @@ body {
 	position: relative;
 	background-color: #fafafa;
 	min-height: 100vh;
+	overflow: auto;
 	flex-grow: 1;
 }
 
