@@ -73,17 +73,24 @@ const postMe = (req, res) => {
 }
 
 const getMyParts = (req, res) => {
+	let parts = {}
+	Part.find().then(p => {
+		parts = p.map(part => ({
+			name: part.partName,
+			category: part.category,
+			quantity: part.stock
+		}))
+	})
 	User.find({ email: req.user.email }).then(user => {
 		let hasTeam = user[0]._doc.hasTeam
 		if (hasTeam) {
 			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
-				let parts = team[0]._doc.parts
-				let hasTeam = team[0]._doc.hasTeam
+				let myParts = team[0]._doc.parts
 
-				res.render("dashboard-my-parts", { parts })
+				res.render("dashboard-my-parts", { myParts, parts })
 			})
 		} else {
-			res.render("dashboard-my-parts-none")
+			res.render("dashboard-my-parts", { myParts: null, parts })
 		}
 	})
 }

@@ -71,16 +71,15 @@ button:hover {
 }
 
 .labels {
-	display: flex;
-	justify-content: space-between;
-	margin: 0 10px;
+	margin: 0 -5px;
 }
 
 .text-box {
 	background-color: white;
 	border-radius: 10px;
 	padding: 10px;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .my-parts .text-box {
@@ -101,12 +100,67 @@ button:hover {
 	border-right: 1.5px solid #50b5dd;
 }
 
+.part-entry {
+	display: flex;
+	justify-content: space-between;
+}
+
+.part-entry .name,
+.part-entry .category {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.name {
+	text-align: left;
+}
+
+.quantity {
+	text-align: right;
+}
+
+.no-parts {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.no-parts h2 {
+	font-weight: normal;
+	font-size: 25px;
+}
+
+.filter, 
+.filter:focus, 
+.filter:hover {
+	min-width: 150px !important;	/* To fit properly on mobile */
+}
+
 @media (max-width: 992px) {
+	.background {
+		padding: 20px calc(10% - 56.8px);
+	}
+
 	.my-parts {
 		margin-bottom: 40px;
 	}
 
 	.my-parts::after {
+		display: none;
+	}
+
+	.my-parts .text-box,
+	.parts-search .text-box {
+		height: 250px;
+	}
+}
+
+@media (max-width: 768px) {
+	.background {
+		padding: 20px;
+	}
+	.category {
 		display: none;
 	}
 }
