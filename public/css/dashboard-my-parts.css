@@ -1,58 +1,112 @@
-body {
-	font-family: "Roboto Condensed", sans-serif;
+#welcome {
+	font-family: "Source Code Pro", monospace;
+	font-weight: bold;
+	font-size: 52px;
+	color: #50b5dd;
+	margin: 100px auto 20px;
 }
 
-.banner {
+.button-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	text-align: center;
-	padding-top: 110px;
-	padding-bottom: 10px;
-	color: black;
-}
 
-.no-team {
-	font-size: 20px;
-	color: #2a2d4e;
-}
-
-.banner img {
-	width: 20%;
-}
-
-.parts-list {
+	max-width: 350px;
+	width: 80%;
 	margin: auto;
+}
+
+button {
+	background-color: transparent;
+	font-weight: normal;
+	font-size: 14px;
+	color: #50b5dd;
+	border: 1.5px solid #50b5dd;
+	text-transform: uppercase;
+	border-radius: 10px;
+	padding: 8px 20px;
+}
+
+button:hover {
+	background-color: #50b5dd;
+	color: white;
+	transition: 0.3s ease;
+}
+
+.button-container button {
+	margin: 5px 0;
+}
+
+.admin {
+	background-color: #d46c6c;
+	border: 1px solid #d46c6c;
+	color: #5d3131;
+}
+
+.admin:hover {
+	background-color: #5d3131;
+	border: 1px solid #5d3131;
+	color: #d46c6c;
+}
+
+/* PARTS VIEWS */
+
+.background {
+	position: relative;
+	width: 80%;
 	max-width: 1000px;
-	min-height: 500px;
+	margin: 40px auto;
+	padding: 20px;
+	border-radius: 10px;
 }
 
-.parts-list {
-	border-bottom: 3px solid #70bfe6;
+.background h1 {
+	font-family: "Source Code Pro", monospace;
+	font-weight: 500;
+	font-size: 35px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	letter-spacing: -1.5px;
 }
 
-#labels {
+.labels {
 	display: flex;
 	justify-content: space-between;
+	margin: 0 10px;
 }
 
-#labels h1 {
-	font-size: 20px;
-	line-height: 60px;
-	color: #2a2d4e;
+.text-box {
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	overflow: auto;
 }
 
-#labels h2 {
-	font-size: 20px;
-	line-height: 60px;
-	color: #40698f;
+.my-parts .text-box {
+	height: 300px;
 }
 
-#part-entry {
-	display: flex;
-	justify-content: space-between;
-	font-size: 18px;
-	border-bottom: 3px solid #70bfe6;
-	margin-bottom: 10px;
+.parts-search .text-box {
+	height: 260px;
 }
 
-#part-entry:nth-child(2n + 1) {
-	border-bottom: 3px solid #f2ccb5;
+.my-parts::after {
+	content: "";
+	position: absolute;
+	right: -0.75px;
+	top: 10%;
+	bottom: 10%;
+	height: 80%;
+	border-right: 1.5px solid #50b5dd;
+}
+
+@media (max-width: 992px) {
+	.my-parts {
+		margin-bottom: 40px;
+	}
+
+	.my-parts::after {
+		display: none;
+	}
 }
