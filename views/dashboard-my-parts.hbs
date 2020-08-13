@@ -52,18 +52,18 @@
                         <p class="quantity col-xs-4">Quantity</p>
                     </div>
                     {{#if myParts}}
-                    <div class="text-box">
-                    {{#each myParts}}
-                        <div class="part-entry row">
-                            <p class="name col-xs-10">{{name}}</p>
-                            <p class="quantity col-xs-2">{{quantity}}</p>
+                        <div class="text-box">
+                            {{#each myParts}}
+                                <div class="part-entry row">
+                                    <p class="name col-xs-10">{{name}}</p>
+                                    <p class="quantity col-xs-2">{{quantity}}</p>
+                                </div>
+                            {{/each}}
                         </div>
-                    {{/each}}
-                    </div>
                     {{else}}
-                    <div class="text-box no-parts">
-                        <h2>Looks like you're not part of a team yet!</h2>
-                    </div>
+                        <div class="text-box no-parts">
+                            <h2>Looks like you're not part of a team yet!</h2>
+                        </div>
                     {{/if}}
                 </div>
 
@@ -82,11 +82,11 @@
                     </div>
                     <div class="text-box filter-list">
                         {{#each parts}}
-                        <div class="part-entry row">
-                            <p class="name filter-key col-sm-5 col-xs-10">{{name}}</p>
-                            <p class="category filter-key col-sm-2">{{category}}</p>
-                            <p class="quantity col-sm-5 col-xs-2">{{quantity}}</p>
-                        </div>
+                            <div class="part-entry row">
+                                <p class="name filter-key col-sm-5 col-xs-10">{{name}}</p>
+                                <p class="category filter-key col-sm-2">{{category}}</p>
+                                <p class="quantity col-sm-5 col-xs-2">{{quantity}}</p>
+                            </div>
                         {{/each}}
                     </div>
                 </div>
