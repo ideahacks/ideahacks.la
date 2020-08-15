@@ -5,7 +5,7 @@ const LocalStrategy = require("passport-local").Strategy
 const GoogleStrategy = require("passport-google-oauth20").Strategy
 const bcrypt = require("bcrypt-nodejs")
 const verifyEmail = require("../mailer").verifyEmail
-const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = require("../config/development.json")
+const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = require("../config")
 
 // initializePassport is a function that initializes the passport module with
 // information such as which strategy to use and how to authenticate a user.
