@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Team - IDEA Hacks</title>
     <meta charset="utf-8" />
@@ -9,8 +10,11 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
 
     <!--Icon library -->
@@ -18,11 +22,13 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' href="/css/team.css" />
 </head>
+
 <body>
     <div class='wrapper'>
 
@@ -30,21 +36,64 @@
         {{> navbar }}
 
         <div class='team-container team container-fluid'>
-            <img src="\img\team\team.png" alt="LOGO" class="Title"> {{#each teamData}}
-                <div class='container-fluid section'>
-                    {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
-                    <h2 class='Lead'>{{#if this.teamLead}}Lead: {{this.teamLead}}{{/if}} </h2>
-                    <div class='row center-block'>
+            <h1 class="Title">MEET THE TEAM</h1>
+            {{#each teamData}} {{#if @first}}
+            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="directors-header">{{/if}}
+            <div class='container-fluid section'>
+                <div class='individual-team__container'>
+                    <div class='individual-team__teammates-container directors-container'>
                         {{#each this.teammates}}
-                            <div class='col-sm-3 no-padding'>
-                                <div class='pic'>
-                                    <img class='team-photo' src='{{this.picturePath}}' />
-                                </div>
-                                <h4 class='Description'><b>{{this.name}}</b></h4>
+                        <div class='individual-team__teammate'>
+                            <div class='pic'>
+                                <img class='team-photo' src='{{this.picturePath}}' />
                             </div>
+                            <h4 class='Description'><b>{{this.name}}</b></h4>
+                        </div>
                         {{/each}}
                     </div>
                 </div>
+            </div>
+            {{else}}
+            {{#if_even @index}}
+            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
+            <div class='container-fluid section'>
+                <div class='individual-team__container reversed'>
+                    <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}"
+                            alt="LOGO" class="header-rotated ml30">{{/if}}
+                    </div>
+                    <div class='individual-team__teammates-container'>
+                        {{#each this.teammates}}
+                        <div class='individual-team__teammate'>
+                            <div class='pic'>
+                                <img class='team-photo' src='{{this.picturePath}}' />
+                            </div>
+                            <h4 class='Description'><b>{{this.name}}</b></h4>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
+            <div class='container-fluid section'>
+                <div class='individual-team__container'>
+                    <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}"
+                            alt="LOGO" class="header-rotated mr30">{{/if}}
+                    </div>
+                    <div class='individual-team__teammates-container'>
+                        {{#each this.teammates}}
+                        <div class='individual-team__teammate'>
+                            <div class='pic'>
+                                <img class='team-photo' src='{{this.picturePath}}' />
+                            </div>
+                            <h4 class='Description'><b>{{this.name}}</b></h4>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/if_even}}
+            {{/if}}
             {{/each}}
         </div>
 
@@ -53,4 +102,5 @@
 
     </div>
 </body>
+
 </html>

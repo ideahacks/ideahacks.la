@@ -3,10 +3,24 @@ body {
 }
 
 .header {
-	margin: 50px 0px 15px 0px;
+	visibility: hidden;
+	margin: 0px;
+	width: 0;
+}
+
+.directors-header {
+	margin: 50px 0px 40px 0px;
 	display: block;
-	max-height: 45px;
+	max-width: 65%;
 	display: inline-block;
+}
+
+.img-header {
+	width: 100%;
+}
+
+.team {
+	padding-bottom: 40px;
 }
 
 .team-container {
@@ -32,38 +46,19 @@ p {
 	display: inline-block;
 }
 
-.Lead {
-	color: #2a2d4e;
-	font-family: "Roboto Condensed";
-	font-size: 20px;
-	font-weight: bold;
-	padding-bottom: 20px;
-	text-align: left;
-	margin-top: 0px;
-	text-align: center;
-}
-
 .Description {
-	color: #2047a4;
-	font-family: "Roboto Condensed";
+	color: #000000;
+	font-family: "Roboto";
 	margin: 15px 0px 0px 0px;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 29px;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
 	text-align: center;
 	padding-bottom: 20px;
-}
-
-.center-block {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
 }
 
 .team-photo {
-	width: 100%;
-	max-width: 350px;
-	border-radius: 7px;
+	width: 200px;
 }
 
 .fa,
@@ -92,13 +87,48 @@ p {
 }
 
 .container-fluid {
-	/*background-color: white;*/
-	/*width: 900px;*/
 	padding: 0px 70px;
 }
 
-.team {
-	padding-bottom: 40px;
+.individual-team__container {
+	display: flex;
+	flex-direction: row;
+}
+
+.individual-team__teammates-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+	width: 100%;
+	margin: 10px;
+	justify-content: center;
+}
+
+.directors-container {
+	gap: 70px;
+	justify-content: center;
+}
+
+.individual-team__teammate {
+	width: 100%;
+}
+
+.reversed {
+	flex-direction: row-reverse;
+}
+
+.header-rotated-wrapper {
+	width: auto;
+}
+.header-rotated {
+	height: 500px;
+}
+
+.ml30 {
+	margin-left: 30px;
+}
+
+.mr30 {
+	margin-right: 30px;
 }
 
 /* Media queries for mobile */
@@ -110,20 +140,42 @@ p {
 	.Title {
 		max-height: 50px;
 	}
+
 	.header {
-		max-height: 30px;
+		margin: 50px 0px 40px 0px;
+		display: block;
+		width: 80%;
+		display: inline-block;
+		visibility: visible;
 	}
+
+	.directors-header {
+		max-width: 80%;
+	}
+
+	.directors-container {
+		gap: 0px;
+	}
+
 	.container {
 		padding: 0px;
 	}
-	.Lead {
-		font-size: 22px;
-	}
+
 	p {
 		font-size: 25px;
 		margin-bottom: 30px;
 	}
 	.Description {
 		font-size: 20px;
+	}
+
+	.header-rotated {
+		visibility: hidden;
+		width: 0;
+		margin: 0;
+	}
+
+	.header-rotated-wrapper {
+		width: 0;
 	}
 }
