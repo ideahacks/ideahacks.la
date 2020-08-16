@@ -18,7 +18,7 @@
     <!-- PERSONAL STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel='stylesheet' type='text/css' href='/css/form.css' />
-    <link rel='stylesheet' type='text/css' href='/css/registration.css' />
+    <link rel='stylesheet' type='text/css' href='/css/login-registration.css' />
 
     <!-- SCRIPTS -->
     <script src='/js/registration.js'></script>
@@ -30,34 +30,31 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class="main_pic col-md-7">
-            <img src="/img/desktopgraphic.png">
-        </div>
+        <div class="houseline"></div>
 
-        <div class="form-side col-md-5">
+        <div class="background theme-yellow col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
             <form class='ideahacks-form'>
 
                 <p class='error-message'></p>
 
-                <label for="username">EMAIL</label>
-                <input type="text" name="email" class="form-control" id="username" placeholder="EMAIL (note that @g.ucla.edu is not the same as @ucla.edu)" required>
+                <label for="username">Email</label>
+                <input type="email" name="email" class="form-control" id="username" placeholder="Enter an email" required>
 
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="PASSWORD" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Enter a password" required>
 
 
-                <label for="password">CONFIRM PASSWORD</label>
-                <input type="password" name="password-confirm" class="form-control" placeholder="PASSWORD" required>
+                <label for="password">Confirm Password</label>
+                <input type="password" name="password-confirm" class="form-control" placeholder="Reenter password" required>
 
                 <button type="submit" class="login">SIGN UP</button>
 
                 <div>
-                    <p><a class='forgot-pass' href='/login'>Already have an account? Log in here.</a></p>
+                    <p>Already have an account? <a class='forgot-pass' href='/login'>Log in!</a></p>
                 </div>
 
             </form>
         </div>
-
     </div>
 
 </body>
