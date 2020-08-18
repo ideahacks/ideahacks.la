@@ -13,6 +13,13 @@
 	background-size: cover;
 }
 
+.myNavbar a:hover,
+.myNavbar a:focus,
+.myNavbar button:focus {
+	outline: none;
+	text-decoration: none;
+}
+
 .logo-container {
 	display: inline-block;
 	padding: 7px 50px;
@@ -43,7 +50,6 @@
 }
 
 .navbar-list a:hover {
-	text-decoration: none;
 	color: white;
 }
 
@@ -163,10 +169,6 @@
 .mobile-navbar-list a {
 	margin-left: 28px;
 	color: #2b2b2b;
-}
-
-.mobile-navbar-list a:hover {
-	text-decoration: none;
 }
 
 .responsive-dropdown-content {
