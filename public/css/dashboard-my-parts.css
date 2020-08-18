@@ -1,58 +1,188 @@
-body {
-	font-family: "Roboto Condensed", sans-serif;
+#welcome {
+	font-family: "Source Code Pro", monospace;
+	font-weight: bold;
+	font-size: 52px;
+	color: #50b5dd;
+	margin: 100px auto 20px;
 }
 
-.banner {
+.button-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	text-align: center;
-	padding-top: 110px;
-	padding-bottom: 10px;
-	color: black;
-}
 
-.no-team {
-	font-size: 20px;
-	color: #2a2d4e;
-}
-
-.banner img {
-	width: 20%;
-}
-
-.parts-list {
+	max-width: 350px;
+	width: 80%;
 	margin: auto;
+}
+
+button {
+	background-color: transparent;
+	font-weight: normal;
+	font-size: 14px;
+	color: #50b5dd;
+	border: 1.5px solid #50b5dd;
+	text-transform: uppercase;
+	border-radius: 10px;
+	padding: 8px 20px;
+}
+
+button:hover {
+	background-color: #50b5dd;
+	color: white;
+	transition: 0.3s ease;
+}
+
+.button-container button {
+	margin: 5px 0;
+}
+
+.admin {
+	background-color: #d46c6c;
+	border: 1px solid #d46c6c;
+	color: #5d3131;
+}
+
+.admin:hover {
+	background-color: #5d3131;
+	border: 1px solid #5d3131;
+	color: #d46c6c;
+}
+
+/* PARTS VIEWS */
+
+.background {
+	position: relative;
+	width: 80%;
 	max-width: 1000px;
-	min-height: 500px;
+	margin: 40px auto;
+	padding: 20px;
+	border-radius: 10px;
 }
 
-.parts-list {
-	border-bottom: 3px solid #70bfe6;
+.background h1 {
+	font-family: "Source Code Pro", monospace;
+	font-weight: 500;
+	font-size: 35px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	letter-spacing: -1.5px;
 }
 
-#labels {
+.labels {
+	margin: 0 -5px;
+}
+
+.text-box {
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.my-parts .text-box {
+	height: 300px;
+}
+
+.parts-search .text-box {
+	height: 260px;
+}
+
+.my-parts::after {
+	content: "";
+	position: absolute;
+	right: -0.75px;
+	top: 10%;
+	bottom: 10%;
+	height: 80%;
+	border-right: 1.5px solid #50b5dd;
+}
+
+.part-entry {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 }
 
-#labels h1 {
-	font-size: 20px;
-	line-height: 60px;
-	color: #2a2d4e;
+.part-entry .name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-#labels h2 {
-	font-size: 20px;
-	line-height: 60px;
-	color: #40698f;
+.part-entry:hover::before {
+	content: attr(data-full);
+	text-align: left;
+	white-space: normal;
+
+	position: absolute;
+	left: 15px;
+	padding: 5px;
+	margin: -5px 0 0 -5px;
+	z-index: 1;
+	max-width: 90%;
+
+	background-color: #d1ebfa;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#part-entry {
+.name {
+	text-align: left;
+}
+
+.quantity {
+	text-align: right;
+}
+
+.no-parts {
 	display: flex;
-	justify-content: space-between;
-	font-size: 18px;
-	border-bottom: 3px solid #70bfe6;
-	margin-bottom: 10px;
+	justify-content: center;
+	align-items: center;
 }
 
-#part-entry:nth-child(2n + 1) {
-	border-bottom: 3px solid #f2ccb5;
+.no-parts h2 {
+	font-weight: normal;
+	font-size: 25px;
+}
+
+.filter,
+.filter:focus,
+.filter:hover {
+	min-width: 150px !important; /* To fit properly on mobile */
+}
+
+@media (max-width: 991px) {
+	.background {
+		padding: 20px calc(10% - 56.8px);
+	}
+
+	.my-parts {
+		margin-bottom: 40px;
+	}
+
+	.my-parts::after {
+		display: none;
+	}
+
+	.my-parts .text-box,
+	.parts-search .text-box {
+		height: 250px;
+	}
+}
+
+@media (max-width: 767px) {
+	.background {
+		padding: 20px;
+	}
+
+	.button-container button {
+		padding: 8px;
+	}
+
+	.category {
+		display: none;
+	}
 }

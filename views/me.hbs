@@ -12,15 +12,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- SOCKET IO -->
-    <script src='/socket.io/socket.io.js'></script>
-
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/form.css' />
     <link rel='stylesheet' type='text/css' href='/css/me.css' />
 
     <!-- SCRIPTS -->
@@ -32,58 +28,35 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class='container'>
-            <img id='welcome-img' src='/img/welcome.png' />
-            <h3 id='welcome-name'>{{user.firstName}} {{user.lastName}}</h3>
+        <div class="houseline"></div>
+
+        <div class='container text-center'>
+            <h1 id="welcome">WELCOME</h1>
         </div>
 
-        <div class='admin-button'>
+        <div class="button-container">
             {{#if user.isAdmin}}
-                <a href='/admin'><button>ADMIN ACCESS</button></a> {{/if}}
+                <a href='/admin'><button class="admin">Admin</button></a>
+            {{/if}}
+
+            <a href="/settings"><button class="settings">Settings</button></a>
+            <a href="/logout"><button class="logout">Log Out</button></a>
         </div>
 
-        <!-- CHANGE PROFILE INFORMATION-->
-        <div class='profile-container container text-center'>
-            <div class='ideahacks-form'>
-                <!-- {{#if user.hasTeam}}
-                <label>Team Number</label>
-                <p class='team-number'>{{user.teamNumber}}</p>
-                <label>Teammates</label>
-                <div class='user-info'>
-                    {{#each user.teammates_names}}
-                    <p>{{this}}</p>
-                    {{/each}}
-                </div>
+        <!-- APPLICATION STATUS -->
+        <div class='background theme-yellow container text-center'>
+            <h1>application status</h1>
+
+            <div class="status-container">
+                {{#if user.hasApplication}}
+                    <div class="status" style="background-color: {{statusColor}};">{{user.applicationStatus}}</div>
                 {{else}}
-                  <p class='no-team'>Looks like you don't have a team yet!</p>
-                {{/if}}	 -->
-                <!-- <hr class='border'> -->
-                <form class='profile-form'>
-                    <p class='profile-form-message'></p>
-                    <div class='form-group'>
-                        <div class='row'>
-                            <label class='text-right'>Email</label>
-                        </div>
-                        <div class='row'>
-                            <input class='text-left' type='email' name='email' value='{{user.email}}' />
-                        </div>
-                    </div>
-                    <div class='form-group'>
-                        <div class='row'>
-                            <label class='text-right'>Password</label>
-                        </div>
-                        <div class='row'>
-                            <input class='text-left' name='password' type='Password' />
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <button type='submit' class='save-button'>Save Changes</button>
-                    </div>
-                </form>
-                <div class='row'>
-                    <a href='/logout'><button>Logout</button></a>
-                </div>
+                    <div class="status no-application">No Application</div>
+                {{/if}}
             </div>
+            {{#unless user.hasApplication}}
+                <a href="/application" class="apply"><button>Apply Now!</button></a>
+            {{/unless}}
         </div>
     </div>
 
