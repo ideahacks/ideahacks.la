@@ -1,6 +1,6 @@
 $(() => {
 	// When the parts creation form is submitted, hit the parts creation API
-	$(".create-parts-form").submit(e => {
+	$("#create-parts-form").submit(e => {
 		e.preventDefault()
 
 		// Create a part from the data the user typed into the form
@@ -19,12 +19,14 @@ $(() => {
 		// Hit the POST /api/parts endpoint with the part
 		$.post("/api/parts", part)
 			.then(res => {
-				// On successful creation, just refresh for now
-				location.reload()
+				$("#error-message").text("Success! Reloading page in 2 seconds")
+				setTimeout(() => location.reload(), 2000)
 			})
 			.catch(err => {
 				// On error, just log for now
 				console.log(err)
 			})
 	})
+
+	$("input").click(() => $("#error-message").text(""))
 })
