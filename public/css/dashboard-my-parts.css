@@ -101,29 +101,32 @@ button:hover {
 }
 
 .part-entry {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 }
 
 .part-entry .name {
-	position: initial;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
-.part-entry .name:hover::before {
+.part-entry:hover::before {
 	content: attr(data-full);
+	text-align: left;
+	white-space: normal;
+
 	position: absolute;
-	background-color: white;
-	border-radius: 10px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	left: 15px;
 	padding: 5px;
 	margin: -5px 0 0 -5px;
 	z-index: 1;
+	max-width: 90%;
 
-	max-width: 100%;
-	white-space: normal;
+	background-color: #d1ebfa;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .name {
