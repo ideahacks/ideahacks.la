@@ -54,6 +54,8 @@ button:hover {
 
 .background {
 	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	margin: 40px auto;
 	padding: 20px 70px;
