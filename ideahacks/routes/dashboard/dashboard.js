@@ -87,10 +87,10 @@ const getMyParts = (req, res) => {
 			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
 				let myParts = team[0]._doc.parts
 
-				res.render("dashboard-my-parts", { myParts, parts })
+				res.render("dashboard-my-parts", { user: req.user, myParts, parts })
 			})
 		} else {
-			res.render("dashboard-my-parts", { myParts: null, parts })
+			res.render("dashboard-my-parts", { user: req.user, myParts: null, parts })
 		}
 	})
 }

@@ -47,6 +47,7 @@
                 <!-- MY PARTS -->
                 <div class="my-parts col-md-4">
                     <h1>my parts</h1>
+                    
                     <div class="labels row">
                         <p class="name col-xs-8">Name</p>
                         <p class="quantity col-xs-4">Quantity</p>
@@ -55,7 +56,7 @@
                         <div class="text-box">
                             {{#each myParts}}
                                 <div class="part-entry row">
-                                    <p class="name col-xs-10">{{name}}</p>
+                                    <p class="name col-xs-10" data-full="{{name}}">{{name}}</p>
                                     <p class="quantity col-xs-2">{{quantity}}</p>
                                 </div>
                             {{/each}}
@@ -83,8 +84,8 @@
                     <div class="text-box filter-list">
                         {{#each parts}}
                             <div class="part-entry row">
-                                <p class="name filter-key col-sm-5 col-xs-10">{{name}}</p>
-                                <p class="category filter-key col-sm-2">{{category}}</p>
+                                <p class="name filter-key col-sm-5 col-xs-10" data-full="{{name}}">{{name}}</p>
+                                <p class="category filter-key col-sm-2" data-full="{{category}}">{{category}}</p>
                                 <p class="quantity col-sm-5 col-xs-2">{{quantity}}</p>
                             </div>
                         {{/each}}
