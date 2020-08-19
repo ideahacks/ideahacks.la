@@ -23,8 +23,7 @@ $(() => {
 				setTimeout(() => location.reload(), 2000)
 			})
 			.catch(err => {
-				// On error, just log for now
-				console.log(err)
+				$("#error-message").text("Something went wrong. Make sure you have valid values for all fields")
 			})
 	})
 
