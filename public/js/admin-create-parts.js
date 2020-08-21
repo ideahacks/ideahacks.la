@@ -8,12 +8,12 @@ $(() => {
 			partName: $('input[name="part-name"]').val(),
 			barcode: $('input[name="part-barcode"]').val(),
 			datasheet: $('input[name="part-datasheet"]').val(),
-			type: $('input[name="part-type"]').val(),
+			type: $('select[name="part-type"]').val(),
 			description: $('textarea[name="part-description"]').val(),
 			stock: $('input[name="part-stock"]').val(),
-			category: $('input[name="part-category"]').val(),
+			category: $('select[name="part-category"]').val(),
 			imageUrl: $('input[name="part-image"]').val(),
-			isConsumable: $('input[name="part-consumable"]').val()
+			isConsumable: $('select[name="part-type"]').val() === "Consumable"
 		}
 
 		// Hit the POST /api/parts endpoint with the part
@@ -23,7 +23,13 @@ $(() => {
 				setTimeout(() => location.reload(), 2000)
 			})
 			.catch(err => {
-				$("#error-message").text("Something went wrong. Make sure you have valid values for all fields")
+				console.log(err)
+				try {
+					JSON.parse(err.responseText) // Check if there is a custom error message
+					$("#error-message").text("Something went wrong. Make sure you have valid values for all fields")
+				} catch (error) {
+					$("#error-message").text(err.responseText)
+				}
 			})
 	})
 

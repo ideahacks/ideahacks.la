@@ -37,31 +37,36 @@
         <div class='background theme-yellow container text-center'>
             <form id='create-parts-form' class="ideahacks-form">
                 <label>Part name:</label><br />
-                <input type="text" name="part-name"> <br />
+                <input type="text" name="part-name" required> <br />
 
                 <label>Link to image:</label><br />
-                <input type="text" name="part-image"> <br />
+                <input type="url" name="part-image"> <br />
 
                 <label>Description:</label><br />
-                <textarea type="text" rows='4' name="part-description"></textarea> <br />
+                <textarea rows='4' name="part-description"></textarea> <br />
 
-                <label>Stock:</label><br />
-                <input type="text" name="part-stock"> <br />
+                <label>Quantity:</label><br />
+                <input type="number" name="part-stock" required> <br />
 
                 <label>Datasheet:</label><br />
-                <input type="text" name="part-datasheet"> <br />
+                <input type="url" name="part-datasheet"> <br />
 
-                <label>Type (Returnable/Consumable):</label><br />
-                <input type="text" name="part-type"> <br />
-
-                <label>Is it consumable? (true/false):</label><br />
-                <input type="text" name="part-consumable"> <br />
+                <label>Type:</label><br />
+                <select name="part-type" required>
+                    <option value="Returnable">Returnable</option>
+                    <option value="Consumable">Consumable</option>
+                </select> <br />    
 
                 <label>Category:</label><br />
-                <input type="text" name="part-category"> <br />
+                <select name="part-category" required>
+                    <option value=""></option>
+                    {{#each categories}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                </select> <br />
 
                 <label>Barcode (scan below):</label><br />
-                <input type="text" name="part-barcode"><br />
+                <input type="text" name="part-barcode" required><br />
 
                 <p id="error-message"></p>
                 <button class='submit-button'>CREATE</button>

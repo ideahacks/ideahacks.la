@@ -19,10 +19,14 @@ label {
 
 .ideahacks-form input,
 .ideahacks-form input:focus,
-.ideahacks-form input[readonly] {
+.ideahacks-form input[readonly],
+.ideahacks-form select,
+.ideahacks-form select:focus {
 	max-width: 300px;
 	width: 90%;
+	height: 24px;
 	border: 1px solid #2b2b2b;
+	border-radius: 10px;
 }
 
 .background {
