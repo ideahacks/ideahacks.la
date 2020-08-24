@@ -71,13 +71,13 @@ const postSettings = (req, res) => {
 			}
 
 			req.user
-			.save()
-			.then(() => {
-				return res.json({ status: "success", message: "Successfully saved profile changes." })
-			})
-			.catch(err => {
-				return res.send(err)
-			})
+				.save()
+				.then(() => {
+					return res.json({ status: "success", message: "Successfully saved profile changes." })
+				})
+				.catch(err => {
+					return res.send(err)
+				})
 		})
 	})
 }
