@@ -21,8 +21,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+
 
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -38,10 +41,11 @@
         <div class='team-container team container-fluid'>
             <h1 class="Title">MEET THE TEAM</h1>
             {{#each teamData}} {{#if @first}}
-            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="directors-header">{{/if}}
+            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}"
+                class="directors-header">{{/if}}
             <div class='container-fluid section'>
-                <div class='individual-team__container'>
-                    <div class='individual-team__teammates-container directors-container'>
+                <div class='individual-team__container directors'>
+                    <div class='individual-team__teammates-container directors__teammates-container'>
                         {{#each this.teammates}}
                         <div class='individual-team__teammate'>
                             <div class='pic'>
@@ -55,11 +59,11 @@
             </div>
             {{else}}
             {{#if_even @index}}
-            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
+            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="header">{{/if}}
             <div class='container-fluid section'>
                 <div class='individual-team__container reversed'>
                     <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}"
-                            alt="LOGO" class="header-rotated ml30">{{/if}}
+                            alt="{{this.departmentName}}" class="header-rotated ml30">{{/if}}
                     </div>
                     <div class='individual-team__teammates-container'>
                         {{#each this.teammates}}
@@ -74,11 +78,11 @@
                 </div>
             </div>
             {{else}}
-            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="LOGO" class="header">{{/if}}
+            {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="header">{{/if}}
             <div class='container-fluid section'>
                 <div class='individual-team__container'>
                     <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}"
-                            alt="LOGO" class="header-rotated mr30">{{/if}}
+                            alt="{{this.departmentName}}" class="header-rotated mr30">{{/if}}
                     </div>
                     <div class='individual-team__teammates-container'>
                         {{#each this.teammates}}
