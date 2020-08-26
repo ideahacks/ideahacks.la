@@ -32,26 +32,26 @@ const getMe = (req, res) => {
 	})
 }
 
-const postMe = (req, res) => {
-	// POST /dashboard/me handler that takes a POST request that looks like:
+const getSettings = (req, res) => {
+	return res.render("settings", { email: req.user.email })
+}
+
+const postSettings = (req, res) => {
+	// POST /dashboard/me/settings handler that takes a POST request that looks like:
 	// {
-	//   'firstName': ...,
-	//   'lastName': ...,
 	//   'email': ...,
 	//   'newPassword': ...
 	// }
 	// and makes the requested changes to the current user
 
-	if (req.body.firstName) {
-		req.user.firstName = req.body.firstName
-	}
-
-	if (req.body.lastName) {
-		req.user.lastName = req.body.lastName
-	}
-
 	if (req.body.email) {
+		const emailRegex = new RegExp(/\.edu$/)
+		if (!emailRegex.test(req.body.email)) {
+			return res.json({ status: "failure", message: "Email must end in .edu!" })
+		}
 		req.user.email = req.body.email
+
+		var emailChanged = true
 	}
 
 	bcrypt.hash(req.body["newPassword"], null, null, (err, hashedPassword) => {
@@ -61,14 +61,24 @@ const postMe = (req, res) => {
 		if (req.body.newPassword !== "") {
 			req.user.password = hashedPassword
 		}
-		req.user
-			.save()
-			.then(() => {
-				return res.json({ status: "success", message: "Successfully saved profile changes." })
-			})
-			.catch(err => {
-				return res.send(err)
-			})
+
+		User.findOne({ email: req.user.email }).then(u => {
+			if (u && emailChanged) {
+				return res.json({
+					status: "failure",
+					message: "A user with this email already exists!"
+				})
+			}
+
+			req.user
+				.save()
+				.then(() => {
+					return res.json({ status: "success", message: "Successfully saved profile changes." })
+				})
+				.catch(err => {
+					return res.send(err)
+				})
+		})
 	})
 }
 
@@ -98,6 +108,7 @@ const getMyParts = (req, res) => {
 module.exports = {
 	getParts,
 	getMe,
-	postMe,
+	getSettings,
+	postSettings,
 	getMyParts
 }

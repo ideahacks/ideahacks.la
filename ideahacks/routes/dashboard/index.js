@@ -16,7 +16,9 @@ dashboardRouter.get("/parts", setResLocals, h.isVerified, dashboardHandlers.getP
 // dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
 
 dashboardRouter.get("/me", setResLocals, h.isVerified, dashboardHandlers.getMe)
-dashboardRouter.post("/me", setResLocals, h.isVerified, dashboardHandlers.postMe)
+
+dashboardRouter.post("/me/settings", setResLocals, h.isVerified, dashboardHandlers.postSettings)
+dashboardRouter.get("/me/settings", setResLocals, h.isVerified, dashboardHandlers.getSettings)
 
 dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
 

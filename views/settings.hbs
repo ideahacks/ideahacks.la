@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me - Settings</title>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/form.css' />
+    <link rel='stylesheet' type='text/css' href='/css/settings.css' />
+
+    <!-- SCRIPTS -->
+    <script src='/js/settings.js'></script>
+</head>
+<body>
+
+    <div class='wrapper'>
+        <!-- NAVBAR -->
+        {{> navbar }}
+
+        <div class="houseline"></div>
+
+        <div class="container text-center">
+            <h1 id="settings">SETTINGS</h1>
+        </div>
+
+        <div class="background theme-yellow col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+            <h1>change email/password</h1>
+            <form class="ideahacks-form">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" data-email="{{email}}" value="{{email}}">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter a new password">
+
+                <p class="error-message"></p>
+                <button type="submit" id="save">SAVE</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
