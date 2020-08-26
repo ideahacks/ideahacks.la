@@ -4,6 +4,13 @@ body {
 	background-color: #fff8e7;
 }
 
+h1 {
+	font-family: "Source Code Pro", monospace;
+	color: #50b5dd;
+	font-size: 52px;
+	font-weight: bold;
+}
+
 .wrapper {
 	position: relative;
 	background-color: #fafafa;
