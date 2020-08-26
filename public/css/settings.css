@@ -17,6 +17,8 @@
 .background h1 {
 	font-family: "Source Code Pro", monospace;
 	font-weight: 500;
+	font-size: 36px;
+	color: #2b2b2b;
 	letter-spacing: -1.5px;
 	text-align: center;
 }
