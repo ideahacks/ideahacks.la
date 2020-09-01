@@ -7,6 +7,24 @@
 	color: initial;
 }
 
+.contact {
+	float: right;
+}
+
+.links {
+	float: left;
+	margin: 30px 0 0 10px;
+}
+
+.links a {
+	color: #2b2b2b;
+}
+
+.links a:hover {
+	color: #737373;
+	transition: 0.3s ease;
+}
+
 #fb {
 	width: 40px;
 	margin: 20px 10px;
@@ -14,10 +32,17 @@
 
 #mail {
 	width: 29px;
-	margin: 20px 50px 22px 50px;
+	margin: 20px 20px 22px;
 }
 
 #insta {
 	width: 26px;
 	margin: 20px 16px;
+}
+
+@media (max-width: 450px) {
+	#mail {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 }
