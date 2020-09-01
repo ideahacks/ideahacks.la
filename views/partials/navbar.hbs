@@ -23,17 +23,8 @@
             <!-- MAILING LISTS -->
             <li><a href='/admin'>Mailing Lists</a></li>
 
-            <!-- PARTS -->
-            <div class='dropdown'>
-                <li><a href='/admin/parts'>Parts</a></li>
-                <div class='dropdown-content'>
-                    <li><a href='/admin/teams'>Teams</a></li>
-                    <li><a href='/admin/create'>Create</a></li>
-                </div>
-            </div>
-
-            <!-- TEAMS -->
-            <li><a href='/admin/teams/create'>Team Creation</a></li>
+            <!-- CREATE PARTS -->
+            <li><a href='/admin/create'>Create Parts</a></li>
 
             <!-- DASHBOARD -->
             <li><a href='/dashboard'><button>Me</button></a></li>
@@ -43,11 +34,8 @@
             <!-- APPLICATION -->
             <li><a href='/dashboard/application'>Application</a></li>
 
-            <!-- PARTS LIST -->
-            <li><a href='/dashboard/parts'>Parts List</a></li>
-
-            <!-- MY PARTS -->
-            <li><a href="/dashboard/me/parts">My Parts</a></li>
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
 
             <!-- RESOURCES -->
             <li><a href="/dashboard/resources">Resources</a></li>
@@ -75,8 +63,20 @@
             <!-- SPONSORS -->
             <li><a href='/#sponsors'>Sponsors</a></li>
 
-            <!-- LOGIN -->
-            <li><a href="/login"><button>Log In</button></a></li>
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
+
+            {{#if authenticated}}
+
+                <!-- DASHBOARD -->
+                <li><a href='/dashboard/me'><button>Me</button></a></li>
+
+            {{else}}
+
+                <!-- LOGIN -->
+                <li><a href="/login"><button>Log In</button></a></li>
+
+            {{/if}}
 
         {{/if}}
     </ul>
@@ -91,17 +91,8 @@
             <!-- MAILING LISTS -->
             <li><a href='/admin'>Mailing Lists</a></li>
 
-            <!-- TEAMS -->
-            <li><a href='/admin/teams'>Teams</a></li>
-
-            <!-- PARTS -->
-            <div class='responsive-dropdown'>
-                <li><a href='/admin/parts'>Parts</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
-                <div class='responsive-dropdown-content' id='responsive-content'>
-                    <li><a href='/admin/teams'>Teams</a></li>
-                    <li><a href='/admin/create'>Create</a></li>
-                </div>
-            </div>
+            <!-- CREATE PARTS -->
+            <li><a href='/admin/create'>Create Parts</a></li>
 
             <!-- DASHBOARD -->
             <li><a href='/dashboard'>Me</a></li>
@@ -111,11 +102,8 @@
             <!-- APPLICATIONS -->
             <li><a href='/dashboard/application'>Application</a></li>
 
-            <!-- PARTS LIST -->
-            <li><a href='/dashboard/parts'>Parts List</a></li>
-
-            <!-- MY PARTS -->
-            <li><a href="/dashboard/me/parts">My Parts</a></li>
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
 
             <!-- RESOURCES -->
             <li><a href="/dashboard/resources">Resources</a></li>
@@ -143,8 +131,20 @@
             <!-- SPONSORS -->
             <li><a href='/#sponsors'>Sponsors</a></li>
 
-            <!-- LOGIN -->
-            <li><a href="/login">Log In</a></li>
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
+
+            {{#if authenticated}}
+
+                <!-- DASHBOARD -->
+                <li><a href='/dashboard/me'>Me</a></li>
+
+            {{else}}
+
+                <!-- LOGIN -->
+                <li><a href="/login">Log In</a></li>
+
+            {{/if}}
 
         {{/if}}
     </ul>
