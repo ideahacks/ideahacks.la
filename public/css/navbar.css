@@ -50,7 +50,7 @@
 }
 
 .navbar-list a:hover {
-	color: white;
+	color: #737373;
 }
 
 .dropdown {
@@ -66,6 +66,7 @@
 	width: 100%;
 	overflow: auto;
 	background-color: #50b5dd;
+	opacity: 0.95;
 }
 
 .dropdown-content a {
@@ -78,7 +79,7 @@
 }
 
 .dropdown-content a:hover {
-	color: white;
+	color: #737373;
 	transition: color 0.3s ease, color 0.3s ease;
 }
 
@@ -103,7 +104,7 @@
 
 .myNavbar button:hover {
 	background-color: #50b5dd;
-	color: white;
+	color: #fafafa;
 	border: 1.5px solid #50b5dd;
 	cursor: pointer;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
