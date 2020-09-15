@@ -18,7 +18,7 @@ adminRouter.get("/application-review", setResLocals, h.isAdmin, applicationRevie
 // adminRouter.get("/parts", setResLocals, h.isAdmin, partsHandlers.getParts)
 // adminRouter.post("/parts", setResLocals, h.isAdmin, partsHandlers.postParts)
 
-adminRouter.get("/create", setResLocals, h.isAdmin, partsHandlers.createParts)
+// adminRouter.get("/create", setResLocals, h.isAdmin, partsHandlers.createParts)
 
 // adminRouter.delete("/teams/delete/:teamName", setResLocals, h.isAdmin, teamHandlers.deleteOneTeam)
 
