@@ -1,11 +1,11 @@
 .wrapper {
 	padding-top: 130px;
-	background-color: #fbf3f0;
-	color: #2a2d4e;
+	background-color: #fafafa;
+	color: #2b2b2b;
 }
 
 #history_title {
-	max-height: 45px;
+	max-height: 35px;
 	margin-bottom: 50px;
 }
 
@@ -59,19 +59,31 @@
 	padding: 25px 50px 50px;
 }
 
+#twenty,
+#eighteen {
+	background-color: #50b5dd;
+}
+
 #nineteen,
 #seventeen {
-	background-color: #f2ccb5;
+	background-color: #fafafa;
+}
+
+#twenty .old-logo,
+#twenty .btn {
+	background: #2b2b2b;
 }
 
 #nineteen .old-logo,
 #nineteen .btn {
-	background: #dd8064;
+	background: #2b2b2b;
+	<!--#dd8064-->
 }
 
 #eighteen .old-logo,
 #eighteen .btn {
-	background: #97c1eb;
+	background: #2b2b2b;
+	<!--#97c1eb-->
 	color: #2a2d4e;
 }
 
@@ -85,7 +97,8 @@
 
 #seventeen .old-logo,
 #seventeen .btn {
-	background: #181820;
+	background: #2b2b2b;
+	<!--#181820-->
 }
 
 .old-logo {
