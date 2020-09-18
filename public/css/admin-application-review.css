@@ -48,6 +48,7 @@ input {
 	width: 215px;
 	height: 125px;
 	margin: 10px;
+	border-radius: 10px;
 }
 
 .stats-box h1 {
@@ -76,6 +77,7 @@ input {
 	color: white;
 	font-size: 17px;
 	font-family: "Roboto Condensed";
+	border-radius: 10px;
 }
 
 .application:hover {
