@@ -1,10 +1,10 @@
 .tan-box {
-	background-color: rgb(242, 204, 181);
+	background-color: rgb(255, 225, 149);
 	height: 40px;
 }
 
 .white-box {
-	background-color: rgb(251, 243, 240);
+	background-color: rgb(250, 250, 250);
 	height: 40px;
 }
 
@@ -98,13 +98,13 @@
 .day1 {
 	height: 60px;
 	margin-top: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .day {
 	height: 60px;
 	margin-top: 45px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .schedule {
