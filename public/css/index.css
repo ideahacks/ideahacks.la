@@ -95,16 +95,22 @@
 	margin: 20px 0px;
 }
 
+.day1 {
+	height: 60px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
 .day {
-	height: 30px;
-	margin-top: 25px;
+	height: 60px;
+	margin-top: 45px;
 	margin-bottom: 10px;
 }
 
 .schedule {
-	border: solid 3px rgb(242, 204, 181);
+	border: solid 3px rgb(255, 188, 22);
 	border-radius: 7px;
-	color: rgb(64, 105, 143);
+	color: rgb(43, 43, 43);
 	padding: 15px;
 	margin: 0px 10px;
 	overflow: auto;
@@ -112,6 +118,7 @@
 
 .schedule p {
 	font-size: 16px;
+	font-weight: 500;
 }
 
 .schedule.note {
@@ -140,7 +147,7 @@
 }
 
 .faq-section {
-	background-color: rgb(242, 204, 181);
+	background-color: rgb(255, 225, 149);
 	padding: 20px 75px 0px 75px;
 }
 
@@ -190,7 +197,6 @@
 
 .small-logo {
 	width: 10%;
-
 	margin: 30px 15px;
 }
 
