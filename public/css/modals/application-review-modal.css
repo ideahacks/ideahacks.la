@@ -1,9 +1,12 @@
 .modal-content {
-	background-color: #fbf3f0;
+	background-color: #fafafa;
 }
+
 .applicant-name {
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: 700;
+	color: #50B5DD;
 }
 
 .applicant-contact {
@@ -28,13 +31,14 @@
 	text-transform: uppercase;
 	padding: 0px 50px;
 	margin: 0 0 5px;
+	color: #50B5DD;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
 	padding: 0 10px;
-	color: #40698f;
+	color: #2B2B2B;
 }
 
 .hackathon-information span {
@@ -55,6 +59,7 @@
 }
 
 i {
+	color: #50B5DD;
 	padding-left: 20px;
 	padding-right: 5px;
 }
