@@ -1,69 +1,67 @@
 #boxes {
-    margin: 100px auto 34px;
+	margin: 100px auto 34px;
 }
 
 #boxes-wrapper {
-    width: 100%;
-    padding: 50px;
-    
-    background-color: #D1EBFA;
+	width: 100%;
+	padding: 50px;
+
+	background-color: #d1ebfa;
 }
 
 #boxes-wrapper .box-header .box-name {
-    display: inline-block;
-    padding: 5px 20px;
+	display: inline-block;
+	padding: 5px 20px;
 
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    font-style: italic;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-transform: uppercase;
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
 }
 
 #boxes-wrapper .box-header .subtitle {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
 }
 
 #boxes-wrapper .parts-wrapper {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 #boxes-wrapper .part {
-    display: inline-block;
-    padding: 20px;
-    margin: 0 15px 30px;
-    width: 220px;
+	display: inline-block;
+	padding: 20px;
+	margin: 0 15px 30px;
+	width: 220px;
 
-    text-align: left;
-    background-color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: left;
+	background-color: white;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #boxes-wrapper .part img {
-    height: 180px;
-    width: 180px;
+	height: 180px;
+	width: 180px;
 
-    border-width: 5px;
-    border-style: solid;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	border-width: 5px;
+	border-style: solid;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 #boxes-wrapper .part .part-name {
-    margin-top: 10px;
+	margin-top: 10px;
 
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
 #boxes-wrapper .part p {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
