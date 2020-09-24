@@ -111,9 +111,15 @@
 }
 
 #part-modal .modal-content a {
+	color: #50b5dd;
+
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+#part-modal .modal-content a:hover {
+	color: #e1489a;
 }
 
 @media only screen and (max-width: 768px) {
