@@ -60,8 +60,8 @@ input {
 }
 
 .stats-box h4 {
-	font-family: "Roboto Condensed";
-	font-size: 25px;
+	font-family: "Source Code Pro", monospace;
+	font-size: 20px;
 	padding-top: 0px;
 }
 
@@ -76,7 +76,7 @@ input {
 	margin: 20px 0;
 	color: white;
 	font-size: 17px;
-	font-family: "Roboto Condensed";
+	font-family: "Source Code Pro", monospace;
 	border-radius: 10px;
 }
 
@@ -86,7 +86,7 @@ input {
 
 .application p {
 	margin: 0;
-	font-size: 1.3vw;
+	font-size: 16px;
 }
 
 .application.accepted,
