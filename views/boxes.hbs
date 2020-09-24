@@ -16,10 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/modal.css' />
     <link rel='stylesheet' type='text/css' href='/css/boxes.css' />
 
     <!-- SCRIPTS -->
-    <script src='/js/dashboard-parts-modal.js'></script>
+    <script src='/js/boxes.js'></script>
 </head>
 <body>
 
@@ -46,20 +47,42 @@
 
                 <div class="parts-wrapper row text-center">
                     {{#each this.parts}}
-                        <div class="part">
+                        <div class="part" data-category="{{this.category}}" data-description="{{this.description}}" data-datasheet="{{this.datasheetURL}}">
                             <img src="{{this.imageURL}}" alt="{{this.partName}}" style="border-color: {{../this.color}};">
-                            <p class="part-name" title="{{this.partName}}">
-                                {{this.partName}}
-                            </p>
-                            <p class="quantity">
-                                Quantity: {{this.quantity}}
-                            </p>
+                            <p class="part-name" title="{{this.partName}}">{{this.partName}}</p>
+                            <p class="quantity">Quantity: {{this.quantity}}</p>
                         </div>
                     {{/each}}
                 </div>
 
             {{/each}}
         </div>
+
+        <div id="part-modal" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="part-image col-sm-4">
+                        <img src="" alt="">
+                    </div>
+                    <div class="part-info col-sm-8">
+                        <p class="name"></p>
+                        <p class="quantity">
+                            <span class="section">Quantity: </span><span class="content"></span>
+                        </p>
+                        <p class="category">
+                            <span class="section">Category: </span><span class="content"></span>
+                        </p>
+                        <p class="description">
+                            <span class="section">Description: </span><span class="content"></span>
+                        </p>
+                        <p class="datasheet">
+                            <span class="section">Datasheet: </span><a href=""></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
