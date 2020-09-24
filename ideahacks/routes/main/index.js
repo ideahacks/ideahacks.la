@@ -30,4 +30,6 @@ mainRouter.get("/verify/:hash", authHandlers.getVerify)
 
 mainRouter.get("/logout", authHandlers.getLogout)
 
+mainRouter.get("/boxes", setResLocals, staticHandlers.getBoxes)
+
 module.exports = mainRouter
