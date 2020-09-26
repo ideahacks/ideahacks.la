@@ -19,7 +19,7 @@
 	left: -350.24px;
 	top: 0px;
 
-	background: #D1EBFA;
+	background: #d1ebfa;
 	transform: rotate(-29.09deg);
 }
 
@@ -48,12 +48,12 @@
 }
 
 .yellow-box {
-	background-color: #EFA516;
+	background-color: #efa516;
 }
 
 .banner-title .yellow-box {
 	position: absolute;
-	top: .5em;
+	top: 0.5em;
 	right: 0;
 	height: 1.3em;
 	width: 6.2em;
@@ -63,7 +63,7 @@
 	position: absolute;
 	top: 1.2em;
 	right: 0;
-	height: .85em;
+	height: 0.85em;
 	width: 6.6em;
 
 	background-color: rgba(80, 181, 221, 0.56);
@@ -90,7 +90,7 @@
 }
 
 .banner-title .theme {
-	bottom: .2em;
+	bottom: 0.2em;
 	font-size: 0.57em;
 }
 
@@ -139,7 +139,7 @@
 	float: right;
 	padding: 13px 17px;
 
-	background-color: #50B5DD;
+	background-color: #50b5dd;
 	border: none;
 
 	font-family: Roboto, sans-serif;
@@ -156,9 +156,7 @@
 .apply:hover,
 .apply:focus {
 	background-color: #6ccaf0;
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-    0 1px 10px 0 rgba(0, 0, 0, 0.12),
-	0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 	transform: scale(1.008);
 }
 
@@ -413,7 +411,7 @@
 	.main-wrapper .banner-desktop-graphic {
 		width: 90%;
 	}
-	
+
 	.main-wrapper .title-wrapper {
 		font-size: 50px;
 	}
@@ -438,7 +436,7 @@
 		right: 20px;
 		font-size: 16px;
 	}
-	
+
 	.date,
 	.apply,
 	.agb,
