@@ -9,15 +9,30 @@
 }
 
 .home-banner {
-	background-color: rgb(251, 243, 240);
+	overflow: hidden;
+}
+
+.home-banner .stripe {
+	position: absolute;
+	width: 1840px;
+	height: 602px;
+	left: -350.24px;
+	top: 0px;
+
+	background: #D1EBFA;
+	transform: rotate(-29.09deg);
+}
+
+.home-banner .main-wrapper {
+	margin-top: 200px;
+	margin-bottom: 50px;
 }
 
 .banner-desktop-graphic {
-	width: 70%;
-	margin: 10px 0px;
+	width: 90%;
 }
 
-.banner-tablet-graphic {
+/* .banner-tablet-graphic {
 	width: 70%;
 	margin: 10px 0px;
 	display: none;
@@ -27,43 +42,136 @@
 	width: 90%;
 	margin: 10px 0px;
 	display: none;
-}
+} */
 
-.banner-details {
-	margin-top: 10px;
+.title-wrapper {
+	font-size: 70px;
+	text-align: right;
+	position: relative;
 }
 
 .banner-title {
-	height: 35px;
-	margin-top: 100px;
-	margin-bottom: 20px;
+	position: relative;
 }
 
-.date,
-.apply,
-.agb,
-.deadline {
+.yellow-box {
+	background-color: #EFA516;
+}
+
+.banner-title .yellow-box {
+	position: absolute;
+	top: .5em;
+	right: 0;
+	height: 1.3em;
+	width: 6.2em;
+}
+
+.banner-title .blue-box {
+	position: absolute;
+	top: 1.2em;
+	right: 0;
+	height: .85em;
+	width: 6.6em;
+
+	background-color: rgba(80, 181, 221, 0.56);
+}
+
+.banner-title .title,
+.banner-title .theme {
+	position: relative;
+	right: 17px;
+	margin: 0;
+	z-index: 1;
+
+	font-family: Roboto, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+	color: white;
+}
+
+.banner-title .title {
+	top: 0;
+	font-size: 1em;
+}
+
+.banner-title .theme {
+	bottom: .2em;
+	font-size: 0.57em;
+}
+
+.presented-wrapper {
+	position: relative;
+	margin-top: 40px;
+	padding: 5px 0;
 	font-size: 20px;
-	color: rgb(32, 71, 164);
-	margin: 0px;
+}
+
+.presented-wrapper p {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 5px 17px;
+	z-index: 1;
+
+	font-family: Roboto, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+	color: white;
+}
+
+.banner-details .date {
+	position: relative;
+	margin: 0;
+	padding: 7px 17px;
+	float: left;
+	z-index: 1;
+
+	font-family: Roboto, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+	color: white;
 }
 
 .apply {
-	color: white;
+	position: relative;
+	right: 40px;
+	bottom: 200px;
+	float: right;
+	padding: 13px 17px;
+
+	background-color: #50B5DD;
+	border: none;
+
+	font-family: Roboto, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	text-transform: uppercase;
-	background-color: rgb(32, 71, 164);
-	border: 2px solid rgb(32, 71, 164);
-	margin-top: 20px;
-	padding: 5px 20px;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	color: white;
+
+	transition: all 0.3s ease;
 }
 
-.apply:hover {
-	background-color: transparent;
-	color: rgb(32, 71, 164);
+.apply:hover,
+.apply:focus {
+	background-color: #6ccaf0;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12),
+	0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	transform: scale(1.008);
 }
 
 .about-section {
+	position: relative;
+	z-index: 1;
 	background-color: rgb(255, 225, 149);
 	padding: 20px 100px 0px 100px;
 }
@@ -215,7 +323,7 @@
 	.schedule-section {
 		padding: 10px 10px 35px 10px;
 	}
-	.banner-title {
+	/* .banner-title {
 		height: initial;
 		width: 90%;
 	}
@@ -227,7 +335,7 @@
 	}
 	.banner-mobile-graphic {
 		display: none;
-	}
+	} */
 	.banner-details {
 		margin-bottom: 20px;
 	}
@@ -264,7 +372,7 @@
 }
 
 @media (max-width: 450px) {
-	.banner-title {
+	/* .banner-title {
 		height: 13px;
 		width: initial;
 	}
@@ -276,7 +384,7 @@
 	}
 	.banner-mobile-graphic {
 		display: initial;
-	}
+	} */
 	.date,
 	.apply,
 	.agb,
