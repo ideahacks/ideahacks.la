@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700;1,900&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -33,26 +33,38 @@
 
         <!-- BANNER -->
 
-        <div class='container-fluid home-banner'>
-            <div class='text-center'>
-                <img class='banner-title' src="/img/index/uclaieeeandthetataupresent.png">
+        <div class='home-banner'>
+
+            <div class="stripe"></div>
+
+            <div class="main-wrapper">
+                <div class="row flex-row">
+                    <div class="col-md-7 text-center banner-left">
+                        <img class='banner-desktop-graphic' src="/img/index/main-graphic.png">
+                    </div>
+
+                    <div class="col-md-5 banner-right">
+                        <div class="title-wrapper">
+                            <div class="banner-title">
+                                <div class="yellow-box"></div>
+                                <div class="blue-box"></div>
+                                <h1 class="title">IDEAHacks</h1>
+                                <h2 class="theme">Home Applications</h2>
+                            </div>
+
+                            <div class="presented-wrapper">
+                                <p class="yellow-box">Presented by UCLA IEEE and Theta Tau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='banner-details clearfix'>
+                    <p class="date yellow-box">Remote, January 15-17</p>
+                    <a href="/dashboard/application"><button class="apply" type="button">Apply Now!</button></a>
+                </div>
             </div>
 
-            <div class='text-center'>
-                <img class='banner-desktop-graphic' src="/img/index/dropshadowgraphic.png">
-                <img class='banner-tablet-graphic' src="/img/index/dropshadowgraphic.png">
-                <img class='banner-mobile-graphic' src="/img/index/dropshadowgraphic.png">
-            </div>
-
-            <div class='text-left banner-details'>
-                <p class="date"> ACKERMAN GRAND BALLROOM, JANUARY 15-17 </p>
-                <!--
-                <p class="date">January 10 - 12, 2020</p>
-                <p class="agb">Ackerman Grand Ballroom, UCLA</p> -->
-
-                <!-- APPS ARE OPEN 
-                <p class="deadline">Applications are now closed.</p> -->
-            </div>
         </div>
 
         <div id='about' class='white-box'></div>
