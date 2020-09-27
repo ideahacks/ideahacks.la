@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,9 +28,7 @@
         {{> navbar}}
 
         <div id="intro">
-            <div class='text-center'>
-                <img id="history_title" src="/img/history/history.png" alt="history title image">
-            </div>
+            <h1>HISTORY</h1>
             <div class="introduction container-fluid">
                 <div class="col-sm-6">
                     <img id="intro_img" src="/img/history/collage.png" alt="historical picture">
@@ -43,30 +41,87 @@
             </div>
         </div>
 
-        <!-- 2019 -->
-        <div id="nineteen" class="history-year clearfix">
-            <div class="old-logo text-center">
-                <img src="/img/history/2019 Logo.png" alt="Logo for 2019" width="100%">
-            </div>
-            <div class="text-center">
-                <img class="year-title" src="/img/history/2019 - travel upgrade.png" alt="2019 - Travel Upgrade">
+        <!-- 2020 -->
+        <div id="twenty" class="history-year clearfix">
+            <div class="section-header">
+                <span style="background-color: #d1ebfa; padding: 20px;">
+                    <img class="year-title" src="/img/history/2020 - college lifestyle.png" alt="2020 - College Lifestyle">
+                </span>
             </div>
 
             <div class="places col-xs-12 row">
                 <div class="place col-sm-4 text-center">
-                    <h2>First Place: Pop 'n Lock</h2>
+                    <h2><b>FIRST PLACE</b></h2>
+                    <h2><b>Napkn</b></h2>
+                    <img src="/img/history/2020_1stPlace.jpg" alt="2020 first place" width="100%">
+                    <p> <b>PRIZE:</b> Bose Headphones<br><br> <b>TEAM:</b> Caleb Terrill, Fred Chu, Caitlyn Chau, Lucas Wolter, Bryan Wong <br><br> <b>PROJECT:</b> Napkn is a convenient and intuitive tabletop IoT table reservation device. With a simple tap of a RFID-enabled card, users can check in to a table, reserving it for a predefined duration. Once the user is finished using their reserved dining hall table, library table, etc., all it takes is another tap of their RFID card to free the table for use.<br></p>
+                </div>
+                <div class="place col-sm-4 text-center">
+                    <h2><b>SECOND PLACE</b></h2>
+                    <h2><b>Penley</b></h2>
+                    <img src="/img/history/2020_2ndPlace.jpg" alt="2020 second place" width="100%">
+                    <p> <b>PRIZE:</b> Echo Show 5<br><br> <b>TEAM:</b> Max Gong, Aidan Cookson, Calvin Chang, Daniel Truong, Krish Kabra<br><br> <b>PROJECT:</b> Penley makes note taking easier by transcribing your notes directly to your computer. Powered by an Arduino Nano and a TensorFlow neural network, Penley works on any surface.<br></p>
+                </div>
+                <div class="place col-sm-4 text-center">
+                    <h2><b>THIRD PLACE</b></h2>
+                    <h2><b>Retro Switch</b></h2>
+                    <img src="/img/history/2020_3rdPlace.jpg" alt="2020 third place" width="100%">
+                    <p> <b>PRIZE:</b> Nimble Wireless Charging Pad<br><br> <b>TEAM:</b> Bradley Schulz, Aditya Mishra, Tyler Price, James Tseng<br><br> <b>PROJECT:</b> Designed to limit energy use and maximize convienence, the RetroSwitch is an automatic light switch upgrade. The Retroswitch combines WiFi control and intelligent motion detection to automate turning lights on and off. It is super easy to install; the Retroswitch comes in a package that can be magnetically mounted over any existing light switch.<br></p>
+                </div>
+            </div>
+
+            <div class="text-center clearfix">
+                <div class="btn col-xs-12" role="button" onclick="animateDropdown(this)">
+                    Click to see our sponsors for 2020's Hackathon!
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+
+                <div class="sponsor-img text-center col-xs-12 container">
+                    <div>
+                        <img class="sponsor-logo" src="/img/company_logos/stmicro.png" alt="stmicro_logo" width="20%">
+                        <img src="/img/company_logos/digikey.png" alt="digikey_logo" width="20%">
+                        <img src="/img/company_logos/advantech.png" alt="advantech_logo" width="20%">
+                        <img src="/img/company_logos/ti.png" alt="ti_logo" width="20%">
+                        <img src="/img/history/tgif.png" alt="the_green_initiative_logo" width="20%">
+                        <img src="/img/company_logos/northrop.png" alt="northrop_logo" width="20%">
+                        <img src="/img/company_logos/lockheed.png" alt="lockheed_logo" width="20%">
+                        <img src="/img/company_logos/swc.png" alt="swc_logo" width="20%">
+                        <img src="/img/company_logos/bellapita.png" alt="bellapita_logo" width="20%">
+                        <img src="/img/company_logos/bjs.png" alt="bjs_logo" width="20%">
+                        <img src="/img/company_logos/yerba.png" alt="yerba_logo" width="20%">
+                        <img src="/img/company_logos/califafarms.png" alt="califa_farms_logo" width="20%">
+                        <img src="/img/company_logos/spudsy.png" alt="spudsy_logo" width="20%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2019 -->
+        <div id="nineteen" class="history-year clearfix">
+            <div class="section-header">
+                <span style="background-color: #fafafa; padding: 20px;">
+                    <img class="year-title" src="/img/history/2019 - travel upgrade.png" alt="2019 - Travel Upgrade">
+                </span>
+            </div>
+
+            <div class="places col-xs-12 row">
+                <div class="place col-sm-4 text-center">
+                    <h2><b>FIRST PLACE</b></h2>
+                    <h2><b>Pop 'n Lock</b></h2>
                     <img src="/img/history/2019_1stPlace.jpg" alt="2019 first place" width="100%">
-                    <p> Prize: Microduino mCookie Kit<br><br> Team: Matthew Wang, Ashvin Nagarajan, Jeff Anderson, Allison Chen, Juan Banchs<br><br> Project: Our project was a Smart Lock that uses an industry standard ball-bearing lock design and arduino powered RFID sensor so that consumers can lock and unlock the lock using a BruinCard. We presented it as a improvement upon existing smart locks that are susceptible to malware.<br></p>
+                    <p> <b>PRIZE:</b> Microduino mCookie Kit<br><br> <b>TEAM:</b> Matthew Wang, Ashvin Nagarajan, Jeff Anderson, Allison Chen, Juan Banchs<br><br> <b>PROJECT:</b> Our project was a Smart Lock that uses an industry standard ball-bearing lock design and arduino powered RFID sensor so that consumers can lock and unlock the lock using a BruinCard. We presented it as a improvement upon existing smart locks that are susceptible to malware.<br></p>
                 </div>
                 <div class="place col-sm-4 text-center">
-                    <h2>Second Place: Braille Translator</h2>
+                    <h2><b>SECOND PLACE</b></h2>
+                    <h2><b>Braille Translator</b></h2>
                     <img src="/img/history/2019_2ndPlace.jpg" alt="2019 second place" width="100%">
-                    <p> Prize: Amazon Echo<br><br> Team: Garo Mazmanian, Tanmaya Hada, Pranav Balgi, Peter Oh, Hersh Joshi<br><br> Project: The braille reader reads braille of one script, translates it, and then speaks it out in the listener's native tongue. This aims to make travel more accessible to the blind population by allowing the blind to understand braille in a different language.<br></p>
+                    <p> <b>PRIZE:</b> Amazon Echo<br><br> <b>TEAM:</b> Garo Mazmanian, Tanmaya Hada, Pranav Balgi, Peter Oh, Hersh Joshi<br><br> <b>PROJECT:</b> The braille reader reads braille of one script, translates it, and then speaks it out in the listener's native tongue. This aims to make travel more accessible to the blind population by allowing the blind to understand braille in a different language.<br></p>
                 </div>
                 <div class="place col-sm-4 text-center">
-                    <h2>Third Place: 3feet</h2>
+                    <h2><b>THIRD PLACE</b></h2>
+                    <h2><b>3feet</b></h2>
                     <img src="/img/history/2019_3rdPlace.jpg" alt="2019 third place" width="100%">
-                    <p> Prize: Eraseable notebook<br><br> Team: Shriniket Buche, Bochi Lin, Jae Hyeong Park, Richard DeAmicis, Wei Dong<br><br> Project: 3feet is a hardware and software bicycle and electric scooter protection system. The system utilizes a number of sensors on the bicycle to record when automobiles are approaching and notifies riders or city officials appropiately.<br></p>
+                    <p> <b>PRIZE:</b> Eraseable notebook<br><br> <b>TEAM:</b> Shriniket Buche, Bochi Lin, Jae Hyeong Park, Richard DeAmicis, Wei Dong<br><br> <b>PROJECT:</b> 3feet is a hardware and software bicycle and electric scooter protection system. The system utilizes a number of sensors on the bicycle to record when automobiles are approaching and notifies riders or city officials appropiately.<br></p>
                 </div>
             </div>
 
@@ -100,28 +155,30 @@
 
         <!-- 2018 -->
         <div id="eighteen" class="history-year clearfix">
-            <div class="old-logo text-center">
-                <img src="/img/history/2018 Logo.png" alt="Logo for 2018" width="100%">
-            </div>
-            <div class="text-center">
-                <img class="year-title" src="/img/history/2018 - home automation.png" alt="2018 - Home Automation">
+            <div class="section-header">
+                <span style="background-color: #d1ebfa; padding: 20px;">
+                    <img class="year-title" src="/img/history/2018 - home automation.png" alt="2018 - Home Automation">
+                </span>
             </div>
 
             <div class="places col-xs-12 row">
                 <div class="place col-sm-4 text-center">
-                    <h2>First Place: ASL Recognition Platform</h2>
+                    <h2><b>FIRST PLACE</b></h2>
+                    <h2><b>ASL Recognition Platform</b></h2>
                     <img src="/img/history/2018_1stPlace.jpg" alt="2018 first place" width="100%">
-                    <p>Prize: Monoprice 3-D printer<br><br> Team: Julian Mendel, Mark Nasielski, Serene Kamal, Michelle Du, Eric Sarnoff Espinosa<br><br> Project: With a special glove, users can use sign language to change the color of an LED.<br></p>
+                    <p> <b>PRIZE:</b> Monoprice 3-D printer<br><br> <b>TEAM:</b> Julian Mendel, Mark Nasielski, Serene Kamal, Michelle Du, Eric Sarnoff Espinosa<br><br> <b>PROJECT:</b> With a special glove, users can use sign language to change the color of an LED.<br></p>
                 </div>
                 <div class="place col-sm-4 text-center">
-                    <h2>Second Place: Less Stress Dress</h2>
+                    <h2><b>SECOND PLACE</b></h2>
+                    <h2><b>Less Stress Dress</b></h2>
                     <img src="/img/history/2018_2ndPlace.jpg" alt="2018 second place" width="100%">
-                    <p> Prize: Amazon Echo<br><br> Team: Jimmy Byrne, Josh Ren, Anshul Aggarwal, Nina Chikanov, Allison Doami<br><br> Project: Aimed at visually impaired people, this project takes current weather information around the world to choose the perfect outfit for the user.
+                    <p> <b>PRIZE:</b> Amazon Echo<br><br> <b>TEAM:</b> Jimmy Byrne, Josh Ren, Anshul Aggarwal, Nina Chikanov, Allison Doami<br><br> <b>PROJECT:</b> Aimed at visually impaired people, this project takes current weather information around the world to choose the perfect outfit for the user.
                 </div>
                 <div class="place col-sm-4 text-center">
-                    <h2>Third Place: Safe Stove</h2>
+                    <h2><b>THIRD PLACE</b></h2>
+                    <h2><b>Safe Stove</b></h2>
                     <img src="/img/history/2018_3rdPlace.jpg" alt="2018 third place" width="100%">
-                    <p> Prize: Quadcopter drone<br><br> Team: Chris Hailey, Ishan Shah, Joel Joseph, Adithya Bellathur, Janeline Wong<br><br> Project: Using ultrasonic sensors, capacitive touch and facial recognition to reduce the likelihood of cooking fires.</p>
+                    <p> <b>PRIZE:</b> Quadcopter drone<br><br> <b>TEAM:</b> Chris Hailey, Ishan Shah, Joel Joseph, Adithya Bellathur, Janeline Wong<br><br> <b>PROJECT:</b> Using ultrasonic sensors, capacitive touch and facial recognition to reduce the likelihood of cooking fires.</p>
                 </div>
             </div>
 
@@ -147,30 +204,33 @@
             </div>
         </div>
 
+
         <!-- 2017 -->
         <div id="seventeen" class="history-year clearfix">
-            <div class="old-logo text-center">
-                <img src="/img/history/2017 Logo.jpg" alt="Logo for 2017" width="100%">
-            </div>
-            <div class="text-center">
-                <img class="year-title" src="/img/history/2017 - sports tech.png" alt="2017 - Sports Technology">
+            <div class="section-header">
+                <span style="background-color: #fafafa; padding: 20px;">
+                    <img class="year-title" src="/img/history/2017 - sports tech.png" alt="2017 - Sports Technology">
+                </span>
             </div>
 
             <div class="places col-xs-12 row">
                 <div class="place col-sm-4 text-center">
-                    <h2>First Place: Light-Up Frisbee</h2>
+                    <h2><b>FIRST PLACE</b></h2>
+                    <h2><b>Light-Up Frisbee</b></h2>
                     <img src="/img/history/2017_1stPlace.jpg" alt="2017 first place" width="100%">
-                    <p> Prize: New Matter 3-D printer<br><br> Team: Andrew Chen, Matthew Wong, Robert Zalog, and Christine Chen (not pictured)<br><br> Project: A ‘smart’ Frisbee that measures angular velocity while it is being thrown and gives feedback to the user once it is caught. Uses an Arduino that signals to the user through RGB LEDs.<br></p>
+                    <p> <b>PRIZE:</b> New Matter 3-D printer<br><br> <b>TEAM:</b> Andrew Chen, Matthew Wong, Robert Zalog, and Christine Chen (not pictured)<br><br> <b>PROJECT:</b> A ‘smart’ Frisbee that measures angular velocity while it is being thrown and gives feedback to the user once it is caught. Uses an Arduino that signals to the user through RGB LEDs.<br></p>
                 </div>
                 <div class="place col-sm-4 text-center">
-                    <h2>Second Place: Rundora</h2>
+                    <h2><b>SECOND PLACE</b></h2>
+                    <h2><b>Rundora</b></h2>
                     <img src="/img/history/2017_2ndPlace.jpg" alt="2017 second place" width="100%">
-                    <p> Prize: Amazon Echo<br><br> Team: Tim Ling, Shuang Feng, Jingxian Xu, and Tianyu Deng<br><br> Project: Device changes the tempo of the music based on the heart rate of the runner.<br></p>
+                    <p> <b>PRIZE:</b> Amazon Echo<br><br> <b>TEAM:</b> Tim Ling, Shuang Feng, Jingxian Xu, and Tianyu Deng<br><br> <b>PROJECT:</b> Device changes the tempo of the music based on the heart rate of the runner.<br></p>
                 </div>
                 <div class="place col-sm-4 text-center">
-                    <h2>Third Place: Spiro</h2>
+                    <h2><b>THIRD PLACE</b></h2>
+                    <h2><b>Spiro</b></h2>
                     <img src="/img/history/2017_3rdPlace.jpg" alt="2017 third place" width="100%">
-                    <p> Prize: Mechanical keyboard<br><br> Team: Andrew Arifin, Sean Oh, Jonathan Hurwitz, and Robert Devlin<br><br> Project: Spiro is a device designed to help people better manage anxiety. Using an elastic chestband to alert you to irregular breathing potentially, the paired app and smartwatch guides the user through a self-regulation breathing exercise. Using customizable colors and soft lighting, the device helps a user take a step back from their situation and just breathe.
+                    <p> <b>PRIZE:</b> Mechanical keyboard<br><br> <b>TEAM:</b> Andrew Arifin, Sean Oh, Jonathan Hurwitz, and Robert Devlin<br><br> <b>PROJECT:</b> Spiro is a device designed to help people better manage anxiety. Using an elastic chestband to alert you to irregular breathing potentially, the paired app and smartwatch guides the user through a self-regulation breathing exercise. Using customizable colors and soft lighting, the device helps a user take a step back from their situation and just breathe.
                 </div>
             </div>
 
