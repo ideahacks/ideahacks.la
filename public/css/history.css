@@ -4,6 +4,11 @@
 	color: #2b2b2b;
 }
 
+#intro h1 {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
 #history_title {
 	max-height: 35px;
 	margin-bottom: 50px;
