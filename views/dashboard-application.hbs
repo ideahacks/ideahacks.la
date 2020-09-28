@@ -28,7 +28,7 @@
     <!-- NAVBAR -->
     <div class='wrapper'>
         {{> navbar }}
-        
+
         <div class='top-box'></div>
         <!--
         <div class='application-form'>
@@ -54,12 +54,14 @@
             <div class='ideahacks-form application-form container-fluid'>
                 <!-- PERSONAL INFORMATION -->
                 <div class='row'>
-                    <center><h1>IDEAHACKS: HOME APPLICATIONS</h1></center>
+                    <center>
+                        <h1>IDEAHACKS: HOME APPLICATIONS</h1>
+                    </center>
                     <div class='header'>
                         <h3><span>PERSONAL</span></h3>
                         <!--<img id="img-side" src="/img/registration/logo.png" /> -->
                     </div>
-                    
+
                     <fieldset>
                         <div class='form-group col-md-5'>
                             <label>FIRST NAME*</label>
@@ -238,21 +240,21 @@
                                 <option {{#if user.pref1MotionAddOn}} selected{{/if}}>Motion Add-on</option>
                                 <option {{#if user.pref1AVAddOn}} selected{{/if}}>Audio & Visual Add-on</option>
                                 <option {{#if user.pref1TIBox}} selected{{/if}}>TI Box</option>
-                            </select> </div>  
+                            </select> </div>
                         <div class='form-group col-md-3'>
                             <label>Kit Preference #2*</label>
                             <select class='form-control' name='kitRanking2'>
                                 <option {{#if user.pref2MotionAddOn}} selected{{/if}}>Motion Add-on</option>
                                 <option {{#if user.pref2AVAddOn}} selected{{/if}}>Audio & Visual Add-on</option>
                                 <option {{#if user.pref2TIBox}} selected{{/if}}>TI Box</option>
-                            </select> </div>  
+                            </select> </div>
                         <div class='form-group col-md-3'>
                             <label>Kit Preference #3*</label>
                             <select class='form-control' name='kitRanking3'>
                                 <option {{#if user.pref3MotionAddOn}} selected{{/if}}>Motion Add-on</option>
                                 <option {{#if user.pref3AVAddOn}} selected{{/if}}>Audio & Visual Add-on</option>
                                 <option {{#if user.pref3TIBox}} selected{{/if}}>TI Box</option>
-                            </select> </div> 
+                            </select> </div>
                         <span class='row'></span>
                         <div class='form-group col-md-6 col-xs-10 short-answer'>
                             <label>What is your address to ship the box to?*</label>
@@ -261,7 +263,7 @@
                         <span class='row'></span>
                         <div class='form-group col-md-3'>
                             <a href="/boxes" target="_blank"><button class='file-upload'>
-                                    CLICK HERE TO SEE BOXES  </button></a>
+                                    CLICK HERE TO SEE BOXES </button></a>
                     </fieldset>
                 </div>
                 <!-- BUTTONS -->
