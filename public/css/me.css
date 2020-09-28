@@ -1,119 +1,120 @@
-#welcome-img {
-	margin-top: 105px;
-	margin-bottom: 20px;
-	width: 25%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+#welcome {
+	font-family: "Source Code Pro", monospace;
+	font-weight: bold;
+	font-size: 52px;
+	color: #50b5dd;
+	margin: 100px auto 20px;
 }
 
-.profile-container {
-	padding-bottom: 100px;
-}
-
-#welcome-name {
-	color: #2a2d4e;
+.button-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	text-align: center;
-	text-transform: none;
-	font-family: "Roboto Condensed";
-}
 
-.no-team {
-	font-size: 18px;
-	color: white;
-}
-
-.team-number {
-	color: white;
-	font-size: 20px;
-	margin-bottom: 0;
-}
-
-.admin-button {
-	text-align: center;
-}
-
-.border {
+	max-width: 350px;
 	width: 80%;
-}
-
-.user-info {
-	text-align: center;
-	color: white;
 	margin: auto;
-	font-size: 18px;
 }
 
-.admin-button button {
+button {
+	background-color: transparent;
+	font-weight: normal;
+	font-size: 14px;
+	color: #50b5dd;
+	border: 1.5px solid #50b5dd;
+	text-transform: uppercase;
+	border-radius: 10px;
+	padding: 8px 20px;
+}
+
+button:hover {
+	background-color: #50b5dd;
+	color: white;
+	transition: 0.3s ease;
+}
+
+.button-container button {
+	margin: 5px 0;
+}
+
+.admin {
 	background-color: #d46c6c;
 	border: 1px solid #d46c6c;
 	color: #5d3131;
 }
 
-.admin-button button:hover {
+.admin:hover {
 	background-color: #5d3131;
 	border: 1px solid #5d3131;
 	color: #d46c6c;
 }
 
-/*----- CHANGE PROFILE INFORMATION -------*/
-.ideahacks-form {
-	background-color: #40698f;
-	width: 70%;
-	justify-content: center;
-	text-align: center;
-	padding: 30px 0px 30px 0px;
-	border-radius: 18px;
-	margin: 20px 15%;
+/* APPLICATION STATUS */
+
+.background {
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 40px auto;
+	padding: 20px 70px;
+	border-radius: 10px;
 }
 
-.ideahacks-form label {
-	color: #70bfe6;
-	text-decoration: bold;
-	font-size: 18px;
+.background h1 {
+	font-family: "Source Code Pro", monospace;
+	font-weight: 500;
+	font-size: 36px;
+	color: #2b2b2b;
+	letter-spacing: -1.5px;
 }
 
-.ideahacks-form input,
-.ideahacks-form input:focus {
-	border: none;
-	outline: none;
-	font-family: inherit;
-	font-size: 18px;
-	color: black;
-	text-align: center;
-	text-decoration: bold;
-	width: 60%;
+.status-container {
+	display: inline-block;
+	margin: 20px 0;
+	padding: 10px;
+	background-color: #fafafa;
+	border-radius: 10px;
 }
 
-.text-center button {
-	width: 35%;
-	text-transform: uppercase;
-	margin: 1.5vh 0% 2vh;
-	font-weight: bold;
+.status {
+	padding: 50px 30px;
+	border-radius: 10px;
+	width: 320px;
+
+	font-family: "Source Code Pro", monospace;
+	text-transform: capitalize;
+	font-size: 30px;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.save-button {
-	background-color: #95b9cd;
-	border-color: #95b9cd;
+.no-application {
+	background-color: #2b2b2b;
+	color: white;
 }
 
-.save-button:hover {
-	color: #95b9cd;
-	border-color: white;
+.apply {
+	display: block;
 }
 
-.logout:hover {
-	color: #ffb718;
-}
+@media (max-width: 550px) {
+	.button-container button {
+		padding: 8px;
+	}
 
-@media (max-width: 991px) {
-	#welcome-img {
+	.background {
+		padding: 10px 20px;
+	}
+
+	.background h1 {
+		font-size: 26px;
+	}
+
+	.status {
+		padding: 30px 10px;
 		width: 250px;
-	}
-	.dotted {
-		width: 80%;
-	}
-	.text-center button {
-		width: 70%;
+		font-size: 24px;
 	}
 }

@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -22,27 +22,75 @@
     <!-- SCRIPTS -->
 </head>
 <body>
-    <div class="wrapper">
+
+    <div class='wrapper'>
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class='banner'>
-            <img src='/img/myparts.png'>
+        <div class="houseline"></div>
+
+        <div class='container text-center'>
+            <h1 id="welcome">WELCOME</h1>
         </div>
 
+        <div class="button-container">
+            {{#if user.isAdmin}}
+                <a href='/admin'><button class="admin">Admin</button></a>
+            {{/if}}
 
-        <div class='text-center container-fluid'>
-            <div class='parts-list'>
-                <div id='labels'>
-                    <h1>Name of Item</h1>
-                    <h1>Quantity</h1>
-                </div>
-                {{#each parts}}
-                    <div id='part-entry'>
-                        <p>{{ this.name }}</p>
-                        <p>{{ this.quantity}}</p>
+            <a href="/settings"><button class="settings">Settings</button></a>
+            <a href="/logout"><button class="logout">Log Out</button></a>
+        </div>
+
+        <div class="background theme-yellow container text-center">
+            <div class="row">
+                <!-- MY PARTS -->
+                <div class="my-parts col-md-4">
+                    <h1>my parts</h1>
+
+                    <div class="labels row">
+                        <p class="name col-xs-8">Name</p>
+                        <p class="quantity col-xs-4">Quantity</p>
                     </div>
-                {{/each}}
+                    {{#if myParts}}
+                        <div class="text-box">
+                            {{#each myParts}}
+                                <div class="part-entry row" data-full="{{name}}">
+                                    <p class="name col-xs-10">{{name}}</p>
+                                    <p class="quantity col-xs-2">{{quantity}}</p>
+                                </div>
+                            {{/each}}
+                        </div>
+                    {{else}}
+                        <div class="text-box no-parts">
+                            <h2>Looks like you're not part of a team yet!</h2>
+                        </div>
+                    {{/if}}
+                </div>
+
+                <!-- PARTS QUICK SEARCH -->
+                <div class="parts-search col-md-8">
+                    <h1>parts quick search</h1>
+
+                    <div style="height: 40px;">
+                        {{> filter }}
+                    </div>
+
+                    <div class="labels row">
+                        <p class="name col-sm-4 col-xs-8">Name</p>
+                        <p class="category col-sm-4">Category</p>
+                        <p class="quantity col-xs-4">Quantity</p>
+                    </div>
+                    <div class="text-box filter-list">
+                        {{#each parts}}
+                            <div class="part-entry row" data-full="{{name}}">
+                                <p class="name filter-key col-sm-5 col-xs-10">{{name}}</p>
+                                <p class="category filter-key col-sm-2">{{category}}</p>
+                                <p class="quantity col-sm-5 col-xs-2">{{quantity}}</p>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
