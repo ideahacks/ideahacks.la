@@ -89,10 +89,10 @@
 } */
 
 #img-side {
-	width: 12%;
+	width: 20%;
 	position: absolute;
-	left: 88.3%;
-	top: 160px;
+	left: 55%;
+	top: 1010px;
 	/* background-color: #FBF3F0; */
 }
 
@@ -117,43 +117,69 @@
 .header {
 	margin-bottom: 30px;
 }
+
+.row {
+	/* text-align: center; */
+}
 .row h1 {
+	text-align: center;
 	display: inline-block;
 	background-color: #EFA516;
-	position: absolute;
+	/* width: 100%; */
 	width: 682px;
 	height: 76px;
-	text-align: center;
-	padding: 15px 0px 30px 0px;
+	padding: 15px 0px 15px 0px;
 	color: white;
-	font-family: Roboto;
+	font-family: "Roboto", sans-serif;
 	font-style: italic;
 	font-weight: bold;
 	font-size: 40px;
 	line-height: 47px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 15px;
 }
 
-.header h3 {
+
+
+/* Header for each subsection */
+.header h3 { 
 	text-align: center;
 	display: inline-block;
 	border: none;
 	color: white;
 	background-color: #EFA516;
-	font-family: "Source Code Pro";
+	font-family: "Source Code Pro", monospace;
 	padding: 22px 0px 9px 0px;
 	width: 369px;
 	height: 71px;
 	font-size: 24px;
 	font-style: italic;
 	font-weight: bold;
-	margin-left: 0px;
-	/* border-radius: 0px 25px 25px 0px; */
-	/* adding line to headers */
-	/* border-bottom: 1px solid #000;
-	line-height: 0.1em;
-	margin: 10px 0 20 px */
+	margin-left: 100px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
+
+.header h3:before,
+.header h3:after {
+  background-color: #EFA516;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.header h3:before {
+	right: 2em;
+	margin-left: -50%;
+}
+.header h3:after {
+	left: 2em;
+	margin-right: -50%;
+}   
 
 fieldset {
 	padding-left: 11%;
@@ -183,6 +209,7 @@ fieldset {
 /* FORM FIELDS */
 .short-answer {
 	margin: 0 0 40px;
+
 }
 
 textarea {
@@ -196,6 +223,7 @@ textarea {
 .form-control {
 	height: 35px;
 	margin-bottom: 10px;
+	border-radius: 12px;
 }
 
 .sublabel {
@@ -228,11 +256,25 @@ input::placeholder {
 
 .buttons button {
 	margin: 0 60px;
-	background-color: #EFA516;
-	/* border-color: #2a2d4e; */
+	/* background-color: #EFA516; */
 	width: 364px;
 	height: 54px;
 	margin-top: 50px;
+	border: none;
+	
+}
+.submit-application {
+	color : white;
+	font-family: "Roboto", sans-serif;
+	background-color: #50B5DD;
+	display: inline-block;
+	padding: 8px 12px;
+	cursor: pointer;
+	border-radius: 12px; 
+	font-style: normal;
+	font-weight:bold;
+	font-size: 18px;
+	border: none;
 }
 
 .buttons button:hover {
@@ -240,13 +282,15 @@ input::placeholder {
 }
 
 .file-upload {
-	background-color: #EFA516;
+	background-color: #50B5DD;
 	display: inline-block;
 	padding: 8px 12px;
 	cursor: pointer;
-	 border-radius: 12px; 
-	font-family: "Roboto";
+	border-radius: 12px; 
+	font-style: normal;
+	font-weight:bold;
 	font-size: 18px;
+	border: none;
 
 }
 
@@ -322,7 +366,7 @@ input::placeholder {
  */
 
 .ideahacks-form {
-	font-family: "Roboto";
+	/* font-family: "Roboto"; */
 }
 
 /* LABEL */

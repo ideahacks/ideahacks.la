@@ -30,7 +30,6 @@
         {{> navbar }}
         
         <div class='top-box'></div>
-        
         <!--
         <div class='application-form'>
             <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
@@ -55,12 +54,12 @@
             <div class='ideahacks-form application-form container-fluid'>
                 <!-- PERSONAL INFORMATION -->
                 <div class='row'>
-                    <h1>IDEAHACKS: HOME APPLICATIONS</h1>
+                    <center><h1>IDEAHACKS: HOME APPLICATIONS</h1></center>
                     <div class='header'>
-        
-                        <h3>PERSONAL</h3>
-                        <!-- <img id="img-side" src="/img/registration/logo.png" /> -->
+                        <h3><span>PERSONAL</span></h3>
+                        <!--<img id="img-side" src="/img/registration/logo.png" /> -->
                     </div>
+                    
                     <fieldset>
                         <div class='form-group col-md-5'>
                             <label>FIRST NAME*</label>
@@ -163,6 +162,7 @@
                 <div class='row'>
                     <div class='col header'>
                         <h3>TEAM INFORMATION</h3>
+                        <img id="img-side" src="/img/logo.png" />
                     </div>
                     <fieldset>
                         <div class='form-group col-xs-10 col-md-5'>
@@ -178,29 +178,6 @@
                             <div class='form-group col-md-5 col-xs-10'>
                                 <input class='form-control teammate-name' type='text' name='tm-name1' placeholder='name' value='{{user.teammateName1}}'>
                             </div>
-                            <!--
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            </div>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name2' placeholder='name' value='{{user.teammateName2}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
-                            </div>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name3' placeholder='name' value='{{user.teammateName3}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
-                            </div>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name4' placeholder='name' value='{{user.teammateName4}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'>
-                            </div>
-                            -->
                         </span>
                     </fieldset>
                 </div>
@@ -225,12 +202,6 @@
                             <label class='sublabel'>(It's okay if you don't yet!)</label>
                             <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
                         </div>
-                        <!--
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label>What parts would you like to see at IDEA Hacks this year?</label>
-                            <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
-                        </div>
-                        -->
                         <span class='row'>
                             <div class='form-group col-xs-10 col-md-5'>
                                 <label>Do you have any past hackathon experience?*</label>
@@ -252,29 +223,6 @@
                         <h3>MISCELLANEOUS</h3>
                     </div>
                     <fieldset>
-                        <!--
-                        <div class='form-group col-md-10'>
-                            <label>Any dietary restrictions or food allergies?*</label>
-                            <div class='sublabel'>
-                                <label>(Put N/A if none.)</label>
-                            </div>
-                            <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
-                        </div>
-
-                        <span>
-                            <div class='form-group col-xs-10 col-md-6'>
-                                <label>Will you bring a vehicle and need parking?</label>
-                                <div class='sublabel'>
-                                    <label>(NOTE: Priority goes to non-UCLA students.)</label>
-                                </div>
-                                <select class='form-control' name='needsParking'>
-                                    <option {{#if user.doesNeedParking}} selected{{/if}}>YES</option>
-                                    <option {{#if user.doesNotNeedParking}} selected{{/if}}>NO</option>
-                                </select>
-                            </div>
-                        </span>
-                        -->
-                        <!-- <span class='row'></span> -->
                         <div class='form-group col-md-3 col-xs-10'>
                             <label>Shirt Size*</label>
                             <select class='form-control' name='shirtSize'>
@@ -283,7 +231,37 @@
                                 <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
                                 <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
                             </select> </div>
-
+                        <span class='row'></span>
+                        <div class='form-group col-md-3'>
+                            <label>Kit Preference #1*</label>
+                            <select class='form-control' name='kitRanking1'>
+                                <option {{#if user.pref1MotionAddOn}} selected{{/if}}>Motion Add-on</option>
+                                <option {{#if user.pref1AVAddOn}} selected{{/if}}>Audio & Visual Add-on</option>
+                                <option {{#if user.pref1TIBox}} selected{{/if}}>TI Box</option>
+                            </select> </div>  
+                        <div class='form-group col-md-3'>
+                            <label>Kit Preference #2*</label>
+                            <select class='form-control' name='kitRanking2'>
+                                <option {{#if user.pref2MotionAddOn}} selected{{/if}}>Motion Add-on</option>
+                                <option {{#if user.pref2AVAddOn}} selected{{/if}}>Audio & Visual Add-on</option>
+                                <option {{#if user.pref2TIBox}} selected{{/if}}>TI Box</option>
+                            </select> </div>  
+                        <div class='form-group col-md-3'>
+                            <label>Kit Preference #3*</label>
+                            <select class='form-control' name='kitRanking3'>
+                                <option {{#if user.pref3MotionAddOn}} selected{{/if}}>Motion Add-on</option>
+                                <option {{#if user.pref3AVAddOn}} selected{{/if}}>Audio & Visual Add-on</option>
+                                <option {{#if user.pref3TIBox}} selected{{/if}}>TI Box</option>
+                            </select> </div> 
+                        <span class='row'></span>
+                        <div class='form-group col-md-6 col-xs-10 short-answer'>
+                            <label>What is your address to ship the box to?*</label>
+                            <textarea class='form-control textarea' name='address' rows='6'>{{user.address}}</textarea>
+                        </div>
+                        <span class='row'></span>
+                        <div class='form-group col-md-3'>
+                            <a href="/boxes" target="_blank"><button class='file-upload'>
+                                    CLICK HERE TO SEE BOXES  </button></a>
                     </fieldset>
                 </div>
                 <!-- BUTTONS -->
