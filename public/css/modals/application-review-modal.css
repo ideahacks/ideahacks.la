@@ -7,7 +7,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #50B5DD;
+	color: #50b5dd;
 }
 
 .applicant-contact {
@@ -32,14 +32,14 @@
 	text-transform: uppercase;
 	padding: 0px 50px;
 	margin: 0 0 5px;
-	color: #50B5DD;
+	color: #50b5dd;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
 	padding: 0 10px;
-	color: #2B2B2B;
+	color: #2b2b2b;
 }
 
 .hackathon-information span {
@@ -60,7 +60,7 @@
 }
 
 i {
-	color: #50B5DD;
+	color: #50b5dd;
 	padding-left: 20px;
 	padding-right: 5px;
 }
