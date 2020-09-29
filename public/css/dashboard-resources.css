@@ -1,0 +1,135 @@
+.Resources {
+	margin: 100px auto 34px;
+}
+
+.boxes-wrapper {
+	width: 100%;
+	padding: 50px;
+
+	background-color: #d1ebfa;
+}
+
+#boxes-wrapper .box-header .box-name {
+	display: inline-block;
+	padding: 5px 20px;
+
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+}
+
+#boxes-wrapper .box-header .subtitle {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+#boxes-wrapper .parts-wrapper {
+	margin-bottom: 30px;
+}
+
+#boxes-wrapper .part {
+	display: inline-block;
+	padding: 20px;
+	margin: 0 15px 30px;
+	width: 220px;
+
+	cursor: pointer;
+	text-align: left;
+	background-color: white;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#boxes-wrapper .part img {
+	height: 180px;
+	width: 180px;
+
+	border-width: 5px;
+	border-style: solid;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+#boxes-wrapper .part .part-name {
+	margin-top: 10px;
+
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#boxes-wrapper .part p {
+	margin-bottom: 0;
+}
+
+/* Modal */
+
+#part-modal {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+
+#part-modal .modal-content {
+	position: fixed;
+	top: 30vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 700px;
+	max-height: 70vh;
+	margin: 0;
+	padding: 20px;
+
+	overflow: auto;
+	background-color: white;
+	border: none;
+	border-radius: 0;
+}
+
+#part-modal .modal-content img {
+	height: 200px;
+	width: 200px;
+
+	border-width: 5px;
+	border-style: solid;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+#part-modal .modal-content .name {
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+#part-modal .modal-content .section {
+	font-weight: 500;
+}
+
+#part-modal .modal-content a {
+	color: #50b5dd;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#part-modal .modal-content a:hover {
+	color: #e1489a;
+}
+
+@media only screen and (max-width: 768px) {
+	#part-modal .modal-content {
+		top: 20vh;
+		width: 90%;
+	}
+
+	#part-modal .modal-content img {
+		display: block;
+		margin: 10px auto 20px;
+	}
+}
