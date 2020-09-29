@@ -44,6 +44,24 @@ function getAndSendApplicationData(toggleHasApplication) {
 		alert("Please specify your self-identified gender.")
 		return false
 	}
+
+
+	//NEW LOGIC
+	let kitPreferenceOne_entry = $('select[name="kitRanking1"]')
+		.find(":selected")
+		.text()
+	let kitPreferenceTwo_entry = $('select[name="kitRanking2"]')
+		.find(":selected")
+		.text()
+	let kitPreferenceThree_entry = $('select[name="kitRanking3"]')
+		.find(":selected")
+		.text()
+	if(kitPreferenceOne_entry == kitPreferenceTwo_entry || kitPreferenceOne_entry == kitPreferenceThree_entry || kitPreferenceTwo_entry == kitPreferenceThree_entry){
+		alert("Please choose unique kits for each option")
+		return false
+	}
+	//NEW LOGIC END
+
 	// check that mandatory fields filled out
 	if (
 		$('input[name="firstName"]').val() == "" ||
@@ -51,8 +69,8 @@ function getAndSendApplicationData(toggleHasApplication) {
 		$('input[name="phone"]').val() == "" ||
 		$('input[name="major"]').val() == "" ||
 		$('textarea[name="skillsAndExperience"]').val() == "" ||
-		$('textarea[name="reasonForParticipation"]').val() == "" ||
-		$('input[name="foodRestrictions"]').val() == ""
+		$('textarea[name="reasonForParticipation"]').val() == "" 
+		//|| $('input[name="foodRestrictions"]').val() == ""
 	) {
 		alert("Please fill out required fields before submitting application.")
 		return false
@@ -95,19 +113,25 @@ function getAndSendApplicationData(toggleHasApplication) {
 			.text(),
 		teammates: teammateEmails,
 		teammates_names: teammateNames,
-		foodRestrictions: $('input[name="foodRestrictions"]').val(),
+		//foodRestrictions: $('input[name="foodRestrictions"]').val(),
 		skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
 		hasPastHackathonExperience: hasExperience,
 		pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
 		reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
 		themeIdea: $('textarea[name="themeIdea"]').val(),
-		desiredParts: $('textarea[name="desiredParts"]').val(),
+		//desiredParts: $('textarea[name="desiredParts"]').val(),
 		shirtSize: $('select[name="shirtSize"]')
 			.find(":selected")
 			.text(),
-		needParking: $('select[name="needsParking"]')
-			.find(":selected")
-			.text(),
+		// needParking: $('select[name="needsParking"]')
+		// 	.find(":selected")
+		// 	.text(),
+		//ADD NEW CODE HERE
+		kitPreferenceOne : kitPreferenceOne_entry,
+		kitPreferenceTwo : kitPreferenceTwo_entry,
+		kitPreferenceThree : kitPreferenceThree_entry,
+		shippingAddress: $('textarea[name="address"]').val(),
+		///////////
 		hasApplication: toggleHasApplication
 	}
 
