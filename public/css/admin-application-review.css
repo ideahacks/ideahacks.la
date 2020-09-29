@@ -57,12 +57,22 @@ input {
 	font-size: 60px;
 	font-weight: bold;
 	padding-bottom: 0px;
+	color: #2B2B2B;
 }
 
 .stats-box h4 {
 	font-family: "Source Code Pro", monospace;
 	font-size: 20px;
 	padding-top: 0px;
+	color: #2B2B2B;
+}
+
+.number-applications-box h1 {
+	color: #FFFFFF;
+}
+
+.number-applications-box h4 {
+	color: #FFFFFF;
 }
 
 /* APPLICATION LIST */
