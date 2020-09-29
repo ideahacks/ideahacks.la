@@ -64,3 +64,40 @@ i {
 	padding-left: 20px;
 	padding-right: 5px;
 }
+
+@media (max-width: 750px) {
+	.applicant-contact span[name="phone"] {
+		margin-right: 0px;
+	}
+
+	.applicant-contact span.fa {
+		margin: 0 5px;
+	}
+
+	.application-section {
+		margin: 10px 0;
+	}
+
+	.application-section p {
+		padding: 0px 10px;
+		margin: 0px 5px;
+	}
+
+	.hackathon-information legend {
+		padding-left: 10px;
+	}
+
+	.misc legend {
+		padding-left: 10px;
+	}
+
+	.status-controls {
+		padding: 10px 10px;
+	}
+
+	i {
+		color: #50b5dd;
+		padding-left: 10px;
+		padding-right: 5px;
+	}
+}
