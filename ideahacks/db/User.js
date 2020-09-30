@@ -31,8 +31,6 @@ const UserSchema = new Schema({
 	kitPreferenceThree: { type: String, default: "" },
 	shippingAddress: { type: String, default: "" },
 
-
-
 	// boolean fields
 	hasApplication: { type: Boolean, default: false },
 	applicationStatus: { type: String, default: "pending" },
