@@ -7,7 +7,7 @@
 	font-size: 35px;
 	font-style: normal;
 	font-weight: bold;
-	text-shadow: 3px 3px 3px #50b5dd;
+	-webkit-text-stroke: 1px #50b5dd;
 	color: white;
 	display: block;
 }
