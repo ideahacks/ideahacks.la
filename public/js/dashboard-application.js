@@ -10,10 +10,10 @@ $(() => {
 // and sends it over to the POST /dashboard/application endpoint for saving
 function getAndSendApplicationData(toggleHasApplication) {
 	//get teammate information
-	 let teammateEmails = []
-	 $(".teammate-email").each((i, el) => {
-	 	if (el.value !== "") teammateEmails.push(el.value)
-	 })
+	let teammateEmails = []
+	$(".teammate-email").each((i, el) => {
+		if (el.value !== "") teammateEmails.push(el.value)
+	})
 	// let teammateNames = []
 	// $(".teammate-name").each((i, el) => {
 	// 	if (el.value !== "") teammateNames.push(el.value)
