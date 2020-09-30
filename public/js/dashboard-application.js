@@ -10,14 +10,14 @@ $(() => {
 // and sends it over to the POST /dashboard/application endpoint for saving
 function getAndSendApplicationData(toggleHasApplication) {
 	//get teammate information
-	let teammateEmails = []
-	$(".teammate-email").each((i, el) => {
-		if (el.value !== "") teammateEmails.push(el.value)
-	})
-	let teammateNames = []
-	$(".teammate-name").each((i, el) => {
-		if (el.value !== "") teammateNames.push(el.value)
-	})
+	 let teammateEmails = []
+	 $(".teammate-email").each((i, el) => {
+	 	if (el.value !== "") teammateEmails.push(el.value)
+	 })
+	// let teammateNames = []
+	// $(".teammate-name").each((i, el) => {
+	// 	if (el.value !== "") teammateNames.push(el.value)
+	// })
 
 	// find school entry
 	let school_entry = $('select[name="school"]')
@@ -26,7 +26,6 @@ function getAndSendApplicationData(toggleHasApplication) {
 	if (school_entry == "Other") {
 		school_entry = $('input[name="school_other"]').val()
 	}
-
 	if (school_entry == "") {
 		alert("Please specify your school.")
 		return false
@@ -107,7 +106,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		year: $('select[name="year"]')
 			.find(":selected")
 			.text(),
-		gender: gender_entry,
+		// gender: gender_entry,
 		github: $('input[name="github"]').val(),
 		linkedin: $('input[name="linkedin"]').val(),
 		resume: $('input[name="resume"]').val(),
@@ -115,7 +114,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 			.find(":selected")
 			.text(),
 		teammates: teammateEmails,
-		teammates_names: teammateNames,
+		// teammates_names: teammateNames,
 		//foodRestrictions: $('input[name="foodRestrictions"]').val(),
 		skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
 		hasPastHackathonExperience: hasExperience,
@@ -137,6 +136,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		///////////
 		hasApplication: toggleHasApplication
 	}
+	console.log(applicationData)
 
 	$.ajax({
 		url: "/dashboard/application",
