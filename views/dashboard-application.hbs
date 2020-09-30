@@ -13,8 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
     <!-- <link rel='stylesheet' href="../css/application.css" /> -->
@@ -28,17 +28,20 @@
     <!-- NAVBAR -->
     <div class='wrapper'>
         {{> navbar }}
+
         <div class='top-box'></div>
+        <!--
         <div class='application-form'>
             <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
             <img id="img-header" src="/img/registration/2020_registration.png" />
         </div>
+        -->
         <!-- <p class="deadline text-center">Applications due on December 1st</p> -->
 
         {{#if user.hasApplication}}
 
             <div class='text-center container-fluid submission'>
-                <p> Way to go! You successfully submitted your application for IDEA Hacks 2019! </p>
+                <p> Way to go! You successfully submitted your application for IDEA Hacks 2021! </p>
                 <p> Have questions? Contact us at team@ideahacks.la </p>
                 <img class='banner-desktop-graphic' src="/img/registration/submission.png">
                 <img class='banner-tablet-graphic' src="/img/registration/submission_ipad.png">
@@ -47,31 +50,35 @@
 
         {{else}}
 
-
             <div class='ideahacks-form application-form container-fluid'>
+                <div class='mainHeader col-md-12 text-center'>
+                    <h1>IDEAHACKS: HOME APPLICATIONS</h1>
+                </div>
                 <!-- PERSONAL INFORMATION -->
                 <div class='row'>
                     <div class='header'>
-                        <h3>Personal </h3>
-                        <!-- <img id="img-side" src="/img/registration/logo.png" /> -->
+                        <h3><span>PERSONAL</span></h3>
+                        <!--<img id="img-side" src="/img/registration/logo.png" /> -->
                     </div>
+
                     <fieldset>
                         <div class='form-group col-md-5'>
-                            <label>First Name*</label>
+                            <label>FIRST NAME*</label>
                             <input class='form-control' type='text' name='firstName' placeholder='First Name' value='{{user.firstName}}'>
                         </div>
                         <div class='form-group col-md-5'>
-                            <label>Last Name*</label>
-                            <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
-                        </div>
-                        <div class='form-group col-md-5'>
-                            <label>Phone Number*</label>
+                            <label>PHONE NUMBER*</label>
                             <input class='form-control' type='tel' name='phone' placeholder='(XXX) XXX - XXXX' value='{{user.phone}}'>
                         </div>
                         <div class='form-group col-md-5'>
-                            <label>Email Address*</label>
+                            <label>LAST NAME*</label>
+                            <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
+                        </div>
+                        <div class='form-group col-md-5'>
+                            <label>EMAIL*</label>
                             <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
                         </div>
+                        <!--
                         <div class='form-group col-md-5'>
                             <label>Gender*</label>
                             <select class='form-control' name='gender'>
@@ -81,24 +88,27 @@
                                 <option {{#if user.gender_other}} selected{{/if}}>Other</option>
                             </select>
                         </div>
+                    
                         <div class='form-group col-md-5'>
                             <label>If Other, please specify.</label>
                             <input class='form-control' type='text' name='gender_other' placeholder='Other' value='{{user.gender_other}}'>
                         </div>
+                        -->
                     </fieldset>
-
                 </div>
+                <!--
                 <div class='sublabel note'>
                     <label>Note: All items with * are mandatory.</label>
                 </div>
+                -->
                 <!-- EDUCATIONAL INFORMATION -->
                 <div class='row'>
                     <div class='header'>
-                        <h3>Education</h3>
+                        <h3>EDUCATION</h3>
                     </div>
                     <fieldset>
                         <div class='form-group col-md-5'>
-                            <label>School*</label>
+                            <label>SCHOOL*</label>
                             <select class='form-control' name='school'>
                                 <option {{#if user.UCLA}} selected{{/if}}>University of California, Los Angeles</option>
                                 <option {{#if user.UCB}} selected{{/if}}>University of California, Berkeley</option>
@@ -117,11 +127,11 @@
                             <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
                         </div>
                         <div class='form-group col-md-5'>
-                            <label>Major*</label>
+                            <label>MAJOR*</label>
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
                         </div>
                         <div class='form-group col-md-5'>
-                            <label>Year*</label>
+                            <label>YEAR*</label>
                             <select class='form-control' name='year'>
                                 <option {{#if user.yearFreshman}} selected{{/if}}>Freshman</option>
                                 <option {{#if user.yearSophomore}} selected{{/if}}>Sophomore</option>
@@ -132,19 +142,19 @@
                                 <option {{#if user.yearOther}} selected{{/if}}>Other</option>
                             </select> </div>
                         <div class='form-group col-md-5'>
-                            <label>GitHub</label>
+                            <label>GITHUB</label>
                             <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
                         </div>
 
                         <div class='form-group col-md-5'>
-                            <label>LinkedIn</label>
+                            <label>LINKEDIN</label>
                             <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
                         </div>
                         <div class='form-group col-md-5'>
-                            <label>Resume</label>
+                            <label>RESUME</label>
                             <span class="row"></span>
                             <a href="https://forms.gle/Vptk66aMhcvkRxoL7" target="_blank"><button class='file-upload' style="margin-left: 15px">
-                                    UPLOAD YOUR FILE HERE </button></a>
+                                    UPLOAD FILE </button></a>
                         </div>
                     </fieldset>
                 </div>
@@ -152,42 +162,22 @@
                 <!-- TEAM INFORMATION -->
                 <div class='row'>
                     <div class='col header'>
-                        <h3>Team Information</h3>
+                        <h3>TEAM INFORMATION</h3>
+                        <img id="img-side" src="/img/logo.png" />
                     </div>
                     <fieldset>
                         <div class='form-group col-xs-10 col-md-5'>
-                            <label>Do you have a team?*</label>
+                            <label>Will you have a teammate?*</label>
                             <select class='form-control' name='hasTeam'>
                                 <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
                                 <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
                             </select> </div>
                         <span class='row'>
                             <div class='form-group col-xs-12'>
-                                <label>If so, what are your teammates' names and emails?</label>
+                                <label>If so, what is your teammate's email?</label>
                             </div>
                             <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name1' placeholder='name' value='{{user.teammateName1}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            </div>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name2' placeholder='name' value='{{user.teammateName2}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
-                            </div>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name3' placeholder='name' value='{{user.teammateName3}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
-                            </div>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <input class='form-control teammate-name' type='text' name='tm-name4' placeholder='name' value='{{user.teammateName4}}'>
-                            </div>
-                            <div class='form-group col-md-7 col-xs-10'>
-                                <input class='form-control teammate-email' type='email' name='tm-email4' placeholder='email' value='{{user.teammateEmail4}}'>
+                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
                             </div>
                         </span>
                     </fieldset>
@@ -196,7 +186,7 @@
                 <!-- HACKATHON INFORMATION -->
                 <div class='row'>
                     <div class='header'>
-                        <h3>Short Answers</h3>
+                        <h3>SHORT ANSWERS</h3>
                     </div>
                     <fieldset>
                         <div class='form-group col-md-5 col-xs-10 short-answer'>
@@ -212,10 +202,6 @@
                             <label>Do you have an idea to hack for this year's theme?</label>
                             <label class='sublabel'>(It's okay if you don't yet!)</label>
                             <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
-                        </div>
-                        <div class='form-group col-md-11 col-xs-10 short-answer'>
-                            <label>What parts would you like to see at IDEA Hacks this year?</label>
-                            <textarea class='form-control textarea' name='desiredParts' placeholder='example: arduino' rows='5'>{{user.desiredParts}}</textarea>
                         </div>
                         <span class='row'>
                             <div class='form-group col-xs-10 col-md-5'>
@@ -235,30 +221,9 @@
                 <!-- MISCELLANEOUS INFORMATION -->
                 <div class='row'>
                     <div class='header'>
-                        <h3>Miscellaneous</h3>
+                        <h3>MISCELLANEOUS</h3>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-10'>
-                            <label>Any dietary restrictions or food allergies?*</label>
-                            <div class='sublabel'>
-                                <label>(Put N/A if none.)</label>
-                            </div>
-                            <input class='form-control' type='text' name='foodRestrictions' value='{{user.foodRestrictions}}'>
-                        </div>
-
-                        <span>
-                            <div class='form-group col-xs-10 col-md-6'>
-                                <label>Will you bring a vehicle and need parking?</label>
-                                <div class='sublabel'>
-                                    <label>(NOTE: Priority goes to non-UCLA students.)</label>
-                                </div>
-                                <select class='form-control' name='needsParking'>
-                                    <option {{#if user.doesNeedParking}} selected{{/if}}>YES</option>
-                                    <option {{#if user.doesNotNeedParking}} selected{{/if}}>NO</option>
-                                </select>
-                            </div>
-                        </span>
-                        <span class='row'></span>
                         <div class='form-group col-md-3 col-xs-10'>
                             <label>Shirt Size*</label>
                             <select class='form-control' name='shirtSize'>
@@ -267,7 +232,37 @@
                                 <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
                                 <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
                             </select> </div>
-
+                        <span class='row'></span>
+                        <div class='form-group col-md-3'>
+                            <label>Kit Preference #1*</label>
+                            <select class='form-control' name='kitRanking1'>
+                                <option {{#if user.pref1MotionAddOn}} selected{{/if}}>Motion Add-on</option>
+                                <option {{#if user.pref1AVAddOn}} selected{{/if}}>Audio + Visual Add-on</option>
+                                <option {{#if user.pref1TIBox}} selected{{/if}}>TI Box</option>
+                            </select> </div>
+                        <div class='form-group col-md-3'>
+                            <label>Kit Preference #2*</label>
+                            <select class='form-control' name='kitRanking2'>
+                                <option {{#if user.pref2MotionAddOn}} selected{{/if}}>Motion Add-on</option>
+                                <option {{#if user.pref2AVAddOn}} selected{{/if}}>Audio + Visual Add-on</option>
+                                <option {{#if user.pref2TIBox}} selected{{/if}}>TI Box</option>
+                            </select> </div>
+                        <div class='form-group col-md-3'>
+                            <label>Kit Preference #3*</label>
+                            <select class='form-control' name='kitRanking3'>
+                                <option {{#if user.pref3MotionAddOn}} selected{{/if}}>Motion Add-on</option>
+                                <option {{#if user.pref3AVAddOn}} selected{{/if}}>Audio + Visual Add-on</option>
+                                <option {{#if user.pref3TIBox}} selected{{/if}}>TI Box</option>
+                            </select> </div>
+                        <span class='row'></span>
+                        <div class='form-group col-md-6 col-xs-10 short-answer'>
+                            <label>What is your address to ship the box to?*</label>
+                            <textarea class='form-control textarea' name='address' rows='6'>{{user.address}}</textarea>
+                        </div>
+                        <span class='row'></span>
+                        <div class='form-group col-md-3'>
+                            <a href="/boxes" target="_blank"><button class='file-upload'>
+                                    CLICK HERE TO SEE BOXES </button></a>
                     </fieldset>
                 </div>
                 <!-- BUTTONS -->
