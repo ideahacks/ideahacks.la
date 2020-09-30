@@ -140,7 +140,7 @@
 }
 
 @media (max-width: 682px) {
-	.mainHeader h1{
+	.mainHeader h1 {
 		width: 100%;
 		height: 100%;
 	}

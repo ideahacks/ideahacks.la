@@ -33,18 +33,17 @@ function getAndSendApplicationData(toggleHasApplication) {
 	}
 
 	// get gender
-	let gender_entry = $('select[name="gender"]')
-		.find(":selected")
-		.text()
-	if (gender_entry == "Other") {
-		gender_entry = $('input[name="gender_other"]').val()
-	}
+	// let gender_entry = $('select[name="gender"]')
+	// 	.find(":selected")
+	// 	.text()
+	// if (gender_entry == "Other") {
+	// 	gender_entry = $('input[name="gender_other"]').val()
+	// }
 
-	if (gender_entry == "") {
-		alert("Please specify your self-identified gender.")
-		return false
-	}
-
+	// if (gender_entry == "") {
+	// 	alert("Please specify your self-identified gender.")
+	// 	return false
+	// }
 
 	//NEW LOGIC
 	let kitPreferenceOne_entry = $('select[name="kitRanking1"]')
@@ -56,7 +55,11 @@ function getAndSendApplicationData(toggleHasApplication) {
 	let kitPreferenceThree_entry = $('select[name="kitRanking3"]')
 		.find(":selected")
 		.text()
-	if(kitPreferenceOne_entry == kitPreferenceTwo_entry || kitPreferenceOne_entry == kitPreferenceThree_entry || kitPreferenceTwo_entry == kitPreferenceThree_entry){
+	if (
+		kitPreferenceOne_entry == kitPreferenceTwo_entry ||
+		kitPreferenceOne_entry == kitPreferenceThree_entry ||
+		kitPreferenceTwo_entry == kitPreferenceThree_entry
+	) {
 		alert("Please choose unique kits for each option")
 		return false
 	}
@@ -69,7 +72,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		$('input[name="phone"]').val() == "" ||
 		$('input[name="major"]').val() == "" ||
 		$('textarea[name="skillsAndExperience"]').val() == "" ||
-		$('textarea[name="reasonForParticipation"]').val() == "" 
+		$('textarea[name="reasonForParticipation"]').val() == ""
 		//|| $('input[name="foodRestrictions"]').val() == ""
 	) {
 		alert("Please fill out required fields before submitting application.")
@@ -127,9 +130,9 @@ function getAndSendApplicationData(toggleHasApplication) {
 		// 	.find(":selected")
 		// 	.text(),
 		//ADD NEW CODE HERE
-		kitPreferenceOne : kitPreferenceOne_entry,
-		kitPreferenceTwo : kitPreferenceTwo_entry,
-		kitPreferenceThree : kitPreferenceThree_entry,
+		kitPreferenceOne: kitPreferenceOne_entry,
+		kitPreferenceTwo: kitPreferenceTwo_entry,
+		kitPreferenceThree: kitPreferenceThree_entry,
 		shippingAddress: $('textarea[name="address"]').val(),
 		///////////
 		hasApplication: toggleHasApplication
