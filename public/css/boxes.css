@@ -111,6 +111,9 @@
 }
 
 #part-modal .modal-content a {
+	display: inline-block;
+	width: 100%;
+
 	color: #50b5dd;
 
 	white-space: nowrap;
