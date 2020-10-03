@@ -276,18 +276,31 @@
 	padding: 20px 75px 0px 75px;
 }
 
-.questions h2 {
-	color: rgb(42, 45, 78);
+.q-a {
+	background-color: rgb(255, 238, 169);
+	padding: 100px 15px 15px 15px;
+	position: relative;
+}
+
+.question {
+	background-color: rgb(255, 253, 247);
+	margin: -80px 10px 10px 10px;
+	padding: 20px 1000px 20px 20px;
+	position: absolute;
+}
+
+/*.q h2 {
+	color: black;
 	font-size: 20px;
 	font-weight: bold;
 	display: inline-block;
 }
 
-.questions p {
+.q-a p {
 	color: rgb(64, 105, 143);
 	text-align: justify;
 	font-size: 15px;
-}
+}*/
 
 .faq-link {
 	color: rgb(64, 105, 143);
