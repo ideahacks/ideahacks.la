@@ -289,13 +289,15 @@
 
 .question-section {
 	background-color: rgba(255, 255, 255, 0.5);
-	border-left: 10px solid #ec3fa6;
+	border-left: 10px solid #e1489a;
 	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .answer-section {
 	padding-top: 10px;
 	padding-left: 25px;
+	padding-right: 15px;
 }
 
 .q,
@@ -309,7 +311,7 @@
 }
 
 .a {
-	color: #ec3fa6;
+	color: #e1489a;
 }
 
 .question,
@@ -321,18 +323,18 @@
 }
 
 .question {
-	margin: 12px 0 0;
+	margin: 12px 0 10px;
 	font-size: 22px;
 	font-weight: 700;
 }
 
 .answer {
-	margin: 17px 0 0;
+	margin: 17px 0 10px;
 	font-size: 16px;
 }
 
 .faq-link {
-	color: rgb(64, 105, 143);
+	color: rgb(225, 72, 154);
 	text-decoration: underline;
 }
 
