@@ -10,6 +10,7 @@
 .banner {
 	padding-top: 130px;
 	width: 30%;
+	margin: auto;
 }
 
 .description {
@@ -105,22 +106,22 @@ input {
 
 .application.accepted,
 .accepted-box {
-	background-color: #75c791;
+	background-color: #BDDEBB;
 }
 
 .application.pending,
 .pending-box {
-	background-color: #75b4c7;
+	background-color: #50B5DD;
 }
 
 .application.rejected,
 .rejected-box {
-	background-color: #d46c6c;
+	background-color: #EAB664;
 }
 
 .application.waitlisted,
 .waitlisted-box {
-	background-color: #f2c94c;
+	background-color: #E8CC83;
 }
 
 .application .year,
