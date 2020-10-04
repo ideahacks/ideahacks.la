@@ -323,7 +323,7 @@
 }
 
 .question {
-	margin: 12px 0 10px;
+	margin: 13px 0 10px;
 	font-size: 22px;
 	font-weight: 700;
 }
@@ -377,7 +377,7 @@
 	display: none;
 }
 
-@media (max-width: 1053px) {
+@media (max-width: 1070px) {
 	.home-banner .stripe {
 		height: calc(-10vw + 700px);
 		top: 20vw;
