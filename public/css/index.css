@@ -454,8 +454,11 @@
 		margin-top: 20px;
 	}
 	.day {
-		height: 25px;
+		height: 60px;
+		margin-top: 45px;
+		margin-bottom: 20px;
 	}
+
 	.location {
 		display: none;
 	}
@@ -522,6 +525,8 @@
 		height: 45px;
 	}
 	.day {
-		height: 20px;
+		height: 60px;
+		margin-top: 45px;
+		margin-bottom: 20px;
 	}
 }
