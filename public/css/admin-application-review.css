@@ -133,13 +133,16 @@ input {
 	text-transform: uppercase;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
 	.application .year,
 	.application .school {
 		display: none;
 	}
 	.application p {
-		font-size: 4vw;
+		font-size: 14px;
+	}
+	.application {
+		padding: 10px;
 	}
 	.stats-box {
 		padding: 0px;
@@ -154,6 +157,6 @@ input {
 		font-size: 30px;
 	}
 	.stats-box h4 {
-		font-size: 2vw;
+		font-size: 8px;
 	}
 }

@@ -65,7 +65,7 @@ i {
 	padding-right: 5px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
 	.applicant-contact span[name="phone"] {
 		margin-right: 0px;
 	}
