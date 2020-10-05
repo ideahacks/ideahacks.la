@@ -1,29 +1,39 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin, latin-ext);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 .confirm {
 	background-color: white;
 	padding: 10px 20px;
-	border-radius: 10px;
-	margin: 200px 100px;
+	margin: 150px 0px;
+	text-align: center;
+	font-size: 18px;
+}
+
+h1 {
+	font-family: "Source Code Pro", monospace;
+	color: #50b5dd;
+	font-size: 80px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 button {
-	background-color: #2a2d4e;
-	border: 2px solid #2a2d4e;
+	background-color: #ffb718;
+	border: 2px solid #ffb718;
 	padding: 10px 18px 7px 19px;
 	border-radius: 7px;
 	color: white;
-	font-weight: bold;
+	font-weight: 300;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
 	background-color: transparent;
-	color: #2a2d4e;
+	color: #ffb718;
 	cursor: pointer;
 }
 
 body {
-	background-color: #fbf3f0;
+	background-color: rgba(209, 235, 250, 0.7);
 }
 
 @media (max-width: 990px) {
