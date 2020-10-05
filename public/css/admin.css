@@ -1,11 +1,87 @@
 /*--------------- MAILING LISTS -----------------*/
+h3 {
+	font-family: "Source Code Pro", monospace;
+}
+.column {
+	position: relative;
+	text-align: center;
 
-.mailing-list .email-list {
-	display: none;
+	background-color: white; /*backup*/
+	float: left;
+	width: 22%;
+	margin: 0 1.5%;
+	border-radius: 1rem;
+}
+
+.column:nth-child(1) {
+	background-color: #50B5DD !important;
+}
+.column:nth-child(2) {
+	background-color: #BDDEBB !important;
+}
+.column:nth-child(3) {
+	background-color: #E8CC83 !important;	
+}
+.column:nth-child(4) {
+	background-color: #EAB664 !important;	
+}
+
+
+.row {
+	margin: auto;
+	width: 95%;
+}
+
+.glyphicon {
+	background: transparent;
+	text-shadow: none;
+	border: none;
+	font-size: 2rem;
+	margin: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide */
+@media screen and (max-width: 600px) {
+	.column {
+	  width: 100%;
+	}
+}
+
+
+.mailing-list .mailing-type {
+	text-align: center;
+}
+
+.mailing-list .mailing-address-container {
+	background-color: #FFE195;
+	margin: 8%;
+	border-radius: 1rem;
+	overflow: auto;
+}
+
+.mailing-list .mailing-address-container .mailing-address-list {
+	/* max-height: 50%; */
+	background-color: white;
+	overflow: auto;
+	height: 35vh;
+	padding: 0.5rem;
+	border: none;
+}
+
+/* .mailing-list .email-list {
 	background-color: white;
 	padding: 10px;
 	border-radius: 10px;
-}
+
+} */
+
 
 .mailing-header {
 	padding-top: 130px;
@@ -31,8 +107,8 @@
 }
 
 .mailing-list {
-	max-width: 1200px;
-	list-style: none;
+
+	display: flex;
 }
 
 .feedback-list li {

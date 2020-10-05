@@ -9,18 +9,19 @@ const getAdmin = (req, res) => {
 				return lists
 			},
 			{
-				accepted: { name: "Accepted", list: [] },
-				pending: { name: "Pending", list: [] },
-				rejected: { name: "Rejected", list: [] },
-				waitlisted: { name: "Waitlisted", list: [] }
+				//hard code emails for testing purposes
+				accepted: { name: "Accepted", list: ["supersupersupersuperlongemailfortestingpurposes@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] },
+				pending: { name: "Pending", list: ["joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] },
+				rejected: { name: "Rejected", list: ["joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] },
+				waitlisted: { name: "Waitlisted", list: ["supersupersupersuperlongemailfortestingpurposes@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] }
 			}
 		)
 
-		let mailingLists = []
-		for (let k in emailLists) {
-			emailLists[k].list = emailLists[k].list.join(", ")
-			mailingLists.push(emailLists[k])
-		}
+		let mailingLists = emailLists
+		// for (let k in emailLists) {
+		// 	emailLists[k].list = emailLists[k].list.join(", ")
+		// 	mailingLists.push(emailLists[k])
+		// }
 
 		return res.render("admin", {
 			mailingLists
