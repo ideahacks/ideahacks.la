@@ -111,7 +111,8 @@
                                 <option {{#if user.UCSC}} selected{{/if}}>University of California, Santa Cruz</option>
                                 <option {{#if user.USC}} selected{{/if}}>University of Southern California</option>
                                 <option {{#if user.schoolOther}} selected{{/if}}>Other</option>
-                            </select> </div>
+                            </select>
+                        </div>
                         <div class='form-group col-md-5'>
                             <label>If Other, please specify.</label>
                             <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
@@ -130,7 +131,8 @@
                                 <option {{#if user.yearHighSchool}} selected{{/if}}>High School</option>
                                 <option {{#if user.yearGraduate}} selected{{/if}}>Graduate</option>
                                 <option {{#if user.yearOther}} selected{{/if}}>Other</option>
-                            </select> </div>
+                            </select>
+                        </div>
                         <div class='form-group col-md-5'>
                             <label>GitHub</label>
                             <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
@@ -160,7 +162,8 @@
                             <select class='form-control' name='hasTeam'>
                                 <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
                                 <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
-                            </select> </div>
+                            </select>
+                        </div>
                         <span class='row'>
                             <div class='form-group col-xs-12'>
                                 <label>If so, what are your teammates' names and emails?</label>
@@ -201,7 +204,8 @@
                     <fieldset>
                         <div class='form-group col-md-5 col-xs-10 short-answer'>
                             <label>Enter your Skills and Experiences*
-                                <!-- <span class='whitespace'>HACKATHON EXPERIEN</span> --></label>
+                                <!-- <span class='whitespace'>HACKATHON EXPERIEN</span> -->
+                            </label>
                             <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
                         </div>
                         <div class='form-group col-md-6 col-xs-10 short-answer'>
@@ -223,7 +227,8 @@
                                 <select class='form-control' name='hasHackathonExperience'>
                                     <option {{#if user.hasExperience}} selected{{/if}}>YES</option>
                                     <option {{#if user.hasNoExperience}} selected{{/if}}>NO</option>
-                                </select> </div>
+                                </select>
+                            </div>
                         </span> <span class='row'>
                             <div class='form-group col-md-11 col-xs-10 short-answer'>
                                 <label style="text-align: left">If so, please share you experience with us.</label>
@@ -266,7 +271,8 @@
                                 <option {{#if user.sizeMedium}} selected{{/if}}>M</option>
                                 <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
                                 <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
-                            </select> </div>
+                            </select>
+                        </div>
 
                     </fieldset>
                 </div>
