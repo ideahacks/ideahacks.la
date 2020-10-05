@@ -61,6 +61,15 @@ i {
 	padding-right: 5px;
 }
 
+.contact-wrapper {
+	text-align: center;
+}
+
+.contact-item-wrapper {
+	display: inline-block;
+	margin: auto;
+}
+
 @media (max-width: 768px) {
 	.applicant-contact span[name="phone"] {
 		margin-right: 0px;
