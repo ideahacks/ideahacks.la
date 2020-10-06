@@ -40,8 +40,9 @@ input {
 /* STATS */
 .stats-box-container {
 	display: flex;
-	justify-content: space-between;
-	padding-top: 50px;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 50px 30px 20px;
 }
 
 .stats-box {
@@ -50,8 +51,7 @@ input {
 	text-align: center;
 	display: inline-block;
 	padding: 10px;
-	width: 215px;
-	height: 125px;
+	width: 190px;
 	margin: 10px;
 	border-radius: 10px;
 }
@@ -155,14 +155,10 @@ input {
 		margin: 5px 0px;
 	}
 	.stats-box-container {
-		display: flex;
-		justify-content: space-between;
-		padding-top: 0px;
+		padding-top: 20px;
 	}
 	.stats-box {
-		padding: 0px;
-		width: 150px;
-		height: 75px;
+		padding: 10px 0;
 		margin: 10px;
 	}
 	.container {
@@ -170,9 +166,25 @@ input {
 		margin: 10px;
 	}
 	.stats-box h1 {
-		font-size: 30px;
+		font-size: 50px;
 	}
 	.stats-box h4 {
-		font-size: 8px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 481px) {
+	.stats-box-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.stats-box {
+		width: 130px;
+	}
+	.stats-box h1 {
+		font-size: 40px;
+	}
+	.stats-box h4 {
+		font-size: 16px;
 	}
 }
