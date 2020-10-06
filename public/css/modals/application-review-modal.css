@@ -52,7 +52,10 @@
 
 /* STATUS CONTROLS */
 .status-controls {
-	padding: 30px 0 15px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 30px 20px 15px;
 }
 
 i {
@@ -100,5 +103,11 @@ i {
 		color: #50b5dd;
 		padding-left: 10px;
 		padding-right: 5px;
+	}
+}
+
+@media (max-width: 506px) {
+	.status-controls {
+		display: block;
 	}
 }

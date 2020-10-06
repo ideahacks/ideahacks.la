@@ -1,7 +1,9 @@
-.radio-button-group,
-.radio-outer-square,
-.radio-button-group p {
-	display: inline-block;
+.radio-button-group {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 150px;
 }
 
 .radio-outer-square {
@@ -18,9 +20,15 @@
 }
 
 .radio-button-group label {
-	height: 40px;
-	margin: -38px 0 0 130px;
+	margin-bottom: 0;
+	margin-left: 10px;
 	display: block;
 	text-transform: uppercase;
 	color: black;
+}
+
+@media (max-width: 506px) {
+	.radio-button-group {
+		margin: 0 auto 10px;
+	}
 }

@@ -176,10 +176,3 @@ input {
 		font-size: 8px;
 	}
 }
-
-@media (max-width: 1133px) {
-	.status-controls {
-		width: 300px;
-		text-align: left;
-	}
-}
