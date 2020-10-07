@@ -69,7 +69,7 @@
             {{#each applications}}
                 <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
                     <div class='row'>
-                        <div class='col-sm-3 col-xs-8'>
+                        <div class='col-sm-3 col-xs-7'>
                             <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
                         </div>
                         <div class='col-sm-3'>
@@ -78,7 +78,7 @@
                         <div class='col-sm-3'>
                             <p class='filter-key school'>{{#if this.school}}{{this.school}}{{/if}}</p>
                         </div>
-                        <div class='col-sm-3 col-xs-4'>
+                        <div class='col-sm-3 col-xs-5'>
                             <p class='application-status filter-key'>{{ this.applicationStatus }}</p>
                         </div>
                     </div>

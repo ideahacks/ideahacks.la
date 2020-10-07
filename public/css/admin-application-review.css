@@ -9,7 +9,6 @@
 
 .banner {
 	padding-top: 130px;
-	width: 30%;
 	margin: auto;
 }
 
@@ -21,12 +20,6 @@
 	padding-bottom: 20px;
 	font-size: 20px;
 	color: white;
-}
-
-@media (max-width: 990px) {
-	.banner {
-		width: 300px;
-	}
 }
 
 label {
@@ -152,7 +145,7 @@ input {
 	}
 	.application {
 		padding: 10px;
-		margin: 5px 0px;
+		margin: 5px 15px;
 	}
 	.stats-box-container {
 		padding-top: 20px;
