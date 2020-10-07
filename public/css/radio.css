@@ -1,27 +1,34 @@
-.radio-button-group,
-.radio-outer-square,
-.radio-button-group p {
-	display: inline-block;
+.radio-button-group {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 150px;
 }
 
 .radio-outer-square {
 	width: 40px;
 	height: 40px;
-	border: 1px solid #40698f;
+	border: 1px solid #efa516;
 }
 
 .radio-outer-square.active .radio-inner-square {
 	width: 25px;
 	height: 25px;
 	margin: 7px;
-	background-color: #40698f;
+	background-color: #efa516;
 }
 
 .radio-button-group label {
-	height: 40px;
-	margin: -38px 0 0 140px;
+	margin-bottom: 0;
+	margin-left: 10px;
 	display: block;
-	font-family: "Roboto Condensed";
 	text-transform: uppercase;
 	color: black;
+}
+
+@media (max-width: 506px) {
+	.radio-button-group {
+		margin: 0 auto 10px;
+	}
 }
