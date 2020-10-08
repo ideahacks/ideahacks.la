@@ -50,7 +50,7 @@
         {{else}}
 
             <div class='ideahacks-form application-form container-fluid'>
-                <div class = 'row'>
+                <div class='row'>
                     <div class='mainHeader col-md-12 text-center'>
                         <h1>IDEAHACKS: HOME APPLICATIONS</h1>
                     </div>
@@ -151,10 +151,10 @@
                                 <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
                             </select> </div>
                         <span class='row'></span>
-                            <div class='form-group col-md-5 col-xs-10'>
-                                <label>If so, what is your teammate's email?</label>
-                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            </div>
+                        <div class='form-group col-md-5 col-xs-10'>
+                            <label>If so, what is your teammate's email?</label>
+                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                        </div>
                     </fieldset>
                 </div>
 
@@ -236,7 +236,7 @@
                         <div class='form-group col-md-6 col-xs-10 short-answer'>
                             <label>What is your address to ship the box to?*</label>
                             <textarea class='form-control textarea' name='address' rows='6'>{{user.address}}</textarea>
-                        </div>    
+                        </div>
                     </fieldset>
                 </div>
                 <!-- BUTTONS -->
