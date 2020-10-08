@@ -17,18 +17,19 @@
 	color: #000000;
 	display: inline-block;
 }
-.row iframe {
+/* .row iframe {
 	display: block;
 	width: 90%;
 	height: 315px;
 	margin: 0 auto;
-}
+	position: relative;
+
+} */
 
 .base-box,
 .motion-box,
 .AV-box,
 .TI-box {
-	/* font-family: "Roboto", sans-serif; */
 	font-size: 28px;
 	color: white;
 	display: inline-block;
@@ -50,4 +51,10 @@
 }
 .row .TI-box {
 	background-color: #50b5dd;
+}
+
+@media (max-width: 991px){
+    .second-video{
+        margin-top: 20px;
+    }  
 }
