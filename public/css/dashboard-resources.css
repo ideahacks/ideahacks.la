@@ -53,8 +53,8 @@
 	background-color: #50b5dd;
 }
 
-@media (max-width: 991px){
-    .second-video{
-        margin-top: 20px;
-    }  
+@media (max-width: 991px) {
+	.second-video {
+		margin-top: 20px;
+	}
 }
