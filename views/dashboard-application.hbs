@@ -50,8 +50,10 @@
         {{else}}
 
             <div class='ideahacks-form application-form container-fluid'>
-                <div class='mainHeader col-md-12 text-center'>
-                    <h1>IDEAHACKS: HOME APPLICATIONS</h1>
+                <div class = 'row'>
+                    <div class='mainHeader col-md-12 text-center'>
+                        <h1>IDEAHACKS: HOME APPLICATIONS</h1>
+                    </div>
                 </div>
                 <!-- PERSONAL INFORMATION -->
                 <div class='row'>
@@ -182,7 +184,6 @@
                                     <option {{#if user.hasExperience}} selected{{/if}}>YES</option>
                                     <option {{#if user.hasNoExperience}} selected{{/if}}>NO</option>
                                 </select> </div>
-                        </span> <span class='row'>
                             <div class='form-group col-md-10 col-xs-10 short-answer'>
                                 <label style="text-align: left">If so, please share you experience with us.</label>
                                 <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
