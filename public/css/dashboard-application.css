@@ -351,10 +351,6 @@ input::placeholder {
  * Global stylesheet for form elements
  */
 
-.ideahacks-form {
-	/* font-family: "Roboto"; */
-}
-
 /* LABEL */
 .ideahacks-form label {
 	text-align: left;
