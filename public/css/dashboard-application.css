@@ -94,6 +94,7 @@
 }
 
 .header {
+	position: relative;
 	margin-bottom: 30px;
 }
 
@@ -124,6 +125,7 @@
 
 /* Header for each subsection */
 .header h3 {
+	position: relative;
 	text-align: center;
 	display: inline-block;
 	border: none;
@@ -142,7 +144,9 @@
 
 hr {
 	position: absolute;
-	margin-top: 40px;
+	width: 100%;
+	top: 34px;
+
 	border-top: 5px solid #efa516;
 }
 
