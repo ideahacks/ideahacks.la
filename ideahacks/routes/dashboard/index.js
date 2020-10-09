@@ -2,6 +2,7 @@ const express = require("express")
 const dashboardRouter = express.Router()
 const dashboardHandlers = require("./dashboard.js")
 const applicationHandlers = require("./application.js")
+const staticHandlers = require("./static.js")
 const h = require("../../helpers").authHelpers
 const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
@@ -20,5 +21,7 @@ dashboardRouter.post("/me/settings", setResLocals, h.isVerified, dashboardHandle
 dashboardRouter.get("/me/settings", setResLocals, h.isVerified, dashboardHandlers.getSettings)
 
 // dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
+
+dashboardRouter.get("/resources", setResLocals, staticHandlers.getResources)
 
 module.exports = dashboardRouter
