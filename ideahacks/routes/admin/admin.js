@@ -10,10 +10,102 @@ const getAdmin = (req, res) => {
 			},
 			{
 				//hard code emails for testing purposes
-				accepted: { name: "Accepted", list: ["supersupersupersuperlongemailfortestingpurposes@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] },
-				pending: { name: "Pending", list: ["joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] },
-				rejected: { name: "Rejected", list: ["joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] },
-				waitlisted: { name: "Waitlisted", list: ["supersupersupersuperlongemailfortestingpurposes@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu", "joebruins@g.ucla.edu"] }
+				accepted: {
+					name: "Accepted",
+					list: [
+						"supersupersupersuperlongemailfortestingpurposes@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu"
+					]
+				},
+				pending: {
+					name: "Pending",
+					list: [
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu"
+					]
+				},
+				rejected: {
+					name: "Rejected",
+					list: [
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu"
+					]
+				},
+				waitlisted: {
+					name: "Waitlisted",
+					list: [
+						"supersupersupersuperlongemailfortestingpurposes@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu",
+						"joebruins@g.ucla.edu"
+					]
+				}
 			}
 		)
 

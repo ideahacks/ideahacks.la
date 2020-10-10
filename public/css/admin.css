@@ -14,18 +14,17 @@ h3 {
 }
 
 .column:nth-child(1) {
-	background-color: #50B5DD !important;
+	background-color: #50b5dd !important;
 }
 .column:nth-child(2) {
-	background-color: #BDDEBB !important;
+	background-color: #bddebb !important;
 }
 .column:nth-child(3) {
-	background-color: #E8CC83 !important;	
+	background-color: #e8cc83 !important;
 }
 .column:nth-child(4) {
-	background-color: #EAB664 !important;	
+	background-color: #eab664 !important;
 }
-
 
 .row {
 	margin: auto;
@@ -50,17 +49,16 @@ h3 {
 /* Responsive layout - when the screen is less than 600px wide */
 @media screen and (max-width: 600px) {
 	.column {
-	  width: 100%;
+		width: 100%;
 	}
 }
-
 
 .mailing-list .mailing-type {
 	text-align: center;
 }
 
 .mailing-list .mailing-address-container {
-	background-color: #FFE195;
+	background-color: #ffe195;
 	margin: 8%;
 	border-radius: 1rem;
 	overflow: auto;
@@ -81,7 +79,6 @@ h3 {
 	border-radius: 10px;
 
 } */
-
 
 .mailing-header {
 	padding-top: 130px;
@@ -107,7 +104,6 @@ h3 {
 }
 
 .mailing-list {
-
 	display: flex;
 }
 
