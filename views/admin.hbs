@@ -43,7 +43,7 @@
                         <div class="column">
                             <h3 class="mailing-type">{{ this.name }}</h3>
                             <div class="mailing-address-container">
-                                <button class="glyphicon glyphicon-copy" onclick="CopyToClipboard("{{this.list}}")"></button>
+                                <button class="glyphicon glyphicon-copy" onclick="CopyToClipboard(" {{this.list}}")"></button>
                                 <div class="mailing-address-list" id="mailing-address-text">
                                     {{#each this.list }}
                                         <p>{{ this }}</p>
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </body>
 </html>

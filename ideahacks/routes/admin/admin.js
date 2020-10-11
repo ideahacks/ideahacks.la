@@ -9,7 +9,6 @@ const getAdmin = (req, res) => {
 				return lists
 			},
 			{
-				//hard code emails for testing purposes
 				accepted: {
 					name: "Accepted",
 					list: []
