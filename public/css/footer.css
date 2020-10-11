@@ -2,6 +2,17 @@
 	text-align: center;
 }
 
+.myFooter.container-fluid {
+	padding: 0 15px;
+}
+
+.myFooter p {
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+    margin-bottom: inherit;
+}
+
 .myFooter a:hover {
 	text-decoration: none;
 	color: initial;
