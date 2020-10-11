@@ -9,18 +9,18 @@ const getAdmin = (req, res) => {
 				return lists
 			},
 			{
-				accepted: {
-					name: "Accepted",
-					list: []
-				},
-				pending: {
-					name: "Pending",
-					list: []
-				}
+				accepted: { name: "Accepted", list: [] },
+				pending: { name: "Pending", list: [] },
+				rejected: { name: "Rejected", list: [] },
+				waitlisted: { name: "Waitlisted", list: [] }
 			}
 		)
 
 		let mailingLists = emailLists
+		// for (let k in emailLists) {
+		// 	emailLists[k].list = emailLists[k].list.join(", ")
+		// 	mailingLists.push(emailLists[k])
+		// }
 
 		return res.render("admin", {
 			mailingLists
