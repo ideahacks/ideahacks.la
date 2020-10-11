@@ -16,11 +16,11 @@ const getAdmin = (req, res) => {
 			}
 		)
 
-		let mailingLists = []
-		for (let k in emailLists) {
-			emailLists[k].list = emailLists[k].list.join(", ")
-			mailingLists.push(emailLists[k])
-		}
+		let mailingLists = emailLists
+		// for (let k in emailLists) {
+		// 	emailLists[k].list = emailLists[k].list.join(", ")
+		// 	mailingLists.push(emailLists[k])
+		// }
 
 		return res.render("admin", {
 			mailingLists
