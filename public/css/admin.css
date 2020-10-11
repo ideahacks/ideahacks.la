@@ -3,14 +3,17 @@ h3 {
 	font-family: "Source Code Pro", monospace;
 }
 
+#mailing-lists {
+	font-family: "Source Code Pro", monospace;
+	font-weight: bold;
+	font-size: 52px;
+	color: #50b5dd;
+	margin: 100px auto 20px;
+}
+
 .mailing-header {
 	padding-top: 130px;
 	width: 25%;
-}
-
-.description {
-	font-size: 18px;
-	margin-top: 10px;
 }
 
 .mailing-wrapper {
@@ -80,8 +83,8 @@ h3 {
 .mailing-list .mailing-address-container .mailing-address-list {
 	background-color: white;
 	overflow: auto;
-	height: 35vh;
-	padding: 0.5rem;
+	height: 30vh;
+	padding: 1.5rem 0.5rem;
 	border: none;
 }
 
@@ -97,9 +100,5 @@ h3 {
 		float: center;
 		width: 100%;
 		margin: calc(7.5px + 1.25vw) 0;
-	}
-	.description-wrapper {
-		margin: auto;
-		max-width: 80%;
 	}
 }

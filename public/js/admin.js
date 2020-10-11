@@ -1,13 +1,12 @@
 function CopyToClipboard(list) {
-	//Credit to Prakash Poudel (https://www.sharmaprakash.com.np/javascript/copying-value-from-variable-to-clipboard/)
-
 	var listString = list.split(",").join(";")
 
-	$("<input>")
+	var $temp = $("<input>")
 		.val(listString)
 		.appendTo("body")
 		.select()
 	document.execCommand("copy")
+	$temp.remove();
 
 	alert("Copied emails!")
 }
