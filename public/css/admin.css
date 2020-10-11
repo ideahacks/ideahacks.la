@@ -2,17 +2,49 @@
 h3 {
 	font-family: "Source Code Pro", monospace;
 }
+
+.mailing-header {
+	padding-top: 130px;
+	width: 25%;
+}
+
+.description {
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.mailing-wrapper {
+	padding: 20px 0 50px;
+}
+
+.mailing-list {
+	display: flex;
+}
+
+.row {
+	margin: auto;
+	width: 90vw;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .column {
 	position: relative;
 	text-align: center;
 
 	background-color: white; /*backup*/
 	float: left;
-	width: 22%;
-	margin: 0 1.5%;
+	width: calc(25% - 2vw);
+	margin: 0 1vw;
 	border-radius: 1rem;
 }
 
+/* Different color for each mailing list */
 .column:nth-child(1) {
 	background-color: #50b5dd !important;
 }
@@ -26,33 +58,6 @@ h3 {
 	background-color: #eab664 !important;
 }
 
-.row {
-	margin: auto;
-	width: 95%;
-}
-
-.glyphicon {
-	background: transparent;
-	text-shadow: none;
-	border: none;
-	font-size: 2rem;
-	margin: 5px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide */
-@media screen and (max-width: 600px) {
-	.column {
-		width: 100%;
-	}
-}
-
 .mailing-list .mailing-type {
 	text-align: center;
 }
@@ -64,8 +69,16 @@ h3 {
 	overflow: auto;
 }
 
+.glyphicon {
+	background: transparent;
+	text-shadow: none;
+	border: none;
+	font-size: 2rem;
+	margin: 5px;
+}
+
+
 .mailing-list .mailing-address-container .mailing-address-list {
-	/* max-height: 50%; */
 	background-color: white;
 	overflow: auto;
 	height: 35vh;
@@ -73,47 +86,21 @@ h3 {
 	border: none;
 }
 
-/* .mailing-list .email-list {
-	background-color: white;
-	padding: 10px;
-	border-radius: 10px;
-
-} */
-
-.mailing-header {
-	padding-top: 130px;
-	width: 25%;
-}
-
-.description {
-	font-size: 18px;
-	margin-top: 10px;
-}
-
+/* Responsive layout */
 @media (max-width: 990px) {
 	.mailing-header {
-		width: 270px;
+		width: 248px;
 	}
 }
 
-/*-------------- FEEDBACK LISTS ----------------*/
-
-.feedback-wrapper,
-.mailing-wrapper {
-	padding: 20px 0 50px;
-}
-
-.mailing-list {
-	display: flex;
-}
-
-.feedback-list li {
-	margin: 20px 0;
-	background-color: white;
-	padding: 10px 0;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-}
-
-.feedback-list p {
-	margin: 0;
+@media screen and (max-width: 720px) {
+	.column {
+		float: center;
+		width: 100%;
+		margin: calc(7.5px + 1.25vw) 0;
+	}
+	.description-wrapper {
+		margin: auto;
+		max-width: 80%;
+	}
 }
