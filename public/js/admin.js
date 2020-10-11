@@ -6,7 +6,7 @@ function CopyToClipboard(list) {
 		.appendTo("body")
 		.select()
 	document.execCommand("copy")
-	$temp.remove();
+	$temp.remove()
 
 	alert("Copied emails!")
 }
