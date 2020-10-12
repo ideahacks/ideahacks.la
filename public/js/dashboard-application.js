@@ -85,10 +85,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		canPickUpBox = true
 	}
 
-	if (
-		!canPickUpBox &&
-		$('textarea[name="address"]').val() == ""
-	) {
+	if (!canPickUpBox && $('textarea[name="address"]').val() == "") {
 		alert("Please specify your address if you are not picking up your box.")
 		return false
 	}
