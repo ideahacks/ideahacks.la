@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700;1,900&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -33,24 +33,38 @@
 
         <!-- BANNER -->
 
-        <div class='container-fluid home-banner'>
-            <div class='text-center'>
-                <img class='banner-title' src="/img/index/uclaieeeandthetataupresent.png">
+        <div class='home-banner'>
+
+            <div class="stripe"></div>
+
+            <div class="main-wrapper">
+                <div class="row flex-row">
+                    <div class="col-md-7 text-center banner-left">
+                        <img class='banner-desktop-graphic' src="/img/index/main-graphic.png">
+                    </div>
+
+                    <div class="col-md-5 banner-right">
+                        <div class="title-wrapper">
+                            <div class="banner-title">
+                                <div class="yellow-box"></div>
+                                <div class="blue-box"></div>
+                                <h1 class="title">IDEAHacks</h1>
+                                <h2 class="theme">Home Applications</h2>
+                            </div>
+
+                            <div class="presented-wrapper">
+                                <p class="yellow-box">Presented by UCLA IEEE and Theta Tau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='banner-details clearfix'>
+                    <p class="date yellow-box">Remote, January 15-17</p>
+                    <a href="/dashboard/application"><button class="apply" type="button">Apply Now!</button></a>
+                </div>
             </div>
 
-            <div class='text-center'>
-                <img class='banner-desktop-graphic' src="/img/index/desktopgraphic.png">
-                <img class='banner-tablet-graphic' src="/img/index/ipadgraphic.png">
-                <img class='banner-mobile-graphic' src="/img/index/mobilegraphic.png">
-            </div>
-
-            <div class='text-center banner-details'>
-                <p class="date">January 10 - 12, 2020</p>
-                <p class="agb">Ackerman Grand Ballroom, UCLA</p>
-
-                <!-- APPS ARE OPEN -->
-                <p class="deadline">Applications are now closed.</p>
-            </div>
         </div>
 
         <div id='about' class='white-box'></div>
@@ -63,8 +77,9 @@
             </div>
             <div class="col-md-12">
                 <p class='description'>
-                    For the sixth time, UCLA IEEE and UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, one of the few college hackathons that provides an emphasis in hardware and the largest of its kind on the West Coast. We provide you with tools, such as 3D printers, soldering stations, and other equipment free of charge. IDEA Hacks is a platform for you to experiment, collaborate, and develop tangible products from scratch in 36 hours.
-                    <br><br> This year our theme is “College Lifestyle”. This means you will be challenged to create something that focuses on enhancing students’ daily routines, whether that means increased sustainability, comfort, and more. Spend the weekend with us to innovate and create.
+                    For the seventh time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, one of the few college hackathons that provides an emphasis in hardware and the largest of its kind on the West Coast. IDEA Hacks is a platform for you to experiment, collaborate, and develop tangible products from scratch in 36 hours.
+                    <br><br> Due to concerns over COVID-19, IDEA Hacks will be running remotely this year. To learn more about how that will work, see our <a class='faq-link' href='/#faq'>FAQ</a>.
+                    <br><br> This year, our theme is “Home Applications”. This means you will be challenged to create something that focuses on enhancing our own daily routines at home in these challenging times, whether that means increased sustainability, comfort, productivity, or something else entirely. Spend the weekend innovating. We are excited to see what you can create.
                 </p>
             </div>
         </div>
@@ -79,220 +94,204 @@
             </div>
 
             <div>
-                <div class='text-center'>
-                    <img class='day' src="/img/index/fridayjan10.png"></img>
+                <div class='schedule-day'>
+                    <img class='day1' src="/img/index/day1.png"></img>
+                    <div class='schedule-text1'>
+                        <b>FRIDAY, JANUARY 15</b>
+                    </div>
                 </div>
                 <div class='schedule'>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Check In</p>
+                            <p>REGISTRATION</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>4:30 - 8 PM</p>
+                            <p>5 PM - 6 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>ST/Digikey Workshop</p>
+                            <p>CHECK IN</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>5 - 6:30 PM</p>
+                            <p>5 PM - 7 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Bruin Reception Room</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Team Formation</p>
+                            <p>TEAM FORMATION</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>6:30 - 7 PM</p>
+                            <p>7 PM - 8 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Advantech Workshop</p>
+                            <p>WORKSHOP</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>7 - 8 PM</p>
+                            <p>8 PM - 9 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Bruin Reception Room</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Team Registration</p>
+                            <p>OPENING STATEMENTS</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>7:30 - 8:30 PM</p>
+                            <p>9 PM - 10 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Opening Statements</p>
+                            <p>HACKING BEGINS</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>8:30 - 9 PM</p>
+                            <p>10 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>Hacking Begins</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>9 PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>Arduino Workshop</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>9 - 10 PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>Boelter 2808 (Upper Makerspace)</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>Bluetooth Workshop</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>10 - 11 PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>Boelter 2808 (Upper Makerspace)</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                 </div>
             </div>
             <div>
-                <div class='text-center'>
-                    <img class='day' src="/img/index/saturdayjan11.png"></img>
+                <div class='schedule-day'>
+                    <img class='day' src="/img/index/day2.png"></img>
+                    <div class='schedule-text2'>
+                        <b>SATURDAY, JANUARY 16</b>
+                    </div>
                 </div>
                 <div class='schedule'>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Breakfast</p>
+                            <p>REGISTRATION</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>7 - 10 AM</p>
+                            <p>5 PM - 6 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Dog Therapy Session</p>
+                            <p>CHECK IN</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>9:30 - 10:30 AM</p>
+                            <p>5 PM - 7 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Bruin Plaza</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>3D Printing Workshop</p>
+                            <p>TEAM FORMATION</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>11 - 12 PM</p>
+                            <p>7 PM - 8 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Boelter 1805 (Lower Makerspace)</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Lunch</p>
+                            <p>WORKSHOP</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>12 - 2 PM</p>
+                            <p>8 PM - 9 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Reactive Light Workshop</p>
+                            <p>OPENING STATEMENTS</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>2 - 3 PM</p>
+                            <p>9 PM - 10 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman 2408</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Typing Competition</p>
+                            <p>HACKING BEGINS</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>3 - 4 PM</p>
+                            <p>10 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman 2408</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Dinner</p>
+                            <p>EVENT</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>6 - 7:30 PM</p>
+                            <p>TIME</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
+
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Pitching Workshop</p>
+                            <p>EVENT</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>7:30 - 8 PM</p>
+                            <p>TIME</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman 2408</p>
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
@@ -300,105 +299,162 @@
             </div>
 
             <div>
-                <div class='text-center'>
-                    <img class='day' src="/img/index/sundayjan12.png"></img>
+                <div class='schedule-day'>
+                    <img class='day' src="/img/index/day3.png"></img>
+                    <div class='schedule-text3'>
+                        <b>SUNDAY, JANUARY 17</b>
+                    </div>
                 </div>
                 <div class='schedule'>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Breakfast</p>
+                            <p>REGISTRATION</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>7 - 10 AM</p>
+                            <p>5 PM - 6 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Hacking Ends</p>
+                            <p>CHECK IN</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>9 AM</p>
+                            <p>5 PM - 7 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Exhibition Setup</p>
+                            <p>TEAM FORMATION</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>9 - 9:30 AM</p>
+                            <p>7 PM - 8 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Judging</p>
+                            <p>WORKSHOP</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>9:30 - 11 AM</p>
+                            <p>8 PM - 9 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman 2408, 2412, 3516</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Judging Finals</p>
+                            <p>OPENING STATEMENTS</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>11 - 12:30 PM</p>
+                            <p>9 PM - 10 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>Closing & Awards</p>
+                            <p>HACKING BEGINS</p>
                         </div>
                         <div class="col-xs-4 schedule-time text-center">
-                            <p>12:30 - 1 PM</p>
+                            <p>10 PM</p>
                         </div>
                         <div class="col-xs-4 location text-right">
-                            <p>Ackerman Grand Ballroom</p>
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>EVENT</p>
+                        </div>
+                        <div class="col-xs-4 schedule-time text-center">
+                            <p>TIME</p>
+                        </div>
+                        <div class="col-xs-4 location text-right">
+                            <p>LOCATION</p>
                         </div>
                     </div>
 
                 </div>
-            </div>
-
-            <div class='schedule note'>
-
-                <p class='hanging-indent'>
-                    *Note: Rest/Sleeping Room (Fri 9 PM - Sat 9 AM, Sat 9 PM - Sun 8 AM)
-                </p>
-                <p class='double-indented'>
-                    Ackerman 2408
-                </p>
-                <p class='double-indented extra'>
-                    Please bring your own sleeping bag.
-                </p>
-
-                <p class='indented'>
-                    Recreational Room (Sat 3 PM - 12 AM)
-                </p>
-                <p class='double-indented'>
-                    Ackerman 3508
-                </p>
-
             </div>
 
         </div>
@@ -411,32 +467,96 @@
             <div class='text-center'>
                 <img class='section-header' src="/img/index/faq.png">
             </div>
-            <div class='questions col-md-6'>
-                <h2>WHO CAN ATTEND?</h2>
-                <p>All students interested are encouraged to apply. Although we primarily cater to UCLA engineering students, every application will be considered.</p>
-                <h2>WHAT DOES A "HARDWARE HACKATHON" MEAN?</h2>
-                <p>At IDEA Hacks, a hardware hackathon means that your project can be anything you like as long as it includes a hardware component.</p>
-                <h2>WHAT IF I DON'T KNOW ANYTHING ABOUT HARDWARE?</h2>
-                <p>You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. There will also be mentors and other hardware experts ready to assist those who are having trouble bringing their hacks to life.</p>
-                <h2>WHAT SHOULD I BRING?</h2>
-                <p>A valid ID such as a student ID is required for admission into Ackerman Grand Ballroom. If you don't live around UCLA, we recommend bringing necessary toiletries and a sleeping bag.</p>
-                <h2>WHAT ABOUT TRAVEL COSTS?</h2>
-                <p>Unfortunately, we will not be able to cover transportation costs for this year's event. If you’re looking for details about the venue, look <a class='faq-link' href='/venue'>here</a>.</p>
-                <h2>HOW CAN I CHECK OUT PARTS DURING THE HACKATHON?</h2>
-                <p>During the hackathon, you can simply approach our parts station and request a part from one of our volunteers. If it’s in stock, our volunteers will check the part out to your team.</p>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">How will the hackathon work?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">Because of concerns about coronavirus, we will be running the hackathon entirely remotely. We have put together three categories of <a class='faq-link' href='/boxes'>boxes</a> of parts, each centered around their own theme, which we will ship directly to the address you provide. You will have three days to prepare your project from the parts in your box and will present your creation to our judges remotely. Depending on participation, projects may be judged in groups by which box they were created from.</p>
+                </div>
             </div>
-            <div class='questions col-md-6'>
-                <h2>HOW DO I APPLY?</h2>
-                <p>Hackers can apply on this website! Applications will be out by early November, and will close in mid-December. To get an email reminder once the application gets sent out, like our Facebook page <a class='faq-link' href='https://www.facebook.com/ideahacks.la/?fref=mentions&__xts__[0]=68.ARAAgTMAZ2_QSZ92MUv70wZOXTYrq7JNCYp2KDo9G_xIJm1waShx8XCBA5N6ctUDqo0rLL8wA1jsXqruGi7wX3RaNvgkWs4igLm0f2W_2-tX0D9jp11Pllq7REjEYwKHpVV788nRzDjX_4QPMbxuJpafpxu5MC1Cm18w4P6Uh1aWofLaBk-2nA&__tn__=K-R' target='blank'>here</a>. Applications are reviewed and accepted on a first come first served basis, so apply early!</p>
-                <h2>WHAT IF I DON'T HAVE A TEAM?</h2>
-                <p>You are free to hack alone, but that's no fun! We encourage everyone to be on teams of around 4-5 hackers. Official team signups happen at the start of the hackathon. If you do not have a team in mind, we hold a team formation session before hacking begins.</p>
-                <h2>WHAT TOOLS AND HARDWARE WILL BE PROVIDED FOR MY TEAM?</h2>
-                <p>If you would like to see a specific part or device at the hackathon, you can specify it on your application and we'll do our best to accommodate! When applications are released, we will also release a list of parts. In addition, keep in mind that you are not allowed to bring any hardware of your own to the hackathon.</p>
-                <h2>WHAT DO HACKERS GAIN FROM PARTICIPATING?</h2>
-                <p>In addition to being completely free, we will provide hackers free meals, a free shirt, a room to sleep in, and a chance to win a prize! The top three teams’ members will each receive a prize. Even more valuable, at our hackathon you will gain project experience and learn something new!</p>
-                <h2>HOW DO I CONTACT IDEA HACKS?</h2>
-                <p>Email us at <a class='faq-link' href='mailto:team@ideahacks.la'>team@ideahacks.la</a>! You can also like our Facebook page and follow us on Instagram.</p>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">Will I be able to work with a team?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">Due to the remote nature of the hackathon and the coronavirus pandemic, we are not allowing large teams. You are given the option to put one person on your application to be your teammate, but it is up to you to work out how to properly collaborate on your project. Depending on the number of teams and individual hackers, teams may be judged separately from individuals.</p>
+                </div>
             </div>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">Who can participate?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">All students interested are encouraged to apply. Although we primarily cater to UCLA engineering students, every application will be considered.</p>
+                </div>
+            </div>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">What does a "Hardware Hackathon" mean?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">At IDEA Hacks, a hardware hackathon means that your project can be anything you like as long as it includes a hardware component.</p>
+                </div>
+            </div>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">What if I don't know anything about hardware?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. In addition, our <a class='faq-link' href='/dashboard/resources'>resources page</a> provides quickstart info and basic ideas for specific parts featured in our <a class='faq-link' href='/boxes'>boxes</a>. Create an account to view our resources page!</p>
+                </div>
+            </div>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">How do I apply?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">Hackers can apply on this website! Applications will be out by early November, and will close in mid-December. To get an email reminder once the application gets sent out, like our Facebook page <a class='faq-link' href='https://www.facebook.com/ideahacks.la/?fref=mentions&__xts__[0]=68.ARAAgTMAZ2_QSZ92MUv70wZOXTYrq7JNCYp2KDo9G_xIJm1waShx8XCBA5N6ctUDqo0rLL8wA1jsXqruGi7wX3RaNvgkWs4igLm0f2W_2-tX0D9jp11Pllq7REjEYwKHpVV788nRzDjX_4QPMbxuJpafpxu5MC1Cm18w4P6Uh1aWofLaBk-2nA&__tn__=K-R' target='blank'>here</a>. Applications are reviewed and accepted on a first come first served basis, so apply early!</p>
+                </div>
+            </div>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">What do hackers gain from participating?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">You will get tons of benefits from participating! You will get to keep all of your parts and will get a free hackathon t-shirt and swag from our sponsors. On top of that, you'll get personal exposure with reps from industry-leading companies and the opportunity to have your resume included in a resume book sent to our sponsors. The top the projects in each category will receive prizes, and most important of all, you'll gain valuable project experience and have the opportunity to learn something new!</p>
+                </div>
+            </div>
+
+            <div class="q-a">
+                <div class="question-section clearfix">
+                    <p class="q">Q.</p>
+                    <p class="question">How do I contact IDEA HACKS?</p>
+                </div>
+                <div class="answer-section clearfix">
+                    <p class="a">A.</p>
+                    <p class="answer">Email us at <a class='faq-link' href='mailto:team@ideahacks.la'>team@ideahacks.la</a>! You can also like our Facebook page and follow us on Instagram.</p>
+                </div>
+            </div>
+
+            <div class='tan-box1'></div>
         </div>
 
         <div id='sponsors' class='tan-box'></div>
@@ -447,23 +567,10 @@
             <div class='text-center'>
                 <img class='section-header' src="/img/index/sponsors.png">
             </div>
-            <p>Interested in sponsoring? <br /> Check out our sponsorship brochure <a class='brochure-link' href='/files/20-sponsorship-packet.pdf' target='_blank'>here</a>!</p>
+            <p>Interested in sponsoring? <br /> Check out our sponsorship brochure <a class='brochure-link' href='/files/21-sponsorship-packet.pdf' target='_blank'>here</a>!</p>
             <div class='text-center large-logos'>
-                <a href='https://www.digikey.com/' target='_blank'><img class='large-logo' src="/img/company_logos/digikey.png"></a>
-                <a href='https://www.st.com/' target='_blank'><img class='large-logo' src="/img/company_logos/stmicro.png"></a>
-                <a href='https://www.advantech.com/' target='_blank'><img class='large-logo' src="/img/company_logos/advantech.png"></a>
                 <a href='http://www.ti.com/' target='_blank'><img class='large-logo' src="/img/company_logos/ti.png"></a>
-                <a href='https://tgif.ucla.edu/' target='_blank'><img class='large-logo' src="/img/company_logos/tgif.png"></a>
-                <a href='https://www.northropgrumman.com/' target='_blank'><img class='large-logo' src="/img/company_logos/northrop.png"></a>
-                <a href='https://www.lockheedmartin.com/' target='_blank'><img class='large-logo' src="/img/company_logos/lockheed.png"></a>
-                <a href='https://swc.ucla.edu/' target='_blank'><img class='large-logo' src="/img/company_logos/swc.png"></a>
-            </div>
-            <div class='text-center small-logos'>
-                <a href='https://bellapita.com/' target='_blank'><img class='small-logo' src="/img/company_logos/bellapita.png"></a>
-                <a href='https://www.bjsrestaurants.com/' target='_blank'><img class='small-logo' src="/img/company_logos/bjs.png"></a>
-                <a href='https://guayaki.com/yerba-mate/' target='_blank'><img class='small-logo' src="/img/company_logos/yerba.png"></a>
-                <a href='https://www.califiafarms.com/' target='_blank'><img class='small-logo' src="/img/company_logos/califafarms.png"></a>
-                <a href='https://spudsy.com/' target='_blank'><img class='small-logo' src="/img/company_logos/spudsy.png"></a>
+                <a href='https://www.qualcomm.com/' target='_blank'><img class='large-logo' src="/img/company_logos/qualcomm.png"></a>
             </div>
         </div>
 

@@ -30,5 +30,6 @@ module.exports = {
 	Team: require("./Team.js"),
 	Part: require("./Part.js"),
 	teamData: require("./data/team.js"),
-	sponsorsData: require("./data/sponsors.js")
+	sponsorsData: require("./data/sponsors.js"),
+	boxesData: require("./data/boxes.js")
 }

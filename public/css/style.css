@@ -15,7 +15,7 @@ h1 {
 	position: relative;
 	background-color: #fafafa;
 	min-height: 100vh;
-	overflow: auto;
+	overflow: hidden;
 	flex-grow: 1;
 }
 

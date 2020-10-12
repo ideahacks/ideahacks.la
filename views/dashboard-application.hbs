@@ -15,6 +15,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
     <link rel='stylesheet' href='../css/dashboard-application.css' />
@@ -55,6 +56,7 @@
                         <hr>
                         <h3>PERSONAL</h3>
                     </div>
+
                     <fieldset>
                         <div class='form-group col-md-5'>
                             <label>FIRST NAME*</label>
@@ -68,12 +70,15 @@
                             <label>LAST NAME*</label>
                             <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
                         </div>
+                    
                         <div class='form-group col-md-5'>
                             <label>EMAIL*</label>
                             <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
                         </div>
+                        -->
                     </fieldset>
                 </div>
+                -->
                 <!-- EDUCATIONAL INFORMATION -->
                 <div class='row'>
                     <div class='header'>
@@ -95,7 +100,8 @@
                                 <option {{#if user.UCSC}} selected{{/if}}>University of California, Santa Cruz</option>
                                 <option {{#if user.USC}} selected{{/if}}>University of Southern California</option>
                                 <option {{#if user.schoolOther}} selected{{/if}}>Other</option>
-                            </select> </div>
+                            </select>
+                        </div>
                         <div class='form-group col-md-5'>
                             <label>If Other, please specify.</label>
                             <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
@@ -114,7 +120,8 @@
                                 <option {{#if user.yearHighSchool}} selected{{/if}}>High School</option>
                                 <option {{#if user.yearGraduate}} selected{{/if}}>Graduate</option>
                                 <option {{#if user.yearOther}} selected{{/if}}>Other</option>
-                            </select> </div>
+                            </select>
+                        </div>
                         <div class='form-group col-md-5'>
                             <label>GITHUB</label>
                             <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>

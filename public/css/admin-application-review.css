@@ -9,19 +9,17 @@
 
 .banner {
 	padding-top: 130px;
-	width: 30%;
+	margin: auto;
+}
+
+.container {
+	padding: 20px 0;
 }
 
 .description {
 	padding-bottom: 20px;
 	font-size: 20px;
 	color: white;
-}
-
-@media (max-width: 990px) {
-	.banner {
-		width: 300px;
-	}
 }
 
 label {
@@ -35,8 +33,9 @@ input {
 /* STATS */
 .stats-box-container {
 	display: flex;
-	justify-content: space-between;
-	padding-top: 50px;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 50px 30px 20px;
 }
 
 .stats-box {
@@ -45,9 +44,9 @@ input {
 	text-align: center;
 	display: inline-block;
 	padding: 10px;
-	width: 215px;
-	height: 125px;
+	width: 190px;
 	margin: 10px;
+	border-radius: 10px;
 }
 
 .stats-box h1 {
@@ -56,12 +55,22 @@ input {
 	font-size: 60px;
 	font-weight: bold;
 	padding-bottom: 0px;
+	color: #2b2b2b;
 }
 
 .stats-box h4 {
-	font-family: "Roboto Condensed";
-	font-size: 25px;
+	font-family: "Source Code Pro", monospace;
+	font-size: 20px;
 	padding-top: 0px;
+	color: #2b2b2b;
+}
+
+.number-applications-box h1 {
+	color: #ffffff;
+}
+
+.number-applications-box h4 {
+	color: #ffffff;
 }
 
 /* APPLICATION LIST */
@@ -70,12 +79,17 @@ input {
 	padding: 0 0 70px;
 }
 
+.application-list p {
+	color: #2b2b2b;
+}
+
 .application {
 	padding: 15px 40px;
 	margin: 20px 0;
 	color: white;
 	font-size: 17px;
-	font-family: "Roboto Condensed";
+	font-family: "Source Code Pro", monospace;
+	border-radius: 10px;
 }
 
 .application:hover {
@@ -84,27 +98,27 @@ input {
 
 .application p {
 	margin: 0;
-	font-size: 1.3vw;
+	font-size: 16px;
 }
 
 .application.accepted,
 .accepted-box {
-	background-color: #75c791;
+	background-color: #bddebb;
 }
 
 .application.pending,
 .pending-box {
-	background-color: #75b4c7;
+	background-color: #50b5dd;
 }
 
 .application.rejected,
 .rejected-box {
-	background-color: #d46c6c;
+	background-color: #eab664;
 }
 
 .application.waitlisted,
 .waitlisted-box {
-	background-color: #f2c94c;
+	background-color: #e8cc83;
 }
 
 .application .year,
@@ -117,15 +131,53 @@ input {
 	text-transform: uppercase;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+	h1.banner {
+		font-size: 36px;
+	}
+
 	.application .year,
 	.application .school {
 		display: none;
 	}
 	.application p {
-		font-size: 4vw;
+		font-size: 14px;
+	}
+	.application {
+		padding: 10px;
+		margin: 5px 15px;
+	}
+	.stats-box-container {
+		padding-top: 20px;
+	}
+	.stats-box {
+		padding: 10px 0;
+		margin: 10px;
+	}
+	.container {
+		padding: 0px;
+		margin: 10px;
+	}
+	.stats-box h1 {
+		font-size: 50px;
 	}
 	.stats-box h4 {
-		font-size: 2.5vw;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 481px) {
+	.stats-box-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.stats-box {
+		width: 130px;
+	}
+	.stats-box h1 {
+		font-size: 40px;
+	}
+	.stats-box h4 {
+		font-size: 16px;
 	}
 }

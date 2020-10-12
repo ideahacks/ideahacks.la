@@ -133,6 +133,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		shippingAddress: $('textarea[name="address"]').val(),
 		hasApplication: toggleHasApplication
 	}
+	console.log(applicationData)
 
 	$.ajax({
 		url: "/dashboard/application",

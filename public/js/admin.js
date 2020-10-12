@@ -1,16 +1,12 @@
-$(() => {
-	$(".email-list-name").click(function() {
-		$(this)
-			.next()
-			.slideToggle(150)
+function CopyToClipboard(list) {
+	var listString = list.split(",").join(";")
 
-		let arrow = $(this).children(".glyphicon")
-		if (arrow.hasClass("rotate")) {
-			arrow.removeClass("rotate")
-			arrow.css("transform", "rotate(0deg)")
-		} else {
-			arrow.addClass("rotate")
-			arrow.css("transform", "rotate(180deg)")
-		}
-	})
-})
+	var $temp = $("<input>")
+		.val(listString)
+		.appendTo("body")
+		.select()
+	document.execCommand("copy")
+	$temp.remove()
+
+	alert("Copied emails!")
+}
