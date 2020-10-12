@@ -240,8 +240,15 @@
                                     CLICK HERE TO SEE BOXES </button></a>
                         </div>
                         <span class='row'></span>
+                        <div class='form-group col-sm-10 col-md-5'>
+                            <label>Are you located near UCLA and willing to come pick up your box?*</label>
+                            <select class='form-control' name='canPickUpBox'>
+                                <option {{#if user.canPickUpBox}} selected{{/if}}>YES</option>
+                                <option {{#if user.canPickUpBox}} selected{{/if}}>NO</option>
+                            </select>
+                        </div>
                         <div class='form-group col-md-6 col-sm-10 short-answer'>
-                            <label>What address would you like your box shipped to?*</label>
+                            <label>If not, what address would you like your box shipped to?</label>
                             <textarea class='form-control textarea' name='address' rows='6'>{{user.address}}</textarea>
                         </div>
                     </fieldset>

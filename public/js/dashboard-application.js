@@ -70,10 +70,26 @@ function getAndSendApplicationData(toggleHasApplication) {
 		$('input[name="phone"]').val() == "" ||
 		$('input[name="major"]').val() == "" ||
 		$('textarea[name="skillsAndExperience"]').val() == "" ||
-		$('textarea[name="reasonForParticipation"]').val() == "" ||
-		$('textarea[name="address"]').val() == ""
+		$('textarea[name="reasonForParticipation"]').val() == ""
 	) {
 		alert("Please fill out required fields before submitting application.")
+		return false
+	}
+
+	let canPickUpBox = false
+	if (
+		$('select[name="canPickUpBox"]')
+			.find(":selected")
+			.text() == "YES"
+	) {
+		canPickUpBox = true
+	}
+
+	if (
+		!canPickUpBox &&
+		$('textarea[name="address"]').val() == ""
+	) {
+		alert("Please specify your address if you are not picking up your box.")
 		return false
 	}
 
@@ -130,10 +146,10 @@ function getAndSendApplicationData(toggleHasApplication) {
 		boxPreferenceOne: boxPreferenceOne_entry,
 		boxPreferenceTwo: boxPreferenceTwo_entry,
 		boxPreferenceThree: boxPreferenceThree_entry,
+		canPickUpBox: canPickUpBox,
 		shippingAddress: $('textarea[name="address"]').val(),
 		hasApplication: toggleHasApplication
 	}
-	console.log(applicationData)
 
 	$.ajax({
 		url: "/dashboard/application",
