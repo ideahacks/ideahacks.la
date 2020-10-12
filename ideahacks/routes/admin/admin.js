@@ -9,8 +9,8 @@ const getAdmin = (req, res) => {
 				return lists
 			},
 			{
-				accepted: { name: "Accepted", list: [] },
 				pending: { name: "Pending", list: [] },
+				accepted: { name: "Accepted", list: [] },
 				rejected: { name: "Rejected", list: [] },
 				waitlisted: { name: "Waitlisted", list: [] }
 			}
