@@ -35,9 +35,9 @@ const formatUser = user => {
 			break
 	}
 
-	var Motion = "Motion Add-on";
-	var AV = "Audio + Visual Add-on";
-	var TI = "TI Box";
+	var Motion = "Motion Add-on"
+	var AV = "Audio + Visual Add-on"
+	var TI = "TI Box"
 	//FOR KITS//
 	switch (user.kitPreferenceOne) {
 		case Motion:
