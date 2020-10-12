@@ -26,9 +26,9 @@ const UserSchema = new Schema({
 	themeIdea: { type: String, default: "" },
 	// desiredParts: { type: String, default: "" },
 	shirtSize: { type: String, default: "M" },
-	kitPreferenceOne: { type: String, default: "" },
-	kitPreferenceTwo: { type: String, default: "" },
-	kitPreferenceThree: { type: String, default: "" },
+	boxPreferenceOne: { type: String, default: "" },
+	boxPreferenceTwo: { type: String, default: "" },
+	boxPreferenceThree: { type: String, default: "" },
 	shippingAddress: { type: String, default: "" },
 
 	// boolean fields
