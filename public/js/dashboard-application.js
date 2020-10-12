@@ -71,7 +71,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		$('input[name="major"]').val() == "" ||
 		$('textarea[name="skillsAndExperience"]').val() == "" ||
 		$('textarea[name="reasonForParticipation"]').val() == "" ||
-		$('textarea[name="address"]').val()
+		$('textarea[name="address"]').val() == ""
 	) {
 		alert("Please fill out required fields before submitting application.")
 		return false

@@ -30,19 +30,22 @@
     <div class='wrapper'>
         {{> navbar }}
 
-        <div class='top-box'></div>
-
         {{#if user.hasApplication}}
 
+        <div class='top-box' style="background-color: #fafafa;"></div>
+
+            <div class="houseline"></div>
+
             <div class='text-center container-fluid submission'>
-                <p> Way to go! You successfully submitted your application for IDEA Hacks 2021! </p>
-                <p> Have questions? Contact us at team@ideahacks.la </p>
-                <img class='banner-desktop-graphic' src="/img/registration/submission.png">
-                <img class='banner-tablet-graphic' src="/img/registration/submission_ipad.png">
-                <img class='banner-mobile-graphic' src="/img/registration/submission_mobile.png">
+                <h1>Way to go!</h1>
+                <p>You successfully submitted your application for IDEA Hacks 2021!</p>
+                <p>Have questions? Contact us at team@ideahacks.la</p>
+                <a href="/dashboard/me"><button class="file-upload">My Dashboard</button></a>
             </div>
 
         {{else}}
+
+        <div class='top-box'></div>
 
             <div class='ideahacks-form application-form container-fluid'>
                 <div class='row'>
@@ -75,10 +78,8 @@
                             <label>EMAIL*</label>
                             <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
                         </div>
-                        -->
                     </fieldset>
                 </div>
-                -->
                 <!-- EDUCATIONAL INFORMATION -->
                 <div class='row'>
                     <div class='header'>
