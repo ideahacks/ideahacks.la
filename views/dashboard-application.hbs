@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
-    <!-- <link rel='stylesheet' href="../css/application.css" /> -->
     <link rel='stylesheet' href='../css/dashboard-application.css' />
 
     <!-- SCRIPTS -->
@@ -29,13 +28,6 @@
         {{> navbar }}
 
         <div class='top-box'></div>
-        <!--
-        <div class='application-form'>
-            <img id="img-header-top" src="/img/registration/college_lifestyle.png" />
-            <img id="img-header" src="/img/registration/2020_registration.png" />
-        </div>
-        -->
-        <!-- <p class="deadline text-center">Applications due on December 1st</p> -->
 
         {{#if user.hasApplication}}
 
@@ -133,7 +125,7 @@
                         <div class='form-group col-md-5'>
                             <label>RESUME</label>
                             <span class="row"></span>
-                            <a href="https://forms.gle/Vptk66aMhcvkRxoL7" target="_blank"><button class='file-upload' style="margin-left: 15px">
+                            <a href="https://forms.gle/Vptk66aMhcvkRxoL7" target="_blank"><button class='file-upload'>
                                     UPLOAD FILE </button></a>
                         </div>
                     </fieldset>
@@ -211,23 +203,23 @@
                                 <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
                             </select> </div>
                         <span class='row'></span>
-                        <div class='form-group col-md-3'>
-                            <label>Kit Preference #1*</label>
-                            <select class='form-control' name='kitRanking1'>
+                        <div class='form-group col-md-3 col-xs-10'>
+                            <label>Box Preference #1*</label>
+                            <select class='form-control' name='boxRanking1'>
                                 <option {{#if user.pref1MotionAddOn}} selected{{/if}}>Motion Add-on</option>
                                 <option {{#if user.pref1AVAddOn}} selected{{/if}}>Audio + Visual Add-on</option>
                                 <option {{#if user.pref1TIBox}} selected{{/if}}>TI Box</option>
                             </select> </div>
-                        <div class='form-group col-md-3'>
-                            <label>Kit Preference #2*</label>
-                            <select class='form-control' name='kitRanking2'>
+                        <div class='form-group col-md-3 col-xs-10'>
+                            <label>Box Preference #2*</label>
+                            <select class='form-control' name='boxRanking2'>
                                 <option {{#if user.pref2MotionAddOn}} selected{{/if}}>Motion Add-on</option>
                                 <option {{#if user.pref2AVAddOn}} selected{{/if}}>Audio + Visual Add-on</option>
                                 <option {{#if user.pref2TIBox}} selected{{/if}}>TI Box</option>
                             </select> </div>
-                        <div class='form-group col-md-3'>
-                            <label>Kit Preference #3*</label>
-                            <select class='form-control' name='kitRanking3'>
+                        <div class='form-group col-md-3 col-xs-10'>
+                            <label>Box Preference #3*</label>
+                            <select class='form-control' name='boxRanking3'>
                                 <option {{#if user.pref3MotionAddOn}} selected{{/if}}>Motion Add-on</option>
                                 <option {{#if user.pref3AVAddOn}} selected{{/if}}>Audio + Visual Add-on</option>
                                 <option {{#if user.pref3TIBox}} selected{{/if}}>TI Box</option>
@@ -239,7 +231,7 @@
                         </div>
                         <span class='row'></span>
                         <div class='form-group col-md-6 col-xs-10 short-answer'>
-                            <label>What is your address to ship the box to?*</label>
+                            <label>What address would you like your box shipped to?*</label>
                             <textarea class='form-control textarea' name='address' rows='6'>{{user.address}}</textarea>
                         </div>
                     </fieldset>

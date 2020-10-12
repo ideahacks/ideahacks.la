@@ -72,15 +72,8 @@
 	width: 17%;
 	position: absolute;
 	left: 55%;
-	top: 1025px;
+	top: 80px;
 }
-
-/* #img-submission {
-	width: 85%;
-	margin-top: 90px;
-	margin-bottom: 50px;
-	padding-left: 5px;
-} */
 
 @media (max-width: 980px) {
 	#img-side {
@@ -116,11 +109,12 @@
 	margin-bottom: 40px;
 }
 
-@media (max-width: 682px) {
+@media (max-width: 720px) {
 	.mainHeader h1 {
 		width: 100%;
 		height: 100%;
 	}
+
 }
 
 /* Header for each subsection */
@@ -131,10 +125,10 @@
 	border: none;
 	color: white;
 	background-color: #efa516;
-	font-family: "Source Code Pro", monospace;
 	padding: 22px 0px 9px 0px;
 	width: 369px;
 	height: 71px;
+	font-family: "Source Code Pro", monospace;
 	font-size: 24px;
 	font-style: italic;
 	font-weight: bold;
@@ -150,35 +144,16 @@ hr {
 	border-top: 5px solid #efa516;
 }
 
-/* Code for buggy horizontal line */
-/* 
-.header h3:before,
-.header h3:after {
-	background-color: #efa516;
-	content: "";
-	display: inline-block;
-	height: 5px;
-	position: absolute;
-	vertical-align: middle;
-	width: 100%;
-	margin-top: 10px; 
-}
-
-.header h3:before {
-	right:1em;
-	margin-left: -50%;
-}
-.header h3:after {
-	left: 1em;
-	margin-right: -50%;
-
-}  */
-
 /* How left from field */
 fieldset {
 	padding-left: 15%;
 }
-
+@media (max-width: 768px){
+	fieldset{
+		padding-left: 3%;
+	}
+	
+}
 .radio-inline {
 	margin-bottom: 2vh;
 	margin-right: 2%;
@@ -194,9 +169,7 @@ fieldset {
 		background-position: 400px 40px;
 	}
 	.header h3 {
-		width: 70%;
-	}
-	div.header:after {
+		width: 76%;
 	}
 }
 
@@ -204,6 +177,8 @@ fieldset {
 .short-answer {
 	margin: 0 0 5px;
 }
+
+
 
 textarea {
 	resize: none;
@@ -269,7 +244,9 @@ input::placeholder {
 }
 
 .buttons button:hover {
-	background-color: transparent;
+	transition: 0.3s;
+	background-color: #509edd;
+	color: #000079;
 }
 
 .file-upload {
@@ -285,8 +262,9 @@ input::placeholder {
 }
 
 .file-upload:hover {
-	background-color: transparent;
-	/*border-color: #2a2d4e;*/
+	transition: 0.3s;
+	background-color: #509edd;
+	color: #000099;
 }
 
 @media (max-width: 583px) {
@@ -321,30 +299,6 @@ input::placeholder {
 	margin-bottom: 50px;
 }
 
-@media (max-width: 768px) {
-	.banner-desktop-graphic {
-		display: none;
-	}
-	.banner-tablet-graphic {
-		display: initial;
-	}
-	.banner-mobile-graphic {
-		display: none;
-	}
-}
-
-@media (max-width: 583px) {
-	.banner-desktop-graphic {
-		display: none;
-	}
-	.banner-tablet-graphic {
-		display: none;
-	}
-	.banner-mobile-graphic {
-		display: initial;
-	}
-}
-
 /* SUBMIT MESSAGE */
 .submit-message {
 	text-align: center;
@@ -363,7 +317,6 @@ input::placeholder {
 	font-weight: normal;
 	margin-left: 5px;
 	margin-bottom: 5px;
-	/* color: #40698f; */
 	color: #2a2d4e;
 }
 
@@ -377,11 +330,21 @@ input::placeholder {
 	margin-bottom: 0px;
 }
 
+
 .ideahacks-form select {
 	border-radius: 12px;
 	background-color: white;
 	width: 80%;
 	margin-bottom: 0px;
+}
+
+@media(max-width: 768px){
+	.ideahacks-form input,
+	.ideahacks-form input:focus,
+	.ideahacks-form input[readonly],
+	.ideahacks-form select{
+		width: 87%
+	}
 }
 
 .ideahacks-form input::placeholder {
@@ -406,4 +369,35 @@ input::placeholder {
 	margin-right: auto;
 	padding-bottom: 30px;
 	background-color: #fbf3f0;
+} */
+
+/* #img-submission {
+	width: 85%;
+	margin-top: 90px;
+	margin-bottom: 50px;
+	padding-left: 5px;
+} */
+
+/* @media (max-width: 768px) {
+	.banner-desktop-graphic {
+		display: none;
+	}
+	.banner-tablet-graphic {
+		display: initial;
+	}
+	.banner-mobile-graphic {
+		display: none;
+	}
+} */
+
+/* @media (max-width: 583px) {
+	.banner-desktop-graphic {
+		display: none;
+	}
+	.banner-tablet-graphic {
+		display: none;
+	}
+	.banner-mobile-graphic {
+		display: initial;
+	}
 } */

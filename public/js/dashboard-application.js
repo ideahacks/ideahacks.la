@@ -44,25 +44,24 @@ function getAndSendApplicationData(toggleHasApplication) {
 	// 	return false
 	// }
 
-	//NEW LOGIC
-	let kitPreferenceOne_entry = $('select[name="kitRanking1"]')
+	//get box preferences
+	let boxPreferenceOne_entry = $('select[name="boxRanking1"]')
 		.find(":selected")
 		.text()
-	let kitPreferenceTwo_entry = $('select[name="kitRanking2"]')
+	let boxPreferenceTwo_entry = $('select[name="boxRanking2"]')
 		.find(":selected")
 		.text()
-	let kitPreferenceThree_entry = $('select[name="kitRanking3"]')
+	let boxPreferenceThree_entry = $('select[name="boxRanking3"]')
 		.find(":selected")
 		.text()
 	if (
-		kitPreferenceOne_entry == kitPreferenceTwo_entry ||
-		kitPreferenceOne_entry == kitPreferenceThree_entry ||
-		kitPreferenceTwo_entry == kitPreferenceThree_entry
+		boxPreferenceOne_entry == boxPreferenceTwo_entry ||
+		boxPreferenceOne_entry == boxPreferenceThree_entry ||
+		boxPreferenceTwo_entry == boxPreferenceThree_entry
 	) {
-		alert("Please choose unique kits for each option")
+		alert("Please choose unique boxes for each option")
 		return false
 	}
-	//NEW LOGIC END
 
 	// check that mandatory fields filled out
 	if (
@@ -71,8 +70,8 @@ function getAndSendApplicationData(toggleHasApplication) {
 		$('input[name="phone"]').val() == "" ||
 		$('input[name="major"]').val() == "" ||
 		$('textarea[name="skillsAndExperience"]').val() == "" ||
-		$('textarea[name="reasonForParticipation"]').val() == ""
-		//|| $('input[name="foodRestrictions"]').val() == ""
+		$('textarea[name="reasonForParticipation"]').val() == "" ||
+		$('textarea[name="address"]').val()
 	) {
 		alert("Please fill out required fields before submitting application.")
 		return false
@@ -128,15 +127,12 @@ function getAndSendApplicationData(toggleHasApplication) {
 		// needParking: $('select[name="needsParking"]')
 		// 	.find(":selected")
 		// 	.text(),
-		//ADD NEW CODE HERE
-		kitPreferenceOne: kitPreferenceOne_entry,
-		kitPreferenceTwo: kitPreferenceTwo_entry,
-		kitPreferenceThree: kitPreferenceThree_entry,
+		boxPreferenceOne: boxPreferenceOne_entry,
+		boxPreferenceTwo: boxPreferenceTwo_entry,
+		boxPreferenceThree: boxPreferenceThree_entry,
 		shippingAddress: $('textarea[name="address"]').val(),
-		///////////
 		hasApplication: toggleHasApplication
 	}
-	console.log(applicationData)
 
 	$.ajax({
 		url: "/dashboard/application",

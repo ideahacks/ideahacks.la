@@ -35,37 +35,40 @@ const formatUser = user => {
 			break
 	}
 
+	var Motion = "Motion Add-on";
+	var AV = "Audio + Visual Add-on";
+	var TI = "TI Box";
 	//FOR KITS//
 	switch (user.kitPreferenceOne) {
-		case "Motion Add-on":
+		case Motion:
 			user.pref1MotionAddOn = true
 			break
-		case "Audio + Visual Add-on":
+		case AV:
 			user.pref1AVAddOn = true
 			break
-		case "TI Box":
+		case TI:
 			user.pref1TIBox = true
 			break
 	}
 	switch (user.kitPreferenceTwo) {
-		case "Motion Add-on":
+		case Motion:
 			user.pref2MotionAddOn = true
 			break
-		case "Audio + Visual Add-on":
+		case AV:
 			user.pref2AVAddOn = true
 			break
-		case "TI Box":
+		case TI:
 			user.pref2TIBox = true
 			break
 	}
 	switch (user.kitPreferenceThree) {
-		case "Motion Add-on":
+		case Motion:
 			user.pref3MotionAddOn = true
 			break
-		case "Audio + Visual Add-on":
+		case AV:
 			user.pref3AVAddOn = true
 			break
-		case "TI Box":
+		case TI:
 			user.pref3TIBox = true
 			break
 	}
