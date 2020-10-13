@@ -8,6 +8,20 @@
 	height: 40px;
 }
 
+.stay-tuned {
+	position: fixed;
+	top: 66px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgb(233, 104, 104);
+}
+
+.stay-tuned p {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
 .home-banner {
 	background-color: rgb(251, 243, 240);
 }
