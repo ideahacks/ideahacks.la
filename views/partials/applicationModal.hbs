@@ -5,9 +5,10 @@
 
         <!-- CONTACT INFO -->
         <p class='applicant-contact'>
-            <span class='fa fa-envelope-o'></span><span name='email'></span>
-            <span class='fa fa-mobile'></span><span name='phone'></span>
-
+            <div class="contact-wrapper">
+                <div class="contact-item-wrapper"><span class='fa fa-envelope-o'></span><span name='email'></span></div>
+                <div class="contact-item-wrapper"><span class='fa fa-mobile'></span><span name='phone'></span></div>
+            </div>
         </p>
 
         <!-- STATUS CONTROLS -->
@@ -45,7 +46,10 @@
 
         <!-- EDUCATIONAL INFORMATION -->
         <div class='application-section'>
-            <legend><i class="fa fa-graduation-cap" aria-hidden="true"></i>Education Information</legend>
+            <div class="section-header clearfix">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <h2>Education Information</h2>
+            </div>
             <fieldset>
                 <p class='col-sm-12'>School: <span name='school'></span></p>
                 <p class='col-sm-5'>Major: <span name='major'></span></p>
@@ -57,11 +61,14 @@
 
         <!-- TEAM INFORMATION -->
         <div class='application-section'>
-            <legend><i class="fa fa-users" aria-hidden="true"></i>Team Information</legend>
+            <div class="section-header clearfix">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <h2>Team Information</h2>
+            </div>
             <fieldset>
                 <p>Has a team? <span name='hasTeam'></span></p>
-                <p>Teammate Names:</p>
-                <p><span name='teammates_names' class='ucla-gold' style='padding: 0;'></span></p>
+                {{!-- <p>Teammate Names:</p>
+                <p><span name='teammates_names' class='ucla-gold' style='padding: 0;'></span></p> --}}
                 <p>Teammate Emails:</p>
                 <p><span name='teammates' class='ucla-gold' style='padding: 0;'></span></p>
             </fieldset>
@@ -69,7 +76,10 @@
 
         <!-- HACKATHON INFORMATION -->
         <div class='application-section hackathon-information'>
-            <legend>Short Answer Questions</legend>
+            <div class="section-header clearfix">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                <h2>Short Answer Questions</h2>
+            </div>
             <fieldset>
                 <p>Skills and Experiences:</p>
                 <p><span name='skillsAndExperience'></span></p>
@@ -82,20 +92,33 @@
 
                 <p>Their Idea to Hack on:</p>
                 <p><span name='themeIdea'></span></p>
-
-                <p>What Parts They Want to See:</p>
-                <p><span name='desiredParts'></span></p>
             </fieldset>
         </div>
 
         <!-- MISCELLANEOUS INFORMATION -->
         <div class='application-section misc'>
-            <legend>Miscellaneous</legend>
+            <div class="section-header clearfix">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                <h2>Miscellaneous</h2>
+            </div>
             <fieldset>
-                <p>Dietary Restrictions:</p>
-                <p><span name='foodRestrictions' style='padding: 0;'></span></p>
                 <p>Shirt Size:</p>
                 <p><span name='shirtSize' style='padding: 0;'></span></p>
+
+                <p>Box Preference #1:</p>
+                <p><span name='boxPreferenceOne'></span></p>
+
+                <p>Box Preference #2:</p>
+                <p><span name='boxPreferenceTwo'></span></p>
+
+                <p>Box Preference #3:</p>
+                <p><span name='boxPreferenceThree'></span></p>
+
+                <p>Can Pick Up Box:</p>
+                <p><span name='canPickUpBox'></span></p>
+
+                <p>Shipping Address:</p>
+                <p><span name='shippingAddress'></span></p>
             </fieldset>
         </div>
     </div>

@@ -14,13 +14,13 @@
 }
 
 .ideahacks-form legend {
-	background-color: rgba(49, 133, 192, 0.1);
-	color: #3185c0;
+	color: #efa516;
 	width: max-content;
 	height: 40px;
 	padding-right: 150px;
 	padding-top: 5px;
 	display: inline-block;
+	border-bottom: 0;
 }
 
 /* INPUT */

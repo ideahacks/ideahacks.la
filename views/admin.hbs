@@ -12,36 +12,47 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- FONT AWESOME -->
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- STYLESHEETS -->
-    <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/admin.css' />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/admin.css" />
 
     <!-- SCRIPTS -->
-    <script src='/js/admin.js'></script>
+    <script src="/js/admin.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class='text-center'>
-            <img class="mailing-header" src="/img/admin/IH_MailingList.png">
-            <h1 class='description'> Mailing lists categorized by application status</h1>
+        <div class="houseline"></div>
+
+        <div class="container text-center">
+            <h1 id="mailing-lists">MAILING LISTS</h1>
         </div>
 
-        <!-- MAILING LIST -->
-        <div class='mailing-wrapper'>
-            <ul class='container mailing-list'>
-                {{#each mailingLists }}
-                    <li class='row'>
-                        <h3 class='email-list-name text-center'>{{ this.name }} <span class='glyphicon glyphicon-menu-down'></span></h3>
-                        <p class='email-list'>{{ this.list }}</p>
-                    </li>
-                {{/each}}
-            </ul>
+        <!-- MAILING LISTS -->
+        <div class="mailing-wrapper">
+            <div class="mailing-list">
+                <div class="row">
+                    {{#each mailingLists }}
+                        <div class="column">
+                            <h3 class="mailing-type">{{ this.name }}</h3>
+                            <div class="mailing-address-container">
+                                <button class="glyphicon glyphicon-copy" onclick="CopyToClipboard(&quot; {{this.list}}&quot;)"></button>
+                                <div class="mailing-address-list" id="mailing-address-text">
+                                    {{#each this.list }}
+                                        <p>{{ this }}</p>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
+
     </div>
 </body>
 </html>

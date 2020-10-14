@@ -14,10 +14,10 @@ function getAndSendApplicationData(toggleHasApplication) {
 	$(".teammate-email").each((i, el) => {
 		if (el.value !== "") teammateEmails.push(el.value)
 	})
-	let teammateNames = []
-	$(".teammate-name").each((i, el) => {
-		if (el.value !== "") teammateNames.push(el.value)
-	})
+	// let teammateNames = []
+	// $(".teammate-name").each((i, el) => {
+	// 	if (el.value !== "") teammateNames.push(el.value)
+	// })
 
 	// find school entry
 	let school_entry = $('select[name="school"]')
@@ -26,24 +26,43 @@ function getAndSendApplicationData(toggleHasApplication) {
 	if (school_entry == "Other") {
 		school_entry = $('input[name="school_other"]').val()
 	}
-
 	if (school_entry == "") {
 		alert("Please specify your school.")
 		return false
 	}
 
 	// get gender
-	let gender_entry = $('select[name="gender"]')
+	// let gender_entry = $('select[name="gender"]')
+	// 	.find(":selected")
+	// 	.text()
+	// if (gender_entry == "Other") {
+	// 	gender_entry = $('input[name="gender_other"]').val()
+	// }
+
+	// if (gender_entry == "") {
+	// 	alert("Please specify your self-identified gender.")
+	// 	return false
+	// }
+
+	//get box preferences
+	let boxPreferenceOne_entry = $('select[name="boxRanking1"]')
 		.find(":selected")
 		.text()
-	if (gender_entry == "Other") {
-		gender_entry = $('input[name="gender_other"]').val()
-	}
-
-	if (gender_entry == "") {
-		alert("Please specify your self-identified gender.")
+	let boxPreferenceTwo_entry = $('select[name="boxRanking2"]')
+		.find(":selected")
+		.text()
+	let boxPreferenceThree_entry = $('select[name="boxRanking3"]')
+		.find(":selected")
+		.text()
+	if (
+		boxPreferenceOne_entry == boxPreferenceTwo_entry ||
+		boxPreferenceOne_entry == boxPreferenceThree_entry ||
+		boxPreferenceTwo_entry == boxPreferenceThree_entry
+	) {
+		alert("Please choose unique boxes for each option")
 		return false
 	}
+
 	// check that mandatory fields filled out
 	if (
 		$('input[name="firstName"]').val() == "" ||
@@ -51,10 +70,23 @@ function getAndSendApplicationData(toggleHasApplication) {
 		$('input[name="phone"]').val() == "" ||
 		$('input[name="major"]').val() == "" ||
 		$('textarea[name="skillsAndExperience"]').val() == "" ||
-		$('textarea[name="reasonForParticipation"]').val() == "" ||
-		$('input[name="foodRestrictions"]').val() == ""
+		$('textarea[name="reasonForParticipation"]').val() == ""
 	) {
 		alert("Please fill out required fields before submitting application.")
+		return false
+	}
+
+	let canPickUpBox = false
+	if (
+		$('select[name="canPickUpBox"]')
+			.find(":selected")
+			.text() == "YES"
+	) {
+		canPickUpBox = true
+	}
+
+	if (!canPickUpBox && $('textarea[name="address"]').val() == "") {
+		alert("Please specify your address if you are not picking up your box.")
 		return false
 	}
 
@@ -86,7 +118,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		year: $('select[name="year"]')
 			.find(":selected")
 			.text(),
-		gender: gender_entry,
+		// gender: gender_entry,
 		github: $('input[name="github"]').val(),
 		linkedin: $('input[name="linkedin"]').val(),
 		resume: $('input[name="resume"]').val(),
@@ -94,20 +126,25 @@ function getAndSendApplicationData(toggleHasApplication) {
 			.find(":selected")
 			.text(),
 		teammates: teammateEmails,
-		teammates_names: teammateNames,
-		foodRestrictions: $('input[name="foodRestrictions"]').val(),
+		// teammates_names: teammateNames,
+		//foodRestrictions: $('input[name="foodRestrictions"]').val(),
 		skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
 		hasPastHackathonExperience: hasExperience,
 		pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
 		reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
 		themeIdea: $('textarea[name="themeIdea"]').val(),
-		desiredParts: $('textarea[name="desiredParts"]').val(),
+		//desiredParts: $('textarea[name="desiredParts"]').val(),
 		shirtSize: $('select[name="shirtSize"]')
 			.find(":selected")
 			.text(),
-		needParking: $('select[name="needsParking"]')
-			.find(":selected")
-			.text(),
+		// needParking: $('select[name="needsParking"]')
+		// 	.find(":selected")
+		// 	.text(),
+		boxPreferenceOne: boxPreferenceOne_entry,
+		boxPreferenceTwo: boxPreferenceTwo_entry,
+		boxPreferenceThree: boxPreferenceThree_entry,
+		canPickUpBox: canPickUpBox,
+		shippingAddress: $('textarea[name="address"]').val(),
 		hasApplication: toggleHasApplication
 	}
 
