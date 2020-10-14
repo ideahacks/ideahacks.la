@@ -373,6 +373,11 @@
 	margin-bottom: 30px;
 }
 
+.chipotle {
+	width: 15%;
+	margin: 30px;
+}
+
 .header-graphic-centered {
 	display: none;
 }
@@ -471,6 +476,10 @@
 	.small-logo {
 		width: 110px;
 		margin: 20px 20px;
+	}
+	.chipotle {
+		width: 180px;
+		margin: 20px 45px;
 	}
 }
 
