@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>Confirm - IDEA Hacks</title>
     <meta charset="utf-8" />
@@ -9,7 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -18,11 +24,16 @@
     <!-- SCRIPTS -->
     <script src='/js/confirm.js'></script>
 </head>
+
 <body>
     <!-- <div class='wrapper'> -->
     <div class='confirm'>
-        <h2>Please confirm your account!</h2>
-        <p>A confirmation has been sent to your email address. Please check your inbox and click on the unique link to verify your account.</p>
+        <div class="thankyou">
+            <h1>Thank you for signing up!</h1>
+        </div>
+        <p>A confirmation has been sent to your email address. Please check your inbox and click on the unique link to
+            verify your account.</p>
+        <hr style="border-bottom:2px solid #50b5dd; margin:15px 60px" />
         <p>Email taking too long? Usually .edu emails have a bit of delay to them. You can also try:</p>
         <button>Resend Verification Email</button>
         <p class='response'></p>
@@ -30,4 +41,5 @@
     </div>
     <!-- </div> -->
 </body>
+
 </html>
