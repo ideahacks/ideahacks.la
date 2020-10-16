@@ -5,16 +5,16 @@ module.exports = [
 		teamPathRotated: "/img/team/directors-rotated.png",
 		teammates: [
 			{
-				name: "Michelle Lam",
-				picturePath: "/img/team/Michelle_Lam.jpg"
+				name: "Albert Han",
+				picturePath: "/img/team/albert.jpg"
 			},
 			{
-				name: "Saman Hashemipour",
-				picturePath: "/img/team/Saman_Hashemipour.jpg"
+				name: "Tao Lu",
+				picturePath: "/img/team/tao.jpg"
 			},
 			{
-				name: "Michelle Tan",
-				picturePath: "/img/team/Michelle_Tan.jpg"
+				name: "Jay Park",
+				picturePath: "/img/team/jay.jpg"
 			}
 		]
 	},
@@ -22,23 +22,19 @@ module.exports = [
 		departmentName: "Design",
 		teamPath: "/img/team/design.png",
 		teamPathRotated: "/img/team/design-rotated.png",
-		teamLead: "Albert Han",
+		teamLead: "Solaine Zhao",
 		teammates: [
 			{
-				name: "Albert Han",
-				picturePath: "/img/team/Albert_Han.jpg"
+				name: "Solaine Zhao",
+				picturePath: "/img/team/solaine.jpg"
 			},
 			{
-				name: "Beryl Sui",
-				picturePath: "/img/team/Beryl_Sui.jpg"
+				name: "Olivia Loh",
+				picturePath: "/img/team/olivia.jpg"
 			},
 			{
-				name: "Ryan Lin",
-				picturePath: "/img/team/Ryan_Lin.jpg"
-			},
-			{
-				name: "Evelyn Chiappe",
-				picturePath: "/img/team/Evelyn_Chiappe.jpg"
+				name: "Anna Anderson",
+				picturePath: "/img/team/anna.jpeg"
 			}
 		]
 	},
@@ -46,43 +42,31 @@ module.exports = [
 		departmentName: "Corporate",
 		teamPath: "/img/team/corporate.png",
 		teamPathRotated: "/img/team/corporate-rotated.png",
-		teamLead: "Roselyn Lee",
+		teamLead: "Pranav Srinivasan and Daniel Possemato",
 		teammates: [
 			{
-				name: "Roselyn Lee",
-				picturePath: "/img/team/Roselyn_Lee.jpg"
+				name: "Pranav Srinivasan",
+				picturePath: "/img/team/pranav.jpg"
 			},
 			{
-				name: "Andrew Li",
-				picturePath: "/img/team/Andrew_Li.jpg"
+				name: "Daniel Possemato",
+				picturePath: "/img/team/daniel.png"
 			},
 			{
-				name: "Lucas Wolter",
-				picturePath: "/img/team/Lucas_Wolter.jpg"
+				name: "Achinthya Poduval",
+				picturePath: "/img/team/achinthya.jpeg"
 			},
 			{
-				name: "Jasanpreet Pandher",
-				picturePath: "/img/team/Jasanpreet_Pandher.jpg"
+				name: "Bryan Wong",
+				picturePath: "/img/team/bryan.jpg"
 			},
 			{
 				name: "Taylor Keppel",
-				picturePath: "/img/team/Taylor_Keppel.jpg"
-			},
-			{
-				name: "Eric Zhang",
-				picturePath: "/img/team/Eric_Zhang.jpg"
-			},
-			{
-				name: "David Kao",
-				picturePath: "/img/team/David_Kao.jpg"
-			},
-			{
-				name: "Jay Park",
-				picturePath: "/img/team/Jay_Park.jpg"
+				picturePath: "/img/team/taylor.jpeg"
 			},
 			{
 				name: "Alethea Sung Miller",
-				picturePath: "/img/team/Alethea_Sung_Miller.jpg"
+				picturePath: "/img/team/alethea.jpg"
 			}
 		]
 	},
@@ -90,55 +74,39 @@ module.exports = [
 		departmentName: "Operations",
 		teamPath: "/img/team/operations.png",
 		teamPathRotated: "/img/team/operations-rotated.png",
-		teamLead: "Tao Lu",
+		teamLead: "Henry Kou",
 		teammates: [
 			{
-				name: "Tao Lu",
-				picturePath: "/img/team/Tao_Lu.jpg"
+				name: "Henry Kou",
+				picturePath: "/img/team/henry.jpg"
 			},
 			{
 				name: "Peter Oh",
-				picturePath: "/img/team/Peter_Oh.jpg"
+				picturePath: "/img/team/peter.jpg"
 			},
 			{
-				name: "Bruno Bombassaro",
-				picturePath: "/img/team/Bruno_Bombassaro.jpg"
-			},
-			{
-				name: "Henry Kou",
-				picturePath: "/img/team/Henry_Kou.jpg"
-			},
-			{
-				name: "Justin Jianto",
-				picturePath: "/img/team/Justin_Jianto.jpg"
+				name: "Christine Jung",
+				picturePath: "/img/team/christine.jpeg"
 			},
 			{
 				name: "Grace Tang",
-				picturePath: "/img/team/Grace_Tang.jpg"
+				picturePath: "/img/team/grace.jpg"
 			},
 			{
-				name: "Hayato Kato",
-				picturePath: "/img/team/Hayato_Kato.jpg"
+				name: "Christy Yee",
+				picturePath: "/img/team/christy.jpg"
 			},
 			{
-				name: "Kevin Chen",
-				picturePath: "/img/team/Kevin_Chen.jpg"
+				name: "Raj Intwala",
+				picturePath: "/img/team/raj.jpg"
 			},
 			{
-				name: "Jonathan Nguyen",
-				picturePath: "/img/team/Jonathan_Nguyen.jpg"
+				name: "Isha Gonugunta",
+				picturePath: "/img/team/isha.jpg"
 			},
 			{
-				name: "Ivan Gomez Siu",
-				picturePath: "/img/team/Ivan_Gomez_Siu.jpg"
-			},
-			{
-				name: "Angela Shiu",
-				picturePath: "/img/team/Angela_Shiu.jpg"
-			},
-			{
-				name: "Chester Hulse",
-				picturePath: "/img/team/Chester_Hulse.jpg"
+				name: "Sylvia Zheng",
+				picturePath: "/img/team/sylvia.png"
 			}
 		]
 	},
@@ -146,31 +114,31 @@ module.exports = [
 		departmentName: "Website",
 		teamPath: "/img/team/website.png",
 		teamPathRotated: "/img/team/website-rotated.png",
-		teamLead: "Kathy Daniels",
+		teamLead: "Robert Peralta",
 		teammates: [
 			{
-				name: "Kathy Daniels",
-				picturePath: "/img/team/Kathy_Daniels.jpg"
-			},
-			{
-				name: "Eugene Lo",
-				picturePath: "/img/team/Eugene_Lo.jpg"
-			},
-			{
-				name: "Nikki Woo",
-				picturePath: "/img/team/Nikki_Woo.jpg"
-			},
-			{
 				name: "Robert Peralta",
-				picturePath: "/img/team/Robert_Peralta.jpg"
+				picturePath: "/img/team/robert.jpg"
 			},
 			{
-				name: "Maggie Huang",
-				picturePath: "/img/team/Maggie_Huang.jpg"
+				name: "Justin Jianto",
+				picturePath: "/img/team/justin.jpg"
 			},
 			{
-				name: "Audrey Pham",
-				picturePath: "/img/team/Audrey_Pham.jpg"
+				name: "James King",
+				picturePath: "/img/team/james.jpg"
+			},
+			{
+				name: "Rex Wang",
+				picturePath: "/img/team/rex.jpg"
+			},
+			{
+				name: "Ray Huang",
+				picturePath: "/img/team/ray.jpg"
+			},
+			{
+				name: "Sahil Dani",
+				picturePath: "/img/team/sahil.jpg"
 			}
 		]
 	},
@@ -178,35 +146,43 @@ module.exports = [
 		departmentName: "Food",
 		teamPath: "/img/team/food.png",
 		teamPathRotated: "/img/team/food-rotated.png",
-		teamLead: "Subhodh Madala",
+		teamLead: "Kimi Kodama",
 		teammates: [
 			{
-				name: "Subhodh Madala",
-				picturePath: "/img/team/Subhodh_Madala.jpg"
+				name: "Kimi Kodama",
+				picturePath: "/img/team/kimi.jpeg"
 			},
 			{
-				name: "Fred Chu",
-				picturePath: "/img/team/Fred_Chu.jpg"
+				name: "Kenneth Tjhan",
+				picturePath: "/img/team/kenneth.jpg"
 			},
 			{
-				name: "James King",
-				picturePath: "/img/team/James_King.jpg"
-			},
-			{
-				name: "Justine Bailey",
-				picturePath: "/img/team/Justine_Bailey.jpg"
-			},
-			{
-				name: "Jack Bailey",
-				picturePath: "/img/team/Jack_Bailey.jpg"
-			},
-			{
-				name: "Sharon Cha",
-				picturePath: "/img/team/Sharon_Cha.jpg"
+				name: "Bradley Schulz",
+				picturePath: "/img/team/bradley.jpeg"
 			},
 			{
 				name: "Erica Xie",
-				picturePath: "/img/team/Erica_Xie.jpg"
+				picturePath: "/img/team/erica.png"
+			},
+			{
+				name: "Vivianne Dinh",
+				picturePath: "/img/team/vivianne.png"
+			},
+			{
+				name: "Paul Vu",
+				picturePath: "/img/team/paul.jpg"
+			},
+			{
+				name: "Katherine Stahnke",
+				picturePath: "/img/team/katherine.jpeg"
+			},
+			{
+				name: "Jasmine Trinh",
+				picturePath: "/img/team/jasmine.jpeg"
+			},
+			{
+				name: "Avnish Sengupta",
+				picturePath: "/img/team/avnish.jpg"
 			}
 		]
 	}

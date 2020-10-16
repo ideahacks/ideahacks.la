@@ -58,6 +58,29 @@
                             <div class='individual-team__container reversed'>
                                 <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}" alt="{{this.departmentName}}" class="header-rotated ml30">{{/if}}
                                 </div>
+                                <div style="width: 100%;">
+                                    <h4 class='lead'>Lead: {{this.teamLead}}</h4>
+                                    <div class='individual-team__teammates-container'>
+                                        {{#each this.teammates}}
+                                            <div class='individual-team__teammate'>
+                                                <div class='pic'>
+                                                    <img class='team-photo' src='{{this.picturePath}}' />
+                                                </div>
+                                                <h4 class='Description'><b>{{this.name}}</b></h4>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                {{else}}
+                    {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="header">{{/if}}
+                    <div class='container-fluid section'>
+                        <div class='individual-team__container'>
+                            <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}" alt="{{this.departmentName}}" class="header-rotated mr30">{{/if}}
+                            </div>
+                            <div style="width: 100%;">
+                                <h4 class='lead'>Lead: {{this.teamLead}}</h4>
                                 <div class='individual-team__teammates-container'>
                                     {{#each this.teammates}}
                                         <div class='individual-team__teammate'>
@@ -68,23 +91,6 @@
                                         </div>
                                     {{/each}}
                                 </div>
-                            </div>
-                        </div>
-                {{else}}
-                    {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="header">{{/if}}
-                    <div class='container-fluid section'>
-                        <div class='individual-team__container'>
-                            <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}" alt="{{this.departmentName}}" class="header-rotated mr30">{{/if}}
-                            </div>
-                            <div class='individual-team__teammates-container'>
-                                {{#each this.teammates}}
-                                    <div class='individual-team__teammate'>
-                                        <div class='pic'>
-                                            <img class='team-photo' src='{{this.picturePath}}' />
-                                        </div>
-                                        <h4 class='Description'><b>{{this.name}}</b></h4>
-                                    </div>
-                                {{/each}}
                             </div>
                         </div>
                     </div>

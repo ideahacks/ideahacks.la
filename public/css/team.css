@@ -40,7 +40,8 @@ p {
 	display: inline-block;
 }
 
-.Description {
+.Description,
+.lead {
 	color: #2b2b2b;
 	font-family: "Roboto", sans-serif;
 	margin: 15px 0px 0px 0px;
@@ -81,7 +82,12 @@ p {
 }
 
 .container-fluid {
-	padding: 0px 70px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.container-fluid.section {
+	padding: 0;
 }
 
 .individual-team__container {
@@ -93,6 +99,7 @@ p {
 .individual-team__teammates-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+	gap: 20px;
 	width: 100%;
 	margin: 10px;
 	justify-content: center;
@@ -153,7 +160,7 @@ p {
 	}
 
 	.directors__teammates-container {
-		gap: 0px;
+		gap: 20px;
 	}
 
 	.container {
@@ -164,7 +171,8 @@ p {
 		font-size: 25px;
 		margin-bottom: 30px;
 	}
-	.Description {
+	.Description,
+	.lead {
 		font-size: 20px;
 	}
 
