@@ -78,7 +78,7 @@ module.exports = [
 		teammates: [
 			{
 				name: "Henry Kou",
-				picturePath: "/img/team/henry.jpg"
+				picturePath: "/img/team/henry.JPG"
 			},
 			{
 				name: "Peter Oh",
