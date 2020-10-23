@@ -35,6 +35,14 @@ module.exports = [
 			{
 				name: "Anna Anderson",
 				picturePath: "/img/team/anna.jpeg"
+			},
+			{
+				name: "Andrew Fantino",
+				picturePath: "/img/team/andrew.jpg"
+			},
+			{
+				name: "Ryan Tong",
+				picturePath: "/img/team/ryan.jpg"
 			}
 		]
 	},
@@ -67,6 +75,10 @@ module.exports = [
 			{
 				name: "Alethea Sung Miller",
 				picturePath: "/img/team/alethea.jpg"
+			},
+			{
+				name: "Jonathan Carlson",
+				picturePath: "/img/team/jonathan.png"
 			}
 		]
 	},
@@ -183,6 +195,10 @@ module.exports = [
 			{
 				name: "Avnish Sengupta",
 				picturePath: "/img/team/avnish.jpg"
+			},
+			{
+				name: "David Kao",
+				picturePath: "/img/team/david.jpg"
 			}
 		]
 	}
