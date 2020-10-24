@@ -1,3 +1,7 @@
+// Note for future years: Heroku is a Unix server, meaning that it's case-sensitive
+// when it comes to file names. Make sure that if the original file has the
+// extension ".JPG", you put "/img/team/*.JPG" for the path
+
 module.exports = [
 	{
 		departmentName: "Directors",
@@ -119,6 +123,10 @@ module.exports = [
 			{
 				name: "Sylvia Zheng",
 				picturePath: "/img/team/sylvia.png"
+			},
+			{
+				name: "Angela Shiu",
+				picturePath: "/img/team/angela.jpg"
 			}
 		]
 	},
@@ -130,7 +138,7 @@ module.exports = [
 		teammates: [
 			{
 				name: "Robert Peralta",
-				picturePath: "/img/team/robert.jpg"
+				picturePath: "/img/team/robert.jpeg"
 			},
 			{
 				name: "Justin Jianto",
