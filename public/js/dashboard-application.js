@@ -76,6 +76,19 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
+	let hasTeam = $('select[name="hasTeam"]').find(":selected").text() == "YES"
+	if (hasTeam && !teammateEmails.length) {
+		alert("Please fill out your teammate's email.")
+		return false
+	}
+
+	let getsTeamBoxValue = $('select[name="getsTeamBox"]').find(":selected").text()
+	let getsTeamBox = getsTeamBoxValue == "I will"
+	if (getsTeamBoxValue == "I will" || getsTeamBoxValue == "My partner will" && !hasTeam) {
+		alert("Please indicate a team member before stating who will get your team box.")
+		return false
+	}
+
 	let canPickUpBox = false
 	if (
 		$('select[name="canPickUpBox"]')
@@ -85,7 +98,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		canPickUpBox = true
 	}
 
-	if (!canPickUpBox && $('textarea[name="address"]').val() == "") {
+	if (!canPickUpBox && !getsTeamBox && $('textarea[name="address"]').val() == "") {
 		alert("Please specify your address if you are not picking up your box.")
 		return false
 	}
@@ -122,9 +135,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		github: $('input[name="github"]').val(),
 		linkedin: $('input[name="linkedin"]').val(),
 		resume: $('input[name="resume"]').val(),
-		hasTeam: $('select[name="hasTeam"]')
-			.find(":selected")
-			.text(),
+		hasTeam: hasTeam,
 		teammates: teammateEmails,
 		// teammates_names: teammateNames,
 		//foodRestrictions: $('input[name="foodRestrictions"]').val(),
@@ -144,6 +155,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		boxPreferenceTwo: boxPreferenceTwo_entry,
 		boxPreferenceThree: boxPreferenceThree_entry,
 		canPickUpBox: canPickUpBox,
+		getsTeamBox: getsTeamBox,
 		shippingAddress: $('textarea[name="address"]').val(),
 		hasApplication: toggleHasApplication
 	}

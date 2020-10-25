@@ -39,7 +39,7 @@ const formatUser = user => {
 	var AV = "Audio + Visual Add-on"
 	var TI = "TI Box"
 	//FOR KITS//
-	switch (user.kitPreferenceOne) {
+	switch (user.boxPreferenceOne) {
 		case Motion:
 			user.pref1MotionAddOn = true
 			break
@@ -50,7 +50,7 @@ const formatUser = user => {
 			user.pref1TIBox = true
 			break
 	}
-	switch (user.kitPreferenceTwo) {
+	switch (user.boxPreferenceTwo) {
 		case Motion:
 			user.pref2MotionAddOn = true
 			break
@@ -61,7 +61,7 @@ const formatUser = user => {
 			user.pref2TIBox = true
 			break
 	}
-	switch (user.kitPreferenceThree) {
+	switch (user.boxPreferenceThree) {
 		case Motion:
 			user.pref3MotionAddOn = true
 			break

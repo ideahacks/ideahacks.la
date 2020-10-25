@@ -30,6 +30,7 @@ const UserSchema = new Schema({
 	boxPreferenceTwo: { type: String, default: "" },
 	boxPreferenceThree: { type: String, default: "" },
 	canPickUpBox: { type: Boolean, default: false },
+	getsTeamBox: { type: Boolean, default: false },
 	shippingAddress: { type: String, default: "" },
 
 	// boolean fields
