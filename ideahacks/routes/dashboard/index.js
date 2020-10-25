@@ -20,7 +20,7 @@ dashboardRouter.get("/me", setResLocals, h.isVerified, dashboardHandlers.getMe)
 dashboardRouter.post("/me/settings", setResLocals, h.isVerified, dashboardHandlers.postSettings)
 dashboardRouter.get("/me/settings", setResLocals, h.isVerified, dashboardHandlers.getSettings)
 
-// dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
+dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
 
 dashboardRouter.get("/resources", setResLocals, staticHandlers.getResources)
 

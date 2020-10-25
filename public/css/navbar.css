@@ -20,6 +20,10 @@
 	text-decoration: none;
 }
 
+.me {
+	margin-top: 12px;
+}
+
 .logo-container {
 	display: inline-block;
 	padding: 7px 50px;
