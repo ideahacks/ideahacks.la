@@ -7,7 +7,23 @@ const getParts = (req, res) => {
 }
 
 const createParts = (req, res) => {
-	return res.render("admin-create-parts")
+	const categories = [
+		"Dev Kit",
+		"Battery",
+		"Power",
+		"Microcontroller",
+		"FPGA",
+		"Sensor",
+		"Connector",
+		"Memory",
+		"Display",
+		"Interface IC",
+		"User Interface",
+		"Discrete Semiconductor",
+		"Electromechanical",
+		"Miscellaneous"
+	]
+	return res.render("admin-create-parts", { categories })
 }
 
 const postParts = (req, res) => {

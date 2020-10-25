@@ -18,14 +18,20 @@ app.use(morgan("dev"))
 // View and Asset Handling
 app.set("port", process.env.PORT || 3000)
 app.set("view engine", "hbs")
+hbs.registerHelper("if_even", function(conditional, options) {
+	if (conditional % 2 === 0) {
+		return options.fn(this)
+	} else {
+		return options.inverse(this)
+	}
+})
 hbs.registerPartial("navbar", path.join(__dirname, "/views/partials/navbar.hbs"))
 hbs.registerPartial("footer", path.join(__dirname, "/views/partials/footer.hbs"))
 hbs.registerPartial("applicationModal", path.join(__dirname, "/views/partials/applicationModal.hbs"))
 hbs.registerPartial("dashboardPartsModal", path.join(__dirname, "/views/partials/dashboardPartsModal.hbs"))
 hbs.registerPartial("filter", path.join(__dirname, "/views/partials/filter.hbs"))
-hbs.registerPartial("partsCheckoutModal", path.join(__dirname, "/views/partials/partsCheckoutModal.hbs"))
-hbs.registerPartial("partsCreationModal", path.join(__dirname, "/views/partials/partsCreationModal.hbs"))
 hbs.registerPartial("teamCreationModal", path.join(__dirname, "/views/partials/teamCreationModal.hbs"))
+
 hbsutils.registerWatchedPartials(path.join(__dirname, "/views/partials"))
 
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")))

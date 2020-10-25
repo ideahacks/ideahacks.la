@@ -6,7 +6,11 @@ const verifyEmail = require("../../mailer").verifyEmail
 const sendPasswordRecoverEmail = require("../../mailer").recover
 
 const getLogin = (req, res) => {
-	return res.render("login")
+	let gError = req.session.gError
+	req.session.gError = null
+	return res.render("login", {
+		gError: gError
+	})
 }
 
 const postLogin = (req, res, next) => {
@@ -19,6 +23,32 @@ const postLogin = (req, res, next) => {
 			if (err) return next(err)
 
 			return res.json({ status: "success", message: "Successfully logged in!" })
+		})
+	})(req, res, next)
+}
+
+const getLoginGoogle = (req, res, next) => {
+	passport.authenticate("google", {
+		scope: ["profile", "email"],
+		hd: "g.ucla.edu"
+	})(req, res, next)
+}
+
+const googleLoginCallback = (req, res, next) => {
+	passport.authenticate("google", (err, user, info) => {
+		if (user === false) {
+			req.session.gError = "Google email must be @g.ucla.edu"
+			return res.redirect("/login")
+		}
+
+		if (user === null) {
+			req.session.gError = "Google login failed"
+			return res.redirect("/login")
+		}
+
+		req.login(user, err => {
+			if (err) return next(err)
+			return res.redirect("/dashboard")
 		})
 	})(req, res, next)
 }
@@ -37,7 +67,7 @@ const getRegistration = (req, res) => {
 }
 
 const postRegistration = (req, res, next) => {
-	let eduEmailRegex = new RegExp(".edu$") // registration email must end in .edu
+	let eduEmailRegex = new RegExp("\\.edu$") // registration email must end in .edu
 	if (req.body.password !== req.body.passwordConfirm) {
 		return res.json({ status: "failure", message: "Your passwords have to match!" })
 	} else if (!eduEmailRegex.test(req.body.email)) {
@@ -102,6 +132,8 @@ const getLogout = (req, res) => {
 module.exports = {
 	getLogin,
 	postLogin,
+	getLoginGoogle,
+	googleLoginCallback,
 	recoverPassword,
 	getRegistration,
 	postRegistration,

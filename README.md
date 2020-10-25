@@ -25,7 +25,9 @@ locally. It looks like:
   "dbURI": "INSERT_URI_HERE",
   "sessionSecret": "INSERT_SECRET_HERE",
   "host": "localhost:3000",
-  "SENDGRID_API_KEY": "INSERT_API_KEY_HERE"
+  "SENDGRID_API_KEY": "INSERT_API_KEY_HERE",
+  "GOOGLE_CLIENT_ID": "INSERT_ID_HERE",
+  "GOOGLE_CLIENT_SECRET": "INSERT_SECRET_HERE"
 }
 ```
 

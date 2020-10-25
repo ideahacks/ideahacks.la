@@ -2,15 +2,11 @@
  * Global stylesheet for form elements
  */
 
-.ideahacks-form {
-	font-family: "Roboto Condensed";
-}
-
 /* LABEL */
 .ideahacks-form label {
 	text-align: center;
-	font-size: 18px;
-	line-height: 20px;
+	font-size: 14px;
+	line-height: initial;
 	text-transform: none;
 	font-weight: normal;
 	margin-left: 5px;
@@ -18,25 +14,25 @@
 }
 
 .ideahacks-form legend {
-	background-color: rgba(49, 133, 192, 0.1);
-	color: #3185c0;
+	color: #efa516;
 	width: max-content;
 	height: 40px;
 	padding-right: 150px;
 	padding-top: 5px;
 	display: inline-block;
+	border-bottom: 0;
 }
 
 /* INPUT */
 .ideahacks-form input,
 .ideahacks-form input:focus,
 .ideahacks-form input[readonly] {
-	border-radius: 12px;
+	border-radius: 10px;
 	background-color: white;
 	width: 80%;
 	margin-bottom: 0px;
 }
 
 .ideahacks-form input::placeholder {
-	color: #f2ccb5;
+	color: #c4c4c4;
 }

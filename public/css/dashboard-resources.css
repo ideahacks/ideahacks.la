@@ -1,0 +1,78 @@
+.Resources {
+	margin: 100px auto 34px;
+}
+.row {
+	margin-bottom: 20px;
+}
+/* for reference links */
+.row a {
+	color: #e1489a;
+}
+
+.row p {
+	margin-top: 15px;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	display: inline-block;
+}
+/* .row iframe {
+	display: block;
+	width: 90%;
+	height: 315px;
+	margin: 0 auto;
+	position: relative;
+
+} */
+
+.base-box,
+.motion-box,
+.AV-box,
+.TI-box {
+	font-size: 28px;
+	color: white;
+	display: inline-block;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 33px;
+	padding: 5px 20px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.base-box {
+	background-color: #888888;
+}
+.row .motion-box {
+	background-color: #e1489a;
+}
+.row .AV-box {
+	background-color: #efa516;
+}
+.row .TI-box {
+	background-color: #50b5dd;
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 991px) {
+	.second-video {
+		margin-top: 20px;
+	}
+}

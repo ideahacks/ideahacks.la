@@ -1,0 +1,119 @@
+/* FULL BODY STUFF */
+.fullscreen {
+	height: 100%;
+}
+
+/* BACKGROUND */
+.background {
+	margin-top: 160px;
+	padding: 20px 75px;
+
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	text-align: center;
+}
+
+/* GOOGLE LOGIN */
+hr {
+	border-top-color: #2b2b2b;
+	width: 70%;
+}
+
+#google {
+	height: 40px;
+}
+
+.warning {
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+/* FORM SIDE */
+.form-side {
+	align-items: center;
+	justify-content: center;
+	margin-top: 160px;
+	padding-right: 0px;
+}
+
+.form-side p {
+	text-align: center;
+}
+
+.login {
+	background-color: transparent;
+	margin-top: 15pt;
+	font-weight: normal;
+	font-size: 14px;
+	color: #50b5dd;
+	border: 1.5px solid #50b5dd;
+	text-transform: uppercase;
+	border-radius: 10px;
+	margin-bottom: 10pt;
+	padding: 8px 20px;
+}
+
+.login:hover {
+	background-color: #50b5dd;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+/* FORM */
+
+.ideahacks-form label {
+	margin-top: 10pt;
+	float: left;
+}
+
+.ideahacks-form input,
+.ideahacks-form input:focus,
+.ideahacks-form input[readonly] {
+	width: 100%;
+}
+
+.form-control {
+	height: 40px;
+}
+
+/* LINK STUFF */
+a,
+a:active {
+	text-decoration: none;
+	color: #50b5dd;
+	font-size: 14px;
+	line-height: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #e1489a;
+	cursor: pointer;
+}
+
+p {
+	color: #2b2b2b;
+	line-height: initial;
+}
+
+button {
+	line-height: initial;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	padding-left: 5px;
+}
+
+.error-message {
+	color: #e1489a;
+	margin-bottom: 0px;
+}
+
+@media (max-width: 520px) {
+	.background {
+		padding: 20px 30px;
+	}
+}

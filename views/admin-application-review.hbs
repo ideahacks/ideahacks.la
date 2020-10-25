@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -30,35 +30,34 @@
 
         <!-- BANNER -->
         <div class='text-center'>
-            <img class="banner" src="/img/admin/applications.png">
+            <h1 class='banner'>APPLICATIONS</h1>
         </div>
 
         <!-- STATS -->
-        <div class='container' style='padding: 20px 0;'>
-            <div class='row stats-box-container'>
-                <div class='stats-box'>
-                    <h1 class='number-applications'>{{numberApplications}}</h1>
-                    <h4>Applications</h4>
-                </div>
-                <div class='stats-box accepted-box'>
-                    <h1 class='number-accepted'>{{numberAccepted}}</h1>
-                    <h4>Accepted</h4>
-                </div>
+        <div class='stats-box-container'>
+            <div class='stats-box number-applications-box'>
+                <h1 class='number-applications'>{{numberApplications}}</h1>
+                <h4>Applications</h4>
+            </div>
 
-                <div class='stats-box waitlisted-box'>
-                    <h1 class='number-waitlisted'>{{numberWaitlisted}}</h1>
-                    <h4>Waitlisted</h4>
-                </div>
+            <div class='stats-box pending-box'>
+                <h1 class='number-pending'>{{numberPending}}</h1>
+                <h4>Pending</h4>
+            </div>
 
-                <div class='stats-box rejected-box'>
-                    <h1 class='number-rejected'>{{numberRejected}}</h1>
-                    <h4>Rejected</h4>
-                </div>
+            <div class='stats-box accepted-box'>
+                <h1 class='number-accepted'>{{numberAccepted}}</h1>
+                <h4>Accepted</h4>
+            </div>
 
-                <div class='stats-box pending-box'>
-                    <h1 class='number-pending'>{{numberPending}}</h1>
-                    <h4>Pending</h4>
-                </div>
+            <div class='stats-box waitlisted-box'>
+                <h1 class='number-waitlisted'>{{numberWaitlisted}}</h1>
+                <h4>Waitlisted</h4>
+            </div>
+
+            <div class='stats-box rejected-box'>
+                <h1 class='number-rejected'>{{numberRejected}}</h1>
+                <h4>Rejected</h4>
             </div>
         </div>
 
@@ -68,22 +67,22 @@
         <!-- APPLICATION LIST -->
         <ul class='application-list container filter-list'>
             {{#each applications}}
-            <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
-                <div class='row'>
-                    <div class='col-sm-3 col-xs-6'>
-                        <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
+                <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
+                    <div class='row'>
+                        <div class='col-sm-3 col-xs-7'>
+                            <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
+                        </div>
+                        <div class='col-sm-3'>
+                            <p class='filter-key year'>{{#if this.year}}{{this.year}}{{/if}}</p>
+                        </div>
+                        <div class='col-sm-3'>
+                            <p class='filter-key school'>{{#if this.school}}{{this.school}}{{/if}}</p>
+                        </div>
+                        <div class='col-sm-3 col-xs-5'>
+                            <p class='application-status filter-key'>{{ this.applicationStatus }}</p>
+                        </div>
                     </div>
-                    <div class='col-sm-3'>
-                        <p class='filter-key year'>{{#if this.year}}{{this.year}}{{/if}}</p>
-                    </div>
-                    <div class='col-sm-3'>
-                        <p class='filter-key school'>{{#if this.school}}{{this.school}}{{/if}}</p>
-                    </div>
-                    <div class='col-sm-3 col-xs-6'>
-                        <p class='application-status filter-key'>{{ this.applicationStatus }}</p>
-                    </div>
-                </div>
-            </li>
+                </li>
             {{/each}}
         </ul>
     </div>

@@ -1,9 +1,14 @@
 .modal-content {
-	background-color: #fbf3f0;
+	background-color: #fafafa;
 }
+
 .applicant-name {
+	font-size: 36px;
+	font-family: "Source Code Pro", monospace;
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: 700;
+	color: #50b5dd;
 }
 
 .applicant-contact {
@@ -11,11 +16,7 @@
 	text-transform: uppercase;
 }
 
-.applicant-contact span[name="phone"] {
-	margin-right: 30px;
-}
-
-.applicant-contact span.fa {
+.contact-item-wrapper span.fa {
 	margin: 0 10px;
 }
 
@@ -23,38 +24,101 @@
 	margin: 30px 0 0;
 }
 
+.application-section .section-header {
+	font-size: 30px;
+}
+
+.application-section h2 {
+	font-size: inherit;
+	color: #efa516;
+	width: calc(100% - 48px);
+	float: left;
+	margin-top: 0;
+}
+
+.application-section i {
+	color: #50b5dd;
+	width: 48px;
+	float: left;
+}
+
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 0px 50px;
 	margin: 0 0 5px;
+	color: #50b5dd;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
-	padding: 0 10px;
-	color: #40698f;
+	padding: 0 0px;
+	color: #2b2b2b;
 }
 
 .hackathon-information span {
 	padding: 0;
 }
 
-.hackathon-information legend {
-	padding-left: 50px;
-}
-
-.misc legend {
-	padding-left: 50px;
-}
-
 /* STATUS CONTROLS */
 .status-controls {
-	padding: 30px 0 15px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 30px 20px 15px;
 }
 
-i {
-	padding-left: 20px;
-	padding-right: 5px;
+.contact-wrapper {
+	text-align: center;
+}
+
+.contact-item-wrapper {
+	display: inline-block;
+	margin: auto;
+}
+
+@media (max-width: 768px) {
+	.applicant-name {
+		margin-top: 0;
+	}
+
+	.applicant-contact span[name="phone"] {
+		margin-right: 0px;
+	}
+
+	.applicant-contact span.fa {
+		margin: 0 5px;
+	}
+
+	.application-section {
+		margin: 10px 0;
+	}
+
+	.application-section .section-header {
+		font-size: 20px;
+	}
+
+	.application-section i {
+		width: 32px;
+	}
+
+	.application-section h2 {
+		width: calc(100% - 32px);
+	}
+
+	.application-section p {
+		padding: 0px 10px;
+		margin: 0px 5px;
+	}
+
+	.status-controls {
+		padding: 10px 10px;
+	}
+}
+
+@media (max-width: 506px) {
+	.status-controls {
+		display: block;
+	}
 }

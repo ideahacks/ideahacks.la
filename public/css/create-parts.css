@@ -1,39 +1,71 @@
-.banner {
-	padding-top: 130px;
-	margin-bottom: 30px;
-	text-align: center;
-	font-size: 18px;
-	color: #2a2d4e;
-}
+h1 {
+	font-family: "Source Code Pro", monospace;
+	color: #50b5dd;
+	font-weight: bold;
+	font-size: 52px;
 
-.banner img {
-	width: 30%;
+	display: block;
+	padding-top: 100px;
+	margin-bottom: 30px;
 }
 
 form {
-	font-family: "Roboto Condensed";
 	margin-bottom: 10px;
-	font-weight: bold;
 }
 
 label {
 	margin-top: 10px;
-	color: #70bfe6;
 }
 
-.form {
-	background-color: #40698f;
-	margin: 0px 300px 100px 300px;
-	border-radius: 15px;
+.ideahacks-form input,
+.ideahacks-form input:focus,
+.ideahacks-form input[readonly],
+.ideahacks-form select,
+.ideahacks-form select:focus {
+	max-width: 300px;
+	width: 90%;
+	height: 24px;
+	border: 1px solid #2b2b2b;
+	border-radius: 10px;
+}
+
+.background {
+	position: relative;
+	margin: 0px auto 100px;
+	border-radius: 10px;
 	padding: 20px 0px;
+	max-width: 700px;
 }
 
 textarea {
-	width: 400px;
+	max-width: 400px;
+	width: 90%;
+	border-radius: 10px;
+	border: 1px solid #2b2b2b;
 }
 
 .submit-button {
-	margin-top: 40px;
-	background-color: #70bfe6;
-	border: 1px solid #70bfe6;
+	padding: 10px 20px;
+	background-color: #50b5dd;
+	color: white;
+	border: none;
+	border-radius: 10px;
+}
+
+.submit-button:hover {
+	background-color: #357893;
+	transition: 0.3s ease;
+}
+
+#error-message {
+	color: #e1489a;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+	.background {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }

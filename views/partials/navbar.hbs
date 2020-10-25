@@ -1,10 +1,10 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link rel='stylesheet' type='text/css' href='/css/navbar.css' />
 <script src='/js/navbar.js'></script>
 
 <div class='myNavbar'>
     <div class='logo-container'>
-        <a href='{{#if onAdmin}}/admin{{/if}}{{#if onDashboard}}/{{/if}}{{#if onMain}}/{{/if}}'><img src='/img/navbar-icon.png' width='200px' style='display: inline-block;' /></a>
+        <a href='/'><img src='/img/navbar-icon.png' width='170px' style='display: inline-block;' /></a>
     </div>
 
     <div class="navbar-icon" onclick="animateNavbar(this)">
@@ -13,94 +13,133 @@
         <div class="bar3"></div>
     </div>
 
+    <!-- DESKTOP -->
     <ul class='navbar-list' id='navbar-list'>
         {{#if onAdmin}}
 
-        <!-- APPLICATION REVIEWS -->
-        <!-- <li class='dashboard'><a href='/admin/application-review'>Application Review</a></li> -->
+            <!-- APPLICATION REVIEW -->
+            <li><a href='/admin/application-review'>Application Review</a></li>
 
-        <!-- MAILING LISTS -->
-        <!-- <li><a href='/admin'>Mailing Lists</a></li> -->
+            <!-- MAILING LISTS -->
+            <li><a href='/admin'>Mailing Lists</a></li>
 
-        <!-- PARTS -->
-        <div class='dropdown'>
-            <li><a href='/admin/parts'>Parts</a></li>
-            <div class='dropdown-content'>
-                <li><a href='/admin/teams'>Teams</a></li>
-                <li><a href='/admin/create'>Create</a></li>
-            </div>
-        </div>
+            <!-- DASHBOARD -->
+            <li><a href='/dashboard'><button>Me</button></a></li>
 
-        <!-- TEAMS -->
-        <li><a href='/admin/teams/create'>Team Creation</a></li>
-
-        <!-- DASHBOARD ACCESS -->
-        <a href='/dashboard'>
-            <button class='main-button'>MY DASHBOARD</button>
-        </a> {{/if}} {{#if onDashboard}}
-
-        <!-- APPLICATION -->
-
-        <!-- PARTS LIST -->
-        <li class='dashboard'><a href='/dashboard/parts'>Parts List</a></li>
-
-        <!-- MY PARTS -->
-        <li class='dashboard my-parts'><a href="/dashboard/me/parts">My Parts</a></li>
-
-        <!-- PROFILE -->
-        <li class='dashboard me'><a href='/dashboard/me'>Me</a></li>
-
-        {{/if}} {{#if onMain}}
-        <div class='dropdown'>
-            <li><a href='/#about'>About</a></li>
-            <div class='dropdown-content'>
-                <li><a href='/team'>Team</a></li>
-                <li><a href='/history'>History</a></li>
-            </div>
-        </div>
-        <li><a href='/#schedule'>Schedule</a></li>
-        <li><a href='/#faq'>FAQ</a></li>
-        <li><a href='/#sponsors'>Sponsors</a></li>
-        <li id='login'><a href="/login"><button>LOGIN</button></a></li>
-        {{/if}}
-    </ul>
-    <ul class='mobile-navbar-list' id='mobile-navbar-list'>
-        {{#if onAdmin}}
-        <!-- <li><a href='/admin/application-review'>Application Review</a></li> -->
-        <!-- <li><a href='/admin'>Mailing Lists</a></li> -->
-        <li><a href='/admin/teams'>Teams</a></li>
-        <div class='responsive-dropdown'>
-            <li><a href='/admin/parts'>Parts</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
-            <div class='responsive-dropdown-content' id='responsive-content'>
-                <li><a href='/admin/teams'>Teams</a></li>
-                <li><a href='/admin/create'>Create</a></li>
-            </div>
-        </div>
-        <li><a href='/dashboard'>My Dashboard</a></li>
         {{/if}} {{#if onDashboard}}
 
-        <!-- APPLICATIONS -->
+            <!-- APPLICATION -->
+            <li><a href='/dashboard/application'>Application</a></li>
 
-        <!-- PARTS LIST -->
-        <li><a href='/dashboard/parts'>Parts List</a></li>
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
 
-        <!-- MY PARTS -->
-        <li><a href="/dashboard/me/parts">My Parts</a></li>
+            <!-- RESOURCES -->
+            <li><a href="/dashboard/resources">Resources</a></li>
 
-        <!-- PROFILE -->
-        <li><a href='/dashboard/me'>Me</a></li>
+            <!-- DASHBOARD -->
+            <li><a href='/dashboard/me'><button>Me</button></a></li>
+
         {{/if}} {{#if onMain}}
-        <div class='responsive-dropdown'>
-            <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
-            <div class='responsive-dropdown-content' id='responsive-content'>
-                <li><a href='/team'>Team</a></li>
-                <li><a href='/history'>History</a></li>
+
+            <!-- ABOUT -->
+            <div class='dropdown'>
+                <li><a href='/#about'>About</a></li>
+                <div class='dropdown-content'>
+                    <li><a href='/team'>Team</a></li>
+                    <li><a href='/history'>History</a></li>
+                </div>
             </div>
-        </div>
-        <li><a href='/#schedule'>Schedule</a></li>
-        <li><a href='/#faq'>FAQ</a></li>
-        <li><a href='/#sponsors'>Sponsors</a></li>
-        <li><a href="/login">LOGIN</a></li>
+
+            <!-- SCHEDULE -->
+            <li><a href='/#schedule'>Schedule</a></li>
+
+            <!-- FAQ -->
+            <li><a href='/#faq'>FAQ</a></li>
+
+            <!-- SPONSORS -->
+            <li><a href='/#sponsors'>Sponsors</a></li>
+
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
+
+            {{#if authenticated}}
+
+                <!-- DASHBOARD -->
+                <li><a href='/dashboard/me'><button>Me</button></a></li>
+
+            {{else}}
+
+                <!-- LOGIN -->
+                <li><a href="/login"><button>Log In</button></a></li>
+
+            {{/if}}
+
+        {{/if}}
+    </ul>
+
+    <!-- MOBILE -->
+    <ul class='mobile-navbar-list' id='mobile-navbar-list'>
+        {{#if onAdmin}}
+
+            <!-- APPLICATION REVIEW -->
+            <li><a href='/admin/application-review'>Application Review</a></li>
+
+            <!-- MAILING LISTS -->
+            <li><a href='/admin'>Mailing Lists</a></li>
+
+            <!-- DASHBOARD -->
+            <li><a href='/dashboard'>Me</a></li>
+
+        {{/if}} {{#if onDashboard}}
+
+            <!-- APPLICATIONS -->
+            <li><a href='/dashboard/application'>Application</a></li>
+
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
+
+            <!-- RESOURCES -->
+            <li><a href="/dashboard/resources">Resources</a></li>
+
+            <!-- DASHBOARD -->
+            <li><a href='/dashboard/me'>Me</a></li>
+
+        {{/if}} {{#if onMain}}
+
+            <!-- ABOUT -->
+            <div class='responsive-dropdown'>
+                <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
+                <div class='responsive-dropdown-content' id='responsive-content'>
+                    <li><a href='/team'>Team</a></li>
+                    <li><a href='/history'>History</a></li>
+                </div>
+            </div>
+
+            <!-- SCHEDULE -->
+            <li><a href='/#schedule'>Schedule</a></li>
+
+            <!-- FAQ -->
+            <li><a href='/#faq'>FAQ</a></li>
+
+            <!-- SPONSORS -->
+            <li><a href='/#sponsors'>Sponsors</a></li>
+
+            <!-- BOXES -->
+            <li><a href='/boxes'>Boxes</a></li>
+
+            {{#if authenticated}}
+
+                <!-- DASHBOARD -->
+                <li><a href='/dashboard/me'>Me</a></li>
+
+            {{else}}
+
+                <!-- LOGIN -->
+                <li><a href="/login">Log In</a></li>
+
+            {{/if}}
+
         {{/if}}
     </ul>
 </div>

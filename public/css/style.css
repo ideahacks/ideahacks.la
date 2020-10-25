@@ -1,40 +1,57 @@
-p,
-h1,
-h2,
-button,
-li {
-	font-family: "Roboto Condensed";
+body {
+	font-family: "Roboto", sans-serif;
+	color: #2b2b2b;
+	background-color: #fff8e7;
 }
 
-body {
-	background-color: #f2ccb585;
+h1 {
+	font-family: "Source Code Pro", monospace;
+	color: #50b5dd;
+	font-size: 52px;
+	font-weight: bold;
 }
 
 .wrapper {
-	background-color: #fbf3f0;
+	position: relative;
+	background-color: #fafafa;
+	min-height: 100vh;
+	overflow: hidden;
 	flex-grow: 1;
-}
-
-.theme-red {
-	color: rgb(221, 128, 100);
-}
-
-.theme-offwhite {
-	color: rgb(255, 255, 244);
-}
-
-.theme-white {
-	color: white;
-}
-
-/*********** BACKGROUNDS **************************/
-
-.background-red {
-	background-color: #dd8064;
 }
 
 .wrapper,
 .myNavbar {
 	max-width: 1280px;
 	margin: auto;
+}
+
+.houseline {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+
+	background-image: url(/img/houseline.png);
+	background-size: cover;
+}
+
+@media (max-width: 768px) {
+	.houseline {
+		height: 70px;
+	}
+}
+
+/*** Background Colors ***/
+
+.theme-yellow {
+	background-color: #ffe195;
+}
+
+.theme-blue {
+	background-color: #50b5dd;
+}
+
+.theme-light-blue {
+	background-color: #d1ebfa;
 }
