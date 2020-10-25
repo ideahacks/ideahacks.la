@@ -76,15 +76,20 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
-	let hasTeam = $('select[name="hasTeam"]').find(":selected").text() == "YES"
+	let hasTeam =
+		$('select[name="hasTeam"]')
+			.find(":selected")
+			.text() == "YES"
 	if (hasTeam && !teammateEmails.length) {
 		alert("Please fill out your teammate's email.")
 		return false
 	}
 
-	let getsTeamBoxValue = $('select[name="getsTeamBox"]').find(":selected").text()
+	let getsTeamBoxValue = $('select[name="getsTeamBox"]')
+		.find(":selected")
+		.text()
 	let getsTeamBox = getsTeamBoxValue == "I will"
-	if (getsTeamBoxValue == "I will" || getsTeamBoxValue == "My partner will" && !hasTeam) {
+	if (getsTeamBoxValue == "I will" || (getsTeamBoxValue == "My partner will" && !hasTeam)) {
 		alert("Please indicate a team member before stating who will get your team box.")
 		return false
 	}
