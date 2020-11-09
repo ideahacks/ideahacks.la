@@ -67,7 +67,7 @@ const getRegistration = (req, res) => {
 }
 
 const postRegistration = (req, res, next) => {
-	let eduEmailRegex = new RegExp("\\.edu$") // registration email must end in .edu
+	let eduEmailRegex = new RegExp(/(\.edu$)|(\.org$)/) // registration email must end in .edu or .org
 	if (req.body.password !== req.body.passwordConfirm) {
 		return res.json({ status: "failure", message: "Your passwords have to match!" })
 	} else if (!eduEmailRegex.test(req.body.email)) {
