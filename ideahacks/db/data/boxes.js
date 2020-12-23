@@ -316,16 +316,6 @@ module.exports = [
 				imageURL: "https://media.digikey.com/Photos/Texas%20Instr%20Photos/MFG_CC3100BOOST.jpg"
 			},
 			{
-				partName: "CC2650 Bluetooth Boosterpack",
-				quantity: 1,
-				category: "Dev Kit",
-				description:
-					"CC2650 Bluetooth Low Energy (BLE) RF LaunchPad™ Platform Evaluation Expansion Board<br>Compatible with TI's MSP432 MCU",
-				datasheetURL:
-					"https://www.ti.com/lit/ds/symlink/cc2650.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601662737929",
-				imageURL: "https://media.digikey.com/Photos/Texas%20Instr%20Photos/MFG_BOOSTXL-CC2650MA.jpg"
-			},
-			{
 				partName: "Breadboard Boosterpack",
 				quantity: 1,
 				category: "Dev Kit",
