@@ -50,13 +50,15 @@ button:hover {
 	color: #d46c6c;
 }
 
+.blurb {
+	margin-bottom: 20px;
+}
+
 /* APPLICATION STATUS */
 
 .background {
 	position: relative;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
+	width: 510px;
 	margin: 40px auto;
 	padding: 20px 70px;
 	border-radius: 10px;
@@ -105,6 +107,7 @@ button:hover {
 	}
 
 	.background {
+		width: 310px;
 		padding: 10px 20px;
 	}
 

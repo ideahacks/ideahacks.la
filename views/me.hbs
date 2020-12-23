@@ -59,6 +59,26 @@
             {{!-- {{#unless user.hasApplication}}
                 <a href="/dashboard/application" class="apply"><button>Apply Now!</button></a>
             {{/unless}} --}}
+
+            {{#if accepted}}
+                <p class="blurb">
+                    <b>Please double-check that the info below from your application is
+                    correct!</b> Make sure that you gave your <i>FULL</i> address (i.e., 
+                    we could put what you wrote on a package and it would get to you).
+                    If anything needs to be corrected, please send us an email at 
+                    <a href="mailto:team@ideahacks.la">team@ideahacks.la</a>.
+                </p>
+
+                <div class="box-info">
+                    {{#unless user.canPickUpBox}}
+                        <p class="address"><b>Shipping Address: </b>{{user.shippingAddress}}</p>
+                    {{/unless}}
+                    <p class="pickUp"><b>Picking up from UCLA: </b>{{#if user.canPickUpBox}}Yes{{else}}No{{/if}}</p>
+                    {{#if user.hasTeam}}
+                        <p class="getsTeam"><b>Getting Box for Team: </b>{{#if user.getsTeamBox}}Yes{{else}}No{{/if}}</p>
+                    {{/if}}
+                </div>
+            {{/if}}
         </div>
     </div>
 

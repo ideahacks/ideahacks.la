@@ -28,6 +28,7 @@ const getMe = (req, res) => {
 	}
 	res.render("me", {
 		user: req.user,
+		accepted: req.user.applicationStatus === "accepted",
 		statusColor: statusColor
 	})
 }
