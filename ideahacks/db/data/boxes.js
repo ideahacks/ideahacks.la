@@ -157,11 +157,11 @@ module.exports = [
 				imageURL: "https://media.digikey.com/Photos/TDK%20Photos/FK18C0G1H151J.JPG"
 			},
 			{
-				partName: "NPN Transistor",
+				partName: "NMOS Transistor",
 				quantity: 4,
 				category: "Discrete Semiconductor",
 				description: "Bipolar (BJT) Transistor NPN 40V 600mA 300MHz 625mW Through Hole TO-92-3",
-				datasheetURL: "https://www.mouser.com/datasheet/2/308/KSP2222A-D-1810443.pdf",
+				datasheetURL: "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF",
 				imageURL:
 					"https://media.digikey.com/Renders/~~Pkg.Case%20or%20Series/TO-92-3(StandardBody),TO-226_straightlead.jpg"
 			},
