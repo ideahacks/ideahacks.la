@@ -157,11 +157,11 @@ module.exports = [
 				imageURL: "https://media.digikey.com/Photos/TDK%20Photos/FK18C0G1H151J.JPG"
 			},
 			{
-				partName: "NPN Transistor",
+				partName: "NMOS Transistor",
 				quantity: 4,
 				category: "Discrete Semiconductor",
 				description: "Bipolar (BJT) Transistor NPN 40V 600mA 300MHz 625mW Through Hole TO-92-3",
-				datasheetURL: "https://www.mouser.com/datasheet/2/308/KSP2222A-D-1810443.pdf",
+				datasheetURL: "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF",
 				imageURL:
 					"https://media.digikey.com/Renders/~~Pkg.Case%20or%20Series/TO-92-3(StandardBody),TO-226_straightlead.jpg"
 			},
@@ -314,16 +314,6 @@ module.exports = [
 				datasheetURL:
 					"https://www.ti.com/lit/ds/symlink/cc3100.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601662678109",
 				imageURL: "https://media.digikey.com/Photos/Texas%20Instr%20Photos/MFG_CC3100BOOST.jpg"
-			},
-			{
-				partName: "CC2650 Bluetooth Boosterpack",
-				quantity: 1,
-				category: "Dev Kit",
-				description:
-					"CC2650 Bluetooth Low Energy (BLE) RF LaunchPad™ Platform Evaluation Expansion Board<br>Compatible with TI's MSP432 MCU",
-				datasheetURL:
-					"https://www.ti.com/lit/ds/symlink/cc2650.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601662737929",
-				imageURL: "https://media.digikey.com/Photos/Texas%20Instr%20Photos/MFG_BOOSTXL-CC2650MA.jpg"
 			},
 			{
 				partName: "Breadboard Boosterpack",

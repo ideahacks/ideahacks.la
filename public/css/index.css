@@ -160,15 +160,18 @@ a:hover {
 	color: white;
 }
 
+.due-date {
+	background: #efa516;
+	margin-bottom: 10px;
+	font-size: 20px;
+	padding: 5px;
+}
+
 .apply {
 	position: absolute;
 	right: 40px;
-	top: 425px;
+	top: 435px;
 	float: right;
-	padding: 13px 17px;
-
-	background-color: #50b5dd;
-	border: none;
 
 	font-family: Roboto, sans-serif;
 	font-size: 24px;
@@ -177,12 +180,30 @@ a:hover {
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	text-transform: uppercase;
 	color: white;
+}
+
+.apply-button {
+	padding: 13px 17px;
+
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-shadow: inherit;
+	text-transform: inherit;
+	color: white;
+
+	background-color: #50b5dd;
+	border: none;
 
 	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
-.apply:hover,
-.apply:focus {
+.apply-button:disabled {
+	background-color: gray;
+}
+
+.apply-button:not(:disabled):hover,
+.apply-button:not(:disabled):focus {
 	background-color: #6ccaf0;
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 	transform: scale(1.008);
@@ -398,7 +419,7 @@ a:hover {
 	margin-bottom: 30px;
 }
 
-.chipotle {
+.square {
 	width: 15%;
 	margin: 30px;
 }
@@ -446,6 +467,11 @@ a:hover {
 
 	.banner-details .date {
 		font-size: 20px;
+	}
+
+	.due-date {
+		font-size: 16px;
+		padding: 5px 10px;
 	}
 
 	.apply {
@@ -502,7 +528,7 @@ a:hover {
 		width: 110px;
 		margin: 20px 20px;
 	}
-	.chipotle {
+	.square {
 		width: 180px;
 		margin: 20px 45px;
 	}
@@ -549,6 +575,11 @@ a:hover {
 		top: 60px;
 		right: 20px;
 		font-size: 16px;
+	}
+
+	.apply .due-date {
+		display: inline;
+		margin-right: 15px;
 	}
 
 	.date,

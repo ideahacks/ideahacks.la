@@ -89,7 +89,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		.find(":selected")
 		.text()
 	let getsTeamBox = getsTeamBoxValue == "I will"
-	if (getsTeamBoxValue == "I will" || (getsTeamBoxValue == "My partner will" && !hasTeam)) {
+	if ((getsTeamBoxValue == "I will" || getsTeamBoxValue == "My partner will") && !hasTeam) {
 		alert("Please indicate a team member before stating who will get your team box.")
 		return false
 	}
