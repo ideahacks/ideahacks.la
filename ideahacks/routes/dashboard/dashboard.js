@@ -4,6 +4,18 @@ const Part = require("../../db").Part
 const { Team } = require("../../db")
 const { User } = require("../../db")
 
+// Placeholder so server still runs with all active routes
+// Pulled from ../teams.js, but not valid for use here
+const getTeams = (req, res) => {
+	Team.find(req.query)
+		.then(teams => {
+			return res.json(teams)
+		})
+		.catch(err => {
+			return res.status(c.StatusInternalError).send(err)
+		})
+}
+
 const getParts = (req, res) => {
 	Part.find().then(parts => {
 		res.render("dashboard-parts", { parts })
@@ -107,6 +119,7 @@ const getMyParts = (req, res) => {
 }
 
 module.exports = {
+	getTeams,
 	getParts,
 	getMe,
 	getSettings,
