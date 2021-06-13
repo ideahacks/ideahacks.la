@@ -13,7 +13,8 @@ dashboardRouter.post("/application", setResLocals, h.isVerified, applicationHand
 
 dashboardRouter.get("/parts", setResLocals, h.isVerified, dashboardHandlers.getParts)
 
-dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
+// Potentially unneeded? Not sure what it should be used for
+// dashboardRouter.get("/teams", setResLocals, h.isVerified, dashboardHandlers.getTeams)
 
 dashboardRouter.get("/me", setResLocals, h.isVerified, dashboardHandlers.getMe)
 
