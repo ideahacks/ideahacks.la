@@ -8,7 +8,6 @@ const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
 dashboardRouter.get("/", setResLocals, h.isVerified, dashboardHandlers.getMe)
 
-// APPLICATIONS ARE CLOSED
 dashboardRouter.get("/application", setResLocals, h.isVerified, applicationHandlers.getApplication)
 dashboardRouter.post("/application", setResLocals, h.isVerified, applicationHandlers.postApplication)
 
