@@ -41,7 +41,7 @@ const googleLoginCallback = (req, res, next) => {
 			return res.redirect("/login")
 		}
 
-		if (user === null) {
+		if (user === null || err) {
 			req.session.gError = "Google login failed"
 			return res.redirect("/login")
 		}
