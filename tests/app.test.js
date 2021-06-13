@@ -26,18 +26,6 @@ describe("Application...", () => {
 			.expect(200, done)
 	})
 
-	it("responds to /venue", done => {
-		request(server)
-			.get("/venue")
-			.expect(200, done)
-	})
-
-	it("responds to /extended-faq", done => {
-		request(server)
-			.get("/extended-faq")
-			.expect(200, done)
-	})
-
 	it("responds to /history", done => {
 		request(server)
 			.get("/history")
@@ -53,6 +41,12 @@ describe("Application...", () => {
 	it("responds to /registration", done => {
 		request(server)
 			.get("/registration")
+			.expect(200, done)
+	})
+
+	it("responds to /privacy", done => {
+		request(server)
+			.get("/privacy")
 			.expect(200, done)
 	})
 
