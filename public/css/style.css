@@ -10,6 +10,7 @@
 
 body {
 	font-family: "Roboto", sans-serif;
+	font-size: 20px;
 	color: var(--white);
 	background-color: var(--black);
 }
@@ -17,7 +18,7 @@ body {
 h1 {
 	font-family: "Roboto", sans-serif;
 	color: var(--green);
-	font-size: 52px;
+	font-size: 48px;
 	font-weight: bold;
 }
 
@@ -33,4 +34,76 @@ h1 {
 .myNavbar {
 	max-width: 1280px;
 	margin: auto;
+}
+
+/* white tab container */
+
+.white-tab-container {
+	position: relative;
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.white-tab-container>div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateY(-50%);
+}
+
+.white-tab-container>div:first-child div {
+	display: inline-block;
+	position: relative;
+	left: -50%;
+	max-width: 500px;
+	padding: 15px 25px 0;
+	margin-bottom: 15px;
+	border-radius: 20px 20px 0 0;
+
+	background-color: var(--white);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.white-tab-container>div:first-child div h1 {
+	margin: 0;
+}
+
+/* black tab container */
+
+.black-tab-container {
+	position: relative;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.black-tab-container>div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateY(-50%);
+}
+
+.black-tab-container>div:first-child div {
+	display: inline-block;
+	position: relative;
+	left: -50%;
+	max-width: 500px;
+	padding: 15px 25px 0;
+	margin-bottom: 15px;
+	border-radius: 20px 20px 0 0;
+
+	background-color: var(--black);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.black-tab-container>div:first-child div h1 {
+	margin: 0;
 }
