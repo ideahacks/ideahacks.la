@@ -34,11 +34,18 @@
 
         <!-- NAVBAR -->
         {{> navbar }}
+        <div class='logo-header'>
+            <img class='img-header' src='/img/team/teamHeader.png' />
+            <span class='logo-img-header'>
+                <img class='logo-img' src='/img/black-logo.png' />
+                <h1 class='logo-txt'>THE TEAM</h1>
+            </span>
+
+        </div>
 
         <div class='team-container team container-fluid'>
-            <h1 class="Title">MEET THE TEAM</h1>
+            <h1 class="Title">TEAM CAPTAINS</h1>
             {{#each teamData}} {{#if @first}}
-                    {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="directors-header">{{/if}}
                     <div class='container-fluid section'>
                         <div class='individual-team__container directors'>
                             <div class='individual-team__teammates-container directors__teammates-container'>
@@ -55,45 +62,43 @@
                     </div>
                 {{else}}
                     {{#if_even @index}}
-                        {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="header">{{/if}}
-                        <div class='container-fluid section'>
-                            <div class='individual-team__container reversed'>
-                                <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}" alt="{{this.departmentName}}" class="header-rotated ml30">{{/if}}
+
+                        <div class='container-fluid section black-tab-container'>
+                            <div>
+                                <div>
+                                    <h1>{{this.departmentName}}</h1>
                                 </div>
-                                <div style="width: 100%;">
-                                    <h4 class='lead'>Lead: {{this.teamLead}}</h4>
-                                    <div class='individual-team__teammates-container'>
-                                        {{#each this.teammates}}
-                                            <div class='individual-team__teammate'>
-                                                <div class='pic'>
-                                                    <img class='team-photo' src='{{this.picturePath}}' />
-                                                </div>
-                                                <h4 class='Description'><b>{{this.name}}</b></h4>
-                                            </div>
-                                        {{/each}}
+                            </div>
+                            <h4 class='lead-1'>Lead: {{this.teamLead}}</h4>
+                            <div class='individual-team__teammates-container'>
+                                {{#each this.teammates}}
+                                    <div class='individual-team__teammate'>
+                                        <div class='pic'>
+                                            <img class='team-photo' src='{{this.picturePath}}' />
+                                        </div>
+                                        <h4 class='Description'><b>{{this.name}}</b></h4>
                                     </div>
-                                </div>
+                                {{/each}}
                             </div>
                         </div>
                 {{else}}
-                    {{#if this.teamPath}}<img src="{{this.teamPath}}" alt="{{this.departmentName}}" class="header">{{/if}}
-                    <div class='container-fluid section'>
-                        <div class='individual-team__container'>
-                            <div class="header-rotated-wrapper">{{#if this.teamPath}}<img src="{{this.teamPathRotated}}" alt="{{this.departmentName}}" class="header-rotated mr30">{{/if}}
+
+                    <div class='container-fluid section white-tab-container'>
+                        <div>
+                            <div>
+                                <h1>{{this.departmentName}}</h1>
                             </div>
-                            <div style="width: 100%;">
-                                <h4 class='lead'>Lead: {{this.teamLead}}</h4>
-                                <div class='individual-team__teammates-container'>
-                                    {{#each this.teammates}}
-                                        <div class='individual-team__teammate'>
-                                            <div class='pic'>
-                                                <img class='team-photo' src='{{this.picturePath}}' />
-                                            </div>
-                                            <h4 class='Description'><b>{{this.name}}</b></h4>
-                                        </div>
-                                    {{/each}}
+                        </div>
+                        <h4 class='lead-2'>Lead: {{this.teamLead}}</h4>
+                        <div class='individual-team__teammates-container'>
+                            {{#each this.teammates}}
+                                <div class='individual-team__teammate'>
+                                    <div class='pic'>
+                                        <img class='team-photo' src='{{this.picturePath}}' />
+                                    </div>
+                                    <h4 class='Description'><b>{{this.name}}</b></h4>
                                 </div>
-                            </div>
+                            {{/each}}
                         </div>
                     </div>
                     {{/if_even}}
