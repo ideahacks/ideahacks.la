@@ -4,7 +4,7 @@
 
 <div class='myNavbar'>
     <div class='logo-container'>
-        <a href='/'><img src='/img/navbar-icon.png' width='170px' style='display: inline-block;' /></a>
+        <a href='/'><img src='/img/navbar/navbaricon.svg' style='display: inline-block;' /></a>
     </div>
 
     <div class="navbar-icon" onclick="animateNavbar(this)">
@@ -29,10 +29,7 @@
         {{/if}} {{#if onDashboard}}
 
             <!-- APPLICATION -->
-            {{!-- <li><a href='/dashboard/application'>Application</a></li> --}}
-
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
+            <li><a href='/dashboard/application'>Application</a></li>
 
             <!-- RESOURCES -->
             <li><a href="/dashboard/resources">Resources</a></li>
@@ -45,9 +42,12 @@
             <!-- ABOUT -->
             <div class='dropdown'>
                 <li><a href='/#about'>About</a></li>
+                <div>
                 <div class='dropdown-content'>
+                    <li><a href='/venue'>Venue</a></li>
                     <li><a href='/team'>Team</a></li>
                     <li><a href='/history'>History</a></li>
+                </div>
                 </div>
             </div>
 
@@ -59,9 +59,6 @@
 
             <!-- SPONSORS -->
             <li><a href='/#sponsors'>Sponsors</a></li>
-
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
 
             {{#if authenticated}}
 
@@ -94,10 +91,7 @@
         {{/if}} {{#if onDashboard}}
 
             <!-- APPLICATIONS -->
-            {{!-- <li><a href='/dashboard/application'>Application</a></li> --}}
-
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
+            <li><a href='/dashboard/application'>Application</a></li>
 
             <!-- RESOURCES -->
             <li><a href="/dashboard/resources">Resources</a></li>
@@ -111,6 +105,7 @@
             <div class='responsive-dropdown'>
                 <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
                 <div class='responsive-dropdown-content' id='responsive-content'>
+                    <li><a href='/venue'>Venue</a></li>
                     <li><a href='/team'>Team</a></li>
                     <li><a href='/history'>History</a></li>
                 </div>
@@ -124,9 +119,6 @@
 
             <!-- SPONSORS -->
             <li><a href='/#sponsors'>Sponsors</a></li>
-
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
 
             {{#if authenticated}}
 
