@@ -41,19 +41,19 @@
                 <h1 class='logo-txt'>THE TEAM</h1>
             </span>
         </div>
-		<div class='filler-thick'></div>
+        <div class='filler-thick'></div>
 
         <div class='team-container team container-fluid'>
             {{#each teamData}}
-				{{#if @first}}
+                {{#if @first}}
                     <div class='container-fluid section black-tab-container'>
-						<div>
-							<div>
-								<h1 class='Title'>TEAM CAPTAINS</h1>
-							</div>
-						</div>
-						<div class='filler'></div>
-						<div class='individual-team__container directors'>
+                        <div>
+                            <div>
+                                <h1 class='Title'>TEAM CAPTAINS</h1>
+                            </div>
+                        </div>
+                        <div class='filler'></div>
+                        <div class='individual-team__container directors'>
                             <div class='individual-team__teammates-container directors__teammates-container'>
                                 {{#each this.teammates}}
                                     <div class='individual-team__teammate'>
@@ -87,27 +87,27 @@
                                 {{/each}}
                             </div>
                         </div>
-					{{else}}
+                {{else}}
 
-						<div class='container-fluid section white-tab-container'>
-							<div>
-								<div>
-									<h1>{{this.departmentName}}</h1>
-								</div>
-							</div>
-							<h4 class='Description lead-2'>Lead: {{this.teamLead}}</h4>
-							<div class='individual-team__teammates-container'>
-								{{#each this.teammates}}
-									<div class='individual-team__teammate'>
-										<div class='pic'>
-											<img class='team-photo' src='{{this.picturePath}}' />
-										</div>
-										<h4 class='Description'>{{this.name}}</h4>
-									</div>
-								{{/each}}
-							</div>
-						</div>
-					{{/if_even}}
+                    <div class='container-fluid section white-tab-container'>
+                        <div>
+                            <div>
+                                <h1>{{this.departmentName}}</h1>
+                            </div>
+                        </div>
+                        <h4 class='Description lead-2'>Lead: {{this.teamLead}}</h4>
+                        <div class='individual-team__teammates-container'>
+                            {{#each this.teammates}}
+                                <div class='individual-team__teammate'>
+                                    <div class='pic'>
+                                        <img class='team-photo' src='{{this.picturePath}}' />
+                                    </div>
+                                    <h4 class='Description'>{{this.name}}</h4>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/if_even}}
                 {{/if}}
             {{/each}}
         </div>
