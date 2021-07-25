@@ -22,6 +22,10 @@ h1 {
 	font-weight: bold;
 }
 
+a {
+	color: var(--green);
+}
+
 .wrapper {
 	position: relative;
 	background-color: var(--black);
@@ -44,6 +48,11 @@ h1 {
 	color: var(--black);
 }
 
+.white-tab-container::after {
+	height: 90px;
+	background-color: var(--white);
+}
+
 .white-tab-container > div:first-child {
 	display: flex;
 	align-items: center;
@@ -51,7 +60,7 @@ h1 {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateY(-50%);
+	transform: translateY(-99%);
 }
 
 .white-tab-container > div:first-child div {
@@ -60,7 +69,6 @@ h1 {
 	left: -50%;
 	max-width: 500px;
 	padding: 15px 25px 0;
-	margin-bottom: 15px;
 	border-radius: 20px 20px 0 0;
 
 	background-color: var(--white);
@@ -80,6 +88,11 @@ h1 {
 	color: var(--white);
 }
 
+.black-tab-container::after {
+	height: 90px;
+	background-color: var(--black);
+}
+
 .black-tab-container > div:first-child {
 	display: flex;
 	align-items: center;
@@ -87,7 +100,7 @@ h1 {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateY(-50%);
+	transform: translateY(-99%);
 }
 
 .black-tab-container > div:first-child div {
@@ -96,7 +109,6 @@ h1 {
 	left: -50%;
 	max-width: 500px;
 	padding: 15px 25px 0;
-	margin-bottom: 15px;
 	border-radius: 20px 20px 0 0;
 
 	background-color: var(--black);
