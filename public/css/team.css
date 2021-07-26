@@ -1,16 +1,4 @@
-.header {
-	visibility: hidden;
-	margin: 0px;
-	width: 0;
-}
-
-.directors-header {
-	margin: 50px 0px 40px 0px;
-	display: block;
-	max-width: 65%;
-	display: inline-block;
-}
-
+/* Header */
 .logo-header {
 	display: flex;
 	top: -85px;
@@ -105,17 +93,6 @@ p {
 	width: 200px;
 }
 
-.fa,
-.fa:hover {
-	color: white;
-	height: 10px !important;
-	display: inline-block;
-	text-decoration: none;
-}
-.fa-3x {
-	font-size: 30px;
-}
-
 .pic {
 	filter: none;
 	position: relative;
@@ -123,11 +100,6 @@ p {
 	transition: all 0.5s ease-in-out;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
-}
-
-.no-padding {
-	padding-left: 40;
-	padding-right: 40;
 }
 
 .container-fluid {
@@ -138,6 +110,8 @@ p {
 .container-fluid.section {
 	padding: 0;
 }
+
+/* team boxes */
 
 .individual-team__container {
 	display: flex;
@@ -167,24 +141,6 @@ p {
 	width: 100%;
 }
 
-.reversed {
-	flex-direction: row-reverse;
-}
-
-.header-rotated-wrapper {
-	width: auto;
-}
-.header-rotated {
-	height: 500px;
-}
-
-.ml30 {
-	margin-left: 30px;
-}
-
-.mr30 {
-	margin-right: 30px;
-}
 
 /* Media queries for mobile */
 
@@ -194,14 +150,6 @@ p {
 	}
 	.Title {
 		max-height: 50px;
-	}
-
-	.header {
-		margin: 50px 0px 40px 0px;
-		display: block;
-		width: 80%;
-		display: inline-block;
-		visibility: visible;
 	}
 
 	.logo-img-header {
@@ -214,16 +162,8 @@ p {
 		height: inherit;
 	}
 
-	.directors-header {
-		max-width: 80%;
-	}
-
 	.directors__teammates-container {
 		gap: 20px;
-	}
-
-	.container {
-		padding: 0px;
 	}
 
 	p {
@@ -233,16 +173,6 @@ p {
 	.Description,
 	.lead {
 		font-size: 20px;
-	}
-
-	.header-rotated {
-		visibility: hidden;
-		width: 0;
-		margin: 0;
-	}
-
-	.header-rotated-wrapper {
-		width: 0;
 	}
 
 	.individual-team__container {
