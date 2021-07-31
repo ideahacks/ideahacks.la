@@ -8,6 +8,8 @@
 	margin-top: 160px;
 	padding: 20px 75px;
 
+	font-weight: bold;
+
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
@@ -17,7 +19,7 @@
 
 /* GOOGLE LOGIN */
 hr {
-	border-top-color: #2b2b2b;
+	border-top-color: var(--light-green);
 	width: 70%;
 }
 
@@ -43,72 +45,123 @@ hr {
 }
 
 .login {
-	background-color: transparent;
+	background-color: var(--white);
 	margin-top: 15pt;
 	font-weight: normal;
 	font-size: 14px;
-	color: #50b5dd;
-	border: 1.5px solid #50b5dd;
+	color: #619b83;
+	border: 0px;
+	/* border: 1.5px solid var(--green); */
 	text-transform: uppercase;
 	border-radius: 10px;
 	margin-bottom: 10pt;
-	padding: 8px 20px;
+	padding: 8px 24px;
 }
 
 .login:hover {
-	background-color: #50b5dd;
+	background-color: var(--green);
 	color: white;
 	cursor: pointer;
 	transition: 0.3s ease;
 }
 
-/* FORM */
+/* TITLE & SUBTITLE */
+.background h1 {
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
 
+.background h2 {
+	margin-top: 4px;
+	margin-bottom: 48px;
+
+	font-size: 30px;
+}
+
+/* FORM */
 .ideahacks-form label {
-	margin-top: 10pt;
-	float: left;
+	display: block;
+	color: var(--black);
+	font-weight: bold;
+
+	margin-top: 12px;
+	margin-bottom: 4px;
+	
+	margin-left: calc(10% + 12px);
+
+	text-align: left !important;
 }
 
 .ideahacks-form input,
 .ideahacks-form input:focus,
 .ideahacks-form input[readonly] {
-	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 16px;
+
+	width: 80%;
+
+	/* TO-DO: Figure out responsiveness scaling with padding */
+
+	border: 0px;
+	box-shadow: none;
+
+	color: var(--black);
+	background-color: #efefef;
+}
+
+.ideahacks-form p {
+	color: #fff;
+	font-size: 24px;
+}
+
+.ideahacks-form button {
+	margin-bottom: 48px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .form-control {
 	height: 40px;
 }
 
+.input-wrapper {
+	background-color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 20px;
+	margin: 0 auto;
+}
+
 /* LINK STUFF */
 a,
 a:active {
 	text-decoration: none;
-	color: #50b5dd;
-	font-size: 14px;
+	color: var(--green);
+	/* font-size: 14px; */
+	font-size: 24px;
 	line-height: inherit;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: #e1489a;
+	color: var(--red);
 	cursor: pointer;
 }
 
 p {
-	color: #2b2b2b;
+	color: var(--black);
 	line-height: initial;
 }
 
 button {
 	line-height: initial;
-	font-size: 14px;
 	color: white;
+
 	text-align: center;
-	padding-left: 5px;
 }
 
 .error-message {
-	color: #e1489a;
+	color: var(--red);
 	margin-bottom: 0px;
 }
 
