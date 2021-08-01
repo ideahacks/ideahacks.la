@@ -1,5 +1,22 @@
 .modal-content {
-	background-color: #fafafa;
+	background-color: var(--white);
+}
+
+.application-section {
+	margin-bottom: 24px;
+}
+
+/* RADIO BUTTONS */
+.radio-outer-square {
+	width: 30px;
+	height: 30px;
+	border-radius: 8px;
+}
+
+.radio-outer-square.active .radio-inner-square {
+	width: 16px;
+	height: 16px;
+	margin: 6px;
 }
 
 .applicant-name {
@@ -8,11 +25,11 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #50b5dd;
+	color: var(--green);
 }
 
 .applicant-contact {
-	text-align: center;
+	/* text-align: center; */
 	text-transform: uppercase;
 }
 
@@ -22,39 +39,47 @@
 
 .application-section {
 	margin: 30px 0 0;
+
+	/* Change this, debugging only */
+	padding-bottom: 100px;
 }
 
 .application-section .section-header {
 	font-size: 30px;
 }
 
-.application-section h2 {
-	font-size: inherit;
-	color: #efa516;
-	width: calc(100% - 48px);
-	float: left;
-	margin-top: 0;
+/* .application-section:nth-child(even) {
+	background-color: var(--black);
+	color: var(--white);
 }
 
-.application-section i {
-	color: #50b5dd;
-	width: 48px;
-	float: left;
+.application-section:nth-child(odd) {
+	color: var(--black);
+} */
+
+.application-section h2 {
+	color: var(--green);
+	font-size: inherit;
+	font-weight: bold;
+
+	/* float: left; */
+	margin-top: 0;
+	margin-bottom: 48px;
+
+	width: 100%;
+	text-align: center;
 }
 
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 0px 50px;
 	margin: 0 0 5px;
-	color: #50b5dd;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
 	padding: 0 0px;
-	color: #2b2b2b;
 }
 
 .hackathon-information span {
@@ -64,18 +89,20 @@
 /* STATUS CONTROLS */
 .status-controls {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 30px 20px 15px;
+	justify-content: center;
+	/* padding: 30px 20px 15px; */
 }
 
 .contact-wrapper {
-	text-align: center;
+	display: flex;
 }
 
 .contact-item-wrapper {
-	display: inline-block;
-	margin: auto;
+	/* display: inline-block; */
+	flex-grow: 1;
+
+	margin-left: 32px;
 }
 
 @media (max-width: 768px) {
@@ -104,12 +131,12 @@
 	}
 
 	.application-section h2 {
-		width: calc(100% - 32px);
+		/* width: calc(100% - 32px); */
 	}
 
 	.application-section p {
 		padding: 0px 10px;
-		margin: 0px 5px;
+		/* margin: 0px 5px; */
 	}
 
 	.status-controls {
