@@ -3,6 +3,16 @@
 	height: 100%;
 }
 
+/* UPPERCASE TEXT */
+.register,
+.form-control,
+.login,
+.ideahacks-form label,
+a,
+h1 {
+	text-transform: uppercase;
+}
+
 /* BACKGROUND */
 .background {
 	margin-top: 160px;
@@ -19,7 +29,7 @@
 
 /* GOOGLE LOGIN */
 hr {
-	border-top-color: var(--light-green);
+	border-top-color: var(--white);
 	width: 70%;
 }
 
@@ -28,8 +38,9 @@ hr {
 }
 
 .warning {
+	color: var(--black);
 	margin-top: 5px;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 /* FORM SIDE */
@@ -51,7 +62,6 @@ hr {
 	font-size: 14px;
 	color: #619b83;
 	border: 0px;
-	/* border: 1.5px solid var(--green); */
 	text-transform: uppercase;
 	border-radius: 10px;
 	margin-bottom: 10pt;
@@ -86,7 +96,7 @@ hr {
 
 	margin-top: 12px;
 	margin-bottom: 4px;
-	
+
 	margin-left: calc(10% + 12px);
 
 	text-align: left !important;
@@ -100,18 +110,11 @@ hr {
 
 	width: 80%;
 
-	/* TO-DO: Figure out responsiveness scaling with padding */
-
 	border: 0px;
 	box-shadow: none;
 
 	color: var(--black);
 	background-color: #efefef;
-}
-
-.ideahacks-form p {
-	color: #fff;
-	font-size: 24px;
 }
 
 .ideahacks-form button {
@@ -125,11 +128,16 @@ hr {
 }
 
 .input-wrapper {
-	background-color: #fff;
+	background-color: var(--white);
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border-radius: 20px;
 	margin: 0 auto;
+}
+
+.no-account,
+.has-account {
+	font-size: 24px;
 }
 
 /* LINK STUFF */
@@ -137,19 +145,18 @@ a,
 a:active {
 	text-decoration: none;
 	color: var(--green);
-	/* font-size: 14px; */
 	font-size: 24px;
 	line-height: inherit;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: var(--red);
+	color: var(--white);
 	cursor: pointer;
 }
 
 p {
-	color: var(--black);
+	color: var(--white);
 	line-height: initial;
 }
 
@@ -161,8 +168,8 @@ button {
 }
 
 .error-message {
-	color: var(--red);
-	margin-bottom: 0px;
+	color: var(--black);
+	margin: 4px 9%;
 }
 
 @media (max-width: 520px) {
