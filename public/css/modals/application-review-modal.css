@@ -2,8 +2,11 @@
 	background-color: var(--white);
 }
 
-.application-section {
-	margin-bottom: 24px;
+/* TO-DO: Organize this CSS here: */
+/* TO-DO: Figure out why fieldset is built different */
+
+.white-tab-container > div:first-child, .black-tab-container > div:first-child {
+	transform: translateY(-75%);
 }
 
 /* RADIO BUTTONS */
@@ -28,41 +31,34 @@
 	color: var(--green);
 }
 
-.applicant-contact {
-	/* text-align: center; */
+/* APPLICANT INFO SECTIONS */
+.application-content {
+	padding-top: 48px;
+	padding-bottom: 92px;
+}
+
+.application-content > p,
+.content-block {
+	margin: 4px 0px 16px;
+}
+
+.applicant-name-underline {
+	margin-top: 4px;
+	margin-bottom: 32px;
+
+	border-bottom: 2px solid var(--black);
+	width: 15%;
+}
+
+.application-section h1 {
 	text-transform: uppercase;
 }
-
-.contact-item-wrapper span.fa {
-	margin: 0 10px;
-}
-
-.application-section {
-	margin: 30px 0 0;
-
-	/* Change this, debugging only */
-	padding-bottom: 100px;
-}
-
-.application-section .section-header {
-	font-size: 30px;
-}
-
-/* .application-section:nth-child(even) {
-	background-color: var(--black);
-	color: var(--white);
-}
-
-.application-section:nth-child(odd) {
-	color: var(--black);
-} */
 
 .application-section h2 {
 	color: var(--green);
 	font-size: inherit;
 	font-weight: bold;
 
-	/* float: left; */
 	margin-top: 0;
 	margin-bottom: 48px;
 
@@ -70,10 +66,13 @@
 	text-align: center;
 }
 
+p {
+	margin-bottom: 0px;
+}
+
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 0 0 5px;
 }
 
 .application-section span {
@@ -82,27 +81,12 @@
 	padding: 0 0px;
 }
 
-.hackathon-information span {
-	padding: 0;
-}
-
 /* STATUS CONTROLS */
 .status-controls {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* padding: 30px 20px 15px; */
-}
-
-.contact-wrapper {
-	display: flex;
-}
-
-.contact-item-wrapper {
-	/* display: inline-block; */
-	flex-grow: 1;
-
-	margin-left: 32px;
+	padding-bottom: 92px;
 }
 
 @media (max-width: 768px) {
@@ -119,7 +103,7 @@
 	}
 
 	.application-section {
-		margin: 10px 0;
+		/* margin: 10px 0; */
 	}
 
 	.application-section .section-header {
