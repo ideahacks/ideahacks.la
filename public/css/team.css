@@ -131,16 +131,14 @@ p {
 	margin: auto;
 	justify-content: center;
 	align-items: center;
-	max-width: calc( 200px * 4 + 15px * 3);
+	max-width: calc(200px * 4 + 15px * 3);
 }
-
 
 .individual-team__teammate {
 	width: auto;
 	margin: 5px;
 	align-items: center;
 }
-
 
 .directors__teammates-container {
 	width: 100%;
