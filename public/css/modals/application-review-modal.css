@@ -103,10 +103,6 @@ p {
 		margin: 0 5px;
 	}
 
-	/* .application-section {
-		margin: 10px 0;
-	} */
-
 	.application-section .section-header {
 		font-size: 20px;
 	}
@@ -115,25 +111,9 @@ p {
 		width: 32px;
 	}
 
-	/* .application-section h1 {
-		width: calc(100% - 32px);
-	} */
-	/* .application-section h1 {
-
-	} */
-
-	/* .application-section {
-		padding-bottom: 128px;
-	} */
-
 	.application-section p {
 		padding: 0px 10px;
-		/* margin: 0px 5px; */
 	}
-
-	/* .status-controls {
-		padding: 10px 10px;
-	} */
 }
 
 @media (max-width: 506px) {
