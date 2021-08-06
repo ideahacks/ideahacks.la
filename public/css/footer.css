@@ -28,11 +28,11 @@
 }
 
 .links a {
-	color: #2b2b2b;
+	color: var(--white);
 }
 
 .links a:hover {
-	color: #737373;
+	color: var(--green);
 	transition: 0.3s ease;
 }
 
