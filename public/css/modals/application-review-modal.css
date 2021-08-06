@@ -1,11 +1,10 @@
+/* FULL MODAL */
 .modal-content {
 	background-color: var(--white);
 }
 
-/* TO-DO: Organize this CSS here: */
-/* TO-DO: Figure out why fieldset is built different */
-
-.white-tab-container > div:first-child, .black-tab-container > div:first-child {
+.white-tab-container > div:first-child,
+.black-tab-container > div:first-child {
 	transform: translateY(-75%);
 }
 
@@ -32,29 +31,8 @@
 }
 
 /* APPLICANT INFO SECTIONS */
-.application-content {
-	padding-top: 48px;
-	padding-bottom: 92px;
-}
-
-.application-content > p,
-.content-block {
-	margin: 4px 0px 16px;
-}
-
-.applicant-name-underline {
-	margin-top: 4px;
-	margin-bottom: 32px;
-
-	border-bottom: 2px solid var(--black);
-	width: 15%;
-}
-
-.application-section h1 {
-	text-transform: uppercase;
-}
-
-.application-section h2 {
+/* NAME */
+.application-name {
 	color: var(--green);
 	font-size: inherit;
 	font-weight: bold;
@@ -66,13 +44,32 @@
 	text-align: center;
 }
 
-p {
-	margin-bottom: 0px;
+.applicant-name-underline {
+	margin-top: 4px;
+	margin-bottom: 32px;
+
+	border-bottom: 2px solid var(--black);
+	width: 15%;
 }
 
+.application-section h1,
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+.application-content {
+	padding-top: 48px;
+	padding-bottom: 92px;
+}
+
+.application-content > p,
+.content-block {
+	margin: 4px 0px 16px;
+}
+
+p {
+	margin-bottom: 0px;
 }
 
 .application-section span {
