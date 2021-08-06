@@ -120,25 +120,44 @@ p {
 }
 
 .individual-team__teammates-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
-	gap: 15px;
-	width: 100% - 20px;
-	margin: 10px;
 	justify-content: center;
+	align-items: center;
 }
+
+.individual-team__teammates-container-2 {
+	display: flex;
+	/*grid-template-columns: repeat(auto-fit, minmax(auto, 200px));*/
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	max-width: calc( 200px * 4 + 15px * 3);
+}
+
+
+.individual-team__teammate {
+	width: auto;
+	margin: 5px;
+	align-items: center;
+}
+
 
 .directors__teammates-container {
 	width: 100%;
-	justify-content: center;
 }
 
 .directors {
 	margin-top: 0;
 }
 
-.individual-team__teammate {
-	width: 100%;
+.four-wide {
+	flex: 1 0 5%;
+	align-items: center;
+}
+
+.three-wide {
+	flex: 1 0 30%;
+	align-items: center;
 }
 
 /* Media queries for mobile */

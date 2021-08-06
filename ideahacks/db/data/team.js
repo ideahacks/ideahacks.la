@@ -4,9 +4,8 @@
 
 module.exports = [
 	{
-		departmentName: "Directors",
-		teamPath: "/img/team/directors.png",
-		teamPathRotated: "/img/team/directors-rotated.png",
+		departmentName: "Team Captains",
+		isFourWide: false,
 		teammates: [
 			{
 				name: "Solaine Zhao",
@@ -24,8 +23,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Website",
-		teamPath: "/img/team/website.png",
-		teamPathRotated: "/img/team/website-rotated.png",
+		isFourWide: false,
 		teamLead: "Robert Peralta",
 		teammates: [
 			{
@@ -56,8 +54,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Food",
-		teamPath: "/img/team/food.png",
-		teamPathRotated: "/img/team/food-rotated.png",
+		isFourWide: false,
 		teamLead: "Jack Lin",
 		teammates: [
 			{
@@ -88,8 +85,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Operations",
-		teamPath: "/img/team/operations.png",
-		teamPathRotated: "/img/team/operations-rotated.png",
+		isFourWide: true,
 		teamLead: "Brandon Le",
 		teammates: [
 			{
@@ -136,8 +132,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Corporate",
-		teamPath: "/img/team/corporate.png",
-		teamPathRotated: "/img/team/corporate-rotated.png",
+		isFourWide: true,
 		teamLead: "Tim Zou",
 		teammates: [
 			{
@@ -188,8 +183,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Design",
-		teamPath: "/img/team/design.png",
-		teamPathRotated: "/img/team/design-rotated.png",
+		isFourWide: true,
 		teamLead: "Courtney Gibbons",
 		teammates: [
 			{
