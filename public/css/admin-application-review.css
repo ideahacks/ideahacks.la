@@ -3,15 +3,26 @@
 		font-size: 60px;
 	}
 }
+
+/* FULL BODY */
 .background {
 	background-color: #fbf3f0;
 }
 
+/* BANNER */
 .banner {
 	padding-top: 130px;
 	margin: auto;
 }
 
+.banner-underline {
+	margin-top: 12px;
+	
+	border-bottom: 2px solid var(--white);
+	width: 15%;
+}
+
+/* GENERIC STYLES */
 .container {
 	padding: 20px 0;
 }
@@ -60,7 +71,7 @@ input {
 .stats-box h4 {
 	color: var(--white);
 
-	font-family: "Source Code Pro", monospace;
+	font-family: "Roboto", monospace;
 	font-size: 20px;
 	font-weight: bold;
 
@@ -92,8 +103,7 @@ input {
 	margin: 20px 0;
 	color: white;
 	font-size: 17px;
-	font-family: "Source Code Pro", monospace;
-	/* border-radius: 10px; */
+	font-family: "Roboto", monospace;
 }
 
 .application:hover {
@@ -106,7 +116,6 @@ input {
 }
 
 .row {
-	/* Vertically centers .application p */
 	display: flex;
 	align-items: center;
 }
@@ -163,10 +172,6 @@ input {
 	}
 	.stats-box {
 		padding: 10px 0;
-		margin: 10px;
-	}
-	.container {
-		padding: 0px;
 		margin: 10px;
 	}
 	.stats-box h1 {
