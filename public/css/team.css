@@ -1,7 +1,6 @@
 /* Header */
 .logo-header {
 	display: flex;
-	top: -85px;
 	align-items: center;
 	justify-content: center;
 }
