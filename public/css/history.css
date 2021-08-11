@@ -1,14 +1,15 @@
 .wrapper {
 	padding-top: 66px;
-	background-color: #191A1B;
-	color: #FFFFFF;
+	background-color: #191a1b;
+	color: #ffffff;
 }
 
-#history_logo { 
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 30%;
+#history_logo {
+	position: absolute;
+	top: 170px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
 }
 
 #intro_graphics {
@@ -84,15 +85,15 @@
 
 #twenty,
 #eighteen {
-	background-color: #191A1B;
-	color: #FFFFFF
+	background-color: #191a1b;
+	color: #ffffff;
 }
 
 #twenty-one,
 #nineteen,
 #seventeen {
-	background-color: #FFFFFF;
-	color: #191A1B
+	background-color: #ffffff;
+	color: #191a1b;
 }
 
 #twenty .old-logo,
