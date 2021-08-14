@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-	font-family: "Roboto", sans-serif;
+	font-family: "Source Code Pro", monospace;
 	color: var(--green);
 	font-size: 48px;
 	font-weight: bold;
