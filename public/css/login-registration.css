@@ -4,9 +4,6 @@
 }
 
 /* UPPERCASE TEXT */
-.register,
-.form-control,
-.login,
 .ideahacks-form label,
 a,
 h1 {
@@ -29,8 +26,10 @@ h1 {
 
 /* GOOGLE LOGIN */
 hr {
-	border-top-color: var(--white);
+	border-top-color: var(--black);
 	width: 70%;
+
+	margin-bottom: 12px;
 }
 
 #google {
@@ -39,7 +38,8 @@ hr {
 
 .warning {
 	color: var(--black);
-	margin-top: 5px;
+	/* margin-top: 5px; */
+	margin: 8px auto;
 	font-size: 16px;
 }
 
@@ -99,12 +99,14 @@ hr {
 
 	margin-left: calc(10% + 12px);
 
-	text-align: left !important;
+	text-align: left;
 }
 
 .ideahacks-form input,
 .ideahacks-form input:focus,
 .ideahacks-form input[readonly] {
+	font-weight: normal;
+
 	margin: 0 auto;
 	margin-bottom: 16px;
 
