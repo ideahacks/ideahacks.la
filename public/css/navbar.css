@@ -20,6 +20,13 @@
 	background-color: var(--white);
 }
 
+.myNavbar a,
+.myNavbar button {
+	/* To make sure overly-general styles on
+	other pages don't mess with font sizing */
+	font-size: inherit;
+}
+
 .myNavbar a:hover,
 .myNavbar a:focus,
 .myNavbar button:focus {
