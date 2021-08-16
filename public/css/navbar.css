@@ -30,6 +30,7 @@
 	other pages don't mess with font sizing */
 	font-size: inherit;
 	font-weight: 500;
+	line-height: inherit;
 	color: var(--black);
 }
 
