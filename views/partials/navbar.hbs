@@ -16,26 +16,28 @@
     <ul class='navbar-list' id='navbar-list'>
         {{#if onAdmin}}
 
-            <!-- PARTS -->
-            <li><a href='/parts'>Parts</a></li>
-
-            <!-- PARTS CREATION -->
-            <li><a href='/create'>Parts Creation</a></li>
-
-            <!-- TEAMS -->
+            {{!-- Uncomment ahead of hackathon start --}}
+            {{!-- <!-- TEAMS -->
             <li><a href='/teams'>Teams</a></li>
 
             <!-- TEAM CREATION -->
             <li><a href='/teams/create'>Team Creation</a></li>
 
-            <!-- APPLICATION REVIEW -->
-            <li><a href='/admin/application-review'>Application Review</a></li>
+            <!-- PARTS BY TEAM -->
+            <li><a href='/parts'>Parts by Team</a></li> --}}
+
+            {{!-- Comment after applications close --}}
+            <!-- PARTS CREATION -->
+            <li><a href='/create'>Parts Creation</a></li>
+
+            <!-- APPLICATIONS -->
+            <li><a href='/admin/application-review'>Applications</a></li>
 
             <!-- MAILING LISTS -->
             <li><a href='/admin'>Mailing Lists</a></li>
 
             <!-- DASHBOARD -->
-            <li><a href='/dashboard/me'>Me</a></li>
+            <li><a href='/dashboard'>Me</a></li>
 
             <!-- LOG OUT -->
             <li><a href='/logout'><button>Log Out</button></a></li>
@@ -110,20 +112,22 @@
     <ul class='mobile-navbar-list' id='mobile-navbar-list'>
         {{#if onAdmin}}
 
-            <!-- PARTS -->
-            <li><a href='/parts'>Parts</a></li>
-
-            <!-- PARTS CREATION -->
-            <li><a href='/create'>Parts Creation</a></li>
-
-            <!-- TEAMS -->
+            {{!-- Uncomment ahead of hackathon start --}}
+            {{!-- <!-- TEAMS -->
             <li><a href='/teams'>Teams</a></li>
 
             <!-- TEAM CREATION -->
             <li><a href='/teams/create'>Team Creation</a></li>
 
-            <!-- APPLICATION REVIEW -->
-            <li><a href='/admin/application-review'>Application Review</a></li>
+            <!-- PARTS BY TEAM -->
+            <li><a href='/parts'>Parts by Team</a></li> --}}
+
+            {{!-- Comment after applications close --}}
+            <!-- PARTS CREATION -->
+            <li><a href='/create'>Parts Creation</a></li>
+
+            <!-- APPLICATIONS -->
+            <li><a href='/admin/application-review'>Applications</a></li>
 
             <!-- MAILING LISTS -->
             <li><a href='/admin'>Mailing Lists</a></li>
