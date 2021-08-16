@@ -1,12 +1,17 @@
 .myFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: var(--navbar-height);
+	padding: 0 30px;
+
+	background-color: var(--white);
 	text-align: center;
+	color: var(--black);
+	font-weight: 500;
 }
 
-.myFooter.container-fluid {
-	padding: 0 15px;
-}
-
-.myFooter p {
+.myFooter a {
 	color: inherit;
 	font-size: inherit;
 	line-height: inherit;
@@ -15,45 +20,24 @@
 
 .myFooter a:hover {
 	text-decoration: none;
-	color: initial;
+	color: var(--green);
 }
 
 .contact {
-	float: right;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 200px;
 }
 
-.links {
-	float: left;
-	margin: 30px 0 0 10px;
-}
-
-.links a {
-	color: #2b2b2b;
-}
-
-.links a:hover {
-	color: #737373;
-	transition: 0.3s ease;
-}
-
-#fb {
-	width: 40px;
-	margin: 20px 10px;
-}
-
-#mail {
-	width: 29px;
-	margin: 20px 20px 22px;
-}
-
-#insta {
-	width: 26px;
-	margin: 20px 16px;
+.contact img {
+	width: 28px;
 }
 
 @media (max-width: 450px) {
-	#mail {
-		margin-left: 10px;
-		margin-right: 10px;
+	.myFooter {
+		flex-direction: column;
+		padding: 30px 0;
+		height: calc(1.5 * var(--navbar-height));
 	}
 }
