@@ -207,7 +207,7 @@
 
 #dropdown-arrow {
 	float: right;
-	color: #2b2b2b;
+	color: var(--black);
 	font-size: 18px;
 	transition: 0.3s ease;
 	margin-right: 28px;
