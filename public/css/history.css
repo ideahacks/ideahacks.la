@@ -1,7 +1,5 @@
 .wrapper {
 	padding-top: 66px;
-	background-color: #191a1b;
-	color: #ffffff;
 }
 
 #history_logo {
@@ -43,19 +41,31 @@
 	text-align: justify;
 }
 
+.hack_theme {
+	text-align: center;
+	font-size: 48px;
+	padding-top: 30px;
+	margin: 0px;
+}
+
+.places h3 {
+	position: absolute;
+	margin-left: 47%;
+	margin-top: 25%;
+	transform: translateX(-50%);
+	font-size: 2vw;
+}
+
 .places {
 	padding: 20px 0;
 	margin: 0 auto;
 }
 
-.places img {
-	border-radius: 4px;
-}
-
 .places h2 {
-	font-size: 20px;
+	text-align: left;
+	font-size: 30px;
 	margin-top: 10px;
-	padding: 0 15px;
+	padding: 0px;
 }
 
 .place {
@@ -64,8 +74,8 @@
 
 .place p {
 	font-size: 15px;
+	padding-right: 10px;
 	text-align: justify;
-	padding-top: 10px;
 }
 
 .year-title {
@@ -75,12 +85,6 @@
 
 .history-year {
 	padding: 25px 50px 50px;
-}
-
-.section-header {
-	width: 100%;
-	height: 35px;
-	text-align: center;
 }
 
 #twenty,
@@ -125,10 +129,6 @@
 	background: #2b2b2b;
 }
 
-#seventeen .sponsor-img div {
-	background: #d1ebfa;
-}
-
 .old-logo {
 	position: absolute;
 	margin: -25px -50px;
@@ -145,7 +145,6 @@
 	font-family: "Roboto", sans-serif;
 	font-size: 20px;
 	text-align: left;
-	color: #fbf3f0;
 	width: 90%;
 	float: none;
 	white-space: normal;
@@ -168,26 +167,27 @@
 	transform: rotate(180deg);
 }
 
-.sponsor-img {
-	display: none;
+.winners {
+	display: block;
+	margin-bottom: 20px;
 }
 
-.sponsor-img img {
+.sponsors h2 {
+	font-size: 40px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.sponsors_img {
+	padding: 10px;
 	display: inline-block;
-	margin: 10px;
 }
 
-.sponsor-img div {
+.sponsors_container {
 	width: 90%;
-	margin: 0 auto;
+	margin: 10px auto;
 	padding: 10px 0;
 	background: #ffffff;
-	border-bottom-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-}
-
-.sponsor-visible {
-	display: initial;
 }
 
 @media (min-width: 992px) {
