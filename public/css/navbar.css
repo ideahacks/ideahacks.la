@@ -78,7 +78,7 @@
 }
 
 .dropdown a:hover,
-.responsive-dropdown a:hover {
+.responsive-dropdown-content a:hover {
 	color: var(--white);
 }
 
@@ -195,12 +195,21 @@
 	display: block;
 }
 
+.center-flex {
+	display: flex;
+	justify-content: center;
+}
+
+.center-flex>a {
+	margin: 0;
+}
+
 #dropdown-arrow {
 	float: right;
 	color: #2b2b2b;
 	font-size: 18px;
 	transition: 0.3s ease;
-	margin-right: 20px;
+	margin-right: 28px;
 }
 
 @media (max-width: 980px) {
