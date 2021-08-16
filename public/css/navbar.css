@@ -1,6 +1,10 @@
-.filler {
+:root {
+	--navbar-height: 95px;
+}
+
+.navbar-filler {
 	width: 100%;
-	height: 95px;
+	height: var(--navbar-height);
 	background-color: var(--white);
 }
 
@@ -13,7 +17,7 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: 95px;
+	height: var(--navbar-height);
 	overflow: visible;
 	padding: 0 30px;
 
@@ -25,6 +29,8 @@
 	/* To make sure overly-general styles on
 	other pages don't mess with font sizing */
 	font-size: inherit;
+	font-weight: 500;
+	color: var(--black);
 }
 
 .myNavbar a:hover,
@@ -32,10 +38,6 @@
 .myNavbar button:focus {
 	outline: none;
 	text-decoration: none;
-}
-
-.logo-container {
-	display: inline-block;
 }
 
 .navbar-list {
@@ -58,7 +60,8 @@
 	transition: color 0.3s ease;
 }
 
-.navbar-list a:hover {
+.navbar-list a:hover,
+.mobile-navbar-list a:hover {
 	color: var(--green);
 }
 
@@ -74,7 +77,8 @@
 	background-color: var(--green);
 }
 
-.dropdown a:hover {
+.dropdown a:hover,
+.responsive-dropdown a:hover {
 	color: var(--white);
 }
 
@@ -120,9 +124,6 @@
 .navbar-icon {
 	display: none;
 	cursor: pointer;
-	position: absolute;
-	right: 30px;
-	padding: 15px 20px 0 0;
 }
 
 .bar1,
@@ -154,35 +155,40 @@
 }
 
 .mobile-navbar-list {
+	display: none;
 	position: fixed;
 	z-index: 2;
-	top: 66px;
-	width: 100%;
-	height: 0;
+	top: var(--navbar-height);
+	right: 0;
+	transform: translateX(100%);
+	width: 250px;
+	height: calc(100vh - var(--navbar-height));
 	overflow-x: hidden;
 
-	background-color: #50b5dd;
-	opacity: 0.9;
+	background-color: var(--white);
 	list-style: none;
 	padding: 0;
 
-	transition: 0.3s;
+	transition: transform 0.3s;
+}
+
+.mobile-navbar-list.active {
+	transform: none;
 }
 
 .mobile-navbar-list li {
-	padding: 15px 50px;
+	padding: 0.5em 0;
 	text-transform: uppercase;
 	font-weight: 500;
 }
 
 .mobile-navbar-list a {
 	margin-left: 28px;
-	color: #2b2b2b;
 }
 
 .responsive-dropdown-content {
 	display: none;
-	background-color: #d1ebfa;
+	background-color: var(--green);
 }
 
 .responsive-dropdown .responsive-dropdown-content.active {
@@ -200,27 +206,11 @@
 @media (max-width: 980px) {
 	.navbar-icon {
 		display: inline-block;
-		padding-right: 0px;
 	}
 	.navbar-list {
 		display: none;
 	}
-	.logo-container {
-		padding: 7px 20px;
-	}
-}
-
-@media (max-width: 500px) {
-	.brand-container {
-		padding: 14px 20px;
-	}
-	.brand-container img {
-		width: 250px;
-	}
-	.navbar-icon {
-		right: 20px;
-	}
-	.mobile-navbar-list li {
-		padding: 15px 20px;
+	.mobile-navbar-list {
+		display: block;
 	}
 }
