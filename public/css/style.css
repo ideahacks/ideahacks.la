@@ -1,6 +1,5 @@
 :root {
 	--green: #619b83;
-	--light-green: #dae8e0;
 	--red: #c86b6b;
 	--yellow: #ccab45;
 	--blue: #78b0c0;
@@ -16,7 +15,7 @@ body {
 }
 
 h1 {
-	font-family: "Roboto", sans-serif;
+	font-family: "Source Code Pro", monospace;
 	color: var(--green);
 	font-size: 48px;
 	font-weight: bold;
@@ -118,4 +117,11 @@ a {
 
 .black-tab-container > div:first-child div h1 {
 	margin: 0;
+}
+
+@media (max-width: 556px) {
+	.white-tab-container > div:first-child div h1,
+	.black-tab-container > div:first-child div h1 {
+		font-size: 40px;
+	}
 }
