@@ -119,21 +119,20 @@ p {
 	margin: auto;
 	justify-content: center;
 	align-items: center;
-	max-width: calc(200px * 4 + 15px * 3);
+}
+
+.individual-team__teammates-container.four_wide {
+	max-width: calc(220px * 4);
+}
+
+.individual-team__teammates-container.three_wide {
+	max-width: calc(220px * 3);
 }
 
 .individual-team__teammate {
 	width: auto;
-	margin: 5px;
+	margin: 10px;
 	align-items: center;
-}
-
-.four-wide {
-	flex: 1 0 5%;
-}
-
-.three-wide {
-	flex: 1 0 30%;
 }
 
 /* Media queries for mobile */

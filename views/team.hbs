@@ -72,26 +72,15 @@
                             </div>
                         </div>
                         <h4 class='Description {{#if_even @index}} lead-1 {{else}} lead-2 {{/if_even}}'>Lead: {{this.teamLead}}</h4>
-                        <div class='individual-team__teammates-container'>
-                            {{#if this.isFourWide}}
-                                {{#each this.teammates}}
-                                    <div class='individual-team__teammate four-wide'>
-                                        <div class='pic'>
-                                            <img class='team-photo' src='{{this.picturePath}}' />
-                                        </div>
-                                        <h4 class='Description'>{{this.name}}</h4>
-                                    </div>
-                                {{/each}}
-                            {{else}}
-                                {{#each this.teammates}}
-                                    <div class='individual-team__teammate three-wide'>
-                                        <div class='pic'>
-                                            <img class='team-photo' src='{{this.picturePath}}' />
-                                        </div>
-                                        <h4 class='Description'>{{this.name}}</h4>
-                                    </div>
-                                {{/each}}
-                            {{/if}}
+                        <div class='individual-team__teammates-container {{#if this.isFourWide}} four_wide {{else}} three_wide {{/if}}'>
+							{{#each this.teammates}}
+								<div class='individual-team__teammate'>
+									<div class='pic'>
+										<img class='team-photo' src='{{this.picturePath}}' />
+									</div>
+									<h4 class='Description'>{{this.name}}</h4>
+								</div>
+							{{/each}}
                         </div>
                     </div>
                 {{/if}}
