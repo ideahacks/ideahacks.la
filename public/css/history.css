@@ -5,7 +5,7 @@
 #history_logo {
 	position: absolute;
 	top: 170px;
-	margin-left: 50%;
+	left: 50%;
 	transform: translateX(-50%);
 	max-width: 100%;
 }
@@ -48,14 +48,6 @@
 	margin: 0px;
 }
 
-.places h3 {
-	position: absolute;
-	margin-left: 47%;
-	margin-top: 25%;
-	transform: translateX(-50%);
-	font-size: 2vw;
-}
-
 .places {
 	padding: 20px 0;
 	margin: 0 auto;
@@ -73,7 +65,7 @@
 }
 
 .place p {
-	font-size: 15px;
+	font-size: 20px;
 	padding-right: 10px;
 	text-align: justify;
 }
@@ -184,7 +176,12 @@
 }
 
 .sponsors_container {
-	width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: center;
+	align-items: flex-start;
+	width: 100%;
 	margin: 10px auto;
 	padding: 10px 0;
 	background: #ffffff;
