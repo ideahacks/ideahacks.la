@@ -18,6 +18,10 @@ const getConfirm = (req, res) => {
 	return res.render("confirm")
 }
 
+const getVenue = (req, res) => {
+	return res.render("venue")
+}
+
 const getPrivacy = (req, res) => {
 	return res.render("privacy")
 }
@@ -31,6 +35,7 @@ module.exports = {
 	getTeam,
 	getHistory,
 	getConfirm,
+	getVenue,
 	getPrivacy,
 	getBoxes
 }
