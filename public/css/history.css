@@ -4,8 +4,10 @@
 
 #history_logo {
 	position: absolute;
-	top: 170px;
+	top: 120px;
 	left: 50%;
+	padding-left: 30px;
+	padding-right: 30px;
 	transform: translateX(-50%);
 	max-width: 100%;
 }
@@ -34,10 +36,11 @@
 	margin-bottom: 150px;
 	margin-left: 80px;
 	margin-right: 80px;
+	padding-bottom: 50px;
 }
 
 .intro_p {
-	font-size: 15px;
+	font-size: 20px;
 	text-align: justify;
 }
 
@@ -81,44 +84,19 @@
 
 #twenty,
 #eighteen {
-	background-color: #191a1b;
-	color: #ffffff;
+	background-color: var(--black);
+	color: var(--white);
 }
 
 #twenty-one,
 #nineteen,
 #seventeen {
-	background-color: #ffffff;
-	color: #191a1b;
-}
-
-#twenty .old-logo,
-#twenty .btn {
-	background: #2b2b2b;
-}
-
-#nineteen .old-logo,
-#nineteen .btn {
-	background: #2b2b2b;
-}
-
-#nineteen .sponsor-img div {
-	background: #d1ebfa;
-}
-
-#eighteen .old-logo,
-#eighteen .btn {
-	background: #2b2b2b;
-	color: #fafafa;
+	background-color: var(--white);
+	color: var(--black);
 }
 
 #seventeen .old-logo img {
 	height: 100px;
-}
-
-#seventeen .old-logo,
-#seventeen .btn {
-	background: #2b2b2b;
 }
 
 .old-logo {
@@ -179,12 +157,12 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-    justify-content: center;
+	justify-content: center;
 	align-items: flex-start;
 	width: 100%;
 	margin: 10px auto;
 	padding: 10px 0;
-	background: #ffffff;
+	background: var(--white);
 }
 
 @media (min-width: 992px) {
