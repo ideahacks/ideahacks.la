@@ -4,7 +4,7 @@
 
 #history_logo {
 	position: absolute;
-	top: 120px;
+	top: 170px;
 	left: 50%;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -204,6 +204,9 @@
 
 @media (max-width: 768px) {
 	/*xs size*/
+	#history_logo {
+		top: 120px;
+	}
 	.history-year .year-title {
 		width: 90%;
 		height: auto;
