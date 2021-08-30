@@ -190,14 +190,14 @@ p {
 	.team-photo {
 		width: 150px;
 	}
-	
+
 	.logo-img-header {
 		top: 80px;
 	}
 }
 
 @media (max-width: 556px) {
-	.directors-header{
+	.directors-header {
 		font-size: 40px;
 	}
 }

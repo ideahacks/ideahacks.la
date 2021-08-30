@@ -47,22 +47,22 @@
             {{#each teamData}}
                 {{#if @first}}
                     <div class='container-fluid section'>
-						<div>
-							<h1 class='directors-header'>{{this.departmentName}}</h1>
-						</div>
-						<div class='filler'></div>
-						<div class='individual-team__teammates-container'>
-							{{#each this.teammates}}
-								<div class='individual-team__teammate three-wide'>
-									<div class='pic'>
-										<img class='team-photo' src='{{this.picturePath}}' />
-									</div>
-									<h4 class='Description'>{{this.name}}</h4>
-								</div>
-							{{/each}}
-						</div>
-						<div class='filler-thick'></div>
-						<div class='filler-thick'></div>
+                        <div>
+                            <h1 class='directors-header'>{{this.departmentName}}</h1>
+                        </div>
+                        <div class='filler'></div>
+                        <div class='individual-team__teammates-container'>
+                            {{#each this.teammates}}
+                                <div class='individual-team__teammate three-wide'>
+                                    <div class='pic'>
+                                        <img class='team-photo' src='{{this.picturePath}}' />
+                                    </div>
+                                    <h4 class='Description'>{{this.name}}</h4>
+                                </div>
+                            {{/each}}
+                        </div>
+                        <div class='filler-thick'></div>
+                        <div class='filler-thick'></div>
                     </div>
                 {{else}}
                     <div class='container-fluid section {{#if_even @index}} black-tab-container {{else}} white-tab-container {{/if_even}}'>
