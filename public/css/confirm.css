@@ -14,7 +14,6 @@ h1 {
 	margin-bottom: 20px;
 }
 
-
 .text {
 	font-size: 24px;
 	margin: 10px 15%;
@@ -42,7 +41,6 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-	
 	.confirm {
 		margin: 80px auto 0px;
 	}
@@ -50,13 +48,13 @@ button:hover {
 	h1 {
 		font-size: 30px;
 	}
-	
+
 	.text {
 		font-size: 18px;
-		margin: 10px 5%
+		margin: 10px 5%;
 	}
-	
-	.retry-text{
+
+	.retry-text {
 		font-size: 15px;
 		margin: 100px 5% 20px;
 	}
