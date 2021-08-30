@@ -31,7 +31,8 @@
 
 .img-header {
 	width: 100%;
-	min-width: 800px;
+	margin-top: 66px;
+	/*min-width: 800px;*/
 }
 
 /* General */
@@ -92,7 +93,6 @@ p {
 
 .team-container {
 	text-align: center;
-	padding-bottom: 40px;
 	background-color: var(--black);
 }
 
@@ -133,6 +133,10 @@ p {
 	width: auto;
 	margin: 10px;
 	align-items: center;
+}
+
+.directors-header {
+	text-transform: uppercase;
 }
 
 /* Media queries for mobile */
@@ -185,5 +189,15 @@ p {
 
 	.team-photo {
 		width: 150px;
+	}
+	
+	.logo-img-header {
+		top: 80px;
+	}
+}
+
+@media (max-width: 556px) {
+	.directors-header{
+		font-size: 40px;
 	}
 }
