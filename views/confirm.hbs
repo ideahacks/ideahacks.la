@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Confirm - IDEA Hacks</title>
+    <title>Email Confirmation - IDEA Hacks</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="http://www.ideahacks.la/img/meta_thumbnail.png">
@@ -12,12 +12,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=	"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
@@ -28,20 +27,22 @@
 </head>
 
 <body>
-    <!-- <div class='wrapper'> -->
-    <div class='confirm'>
-        <div class="thankyou">
-            <h1>Thank you for signing up!</h1>
-        </div>
-        <p>A confirmation has been sent to your email address. Please check your inbox and click on the unique link to
-            verify your account.</p>
-        <hr style="border-top:2px solid #50b5dd; margin:15px 60px" />
-        <p>Email taking too long? Usually .edu emails have a bit of delay to them. You can also try:</p>
-        <button>Resend Verification Email</button>
-        <p class='response'></p>
+    <div class='wrapper'>
+		{{> navbar }}
+		
+		<div class='confirm'>
+			<div class="thankyou">
+				<h1>Thank you for signing up!</h1>
+			</div>
+			<p class='text'>Please check your inbox (and spam) and click on the link we sent to verify your account.</p>
+			<p class='retry-text'>Think it's taking too long? .edu emails often have some delay to them, but feel free to have us try again.</p>
+			<button>RESEND EMAIL</button>
+			<p class='response'></p>
 
+		</div>
+		
+		{{> footer }}
     </div>
-    <!-- </div> -->
 </body>
 
 </html>
