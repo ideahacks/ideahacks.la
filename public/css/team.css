@@ -16,19 +16,6 @@
 	max-width: 100%;
 }
 
-.logo-txt {
-	display: inline;
-	color: white;
-	position: absolute;
-	margin-left: 50%;
-	transform: translateX(-50%);
-	top: 70px;
-	left: 120px;
-	right: -80px;
-	font-size: 34px;
-	font-weight: bold;
-}
-
 .img-header {
 	width: 100%;
 	margin-top: 66px;
@@ -154,11 +141,6 @@ p {
 		top: 100px;
 	}
 
-	.logo-txt {
-		width: inherit;
-		height: inherit;
-	}
-
 	.directors__teammates-container {
 		gap: 20px;
 	}
@@ -178,15 +160,6 @@ p {
 }
 
 @media (max-width: 520px) {
-	.logo-txt {
-		top: 12.5vw;
-		left: 23vw;
-		right: -15vw;
-		width: inherit;
-		height: inherit;
-		font-size: 6vw;
-	}
-
 	.team-photo {
 		width: 150px;
 	}
