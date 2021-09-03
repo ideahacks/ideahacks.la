@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-	font-family: "Roboto", sans-serif;
+	font-family: "Source Code Pro", monospace;
 	color: var(--green);
 	font-size: 48px;
 	font-weight: bold;
@@ -48,6 +48,8 @@ a {
 }
 
 .white-tab-container::after {
+	display: table;
+	content: " ";
 	height: 90px;
 	background-color: var(--white);
 }
@@ -60,13 +62,14 @@ a {
 	top: 0;
 	left: 50%;
 	transform: translateY(-99%);
+	max-width: min(500px, 100%);
 }
 
 .white-tab-container > div:first-child div {
 	display: inline-block;
 	position: relative;
 	left: -50%;
-	max-width: 500px;
+	max-width: min(500px, 100%);
 	padding: 15px 25px 0;
 	border-radius: 20px 20px 0 0;
 
@@ -77,6 +80,7 @@ a {
 
 .white-tab-container > div:first-child div h1 {
 	margin: 0;
+	white-space: nowrap;
 }
 
 /* black tab container */
@@ -88,6 +92,8 @@ a {
 }
 
 .black-tab-container::after {
+	display: table;
+	content: " ";
 	height: 90px;
 	background-color: var(--black);
 }
@@ -100,13 +106,14 @@ a {
 	top: 0;
 	left: 50%;
 	transform: translateY(-99%);
+	max-width: min(500px, 100%);
 }
 
 .black-tab-container > div:first-child div {
 	display: inline-block;
 	position: relative;
 	left: -50%;
-	max-width: 500px;
+	max-width: min(500px, 100%);
 	padding: 15px 25px 0;
 	border-radius: 20px 20px 0 0;
 
@@ -117,11 +124,13 @@ a {
 
 .black-tab-container > div:first-child div h1 {
 	margin: 0;
+	white-space: nowrap;
 }
 
-@media (max-width: 556px) {
+@media (max-width: 630px) {
 	.white-tab-container > div:first-child div h1,
 	.black-tab-container > div:first-child div h1 {
 		font-size: 40px;
+		white-space: normal;
 	}
 }
