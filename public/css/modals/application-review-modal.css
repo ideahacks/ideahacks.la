@@ -1,8 +1,4 @@
 /* FULL MODAL */
-.modal-content {
-	background-color: var(--white);
-}
-
 .white-tab-container > div:first-child,
 .black-tab-container > div:first-child {
 	transform: translateY(-75%);
