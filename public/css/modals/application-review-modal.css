@@ -1,7 +1,7 @@
 /* FULL MODAL */
 .white-tab-container > div:first-child,
 .black-tab-container > div:first-child {
-	transform: translateY(-75%);
+	transform: translateY(-99%);
 }
 
 /* RADIO BUTTONS */
@@ -64,6 +64,13 @@
 	margin: 4px 0px 16px;
 }
 
+/* Gets rid of giant empty black space
+   at bottom of last application content */
+.black-tab-container::after {
+	display: none;
+	height: 0;
+}
+
 p {
 	margin-bottom: 0px;
 }
@@ -83,10 +90,6 @@ p {
 }
 
 @media (max-width: 768px) {
-	.applicant-name {
-		margin-top: 0;
-	}
-
 	.applicant-name-underline {
 		width: 40%;
 	}
