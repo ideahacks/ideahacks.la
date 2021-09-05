@@ -23,6 +23,10 @@
 	color: var(--green);
 }
 
+.myFooter i.fa {
+	font-size: 30px;
+}
+
 .contact {
 	display: flex;
 	justify-content: space-between;
