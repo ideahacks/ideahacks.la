@@ -135,7 +135,7 @@
 .bar3 {
 	width: 35px;
 	height: 4px;
-	background-color: #2b2b2b;
+	background-color: var(--black);
 	margin: 6px 0;
 	transition: 0.4s;
 	border-radius: 500px;
