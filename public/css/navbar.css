@@ -199,15 +199,6 @@
 	display: block;
 }
 
-.center-flex {
-	display: flex;
-	justify-content: center;
-}
-
-.center-flex > a {
-	margin: 0;
-}
-
 #dropdown-arrow {
 	float: right;
 	color: var(--black);
