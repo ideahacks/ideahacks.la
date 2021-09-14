@@ -23,7 +23,7 @@
 	color: var(--green);
 }
 
-.myFooter i.fa {
+.myFooter .fa {
 	font-size: 30px;
 }
 
