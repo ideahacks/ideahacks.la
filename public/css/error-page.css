@@ -11,15 +11,16 @@
 .home-button {
 	background-color: var(--green);
 	padding: 10px 18px;
-	border-radius: 7px;
-	color: white;
+	border: none;
+	border-radius: 12px;
+	color: var(--white);
 	font-weight: 300;
 	transition: background-color 0.3s ease, color 0.3s ease;
 	font-size: 20px;
 }
 
 .home-button:hover {
-	background-color: white;
+	background-color: var(--white);
 	color: var(--black);
 	cursor: pointer;
 }
