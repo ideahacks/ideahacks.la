@@ -7,7 +7,7 @@
 
 .logo-img-header {
 	position: absolute;
-	top: 170px;
+	top: 196px;
 }
 
 .logo-img {
@@ -18,7 +18,6 @@
 
 .img-header {
 	width: 100%;
-	margin-top: 66px;
 	/*min-width: 800px;*/
 }
 
@@ -138,7 +137,7 @@ p {
 
 	.logo-img-header {
 		max-width: 80%;
-		top: 100px;
+		top: 126px;
 	}
 
 	.directors__teammates-container {
@@ -165,7 +164,7 @@ p {
 	}
 
 	.logo-img-header {
-		top: 80px;
+		top: 106px;
 	}
 }
 
