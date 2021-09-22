@@ -21,6 +21,7 @@
 	background-color: var(--white);
 	margin: 160px auto;
 	width: 80%;
+	border-radius: 0;
 }
 
 /* The Close Button */
