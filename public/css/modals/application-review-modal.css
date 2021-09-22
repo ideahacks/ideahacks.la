@@ -56,7 +56,6 @@
 
 .application-content {
 	padding-top: 48px;
-	padding-bottom: 92px;
 }
 
 .application-content > p,
@@ -64,11 +63,10 @@
 	margin: 4px 0px 16px;
 }
 
-/* Gets rid of giant empty black space
-   at bottom of last application content */
-.black-tab-container::after {
+/* Get rid of extra space at bottom of application content */
+.black-tab-container:last-child::after,
+.white-tab-container:last-child::after {
 	display: none;
-	height: 0;
 }
 
 p {
