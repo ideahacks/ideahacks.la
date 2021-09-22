@@ -25,6 +25,10 @@ h1 {
 	margin: 100px 15% 20px;
 }
 
+.response {
+	margin-top: 20px;
+}
+
 button {
 	background-color: var(--green);
 	padding: 10px 18px;
