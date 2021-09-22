@@ -2,19 +2,36 @@
  * Global stylesheet for form elements
  */
 
+ #application_logo {
+	position: absolute;
+	top: 170px;
+	left: 50%;
+	padding-left: 30px;
+	padding-right: 30px;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
+#intro_graphics {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+
 .ideahacks-form {
-	font-family: "Roboto Condensed";
+	font-family: "Roboto";
 }
 
 /* LABEL */
 .ideahacks-form label {
+	text-transform: capitalize;
 	text-align: center;
 	font-size: 18px;
 	line-height: 20px;
 	font-weight: normal;
 	margin-left: 5px;
 	margin-bottom: 5px;
-	color: #40698f;
 }
 
 /* INPUT */
