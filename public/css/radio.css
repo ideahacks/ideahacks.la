@@ -9,14 +9,15 @@
 .radio-outer-square {
 	width: 40px;
 	height: 40px;
-	border: 1px solid #efa516;
+	border: 1px solid var(--black);
 }
 
 .radio-outer-square.active .radio-inner-square {
 	width: 25px;
 	height: 25px;
 	margin: 7px;
-	background-color: #efa516;
+	background-color: var(--green);
+	border-radius: 4px;
 }
 
 .radio-button-group label {
