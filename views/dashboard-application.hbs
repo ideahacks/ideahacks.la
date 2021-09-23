@@ -20,7 +20,7 @@
 
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
-    <link rel='stylesheet' href='../css/dashboard-application.css' />
+    <link rel='stylesheet' href='../css/application.css' />
 
     <!-- SCRIPTS -->
     <script src='/js/dashboard-application.js?v=1.1'></script>
@@ -47,9 +47,11 @@
 
         {{else}}
 
-            <div class='main_header'>
-                <img id="application_logo" src="/img/application/appplicationlogo.png" alt="application logo">
-                <img id="intro_graphics" src="/img/application/application.png" alt="application graphics">
+            <div id="intro">
+                <div class="intro_view">
+                    <img id="application_logo" src="/img/application/applicationlogo.png" alt="application logo">
+                    <img id="intro_graphics" src="/img/application/application.png" alt="application graphics">
+                </div>
             </div>
 
             <div class="form">
@@ -125,7 +127,6 @@
                             <label>GITHUB</label>
                             <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
                         </div>
-
                         <div class='form-group col-md-5'>
                             <label>LINKEDIN</label>
                             <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
@@ -133,8 +134,7 @@
                         <div class='form-group col-md-5'>
                             <label>RESUME</label>
                             <span class="row"></span>
-                            <a href="https://forms.gle/UDU6GJmQ5hQ9ykNN7" target="_blank"><button class='file-upload'>
-                                    UPLOAD FILE </button></a>
+                            <a href="https://forms.gle/UDU6GJmQ5hQ9ykNN7" target="_blank"><button class='file-upload'> UPLOAD FILE </button></a>
                         </div>
                     </fieldset>
                 </div>
@@ -147,21 +147,22 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class='form-group col-sm-10 col-md-5'>
-                            <label>Will you have a teammate?*</label>
-                            <select class='form-control' name='hasTeam'>
-                                <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
-                                <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
-                            </select>
+                        <div class="row">
+                            <div class='form-group col-sm-10 col-md-6'>
+                                <label>WILL YOU HAVE A TEAMMATE?*</label>
+                                <select class='form-control' name='hasTeam'>
+                                    <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
+                                    <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
+                                </select>
+                                <label>IF SO, WHAT IS YOUR TEAMMATE'S EMAIL?</label>
+                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                            </div>
+                            <div class="team_icon col-sm-10 col-md-6">
+                                <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="70%">
+                            </div>
                         </div>
-                        <span class='row'></span>
-                        <div class='form-group col-md-5 col-sm-10'>
-                            <label>If so, what is your teammate's email?</label>
-                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                        </div>
-                        <img class="icon" src="/img/application/applicationicon.png">
                     </fieldset>
                 </div>
 
@@ -174,38 +175,42 @@
                     </div>
                     <fieldset>
                         <div class='form-group col-md-5 col-sm-10 short-answer'>
-                            <label>Enter your Skills and Experiences*</label>
+                            <label>ENTER YOUR SKILLS AND EXPEREINCES*</label>
                             <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
                         </div>
                         <div class='form-group col-md-5 col-sm-10 short-answer'>
-                            <label>Why do you want to participate in IDEAHacks?*</label>
+                            <label>WHY DO YOU WANT TO PARTICIPATE IN IDEAHACKS?*</label>
                             <textarea class='form-control textarea' name='reasonForParticipation' rows='5'>{{user.reasonForParticipation}}</textarea>
                         </div>
                         <div class='form-group col-md-10 col-sm-10 short-answer'>
-                            <label>Do you have an idea to hack for this year's theme?</label>
+                            <label>DO YOU HAVE AN IDEA TO HACK FOR THIS YEAR'S THEME?</label>
                             <label class='sublabel'>(It's okay if you don't yet!)</label>
-                            <textarea class='form-control textarea' name='themeIdea' placeholder='example: portable coffee maker' rows='5'>{{user.themeIdea}}</textarea>
+                            <textarea class='form-control textarea' name='themeIdea' placeholder='EXAMPLE: PORTABLE COFFEE MAKER' rows='5'>{{user.themeIdea}}</textarea>
                         </div>
-                        <span class='row'>
-                            <div class='form-check col-sm-10 col-md-5'>
-                                <label>Do you have any past hackathon experience?*</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}}>
-                                    <label class="form-check-label" for="hasPastHackathonExperience">YES</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}}>
-                                    <label class="form-check-label" for="hasPastHackathonExperience">NO</label>
-                                </div>
+                        <div class='form-check col-sm-10 col-md-5'>
+                            <div class="col-sm-5">
+
                             </div>
-                            <div class='form-group col-md-5 col-sm-10 short-answer'>
-                                <label style="text-align: left">If so, please share you experience with us.</label>
-                                <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
+                            <div class="col-sm-5">
+
                             </div>
-                        </span>
+                            <label>DO YOU HAVE ANY PAST HACKATHON EXPERIENCE?*</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}}>
+                                <label class="form-check-label yes-no" for="hasPastHackathonExperience">YES</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}}>
+                                <label class="form-check-label yes-no" for="hasPastHackathonExperience">NO</label>
+                            </div>
+                        </div>
+                        <div class='form-group col-md-5 col-sm-10 short-answer'>
+                            <label style="text-align: left">IF SO, PLEASE SHARE YOUR EXPERIENCE WITH US.</label>
+                            <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
+                        </div>
                         <div class='form-group col-md-10 col-sm-10 short-answer'>
                             <label>WHAT PARTS WOULD YOU LIKE TO SEE AT IDEAHACKS THIS YEAR?</label>
-                            <textarea class='form-control textarea' name='' rows='5'>{{user.}}</textarea>
+                            <textarea class='form-control textarea' placeholder="EXAMPLE: ARDUINO" name='desiredParts' rows='5'>{{user.desiredParts}}</textarea>
                         </div>
                     </fieldset>
                 </div>
@@ -218,18 +223,21 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-3 col-sm-10'>
-                            <label>Shirt Size*</label>
-                            <select class='form-control' name='shirtSize'>
-                                <option {{#if user.sizeSmall}} selected{{/if}}>S</option>
-                                <option {{#if user.sizeMedium}} selected{{/if}}>M</option>
-                                <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
-                                <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
-                            </select>
-                        </div>
-                        <div class='form-group col-md-10 col-sm-10 short-answer'>
-                            <label>ANY DIETARY RESTRICTIONS OR FOOD ALLERGIES?</label>
-                            <textarea class='form-control textarea' name='foodRestrictions' rows='5'>{{user.foodRestrictions}}</textarea>
+                        <div class="row">
+                            <div class='form-group col-md-6 col-sm-10'>
+                                <label>SHIRT SIZE*</label>
+                                <select class='form-control' name='shirtSize'>
+                                    <option {{#if user.sizeSmall}} selected{{/if}}>S</option>
+                                    <option {{#if user.sizeMedium}} selected{{/if}}>M</option>
+                                    <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
+                                    <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
+                                </select>
+                                <label>ANY DIETARY RESTRICTIONS OR FOOD ALLERGIES?</label>
+                                <textarea class='form-control textarea' name='foodRestrictions' rows='1'>{{user.foodRestrictions}}</textarea>
+                            </div>
+                            <div class='miscellaneous_icon col-md-4 col-sm-10 short-answer'>
+                                <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="70%">
+                            </div>
                         </div>
                     </fieldset>
                 </div>

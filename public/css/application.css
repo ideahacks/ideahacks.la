@@ -2,7 +2,7 @@
  * Global stylesheet for form elements
  */
 
- #application_logo {
+#application_logo {
 	position: absolute;
 	top: 170px;
 	left: 50%;
@@ -17,13 +17,77 @@
 	margin-bottom: 20px;
 }
 
+fieldset {
+	padding: 50px 0px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 
+.radio-input {
+	padding: 0px;
+	margin: 0px;
+}
 
+.yes-no {
+
+}
+
+.team_icon {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.miscellaneous_icon {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.form label {
+	padding-left: 5px;
+}
+
+.form input,
+.form input:focus,
+.form input[readonly] {
+	border-radius: 12px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.form select {
+	border-radius: 12px;
+	background-color: white;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.file-upload, button {
+	background-color: var(--green);
+	color: var(--white);
+	display: inline-block;
+	padding: 8px 12px;
+	cursor: pointer;
+	border-radius: 12px;
+	border: none;
+}
+
+/*
 .ideahacks-form {
 	font-family: "Roboto";
 }
 
-/* LABEL */
 .ideahacks-form label {
 	text-transform: capitalize;
 	text-align: center;
@@ -34,10 +98,9 @@
 	margin-bottom: 5px;
 }
 
-/* INPUT */
-.ideahacks-form input,
-.ideahacks-form input:focus,
-.ideahacks-form input[readonly] {
+.form input,
+.form input:focus,
+.form input[readonly] {
 	border-radius: 12px;
 	background-color: white;
 	width: 80%;
@@ -66,3 +129,4 @@ input[type="file"] {
 .ideahacks-form input::placeholder {
 	color: #f2ccb5;
 }
+*/
