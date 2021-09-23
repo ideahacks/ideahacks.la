@@ -25,15 +25,6 @@ fieldset {
 	flex-wrap: wrap;
 }
 
-.radio-input {
-	padding: 0px;
-	margin: 0px;
-}
-
-.yes-no {
-
-}
-
 .team_icon {
 	display: flex;
 	flex-wrap: wrap;
@@ -62,6 +53,10 @@ fieldset {
 	margin-bottom: 20px;
 }
 
+.form input .radio-input {
+	margin: 0px;
+}
+
 .form select {
 	border-radius: 12px;
 	background-color: white;
@@ -73,7 +68,8 @@ input[type="file"] {
 	display: none;
 }
 
-.file-upload, button {
+.file-upload,
+button {
 	background-color: var(--green);
 	color: var(--white);
 	display: inline-block;
