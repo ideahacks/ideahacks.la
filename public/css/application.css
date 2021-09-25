@@ -30,15 +30,14 @@ fieldset {
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: center;
-	margin-top: 25px;
+	padding-bottom: 30px;
 }
 
 .miscellaneous_icon {
 	display: flex;
 	flex-wrap: wrap;
-	align-content: center;
 	justify-content: center;
-	margin-top: 10px;
+	align-content: center;
 }
 
 .form label {
@@ -49,12 +48,22 @@ fieldset {
 .form input:focus,
 .form input[readonly] {
 	border-radius: 12px;
-	width: 100%;
 	margin-bottom: 20px;
+	display: inline-block;
 }
 
-.form input .radio-input {
-	margin: 0px;
+.form input {
+	margin-left: 10px;
+}
+
+.hack-experience {
+	align-content: flex-start;
+	justify-content: space-between;
+	padding: 0px;
+}
+
+.hack-experience {
+	padding: 0px;
 }
 
 .form select {
@@ -68,15 +77,24 @@ input[type="file"] {
 	display: none;
 }
 
-.file-upload,
 button {
 	background-color: var(--green);
 	color: var(--white);
-	display: inline-block;
+	display: flex;
 	padding: 8px 12px;
 	cursor: pointer;
 	border-radius: 12px;
 	border: none;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+}
+
+.submit button {
+	width: 30%;
+	justify-content: center;
 }
 
 /*

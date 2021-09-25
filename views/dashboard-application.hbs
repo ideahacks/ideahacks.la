@@ -63,20 +63,20 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>FIRST NAME*</label>
                             <input class='form-control' type='text' name='firstName' placeholder='First Name' value='{{user.firstName}}'>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>PHONE NUMBER*</label>
                             <input class='form-control' type='tel' name='phone' placeholder='(XXX) XXX - XXXX' value='{{user.phone}}'>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>LAST NAME*</label>
                             <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
                         </div>
 
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>EMAIL*</label>
                             <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
                         </div>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-10'>
+                        <div class='form-group col-md-10 col-sm-10 col-xs-10'>
                             <label>SCHOOL*</label>
                             <select class='form-control' name='school'>
                                 <option {{#if user.UCLA}} selected{{/if}}>University of California, Los Angeles</option>
@@ -107,11 +107,11 @@
                                 <option {{#if user.schoolOther}} selected{{/if}}>Other</option>
                             </select>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>MAJOR*</label>
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>YEAR*</label>
                             <select class='form-control' name='year'>
                                 <option {{#if user.yearFreshman}} selected{{/if}}>Freshman</option>
@@ -123,18 +123,18 @@
                                 <option {{#if user.yearOther}} selected{{/if}}>Other</option>
                             </select>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>GITHUB</label>
                             <input class='form-control' type='url' name='github' placeholder='GitHub' value='{{user.github}}'>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>LINKEDIN</label>
                             <input class='form-control' type='url' name='linkedin' placeholder='LinkedIn' value='{{user.linkedin}}'>
                         </div>
-                        <div class='form-group col-md-5'>
+                        <div class='form-group col-md-10 col-sm-10 col-xs-10'>
                             <label>RESUME</label>
                             <span class="row"></span>
-                            <a href="https://forms.gle/UDU6GJmQ5hQ9ykNN7" target="_blank"><button class='file-upload'> UPLOAD FILE </button></a>
+                            <a href="https://forms.gle/UDU6GJmQ5hQ9ykNN7" target="_blank" style="text-decoration: none;"><button class='file-upload'> UPLOAD FILE </button></a>
                         </div>
                     </fieldset>
                 </div>
@@ -147,21 +147,19 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class="row">
-                            <div class='form-group col-sm-10 col-md-6'>
-                                <label>WILL YOU HAVE A TEAMMATE?*</label>
-                                <select class='form-control' name='hasTeam'>
-                                    <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
-                                    <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
-                                </select>
-                                <label>IF SO, WHAT IS YOUR TEAMMATE'S EMAIL?</label>
-                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                                <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            </div>
-                            <div class="team_icon col-sm-10 col-md-6">
-                                <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="70%">
-                            </div>
+                        <div class='form-group col-sm-10 col-sx-10 col-md-5'>
+                            <label>WILL YOU HAVE A TEAMMATE?*</label>
+                            <select class='form-control' name='hasTeam'>
+                                <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
+                                <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
+                            </select>
+                            <label>IF SO, WHAT IS YOUR TEAMMATE'S EMAIL?</label>
+                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                        </div>
+                        <div class="team_icon col-sm-10 col-sx-10 col-md-5">
+                            <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="50%">
                         </div>
                     </fieldset>
                 </div>
@@ -174,39 +172,39 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-5 col-sm-10 short-answer'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-12 short-answer'>
                             <label>ENTER YOUR SKILLS AND EXPEREINCES*</label>
                             <textarea class='form-control textarea' name='skillsAndExperience' rows='5'>{{user.skillsAndExperience}}</textarea>
                         </div>
-                        <div class='form-group col-md-5 col-sm-10 short-answer'>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-12 short-answer'>
                             <label>WHY DO YOU WANT TO PARTICIPATE IN IDEAHACKS?*</label>
                             <textarea class='form-control textarea' name='reasonForParticipation' rows='5'>{{user.reasonForParticipation}}</textarea>
                         </div>
-                        <div class='form-group col-md-10 col-sm-10 short-answer'>
+                        <div class='form-group col-md-10 col-sm-10 col-xs-12 short-answer'>
                             <label>DO YOU HAVE AN IDEA TO HACK FOR THIS YEAR'S THEME?</label>
                             <label class='sublabel'>(It's okay if you don't yet!)</label>
                             <textarea class='form-control textarea' name='themeIdea' placeholder='EXAMPLE: PORTABLE COFFEE MAKER' rows='5'>{{user.themeIdea}}</textarea>
                         </div>
-                        <div class='form-check col-sm-10 col-md-5'>
-                            <label>DO YOU HAVE ANY PAST HACKATHON EXPERIENCE?*</label>
-                            <div class="yes-no row">
-                                <div class="form-check form-check-inline">
-                                    <label class="form-check-label" for="yes">YES
-                                    <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="yes">
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <label class="form-check-label" for="no">NO
-                                    <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="no">
-                                    </label>
-                                </div>
+                        <div class="hack-experience col-xs-10 col-sm-10 col-md-10">
+                            <div class="col-xs-12 col-sm-8 col-md-4">
+                                <label>DO YOU HAVE ANY PAST HACKATHON EXPERIENCE?*</label>
+                            </div>
+                            <div class="yes-no col-xs-12 col-sm-4 col-md-2">
+                                <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="yes">
+                                <span class="checkmark"></span>
+                                <label class="form-check-label" for="yes">YES
+                                </label>
+                                <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="no">
+                                <span class="checkmark"></span>
+                                <label class="form-check-label" for="no">NO
+                                </label>
+                            </div>
+                            <div class='form-group short-answer col-xs-12 col-sm-4 col-md-6'>
+                                <label style="text-align: left">IF SO, PLEASE SHARE YOUR EXPERIENCE WITH US.</label>
+                                <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
                             </div>
                         </div>
-                        <div class='form-group col-md-5 col-sm-10 short-answer'>
-                            <label style="text-align: left">IF SO, PLEASE SHARE YOUR EXPERIENCE WITH US.</label>
-                            <textarea class='form-control textarea' name='pastHackathonExperience' rows='3'>{{user.pastHackathonExperience}}</textarea>
-                        </div>
-                        <div class='form-group col-md-10 col-sm-10 short-answer'>
+                        <div class='form-group col-md-10 col-sm-10 col-xs-12 short-answer'>
                             <label>WHAT PARTS WOULD YOU LIKE TO SEE AT IDEAHACKS THIS YEAR?</label>
                             <textarea class='form-control textarea' placeholder="EXAMPLE: ARDUINO" name='desiredParts' rows='5'>{{user.desiredParts}}</textarea>
                         </div>
@@ -221,31 +219,28 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class="row">
-                            <div class='form-group col-md-6 col-sm-10'>
-                                <label>SHIRT SIZE*</label>
-                                <select class='form-control' name='shirtSize'>
-                                    <option {{#if user.sizeSmall}} selected{{/if}}>S</option>
-                                    <option {{#if user.sizeMedium}} selected{{/if}}>M</option>
-                                    <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
-                                    <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
-                                </select>
-                                <label>ANY DIETARY RESTRICTIONS OR FOOD ALLERGIES?</label>
-                                <textarea class='form-control textarea' name='foodRestrictions' rows='1'>{{user.foodRestrictions}}</textarea>
-                            </div>
-                            <div class='miscellaneous_icon col-md-4 col-sm-10 short-answer'>
-                                <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="70%">
-                            </div>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
+                            <label>SHIRT SIZE*</label>
+                            <select class='form-control' name='shirtSize'>
+                                <option {{#if user.sizeSmall}} selected{{/if}}>S</option>
+                                <option {{#if user.sizeMedium}} selected{{/if}}>M</option>
+                                <option {{#if user.sizeLarge}} selected{{/if}}>L</option>
+                                <option {{#if user.sizeXLarge}} selected{{/if}}>XL</option>
+                            </select>
+                            <label>ANY DIETARY RESTRICTIONS OR FOOD ALLERGIES?</label>
+                            <textarea class='form-control textarea' name='foodRestrictions' rows='1'>{{user.foodRestrictions}}</textarea>
+                        </div>
+                        <div class="miscellaneous_icon col-md-5 col-sm-10 col-xs-10">
+                            <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="50%">
                         </div>
                     </fieldset>
                 </div>
-
-                <!-- BUTTONS -->
-                <div class='buttons row'>
-                    <button class='submit-application'>SUBMIT</button>
-                </div>
-                <p class="submit-message" style='color: transparent;'></p>
             </div>
+            <!-- BUTTONS -->
+            <div class='submit'>
+                <button>SUBMIT</button>
+            </div>
+            <p class="submit-message" style='color: transparent;'></p>
         {{/if}}
     </div>
 </body>
