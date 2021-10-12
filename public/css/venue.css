@@ -1,5 +1,5 @@
 .top-container {
-	background-color: rgb(221, 128, 100);
+	background-color: rgb(25,26,27);
 	padding-bottom: 50px;
 	padding-left: 65px;
 	padding-right: 65px;
@@ -21,7 +21,7 @@
 	background-color: white;
 	overflow: hidden;
 	padding: 0px 60px;
-	display: none;
+	display: block;
 }
 
 .small-container {
