@@ -21,6 +21,34 @@
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
     <link rel="stylesheet" type='text/css' href="/css/index.css">
 
+    <!-- ANNOUNCEMENT STYLES -->
+    <style>
+        #announcement {
+            position: fixed;
+            max-width: 1280px;
+            z-index: 20;
+            padding: 20px 50px;
+            background-color: #191A1B;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            color: white;
+        }
+
+        #announcement #close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        #announcement p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #announcement strong {
+            color: #619B83;
+        }
+    </style>
+
     <!-- SCRIPTS -->
     <script src='/js/navbar-scroll.js'></script>
     <script src='/js/index.js'></script>
@@ -32,6 +60,21 @@
         <!-- NAVBAR -->
 
         {{> navbar }}
+
+        <!-- ANNOUNCEMENT -->
+        <div id="announcement" class="container-fluid" style="">
+            <span id="close" onclick="$(this).parent().hide()">
+                <span class="glyphicon glyphicon-remove"></span>
+            </span>
+            <p>
+                Looking for information about our upcoming IDEAHacks? This year,
+                the hackathon will be taking place <strong>in-person</strong>
+                from <strong>1/14/2022 to 1/16/2022</strong>.
+                <br><br>
+                Our website for this year is still under construction, but stay 
+                tuned for updates coming soon!
+            </p>
+        </div>
 
         <!-- BANNER -->
 
