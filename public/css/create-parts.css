@@ -52,10 +52,3 @@ textarea {
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
-
-@media (max-width: 767px) {
-	.background {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-}
