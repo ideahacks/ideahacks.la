@@ -16,6 +16,7 @@ label {
 	height: 30px;
 	border: 1px solid var(--black);
 	border-radius: 10px;
+	font-size: 14px;
 	color: var(--black);
 }
 
@@ -30,6 +31,7 @@ textarea {
 	width: 90%;
 	border-radius: 10px;
 	border: 1px solid var(--black);
+	font-size: 14px;
 	color: var(--black);
 }
 
