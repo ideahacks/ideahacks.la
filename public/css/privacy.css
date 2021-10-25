@@ -3,7 +3,7 @@
 	padding: 50px;
 }
 
-.white-tab-container::after {
+.black-tab-container::after {
 	display: none;
 }
 
