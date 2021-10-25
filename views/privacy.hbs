@@ -27,26 +27,29 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class="houseline"></div>
-
-        <div class="background theme-yellow col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-            <h1>privacy policy</h1>
-            <div class="text-box">
-                <p>
-                    When you log in with Google, the only information we take is your email.
-                    We also request access to your profile so that, in the future, we can use that
-                    information to help fill out your application for you. This isn't implemented yet,
-                    so although we request it, we don't touch your profile information.
-                    <br><br>
-                    We use your email purely for identifying your account and contacting you. We do not
-                    share your email or other information with anyone outside of the IDEA Hacks organization.
-                    If an occasion comes up where we would need to share some of your information (e.g. a
-                    resume book for sponsors), we will get your consent before sharing it.
-                    <br><br>
-                    If you would like to verify what information we collect from your Google profile,
-                    check out our source code in the <code>ideahacks/ideahacks.la</code> repository on GitHub.
-                </p>
+        <div class="white-tab-container privacy-container">
+            <div>
+                <div>
+                    <h1>Privacy Policy</h1>
+                </div>
             </div>
+
+            <p>
+                When you log in with Google, the only information we take is your email address.
+                We also request access to your profile so that, in the future, we can use that
+                information to help fill out your application for you. This isn't implemented yet,
+                so although we request it, we don't touch your profile information.
+                <br><br>
+                We use your email purely for identifying your account and contacting you. We store
+                your email in our hosted MongoDB Atlas database and provide it to SendGrid, our
+                mailing provider, to send you a verification email. If you submit a resume, it may
+                be included in a resume book which we share with sponsors. We share your information with
+                no one else outside of the IDEA Hacks organization. If an occasion comes up where we
+                would need to share some of your other information, we will get your consent before sharing it.
+                <br><br>
+                If you would like to verify what information we collect from your Google profile,
+                check out our source code in the <code>ideahacks/ideahacks.la</code> repository on GitHub.
+            </p>
         </div>
     </div>
 
