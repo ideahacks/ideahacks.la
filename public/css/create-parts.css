@@ -1,14 +1,3 @@
-h1 {
-	font-family: "Source Code Pro", monospace;
-	color: #50b5dd;
-	font-weight: bold;
-	font-size: 52px;
-
-	display: block;
-	padding-top: 100px;
-	margin-bottom: 30px;
-}
-
 form {
 	margin-bottom: 10px;
 }
@@ -24,41 +13,42 @@ label {
 .ideahacks-form select:focus {
 	max-width: 300px;
 	width: 90%;
-	height: 24px;
-	border: 1px solid #2b2b2b;
+	height: 30px;
+	border: 1px solid var(--black);
 	border-radius: 10px;
+	color: var(--black);
 }
 
-.background {
+.part-creation-container {
 	position: relative;
-	margin: 0px auto 100px;
-	border-radius: 10px;
+	margin-top: 100px;
 	padding: 20px 0px;
-	max-width: 700px;
 }
 
 textarea {
 	max-width: 400px;
 	width: 90%;
 	border-radius: 10px;
-	border: 1px solid #2b2b2b;
+	border: 1px solid var(--black);
+	color: var(--black);
 }
 
 .submit-button {
 	padding: 10px 20px;
-	background-color: #50b5dd;
-	color: white;
+	background-color: var(--green);
+	color: var(--white);
 	border: none;
 	border-radius: 10px;
 }
 
 .submit-button:hover {
-	background-color: #357893;
+	background-color: var(--white);
+	color: var(--black);
 	transition: 0.3s ease;
 }
 
 #error-message {
-	color: #e1489a;
+	color: var(--red);
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
