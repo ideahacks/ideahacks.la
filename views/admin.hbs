@@ -16,6 +16,9 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/css/admin.css" />
@@ -43,7 +46,7 @@
                             <h3 class="mailing-type">{{ this.name }}</h3>
                             <div class="mailing-address-container">
                                 <button class="glyphicon glyphicon-copy" onclick="CopyToClipboard(&quot; {{this.list}}&quot;)"></button>
-                                <div class="mailing-address-list" id="mailing-address-text">
+                                <div class="mailing-address-list">
                                     {{#each this.list }}
                                         <p>{{ this }}</p>
                                     {{/each}}

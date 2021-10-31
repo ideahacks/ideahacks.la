@@ -1,13 +1,20 @@
 /*--------------- MAILING LISTS -----------------*/
-h3 {
+
+head {
 	font-family: "Source Code Pro", monospace;
+}
+
+.mailing-address-list {
+	font-size: 14px;
+	color: var(--black);
+	background-color: var(--black);
 }
 
 #mailing-lists {
 	font-family: "Source Code Pro", monospace;
 	font-weight: bold;
 	font-size: 52px;
-	color: #50b5dd;
+	color: #619b83;
 	margin: 100px auto 20px;
 }
 
@@ -40,6 +47,7 @@ h3 {
 	position: relative;
 	text-align: center;
 
+	color: white;
 	background-color: white; /*backup*/
 	float: left;
 	width: calc(25% - 2vw);
@@ -49,16 +57,16 @@ h3 {
 
 /* Different color for each mailing list */
 .column:nth-child(1) {
-	background-color: #50b5dd !important;
+	background-color: #78b0c0 !important;
 }
 .column:nth-child(2) {
-	background-color: #bddebb !important;
+	background-color: #619b83 !important;
 }
 .column:nth-child(3) {
-	background-color: #e8cc83 !important;
+	background-color: #c86b6b !important;
 }
 .column:nth-child(4) {
-	background-color: #eab664 !important;
+	background-color: #ccab45 !important;
 }
 
 .mailing-list .mailing-type {
@@ -66,13 +74,14 @@ h3 {
 }
 
 .mailing-list .mailing-address-container {
-	background-color: #ffe195;
+	background-color: black;
 	margin: 8%;
 	border-radius: 1rem;
 	overflow: auto;
 }
 
 .glyphicon {
+	color: white;
 	background: transparent;
 	text-shadow: none;
 	border: none;
