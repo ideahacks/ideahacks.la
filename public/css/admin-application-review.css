@@ -3,15 +3,26 @@
 		font-size: 60px;
 	}
 }
-.background {
-	background-color: #fbf3f0;
+
+h1,
+h4 {
+	text-transform: uppercase;
 }
 
+/* BANNER */
 .banner {
-	padding-top: 130px;
+	padding-top: 117px;
 	margin: auto;
 }
 
+.banner-underline {
+	margin-top: 12px;
+
+	border-top: 2px solid var(--white);
+	width: 15%;
+}
+
+/* GENERIC STYLES */
 .container {
 	padding: 20px 0;
 }
@@ -39,14 +50,13 @@ input {
 }
 
 .stats-box {
-	background-color: #2b2b2b;
-	color: white;
+	background-color: var(--white);
+	color: var(--black);
 	text-align: center;
 	display: inline-block;
 	padding: 10px;
 	width: 190px;
 	margin: 10px;
-	border-radius: 10px;
 }
 
 .stats-box h1 {
@@ -55,32 +65,37 @@ input {
 	font-size: 60px;
 	font-weight: bold;
 	padding-bottom: 0px;
-	color: #2b2b2b;
+	color: var(--white);
 }
 
 .stats-box h4 {
-	font-family: "Source Code Pro", monospace;
+	color: var(--white);
+
+	font-family: "Roboto", monospace;
 	font-size: 20px;
+	font-weight: bold;
+
 	padding-top: 0px;
-	color: #2b2b2b;
 }
 
 .number-applications-box h1 {
-	color: #ffffff;
+	color: var(--black);
 }
 
 .number-applications-box h4 {
-	color: #ffffff;
+	color: var(--black);
 }
 
 /* APPLICATION LIST */
 .application-list {
 	list-style: none;
 	padding: 0 0 70px;
+
+	width: 80%;
 }
 
 .application-list p {
-	color: #2b2b2b;
+	color: var(--white);
 }
 
 .application {
@@ -88,8 +103,7 @@ input {
 	margin: 20px 0;
 	color: white;
 	font-size: 17px;
-	font-family: "Source Code Pro", monospace;
-	border-radius: 10px;
+	font-family: "Roboto", monospace;
 }
 
 .application:hover {
@@ -97,33 +111,39 @@ input {
 }
 
 .application p {
-	margin: 0;
+	margin: 0 auto;
 	font-size: 16px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
 }
 
 .application.accepted,
 .accepted-box {
-	background-color: #bddebb;
+	background-color: var(--green);
 }
 
 .application.pending,
 .pending-box {
-	background-color: #50b5dd;
+	background-color: var(--blue);
 }
 
 .application.rejected,
 .rejected-box {
-	background-color: #eab664;
+	background-color: var(--red);
 }
 
 .application.waitlisted,
 .waitlisted-box {
-	background-color: #e8cc83;
+	background-color: var(--yellow);
 }
 
 .application .year,
 .application .school {
 	text-align: center;
+	vertical-align: middle;
 }
 
 .application .application-status {
@@ -152,10 +172,6 @@ input {
 	}
 	.stats-box {
 		padding: 10px 0;
-		margin: 10px;
-	}
-	.container {
-		padding: 0px;
 		margin: 10px;
 	}
 	.stats-box h1 {

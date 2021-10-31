@@ -25,14 +25,15 @@
     <script src='/js/application-review-modal.js'></script>
     <script src='/js/filter.js'></script>
 </head>
-<body class='background'>
+<body>
     <div class='wrapper'>
         <!-- NAVBAR -->
         {{> navbar }}
 
         <!-- BANNER -->
         <div class='text-center'>
-            <h1 class='banner'>APPLICATIONS</h1>
+            <h1 class='banner'>Application Review</h1>
+            <hr class='banner-underline'>
         </div>
 
         <!-- STATS -->
@@ -40,11 +41,6 @@
             <div class='stats-box number-applications-box'>
                 <h1 class='number-applications'>{{numberApplications}}</h1>
                 <h4>Applications</h4>
-            </div>
-
-            <div class='stats-box pending-box'>
-                <h1 class='number-pending'>{{numberPending}}</h1>
-                <h4>Pending</h4>
             </div>
 
             <div class='stats-box accepted-box'>
@@ -61,6 +57,11 @@
                 <h1 class='number-rejected'>{{numberRejected}}</h1>
                 <h4>Rejected</h4>
             </div>
+
+            <div class='stats-box pending-box'>
+                <h1 class='number-pending'>{{numberPending}}</h1>
+                <h4>Pending</h4>
+            </div>
         </div>
 
         <!-- FILTER -->
@@ -72,7 +73,7 @@
                 <li class='{{ this.email }} {{this.applicationStatus}} container-fluid application' name='{{this.email}}'>
                     <div class='row'>
                         <div class='col-sm-3 col-xs-7'>
-                            <p class='filter-key'>{{ this.firstName }} {{ this.lastName}}</p>
+                            <p class='filter-key full-name'>{{ this.firstName }} {{ this.lastName}}</p>
                         </div>
                         <div class='col-sm-3'>
                             <p class='filter-key year'>{{#if this.year}}{{this.year}}{{/if}}</p>

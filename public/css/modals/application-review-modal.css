@@ -1,5 +1,20 @@
-.modal-content {
-	background-color: #fafafa;
+/* FULL MODAL */
+.white-tab-container > div:first-child,
+.black-tab-container > div:first-child {
+	transform: translateY(-99%);
+}
+
+/* RADIO BUTTONS */
+.radio-outer-square {
+	width: 30px;
+	height: 30px;
+	border-radius: 8px;
+}
+
+.radio-outer-square.active .radio-inner-square {
+	width: 16px;
+	height: 16px;
+	margin: 6px;
 }
 
 .applicant-name {
@@ -8,79 +23,73 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #50b5dd;
+	color: var(--green);
 }
 
-.applicant-contact {
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.contact-item-wrapper span.fa {
-	margin: 0 10px;
-}
-
-.application-section {
-	margin: 30px 0 0;
-}
-
-.application-section .section-header {
-	font-size: 30px;
-}
-
-.application-section h2 {
+/* APPLICANT INFO SECTIONS */
+/* NAME */
+.application-name {
+	color: var(--green);
 	font-size: inherit;
-	color: #efa516;
-	width: calc(100% - 48px);
-	float: left;
+	font-weight: bold;
+
 	margin-top: 0;
+	margin-bottom: 48px;
+
+	width: 100%;
+	text-align: center;
 }
 
-.application-section i {
-	color: #50b5dd;
-	width: 48px;
-	float: left;
+.applicant-name-underline {
+	margin-top: 4px;
+	margin-bottom: 32px;
+
+	border-bottom: 2px solid var(--black);
+	width: 15%;
 }
 
+.application-section h1,
 .application-section p {
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 0px 50px;
-	margin: 0 0 5px;
-	color: #50b5dd;
+}
+
+.application-content {
+	padding-top: 48px;
+}
+
+.application-content > p,
+.content-block {
+	margin: 4px 0px 16px;
+}
+
+/* Get rid of extra space at bottom of application content */
+.black-tab-container:last-child::after,
+.white-tab-container:last-child::after {
+	display: none;
+}
+
+p {
+	margin-bottom: 0px;
 }
 
 .application-section span {
 	font-weight: normal;
 	text-transform: none;
 	padding: 0 0px;
-	color: #2b2b2b;
-}
-
-.hackathon-information span {
-	padding: 0;
 }
 
 /* STATUS CONTROLS */
 .status-controls {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 30px 20px 15px;
-}
-
-.contact-wrapper {
-	text-align: center;
-}
-
-.contact-item-wrapper {
-	display: inline-block;
-	margin: auto;
+	justify-content: center;
+	padding-bottom: 92px;
 }
 
 @media (max-width: 768px) {
-	.applicant-name {
-		margin-top: 0;
+	.applicant-name-underline {
+		width: 40%;
 	}
 
 	.applicant-contact span[name="phone"] {
@@ -91,10 +100,6 @@
 		margin: 0 5px;
 	}
 
-	.application-section {
-		margin: 10px 0;
-	}
-
 	.application-section .section-header {
 		font-size: 20px;
 	}
@@ -103,17 +108,8 @@
 		width: 32px;
 	}
 
-	.application-section h2 {
-		width: calc(100% - 32px);
-	}
-
 	.application-section p {
 		padding: 0px 10px;
-		margin: 0px 5px;
-	}
-
-	.status-controls {
-		padding: 10px 10px;
 	}
 }
 

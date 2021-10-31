@@ -2,10 +2,9 @@
 <link rel='stylesheet' type='text/css' href='/css/navbar.css' />
 <script src='/js/navbar.js'></script>
 
+<div class="navbar-filler"></div>
 <div class='myNavbar'>
-    <div class='logo-container'>
-        <a href='/'><img src='/img/navbar-icon.png' width='170px' style='display: inline-block;' /></a>
-    </div>
+    <a href='/'><img src='/img/navbar/navbaricon.svg' style='display: inline-block;' /></a>
 
     <div class="navbar-icon" onclick="animateNavbar(this)">
         <div class="bar1"></div>
@@ -17,37 +16,68 @@
     <ul class='navbar-list' id='navbar-list'>
         {{#if onAdmin}}
 
-            <!-- APPLICATION REVIEW -->
-            <li><a href='/admin/application-review'>Application Review</a></li>
+            {{!-- Uncomment ahead of hackathon start --}}
+            {{!-- <!-- TEAMS -->
+            <li><a href='/admin/teams'>Teams</a></li>
+
+            <!-- TEAM CREATION -->
+            <li><a href='/admin/teams/create'>Team Creation</a></li>
+
+            <!-- PARTS BY TEAM -->
+            <li><a href='/admin/parts'>Parts by Team</a></li> --}}
+
+            {{!-- Comment after applications close --}}
+            <!-- PARTS CREATION -->
+            <li><a href='/admin/create'>Parts Creation</a></li>
+
+            <!-- APPLICATIONS -->
+            <li><a href='/admin/application-review'>Applications</a></li>
 
             <!-- MAILING LISTS -->
             <li><a href='/admin'>Mailing Lists</a></li>
 
             <!-- DASHBOARD -->
-            <li><a href='/dashboard'><button>Me</button></a></li>
+            <li><a href='/dashboard'>Me</a></li>
+
+            <!-- LOG OUT -->
+            <li><a href='/logout'><button>Log Out</button></a></li>
 
         {{/if}} {{#if onDashboard}}
 
+            {{!-- Comment after applications close --}}
             <!-- APPLICATION -->
-            {{!-- <li><a href='/dashboard/application'>Application</a></li> --}}
+            <li><a href='/dashboard/application'>Application</a></li>
 
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
+            {{!-- Uncomment ahead of hackathon start --}}
+            {{!-- <!-- PARTS -->
+            <li><a href="/dashboard/parts">Parts</a></li>
+
+            <!-- MY PARTS -->
+            <li><a href="/dashboard/me/parts">My Parts</a></li>
+
+            <!-- MY TEAM -->
+            <li><a href="/dashboard/me/parts">My Team</a></li>
 
             <!-- RESOURCES -->
-            <li><a href="/dashboard/resources">Resources</a></li>
+            <li><a href="/dashboard/resources">Resources</a></li> --}}
 
             <!-- DASHBOARD -->
-            <li><a href='/dashboard/me'><button>Me</button></a></li>
+            <li><a href='/dashboard/me'>Me</a></li>
+
+            <!-- LOG OUT -->
+            <li><a href='/logout'><button>Log Out</button></a></li>
 
         {{/if}} {{#if onMain}}
 
             <!-- ABOUT -->
             <div class='dropdown'>
                 <li><a href='/#about'>About</a></li>
-                <div class='dropdown-content'>
-                    <li><a href='/team'>Team</a></li>
-                    <li><a href='/history'>History</a></li>
+                <div>
+                    <div class='dropdown-content'>
+                        <li><a href='/venue'>Venue</a></li>
+                        <li><a href='/team'>Team</a></li>
+                        <li><a href='/history'>History</a></li>
+                    </div>
                 </div>
             </div>
 
@@ -60,13 +90,13 @@
             <!-- SPONSORS -->
             <li><a href='/#sponsors'>Sponsors</a></li>
 
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
-
             {{#if authenticated}}
 
                 <!-- DASHBOARD -->
-                <li><a href='/dashboard/me'><button>Me</button></a></li>
+                <li><a href='/dashboard/me'>Me</a></li>
+
+                <!-- LOG OUT -->
+                <li><a href='/logout'><button>Log Out</button></a></li>
 
             {{else}}
 
@@ -82,8 +112,22 @@
     <ul class='mobile-navbar-list' id='mobile-navbar-list'>
         {{#if onAdmin}}
 
-            <!-- APPLICATION REVIEW -->
-            <li><a href='/admin/application-review'>Application Review</a></li>
+            {{!-- Uncomment ahead of hackathon start --}}
+            {{!-- <!-- TEAMS -->
+            <li><a href='/admin/teams'>Teams</a></li>
+
+            <!-- TEAM CREATION -->
+            <li><a href='/admin/teams/create'>Team Creation</a></li>
+
+            <!-- PARTS BY TEAM -->
+            <li><a href='/admin/parts'>Parts by Team</a></li> --}}
+
+            {{!-- Comment after applications close --}}
+            <!-- PARTS CREATION -->
+            <li><a href='/admin/create'>Parts Creation</a></li>
+
+            <!-- APPLICATIONS -->
+            <li><a href='/admin/application-review'>Applications</a></li>
 
             <!-- MAILING LISTS -->
             <li><a href='/admin'>Mailing Lists</a></li>
@@ -91,19 +135,33 @@
             <!-- DASHBOARD -->
             <li><a href='/dashboard'>Me</a></li>
 
+            <!-- LOG OUT -->
+            <li><a href='/logout'><button>Log Out</button></a></li>
+
         {{/if}} {{#if onDashboard}}
 
+            {{!-- Comment after applications close --}}
             <!-- APPLICATIONS -->
-            {{!-- <li><a href='/dashboard/application'>Application</a></li> --}}
+            <li><a href='/dashboard/application'>Application</a></li>
 
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
+            {{!-- Uncomment ahead of hackathon start --}}
+            {{!-- <!-- PARTS -->
+            <li><a href="/dashboard/parts">Parts</a></li>
+
+            <!-- MY PARTS -->
+            <li><a href="/dashboard/me/parts">My Parts</a></li>
+
+            <!-- MY TEAM -->
+            <li><a href="/dashboard/me/parts">My Team</a></li>
 
             <!-- RESOURCES -->
-            <li><a href="/dashboard/resources">Resources</a></li>
+            <li><a href="/dashboard/resources">Resources</a></li> --}}
 
             <!-- DASHBOARD -->
             <li><a href='/dashboard/me'>Me</a></li>
+
+            <!-- LOG OUT -->
+            <li><a href='/logout'><button>Log Out</button></a></li>
 
         {{/if}} {{#if onMain}}
 
@@ -111,6 +169,7 @@
             <div class='responsive-dropdown'>
                 <li><a href='/#about'>About</a><span class='glyphicon glyphicon-chevron-down' id="dropdown-arrow" onclick="toggleResponsiveActive()"></span></li>
                 <div class='responsive-dropdown-content' id='responsive-content'>
+                    <li><a href='/venue'>Venue</a></li>
                     <li><a href='/team'>Team</a></li>
                     <li><a href='/history'>History</a></li>
                 </div>
@@ -125,18 +184,18 @@
             <!-- SPONSORS -->
             <li><a href='/#sponsors'>Sponsors</a></li>
 
-            <!-- BOXES -->
-            <li><a href='/boxes'>Boxes</a></li>
-
             {{#if authenticated}}
 
                 <!-- DASHBOARD -->
                 <li><a href='/dashboard/me'>Me</a></li>
 
+                <!-- LOG OUT -->
+                <li><a href='/logout'><button>Log Out</button></a></li>
+
             {{else}}
 
                 <!-- LOGIN -->
-                <li><a href="/login">Log In</a></li>
+                <li><a href="/login"><button>Log In</button></a></li>
 
             {{/if}}
 

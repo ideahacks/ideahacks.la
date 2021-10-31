@@ -1,5 +1,5 @@
 <div id="myModal" class="modal ideahacks-form">
-    <div class="modal-content container-fluid">
+    <div class="modal-content">
         <!-- NAME -->
         <h2 class='ucla-blue applicant-name'><span name='firstName'></span> <span name='lastName'></span></h2>
 
@@ -12,7 +12,7 @@
         </p>
 
         <!-- STATUS CONTROLS -->
-        <div class='status-controls text-center'>
+        <div class='application-section status-controls text-center'>
             <div class='radio-button-group'>
                 <div class='radio-outer-square'>
                     <div class='radio-inner-square'></div>
@@ -34,94 +34,103 @@
                 </div><label>Rejected</label>
             </div>
         </div>
+
         <!-- REAL AND HIDDEN RADIO BUTTONS -->
         <div class='row' style='display: none;'>
-            <div class='col-md-12'>
+            <fieldset class='col-md-12'>
                 <input type='radio' name='application-status-radio' value='rejected' />
                 <input type='radio' name='application-status-radio' value='pending' />
                 <input type='radio' name='application-status-radio' value='accepted' />
                 <input type='radio' name='application-status-radio' value='waitlisted' />
+            </fieldset>
+        </div>
+
+        <!-- CONTACT INFO (PERSONAL) -->
+        <div class='black-tab-container application-section'>
+            <div class="section-header clearfix">
+                <div>
+                    <h1>Personal</h1>
+                </div>
             </div>
+            <fieldset class="application-content">
+                <p class="col-sm-6">EMAIL: <span name='email'></span></p>
+                <p class="col-sm-6">PHONE NUMBER: <span name='phone'></span></p>
+            </fieldset>
         </div>
 
         <!-- EDUCATIONAL INFORMATION -->
-        <div class='application-section'>
+        <div class='white-tab-container application-section'>
             <div class="section-header clearfix">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                <h2>Education Information</h2>
+                <div>
+                    <h1>Education</h1>
+                </div>
             </div>
-            <fieldset>
-                <p class='col-sm-12'>School: <span name='school'></span></p>
-                <p class='col-sm-5'>Major: <span name='major'></span></p>
-                <p class='col-sm-5'>Year: <span name='year'></span></p>
-                <p class='col-sm-5'>Github: <a name='github-anchor' href='' target='_blank'><span name='github'></span></a></p>
-                <p class='col-sm-6'>LinkedIn: <a name='linkedin-anchor' href='' target='_blank'><span name='linkedin'></span></a></p>
-            </fieldset>
+            <div>
+                <fieldset class="application-content">
+                    <p class='col-sm-12'>School: <span name='school'></span></p>
+                    <p class='col-sm-6'>Major: <span name='major'></span></p>
+                    <p class='col-sm-6'>Year: <span name='year'></span></p>
+                    <p class='col-sm-6'>Github: <a name='github-anchor' href='' target='_blank'><span name='github'></span></a></p>
+                    <p class='col-sm-6'>LinkedIn: <a name='linkedin-anchor' href='' target='_blank'><span name='linkedin'></span></a></p>
+                </fieldset>
+            </div>
         </div>
 
         <!-- TEAM INFORMATION -->
-        <div class='application-section'>
+        <div class='black-tab-container application-section'>
             <div class="section-header clearfix">
-                <i class="fa fa-users" aria-hidden="true"></i>
-                <h2>Team Information</h2>
+                <div>
+                    <h1>Team Info</h1>
+                </div>
             </div>
-            <fieldset>
-                <p>Has a team? <span name='hasTeam'></span></p>
-                {{!-- <p>Teammate Names:</p>
-                <p><span name='teammates_names' class='ucla-gold' style='padding: 0;'></span></p> --}}
-                <p>Teammate Emails:</p>
-                <p><span name='teammates' class='ucla-gold' style='padding: 0;'></span></p>
+            <fieldset class="application-content">
+                <p class="col-sm-12">Has a team? <span name='hasTeam'></span></p>
+                <p class="col-sm-12">Teammate Emails:<span name='teammates' class='ucla-gold' style='padding: 0;'></span></p>
             </fieldset>
         </div>
 
-        <!-- HACKATHON INFORMATION -->
-        <div class='application-section hackathon-information'>
+        <!-- HACKATHON INFORMATION (SHORT ANSWER) -->
+        <div class='white-tab-container application-section'>
             <div class="section-header clearfix">
-                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                <h2>Short Answer Questions</h2>
+                <div>
+                    <h1>Short Answer</h1>
+                </div>
             </div>
-            <fieldset>
-                <p>Skills and Experiences:</p>
-                <p><span name='skillsAndExperience'></span></p>
-
-                <p>Past Hackathon Experience:</p>
-                <p><span name='pastHackathonExperience'></span></p>
-
-                <p>Why They Want to Participate in Idea Hacks:</p>
-                <p><span name='reasonForParticipation'></span></p>
-
-                <p>Their Idea to Hack on:</p>
-                <p><span name='themeIdea'></span></p>
+            <fieldset class="application-content">
+                <div class="content-block col-sm-12">
+                    <p>Skills and Experiences:</p>
+                    <p><span name='skillsAndExperience'></span></p>
+                </div>
+                <div class="content-block col-sm-12">
+                    <p>Past Hackathon Experience:</p>
+                    <p><span name='pastHackathonExperience'></span></p>
+                </div>
+                <div class="content-block col-sm-12">
+                    <p>Why They Want to Participate in Idea Hacks:</p>
+                    <p><span name='reasonForParticipation'></span></p>
+                </div>
+                <div class="content-block col-sm-12">
+                    <p>Their Idea to Hack on:</p>
+                    <p><span name='themeIdea'></span></p>
+                </div>
             </fieldset>
         </div>
 
         <!-- MISCELLANEOUS INFORMATION -->
-        <div class='application-section misc'>
+        <div class='black-tab-container application-section misc'>
             <div class="section-header clearfix">
-                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                <h2>Miscellaneous</h2>
+                <div>
+                    <h1>Misc</h1>
+                </div>
             </div>
-            <fieldset>
-                <p>Shirt Size:</p>
-                <p><span name='shirtSize' style='padding: 0;'></span></p>
-
-                <p>Box Preference #1:</p>
-                <p><span name='boxPreferenceOne'></span></p>
-
-                <p>Box Preference #2:</p>
-                <p><span name='boxPreferenceTwo'></span></p>
-
-                <p>Box Preference #3:</p>
-                <p><span name='boxPreferenceThree'></span></p>
-
-                <p>Receiving Team Box:</p>
-                <p><span name='getsTeamBox'></span></p>
-
-                <p>Can Pick Up Box:</p>
-                <p><span name='canPickUpBox'></span></p>
-
-                <p>Shipping Address:</p>
-                <p><span name='shippingAddress'></span></p>
+            <fieldset class="application-content">
+                <p class="col-sm-12">Shirt Size: <span name='shirtSize' style='padding: 0;'></span></p>
+                <p class="col-sm-12">Box Preference #1: <span name='boxPreferenceOne'></span></p>
+                <p class="col-sm-12">Box Preference #2: <span name='boxPreferenceTwo'></span></p>
+                <p class="col-sm-12">Box Preference #3: <span name='boxPreferenceThree'></span></p>
+                <p class="col-sm-12">Receiving Team Box: <span name='getsTeamBox'></span></p>
+                <p class="col-sm-12">Can Pick Up Box: <span name='canPickUpBox'></span></p>
+                <p class="col-sm-12">Shipping Address: <span name='shippingAddress'></span></p>
             </fieldset>
         </div>
     </div>
