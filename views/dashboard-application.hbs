@@ -20,7 +20,7 @@
 
     <!-- CSS -->
     <link rel='stylesheet' href='../css/style.css' />
-    <link rel='stylesheet' href='../css/application.css' />
+    <link rel='stylesheet' href='../css/dashboard-application.css' />
 
     <!-- SCRIPTS -->
     <script src='/js/dashboard-application.js?v=1.1'></script>
@@ -46,7 +46,6 @@
             </div>
 
         {{else}}
-
             <div id="intro">
                 <div class="intro_view">
                     <img id="application_logo" src="/img/application/applicationlogo.png" alt="application logo">
@@ -107,6 +106,10 @@
                                 <option {{#if user.schoolOther}} selected{{/if}}>Other</option>
                             </select>
                         </div>
+                        <div class='form-group col-md-10 col-sm-10 col-xs-10'>
+                            <label>If Other, please specify.</label>
+                            <input class='form-control' type='text' name='school_other' placeholder='Other' value='{{user.school_other}}'>
+                        </div>
                         <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>MAJOR*</label>
                             <input class='form-control' type='text' name='major' placeholder='Major' value='{{user.major}}'>
@@ -134,7 +137,7 @@
                         <div class='form-group col-md-10 col-sm-10 col-xs-10'>
                             <label>RESUME</label>
                             <span class="row"></span>
-                            <a href="https://forms.gle/UDU6GJmQ5hQ9ykNN7" target="_blank" style="text-decoration: none;"><button class='file-upload'> UPLOAD FILE </button></a>
+                            <a href="https://forms.gle/UDU6GJmQ5hQ9ykNN7" target="_blank" style="text-decoration: none;"><button class='resume'> UPLOAD FILE </button></a>
                         </div>
                     </fieldset>
                 </div>
@@ -143,20 +146,20 @@
                 <div class="black-tab-container clearfix">
                     <div>
                         <div>
-                            <h1>TEAM INFORMATION</h1>
+                            <h1>TEAM INFO</h1>
                         </div>
                     </div>
                     <fieldset>
                         <div class='form-group col-sm-10 col-sx-10 col-md-5'>
-                            <label>WILL YOU HAVE A TEAMMATE?*</label>
+                            <label>DO YOU HAVE A TEAM?*</label>
                             <select class='form-control' name='hasTeam'>
                                 <option {{#if user.hasATeam}} selected{{/if}}>YES</option>
                                 <option {{#if user.hasNoTeam}} selected{{/if}}>NO</option>
                             </select>
-                            <label>IF SO, WHAT IS YOUR TEAMMATE'S EMAIL?</label>
+                            <label>IF SO, WHAT ARE YOUR TEAMMATES' EMAIL?</label>
                             <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
-                            <input class='form-control teammate-email' type='text' name='tm-email1' placeholder='email' value='{{user.teammateEmail1}}'>
+                            <input class='form-control teammate-email' type='text' name='tm-email2' placeholder='email' value='{{user.teammateEmail2}}'>
+                            <input class='form-control teammate-email' type='text' name='tm-email3' placeholder='email' value='{{user.teammateEmail3}}'>
                         </div>
                         <div class="team_icon col-sm-10 col-sx-10 col-md-5">
                             <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="50%">
@@ -191,23 +194,13 @@
                             </div>
                             <div class="yes-no col-xs-12 col-sm-4 col-md-2">
                                 <label class="container">YES
-                                <input type="radio" checked="checked" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="yes">
-                                <span class="checkmark"></span>
+                                    <input type="radio" checked="checked" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="yes">
+                                    <span class="checkmark"></span>
                                 </label>
                                 <label class="container">NO
-                                <input type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="no">
-                                <span class="checkmark"></span>
+                                    <input type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="no">
+                                    <span class="checkmark"></span>
                                 </label>
-                                <!--
-                                <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="yes">
-                                <span class="checkmark"></span>
-                                <label class="form-check-label" for="yes">YES
-                                </label>
-                                <input class="form-check-input radio-input" type="radio" name="hasPastHackathonExperience" value={{user.hasPastHackathonExperience}} id="no">
-                                <span class="checkmark"></span>
-                                <label class="form-check-label" for="no">NO
-                                </label>
-                                -->
                             </div>
                             <div class='form-group short-answer col-xs-12 col-sm-10 col-md-6'>
                                 <label style="text-align: left">IF SO, PLEASE SHARE YOUR EXPERIENCE WITH US.</label>
