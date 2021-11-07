@@ -17,6 +17,11 @@
 	margin-bottom: 20px;
 }
 
+.submission h1 {
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
 fieldset {
 	padding: 50px 0px;
 	display: flex;
@@ -159,6 +164,18 @@ button {
 .submit button:hover {
 	color: var(--black);
 	background-color: var(--white);
+}
+
+.my-dash:hover {
+	color: var(--black);
+	background-color: var(--white);
+}
+
+.return {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 100px;
 }
 
 .submit {
