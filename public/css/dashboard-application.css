@@ -36,6 +36,10 @@ fieldset {
 	flex-wrap: wrap;
 }
 
+.form textarea {
+	border-radius: 12px;
+}
+
 .team_icon {
 	display: flex;
 	flex-wrap: wrap;
@@ -99,7 +103,7 @@ fieldset {
 /* Create a custom radio button */
 .checkmark {
 	position: absolute;
-	top: 0;
+	top: 3px;
 	left: -20px;
 	height: 25px;
 	width: 25px;
@@ -139,6 +143,12 @@ fieldset {
 	background: var(--white);
 }
 
+.yes-no {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .form select {
 	border-radius: 12px;
 	background-color: white;
@@ -150,7 +160,7 @@ input[type="file"] {
 	display: none;
 }
 
-button {
+.resume, .my-dash, .submit-button {
 	background-color: var(--green);
 	color: var(--white);
 	display: flex;

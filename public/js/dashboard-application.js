@@ -45,23 +45,23 @@ function getAndSendApplicationData(toggleHasApplication) {
 	// }
 
 	//get box preferences
-	let boxPreferenceOne_entry = $('select[name="boxRanking1"]')
-		.find(":selected")
-		.text()
-	let boxPreferenceTwo_entry = $('select[name="boxRanking2"]')
-		.find(":selected")
-		.text()
-	let boxPreferenceThree_entry = $('select[name="boxRanking3"]')
-		.find(":selected")
-		.text()
-	if (
-		boxPreferenceOne_entry == boxPreferenceTwo_entry ||
-		boxPreferenceOne_entry == boxPreferenceThree_entry ||
-		boxPreferenceTwo_entry == boxPreferenceThree_entry
-	) {
-		alert("Please choose unique boxes for each option")
-		return false
-	}
+	// let boxPreferenceOne_entry = $('select[name="boxRanking1"]')
+	// 	.find(":selected")
+	// 	.text()
+	// let boxPreferenceTwo_entry = $('select[name="boxRanking2"]')
+	// 	.find(":selected")
+	// 	.text()
+	// let boxPreferenceThree_entry = $('select[name="boxRanking3"]')
+	// 	.find(":selected")
+	// 	.text()
+	// if (
+	// 	boxPreferenceOne_entry == boxPreferenceTwo_entry ||
+	// 	boxPreferenceOne_entry == boxPreferenceThree_entry ||
+	// 	boxPreferenceTwo_entry == boxPreferenceThree_entry
+	// ) {
+	// 	alert("Please choose unique boxes for each option")
+	// 	return false
+	// }
 
 	// check that mandatory fields filled out
 	if (
@@ -85,28 +85,28 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
-	let getsTeamBoxValue = $('select[name="getsTeamBox"]')
-		.find(":selected")
-		.text()
-	let getsTeamBox = getsTeamBoxValue == "I will"
-	if ((getsTeamBoxValue == "I will" || getsTeamBoxValue == "My partner will") && !hasTeam) {
-		alert("Please indicate a team member before stating who will get your team box.")
-		return false
-	}
+	// let getsTeamBoxValue = $('select[name="getsTeamBox"]')
+	// 	.find(":selected")
+	// 	.text()
+	// let getsTeamBox = getsTeamBoxValue == "I will"
+	// if ((getsTeamBoxValue == "I will" || getsTeamBoxValue == "My partner will") && !hasTeam) {
+	// 	alert("Please indicate a team member before stating who will get your team box.")
+	// 	return false
+	// }
 
-	let canPickUpBox = false
-	if (
-		$('select[name="canPickUpBox"]')
-			.find(":selected")
-			.text() == "YES"
-	) {
-		canPickUpBox = true
-	}
+	// let canPickUpBox = false
+	// if (
+	// 	$('select[name="canPickUpBox"]')
+	// 		.find(":selected")
+	// 		.text() == "YES"
+	// ) {
+	// 	canPickUpBox = true
+	// }
 
-	if (!canPickUpBox && !getsTeamBox && $('textarea[name="address"]').val() == "") {
-		alert("Please specify your address if you are not picking up your box.")
-		return false
-	}
+	// if (!canPickUpBox && !getsTeamBox && $('textarea[name="address"]').val() == "") {
+	// 	alert("Please specify your address if you are not picking up your box.")
+	// 	return false
+	// }
 
 	if (
 		$('select[name="hasHackathonExperience"]')
@@ -143,25 +143,25 @@ function getAndSendApplicationData(toggleHasApplication) {
 		hasTeam: hasTeam,
 		teammates: teammateEmails,
 		// teammates_names: teammateNames,
-		//foodRestrictions: $('input[name="foodRestrictions"]').val(),
+		foodRestrictions: $('input[name="foodRestrictions"]').val(),
 		skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
 		hasPastHackathonExperience: hasExperience,
 		pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
 		reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
 		themeIdea: $('textarea[name="themeIdea"]').val(),
-		//desiredParts: $('textarea[name="desiredParts"]').val(),
+		desiredParts: $('textarea[name="desiredParts"]').val(),
 		shirtSize: $('select[name="shirtSize"]')
 			.find(":selected")
 			.text(),
 		// needParking: $('select[name="needsParking"]')
 		// 	.find(":selected")
 		// 	.text(),
-		boxPreferenceOne: boxPreferenceOne_entry,
-		boxPreferenceTwo: boxPreferenceTwo_entry,
-		boxPreferenceThree: boxPreferenceThree_entry,
-		canPickUpBox: canPickUpBox,
-		getsTeamBox: getsTeamBox,
-		shippingAddress: $('textarea[name="address"]').val(),
+		// boxPreferenceOne: boxPreferenceOne_entry,
+		// boxPreferenceTwo: boxPreferenceTwo_entry,
+		// boxPreferenceThree: boxPreferenceThree_entry,
+		// canPickUpBox: canPickUpBox,
+		// getsTeamBox: getsTeamBox,
+		// shippingAddress: $('textarea[name="address"]').val(),
 		hasApplication: toggleHasApplication
 	}
 

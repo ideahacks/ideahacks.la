@@ -44,7 +44,7 @@
                 <p>Have questions? Contact us at team@ideahacks.la</p>
                 <span class="return">
                     <a href="/dashboard/me" target="_blank" style="text-decoration: none;">
-                        <button class="my-dash">My Dashboard</button>
+                        <button class="my-dash">MY DASHBOARD</button>
                     </a>
                 </span>
 
@@ -73,17 +73,16 @@
                             <input class='form-control' type='text' name='firstName' placeholder='First Name' value='{{user.firstName}}'>
                         </div>
                         <div class='form-group col-md-5 col-sm-10 col-xs-10'>
-                            <label>PHONE NUMBER*</label>
-                            <input class='form-control' type='tel' name='phone' placeholder='(XXX) XXX - XXXX' value='{{user.phone}}'>
-                        </div>
-                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>LAST NAME*</label>
                             <input class='form-control' type='text' name='lastName' placeholder='Last Name' value='{{user.lastName}}'>
                         </div>
-
                         <div class='form-group col-md-5 col-sm-10 col-xs-10'>
                             <label>EMAIL*</label>
                             <input class='form-control' type='email' name='email' value='{{ user.email }}' readonly>
+                        </div>
+                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
+                            <label>PHONE NUMBER*</label>
+                            <input class='form-control' type='tel' name='phone' placeholder='(XXX) XXX - XXXX' value='{{user.phone}}'>
                         </div>
                     </fieldset>
                 </div>
@@ -247,7 +246,7 @@
             </div>
             <!-- BUTTONS -->
             <div class='submit'>
-                <button>SUBMIT</button>
+                <button class="submit-button">SUBMIT</button>
             </div>
             <p class="submit-message" style='color: transparent;'></p>
         {{/if}}
