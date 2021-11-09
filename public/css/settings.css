@@ -47,6 +47,7 @@
 	border: none;
 	border-radius: 20px;
 	text-transform: uppercase;
+	font-weight: bold;
 	padding: 10px 20px;
 	margin: auto;
 	transition: 0.3s ease;
