@@ -3,72 +3,59 @@ form {
 }
 
 textarea {
-	color: black;
-	width: 300px;
+	border-radius: 20px;
 	height: 100px;
-	outline: none;
-	font-size: 18px;
-	border: 1px solid gray;
-	margin-bottom: 5px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="text"]:focus,
+textarea,
+textarea:focus {
+	display: inline-block;
 	color: black;
-	width: 50px;
+	width: 80%;
 	text-align: center;
 	outline: none;
 	padding: 5px;
+	margin-bottom: 10px;
 	font-size: 20px;
-	border: 1px solid grey;
+	background-color: #efefef;
+	border: none;
+	box-shadow: none;
 }
 
-#team-input {
-	max-width: 400px;
-	margin: auto;
-	background-color: rgb(42, 45, 78);
-	color: white;
-	padding: 20px;
-	font-size: 20px;
-	border-radius: 20px;
-}
-
+#team-input,
 #users-input {
 	max-width: 400px;
 	margin: auto;
-	background-color: rgb(42, 45, 78);
-	color: white;
+	background-color: var(--white);
+	color: var(--black);
 	padding: 20px;
-	font-size: 18px;
 	border-radius: 20px;
 }
 
-#users-input h1 {
-	font-size: 25px;
+.header {
+	margin: 100px 0 50px;
 }
 
-.banner {
-	padding: 130px 0 50px 0;
-}
-
-.team-creation-banner {
-	width: 35%;
+.header h1 {
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .submit-button {
-	background: #f2ccb5;
+	padding: 10px 20px;
+	background-color: var(--green);
+	color: var(--white);
 	border: none;
-	border-radius: 7px;
+	border-radius: 20px;
 	font-size: 20px;
-	font-family: "Roboto Condensed";
-	transition: background-color 0.3s ease, color 0.3s ease;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: 0.3s ease;
 	outline: none;
-	color: white;
-	width: 100px;
 }
 
 .submit-button:hover {
-	background-color: transparent;
-	color: #f2ccb5;
-	border: 1px solid #f2ccb5;
-	cursor: pointer;
+	background-color: var(--black);
 }
