@@ -25,7 +25,7 @@ $(() => {
 						$("#users-input").show()
 					})
 					.catch(err => {
-							errorHandler(err, teamNumber)
+						errorHandler(err, teamNumber)
 					})
 			})
 	})
