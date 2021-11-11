@@ -6,7 +6,7 @@
 	text-transform: uppercase;
 	font-size: 56px;
 	font-weight: 800;
-	color: black;
+	color: var(--green);
 	letter-spacing: 0.1em;
 }
 
@@ -15,7 +15,7 @@
 	font-size: 18px;
 	font-weight: lighter;
 	line-height: 31px;
-	color: black;
+	color: var(--white);
 }
 
 .banner img {
@@ -34,7 +34,7 @@ label {
 .admin-input {
 	font-weight: bold;
 	font-size: 20px;
-	color: #fbf3f0;
+	color: var(--green);
 	text-align: center;
 	background: transparent;
 	border: none;
@@ -51,7 +51,7 @@ label {
 
 .checkout,
 .checkin {
-	background-color: rgb(42, 45, 78);
+	background-color: var(--white);
 	border-radius: 20px;
 	margin: 50px 0px;
 	padding: 20px 0px;
@@ -64,7 +64,7 @@ label {
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	background-color: rgb(42, 45, 78);
+	background-color: var(--white);
 	border-radius: 40px;
 	max-width: 800px;
 	min-height: 306px;
@@ -78,25 +78,25 @@ label {
 #checkin-scan h1 {
 	font-weight: bold;
 	font-size: 20px;
-	color: #70bfe6;
+	color: var(--black);
 }
 
 .checkout h2,
 .checkin h2 {
 	font-weight: bold;
 	font-size: 20px;
-	color: #fbf3f0;
+	color: var(--green);
 }
 
 ::placeholder {
 	text-transform: uppercase;
-	color: #fbf3f0;
+	color: var(--green);
 }
 
 #barcode-scan p,
 #checkin-scan p {
 	font-size: 20px;
-	color: #70bfe6;
+	color: var(--green);
 	display: inline;
 }
 
@@ -106,7 +106,7 @@ label {
 	height: 40px;
 	margin-left: 20px;
 	border-radius: 0px;
-	border: 3px solid rgb(216, 216, 216);
+	border: 3px solid var(--green);
 	font-size: 18px;
 	text-align: center;
 	outline: none;
@@ -120,7 +120,7 @@ label {
 .checkout input[type="text"],
 .checkin input[type="text"] {
 	width: 188px;
-	border-bottom: 1px solid #fbf3f0;
+	border-bottom: 1px solid var(--green);
 }
 
 .scan-quantity {
@@ -129,6 +129,7 @@ label {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: var(--green);
 }
 
 #go-back {
@@ -139,51 +140,53 @@ label {
 .success p {
 	font-size: 20px;
 	line-height: 34px;
-	color: #70bfe6;
+	color: var(--white);
 }
 
 #go-back button,
 .success button,
 .submit-button {
-	background: #f2ccb5;
+	background: var(--green);
 	font-size: 20px;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px;
 	outline: none;
 	border: none;
 	transition: background-color 0.3s ease, color 0.3s ease;
-	color: white;
+	color: var(--white);
+}
+
+#go-back button {
+	background: var(--white);
+	color: var(--green);
 }
 
 #go-back button:hover,
 .success button:hover,
 .submit-button:hover {
-	background-color: transparent;
-	border: 1px solid #f2ccb5;
-	color: #f2ccb5;
+	background-color: var(--black);
 	cursor: pointer;
+}
+
+#go-back button:hover {
+	border: 5px solid var(--white);
 }
 
 .submit-button {
 	display: inline-block;
-	width: 150px;
-	height: 50px;
-	border-radius: 10px;
 	text-transform: uppercase;
 }
 
-.submit-button:hover {
-	background-color: transparent;
-	color: white;
-	cursor: pointer;
-}
-
 .success {
-	margin-top: 200px;
-	text-align: center;
+	margin-top: 400px;
+	text-align: left;
+	margin-left: 100px;
 }
 
 .success h1 {
 	text-transform: uppercase;
-	font-size: 100px;
-	margin: 50px 0 10px 0;
+	font-size: 70px;
+	margin-top: 20px;
 	line-height: 0.8em;
 }
