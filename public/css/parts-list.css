@@ -21,6 +21,39 @@ label {
 	color: var(--green);
 }
 
+/* Header */
+.logo-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img-header {
+	position: absolute;
+	top: 196px;
+}
+
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
+.img-header {
+	width: 100%;
+	/*min-width: 800px;*/
+}
+
+.banner-underline {
+	margin-top: 12px;
+	margin-bottom: 60px;
+
+	border-top: 2px solid var(--white);
+	width: 200px;
+}
+
+/* General */
+
 .parts-banner {
 	width: '100%';
 	/* margin: 30px 0 20px 0; */

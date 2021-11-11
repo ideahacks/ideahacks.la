@@ -29,11 +29,18 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class="houseline"></div>
-
-        <div class='container text-center'>
-            <h1 id="welcome">WELCOME</h1>
+        <div class='logo-header'>
+            <img class='img-header' src='/img/team/teamHeader.png' />
+            <span class='logo-img-header'>
+                <img class='logo-img' src='/img/team/teamlogo.png' />
+            </span>
         </div>
+
+        {{!-- <div class="houseline"></div> --}}
+
+        {{!-- <div class='container text-center'>
+            <h1 id="welcome">WELCOME</h1>
+        </div> --}}
 
         <div class="button-container">
             {{#if user.isAdmin}}
@@ -48,16 +55,17 @@
             <div class="row">
                 <!-- MY PARTS -->
                 <div class="my-parts col-md-4">
-                    <h1 class="title">Parts List</h1>
+                    <h1 class="title">My Parts</h1>
+                    <hr class='banner-underline'>
 
                     <div class="labels row">
-                        <p class="name col-xs-8">Name</p>
+                        <p class="name col-xs-8">Name of Item</p>
                         <p class="quantity col-xs-4">Quantity</p>
                     </div>
                     {{#if myParts}}
                         <div class="text-box">
                             {{#each myParts}}
-                                <div class="part-entry row" data-full="{{name}}">
+                                <div class="part-entry row" data-full={{name}}>
                                     <p class="name col-xs-10">{{name}}</p>
                                     <p class="quantity col-xs-2">{{quantity}}</p>
                                 </div>
@@ -72,7 +80,8 @@
 
                 <!-- PARTS QUICK SEARCH -->
                 <div class="parts-search col-md-8">
-                    <h1>parts quick search</h1>
+                    <h1 class="title"><span>Parts Quick Search</span></h1>
+                    <hr class='banner-underline'>
 
                     <div style="height: 40px;">
                         {{> filter }}

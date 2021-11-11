@@ -1,3 +1,36 @@
+/* Header */
+.logo-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img-header {
+	position: absolute;
+	top: 196px;
+}
+
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
+.img-header {
+	width: 100%;
+	/*min-width: 800px;*/
+}
+
+.banner-underline {
+	margin-top: 12px;
+	margin-bottom: 60px;
+
+	border-top: 2px solid var(--white);
+	width: 200px;
+}
+
+/* General */
+
 #welcome {
 	font-family: "Roboto", monospace;
 	font-weight: bold;
@@ -29,7 +62,7 @@ button {
 }
 
 button:hover {
-	background-color: #50b5dd;
+	/* background-color: #50b5dd; */
 	color: white;
 	transition: 0.3s ease;
 }
@@ -69,13 +102,26 @@ button:hover {
 
 	color: var(--green);
 	margin-top: 0;
-	margin-bottom: 30px;
 	letter-spacing: -1.5px;
 }
 
-.labels {
-	margin: 0 -5px;
+.labels, .part-entry {
+	border-bottom: 1px solid var(--green);
 }
+
+.labels {
+	padding-bottom: 10px;
+}
+
+/* .title span {
+	display: inline-block;
+	border-bottom: 2px solid var(--white);
+	padding-bottom: 10px;
+} */
+
+/* .title { */
+	/* margin-bottom: 20px; */
+/* } */
 
 .text-box {
 	color: var(--white);
@@ -107,12 +153,20 @@ button:hover {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .part-entry .name {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+p.name, p.category, p.quantity {
+	/* Override the extra margin from the p tag */
+	margin: 0px;
 }
 
 .part-entry:hover::before {
@@ -127,7 +181,7 @@ button:hover {
 	z-index: 1;
 	max-width: 90%;
 
-	background-color: #d1ebfa;
+	background-color: var(--green);
 	border-radius: 10px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -137,6 +191,7 @@ button:hover {
 }
 
 .quantity {
+	color: var(--white);
 	text-align: right;
 }
 
