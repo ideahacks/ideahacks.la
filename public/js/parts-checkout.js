@@ -51,7 +51,7 @@ $(() => {
 		let buttonId = $(this).attr("id")
 		let quantity = Number($('input[name="quantity"]').val())
 		if (quantity <= 0) {
-			errorHandler("Please input a positive number!")
+			errorHandler("Please input a positive quantity!")
 		}
 		// Check for part existence
 		$.get("/api/parts/" + barcode)
@@ -180,7 +180,7 @@ $(() => {
 // Attempts to log the given error as well as exits the script
 function errorHandler(err) {
 	$("#barcode-scan").html("")
-	$("#barcode-scan").html("<p>There was an error with your request: " + err + ". Redirecting...</p>")
+	$("#barcode-scan").html("<p>There was an error with your request:<br>" + err + "<br>Redirecting...</p>")
 	$(this).hide()
 
 	setTimeout(location.reload.bind(location), 3000)
