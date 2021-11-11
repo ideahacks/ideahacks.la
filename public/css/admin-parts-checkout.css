@@ -192,3 +192,22 @@ label {
 	margin-top: 20px;
 	line-height: 0.8em;
 }
+
+@media (max-width: 700px) {
+	.checkout-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.banner h1 {
+		font-size: 40px;
+	}
+	.banner p {
+		font-size: 15px;
+	}
+
+	.checkout,
+	.checkin {
+		margin: 20px 0px;
+	}
+}
