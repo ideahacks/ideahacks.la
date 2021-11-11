@@ -30,9 +30,10 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class='container-fluid checkout-body'>
+        <div class='checkout-body'>
             <div align="center">
-                <img class='parts-banner' src="/img/parts.png">
+                <img class='parts-banner' src="/img/admin/parts.png">
+                <h1 class="title">Parts List</h1>
             </div>
 
             <div class='sidebar col-md-2'>
@@ -63,7 +64,7 @@
                             <div>
                                 <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
                             </div>
-                            <div class='detail-section container-fluid'>
+                            <div class='detail-section'>
                                 <p class='part-details filter-key text-left'>{{this.partName}}</p>
                                 {{#if this.isConsumable}}
                                     <p class='part-details quantity text-left'>Quantity: Limited Stock</p>

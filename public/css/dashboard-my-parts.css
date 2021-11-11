@@ -1,5 +1,5 @@
 #welcome {
-	font-family: "Source Code Pro", monospace;
+	font-family: "Roboto", monospace;
 	font-weight: bold;
 	font-size: 52px;
 	color: #50b5dd;
@@ -62,10 +62,12 @@ button:hover {
 }
 
 .background h1 {
-	font-family: "Source Code Pro", monospace;
-	font-weight: 500;
+	font-family: "Roboto", monospace;
+	font-weight: 'bold';
 	font-size: 35px;
-	color: #2b2b2b;
+	text-transform: uppercase;
+
+	color: var(--green);
 	margin-top: 0;
 	margin-bottom: 30px;
 	letter-spacing: -1.5px;
@@ -76,7 +78,7 @@ button:hover {
 }
 
 .text-box {
-	background-color: white;
+	color: var(--white);
 	border-radius: 10px;
 	padding: 10px;
 	overflow-x: hidden;
@@ -98,7 +100,7 @@ button:hover {
 	top: 10%;
 	bottom: 10%;
 	height: 80%;
-	border-right: 1.5px solid #50b5dd;
+	/* border-right: 1.5px solid #50b5dd; */
 }
 
 .part-entry {
