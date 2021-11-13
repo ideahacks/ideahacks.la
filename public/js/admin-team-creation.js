@@ -50,10 +50,13 @@ $(() => {
 								$.get("/api/users/" + email)
 									.then(member => {
 										//Check if the member is already part of a team
-
-										member.hasTeam = true
-										member.teamNumber = teamNumber
-										membersProcessed++
+										try {
+											member.hasTeam = true
+											member.teamNumber = teamNumber
+											membersProcessed++
+										} catch (err) {
+											return errorHandler(email + " is not a user!", teamNumber)
+										}
 
 										$.ajax({ url: "/api/users/" + email, type: "PUT", data: member }).catch(err => {
 											return errorHandler(err, teamNumber)
@@ -65,7 +68,7 @@ $(() => {
 									})
 									.catch(err => {
 										//Email doesn't exist
-										errorHandler(err, teamNumber)
+										errorHandler(email + " is not a user!", teamNumber)
 									})
 							})
 						}
@@ -73,7 +76,7 @@ $(() => {
 				})
 				.catch(err => {
 					//Email doesn't exist
-					return errorHandler(err, teamNumber)
+					return errorHandler(email + " is not a user!", teamNumber)
 				})
 		})
 
