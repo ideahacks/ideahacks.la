@@ -144,9 +144,9 @@ fieldset {
 }
 
 .yes-no {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .form select {
@@ -160,7 +160,9 @@ input[type="file"] {
 	display: none;
 }
 
-.resume, .my-dash, .submit-button {
+.resume,
+.my-dash,
+.submit-button {
 	background-color: var(--green);
 	color: var(--white);
 	display: flex;
