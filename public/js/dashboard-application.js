@@ -109,9 +109,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 	// }
 
 	if (
-		$('select[name="hasHackathonExperience"]')
-			.find(":selected")
-			.text() == "YES" &&
+		$('input[name="hasPastHackathonExperience"]:checked')[0].id === "yes" &&
 		$('textarea[name="pastHackathonExperience"]').val() == ""
 	) {
 		alert("Please specify your past hackathon experience.")
@@ -119,11 +117,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 	}
 
 	let hasExperience = false
-	if (
-		$('select[name="hasHackathonExperience"]')
-			.find(":selected")
-			.text() == "YES"
-	) {
+	if ($('input[name="hasPastHackathonExperience"]:checked')[0].id === "yes") {
 		hasExperience = true
 	}
 
@@ -143,7 +137,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		hasTeam: hasTeam,
 		teammates: teammateEmails,
 		// teammates_names: teammateNames,
-		foodRestrictions: $('input[name="foodRestrictions"]').val(),
+		foodRestrictions: $('textarea[name="foodRestrictions"]').val(),
 		skillsAndExperience: $('textarea[name="skillsAndExperience"]').val(),
 		hasPastHackathonExperience: hasExperience,
 		pastHackathonExperience: $('textarea[name="pastHackathonExperience"]').val(),
