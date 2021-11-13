@@ -12,7 +12,7 @@ input[type="text"]:focus,
 textarea,
 textarea:focus {
 	display: inline-block;
-	color: black;
+	color: var(--black);
 	width: 80%;
 	text-align: center;
 	outline: none;
