@@ -4,7 +4,7 @@ form {
 
 textarea {
 	border-radius: 20px;
-	height: 100px;
+	resize: none;
 }
 
 input[type="text"],
