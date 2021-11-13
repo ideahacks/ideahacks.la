@@ -11,14 +11,14 @@ h4 {
 
 /* BANNER */
 .banner {
-	padding-top: 130px;
+	padding-top: 117px;
 	margin: auto;
 }
 
 .banner-underline {
 	margin-top: 12px;
 
-	border-bottom: 2px solid var(--white);
+	border-top: 2px solid var(--white);
 	width: 15%;
 }
 

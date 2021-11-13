@@ -9,8 +9,6 @@ const PartSchema = new Schema({
 	description: String,
 	type: { type: String, default: "returnable" },
 	isConsumable: { type: Boolean, default: false },
-	manufacturer: { type: String, default: "" },
-	manufacturerPartNumber: { type: String, default: "" },
 	datasheet: { type: String, default: "" },
 	imageUrl: String
 })
