@@ -1,5 +1,5 @@
 $(() => {
-	$(".submit-application").click(() => getAndSendApplicationData(true))
+	$(".submit-button").click(() => getAndSendApplicationData(true))
 
 	$(".save-application").click(() => getAndSendApplicationData(false))
 
