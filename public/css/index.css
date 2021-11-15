@@ -74,104 +74,33 @@
 /* SCHEDULE */
 
 .schedule-section {
-	background-color: rgb(250, 250, 250);
-	padding: 20px 90px 0px 90px;
-}
-
-.schedule-description {
-	margin: 20px 0 40px;
-	font-size: 20px;
+	padding: 0 75px;
 }
 
 .schedule-day {
-	text-align: left;
-	position: relative;
-}
-
-.schedule-text1 {
-	position: absolute;
-	left: 75px;
-	top: 30px;
-	font-size: 18px;
-}
-
-.schedule-text2 {
-	position: absolute;
-	left: 70px;
-	top: 73px;
-	font-size: 18px;
-}
-
-.schedule-text3 {
-	position: absolute;
-	left: 70px;
-	top: 70px;
-	font-size: 18px;
-}
-
-.sponsors-section {
-	background-color: rgb(250, 250, 250);
-	padding: 20px 10px 0px 10px;
-}
-
-.section-header {
-	height: 45px;
-	margin: 20px 0px;
-}
-
-.day1 {
-	height: 60px;
-	margin-top: 0px;
+	margin-top: 0;
 	margin-bottom: 20px;
-}
-
-.day {
-	height: 60px;
-	margin-top: 45px;
-	margin-bottom: 20px;
+	padding-top: 45px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .schedule {
-	border: solid 3px rgb(255, 225, 149);
-	border-radius: 7px;
-	color: rgb(43, 43, 43);
+	border: solid 3px var(--black);
+	border-radius: 14px;
+	color: var(--green);
 	padding: 15px 15px 5px 15px;
 	margin: 0px 10px;
 	overflow: auto;
 }
 
 .schedule p {
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 500;
 }
 
 .schedule .location p {
 	display: inline;
-}
-
-.schedule.note {
-	border: none;
-}
-
-.note p {
-	margin-bottom: 5px;
-}
-
-.hanging-indent {
-	padding-left: 45px;
-	text-indent: -45px;
-}
-
-.indented {
-	padding-left: 45px;
-}
-
-.double-indented {
-	padding-left: 65px;
-}
-
-.note .extra {
-	font-size: 14px;
 }
 
 /* FAQ */
@@ -234,6 +163,11 @@
 }
 
 /* SPONSORS */
+
+.sponsors-section {
+	background-color: rgb(250, 250, 250);
+	padding: 20px 10px 0px 10px;
+}
 
 .sponsors-section p {
 	text-align: center;
