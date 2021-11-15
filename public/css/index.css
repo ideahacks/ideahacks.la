@@ -36,177 +36,32 @@ a:hover {
 	margin-bottom: 0;
 }
 
-.home-banner {
-	overflow: hidden;
-}
-
-.home-banner .stripe {
-	position: absolute;
-	width: 1840px;
-	height: 602px;
-	left: -350.24px;
-	top: 0px;
-
-	background: #d1ebfa;
-	transform: rotate(-29.09deg);
-}
-
-.home-banner .main-wrapper {
-	margin-top: 200px;
-	margin-bottom: 50px;
-}
-
-.home-banner .main-wrapper .flex-row {
+.logo-header {
 	display: flex;
-	margin-bottom: 50px;
+	align-items: center;
+	justify-content: center;
 }
 
-.banner-desktop-graphic {
-	width: 90%;
+.filler {
+	display: none;
+	height: 60px;
+	width: 100%;
+	background-color: #b5c6bc;
 }
 
-.title-wrapper {
-	font-size: 70px;
-	text-align: right;
-	position: relative;
-}
-
-.banner-title {
-	position: relative;
-}
-
-.yellow-box {
-	background-color: #efa516;
-}
-
-.banner-title .yellow-box {
+.logo-img-header {
 	position: absolute;
-	top: 0.5em;
-	right: 0;
-	height: 1.3em;
-	width: 6.2em;
+	top: 196px;
 }
 
-.banner-title .blue-box {
-	position: absolute;
-	top: 1.2em;
-	right: 0;
-	height: 0.85em;
-	width: 6.6em;
-
-	background-color: rgba(80, 181, 221, 0.56);
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
 }
 
-.banner-title .title,
-.banner-title .theme {
-	position: relative;
-	right: 17px;
-	margin: 0;
-	z-index: 1;
-
-	font-family: Roboto, sans-serif;
-	font-weight: 900;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.banner-title .title {
-	top: 0;
-	font-size: 1em;
-}
-
-.banner-title .theme {
-	bottom: 0.2em;
-	font-size: 0.57em;
-}
-
-.presented-wrapper {
-	position: relative;
-	margin-top: 40px;
-	padding: 5px 0;
-	font-size: 20px;
-}
-
-.presented-wrapper p {
-	position: relative;
-	display: inline-block;
-	margin: 0;
-	padding: 5px 17px;
-	z-index: 1;
-
-	font-family: Roboto, sans-serif;
-	font-weight: 700;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.banner-details .date {
-	position: relative;
-	margin: 0;
-	padding: 7px 17px;
-	float: left;
-	z-index: 1;
-
-	font-family: Roboto, sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.due-date {
-	background: #efa516;
-	margin-bottom: 10px;
-	font-size: 20px;
-	padding: 5px;
-}
-
-.apply {
-	position: absolute;
-	right: 40px;
-	top: 435px;
-	float: right;
-
-	font-family: Roboto, sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.apply-button {
-	padding: 13px 17px;
-
-	font-size: inherit;
-	font-weight: inherit;
-	font-style: inherit;
-	text-shadow: inherit;
-	text-transform: inherit;
-	color: white;
-
-	background-color: #50b5dd;
-	border: none;
-
-	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-
-.apply-button:disabled {
-	background-color: gray;
-}
-
-.apply-button:not(:disabled):hover,
-.apply-button:not(:disabled):focus {
-	background-color: #6ccaf0;
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-	transform: scale(1.008);
+.img-header {
+	width: 100%;
 }
 
 .about-section {
@@ -429,6 +284,10 @@ a:hover {
 }
 
 @media (max-width: 1070px) {
+	.logo-img-header {
+		max-width: 80%;
+	}
+
 	.home-banner .stripe {
 		height: calc(-10vw + 700px);
 		top: 20vw;
@@ -483,6 +342,14 @@ a:hover {
 }
 
 @media (max-width: 990px) {
+	.filler {
+		display: block;
+	}
+	
+	.logo-img-header {
+		top: 136px;
+	}
+
 	.faq-section,
 	.about-section,
 	.sponsors-section,
