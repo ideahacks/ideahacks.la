@@ -3,6 +3,14 @@
 	width: 100%;
 }
 
+.black-tab-container a:hover {
+	color: var(--white);
+}
+
+.white-tab-container a:hover {
+	color: var(--black);
+}
+
 .black-box {
 	background-color: var(--black);
 	height: 40px;
@@ -106,60 +114,23 @@
 /* FAQ */
 
 .faq-section {
-	background-color: rgb(255, 225, 149);
-	padding: 20px 75px 0px 75px;
+	padding: 20px 75px 0;
 }
 
-.q-a {
-	background-color: rgba(255, 255, 255, 0.3);
-	padding: 15px 15px 10px;
-	margin-bottom: 25px;
+.faq-section h2 {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: var(--white);
+	color: var(--black);
+	border-radius: 10px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-.question-section {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-left: 10px solid #e1489a;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.answer-section {
-	padding-top: 10px;
-	padding-left: 25px;
-	padding-right: 15px;
-}
-
-.q,
-.a {
-	float: left;
-	width: 40px;
-
-	font-size: 40px;
-	font-weight: 700;
-	margin: 0;
-}
-
-.a {
-	color: #e1489a;
-}
-
-.question,
-.answer {
-	width: calc(100% - 40px);
-
-	float: left;
-	padding-left: 15px;
-}
-
-.question {
-	margin: 13px 0 10px;
-	font-size: 22px;
-	font-weight: 700;
-}
-
-.answer {
-	margin: 17px 0 10px;
-	font-size: 16px;
+.faq-section b {
+	display: block;
+	margin-top: 10px;
+	color: var(--green)
 }
 
 /* SPONSORS */
