@@ -48,7 +48,7 @@
 	padding: 0 75px;
 }
 
-.about-section>div:first-child {
+.about-section > div:first-child {
 	display: none;
 }
 
