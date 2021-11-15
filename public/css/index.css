@@ -1,39 +1,16 @@
-a {
-	color: #e1489a;
+.black-tab-container::after,
+.white-tab-container::after {
+	width: 100%;
 }
 
-a:hover {
-	color: #50b5dd;
-}
-
-.tan-box {
-	background-color: rgb(255, 225, 149);
+.black-box {
+	background-color: var(--black);
 	height: 40px;
-}
-
-.tan-box1 {
-	background-color: rgb(255, 225, 149);
-	height: 25px;
 }
 
 .white-box {
-	background-color: rgb(250, 250, 250);
+	background-color: var(--white);
 	height: 40px;
-}
-
-.stay-tuned {
-	position: fixed;
-	top: 66px;
-	max-width: 1280px;
-	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: rgb(233, 104, 104);
-}
-
-.stay-tuned p {
-	font-size: 18px;
-	margin-bottom: 0;
 }
 
 .logo-header {
@@ -65,18 +42,23 @@ a:hover {
 }
 
 .about-section {
-	position: relative;
-	z-index: 1;
-	background-color: rgb(255, 225, 149);
-	padding: 20px 100px 0px 100px;
-
-	font-size: 16px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 75px;
 }
 
-.description {
-	text-align: justify;
-	color: rgb(42, 45, 78);
-	margin-top: 12px;
+.about-section>div:first-child {
+	display: none;
+}
+
+.about-section .description h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.about-section img {
+	width: 100%;
 }
 
 .home-video {
@@ -350,12 +332,16 @@ a:hover {
 		top: 136px;
 	}
 
-	.faq-section,
-	.about-section,
-	.sponsors-section,
-	.schedule-section {
-		padding: 10px 10px 35px 10px;
+	.about-section .graphic {
+		display: flex;
+		justify-content: center;
 	}
+
+	.about-section img {
+		margin-top: 30px;
+		width: 80%;
+	}
+
 	.faq-section {
 		padding: 10px 30px 35px;
 	}
@@ -402,6 +388,13 @@ a:hover {
 }
 
 @media (max-width: 450px) {
+	.faq-section,
+	.about-section,
+	.sponsors-section,
+	.schedule-section {
+		padding: 10px 10px 35px 10px;
+	}
+
 	.faq-section {
 		padding: 10px 10px 35px 10px;
 	}
