@@ -77,12 +77,6 @@
 	width: 100%;
 }
 
-.home-video {
-	text-align: right;
-	padding: 0px;
-	margin-top: 12px;
-}
-
 /* SCHEDULE */
 
 .schedule-section {
@@ -178,58 +172,6 @@
 	.logo-img-header {
 		max-width: 80%;
 	}
-
-	.home-banner .stripe {
-		height: calc(-10vw + 700px);
-		top: 20vw;
-		left: calc(-1100px + 70vw);
-	}
-
-	.home-banner .main-wrapper {
-		margin-top: 100px;
-	}
-
-	.main-wrapper .flex-row {
-		flex-direction: column-reverse;
-	}
-
-	.main-wrapper .banner-right {
-		width: 100%;
-		margin-bottom: 50px;
-	}
-
-	.main-wrapper .banner-left {
-		width: 100%;
-	}
-
-	.main-wrapper .banner-desktop-graphic {
-		width: 70%;
-	}
-
-	.main-wrapper .title-wrapper {
-		font-size: 60px;
-	}
-
-	.presented-wrapper {
-		font-size: 16px;
-		margin-top: 30px;
-	}
-
-	.banner-details .date {
-		font-size: 20px;
-	}
-
-	.due-date {
-		font-size: 16px;
-		padding: 5px 10px;
-	}
-
-	.apply {
-		position: relative;
-		top: 20px;
-		right: 20px;
-		font-size: 20px;
-	}
 }
 
 @media (max-width: 990px) {
@@ -251,45 +193,20 @@
 		width: 80%;
 	}
 
-	.faq-section {
-		padding: 10px 30px 35px;
-	}
-	.banner-details {
-		margin-bottom: 20px;
-	}
-	.date,
-	.apply,
-	.agb,
-	.deadline {
-		font-size: 20px;
-	}
-	.section-header {
-		height: 50px;
-	}
-	.home-video video {
-		width: 300px;
-	}
-	.home-video {
-		text-align: center;
-		margin-top: 20px;
-	}
-	.day {
-		height: 60px;
-		margin-top: 45px;
-		margin-bottom: 20px;
-	}
-
 	.location {
 		display: none;
 	}
+
 	.large-logo {
 		width: 250px;
 		margin: 20px 10px;
 	}
+
 	.small-logo {
 		width: 110px;
 		margin: 20px 20px;
 	}
+
 	.square {
 		width: 180px;
 		margin: 20px 45px;
@@ -302,67 +219,5 @@
 	.sponsors-section,
 	.schedule-section {
 		padding: 10px 10px 35px 10px;
-	}
-
-	.faq-section {
-		padding: 10px 10px 35px 10px;
-	}
-
-	.home-banner .stripe {
-		height: 500px;
-		top: 35vw;
-	}
-
-	.home-banner .main-wrapper {
-		margin-bottom: 80px;
-	}
-
-	.main-wrapper .banner-desktop-graphic {
-		width: 90%;
-	}
-
-	.main-wrapper .title-wrapper {
-		font-size: 50px;
-	}
-
-	.presented-wrapper {
-		font-size: 14px;
-		margin-top: 30px;
-	}
-
-	.banner-details {
-		position: relative;
-	}
-
-	.banner-details .date {
-		font-size: 16px;
-	}
-
-	.banner-details .apply {
-		position: absolute;
-		z-index: 1;
-		top: 60px;
-		right: 20px;
-		font-size: 16px;
-	}
-
-	.apply .due-date {
-		display: inline;
-		margin-right: 15px;
-	}
-
-	.date,
-	.apply,
-	.agb,
-	.deadline {
-		font-size: 16px;
-	}
-	.section-header {
-		height: 45px;
-	}
-	.day {
-		height: 60px;
-		margin-top: 45px;
-		margin-bottom: 20px;
 	}
 }
