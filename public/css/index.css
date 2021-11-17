@@ -112,6 +112,10 @@
 	display: inline;
 }
 
+.schedule .row {
+	margin-bottom: 10px;
+}
+
 /* FAQ */
 
 .faq-section {
