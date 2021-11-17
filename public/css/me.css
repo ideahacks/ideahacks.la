@@ -1,4 +1,16 @@
-#welcome {
+.app-title {
+	text-transform: uppercase;
+	color: var(--green);
+	font-weight: 700;
+	font-size: 36px;
+	margin-top: 100px;
+}
+
+.line {
+	width: 30%;
+}
+
+/* #welcome {
 	font-family: "Source Code Pro", monospace;
 	font-weight: bold;
 	font-size: 52px;
@@ -36,7 +48,7 @@ button:hover {
 
 .button-container button {
 	margin: 5px 0;
-}
+} */
 
 .admin {
 	background-color: #d46c6c;
@@ -56,45 +68,94 @@ button:hover {
 
 /* APPLICATION STATUS */
 
-.background {
+/* .background {
 	position: relative;
 	width: 510px;
 	margin: 40px auto;
 	padding: 20px 70px;
 	border-radius: 10px;
-}
+} */
 
-.background h1 {
+/* .background h1 {
 	font-family: "Source Code Pro", monospace;
 	font-weight: 500;
 	font-size: 36px;
 	color: #2b2b2b;
 	letter-spacing: -1.5px;
-}
+} */
 
 .status-container {
 	display: inline-block;
 	margin: 20px 0;
-	padding: 10px;
-	background-color: #fafafa;
-	border-radius: 10px;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: var(--white);
+	border-radius: 40px;
 }
 
 .status {
-	padding: 50px 30px;
-	border-radius: 10px;
-	width: 320px;
+	padding: 60px 20px;
+	border-radius: 40px;
+	width: 400px;
+	height: 200px;
+	/* display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center; */
+}
 
-	font-family: "Source Code Pro", monospace;
-	text-transform: capitalize;
+.stats {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 36px;
+}
+
+.status-container a {
+	text-decoration: none;
 	font-size: 30px;
+	font-weight: 700;
+}
 
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.to-app:hover {
+	color: var(--black);
 }
 
 .no-application {
-	background-color: #2b2b2b;
+	background-color: var(--black);
 	color: white;
+	margin-top: 20px;
+}
+
+.status-container {
+	color: var(--black);
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.pending {
+	background-color: #78B0C0;
+	color: white;
+	margin-top: 20px;
+}
+
+.accepted {
+	background-color: var(--green);
+	color: white;
+	margin-top: 20px;
+}
+
+.rejected {
+	background-color: var(--green);
+	color: #C86B6B;
+	margin-top: 20px;
+}
+
+.waitlist {
+	background-color: var(--green);
+	color: #CCAB45;
+	margin-top: 20px;
 }
 
 .apply {
