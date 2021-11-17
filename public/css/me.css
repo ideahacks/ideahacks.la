@@ -8,6 +8,7 @@
 
 .line {
 	width: 30%;
+	border-width: 3px;
 }
 
 /* #welcome {
@@ -50,7 +51,7 @@ button:hover {
 	margin: 5px 0;
 } */
 
-.admin {
+/* .admin {
 	background-color: #d46c6c;
 	border: 1px solid #d46c6c;
 	color: #5d3131;
@@ -64,7 +65,7 @@ button:hover {
 
 .blurb {
 	margin-bottom: 20px;
-}
+} */
 
 /* APPLICATION STATUS */
 
@@ -135,7 +136,7 @@ button:hover {
 }
 
 .pending {
-	background-color: #78B0C0;
+	background-color: #78b0c0;
 	color: white;
 	margin-top: 20px;
 }
@@ -148,13 +149,13 @@ button:hover {
 
 .rejected {
 	background-color: var(--green);
-	color: #C86B6B;
+	color: #c86b6b;
 	margin-top: 20px;
 }
 
 .waitlist {
 	background-color: var(--green);
-	color: #CCAB45;
+	color: #ccab45;
 	margin-top: 20px;
 }
 
