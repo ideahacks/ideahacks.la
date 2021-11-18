@@ -71,11 +71,7 @@
 }
 
 .venue__information-container.two_wide {
-	/* max-width: calc(220px * 2); */
-	max-width: 100%; 
-	display:flex; 
-	flex-wrap:wrap; 
-	flex-direction:row; 
+	max-width: calc(220px * 2);
 }
 
 /* .venue__information-block{
