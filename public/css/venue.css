@@ -64,9 +64,8 @@
 .venue__information-container {
 	display: flex;
 	flex-wrap: wrap; 
-	margin: auto;
+	/* margin: auto; */
 	flex-direction: row;
-	gap: 50px;
 	/* justify-content: center; */
 	/* align-items: center; */
 }
