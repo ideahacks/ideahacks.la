@@ -31,6 +31,12 @@
 }
 /* General */
 
+p {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	color: var(--white);
+	background-color: var(--black);
+}
 .filler {
 	width: 100%;
 	height: 30px;
