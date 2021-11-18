@@ -71,8 +71,15 @@
 
 .venue__information-container.two_wide {
 	/* max-width: calc(220px * 2); */
-	max-width: 50%;
+	max-width: 100%; 
+	display:flex; 
+	flex-wrap:wrap; 
+	flex-direction:row; 
 }
+
+/* .venue__information-block{
+	width:50%; 
+} */
 
 .venue__info-block {
 	width: auto;
