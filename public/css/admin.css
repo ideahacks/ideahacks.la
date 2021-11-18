@@ -1,6 +1,5 @@
 /*--------------- MAILING LISTS -----------------*/
 
-
 .mailing-address-list {
 	font-size: 14px;
 	color: var(--black);
@@ -44,7 +43,7 @@
 	position: relative;
 	text-align: center;
 
-	color:var(--white);
+	color: var(--white);
 	background-color: var(--black); /*backup*/
 	float: left;
 	width: calc(25% - 2vw);
