@@ -66,6 +66,7 @@
 	flex-wrap: wrap; 
 	margin: auto;
 	flex-direction: row;
+	gap: 50px;
 	/* justify-content: center; */
 	/* align-items: center; */
 }
