@@ -1,3 +1,23 @@
+.Description-white {
+	color: var(--white);
+	font-family: "Roboto", sans-serif;
+	margin: 15px 0px 0px 0px;
+	font-weight: 200;
+	font-size: 25px;
+
+	text-align: left;
+	padding-bottom: 25px;
+}
+.Description-green {
+	color: var(--green);
+	font-family: "Roboto", sans-serif;
+	margin: 15px 0px 0px 0px;
+	font-weight: 400;
+	font-size: 35px;
+
+	text-align: left;
+	padding-bottom: 35px;
+}
 /* General */
 
 .filler-thick,
