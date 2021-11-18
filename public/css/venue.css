@@ -52,15 +52,16 @@
 
 .venue__information-container {
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	margin: auto;
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center; */
+	/* align-items: center; */
 }
 
 .venue__information-container.two_wide {
-	max-width: calc(220px * 2);
+	/* max-width: calc(220px * 2); */
+	width: 50%;
 }
 
 .venue__info-block {
