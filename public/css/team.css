@@ -1,3 +1,26 @@
+/* Header */
+.logo-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img-header {
+	position: absolute;
+	top: 196px;
+}
+
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
+.img-header {
+	width: 100%;
+	/*min-width: 800px;*/
+}
+
 .header {
 	visibility: hidden;
 	margin: 0px;
