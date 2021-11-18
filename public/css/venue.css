@@ -62,12 +62,12 @@
 }
 
 .venue__information-container {
-	display: inline-block;
-	/* flex-wrap: wrap;  */
+	display: flex;
+	flex-wrap: wrap; 
 	margin: auto;
-	/* flex-direction: row; */
+	flex-direction: row; */
 	/* justify-content: center; */
-	/* align-items: center; */
+	/* align-items: center;
 }
 
 .venue__information-container.two_wide {
