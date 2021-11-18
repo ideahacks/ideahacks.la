@@ -62,7 +62,7 @@
 }
 
 .venue__information-container {
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap; 
 	margin: auto;
 	flex-direction: row; */
