@@ -1,3 +1,13 @@
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+.logo-two-wide-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 50%;
+}
 .Description-white {
 	color: var(--white);
 	font-family: "Roboto", sans-serif;
@@ -52,7 +62,7 @@
 
 .venue__information-container {
 	display: flex;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap; 
 	margin: auto;
 	flex-direction: row;
 	/* justify-content: center; */
