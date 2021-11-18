@@ -30,20 +30,19 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        {{!-- <div class="houseline"></div>
+        <div class="houseline"></div>
 
         <div class='container text-center'>
-            <h1 id="welcome">WELCOME</h1>
+            <h1 class="welcome">WELCOME</h1>
         </div>
 
         <div class="button-container">
-            {{#if user.isAdmin}}
+            {{#if true}}
                 <a href='/admin'><button class="admin">Admin</button></a>
             {{/if}}
-
             <a href="/dashboard/me/settings"><button class="settings">Settings</button></a>
             <a href="/logout"><button class="logout">Log Out</button></a>
-        </div> --}}
+        </div>
 
         <!-- APPLICATION STATUS -->
         <div class='background container text-center'>
@@ -51,35 +50,35 @@
             <hr class="line">
 
             <div class="status-container">
-                {{#if user.hasApplication}}
-                    <h2 class="description">Your application is under review!</h2>
-                    <div class="status pending">
-                        <h2 class="stats">{{user.applicationStatus}}</h3>
+                {{#if true}}
+                    <h2 class="description">{{statusDescription}}</h2>
+                    <div class="status {{user.applicationStatus}}">
+                        <h2 class="stats">{{user.applicationStatus}}</h2>
                     </div>
                 {{else}}
                     <a href="/dashboard/application" class="to-app">Click here to apply now!</a>
                     <div class="status no-application">
-                        <h2 class="stats">No Application</h3>
+                        <h2 class="stats">No Application</h2>
                     </div>
                 {{/if}}
-                {{#if accepted}}
+                {{!-- {{#if accepted}}
                     <h2 class="description">Welcome to IDEA Hacks!</h2>
                     <div class="status accepted">
-                        <h2 class="stats">Accepted</h3>
+                        <h2 class="stats">Accepted</h2>
                     </div>
                 {{/if}}
                 {{#if rejected}}
                     <h2 class="description">We’re sorry we didn’t have room</h2>
                     <div class="status rejected">
-                        <h2 class="stats">Rejected</h3>
+                        <h2 class="stats">Rejected</h2>
                     </div>
                 {{/if}}
-                {{#if waitlist}}
+                {{#if waitlisted}}
                     <h2 class="description">We’ll be in touch if a spot opens up!</h2>
                     <div class="status waitlist">
-                        <h2 class="stats">Waitlist</h3>
+                        <h2 class="stats">Waitlist</h2>
                     </div>
-                {{/if}}
+                {{/if}} --}}
             </div>
         </div>
     </div>

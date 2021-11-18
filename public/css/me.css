@@ -1,9 +1,17 @@
+.welcome {
+	text-transform: uppercase;
+	color: var(--green);
+	font-weight: 700;
+	font-size: 45px;
+	margin-top: 50px;
+}
+
 .app-title {
 	text-transform: uppercase;
 	color: var(--green);
 	font-weight: 700;
 	font-size: 36px;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .line {
@@ -11,79 +19,49 @@
 	border-width: 3px;
 }
 
-/* #welcome {
-	font-family: "Source Code Pro", monospace;
-	font-weight: bold;
-	font-size: 52px;
-	color: #50b5dd;
-	margin: 100px auto 20px;
-}
-
 .button-container {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	text-align: center;
-
 	max-width: 350px;
 	width: 80%;
 	margin: auto;
 }
 
 button {
-	background-color: transparent;
-	font-weight: normal;
+	background-color: var(--green);
+	font-weight: 700;
 	font-size: 14px;
-	color: #50b5dd;
-	border: 1.5px solid #50b5dd;
+	color: var(--white);
+	border: 1.5px solid var(--green);
 	text-transform: uppercase;
 	border-radius: 10px;
 	padding: 8px 20px;
 }
 
 button:hover {
-	background-color: #50b5dd;
-	color: white;
+	background-color: var(--white);
+	color: var(--black);
+	border: 1.5px solid var(--white);
 	transition: 0.3s ease;
 }
 
 .button-container button {
 	margin: 5px 0;
-} */
+}
 
-/* .admin {
-	background-color: #d46c6c;
-	border: 1px solid #d46c6c;
-	color: #5d3131;
+.admin {
+	background-color: var(--red);
+	border: 1px solid var(--red);
+	color: var(--white);
 }
 
 .admin:hover {
-	background-color: #5d3131;
-	border: 1px solid #5d3131;
-	color: #d46c6c;
+	background-color: var(--white);
+	border: 1px solid var(--white);
+	color: var(--red);
 }
-
-.blurb {
-	margin-bottom: 20px;
-} */
-
-/* APPLICATION STATUS */
-
-/* .background {
-	position: relative;
-	width: 510px;
-	margin: 40px auto;
-	padding: 20px 70px;
-	border-radius: 10px;
-} */
-
-/* .background h1 {
-	font-family: "Source Code Pro", monospace;
-	font-weight: 500;
-	font-size: 36px;
-	color: #2b2b2b;
-	letter-spacing: -1.5px;
-} */
 
 .status-container {
 	display: inline-block;
@@ -101,10 +79,11 @@ button:hover {
 	border-radius: 40px;
 	width: 400px;
 	height: 200px;
-	/* display: flex;
-	flex-wrap: nowrap;
-	align-items: center;
-	justify-content: center; */
+	margin: 20px auto 0;
+}
+
+.description {
+	color: var(--black);
 }
 
 .stats {
@@ -129,57 +108,30 @@ button:hover {
 	margin-top: 20px;
 }
 
-.status-container {
-	color: var(--black);
-	font-size: 30px;
-	font-weight: 700;
-}
-
 .pending {
-	background-color: #78b0c0;
-	color: white;
+	background-color: var(--blue);
+	color: var(--white);
 	margin-top: 20px;
 }
 
 .accepted {
 	background-color: var(--green);
-	color: white;
+	color: var(--white);
 	margin-top: 20px;
 }
 
 .rejected {
-	background-color: var(--green);
-	color: #c86b6b;
+	background-color: var(--red);
+	color: var(--white);
 	margin-top: 20px;
 }
 
 .waitlist {
-	background-color: var(--green);
-	color: #ccab45;
+	background-color: var(--yellow);
+	color: var(--white);
 	margin-top: 20px;
 }
 
 .apply {
 	display: block;
-}
-
-@media (max-width: 550px) {
-	.button-container button {
-		padding: 8px;
-	}
-
-	.background {
-		width: 310px;
-		padding: 10px 20px;
-	}
-
-	.background h1 {
-		font-size: 26px;
-	}
-
-	.status {
-		padding: 30px 10px;
-		width: 250px;
-		font-size: 24px;
-	}
 }
