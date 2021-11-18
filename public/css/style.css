@@ -7,10 +7,10 @@
 	--white: #ffffff;
 }
 
-.column {
+.body {
 	font-family: "Roboto", sans-serif;
 	font-size: 20px;
-	color: var(--black);
+	color: var(--white);
 	background-color: var(--black);
 }
 

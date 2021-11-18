@@ -1,8 +1,5 @@
 /*--------------- MAILING LISTS -----------------*/
 
-head {
-	font-family: "Source Code Pro", monospace;
-}
 
 .mailing-address-list {
 	font-size: 14px;
@@ -14,7 +11,7 @@ head {
 	font-family: "Source Code Pro", monospace;
 	font-weight: bold;
 	font-size: 52px;
-	color: #619b83;
+	color: var(--green);
 	margin: 100px auto 20px;
 }
 
@@ -47,8 +44,8 @@ head {
 	position: relative;
 	text-align: center;
 
-	color: white;
-	background-color: white; /*backup*/
+	color:var(--white);
+	background-color: var(--black); /*backup*/
 	float: left;
 	width: calc(25% - 2vw);
 	margin: 0 1vw;
@@ -57,16 +54,16 @@ head {
 
 /* Different color for each mailing list */
 .column:nth-child(1) {
-	background-color: #78b0c0 !important;
+	background-color: var(--blue) !important;
 }
 .column:nth-child(2) {
-	background-color: #619b83 !important;
+	background-color: var(--green) !important;
 }
 .column:nth-child(3) {
-	background-color: #c86b6b !important;
+	background-color: var(--red) !important;
 }
 .column:nth-child(4) {
-	background-color: #ccab45 !important;
+	background-color: var(--yellow) !important;
 }
 
 .mailing-list .mailing-type {
@@ -74,7 +71,7 @@ head {
 }
 
 .mailing-list .mailing-address-container {
-	background-color: black;
+	background-color: var(--black);
 	margin: 8%;
 	border-radius: 1rem;
 	overflow: auto;
@@ -90,7 +87,7 @@ head {
 }
 
 .mailing-list .mailing-address-container .mailing-address-list {
-	background-color: white;
+	background-color: var(--white);
 	overflow: auto;
 	height: 30vh;
 	padding: 1.5rem 0.5rem;
