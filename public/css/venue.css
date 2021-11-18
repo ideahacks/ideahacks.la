@@ -14,6 +14,7 @@
 	margin: 15px 0px 0px 0px;
 	font-weight: 200;
 	font-size: 25px;
+	word-wrap: break-word;
 
 	text-align: left;
 	padding-bottom: 25px;
