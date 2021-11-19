@@ -22,7 +22,7 @@
 }
 
 .logo-two-wide-img {
-	margin-left: 50%;
+	/* margin-left: 50%; */
 	transform: translateX(-50%);
     width: 500;
 	height: 320;
