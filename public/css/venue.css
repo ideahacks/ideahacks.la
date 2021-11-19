@@ -47,11 +47,7 @@
 	padding-bottom: 0px;
 }
 /* General */
-title {
-	font-family: "Source Code Pro", monospace;
-	color: var(--green);
-	font-size: 48px;
-	font-weight: bold;
+.title {
 	word-wrap: break-word;
 	text-align: center;
 }
