@@ -70,7 +70,7 @@ p {
 }
 .container-fluid {
 	padding-left: 70px;
-	padding-right: 70px;
+	/* padding-right: 70px; */
 }
 
 .container-fluid.section {
