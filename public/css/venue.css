@@ -35,7 +35,7 @@
 	word-wrap: break-word;
 
 	text-align: left;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 .Description-green {
 	color: var(--green);
