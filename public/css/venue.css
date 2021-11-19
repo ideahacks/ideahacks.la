@@ -90,7 +90,7 @@ p {
 	flex-wrap: wrap;
 	/* margin: auto; */
 	flex-direction: row;
-	/* justify-content: center; */
+	justify-content: space-evenly;
 	align-items: center;
 }
 
