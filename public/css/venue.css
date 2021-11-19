@@ -25,6 +25,7 @@
 	margin-left: 50%;
 	transform: translateX(-50%);
     width: 75%;
+	
 }
 .Description-white {
 	color: var(--white);
@@ -44,7 +45,7 @@
 	font-weight: bold;
 	font-size: 35px;
 
-	float: left;
+	margin-right: auto;
 	padding-bottom: 10px;
 }
 /* General */
