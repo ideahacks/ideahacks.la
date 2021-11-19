@@ -22,9 +22,9 @@
 }
 
 .logo-two-wide-img {
-	margin-left: 50%;
+	margin-left: 66%;
 	margin-right: 60%;
-	height: 500px
+	height: 476px
 }
 .Description-black {
 	color: var(--black);
@@ -35,7 +35,6 @@
 	word-wrap: break-word;
 
 	text-align: left;
-	padding-bottom: 5px;
 }
 .Description-white {
 	color: var(--white);
