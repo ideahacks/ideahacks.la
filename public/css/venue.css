@@ -88,7 +88,7 @@ p {
 .venue__information-container {
 	display: flex;
 	flex-wrap: wrap;
-	margin: auto;
+	/* margin: auto; */
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
