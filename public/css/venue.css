@@ -23,7 +23,7 @@
 
 .logo-two-wide-img {
 	margin-left: 50%;
-	transform: translateX(-50%);
+	margin-right: 60%;
 }
 .Description-black {
 	color: var(--black);
@@ -121,6 +121,7 @@ p2 {
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: start;
+	gap: 5%;
 }
 .columnBox{
 	display: flex; 
@@ -128,7 +129,8 @@ p2 {
 	flex-direction:column; 
 }
 .squish{
-	padding-right: 15%; 
+	padding-right: 10%;
+	padding-left: 10%;
 }
 
 .venue__information-container.two_wide {
