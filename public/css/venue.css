@@ -48,6 +48,7 @@
 }
 /* General */
 .title {
+	font-family: "Source Code Pro", monospace;
 	word-wrap: break-word;
 	text-align: center;
 }
