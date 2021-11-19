@@ -11,7 +11,7 @@
 }
 
 .logo-img {
-	align-items: center;
+	margin: 50%;
 	transform: translateX(-50%);
 	max-width: 100%;
 }
