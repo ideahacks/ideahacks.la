@@ -136,6 +136,9 @@ p2 {
 
 .venue__information-container.two_wide {
 	max-width: calc(220px * 2);
+	margin-left: 30px;
+	margin-right: 100px;
+	
 }
 
 .venue__stations-container.two_wide {
