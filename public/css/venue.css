@@ -70,7 +70,7 @@ p {
 }
 .container-fluid {
 	padding-left: 70px;
-	/* padding-right: 70px; */
+	padding-right: 70px;
 }
 
 .container-fluid.section {
@@ -90,7 +90,7 @@ p {
 	flex-wrap: wrap;
 	/* margin: auto; */
 	flex-direction: row;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
 }
 
