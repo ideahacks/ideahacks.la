@@ -23,10 +23,7 @@
 
 .logo-two-wide-img {
 	margin-left: 50%;
-	margin-right:50%;
 	transform: translateX(-50%);
-    width: 320;
-	height: 500;
 	
 }
 .Description-white {
