@@ -1,9 +1,13 @@
-#welcome {
-	font-family: "Source Code Pro", monospace;
-	font-weight: bold;
-	font-size: 52px;
-	color: #50b5dd;
-	margin: 100px auto 20px;
+.app-title {
+	text-transform: uppercase;
+	color: var(--green);
+	font-weight: 700;
+	margin-top: 50px;
+}
+
+.line {
+	width: 30%;
+	border-width: 3px;
 }
 
 .button-container {
@@ -11,26 +15,26 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	text-align: center;
-
 	max-width: 350px;
 	width: 80%;
 	margin: auto;
 }
 
 button {
-	background-color: transparent;
-	font-weight: normal;
+	background-color: var(--green);
+	font-weight: 700;
 	font-size: 14px;
-	color: #50b5dd;
-	border: 1.5px solid #50b5dd;
+	color: var(--white);
+	border: 1.5px solid var(--green);
 	text-transform: uppercase;
 	border-radius: 10px;
 	padding: 8px 20px;
 }
 
 button:hover {
-	background-color: #50b5dd;
-	color: white;
+	background-color: var(--white);
+	color: var(--black);
+	border: 1.5px solid var(--white);
 	transition: 0.3s ease;
 }
 
@@ -39,85 +43,106 @@ button:hover {
 }
 
 .admin {
-	background-color: #d46c6c;
-	border: 1px solid #d46c6c;
-	color: #5d3131;
+	background-color: var(--red);
+	border: 1px solid var(--red);
+	color: var(--white);
 }
 
 .admin:hover {
-	background-color: #5d3131;
-	border: 1px solid #5d3131;
-	color: #d46c6c;
-}
-
-.blurb {
-	margin-bottom: 20px;
-}
-
-/* APPLICATION STATUS */
-
-.background {
-	position: relative;
-	width: 510px;
-	margin: 40px auto;
-	padding: 20px 70px;
-	border-radius: 10px;
-}
-
-.background h1 {
-	font-family: "Source Code Pro", monospace;
-	font-weight: 500;
-	font-size: 36px;
-	color: #2b2b2b;
-	letter-spacing: -1.5px;
+	background-color: var(--white);
+	border: 1px solid var(--white);
+	color: var(--red);
 }
 
 .status-container {
 	display: inline-block;
-	margin: 20px 0;
-	padding: 10px;
-	background-color: #fafafa;
-	border-radius: 10px;
+	margin: 40px 0 20px;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: var(--white);
+	border-radius: 40px;
 }
 
 .status {
-	padding: 50px 30px;
-	border-radius: 10px;
-	width: 320px;
+	padding: 60px 20px;
+	border-radius: 40px;
+	max-width: 400px;
+	min-height: 200px;
+	margin: 20px auto 0;
+}
 
-	font-family: "Source Code Pro", monospace;
-	text-transform: capitalize;
+.description {
+	margin-top: 0;
+	color: var(--black);
+}
+
+.stats {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 36px;
+}
+
+.status-container a {
+	text-decoration: none;
 	font-size: 30px;
+	font-weight: 700;
+}
 
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.to-app:hover {
+	color: var(--black);
+	transition: 0.3s ease;
 }
 
 .no-application {
-	background-color: #2b2b2b;
+	background-color: var(--black);
 	color: white;
+	margin-top: 20px;
+}
+
+.pending {
+	background-color: var(--blue);
+	color: var(--white);
+	margin-top: 20px;
+}
+
+.accepted {
+	background-color: var(--green);
+	color: var(--white);
+	margin-top: 20px;
+}
+
+.rejected {
+	background-color: var(--red);
+	color: var(--white);
+	margin-top: 20px;
+}
+
+.waitlisted {
+	background-color: var(--yellow);
+	color: var(--white);
+	margin-top: 20px;
 }
 
 .apply {
 	display: block;
 }
 
-@media (max-width: 550px) {
-	.button-container button {
-		padding: 8px;
-	}
-
-	.background {
-		width: 310px;
-		padding: 10px 20px;
-	}
-
-	.background h1 {
-		font-size: 26px;
+@media (max-width: 500px) {
+	.status-container {
+		display: inline-block;
+		margin: 20px 0;
+		padding-top: 30px;
+		padding-bottom: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+		background-color: var(--white);
+		border-radius: 40px;
 	}
 
 	.status {
-		padding: 30px 10px;
-		width: 250px;
+		max-width: 300px;
 		font-size: 24px;
 	}
 }
