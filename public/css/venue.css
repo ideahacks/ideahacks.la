@@ -51,6 +51,7 @@
 	font-family: "Source Code Pro", monospace;
 	word-wrap: break-word;
 	text-align: center;
+	margin-top: 0;
 }
 p {
 	font-family: "Roboto", sans-serif;
