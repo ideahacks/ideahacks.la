@@ -93,6 +93,7 @@ button:hover {
 
 .to-app:hover {
 	color: var(--black);
+	transition: 0.3s ease;
 }
 
 .no-application {
