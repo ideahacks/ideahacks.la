@@ -97,8 +97,20 @@ p {
 	justify-content: space-evenly;
 	align-items: center;
 }
+.venue__stations-container {
+	display: flex;
+	flex-wrap: wrap;
+	/* margin: auto; */
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: left;
+}
 
 .venue__information-container.two_wide {
+	max-width: calc(220px * 2);
+}
+
+.venue__stations-container.two_wide {
 	max-width: calc(220px * 2);
 }
 
