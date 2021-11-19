@@ -103,7 +103,7 @@ p {
 	/* margin: auto; */
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: left;
+	align-items: start;
 }
 
 .venue__information-container.two_wide {
