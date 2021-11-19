@@ -1,16 +1,8 @@
-.welcome {
-	text-transform: uppercase;
-	color: var(--green);
-	font-weight: 700;
-	font-size: 45px;
-	margin-top: 50px;
-}
-
 .app-title {
 	text-transform: uppercase;
 	color: var(--green);
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 45px;
 	margin-top: 50px;
 }
 
@@ -77,12 +69,13 @@ button:hover {
 .status {
 	padding: 60px 20px;
 	border-radius: 40px;
-	width: 400px;
+	max-width: 400px;
 	height: 200px;
 	margin: 20px auto 0;
 }
 
 .description {
+	margin-top: 0;
 	color: var(--black);
 }
 
@@ -126,7 +119,7 @@ button:hover {
 	margin-top: 20px;
 }
 
-.waitlist {
+.waitlisted {
 	background-color: var(--yellow);
 	color: var(--white);
 	margin-top: 20px;
@@ -134,4 +127,23 @@ button:hover {
 
 .apply {
 	display: block;
+}
+
+@media (max-width: 500px) {
+	.status-container {
+		display: inline-block;
+		margin: 20px 0;
+		padding-top: 30px;
+		padding-bottom: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+		background-color: var(--white);
+		border-radius: 40px;
+	}
+
+	.status {
+		padding: 30px 10px;
+		width: 300px;
+		font-size: 24px;
+	}
 }

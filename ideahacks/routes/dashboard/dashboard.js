@@ -11,30 +11,23 @@ const getParts = (req, res) => {
 }
 
 const getMe = (req, res) => {
-	let statusColor = ""
 	let statusDescription = ""
 	switch (req.user.applicationStatus) {
 		case "pending":
-			statusColor = "#78b0c0"
 			statusDescription = "Your application is under review!"
 			break
 		case "accepted":
-			statusColor = "#619b83"
 			statusDescription = "Welcome to IDEA Hacks!"
 			break
 		case "waitlisted":
-			statusColor = "#ccab45"
 			statusDescription = "We’ll be in touch if a spot opens up!"
 			break
 		case "rejected":
-			statusColor = "#c86b6b"
 			statusDescription = "We’re sorry we didn’t have room"
 			break
 	}
 	res.render("me", {
 		user: req.user,
-		accepted: req.user.applicationStatus === "accepted",
-		statusColor: statusColor,
 		statusDescription: statusDescription
 	})
 }
