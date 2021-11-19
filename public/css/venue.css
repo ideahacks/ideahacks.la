@@ -24,6 +24,7 @@
 .logo-two-wide-img {
 	margin-left: 50%;
 	margin-right: 60%;
+	height: 500px
 }
 .Description-black {
 	color: var(--black);
