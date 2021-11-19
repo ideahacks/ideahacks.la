@@ -11,6 +11,7 @@
 }
 
 .logo-img {
+	align-items: center;
 	transform: translateX(-50%);
 	max-width: 100%;
 }
