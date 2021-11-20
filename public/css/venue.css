@@ -21,11 +21,6 @@
 	/*min-width: 800px;*/
 }
 
-.logo-two-wide-img {
-	margin-left: 66%;
-	margin-right: 60%;
-	height: 476px
-}
 .Description-black {
 	color: var(--black);
 	font-family: "Roboto", sans-serif;
@@ -86,9 +81,13 @@ p2 {
 }
 /* boxes */
 .venue-container {
-	text-align: center;
-	background-color: var(--black);
+	padding: 0 30px;
 }
+
+.venue-container img {
+	max-width: 100%;
+}
+
 .container-fluid {
 	padding-left: 70px;
 	padding-right: 70px;
