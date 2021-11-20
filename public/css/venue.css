@@ -59,6 +59,11 @@
 	text-align: center;
 	margin-top: 0;
 }
+
+.white-tab-container > div:first-child div h1 {
+	white-space: normal;
+}
+
 p {
 	font-family: "Roboto", sans-serif;
 	font-size: 20px;
