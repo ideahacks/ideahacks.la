@@ -127,12 +127,12 @@ p2 {
 	align-items: start;
 	gap: 5%;
 }
-.columnBox{
-	display: flex; 
-	flex-wrap: wrap; 
-	flex-direction:column; 
+.columnBox {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
-.squish{
+.squish {
 	padding-right: 10%;
 	padding-left: 10%;
 }
@@ -141,7 +141,6 @@ p2 {
 	max-width: calc(220px * 2);
 	margin-left: 30px;
 	margin-right: 100px;
-	
 }
 
 .venue__stations-container.two_wide {
