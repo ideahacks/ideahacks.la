@@ -1,0 +1,45 @@
+/* HEADER */
+
+.logo-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.filler {
+	display: none;
+	height: 60px;
+	width: 100%;
+	background-color: #b5c6bc;
+}
+
+.logo-img-header {
+	position: absolute;
+	top: 190px;
+}
+
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
+.img-header {
+	width: 100%;
+}
+
+@media (max-width: 1070px) {
+	.logo-img-header {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 990px) {
+	.filler {
+		display: block;
+	}
+
+	.logo-img-header {
+		top: 136px;
+	}
+}
