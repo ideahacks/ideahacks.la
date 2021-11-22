@@ -14,6 +14,10 @@ const getHistory = (req, res) => {
 	return res.render("history")
 }
 
+const getVenue = (req, res) => {
+	return res.render("venue")
+}
+
 const getConfirm = (req, res) => {
 	return res.render("confirm")
 }
@@ -30,6 +34,7 @@ module.exports = {
 	getMain,
 	getTeam,
 	getHistory,
+	getVenue,
 	getConfirm,
 	getPrivacy,
 	getBoxes
