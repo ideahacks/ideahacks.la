@@ -9,15 +9,15 @@ module.exports = [
 		teammates: [
 			{
 				name: "Solaine Zhao",
-				picturePath: "/img/team/solaine.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Tao Lu",
-				picturePath: "/img/team/tao.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Pranav Srinivasan",
-				picturePath: "/img/team/pranav.jpg"
+				picturePath: "/img/team/default.png"
 			}
 		]
 	},
@@ -28,27 +28,27 @@ module.exports = [
 		teammates: [
 			{
 				name: "Robert Peralta",
-				picturePath: "/img/team/robert.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Ava Asmani",
-				picturePath: "/img/team/justin.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Grace Ma",
-				picturePath: "/img/team/james.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Yolanda Chen",
-				picturePath: "/img/team/rex.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Raj Piskala",
-				picturePath: "/img/team/ray.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Timothy Jacques",
-				picturePath: "/img/team/sahil.jpg"
+				picturePath: "/img/team/default.png"
 			}
 		]
 	},
@@ -59,27 +59,27 @@ module.exports = [
 		teammates: [
 			{
 				name: "Jack Lin",
-				picturePath: "/img/team/kimi.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Kimi Kodama",
-				picturePath: "/img/team/kenneth.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Viviane Dinh",
-				picturePath: "/img/team/bradley.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Alex Chen",
-				picturePath: "/img/team/erica.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Kat Nasif",
-				picturePath: "/img/team/vivianne.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Jun Sang Lee",
-				picturePath: "/img/team/paul.jpg"
+				picturePath: "/img/team/default.png"
 			}
 		]
 	},
@@ -90,43 +90,43 @@ module.exports = [
 		teammates: [
 			{
 				name: "Brandon Le",
-				picturePath: "/img/team/henry.JPG"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Nick Turner",
-				picturePath: "/img/team/peter.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Ryan Tien",
-				picturePath: "/img/team/christine.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Jason Wu",
-				picturePath: "/img/team/grace.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Bradley Schulz",
-				picturePath: "/img/team/christy.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Aaron Kuo",
-				picturePath: "/img/team/raj.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Jade Hakim",
-				picturePath: "/img/team/isha.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Freddy Aguilar",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Raj Intwala",
-				picturePath: "/img/team/angela.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Zach Wong",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			}
 		]
 	},
@@ -137,47 +137,47 @@ module.exports = [
 		teammates: [
 			{
 				name: "Tim Zou",
-				picturePath: "/img/team/pranav.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Jason Song",
-				picturePath: "/img/team/daniel.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Victor Morales Ortega",
-				picturePath: "/img/team/achinthya.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Junho Choi",
-				picturePath: "/img/team/bryan.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Stephen Kim",
-				picturePath: "/img/team/taylor.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Raj Kumar",
-				picturePath: "/img/team/alethea.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Siddhant Gupta",
-				picturePath: "/img/team/jonathan.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Caleb Terrill",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Sudarshan Seshardi",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Adelpha Chan",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Kate Hsieh",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			}
 		]
 	},
@@ -188,31 +188,31 @@ module.exports = [
 		teammates: [
 			{
 				name: "Courtney Gibbons",
-				picturePath: "/img/team/solaine.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Fred Chu",
-				picturePath: "/img/team/olivia.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "David Kao",
-				picturePath: "/img/team/anna.jpeg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Paul Vu",
-				picturePath: "/img/team/andrew.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Margot Nguyen",
-				picturePath: "/img/team/ryan.jpg"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Ryan Lin",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			},
 			{
 				name: "Elona Khoshaba",
-				picturePath: "/img/team/sylvia.png"
+				picturePath: "/img/team/default.png"
 			}
 		]
 	}
