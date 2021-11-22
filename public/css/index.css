@@ -222,11 +222,15 @@
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 	.faq-section,
 	.about-section,
 	.sponsors-section,
 	.schedule-section {
 		padding: 10px 10px 35px 10px;
+	}
+
+	.schedule p {
+		font-size: 16px;
 	}
 }
