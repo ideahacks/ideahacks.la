@@ -233,4 +233,8 @@
 	.schedule p {
 		font-size: 16px;
 	}
+
+	.schedule-day {
+		font-size: 25px;
+	}
 }
