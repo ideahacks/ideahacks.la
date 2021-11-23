@@ -1,19 +1,33 @@
+:root {
+	--green: #619b83;
+	--red: #c86b6b;
+	--yellow: #ccab45;
+	--blue: #78b0c0;
+	--black: #191a1b;
+	--white: #ffffff;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
-	color: #2b2b2b;
-	background-color: #fff8e7;
+	font-size: 20px;
+	color: var(--white);
+	background-color: var(--black);
 }
 
 h1 {
 	font-family: "Source Code Pro", monospace;
-	color: #50b5dd;
-	font-size: 52px;
+	color: var(--green);
+	font-size: 48px;
 	font-weight: bold;
+}
+
+a {
+	color: var(--green);
 }
 
 .wrapper {
 	position: relative;
-	background-color: #fafafa;
+	background-color: var(--black);
 	min-height: 100vh;
 	overflow: hidden;
 	flex-grow: 1;
@@ -25,33 +39,98 @@ h1 {
 	margin: auto;
 }
 
-.houseline {
+/* white tab container */
+
+.white-tab-container {
+	position: relative;
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.white-tab-container::after {
+	display: table;
+	content: " ";
+	height: 90px;
+	background-color: var(--white);
+}
+
+.white-tab-container > div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100px;
-
-	background-image: url(/img/houseline.png);
-	background-size: cover;
+	top: 0;
+	left: 50%;
+	transform: translateY(-99%);
+	max-width: min(500px, 100%);
 }
 
-@media (max-width: 768px) {
-	.houseline {
-		height: 70px;
+.white-tab-container > div:first-child div {
+	display: inline-block;
+	position: relative;
+	left: -50%;
+	max-width: min(500px, 100%);
+	padding: 15px 25px 0;
+	border-radius: 20px 20px 0 0;
+
+	background-color: var(--white);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.white-tab-container > div:first-child div h1 {
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* black tab container */
+
+.black-tab-container {
+	position: relative;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.black-tab-container::after {
+	display: table;
+	content: " ";
+	height: 90px;
+	background-color: var(--black);
+}
+
+.black-tab-container > div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateY(-99%);
+	max-width: min(500px, 100%);
+}
+
+.black-tab-container > div:first-child div {
+	display: inline-block;
+	position: relative;
+	left: -50%;
+	max-width: min(500px, 100%);
+	padding: 15px 25px 0;
+	border-radius: 20px 20px 0 0;
+
+	background-color: var(--black);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.black-tab-container > div:first-child div h1 {
+	margin: 0;
+	white-space: nowrap;
+}
+
+@media (max-width: 630px) {
+	.white-tab-container > div:first-child div h1,
+	.black-tab-container > div:first-child div h1 {
+		font-size: 40px;
+		white-space: normal;
 	}
-}
-
-/*** Background Colors ***/
-
-.theme-yellow {
-	background-color: #ffe195;
-}
-
-.theme-blue {
-	background-color: #50b5dd;
-}
-
-.theme-light-blue {
-	background-color: #d1ebfa;
 }

@@ -5,7 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="http://www.ideahacks.la/img/meta_thumbnail.png">
-    <meta property="og:description" content="For the seventh time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+    <meta property="og:description" content="For the eighth time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,6 +21,9 @@
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
@@ -32,6 +41,7 @@
 
         <div class="container text-center">
             <h1 id="mailing-lists">MAILING LISTS</h1>
+            <hr>
         </div>
 
         <!-- MAILING LISTS -->
@@ -43,7 +53,7 @@
                             <h3 class="mailing-type">{{ this.name }}</h3>
                             <div class="mailing-address-container">
                                 <button class="glyphicon glyphicon-copy" onclick="CopyToClipboard(&quot; {{this.list}}&quot;)"></button>
-                                <div class="mailing-address-list" id="mailing-address-text">
+                                <div class="mailing-address-list">
                                     {{#each this.list }}
                                         <p>{{ this }}</p>
                                     {{/each}}

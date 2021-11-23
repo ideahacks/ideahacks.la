@@ -1,0 +1,136 @@
+.black-tab-container a:hover {
+	color: var(--white);
+}
+
+.white-tab-container a:hover {
+	color: var(--black);
+}
+
+.ucla-section h2,
+.agb-section h2 {
+	color: var(--green);
+}
+
+/* HEADER */
+
+.logo-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.filler {
+	display: none;
+	height: 60px;
+	width: 100%;
+	background-color: #b5c6bc;
+}
+
+.logo-img-header {
+	position: absolute;
+	top: 190px;
+}
+
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
+.img-header {
+	width: 100%;
+}
+
+/* UCLA */
+
+.ucla-section {
+	padding: 0 75px;
+}
+
+.ucla-section > div:first-child {
+	display: none;
+}
+
+.ucla-section > h1 {
+	text-transform: uppercase;
+	text-align: center;
+	max-width: 750px;
+	margin: 0 auto 30px;
+}
+
+.ucla-section img {
+	max-width: 90%;
+}
+
+/* ACKERMAN */
+
+.white-tab-container.agb-section::after {
+	display: none;
+}
+
+.agb-section {
+	padding: 70px 75px 0;
+}
+
+.agb-section > div:first-child {
+	transform: translateY(-50%);
+}
+
+.agb-section > div:first-child > div h1 {
+	white-space: normal;
+}
+
+.agb-section > a {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.agb-section img {
+	width: 100%;
+}
+
+@media (max-width: 1070px) {
+	.logo-img-header {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 991px) {
+	.filler {
+		display: block;
+	}
+
+	.logo-img-header {
+		top: 136px;
+	}
+
+	.ucla-section .image-col {
+		padding: 0 35px;
+	}
+
+	.agb-section {
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 700px) {
+	.ucla-section,
+	.agb-section {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	.ucla-section h1,
+	.agb-section h1 {
+		font-size: 40px;
+	}
+
+	.ucla-section .image-col {
+		padding: 0;
+	}
+
+	.agb-section > a {
+		width: 100%;
+	}
+}

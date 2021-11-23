@@ -1,16 +1,7 @@
 // function to handle logic when navbar icon pressed
 function animateNavbar(navbarIcon) {
 	navbarIcon.classList.toggle("change")
-	toggleMobileNav()
-}
-
-function toggleMobileNav() {
-	let idText = "mobile-navbar-list"
-	if (document.getElementById(idText).style.height === "auto") {
-		document.getElementById(idText).style.height = "0%"
-	} else {
-		document.getElementById(idText).style.height = "auto"
-	}
+	document.getElementById("mobile-navbar-list").classList.toggle("active")
 }
 
 function toggleResponsiveActive() {

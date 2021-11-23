@@ -5,7 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="http://www.ideahacks.la/img/meta_thumbnail.png">
-    <meta property="og:description" content="For the seventh time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+    <meta property="og:description" content="For the eighth time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -30,55 +36,32 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class="houseline"></div>
-
-        <div class='container text-center'>
-            <h1 id="welcome">WELCOME</h1>
-        </div>
-
-        <div class="button-container">
-            {{#if user.isAdmin}}
-                <a href='/admin'><button class="admin">Admin</button></a>
-            {{/if}}
-
-            <a href="/dashboard/me/settings"><button class="settings">Settings</button></a>
-            <a href="/logout"><button class="logout">Log Out</button></a>
-        </div>
-
         <!-- APPLICATION STATUS -->
-        <div class='background theme-yellow container text-center'>
-            <h1>application status</h1>
+        <div class='background container text-center'>
+            <h1 class="app-title">application status</h1>
+            <hr class="line">
+
+            <div class="button-container">
+                {{#if user.isAdmin}}
+                    <a href='/admin'><button class="admin">Admin</button></a>
+                {{/if}}
+                <a href="/dashboard/me/settings"><button class="settings">Settings</button></a>
+                <a href="/logout"><button class="logout">Log Out</button></a>
+            </div>
 
             <div class="status-container">
                 {{#if user.hasApplication}}
-                    <div class="status" style="background-color: {{statusColor}};">{{user.applicationStatus}}</div>
+                    <h2 class="description">{{statusDescription}}</h2>
+                    <div class="status {{user.applicationStatus}}">
+                        <h2 class="stats">{{user.applicationStatus}}</h2>
+                    </div>
                 {{else}}
-                    <div class="status no-application">No Application</div>
+                    <a href="/dashboard/application" class="to-app">Click here to apply now!</a>
+                    <div class="status no-application">
+                        <h2 class="stats">No Application</h2>
+                    </div>
                 {{/if}}
             </div>
-            {{!-- {{#unless user.hasApplication}}
-                <a href="/dashboard/application" class="apply"><button>Apply Now!</button></a>
-            {{/unless}} --}}
-
-            {{#if accepted}}
-                <p class="blurb">
-                    <b>Please double-check that the info below from your application is
-                        correct!</b> Make sure that you gave your <i>FULL</i> address (i.e.,
-                    we could put what you wrote on a package and it would get to you).
-                    If anything needs to be corrected, please send us an email at
-                    <a href="mailto:team@ideahacks.la">team@ideahacks.la</a>.
-                </p>
-
-                <div class="box-info">
-                    {{#unless user.canPickUpBox}}
-                        <p class="address"><b>Shipping Address: </b>{{user.shippingAddress}}</p>
-                    {{/unless}}
-                    <p class="pickUp"><b>Picking up from UCLA: </b>{{#if user.canPickUpBox}}Yes{{else}}No{{/if}}</p>
-                    {{#if user.hasTeam}}
-                        <p class="getsTeam"><b>Getting Box for Team: </b>{{#if user.getsTeamBox}}Yes{{else}}No{{/if}}</p>
-                    {{/if}}
-                </div>
-            {{/if}}
         </div>
     </div>
 
