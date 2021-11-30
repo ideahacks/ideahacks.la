@@ -4,7 +4,7 @@
 
 module.exports = [
 	{
-		departmentName: "Team Captains",
+		departmentName: "Directors",
 		isFourWide: false,
 		teammates: [
 			{
