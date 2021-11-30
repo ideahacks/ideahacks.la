@@ -42,13 +42,37 @@
 }
 
 .logo-img {
-	margin-left: 50%;
+	margin-left: 45%;
 	transform: translateX(-50%);
 	max-width: 100%;
 }
 
 .img-header {
 	width: 100%;
+}
+
+#apply {
+	position: absolute;
+	right: 0;
+	bottom: 3%;
+	transform: translateX(55%);
+}
+
+#apply > button {
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 500;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 12px;
+	transition: 0.3s background-color ease, 0.3s color ease;
+}
+
+#apply > button:hover {
+	background-color: var(--white);
+	color: var(--black);
 }
 
 /* ABOUT */
@@ -223,6 +247,25 @@
 }
 
 @media (max-width: 700px) {
+	.filler {
+		height: 120px;
+	}
+
+	.logo-img {
+		margin-left: 50%;
+	}
+
+	#apply {
+		top: 110%;
+		bottom: 0;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	#apply > button {
+		font-size: 20px;
+	}
+
 	.faq-section,
 	.about-section,
 	.sponsors-section,
