@@ -261,11 +261,11 @@
 		right: 50%;
 		transform: translateX(50%);
 	}
-	
+
 	#apply > button {
 		font-size: 20px;
 	}
-	
+
 	.faq-section,
 	.about-section,
 	.sponsors-section,
