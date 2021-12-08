@@ -183,6 +183,10 @@
 	margin: 30px 10px;
 }
 
+.large-logo.intel {
+	width: 20%;
+}
+
 .small-logo {
 	width: 10%;
 	margin: 30px 15px;
@@ -230,7 +234,8 @@
 		display: none;
 	}
 
-	.large-logo {
+	.large-logo,
+	.large-logo.intel {
 		width: 250px;
 		margin: 20px 10px;
 	}
