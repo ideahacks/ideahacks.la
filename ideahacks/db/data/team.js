@@ -54,7 +54,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Food",
-		isFourWide: false,
+		isFourWide: true,
 		teamLead: "Jack Lin",
 		teammates: [
 			{
@@ -79,6 +79,22 @@ module.exports = [
 			},
 			{
 				name: "Jun Sang Lee",
+				picturePath: "/img/team/default.png"
+			},
+			{
+				name: "Achinthya Poduval",
+				picturePath: "/img/team/default.png"
+			},
+			{
+				name: "Taylor Chung",
+				picturePath: "/img/team/default.png"
+			},
+			{
+				name: "Ryeder Geyer",
+				picturePath: "/img/team/default.png"
+			},
+			{
+				name: "Dominic Olson",
 				picturePath: "/img/team/default.png"
 			}
 		]
