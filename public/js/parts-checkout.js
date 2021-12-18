@@ -43,9 +43,9 @@ $(() => {
 		$("#go-back").show()
 	})
 
-	$(".barcode-form .admin-input").on('keypress', function(e) {
-		return e.which !== 13;
-	});
+	$(".barcode-form .admin-input").on("keypress", function(e) {
+		return e.which !== 13
+	})
 
 	// When check-out or check-in button clicked, run this monstorous piece of logic
 	$(".barcode-form").submit(function() {
