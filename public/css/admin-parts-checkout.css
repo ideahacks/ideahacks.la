@@ -24,7 +24,7 @@
 }
 
 form {
-	font-family: "Roboto Condensed";
+	font-family: "Roboto";
 }
 
 label {
@@ -34,7 +34,7 @@ label {
 .admin-input {
 	font-weight: bold;
 	font-size: 20px;
-	color: var(--green);
+	color: var(--black);
 	text-align: center;
 	background: transparent;
 	border: none;
@@ -70,7 +70,7 @@ label {
 	max-width: 800px;
 	min-height: 306px;
 	padding: 20px 0px;
-	line-height: 50px;
+	line-height: 40px;
 }
 
 .checkout h1,
@@ -120,18 +120,20 @@ label {
 }
 
 .checkout input[type="text"],
-.checkin input[type="text"] {
+.checkin input[type="text"],
+.barcode-form input[type="text"] {
 	width: 188px;
 	border-bottom: 1px solid var(--green);
+	/*padding-bottom: 5px;*/
 }
 
 .scan-quantity {
-	margin-top: 0px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--green);
+	color: var(--black);
 }
 
 #go-back {
@@ -153,9 +155,10 @@ label {
 	width: 150px;
 	height: 50px;
 	border-radius: 10px;
+	font-weight: bold;
 	outline: none;
 	border: none;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transition: 0.3s ease;
 	color: var(--white);
 }
 
@@ -164,15 +167,19 @@ label {
 	color: var(--green);
 }
 
-#go-back button:hover,
+
 .success button:hover,
 .submit-button:hover {
 	background-color: var(--black);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 }
 
-#go-back button:hover {
-	border: 5px solid var(--white);
+#go-back-button:hover{
+	background-color: var(--green);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	color: var(--white);
+	cursor: pointer;
 }
 
 .submit-button {
