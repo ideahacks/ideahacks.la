@@ -185,6 +185,8 @@ $(() => {
 function errorHandler(err) {
 	$("#barcode-scan").html("")
 	$("#barcode-scan").html("<p>There was an error with your request:<br>" + err + "<br>Redirecting...</p>")
+	$('.checkout input[type="text"]').val("")
+	$('.checkin input[type="text"]').val("")
 	$(this).hide()
 
 	setTimeout(location.reload.bind(location), 3000)
@@ -200,6 +202,8 @@ function successHandler() {
 	$("#go-back").hide()
 	$("#barcode-scan").hide()
 	$('#barcode-scan input[type="text"]').val("")
+	$('.checkout input[type="text"]').val("")
+	$('.checkin input[type="text"]').val("")
 	$(document).scrollTop(0)
 	setTimeout(location.reload.bind(location), 3000)
 }
