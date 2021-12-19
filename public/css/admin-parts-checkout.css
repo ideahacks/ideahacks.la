@@ -3,19 +3,19 @@
 }
 
 .banner h1 {
+	margin-top: 50px;
 	text-transform: uppercase;
-	font-size: 56px;
+	font-size: 50px;
 	font-weight: 800;
-	color: black;
-	letter-spacing: 0.1em;
+	color: var(--green);
 }
 
 .banner p {
 	margin-top: 10px;
-	font-size: 18px;
+	font-size: 30px;
 	font-weight: lighter;
 	line-height: 31px;
-	color: black;
+	color: var(--white);
 }
 
 .banner img {
@@ -24,7 +24,7 @@
 }
 
 form {
-	font-family: "Roboto Condensed";
+	font-family: "Roboto";
 }
 
 label {
@@ -34,7 +34,7 @@ label {
 .admin-input {
 	font-weight: bold;
 	font-size: 20px;
-	color: #fbf3f0;
+	color: var(--black);
 	text-align: center;
 	background: transparent;
 	border: none;
@@ -51,12 +51,13 @@ label {
 
 .checkout,
 .checkin {
-	background-color: rgb(42, 45, 78);
+	background-color: var(--white);
 	border-radius: 20px;
 	margin: 50px 0px;
 	padding: 20px 0px;
 	height: 200px;
 	width: 350px;
+	font-family: "Roboto";
 }
 
 #barcode-scan,
@@ -64,12 +65,12 @@ label {
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	background-color: rgb(42, 45, 78);
+	background-color: var(--white);
 	border-radius: 40px;
 	max-width: 800px;
 	min-height: 306px;
 	padding: 20px 0px;
-	line-height: 50px;
+	line-height: 40px;
 }
 
 .checkout h1,
@@ -78,25 +79,26 @@ label {
 #checkin-scan h1 {
 	font-weight: bold;
 	font-size: 20px;
-	color: #70bfe6;
+	color: var(--black);
+	font-family: "Roboto";
 }
 
 .checkout h2,
 .checkin h2 {
 	font-weight: bold;
 	font-size: 20px;
-	color: #fbf3f0;
+	color: var(--green);
 }
 
 ::placeholder {
 	text-transform: uppercase;
-	color: #fbf3f0;
+	color: var(--green);
 }
 
 #barcode-scan p,
 #checkin-scan p {
 	font-size: 20px;
-	color: #70bfe6;
+	color: var(--green);
 	display: inline;
 }
 
@@ -106,7 +108,7 @@ label {
 	height: 40px;
 	margin-left: 20px;
 	border-radius: 0px;
-	border: 3px solid rgb(216, 216, 216);
+	border: 3px solid var(--green);
 	font-size: 18px;
 	text-align: center;
 	outline: none;
@@ -118,17 +120,20 @@ label {
 }
 
 .checkout input[type="text"],
-.checkin input[type="text"] {
+.checkin input[type="text"],
+.barcode-form input[type="text"] {
 	width: 188px;
-	border-bottom: 1px solid #fbf3f0;
+	border-bottom: 1px solid var(--green);
+	/*padding-bottom: 5px;*/
 }
 
 .scan-quantity {
-	margin-top: 0px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: var(--black);
 }
 
 #go-back {
@@ -139,51 +144,76 @@ label {
 .success p {
 	font-size: 20px;
 	line-height: 34px;
-	color: #70bfe6;
+	color: var(--white);
 }
 
 #go-back button,
 .success button,
 .submit-button {
-	background: #f2ccb5;
+	background: var(--green);
 	font-size: 20px;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px;
+	font-weight: bold;
 	outline: none;
 	border: none;
-	transition: background-color 0.3s ease, color 0.3s ease;
-	color: white;
+	transition: 0.3s ease;
+	color: var(--white);
 }
 
-#go-back button:hover,
+#go-back button {
+	background: var(--white);
+	color: var(--green);
+}
+
 .success button:hover,
 .submit-button:hover {
-	background-color: transparent;
-	border: 1px solid #f2ccb5;
-	color: #f2ccb5;
+	background-color: var(--black);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+#go-back-button:hover {
+	background-color: var(--green);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	color: var(--white);
 	cursor: pointer;
 }
 
 .submit-button {
 	display: inline-block;
-	width: 150px;
-	height: 50px;
-	border-radius: 10px;
 	text-transform: uppercase;
 }
 
-.submit-button:hover {
-	background-color: transparent;
-	color: white;
-	cursor: pointer;
-}
-
 .success {
-	margin-top: 200px;
-	text-align: center;
+	margin-top: 400px;
+	text-align: left;
+	margin-left: 100px;
 }
 
 .success h1 {
 	text-transform: uppercase;
-	font-size: 100px;
-	margin: 50px 0 10px 0;
+	font-size: 70px;
+	margin-top: 20px;
 	line-height: 0.8em;
+}
+
+@media (max-width: 700px) {
+	.checkout-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.banner h1 {
+		font-size: 40px;
+	}
+	.banner p {
+		font-size: 15px;
+	}
+
+	.checkout,
+	.checkin {
+		margin: 20px 0px;
+	}
 }
