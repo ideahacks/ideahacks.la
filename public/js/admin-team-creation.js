@@ -26,25 +26,27 @@ $(() => {
 		// Global var to store updated members
 		members = []
 		memberEmails.forEach(email => {
-			$.get("/api/users/" + email).then(member => {
-				// If the user has a team, save them for confirmation
-				if (member.hasTeam) {
-					withTeam.push(email)
-				}
-				
-				member.hasTeam = true
-				member.teamNumber = teamNumber
-				member.teammates = []
-				memberEmails.forEach(e => {
-					if (e !== email) {
-						member.teammates.push(e)
+			$.get("/api/users/" + email)
+				.then(member => {
+					// If the user has a team, save them for confirmation
+					if (member.hasTeam) {
+						withTeam.push(email)
 					}
+
+					member.hasTeam = true
+					member.teamNumber = teamNumber
+					member.teammates = []
+					memberEmails.forEach(e => {
+						if (e !== email) {
+							member.teammates.push(e)
+						}
+					})
+					members.push(member)
 				})
-				members.push(member)
-			}).catch(err => {
-				//Email doesn't exist
-				errorHandler(email + " is not a user!")
-			})
+				.catch(err => {
+					//Email doesn't exist
+					errorHandler(email + " is not a user!")
+				})
 		})
 
 		if (withTeam.length > 0) {
@@ -72,11 +74,11 @@ function createTeam() {
 		})
 
 	members.forEach(member => {
-		$.ajax({ url: "/api/users" + member.email, type: "PUT", data: member}).catch(err => {
+		$.ajax({ url: "/api/users" + member.email, type: "PUT", data: member }).catch(err => {
 			errorHandler(err)
 		})
 	})
-	
+
 	return successHandler()
 }
 
