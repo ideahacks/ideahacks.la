@@ -79,31 +79,6 @@ $(() => {
 					return errorHandler(email + " is not a user!", teamNumber)
 				})
 		})
-
-		// $.ajax({ url: "/api/teams", type: "PUT", data: team })
-		// 	.then(() => {
-		// 		//For each member of the team, add the team number to the database
-		// 		memberEmails.forEach(email => {
-		// 			$.get("/api/users/" + email)
-		// 				.then(user => {
-		// 					user.hasTeam = true
-		// 					user.teamNumber = teamNumber
-		// 					$.ajax({ url: "/api/users/" + email, type: "PUT", data: user })
-		// 						.catch(err => {
-		// 							return errorHandler(err)
-		// 						})
-		// 					team.
-		// 				})
-		// 				.catch(err => {
-		// 					return errorHandler(err)
-		// 				})
-		// 		})
-		// 		successHandler();
-		// 	})
-		// 	.catch(err => {
-		// 		errorHandler(err)
-		// 	})
-		// })
 	})
 })
 
