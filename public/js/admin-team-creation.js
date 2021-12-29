@@ -53,6 +53,12 @@ $(() => {
 										try {
 											member.hasTeam = true
 											member.teamNumber = teamNumber
+											member.teammates = []
+											memberEmails.forEach(e => {
+												if (e !== email) {
+													member.teammates.push(e)
+												}
+											})
 											membersProcessed++
 										} catch (err) {
 											return errorHandler(email + " is not a user!", teamNumber)
