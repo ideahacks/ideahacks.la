@@ -32,7 +32,6 @@ $(() => {
 
 		members = []
 		let withTeam = []
-		console.log(memberPromises)
 		$.when(...memberPromises)
 			.done(function(...memberResponses) {
 				memberResponses.forEach(memberRes => {
@@ -53,7 +52,6 @@ $(() => {
 					members.push(member)
 				})
 
-				console.log(withTeam)
 				if (withTeam.length > 0) {
 					$("#members").hide()
 					$("#with-team").html(withTeam.join(", "))
