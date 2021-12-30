@@ -24,7 +24,7 @@ $(() => {
 		let memberEmails = $('textarea[name="members"]')
 			.val()
 			.split("\n")
-		
+
 		let memberPromises = []
 		memberEmails.forEach(email => {
 			memberPromises.push($.get("/api/users/" + email))
