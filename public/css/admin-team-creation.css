@@ -24,14 +24,19 @@ textarea:focus {
 	box-shadow: none;
 }
 
-#team-input,
-#users-input {
+#team-number,
+#members,
+#confirm {
 	max-width: 400px;
 	margin: auto;
 	background-color: var(--white);
 	color: var(--black);
 	padding: 20px;
 	border-radius: 20px;
+}
+
+#with-team {
+	font-weight: bold;
 }
 
 .header {

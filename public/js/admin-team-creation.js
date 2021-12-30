@@ -1,7 +1,7 @@
+let teamNumber
+let members
 $(() => {
-	let teamNumber
-	let members
-	$("#team-submit").submit(function(event) {
+	$("#team-number").submit(function(event) {
 		event.stopPropagation()
 		teamNumber = $('input[name="team-number"]').val()
 		if (isNaN(teamNumber)) {
@@ -14,72 +14,82 @@ $(() => {
 			.then(team => {
 				return errorHandler("Team number already exists!")
 			})
+			.catch(() => {
+				$("#team-number").hide()
+				$("#members").show()
+			})
 	})
 
-	$("#users-input").submit(function() {
+	$("#members").submit(function() {
 		let memberEmails = $('textarea[name="members"]')
 			.val()
 			.split("\n")
-		let membersProcessed = 0
-
-		let withTeam = []
-		// Global var to store updated members
-		members = []
+		
+		memberPromises = []
 		memberEmails.forEach(email => {
-			$.get("/api/users/" + email)
-				.then(member => {
+			memberPromises.push($.get("/api/users/" + email))
+		})
+
+		members = []
+		let withTeam = []
+		console.log(memberPromises)
+		$.when(...memberPromises)
+			.done(function(...memberResponses) {
+				memberResponses.forEach(memberRes => {
+					member = memberRes[0]
 					// If the user has a team, save them for confirmation
 					if (member.hasTeam) {
-						withTeam.push(email)
+						withTeam.push(member.email)
 					}
 
 					member.hasTeam = true
 					member.teamNumber = teamNumber
 					member.teammates = []
 					memberEmails.forEach(e => {
-						if (e !== email) {
+						if (e !== member.email) {
 							member.teammates.push(e)
 						}
 					})
 					members.push(member)
 				})
-				.catch(err => {
-					//Email doesn't exist
-					errorHandler(email + " is not a user!")
-				})
-		})
 
-		if (withTeam.length > 0) {
-			// TODO: update HTML
-			// Return without updating users or creating team
-			return
-		}
+				console.log(withTeam)
+				if (withTeam.length > 0) {
+					$("#members").hide()
+					$("#with-team").html(withTeam.join(", "))
+					$("#confirm").show()
+					// Return without updating users or creating team
+					return
+				}
 
-		return createTeam()
+				return createTeam()
+			})
+			.catch(err => {
+				//Email doesn't exist
+				errorHandler(email + " is not a user!")
+			})
 	})
+
+	$("#confirm").submit(createTeam)
 })
 
 function createTeam() {
 	team = {
 		teamNumber: teamNumber
 	}
-	//Creates team
+
 	$.ajax({ url: "/api/teams", type: "POST", data: team })
 		.then(() => {
-			$("#team-input").hide()
-			$("#users-input").show()
+			members.forEach(member => {
+				$.ajax({ url: "/api/users/" + member.email, type: "PUT", data: member }).catch(err => {
+					errorHandler(err)
+				})
+			})
+			return successHandler()
 		})
 		.catch(err => {
 			errorHandler(err)
 		})
-
-	members.forEach(member => {
-		$.ajax({ url: "/api/users" + member.email, type: "PUT", data: member }).catch(err => {
-			errorHandler(err)
-		})
-	})
-
-	return successHandler()
 }
 
 function deleteTeam() {
