@@ -18,7 +18,7 @@ const UserSchema = new Schema({
 	// team info
 	hasTeam: { type: Boolean, default: false },
 	teamNumber: { type: Number, default: -1 },
-	teammates: { type: [String], default: [] },
+	teammates: { type: [String], default: [] }, //emails
 	teammates_names: { type: [String], default: [] },
 
 	// short answer
