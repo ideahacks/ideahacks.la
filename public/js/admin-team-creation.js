@@ -32,10 +32,12 @@ $(() => {
 
 		members = []
 		let withTeam = []
+		let curEmail = ""
 		$.when(...memberPromises)
-			.done(function(...memberResponses) {
-				memberResponses.forEach(memberRes => {
-					member = memberRes[0]
+			.then(function(...memberResponses) {
+				for (let i = 0; i < memberResponses.length; i++) {
+					member = memberResponses[i][0]
+					curEmail = memberEmails[i]
 					// If the user has a team, save them for confirmation
 					if (member.hasTeam) {
 						withTeam.push(member.email)
@@ -50,7 +52,7 @@ $(() => {
 						}
 					})
 					members.push(member)
-				})
+				}
 
 				if (withTeam.length > 0) {
 					$("#members").hide()
@@ -64,7 +66,7 @@ $(() => {
 			})
 			.catch(err => {
 				//Email doesn't exist
-				errorHandler(email + " is not a user!")
+				errorHandler(curEmail + " is not a user!")
 			})
 	})
 
