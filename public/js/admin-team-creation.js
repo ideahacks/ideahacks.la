@@ -25,7 +25,7 @@ $(() => {
 			.val()
 			.split("\n")
 		
-		memberPromises = []
+		let memberPromises = []
 		memberEmails.forEach(email => {
 			memberPromises.push($.get("/api/users/" + email))
 		})
