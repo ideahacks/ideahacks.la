@@ -28,28 +28,28 @@
 </head>
 
 <body>
-    <div class = 'wrapper'>
+    <div class='wrapper'>
 
         <!-- NAVBAR -->
         {{> navbar }}
         <div class='logo-header'>
-            <img class='img-header' src='/img/team/teamHeader.png' />
+            <img class='img-header' src='/img/myteam/myteam.png' />
             <span class='logo-img-header'>
-                <img class='logo-img' src='/img/team/teamlogo.png' />
+                <img class='logo-img' src='/img/myteam/myteamlogo.png' />
             </span>
         </div>
 
         <div class='filler'></div>
 
-        <div class = 'team-container'>
+        <div class='team-container'>
             {{#each team}}
 
-            <div>
-                <p1>{{this.name}}</p1>
-                <p1>{{this.email}}</p1>
-                <p1>{{this.major}}</p1>
-                <p1>{{this.year}}</p1>
-            </div>
+                <div>
+                    <p1>{{this.name}}</p1>
+                    <p1>{{this.email}}</p1>
+                    <p1>{{this.major}}</p1>
+                    <p1>{{this.year}}</p1>
+                </div>
 
             {{/each}}
 
