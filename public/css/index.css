@@ -21,6 +21,47 @@
 	height: 170px;
 }
 
+/* ANNOUNCEMENT */
+
+#announcement {
+	position: fixed;
+	max-width: 1280px;
+	z-index: 20;
+	padding: 20px 50px;
+	background-color: var(--black);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	color: var(--white);
+	font-size: 20px;
+}
+
+#announcement #close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 20px;
+}
+
+#announcement #close:hover {
+	cursor: pointer;
+}
+
+#announcement p {
+	text-align: center;
+}
+
+#announcement strong {
+	color: var(--green);
+}
+
+#announcement a {
+	font-weight: bold;
+}
+
+#announcement a:hover {
+	color: var(--white);
+	text-decoration: none;
+}
+
 /* HEADER */
 
 .logo-header {
@@ -30,15 +71,15 @@
 }
 
 .filler {
-	display: none;
-	height: 60px;
+	height: 30px;
 	width: 100%;
 	background-color: #b5c6bc;
 }
 
 .logo-img-header {
 	position: absolute;
-	top: 196px;
+	top: 156px;
+	max-width: 483px;
 }
 
 .logo-img {
@@ -51,10 +92,19 @@
 	width: 100%;
 }
 
+.dates {
+	position: relative;
+	left: -35px;
+	padding: 10px 0 0 0;
+	font-size: 45px;
+	font-weight: bold;
+	text-align: center;
+}
+
 #apply {
 	position: absolute;
 	right: 0;
-	bottom: 5%;
+	bottom: 38%;
 	transform: translateX(58%);
 }
 
@@ -209,7 +259,7 @@
 
 @media (max-width: 990px) {
 	.filler {
-		display: block;
+		height: 100px;
 	}
 
 	.logo-img-header {
@@ -252,16 +302,25 @@
 }
 
 @media (max-width: 700px) {
+	#announcement {
+		font-size: 16px;
+	}
+
 	.filler {
-		height: 120px;
+		height: 160px;
 	}
 
 	.logo-img {
 		margin-left: 50%;
 	}
 
+	.dates {
+		left: 0;
+		font-size: 35px;
+	}
+
 	#apply {
-		top: 110%;
+		top: 100%;
 		bottom: 0;
 		right: 50%;
 		transform: translateX(50%);
@@ -283,6 +342,12 @@
 	}
 
 	.schedule-day {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 500px) {
+	.dates {
 		font-size: 25px;
 	}
 }

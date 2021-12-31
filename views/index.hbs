@@ -39,6 +39,20 @@
 
         {{> navbar }}
 
+        <!-- ANNOUNCEMENT -->
+        <div id="announcement" class="container-fluid">
+            <span id="close" onclick="$(this).parent().hide()">
+                <span class="glyphicon glyphicon-remove"></span>
+            </span>
+            <p>
+                The deadline for our application is coming up soon! The
+                application is due on <strong>12/15</strong> for an early-bird
+                decision and on <strong>1/5</strong> for the second round.
+                <br><br>
+                <a href="/dashboard/application">Sign up and apply now!</a>
+            </p>
+        </div>
+
         <!-- BANNER -->
 
         <div class="filler"></div>
@@ -46,6 +60,7 @@
             <img class='img-header' src='/img/index/landingHeader.png' />
             <span class='logo-img-header'>
                 <img class='logo-img' src='/img/index/landinglogo.png' />
+                <p class="dates">January 14 - 16, 2022</p>
                 <a id="apply" href="/dashboard/application"><button>Apply</button></a>
             </span>
         </div>
