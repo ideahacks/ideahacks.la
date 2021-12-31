@@ -106,24 +106,28 @@ button:hover {
 	letter-spacing: -1.5px;
 }
 
-.labels,
-.part-entry {
-	border-bottom: 1px solid var(--green);
-}
-
-.labels {
-	padding-bottom: 10px;
-}
-
-/* .title span {
-	display: inline-block;
-	border-bottom: 2px solid var(--white);
-	padding-bottom: 10px;
+/* .table > thead > tr > th{
+	border: 1px solid var(--green);
 } */
 
-/* .title { */
-/* margin-bottom: 20px; */
-/* } */
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > thead > tr {
+    border-bottom: 1px solid var(--green);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.labels{
+	font-weight: normal;
+
+}
+.teammate{
+	text-align: left;
+}
+
 
 .text-box {
 	color: var(--white);
@@ -248,3 +252,4 @@ p.quantity {
 		display: none;
 	}
 }
+

@@ -23,7 +23,7 @@
 
     <!-- CSS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/team.css' />
+    <link rel='stylesheet' type='text/css' href='/css/dashboard-my-team.css' />
 
 </head>
 
@@ -32,6 +32,7 @@
 
         <!-- NAVBAR -->
         {{> navbar }}
+
         <div class='logo-header'>
             <img class='img-header' src='/img/myteam/myteam.png' />
             <span class='logo-img-header'>
@@ -39,21 +40,49 @@
             </span>
         </div>
 
-        <div class='filler'></div>
-
-        <div class='team-container'>
-            {{#each team}}
-
+        <div class="background theme-yellow container text-center">
+            <div>
+                <!-- MY TEAM -->
                 <div>
-                    <p1>{{this.name}}</p1>
-                    <p1>{{this.email}}</p1>
-                    <p1>{{this.major}}</p1>
-                    <p1>{{this.year}}</p1>
+                    <h1 class="title">My Team</h1>
+                    <hr class='banner-underline'>
+
+                    <table class="table">
+
+                        <thead class = "labels">
+                            <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Major</th>
+                            <th scope="col">Year</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                        {{#if team}}
+                            <div>
+                                {{#each team}}
+                                    <tr class = 'teammate'>
+                                    <td>{{this.name}}</th>
+                                    <td>{{this.email}}</td>
+                                    <td>{{this.major}}</td>
+                                    <td>{{this.year}}</td>
+                                    </tr>
+                                {{/each}}
+                            </div>
+                        {{else}}
+                            <div class="text-box no-parts">
+                                <h2>Looks like you're not part of a team yet!</h2>
+                            </div>
+                        {{/if}}
+
+                        </tbody>
+
+                    </table>
+
                 </div>
-
-            {{/each}}
-
-
+            </div>
         </div>
 
 
