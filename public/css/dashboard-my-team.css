@@ -1,4 +1,3 @@
-
 /* Header */
 .logo-header {
 	display: flex;
@@ -110,24 +109,20 @@ button:hover {
 	border: 1px solid var(--green);
 } */
 
-.table > tbody > tr > td,
-.table > tbody > tr > th,
-.table > thead > tr {
-    border-bottom: 1px solid var(--green);
+th, td, tr {
+	border-bottom: 2px solid var(--white);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: normal;
 	font-size: 20px;
 }
 
-.labels{
+.labels {
 	font-weight: normal;
-
 }
-.teammate{
+.teammate {
 	text-align: left;
 }
-
 
 .text-box {
 	color: var(--white);
@@ -252,4 +247,3 @@ p.quantity {
 		display: none;
 	}
 }
-

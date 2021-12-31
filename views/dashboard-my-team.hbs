@@ -49,33 +49,33 @@
 
                     <table class="table">
 
-                        <thead class = "labels">
+                        <thead class="labels">
                             <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Major</th>
-                            <th scope="col">Year</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Major</th>
+                                <th scope="col">Year</th>
                             </tr>
                         </thead>
 
                         <tbody>
 
-                        {{#if team}}
-                            <div>
-                                {{#each team}}
-                                    <tr class = 'teammate'>
-                                    <td>{{this.name}}</th>
-                                    <td>{{this.email}}</td>
-                                    <td>{{this.major}}</td>
-                                    <td>{{this.year}}</td>
-                                    </tr>
-                                {{/each}}
-                            </div>
-                        {{else}}
-                            <div class="text-box no-parts">
-                                <h2>Looks like you're not part of a team yet!</h2>
-                            </div>
-                        {{/if}}
+                            {{#if team}}
+                                <div>
+                                    {{#each team}}
+                                        <tr class='teammate'>
+                                            <td>{{this.name}}</th>
+                                            <td>{{this.email}}</td>
+                                            <td>{{this.major}}</td>
+                                            <td>{{this.year}}</td>
+                                        </tr>
+                                    {{/each}}
+                                </div>
+                            {{else}}
+                                <div class="text-box no-parts">
+                                    <h2>Looks like you're not part of a team yet!</h2>
+                                </div>
+                            {{/if}}
 
                         </tbody>
 

@@ -105,9 +105,8 @@ const getMyParts = (req, res) => {
 	})
 }
 
-
 const getMyTeam = (req, res) => {
-	var team =[]
+	var team = []
 
 	let teammates_emails = req.user.teammates
 
@@ -115,39 +114,35 @@ const getMyTeam = (req, res) => {
 
 	var promises = []
 
-	for (let i = 0; i<tlen; i++){
-
+	for (let i = 0; i < tlen; i++) {
 		let email = teammates_emails[i]
 
-		let teammate = User.find({email: email})
+		let teammate = User.find({ email: email })
 
 		promises.push(teammate)
 		// console.log(typeof teammate)
 	}
 
 	Promise.all(promises).then(values => {
-		for (let i = 0; i<tlen; i++){
+		for (let i = 0; i < tlen; i++) {
 			let teammate = values[i]
 
-			let name = teammate[0]._doc.firstName + ' ' + teammate[0]._doc.lastName
+			let name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
 			let email = teammate[0]._doc.email
 			let major = teammate[0]._doc.major
 			let year = teammate[0]._doc.year
 
-			console.log(name,email,major,year)
+			console.log(name, email, major, year)
 
-			team.push({name, email,major,year})
+			team.push({ name, email, major, year })
 		}
 
-		console.log('team', team)
+		console.log("team", team)
 
-		res.render("dashboard-my-team", {team})
+		res.render("dashboard-my-team", { team })
 
 		// console.log(values)
 	})
-
-
-
 }
 
 module.exports = {
