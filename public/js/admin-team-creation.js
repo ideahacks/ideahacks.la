@@ -1,5 +1,7 @@
 let teamNumber
 let members
+let withTeam
+let withTeamNumbers
 $(() => {
 	$("#team-number").submit(function(event) {
 		event.stopPropagation()
@@ -31,16 +33,20 @@ $(() => {
 		})
 
 		members = []
-		let withTeam = []
+		withTeam = []
+		withTeamNumbers = []
 		let curEmail = ""
 		$.when(...memberPromises)
 			.then(function(...memberResponses) {
 				for (let i = 0; i < memberResponses.length; i++) {
 					member = memberResponses[i][0]
 					curEmail = memberEmails[i]
-					// If the user has a team, save them for confirmation
-					if (member.hasTeam) {
+					// If the user has a team, save them for confirmation If the
+					// user has a team number of -1, then they had teammates on
+					// their application, but haven't formally made a team yet
+					if (member.hasTeam && member.teamNumber !== -1) {
 						withTeam.push(member.email)
+						withTeamNumbers.push(member.teamNumber)
 					}
 
 					member.hasTeam = true
@@ -70,7 +76,53 @@ $(() => {
 			})
 	})
 
-	$("#confirm").submit(createTeam)
+	$("#confirm").submit(function() {
+		// Remove any users already on teams from their old teammates' team data
+		let oldTeammatePromises = []
+		// Get a list of users on each old team
+		withTeamNumbers.forEach(number => {
+			oldTeammatePromises.push($.get("/api/users/emails?teamNumber=" + number))
+		})
+		$.when(...oldTeammatePromises).then(function(...oldTeammateResponses) {
+			let teammateUpdatePromises = []
+			for (let i = 0; i < oldTeammateResponses.length; i++) {
+				let userEmail = withTeam[i]
+				let oldMembers = oldTeammateResponses[i][0].split(", ")
+				let userIndex = oldMembers.indexOf(userEmail)
+				let oldTeammate
+				if (userIndex > -1) {
+					oldTeammates = oldMembers.splice(userIndex, 1)
+				}
+				else {
+					oldTeammates = oldMembers
+				}
+				// Get the old teammate's data and prepare to remove the user
+				// from their teammate list
+				oldTeammates.forEach(teammate => {
+					$.get("/api/users/" + teammate).then(teammateData => {
+						let toRemove = teammateData.teammates.indexOf(userEmail)
+						if (toRemove > -1) {
+							teammateData.teammates = teammateData.teammates.splice(toRemove, 1)
+						}
+						teammateUpdatePromises.push($.ajax({
+							url: "/api/users/" + teammateData.email, 
+							type: "PUT", 
+							data: teammateData
+						}))
+					})
+					.catch(err => errorHandler(err))
+				})
+			}
+
+			$.when(...teammateUpdatePromises).then(function(...updateResponses) {
+				// At this point, all references to any of the users being in
+				// their old teams have been removed, so we're clear to create
+				// the new team
+				return createTeam()
+			})
+			.catch(err => errorHandler(err))
+		})
+	})
 })
 
 function createTeam() {
@@ -121,5 +173,5 @@ function successHandler() {
 	$(".container").html("Success! Redirecting you in 3 seconds.")
 	$(this).hide()
 
-	setTimeout(location.reload.bind(location), 3000)
+	// setTimeout(location.reload.bind(location), 3000)
 }
