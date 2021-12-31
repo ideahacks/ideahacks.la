@@ -132,12 +132,12 @@ const getMyTeam = (req, res) => {
 			let major = teammate[0]._doc.major
 			let year = teammate[0]._doc.year
 
-			console.log(name, email, major, year)
+			// console.log(name, email, major, year)
 
 			team.push({ name, email, major, year })
 		}
 
-		console.log("team", team)
+		// console.log("team", team)
 
 		res.render("dashboard-my-team", { team })
 
