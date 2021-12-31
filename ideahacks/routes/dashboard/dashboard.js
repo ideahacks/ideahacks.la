@@ -108,14 +108,14 @@ const getMyParts = (req, res) => {
 const getMyTeam = (req, res) => {
 	var team = []
 
-	let teammates_emails = req.user.teammates
+	let teammatesEmails = req.user.teammates
 
-	let tlen = teammates_emails.length
+	let tlen = teammatesEmails.length
 
 	var promises = []
 
 	for (let i = 0; i < tlen; i++) {
-		let email = teammates_emails[i]
+		let email = teammatesEmails[i]
 
 		let teammate = User.find({ email: email })
 
