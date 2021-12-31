@@ -109,8 +109,10 @@ button:hover {
 	border: 1px solid var(--green);
 } */
 
-th, td, tr {
-	border-bottom: 2px solid var(--white);
+th,
+td,
+tr {
+	border-bottom: 1px solid var(--white);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: normal;
