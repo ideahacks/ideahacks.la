@@ -25,6 +25,7 @@
 
 #announcement {
 	position: fixed;
+	width: 100%;
 	max-width: 1280px;
 	z-index: 20;
 	padding: 20px 50px;
@@ -85,7 +86,8 @@
 .logo-img {
 	margin-left: 45%;
 	transform: translateX(-50%);
-	max-width: 100%;
+	width: 100%;
+	max-width: 483px;
 }
 
 .img-header {
