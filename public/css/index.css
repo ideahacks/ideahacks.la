@@ -25,6 +25,7 @@
 
 #announcement {
 	position: fixed;
+	width: 100%;
 	max-width: 1280px;
 	z-index: 20;
 	padding: 20px 50px;
