@@ -86,7 +86,8 @@
 .logo-img {
 	margin-left: 45%;
 	transform: translateX(-50%);
-	max-width: 100%;
+	width: 100%;
+	max-width: 483px;
 }
 
 .img-header {
