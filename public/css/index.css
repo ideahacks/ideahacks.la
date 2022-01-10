@@ -84,7 +84,7 @@
 }
 
 .logo-img {
-	margin-left: 45%;
+	margin-left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
 	max-width: 483px;
@@ -96,7 +96,6 @@
 
 .dates {
 	position: relative;
-	left: -35px;
 	padding: 10px 0 0 0;
 	font-size: 45px;
 	font-weight: bold;
