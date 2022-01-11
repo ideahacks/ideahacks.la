@@ -12,12 +12,14 @@ const getParts = (req, res) => {
 
 const getMe = (req, res) => {
 	let statusDescription = ""
+	let accepted = false
 	switch (req.user.applicationStatus) {
 		case "pending":
 			statusDescription = "Your application is under review!"
 			break
 		case "accepted":
 			statusDescription = "Welcome to IDEA Hacks!"
+			accepted = true
 			break
 		case "waitlisted":
 			statusDescription = "We’ll be in touch if a spot opens up!"
@@ -28,7 +30,8 @@ const getMe = (req, res) => {
 	}
 	res.render("me", {
 		user: req.user,
-		statusDescription: statusDescription
+		statusDescription: statusDescription,
+		accepted: accepted
 	})
 }
 
