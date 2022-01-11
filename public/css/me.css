@@ -97,7 +97,7 @@ button:hover {
 .status-container .announcement {
 	color: var(--black);
 	max-width: 400px;
-	margin: 20px 0 0 0;
+	margin: 20px 0 -10px 0;
 }
 
 .status-container .announcement a {
