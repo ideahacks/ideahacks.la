@@ -72,10 +72,6 @@
 	padding: 70px 75px 0;
 }
 
-.agb-section > div:first-child {
-	transform: translateY(-50%);
-}
-
 .agb-section > div:first-child > div h1 {
 	white-space: normal;
 }
@@ -115,6 +111,10 @@
 }
 
 @media (max-width: 700px) {
+	.white-tab-container.agb-section > div:first-child {
+		width: 242px;
+	}
+
 	.ucla-section,
 	.agb-section {
 		padding-left: 35px;
