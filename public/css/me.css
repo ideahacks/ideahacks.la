@@ -90,6 +90,20 @@ button:hover {
 	font-weight: 700;
 }
 
+.status-container a:hover {
+	color: var(--black);
+}
+
+.status-container .announcement {
+	color: var(--black);
+	max-width: 400px;
+	margin: 20px 0 0 0;
+}
+
+.status-container .announcement a {
+	font-size: inherit;
+}
+
 .to-app:hover {
 	color: var(--black);
 	transition: 0.3s ease;
