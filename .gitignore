@@ -1,5 +1,5 @@
 node_modules/
-ideahacks/config/development.json
+development.json
 .DS_Store
 .idea/
 package-lock.json

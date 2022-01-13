@@ -21,6 +21,13 @@
 	/*min-width: 800px;*/
 }
 
+.filler {
+	display: none;
+	height: 60px;
+	width: 100%;
+	background-color: #b5c6bc;
+}
+
 .banner-underline {
 	margin-top: 12px;
 	margin-bottom: 60px;
@@ -105,9 +112,10 @@ button:hover {
 	letter-spacing: -1.5px;
 }
 
-/* .table > thead > tr > th{
-	border: 1px solid var(--green);
-} */
+.table-wrapper {
+	margin-bottom: 40px;
+	overflow-y: auto;
+}
 
 th,
 td,
@@ -218,8 +226,13 @@ p.quantity {
 }
 
 @media (max-width: 991px) {
+	.logo-img-header {
+		top: 150px;
+	}
+
 	.background {
-		padding: 20px calc(10% - 56.8px);
+		width: 100%;
+		padding: 20px;
 	}
 
 	.my-parts {
@@ -237,8 +250,12 @@ p.quantity {
 }
 
 @media (max-width: 767px) {
-	.background {
-		padding: 20px;
+	.filler {
+		display: block;
+	}
+
+	.logo-img-header {
+		width: 80%;
 	}
 
 	.button-container button {
