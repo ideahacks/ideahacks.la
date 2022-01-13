@@ -173,5 +173,5 @@ function successHandler() {
 	$(".container").html("Success! Redirecting you in 3 seconds.")
 	$(this).hide()
 
-	// setTimeout(location.reload.bind(location), 3000)
+	setTimeout(location.reload.bind(location), 3000)
 }
