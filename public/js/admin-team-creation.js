@@ -88,14 +88,14 @@ $(() => {
 			for (let i = 0; i < oldTeammateResponses.length; i++) {
 				let userEmail = withTeam[i]
 				let oldMembers = oldTeammateResponses[i][0].split(", ")
+				console.log(oldMembers)
 				let userIndex = oldMembers.indexOf(userEmail)
-				let oldTeammate
+				let oldTeammates
 				if (userIndex > -1) {
-					oldTeammates = oldMembers.splice(userIndex, 1)
+					oldMembers.splice(userIndex, 1)
 				}
-				else {
-					oldTeammates = oldMembers
-				}
+				oldTeammates = oldMembers
+
 				// Get the old teammate's data and prepare to remove the user
 				// from their teammate list
 				oldTeammates.forEach(teammate => {
