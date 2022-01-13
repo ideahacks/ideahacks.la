@@ -103,7 +103,7 @@ $(() => {
 						.then(teammateData => {
 							let toRemove = teammateData.teammates.indexOf(userEmail)
 							if (toRemove > -1) {
-								teammateData.teammates = teammateData.teammates.splice(toRemove, 1)
+								teammateData.teammates.splice(toRemove, 1)
 							}
 							teammateUpdatePromises.push(
 								$.ajax({
