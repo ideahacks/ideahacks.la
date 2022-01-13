@@ -99,28 +99,32 @@ $(() => {
 				// Get the old teammate's data and prepare to remove the user
 				// from their teammate list
 				oldTeammates.forEach(teammate => {
-					$.get("/api/users/" + teammate).then(teammateData => {
-						let toRemove = teammateData.teammates.indexOf(userEmail)
-						if (toRemove > -1) {
-							teammateData.teammates = teammateData.teammates.splice(toRemove, 1)
-						}
-						teammateUpdatePromises.push($.ajax({
-							url: "/api/users/" + teammateData.email, 
-							type: "PUT", 
-							data: teammateData
-						}))
-					})
-					.catch(err => errorHandler(err))
+					$.get("/api/users/" + teammate)
+						.then(teammateData => {
+							let toRemove = teammateData.teammates.indexOf(userEmail)
+							if (toRemove > -1) {
+								teammateData.teammates = teammateData.teammates.splice(toRemove, 1)
+							}
+							teammateUpdatePromises.push(
+								$.ajax({
+									url: "/api/users/" + teammateData.email,
+									type: "PUT",
+									data: teammateData
+								})
+							)
+						})
+						.catch(err => errorHandler(err))
 				})
 			}
 
-			$.when(...teammateUpdatePromises).then(function(...updateResponses) {
-				// At this point, all references to any of the users being in
-				// their old teams have been removed, so we're clear to create
-				// the new team
-				return createTeam()
-			})
-			.catch(err => errorHandler(err))
+			$.when(...teammateUpdatePromises)
+				.then(function(...updateResponses) {
+					// At this point, all references to any of the users being in
+					// their old teams have been removed, so we're clear to create
+					// the new team
+					return createTeam()
+				})
+				.catch(err => errorHandler(err))
 		})
 	})
 })
