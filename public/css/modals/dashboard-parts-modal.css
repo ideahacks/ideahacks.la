@@ -1,6 +1,8 @@
 .modal-content {
 	padding: 25px 0px;
 	width: 60%;
+
+	color: var(--black);
 }
 
 @media (max-width: 675px) {
@@ -10,8 +12,10 @@
 }
 
 .picture {
-	width: 200px;
-	height: 200px;
+	width: 100%;
+	
+	max-width: 200px;
+	max-height: 200px;
 }
 
 .modal-content p {
