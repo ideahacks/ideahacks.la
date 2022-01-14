@@ -51,9 +51,13 @@
                         <span class="glyphicon glyphicon-chevron-down downarrow"></span>
                     </div>
                     <div class="team-dropdown-content">
-                        {{#each this.parts }}
-                            <p class="part filter-key">{{ this.name }} x{{ this.quantity }}</p>
-                        {{/each}}
+                        {{#if this.parts }}
+                            {{#each this.parts }}
+                                <p class="filter-key">{{ this.name }} x{{ this.quantity }}</p>
+                            {{/each}}
+                        {{else}}
+                            <p class="filter-key">No parts</p>
+                        {{/if}}
                     </div>
                 </div>
             {{/each}}
