@@ -13,7 +13,7 @@
 	width: 60%;
 }
 
-.team-wrapper:last-child {
+.team-wrapper .team-dropdown:last-child {
 	border-bottom: 1px solid var(--white);
 }
 
@@ -42,6 +42,10 @@
 	color: var(--black);
 	padding: 10px 20px;
 	text-align: center;
+}
+
+.team-dropdown-content p:last-child {
+    margin-bottom: 0;
 }
 
 .downarrow {
