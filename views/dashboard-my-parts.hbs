@@ -35,35 +35,28 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class="houseline"></div>
-
-        <div class='container text-center'>
-            <h1 id="welcome">WELCOME</h1>
-        </div>
-
-        <div class="button-container">
-            {{#if user.isAdmin}}
-                <a href='/admin'><button class="admin">Admin</button></a>
-            {{/if}}
-
-            <a href="/settings"><button class="settings">Settings</button></a>
-            <a href="/logout"><button class="logout">Log Out</button></a>
+        <div class='logo-header'>
+            <img class='img-header' src='/img/admin/myparts.png' />
+            <span class='logo-img-header'>
+                <img class='logo-img' src='/img/admin/mypartslogo.png' />
+            </span>
         </div>
 
         <div class="background theme-yellow container text-center">
             <div class="row">
                 <!-- MY PARTS -->
-                <div class="my-parts col-md-4">
-                    <h1>my parts</h1>
+                <div class="my-parts">
+                    <h1 class="title">My Parts</h1>
+                    <hr class='banner-underline'>
 
                     <div class="labels row">
-                        <p class="name col-xs-8">Name</p>
+                        <p class="name col-xs-8">Name of Item</p>
                         <p class="quantity col-xs-4">Quantity</p>
                     </div>
                     {{#if myParts}}
                         <div class="text-box">
                             {{#each myParts}}
-                                <div class="part-entry row" data-full="{{name}}">
+                                <div class="part-entry" data-full="{{name}}">
                                     <p class="name col-xs-10">{{name}}</p>
                                     <p class="quantity col-xs-2">{{quantity}}</p>
                                 </div>
@@ -74,30 +67,6 @@
                             <h2>Looks like you're not part of a team yet!</h2>
                         </div>
                     {{/if}}
-                </div>
-
-                <!-- PARTS QUICK SEARCH -->
-                <div class="parts-search col-md-8">
-                    <h1>parts quick search</h1>
-
-                    <div style="height: 40px;">
-                        {{> filter }}
-                    </div>
-
-                    <div class="labels row">
-                        <p class="name col-sm-4 col-xs-8">Name</p>
-                        <p class="category col-sm-4">Category</p>
-                        <p class="quantity col-xs-4">Quantity</p>
-                    </div>
-                    <div class="text-box filter-list">
-                        {{#each parts}}
-                            <div class="part-entry row" data-full="{{name}}">
-                                <p class="name filter-key col-sm-5 col-xs-10">{{name}}</p>
-                                <p class="category filter-key col-sm-2">{{category}}</p>
-                                <p class="quantity col-sm-5 col-xs-2">{{quantity}}</p>
-                            </div>
-                        {{/each}}
-                    </div>
                 </div>
             </div>
         </div>
