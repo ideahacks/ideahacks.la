@@ -1,59 +1,59 @@
 .banner {
-    margin: 50px 0;
-    text-transform: uppercase;
+	margin: 50px 0;
+	text-transform: uppercase;
 }
 
 .banner hr {
-    width: 150px;
-    margin-top: 0;
+	width: 150px;
+	margin-top: 0;
 }
 
 .team-wrapper {
-    margin: 50px auto 70px;
-    width: 60%;
+	margin: 50px auto 70px;
+	width: 60%;
 }
 
 .team-wrapper:last-child {
-    border-bottom: 1px solid var(--white);
+	border-bottom: 1px solid var(--white);
 }
 
 .team-dropdown {
-    border-top: 1px solid var(--white);
+	border-top: 1px solid var(--white);
 }
 
 .team-dropdown:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .team-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
 }
 
 .team-info p {
-    margin: 0;
+	margin: 0;
 }
 
 .team-dropdown-content {
-    display: none;
-    background-color: var(--green);
-    color: var(--black);
-    padding: 10px 20px;
-    text-align: center;
+	display: none;
+	background-color: var(--green);
+	color: var(--black);
+	padding: 10px 20px;
+	text-align: center;
 }
 
 .downarrow {
-    transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .downarrow.flipped {
-    transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 @media (max-width: 900px) {
-    .team-wrapper {
-        width: 80%;
-    }
+	.team-wrapper {
+		width: 80%;
+	}
 }

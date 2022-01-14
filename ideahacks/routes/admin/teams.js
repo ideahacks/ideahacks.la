@@ -4,15 +4,16 @@ const User = require("../../db").User
 const getTeams = (req, res) => {
 	Team.find().then(teams => {
 		// Sort teams by team number
-		teams.sort(function(a, b) {return a.teamNumber - b.teamNumber})
+		teams.sort(function(a, b) {
+			return a.teamNumber - b.teamNumber
+		})
 		// Aggregate quantities
 		teams.map(function(team) {
 			let aggregatedParts = {}
 			team.parts.forEach(part => {
 				if (aggregatedParts[part.name]) {
 					aggregatedParts[part.name].quantity += part.quantity
-				}
-				else {
+				} else {
 					aggregatedParts[part.name] = part
 				}
 			})
