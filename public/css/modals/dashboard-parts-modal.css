@@ -18,6 +18,12 @@
 	max-height: 200px;
 }
 
+.picture[src=""] {
+	width: 150px;
+	height: 150px;
+	background-color: var(--green);
+}
+
 .modal-content p {
 	font-weight: bold;
 	margin-bottom: 10px;

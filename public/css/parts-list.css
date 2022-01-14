@@ -107,10 +107,15 @@ label {
 	color: rgb(42, 45, 78);
 }
 
+.filter-list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
 .part {
-	width: 100%;
-	max-width: 200px;
-	max-height: 200px;
+	width: 200px;
+	height: 200px;
 	background: var(--green);
 	/* margin-bottom: 5px;
 	margin-top: 20px; */
@@ -130,6 +135,7 @@ label {
 
 .part-wrapper {
 	max-width: 200px;
+	margin: 0 10px;
 }
 
 .part-details {
@@ -171,12 +177,6 @@ label {
 	}
 	.part-wrapper {
 		display: inline-block;
-	}
-	.filter-list {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		flex-wrap: wrap;
 	}
 }
 
