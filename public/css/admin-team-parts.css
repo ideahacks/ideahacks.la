@@ -39,7 +39,7 @@
 .team-dropdown-content {
     display: none;
     background-color: var(--green);
-    color: var(--white);
+    color: var(--black);
     padding: 10px 20px;
     text-align: center;
 }
@@ -50,4 +50,10 @@
 
 .downarrow.flipped {
     transform: rotate(180deg);
+}
+
+@media (max-width: 900px) {
+    .team-wrapper {
+        width: 80%;
+    }
 }
