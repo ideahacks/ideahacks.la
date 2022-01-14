@@ -73,9 +73,13 @@
             <div class='parts-container text-center col-md-10'>
                 <div class='filter-list'>
                     {{#each parts}}
-                        <div class='part-wrapper text-left col-md-3' id='{{this.category}}'>
+                        <div class='part-wrapper text-left' id='{{this.category}}'>
                             <div>
-                                <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
+                                {{#if this.imageUrl}}
+                                    <img class='part' id='{{this._id}}' src='{{this.imageUrl}}' />
+                                {{else}}
+                                    <div class="part" id='{{this._id}}'></div>
+                                {{/if}}
                             </div>
                             <div class='detail-section'>
                                 <p class='part-details filter-key text-left'>{{this.partName}}</p>
