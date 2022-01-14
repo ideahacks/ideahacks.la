@@ -226,6 +226,11 @@ p.quantity {
 	.my-parts .text-box {
 		height: 250px;
 	}
+
+	.logo-img-header {
+		max-width: 80%;
+		top: 126px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -239,5 +244,9 @@ p.quantity {
 
 	.category {
 		display: none;
+	}
+
+	.logo-img-header {
+		top: 106px;
 	}
 }

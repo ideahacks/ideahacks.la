@@ -142,6 +142,19 @@ label {
 	margin-top: 2px;
 }
 
+@media (max-width: 520px) {
+	.logo-img-header {
+		top: 106px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.logo-img-header {
+		max-width: 80%;
+		top: 126px;
+	}
+}
+
 @media (max-width: 1150px) {
 	.checkout-container {
 		margin: 0 auto;
