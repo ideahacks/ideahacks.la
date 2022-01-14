@@ -114,30 +114,19 @@ button:hover {
 	padding-bottom: 10px;
 }
 
-/* .title span {
-	display: inline-block;
-	border-bottom: 2px solid var(--white);
-	padding-bottom: 10px;
-} */
-
-/* .title { */
-/* margin-bottom: 20px; */
-/* } */
+.labels > p {
+	padding: 0px;
+}
 
 .text-box {
 	color: var(--white);
 	border-radius: 10px;
-	padding: 10px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
 
 .my-parts .text-box {
 	height: 300px;
-}
-
-.parts-search .text-box {
-	height: 260px;
 }
 
 .my-parts::after {
@@ -147,7 +136,6 @@ button:hover {
 	top: 10%;
 	bottom: 10%;
 	height: 80%;
-	/* border-right: 1.5px solid #50b5dd; */
 }
 
 .part-entry {
@@ -165,11 +153,15 @@ button:hover {
 	text-overflow: ellipsis;
 }
 
-p.name,
+/* p.name,
 p.category,
 p.quantity {
-	/* Override the extra margin from the p tag */
 	margin: 0px;
+} */
+
+.part-entry > p {
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 .part-entry:hover::before {
@@ -178,9 +170,12 @@ p.quantity {
 	white-space: normal;
 
 	position: absolute;
-	left: 15px;
+	/* left: 10%; */
+	/* right: 100%; */
+	transform: translateX(100%);
 	padding: 5px;
-	margin: -5px 0 0 -5px;
+	/* margin: -5px 0 0 -5px; */
+	margin-left: 28px;
 	z-index: 1;
 	max-width: 90%;
 
@@ -228,8 +223,7 @@ p.quantity {
 		display: none;
 	}
 
-	.my-parts .text-box,
-	.parts-search .text-box {
+	.my-parts .text-box {
 		height: 250px;
 	}
 }
