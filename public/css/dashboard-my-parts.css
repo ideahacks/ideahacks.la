@@ -29,60 +29,6 @@
 	width: 200px;
 }
 
-/* General */
-
-#welcome {
-	font-family: "Roboto", monospace;
-	font-weight: bold;
-	font-size: 52px;
-	color: #50b5dd;
-	margin: 100px auto 20px;
-}
-
-.button-container {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	text-align: center;
-
-	max-width: 350px;
-	width: 80%;
-	margin: auto;
-}
-
-button {
-	background-color: transparent;
-	font-weight: normal;
-	font-size: 14px;
-	color: #50b5dd;
-	border: 1.5px solid #50b5dd;
-	text-transform: uppercase;
-	border-radius: 10px;
-	padding: 8px 20px;
-}
-
-button:hover {
-	/* background-color: #50b5dd; */
-	color: white;
-	transition: 0.3s ease;
-}
-
-.button-container button {
-	margin: 5px 0;
-}
-
-.admin {
-	background-color: #d46c6c;
-	border: 1px solid #d46c6c;
-	color: #5d3131;
-}
-
-.admin:hover {
-	background-color: #5d3131;
-	border: 1px solid #5d3131;
-	color: #d46c6c;
-}
-
 /* PARTS VIEWS */
 
 .background {
@@ -114,6 +60,10 @@ button:hover {
 	padding-bottom: 10px;
 }
 
+.labels > p {
+	padding: 0px;
+}
+
 /* .title span {
 	display: inline-block;
 	border-bottom: 2px solid var(--white);
@@ -127,27 +77,12 @@ button:hover {
 .text-box {
 	color: var(--white);
 	border-radius: 10px;
-	padding: 10px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
 
 .my-parts .text-box {
-	height: 300px;
-}
-
-.parts-search .text-box {
-	height: 260px;
-}
-
-.my-parts::after {
-	content: "";
-	position: absolute;
-	right: -0.75px;
-	top: 10%;
-	bottom: 10%;
-	height: 80%;
-	/* border-right: 1.5px solid #50b5dd; */
+	max-height: 700px;
 }
 
 .part-entry {
@@ -159,34 +94,9 @@ button:hover {
 	padding-bottom: 10px;
 }
 
-.part-entry .name {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-p.name,
-p.category,
-p.quantity {
-	/* Override the extra margin from the p tag */
-	margin: 0px;
-}
-
-.part-entry:hover::before {
-	content: attr(data-full);
-	text-align: left;
-	white-space: normal;
-
-	position: absolute;
-	left: 15px;
-	padding: 5px;
-	margin: -5px 0 0 -5px;
-	z-index: 1;
-	max-width: 90%;
-
-	background-color: var(--green);
-	border-radius: 10px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.part-entry > p {
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 .name {
@@ -228,9 +138,13 @@ p.quantity {
 		display: none;
 	}
 
-	.my-parts .text-box,
-	.parts-search .text-box {
-		height: 250px;
+	.my-parts .text-box {
+		max-height: 500px;
+	}
+
+	.logo-img-header {
+		max-width: 80%;
+		top: 126px;
 	}
 }
 
@@ -245,5 +159,9 @@ p.quantity {
 
 	.category {
 		display: none;
+	}
+
+	.logo-img-header {
+		top: 106px;
 	}
 }
