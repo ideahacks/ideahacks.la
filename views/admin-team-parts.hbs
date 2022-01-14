@@ -4,8 +4,14 @@
     <title>Team Parts - Admin</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="http://www.ideahacks.la/img/meta_thumbnail.png">
-    <meta property="og:description" content="For the seventh time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+    <meta property="og:image" content="http://www.ideahacks.la/img/thumbnail.png">
+    <meta property="og:description" content="For the eighth time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -15,14 +21,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700;1,900&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEETS -->
     <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    <link rel='stylesheet' type='text/css' href='/css/admin-teams.css' />
+    <link rel='stylesheet' type='text/css' href='/css/admin-team-parts.css' />
 
     <!-- SCRIPTS -->
-    <script src="/js/admin-create-parts.js"></script>
+    <script src="/js/admin-team-parts.js"></script>
 </head>
 <body>
 
@@ -30,29 +36,31 @@
         <!-- NAVBAR -->
         {{> navbar }}
 
-        <div class='banner'>
-            <img src='/img/admin/teamparts.png'>
-            <p>View what parts each team has checked out here!</p>
-            <p class='filter-description'>(You can filter by team number or part name)</p>
-            {{> filter }}
+        <div class='banner text-center'>
+            <h1>Teams</h1>
+            <hr>
         </div>
 
+        {{> filter }}
 
-        <div class='text-center container-fluid'>
-            <ul class='filter-list'>
-                {{#each teams}}
-                    <div class='col-md-3'>
-                        <div class='team'>
-                            <h1 class='team-number text-center filter-key'>Team {{ this.teamNumber }}</h1>
-                            <div class='container-fluid parts-list'>
-                                {{#each this.parts }}
-                                    <p class='text-center part-name filter-key'>{{ this.name }} x{{ this.quantity }}</p>
-                                {{/each}}
-                            </div>
-                        </div>
+        <div class="filter-list team-wrapper">
+            {{#each teams}}
+                <div class="team-dropdown">
+                    <div class="team-info">
+                        <p class="filter-key">Team {{ this.teamNumber }}</p>
+                        <span class="glyphicon glyphicon-chevron-down downarrow"></span>
                     </div>
-                {{/each}}
-            </ul>
+                    <div class="team-dropdown-content">
+                        {{#if this.parts }}
+                            {{#each this.parts }}
+                                <p class="filter-key">{{ this.name }} x{{ this.quantity }}</p>
+                            {{/each}}
+                        {{else}}
+                            <p class="filter-key">No parts</p>
+                        {{/if}}
+                    </div>
+                </div>
+            {{/each}}
         </div>
 
     </div>

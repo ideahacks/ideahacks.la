@@ -1,15 +1,15 @@
 const express = require("express")
 const dashboardRouter = express.Router()
 const dashboardHandlers = require("./dashboard.js")
-const applicationHandlers = require("./application.js")
+// const applicationHandlers = require("./application.js")
 const staticHandlers = require("./static.js")
 const h = require("../../helpers").authHelpers
 const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
 dashboardRouter.get("/", setResLocals, h.isVerified, dashboardHandlers.getMe)
 
-dashboardRouter.get("/application", setResLocals, h.isVerified, applicationHandlers.getApplication)
-dashboardRouter.post("/application", setResLocals, h.isVerified, applicationHandlers.postApplication)
+// dashboardRouter.get("/application", setResLocals, h.isVerified, applicationHandlers.getApplication)
+// dashboardRouter.post("/application", setResLocals, h.isVerified, applicationHandlers.postApplication)
 
 dashboardRouter.get("/parts", setResLocals, h.isVerified, dashboardHandlers.getParts)
 
@@ -22,6 +22,9 @@ dashboardRouter.post("/me/settings", setResLocals, h.isVerified, dashboardHandle
 dashboardRouter.get("/me/settings", setResLocals, h.isVerified, dashboardHandlers.getSettings)
 
 dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
+
+//route for myTeam:
+dashboardRouter.get("/me/team", setResLocals, h.isVerified, dashboardHandlers.getMyTeam)
 
 dashboardRouter.get("/resources", setResLocals, staticHandlers.getResources)
 

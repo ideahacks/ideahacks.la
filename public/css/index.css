@@ -1,413 +1,241 @@
-a {
-	color: #e1489a;
+.black-tab-container::after,
+.white-tab-container::after {
+	height: 0;
 }
 
-a:hover {
-	color: #50b5dd;
+.black-tab-container a:hover {
+	color: var(--white);
 }
 
-.tan-box {
-	background-color: rgb(255, 225, 149);
-	height: 40px;
+.white-tab-container a:hover {
+	color: var(--black);
 }
 
-.tan-box1 {
-	background-color: rgb(255, 225, 149);
-	height: 25px;
+.black-box {
+	background-color: var(--black);
+	height: 170px;
 }
 
 .white-box {
-	background-color: rgb(250, 250, 250);
-	height: 40px;
+	background-color: var(--white);
+	height: 170px;
 }
 
-.stay-tuned {
+/* ANNOUNCEMENT */
+
+#announcement {
 	position: fixed;
-	top: 66px;
-	max-width: 1280px;
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: rgb(233, 104, 104);
+	max-width: 1280px;
+	z-index: 20;
+	padding: 20px 50px;
+	background-color: var(--black);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	color: var(--white);
+	font-size: 20px;
 }
 
-.stay-tuned p {
-	font-size: 18px;
-	margin-bottom: 0;
-}
-
-.home-banner {
-	overflow: hidden;
-}
-
-.home-banner .stripe {
+#announcement #close {
 	position: absolute;
-	width: 1840px;
-	height: 602px;
-	left: -350.24px;
-	top: 0px;
-
-	background: #d1ebfa;
-	transform: rotate(-29.09deg);
+	top: 15px;
+	right: 15px;
+	font-size: 20px;
 }
 
-.home-banner .main-wrapper {
-	margin-top: 200px;
-	margin-bottom: 50px;
+#announcement #close:hover {
+	cursor: pointer;
 }
 
-.home-banner .main-wrapper .flex-row {
+#announcement p {
+	text-align: center;
+}
+
+#announcement strong {
+	color: var(--green);
+}
+
+#announcement a {
+	font-weight: bold;
+}
+
+#announcement a:hover {
+	color: var(--white);
+	text-decoration: none;
+}
+
+/* HEADER */
+
+.logo-header {
 	display: flex;
-	margin-bottom: 50px;
+	align-items: center;
+	justify-content: center;
 }
 
-.banner-desktop-graphic {
-	width: 90%;
+.filler {
+	height: 30px;
+	width: 100%;
+	background-color: #b5c6bc;
 }
 
-.title-wrapper {
-	font-size: 70px;
-	text-align: right;
-	position: relative;
-}
-
-.banner-title {
-	position: relative;
-}
-
-.yellow-box {
-	background-color: #efa516;
-}
-
-.banner-title .yellow-box {
+.logo-img-header {
 	position: absolute;
-	top: 0.5em;
+	top: 156px;
+	max-width: 483px;
+}
+
+.logo-img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 483px;
+}
+
+.img-header {
+	width: 100%;
+}
+
+.dates {
+	position: relative;
+	padding: 10px 0 0 0;
+	font-size: 45px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#apply {
+	position: absolute;
 	right: 0;
-	height: 1.3em;
-	width: 6.2em;
+	bottom: 38%;
+	transform: translateX(58%);
 }
 
-.banner-title .blue-box {
-	position: absolute;
-	top: 1.2em;
-	right: 0;
-	height: 0.85em;
-	width: 6.6em;
-
-	background-color: rgba(80, 181, 221, 0.56);
-}
-
-.banner-title .title,
-.banner-title .theme {
-	position: relative;
-	right: 17px;
-	margin: 0;
-	z-index: 1;
-
-	font-family: Roboto, sans-serif;
-	font-weight: 900;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#apply > button {
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 23px;
 	text-transform: uppercase;
-	color: white;
-}
-
-.banner-title .title {
-	top: 0;
-	font-size: 1em;
-}
-
-.banner-title .theme {
-	bottom: 0.2em;
-	font-size: 0.57em;
-}
-
-.presented-wrapper {
-	position: relative;
-	margin-top: 40px;
-	padding: 5px 0;
-	font-size: 20px;
-}
-
-.presented-wrapper p {
-	position: relative;
-	display: inline-block;
-	margin: 0;
-	padding: 5px 17px;
-	z-index: 1;
-
-	font-family: Roboto, sans-serif;
-	font-weight: 700;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.banner-details .date {
-	position: relative;
-	margin: 0;
-	padding: 7px 17px;
-	float: left;
-	z-index: 1;
-
-	font-family: Roboto, sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.due-date {
-	background: #efa516;
-	margin-bottom: 10px;
-	font-size: 20px;
-	padding: 5px;
-}
-
-.apply {
-	position: absolute;
-	right: 40px;
-	top: 435px;
-	float: right;
-
-	font-family: Roboto, sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-	font-style: italic;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	text-transform: uppercase;
-	color: white;
-}
-
-.apply-button {
-	padding: 13px 17px;
-
-	font-size: inherit;
-	font-weight: inherit;
-	font-style: inherit;
-	text-shadow: inherit;
-	text-transform: inherit;
-	color: white;
-
-	background-color: #50b5dd;
+	font-weight: 500;
 	border: none;
-
-	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+	border-radius: 10px;
+	padding: 4px 10px 2px;
+	transition: 0.3s background-color ease, 0.3s color ease;
 }
 
-.apply-button:disabled {
-	background-color: gray;
+#apply > button:hover {
+	background-color: var(--white);
+	color: var(--black);
 }
 
-.apply-button:not(:disabled):hover,
-.apply-button:not(:disabled):focus {
-	background-color: #6ccaf0;
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-	transform: scale(1.008);
+/* ABOUT */
+
+#about.black-box {
+	height: 110px;
 }
 
 .about-section {
-	position: relative;
-	z-index: 1;
-	background-color: rgb(255, 225, 149);
-	padding: 20px 100px 0px 100px;
-
-	font-size: 16px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 75px;
 }
 
-.description {
-	text-align: justify;
-	color: rgb(42, 45, 78);
-	margin-top: 12px;
+.about-section > div:first-child {
+	display: none;
 }
 
-.home-video {
-	text-align: right;
-	padding: 0px;
-	margin-top: 12px;
+.about-section .description h1 {
+	text-align: center;
+	text-transform: uppercase;
 }
+
+.about-section img {
+	width: 100%;
+}
+
+/* SCHEDULE */
 
 .schedule-section {
-	background-color: rgb(250, 250, 250);
-	padding: 20px 90px 0px 90px;
-}
-
-.schedule-description {
-	margin: 20px 0 40px;
-	font-size: 20px;
+	padding: 0 75px;
 }
 
 .schedule-day {
-	text-align: left;
-	position: relative;
-}
-
-.schedule-text1 {
-	position: absolute;
-	left: 75px;
-	top: 30px;
-	font-size: 18px;
-}
-
-.schedule-text2 {
-	position: absolute;
-	left: 70px;
-	top: 73px;
-	font-size: 18px;
-}
-
-.schedule-text3 {
-	position: absolute;
-	left: 70px;
-	top: 70px;
-	font-size: 18px;
-}
-
-.sponsors-section {
-	background-color: rgb(250, 250, 250);
-	padding: 20px 10px 0px 10px;
-}
-
-.section-header {
-	height: 45px;
-	margin: 20px 0px;
-}
-
-.day1 {
-	height: 60px;
-	margin-top: 0px;
+	margin-top: 0;
 	margin-bottom: 20px;
-}
-
-.day {
-	height: 60px;
-	margin-top: 45px;
-	margin-bottom: 20px;
+	padding-top: 45px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .schedule {
-	border: solid 3px rgb(255, 225, 149);
-	border-radius: 7px;
-	color: rgb(43, 43, 43);
+	border: solid 3px var(--black);
+	border-radius: 14px;
+	color: var(--green);
 	padding: 15px 15px 5px 15px;
 	margin: 0px 10px;
 	overflow: auto;
 }
 
 .schedule p {
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.schedule .schedule-time p {
+	position: relative;
+	left: 15%;
 }
 
 .schedule .location p {
 	display: inline;
 }
 
-.schedule.note {
-	border: none;
+.schedule .row {
+	margin-bottom: 10px;
 }
 
-.note p {
-	margin-bottom: 5px;
-}
-
-.hanging-indent {
-	padding-left: 45px;
-	text-indent: -45px;
-}
-
-.indented {
-	padding-left: 45px;
-}
-
-.double-indented {
-	padding-left: 65px;
-}
-
-.note .extra {
-	font-size: 14px;
-}
+/* FAQ */
 
 .faq-section {
-	background-color: rgb(255, 225, 149);
-	padding: 20px 75px 0px 75px;
+	padding: 30px 75px 0;
 }
 
-.q-a {
-	background-color: rgba(255, 255, 255, 0.3);
-	padding: 15px 15px 10px;
-	margin-bottom: 25px;
+.faq-section h2 {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: var(--white);
+	color: var(--black);
+	border-radius: 10px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-.question-section {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-left: 10px solid #e1489a;
-	padding-left: 15px;
-	padding-right: 15px;
+.faq-section b {
+	display: block;
+	margin-top: 10px;
+	color: var(--green);
 }
 
-.answer-section {
-	padding-top: 10px;
-	padding-left: 25px;
-	padding-right: 15px;
-}
+/* SPONSORS */
 
-.q,
-.a {
-	float: left;
-	width: 40px;
-
-	font-size: 40px;
-	font-weight: 700;
-	margin: 0;
-}
-
-.a {
-	color: #e1489a;
-}
-
-.question,
-.answer {
-	width: calc(100% - 40px);
-
-	float: left;
-	padding-left: 15px;
-}
-
-.question {
-	margin: 13px 0 10px;
-	font-size: 22px;
-	font-weight: 700;
-}
-
-.answer {
-	margin: 17px 0 10px;
-	font-size: 16px;
+.sponsors-section {
+	padding: 20px 10px 0px 10px;
 }
 
 .sponsors-section p {
 	text-align: center;
-	font-size: 20px;
-	margin-bottom: 30px;
-}
-
-.brochure-link {
-	color: rgb(42, 45, 78);
-	text-decoration: underline;
-}
-
-.brochure-link:hover {
-	color: rgb(42, 45, 78);
-	text-decoration: none;
+	font-size: 24px;
+	margin-bottom: 20px;
 }
 
 .large-logo {
 	vertical-align: middle;
 	width: 25%;
 	margin: 30px 10px;
+}
+
+.large-logo.intel {
+	width: 20%;
 }
 
 .small-logo {
@@ -424,176 +252,103 @@ a:hover {
 	margin: 30px;
 }
 
-.header-graphic-centered {
-	display: none;
-}
-
 @media (max-width: 1070px) {
-	.home-banner .stripe {
-		height: calc(-10vw + 700px);
-		top: 20vw;
-		left: calc(-1100px + 70vw);
-	}
-
-	.home-banner .main-wrapper {
-		margin-top: 100px;
-	}
-
-	.main-wrapper .flex-row {
-		flex-direction: column-reverse;
-	}
-
-	.main-wrapper .banner-right {
-		width: 100%;
-		margin-bottom: 50px;
-	}
-
-	.main-wrapper .banner-left {
-		width: 100%;
-	}
-
-	.main-wrapper .banner-desktop-graphic {
-		width: 70%;
-	}
-
-	.main-wrapper .title-wrapper {
-		font-size: 60px;
-	}
-
-	.presented-wrapper {
-		font-size: 16px;
-		margin-top: 30px;
-	}
-
-	.banner-details .date {
-		font-size: 20px;
-	}
-
-	.due-date {
-		font-size: 16px;
-		padding: 5px 10px;
-	}
-
-	.apply {
-		position: relative;
-		top: 20px;
-		right: 20px;
-		font-size: 20px;
+	.logo-img-header {
+		max-width: 80%;
 	}
 }
 
 @media (max-width: 990px) {
-	.faq-section,
-	.about-section,
-	.sponsors-section,
-	.schedule-section {
-		padding: 10px 10px 35px 10px;
+	.filler {
+		height: 100px;
 	}
-	.faq-section {
-		padding: 10px 30px 35px;
+
+	.logo-img-header {
+		top: 136px;
 	}
-	.banner-details {
-		margin-bottom: 20px;
+
+	.about-section .graphic {
+		display: flex;
+		justify-content: center;
 	}
-	.date,
-	.apply,
-	.agb,
-	.deadline {
-		font-size: 20px;
+
+	.about-section img {
+		margin-top: 30px;
+		width: 80%;
 	}
-	.section-header {
-		height: 50px;
-	}
-	.home-video video {
-		width: 300px;
-	}
-	.home-video {
-		text-align: center;
-		margin-top: 20px;
-	}
-	.day {
-		height: 60px;
-		margin-top: 45px;
-		margin-bottom: 20px;
+
+	.schedule .schedule-time p {
+		left: 0;
 	}
 
 	.location {
 		display: none;
 	}
-	.large-logo {
+
+	.large-logo,
+	.large-logo.intel {
 		width: 250px;
 		margin: 20px 10px;
 	}
+
 	.small-logo {
 		width: 110px;
 		margin: 20px 20px;
 	}
+
 	.square {
 		width: 180px;
 		margin: 20px 45px;
 	}
 }
 
-@media (max-width: 450px) {
-	.faq-section {
+@media (max-width: 700px) {
+	#announcement {
+		font-size: 16px;
+	}
+
+	.filler {
+		height: 160px;
+	}
+
+	.logo-img {
+		margin-left: 50%;
+	}
+
+	.dates {
+		left: 0;
+		font-size: 35px;
+	}
+
+	#apply {
+		top: 100%;
+		bottom: 0;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	#apply > button {
+		font-size: 20px;
+	}
+
+	.faq-section,
+	.about-section,
+	.sponsors-section,
+	.schedule-section {
 		padding: 10px 10px 35px 10px;
 	}
 
-	.home-banner .stripe {
-		height: 500px;
-		top: 35vw;
-	}
-
-	.home-banner .main-wrapper {
-		margin-bottom: 80px;
-	}
-
-	.main-wrapper .banner-desktop-graphic {
-		width: 90%;
-	}
-
-	.main-wrapper .title-wrapper {
-		font-size: 50px;
-	}
-
-	.presented-wrapper {
-		font-size: 14px;
-		margin-top: 30px;
-	}
-
-	.banner-details {
-		position: relative;
-	}
-
-	.banner-details .date {
+	.schedule p {
 		font-size: 16px;
 	}
 
-	.banner-details .apply {
-		position: absolute;
-		z-index: 1;
-		top: 60px;
-		right: 20px;
-		font-size: 16px;
+	.schedule-day {
+		font-size: 25px;
 	}
+}
 
-	.apply .due-date {
-		display: inline;
-		margin-right: 15px;
-	}
-
-	.date,
-	.apply,
-	.agb,
-	.deadline {
-		font-size: 16px;
-	}
-	.section-header {
-		height: 45px;
-	}
-	.day {
-		height: 60px;
-		margin-top: 45px;
-		margin-bottom: 20px;
+@media (max-width: 500px) {
+	.dates {
+		font-size: 25px;
 	}
 }

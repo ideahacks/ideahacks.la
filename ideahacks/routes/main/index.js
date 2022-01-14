@@ -11,6 +11,8 @@ mainRouter.get("/team", setResLocals, staticHandlers.getTeam)
 
 mainRouter.get("/history", setResLocals, staticHandlers.getHistory)
 
+mainRouter.get("/venue", setResLocals, staticHandlers.getVenue)
+
 mainRouter.get("/privacy", setResLocals, staticHandlers.getPrivacy)
 
 mainRouter.get("/login", setResLocals, authHandlers.getLogin)

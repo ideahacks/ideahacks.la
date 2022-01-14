@@ -7,10 +7,14 @@ const hbs = require("hbs")
 const passport = require("passport")
 const hbsutils = require("hbs-utils")(hbs)
 const morgan = require("morgan")
+const sslRedirect = require("heroku-ssl-redirect").default
 
 const ideahacks = require("./ideahacks")
 
 let app = express()
+
+// HTTPS Redirect
+app.use(sslRedirect(["production"], 301))
 
 // Logging
 app.use(morgan("dev"))

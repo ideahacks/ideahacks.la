@@ -4,8 +4,14 @@
     <title>IDEA Hacks</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="http://www.ideahacks.la/img/meta_thumbnail.png">
-    <meta property="og:description" content="For the seventh time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+    <meta property="og:image" content="http://www.ideahacks.la/img/thumbnail.png">
+    <meta property="og:description" content="For the eighth time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -33,195 +39,197 @@
 
         {{> navbar }}
 
-        <!-- BANNER -->
-
-        <div class='home-banner'>
-
-            <div class="stripe"></div>
-
-            <div class="main-wrapper">
-                <div class="row flex-row">
-                    <div class="col-md-7 text-center banner-left">
-                        <img class='banner-desktop-graphic' src="/img/index/main-graphic.png">
-                    </div>
-
-                    <div class="col-md-5 banner-right">
-                        <div class="title-wrapper">
-                            <div class="banner-title">
-                                <div class="yellow-box"></div>
-                                <div class="blue-box"></div>
-                                <h1 class="title">IDEAHacks</h1>
-                                <h2 class="theme">Home Applications</h2>
-                            </div>
-
-                            <div class="presented-wrapper">
-                                <p class="yellow-box">Presented by UCLA IEEE and Theta Tau</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='banner-details clearfix'>
-                    <p class="date yellow-box">Remote, January 15-17</p>
-                    <div class="apply">
-                        {{!-- <p class="due-date text-center">Due Nov 22nd</p> --}}
-                        {{!-- <a href="/dashboard/application"><button class="apply-button" type="button">Apply Now!</button></a> --}}
-                        <button class="apply-button" disabled>Apps are closed</button>
-                    </div>
-                </div>
-            </div>
-
+        <!-- ANNOUNCEMENT -->
+        <div id="announcement" class="container-fluid">
+            <span id="close" onclick="$(this).parent().hide()">
+                <span class="glyphicon glyphicon-remove"></span>
+            </span>
+            <p>
+                To follow UCLA's COVID-19 guidelines, we have had to move IDEA
+                Hacks to a semi-remote format. Read more about how the hackathon
+                will work below.
+            </p>
         </div>
 
-        <div id='about' class='white-box'></div>
+        <!-- BANNER -->
+
+        <div class="filler"></div>
+        <div class='logo-header'>
+            <img class='img-header' src='/img/index/landingHeader.png' />
+            <span class='logo-img-header'>
+                <img class='logo-img' src='/img/index/landinglogo.png' />
+                <p class="dates">January 14 - 16, 2022</p>
+                {{!-- <a id="apply" href="/dashboard/application"><button>Apply</button></a> --}}
+            </span>
+        </div>
+
+        <div id='about' class='black-box'></div>
 
         <!-- ABOUT -->
 
-        <div class='container-fluid about-section'>
-            <div class='text-center'>
-                <img class='section-header' src="/img/index/about.png">
+        <div class='black-tab-container about-section row'>
+            <div>
+                <div>
+                    <h1>
+                        <!-- Just here to satisfy CSS -->
+                    </h1>
+                </div>
             </div>
-            <div class="col-md-12">
-                <p class='description'>
-                    For the seventh time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, one of the few college hackathons that provides an emphasis in hardware and the largest of its kind on the West Coast. IDEA Hacks is a platform for you to experiment, collaborate, and develop tangible products from scratch in 36 hours.
-                    <br><br> Due to concerns over COVID-19, IDEA Hacks will be running remotely this year. To learn more about how that will work, see our <a href='/#faq'>FAQ</a>.
-                    <br><br> This year, our theme is “Home Applications”. This means you will be challenged to create something that focuses on enhancing our own daily routines at home in these challenging times, whether that means increased sustainability, comfort, productivity, or something else entirely. Spend the weekend innovating. We are excited to see what you can create.
+
+            <div class="col-lg-7 col-md-6 description">
+                <h1>About</h1>
+                <p>
+                    For the eighth time, UCLA IEEE and the UCLA Chapter of Theta
+                    Tau are pleased to present IDEA Hacks, one of the few
+                    college hackathons that provide an emphasis in hardware. At
+                    IDEA Hacks we provide our hackers with tools, such as 3D
+                    printers, soldering stations, and other equipment free of
+                    charge. Not only will these hackers code, but they will also
+                    create tangible products from scratch over the course of 36
+                    hours.
+                    <br><br>
+                    This year’s IDEA Hacks theme is about finding ways to
+                    enhance your experience outside. During quarantine, many
+                    people have used the outdoors as an escape from online
+                    schooling and meetings. We hope to inspire hackers to create
+                    new technologies to increase accessibility to nature,
+                    emphasize environmental sustainability, or even just improve
+                    the outdoor experience. We believe innovations for the great
+                    outdoors have the potential to change the way students
+                    embrace the greater world around us.
+                    <br><br>
+                    Due to rising cases of the COVID-19 Omicron variant in Los
+                    Angeles, UCLA is not allowing in-person events.
+                    Unfortunately, this means we have had to transition to a
+                    semi-remote format. The IEEE lab, located at Boelter 2825,
+                    will be the central location for the hackathon, with our
+                    parts checkout table along with soldering stations and 3D
+                    printers. Hackers will be able to pick up parts and use
+                    tools in the lab, but will have to find their own locations
+                    to work together with their team on their project.
+                    Communication and announcements will happen through a
+                    Discord server we will set up for the hackathon.
                 </p>
+            </div>
+            <div class="col-lg-5 col-md-6 graphic">
+                <img src="/img/index/aboutGraphic.png" alt="A landscape made of electrical components">
             </div>
         </div>
 
-        <div id='schedule' class='tan-box'></div>
+        <div id='schedule' class='black-box'></div>
 
         <!-- SCHEDULE -->
 
-        <div class='container-fluid schedule-section'>
-            <div class='text-center'>
-                <img class='section-header' src="/img/index/schedule.png">
-            </div>
-
-            <div class="text-center">
-                <p class="schedule-description">
-                    Our events will be taking place on the IDEA Hacks Discord or on Zoom. Our Zoom links are still TBD; keep an eye on this page or on the Discord for updates!
-                </p>
+        <div class='white-tab-container schedule-section'>
+            <div>
+                <div>
+                    <h1>Schedule</h1>
+                </div>
             </div>
 
             <div>
-                <div class='schedule-day'>
-                    <img class='day1' src="/img/index/day1.png"></img>
-                    <div class='schedule-text1'>
-                        <b>FRIDAY, JANUARY 15</b>
-                    </div>
-                </div>
+                <h2 class="schedule-day">Friday, January 14</h2>
                 <div class='schedule'>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>OPENING</p>
+                            <p>Check In</p>
                         </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>7&nbsp;PM - 8&nbsp;PM</p>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>5:30&nbsp;PM - 8&nbsp;PM</p>
                         </div>
-                        <div class="col-xs-4 location text-right">
-                            <a href="https://ucla.zoom.us/j/94479578415" target="_blank">
-                                <p>ZOOM</p>
-                            </a>
+                        <div class="col-xs-5 location text-right">
+                            <p>Boelter 2825</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>DISCORD TOUR</p>
+                            <p>Team Formation</p>
                         </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>8&nbsp;PM - 9&nbsp;PM</p>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>6:30&nbsp;PM - 7&nbsp;PM</p>
                         </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
+                        <div class="col-xs-5 location text-right">
+                            <p>Boelter 2825</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>HACKING BEGINS</p>
+                            <p>Team Registration</p>
                         </div>
-                        <div class="col-xs-4 schedule-time text-center">
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>8&nbsp;PM - 8:30&nbsp;PM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Boelter 2825</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Opening Statements</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>8:30&nbsp;PM - 9&nbsp;PM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Hacking Begins</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
                             <p>9&nbsp;PM</p>
                         </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div>
-                <div class='schedule-day'>
-                    <img class='day' src="/img/index/day2.png"></img>
-                    <div class='schedule-text2'>
-                        <b>SATURDAY, JANUARY 16</b>
-                    </div>
-                </div>
-                <div class='schedule'>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>LOCKHEED MARTIN PRESENTATION</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>11&nbsp;AM - 12&nbsp;PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <a href="https://lmco.zoomgov.com/j/1614920996?pwd=Y3lwTk5weE1DeUdOOWxUWWMwcmxIQT09" target="_blank">
-                                <p>ZOOM</p>
-                            </a>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>YOGA EXERCISE SESSION</p>
+                            <p>Getting Started Workshop</p>
                         </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>2&nbsp;PM - 3&nbsp;PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>OPEN ACTIVITY SESSION 2</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>3&nbsp;PM - 4&nbsp;PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>AMONG US</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>7&nbsp;PM - 8&nbsp;PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>JACKBOX</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
+                        <div class="col-xs-3 schedule-time text-center">
                             <p>9&nbsp;PM - 10&nbsp;PM</p>
                         </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD</p>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <h2 class="schedule-day">Saturday, January 15</h2>
+                <div class='schedule'>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Infineon Workshop</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>10&nbsp;AM - 12&nbsp;PM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Kneron Workshop</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>2&nbsp;PM - 3&nbsp;PM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom</p>
                         </div>
                     </div>
 
@@ -229,47 +237,66 @@
             </div>
 
             <div>
-                <div class='schedule-day'>
-                    <img class='day' src="/img/index/day3.png"></img>
-                    <div class='schedule-text3'>
-                        <b>SUNDAY, JANUARY 17</b>
-                    </div>
-                </div>
+                <h2 class="schedule-day">Sunday, January 16</h2>
                 <div class='schedule'>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>DEADLINE TO POST ON DEVPOST</p>
+                            <p>Hacking Ends</p>
                         </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>8:59&nbsp;AM</p>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>9&nbsp;AM</p>
                         </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
-                        </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-xs-4 event'>
-                            <p>VOTING AND JUDGING</p>
-                        </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>10&nbsp;AM - 1&nbsp;PM</p>
-                        </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-xs-4 event'>
-                            <p>CLOSING AND AWARDS</p>
+                            <p>Exhibition Setup</p>
                         </div>
-                        <div class="col-xs-4 schedule-time text-center">
-                            <p>1:30&nbsp;PM - 2&nbsp;PM</p>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>9&nbsp;AM - 9:30&nbsp;AM</p>
                         </div>
-                        <div class="col-xs-4 location text-right">
-                            <p>DISCORD/ZOOM</p>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Judging</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>9:30&nbsp;AM - 11&nbsp;AM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Judging Finals</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>11&nbsp;AM - 12:30&nbsp;PM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-xs-4 event'>
+                            <p>Closing and Awards</p>
+                        </div>
+                        <div class="col-xs-3 schedule-time text-center">
+                            <p>12:30&nbsp;PM - 1&nbsp;PM</p>
+                        </div>
+                        <div class="col-xs-5 location text-right">
+                            <p>Zoom/Discord</p>
                         </div>
                     </div>
 
@@ -282,136 +309,73 @@
 
         <!-- FAQ -->
 
-        <div class='container-fluid faq-section'>
-            <div class='text-center'>
-                <img class='section-header' src="/img/index/faq.png">
-            </div>
-
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">How will the hackathon work?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">Because of concerns about coronavirus, we will be running the hackathon entirely remotely. We have put together three categories of <a href='/boxes'>boxes</a> of parts, each centered around their own theme, which we will ship directly to the address you provide. You will have three days to prepare your project from the parts in your box and will present your creation to our judges remotely. Depending on participation, projects may be judged in groups by which box they were created from.</p>
+        <div class='black-tab-container row faq-section'>
+            <div>
+                <div>
+                    <h1>FAQ</h1>
                 </div>
             </div>
 
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">Will I be able to work with a team?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">Due to the remote nature of the hackathon and COVID-19, we are not allowing large teams. You are given the option to put one person on your application to be your teammate, but you will only get one box for your team, and it is up to you to work out how to properly collaborate on your project. Depending on the number of teams and individual hackers, teams may be judged separately from individuals.</p>
-                </div>
+            <div class="col-md-6">
+                <h2>General</h2>
+                <b>What is the hackathon format?</b>
+                <p>Due to rising cases of the COVID-19 Omicron variant in Los Angeles, UCLA is not allowing in-person events. Unfortunately, this means we have had to transition to a semi-remote format. The IEEE lab, located at Boelter 2825, will be the central location for the hackathon, with our parts checkout table along with soldering stations and 3D printers. Hackers will be able to pick up parts and use tools in the lab, but will have to find their own locations to work together with their team on their project. Communication and announcements will happen through a Discord server we will set up for the hackathon.</p>
+                <b>Who can attend?</b>
+                <p>All students interested are encouraged to apply. Although we primarily cater to UCLA engineering students, every application will be considered.</p>
+                <b>I don't know anything about hardware!</b>
+                <p>You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. There will also be mentors and other hardware experts ready to assist those who are having trouble bringing their hacks to life.</p>
+
+                <h2>Accommodations</h2>
+                <b>How much does it cost?</b>
+                <p>IDEA Hacks costs absolutely nothing to participate in. There is no reason not to come out, learn something new, and have fun!</p>
+                <b>What should I bring?</b>
+                <p>A valid ID is required to check in for the hackathon, so don't forget to bring it!</p>
+                <b>Will food be provided?</b>
+                <p>Due to new COVID-19 guidelines, we are no longer able to offer food during the event</p>
+                <b>How about travel costs?</b>
+                <p>Unfortunately, we will not be able to cover transportation costs or parking for this year's event.</p>
             </div>
 
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">Who can participate?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">All students interested are encouraged to apply. Although we primarily cater to UCLA engineering students, every application will be considered.</p>
-                </div>
+            <div class="col-md-6">
+                <h2>Applications</h2>
+                <b>How do I apply?</b>
+                <p>Hackers can apply on this website! Applications usually open in the middle of Fall quarter and stay open up until a couple weeks before the hackathon. Make sure to keep an eye out for IDEA Hacks notifications on when to start applying. Applications are reviewed and accepted on a first come first serve basis, so apply early!</p>
+                <b>What if I don't have a team?</b>
+                <p>You are free to hack alone, but that's no fun! We encourage everyone to be on teams of around 4-5 hackers. Not only will you have more fun, but more equipment will be available for your use. We hold a team formation session before hacking begins so that hackers can find teammates on the day of the hackathon.</p>
+
+                <h2>Miscellaneous</h2>
+                <b>What tools and hardware will be provided for my team?</b>
+                <p>If you would like to see a specific part or device at the hackathon, you can specify so on your application and we'll do our best to accommodate! You can also view a full list of available parts on our Parts page closer to the start of the hackathon. We will also provide soldering stations and 3D printers for you to use on your projects.</p>
+                <b>How can I check out parts during the hackathon?</b>
+                <p>Our Parts page lets you check which parts are available, then you'll be able to go to our parts table and have a volunteer check the part out for you. Some of our parts are consumable, but many need to be scanned so we can keep track of them.</p>
+                <b>How do I contact IDEA Hacks?</b>
+                <p>Email us at <a href="mailto:team@ideahacks.la">team@ideahacks.la</a>! We would love to hear from you!</p>
             </div>
 
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">Can international students apply?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">Unfortunately, due to the complications of shipping certain parts overseas, we will not be able to ship our boxes outside of United States.</p>
-                </div>
-            </div>
-
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">What does a "Hardware Hackathon" mean?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">At IDEA Hacks, a hardware hackathon means that your project can be anything you like as long as it includes a hardware component.</p>
-                </div>
-            </div>
-
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">What if I don't know anything about hardware?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">You are definitely not alone! During the hackathon, there will be workshops on hardware and hacking that will be accessible for everyone. In addition, our <a href='/dashboard/resources'>resources page</a> provides quickstart info and basic ideas for specific parts featured in our <a href='/boxes'>boxes</a>. Create an account to view our resources page!</p>
-                </div>
-            </div>
-
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">How do I apply?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">Hackers can apply on this website! Applications will be out by mid-October, and will close in mid-November. To get an email reminder once the application gets sent out, like our Facebook page <a href='https://www.facebook.com/ideahacks.la/?fref=mentions&__xts__[0]=68.ARAAgTMAZ2_QSZ92MUv70wZOXTYrq7JNCYp2KDo9G_xIJm1waShx8XCBA5N6ctUDqo0rLL8wA1jsXqruGi7wX3RaNvgkWs4igLm0f2W_2-tX0D9jp11Pllq7REjEYwKHpVV788nRzDjX_4QPMbxuJpafpxu5MC1Cm18w4P6Uh1aWofLaBk-2nA&__tn__=K-R' target='blank'>here</a>. Applications are reviewed and accepted on a first come first served basis, so apply early!</p>
-                </div>
-            </div>
-
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">What do hackers gain from participating?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">You will get tons of benefits from participating! You will get to keep all of your parts and will get a free hackathon t-shirt and swag from our sponsors. On top of that, you'll get personal exposure with reps from industry-leading companies and the opportunity to have your resume included in a resume book sent to our sponsors. The top the projects in each category will receive prizes, and most important of all, you'll gain valuable project experience and have the opportunity to learn something new!</p>
-                </div>
-            </div>
-
-            <div class="q-a">
-                <div class="question-section clearfix">
-                    <p class="q">Q.</p>
-                    <p class="question">How do I contact IDEA HACKS?</p>
-                </div>
-                <div class="answer-section clearfix">
-                    <p class="a">A.</p>
-                    <p class="answer">Email us at <a href='mailto:team@ideahacks.la'>team@ideahacks.la</a>! You can also like our Facebook page and follow us on Instagram.</p>
-                </div>
-            </div>
-
-            <div class='tan-box1'></div>
         </div>
 
-        <div id='sponsors' class='tan-box'></div>
+        <div id='sponsors' class='black-box'></div>
 
         <!-- SPONSORS -->
 
-        <div class='container-fluid sponsors-section'>
-            <div class='text-center'>
-                <img class='section-header' src="/img/index/sponsors.png">
+        <div class='white-tab-container sponsors-section'>
+            <div>
+                <div>
+                    <h1>Sponsors</h1>
+                </div>
             </div>
-            <p>Interested in sponsoring? <br /> Check out our sponsorship brochure <a class='brochure-link' href='/files/21-sponsorship-packet.pdf' target='_blank'>here</a>!</p>
+
+            <p>Interested in sponsoring? <br /> Check out our sponsorship brochure <a class='brochure-link' href='/files/IDEA Hacks Corporate Brochure (2022).pdf' target='_blank'>here</a>!</p>
             <div class='text-center large-logos'>
                 <a href='http://www.ti.com/' target='_blank'><img class='large-logo' src="/img/company_logos/ti.png"></a>
-                <a href='https://www.qualcomm.com/' target='_blank'><img class='large-logo' src="/img/company_logos/qualcomm.png"></a>
-                <a href='https://www.advantech.com/' target='_blank'><img class='large-logo' src="/img/company_logos/advantech.png"></a>
                 <a href='https://www.northropgrumman.com/' target='_blank'><img class='large-logo' src="/img/company_logos/northrop.png"></a>
-                <a href='https://www.lockheedmartin.com/' target='_blank'><img class='large-logo' src="/img/company_logos/lockheed.png"></a>
-                <a href='https://www.boeing.com/' target='_blank'><img class='large-logo' src="/img/company_logos/boeing.png"></a>
-                <a href='https://www.poc.com/' target='_blank'><img class='large-logo' src="/img/company_logos/poc.png"></a>
-                <a target='_blank'><img class='large-logo square' src="/img/company_logos/cambridge.png"></a>
-                <a target='_blank'><img class='large-logo square' src="/img/company_logos/iSTEM.png"></a>
-                <a href='https://bellapita.com/' target='_blank'><img class='large-logo' src="/img/company_logos/bellapita.png"></a>
-                <a href='https://www.mammachia.com/' target='_blank'><img class='large-logo' src="/img/company_logos/mamma_chia.png"></a>
-                <a href='https://www.chipotle.com/' target='_blank'><img class='large-logo square' src="/img/company_logos/chipotle.svg"></a>
-                <a href='https://www.monsterenergy.com/' target='_blank'><img class='large-logo' src="/img/company_logos/monster.png"></a>
+                <a href='https://www.kneron.com/' target='_blank'><img class='large-logo' src="/img/company_logos/kneron.png"></a>
+                <a href='https://www.moveparallel.com/' target='_blank'><img class='large-logo' src="/img/company_logos/parallelsystems.png"></a>
+                <a href='https://intel.com/' target='_blank'><img class='large-logo intel' src="/img/company_logos/intel.png"></a>
+                <a href='https://www.infineon.com/' target='_blank'><img class='large-logo' src="/img/company_logos/infineon.png"></a>
+                <a href='https://usac.ucla.edu/' target='_blank'><img class='large-logo' src="/img/company_logos/usac.png"></a>
+                <a href='https://guayaki.com/' target='_blank'><img class='large-logo' src="/img/company_logos/yerba.png"></a>
+                <a href='https://www.wetzels.com/' target='_blank'><img class='large-logo' src="/img/company_logos/wetzels.svg"></a>
             </div>
         </div>
 

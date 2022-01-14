@@ -118,6 +118,16 @@ button:hover {
 	padding: 0px;
 }
 
+/* .title span {
+	display: inline-block;
+	border-bottom: 2px solid var(--white);
+	padding-bottom: 10px;
+} */
+
+/* .title { */
+/* margin-bottom: 20px; */
+/* } */
+
 .text-box {
 	color: var(--white);
 	border-radius: 10px;
@@ -152,12 +162,6 @@ button:hover {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
-/* p.name,
-p.category,
-p.quantity {
-	margin: 0px;
-} */
 
 .part-entry > p {
 	margin-top: 8px;

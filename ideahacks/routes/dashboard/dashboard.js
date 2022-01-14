@@ -11,25 +11,27 @@ const getParts = (req, res) => {
 }
 
 const getMe = (req, res) => {
-	let statusColor = ""
+	let statusDescription = ""
+	let accepted = false
 	switch (req.user.applicationStatus) {
 		case "pending":
-			statusColor = "#50b5dd"
+			statusDescription = "Your application is under review!"
 			break
 		case "accepted":
-			statusColor = "#acddc9"
+			statusDescription = "Welcome to IDEA Hacks!"
+			accepted = true
 			break
 		case "waitlisted":
-			statusColor = "#e8cc83"
+			statusDescription = "We’ll be in touch if a spot opens up!"
 			break
 		case "rejected":
-			statusColor = "#eab664"
+			statusDescription = "We’re sorry we didn’t have room"
 			break
 	}
 	res.render("me", {
 		user: req.user,
-		accepted: req.user.applicationStatus === "accepted",
-		statusColor: statusColor
+		statusDescription: statusDescription,
+		accepted: accepted
 	})
 }
 
@@ -106,10 +108,51 @@ const getMyParts = (req, res) => {
 	})
 }
 
+const getMyTeam = (req, res) => {
+	var team = []
+
+	let teammatesEmails = req.user.teammates
+
+	let tlen = teammatesEmails.length
+
+	var promises = []
+
+	for (let i = 0; i < tlen; i++) {
+		let email = teammatesEmails[i]
+
+		let teammate = User.find({ email: email })
+
+		promises.push(teammate)
+		// console.log(typeof teammate)
+	}
+
+	Promise.all(promises).then(values => {
+		for (let i = 0; i < tlen; i++) {
+			let teammate = values[i]
+
+			let name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
+			let email = teammate[0]._doc.email
+			let major = teammate[0]._doc.major
+			let year = teammate[0]._doc.year
+
+			// console.log(name, email, major, year)
+
+			team.push({ name, email, major, year })
+		}
+
+		// console.log("team", team)
+
+		res.render("dashboard-my-team", { team })
+
+		// console.log(values)
+	})
+}
+
 module.exports = {
 	getParts,
 	getMe,
 	getSettings,
 	postSettings,
-	getMyParts
+	getMyParts,
+	getMyTeam
 }

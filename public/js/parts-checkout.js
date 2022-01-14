@@ -43,6 +43,10 @@ $(() => {
 		$("#go-back").show()
 	})
 
+	$(".barcode-form .admin-input").on("keypress", function(e) {
+		return e.which !== 13
+	})
+
 	// When check-out or check-in button clicked, run this monstorous piece of logic
 	$(".barcode-form").submit(function() {
 		// Grab some information from the form
@@ -51,7 +55,7 @@ $(() => {
 		let buttonId = $(this).attr("id")
 		let quantity = Number($('input[name="quantity"]').val())
 		if (quantity <= 0) {
-			errorHandler("Please input a positive number!")
+			errorHandler("Please input a positive quantity!")
 		}
 		// Check for part existence
 		$.get("/api/parts/" + barcode)
@@ -180,7 +184,9 @@ $(() => {
 // Attempts to log the given error as well as exits the script
 function errorHandler(err) {
 	$("#barcode-scan").html("")
-	$("#barcode-scan").html("<p>There was an error with your request: " + err + ". Redirecting...</p>")
+	$("#barcode-scan").html("<p>There was an error with your request:<br>" + err + "<br>Redirecting...</p>")
+	$('.checkout input[type="text"]').val("")
+	$('.checkin input[type="text"]').val("")
 	$(this).hide()
 
 	setTimeout(location.reload.bind(location), 3000)
@@ -196,6 +202,8 @@ function successHandler() {
 	$("#go-back").hide()
 	$("#barcode-scan").hide()
 	$('#barcode-scan input[type="text"]').val("")
+	$('.checkout input[type="text"]').val("")
+	$('.checkin input[type="text"]').val("")
 	$(document).scrollTop(0)
 	setTimeout(location.reload.bind(location), 3000)
 }
