@@ -1,13 +1,13 @@
 const express = require("express")
 const adminRouter = express.Router()
-const adminHandlers = require("./admin.js")
+// const adminHandlers = require("./admin.js")
 const applicationReviewHandlers = require("./application-review.js")
 const teamHandlers = require("./teams.js")
 const partsHandlers = require("./parts")
 const h = require("../../helpers").authHelpers
 const setResLocals = require("../../helpers").routeHelpers.setResLocals
 
-adminRouter.get("/", setResLocals, h.isAdmin, adminHandlers.getAdmin)
+adminRouter.get("/", setResLocals, h.isAdmin, partsHandlers.getParts)
 
 adminRouter.get("/application-review", setResLocals, h.isAdmin, applicationReviewHandlers.getApplicationReview)
 
