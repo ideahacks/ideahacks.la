@@ -28,7 +28,6 @@
     <link rel='stylesheet' type='text/css' href='/css/form.css' />
     <link rel='stylesheet' type='text/css' href='/css/admin-team-creation.css' />
 
-
     <!-- SCRIPTS -->
     <script src='/js/admin-team-creation.js'></script>
 
@@ -43,7 +42,7 @@
         </div>
 
         <div class="ideahacks-form container text-center">
-            <div id="team-input">
+            <div id="team-number">
                 <p>Enter a new team #</p>
                 <form id="team-submit" onsubmit="return false;">
                     <input class="form-control" type="text" name="team-number" required>
@@ -51,7 +50,7 @@
                 </form>
             </div>
 
-            <div id="users-input" style="display: none;">
+            <div id="members" style="display: none;">
                 <p>Enter member emails</p>
                 <p>Put each email on a new line</p>
                 <form onsubmit="return false;">
@@ -60,6 +59,14 @@
                 </form>
             </div>
 
+            <div id="confirm" style="display: none;">
+                <p>The following members are already in teams:</p>
+                <p id="with-team"></p>
+                <p>Please confirm that they should be removed from their old teams and moved to this new team.</p>
+                <form onsubmit="return false;">
+                    <button type="submit" class="submit-button">Confirm</button>
+                </form>
+            </div>
         </div>
 
 
