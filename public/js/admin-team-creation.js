@@ -23,9 +23,13 @@ $(() => {
 	})
 
 	$("#members").submit(function() {
-		let memberEmails = $('textarea[name="members"]')
-			.val()
-			.split("\n")
+		let memberEmails = $('textarea[name="members"]').val().trim()
+		if (memberEmails.includes("\n")) {
+			memberEmails = memberEmails.split("\n")
+		}
+		else {
+			memberEmails = [memberEmails]
+		}
 
 		let memberPromises = []
 		memberEmails.forEach(email => {
@@ -38,8 +42,13 @@ $(() => {
 		let curEmail = ""
 		$.when(...memberPromises)
 			.then(function(...memberResponses) {
-				for (let i = 0; i < memberResponses.length; i++) {
-					member = memberResponses[i][0]
+				for (let i = 0; i < memberPromises.length; i++) {
+					if (memberPromises.length !== 1) {
+						member = memberResponses[i][0]
+					}
+					else {
+						member = memberResponses[0]
+					}
 					curEmail = memberEmails[i]
 					// If the user has a team, save them for confirmation If the
 					// user has a team number of -1, then they had teammates on
@@ -85,10 +94,23 @@ $(() => {
 		})
 		$.when(...oldTeammatePromises).then(function(...oldTeammateResponses) {
 			let teammateUpdatePromises = []
-			for (let i = 0; i < oldTeammateResponses.length; i++) {
+			for (let i = 0; i < oldTeammatePromises.length; i++) {
 				let userEmail = withTeam[i]
-				let oldMembers = oldTeammateResponses[i][0].split(", ")
-				console.log(oldMembers)
+				let oldMembers
+				if (oldTeammatePromises.length !== 1) {
+					oldMembers = oldTeammateResponses[i][0]
+				}
+				else {
+					oldMembers = oldTeammateResponses[0]
+				}
+
+				if (oldMembers.includes(",")) {
+					oldMembers = oldMembers.split(", ")
+				}
+				else {
+					oldMembers = [oldMembers]
+				}
+
 				let userIndex = oldMembers.indexOf(userEmail)
 				let oldTeammates
 				if (userIndex > -1) {
@@ -98,23 +120,25 @@ $(() => {
 
 				// Get the old teammate's data and prepare to remove the user
 				// from their teammate list
-				oldTeammates.forEach(teammate => {
-					$.get("/api/users/" + teammate)
-						.then(teammateData => {
-							let toRemove = teammateData.teammates.indexOf(userEmail)
-							if (toRemove > -1) {
-								teammateData.teammates.splice(toRemove, 1)
-							}
-							teammateUpdatePromises.push(
-								$.ajax({
-									url: "/api/users/" + teammateData.email,
-									type: "PUT",
-									data: teammateData
-								})
-							)
-						})
-						.catch(err => errorHandler(err))
-				})
+				if (oldTeammates) {
+					oldTeammates.forEach(teammate => {
+						$.get("/api/users/" + teammate)
+							.then(teammateData => {
+								let toRemove = teammateData.teammates.indexOf(userEmail)
+								if (toRemove > -1) {
+									teammateData.teammates.splice(toRemove, 1)
+								}
+								teammateUpdatePromises.push(
+									$.ajax({
+										url: "/api/users/" + teammateData.email,
+										type: "PUT",
+										data: teammateData
+									})
+								)
+							})
+							.catch(err => errorHandler(err))
+					})
+				}
 			}
 
 			$.when(...teammateUpdatePromises)
