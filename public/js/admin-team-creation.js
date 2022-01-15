@@ -23,11 +23,12 @@ $(() => {
 	})
 
 	$("#members").submit(function() {
-		let memberEmails = $('textarea[name="members"]').val().trim()
+		let memberEmails = $('textarea[name="members"]')
+			.val()
+			.trim()
 		if (memberEmails.includes("\n")) {
 			memberEmails = memberEmails.split("\n")
-		}
-		else {
+		} else {
 			memberEmails = [memberEmails]
 		}
 
@@ -45,8 +46,7 @@ $(() => {
 				for (let i = 0; i < memberPromises.length; i++) {
 					if (memberPromises.length !== 1) {
 						member = memberResponses[i][0]
-					}
-					else {
+					} else {
 						member = memberResponses[0]
 					}
 					curEmail = memberEmails[i]
@@ -99,15 +99,13 @@ $(() => {
 				let oldMembers
 				if (oldTeammatePromises.length !== 1) {
 					oldMembers = oldTeammateResponses[i][0]
-				}
-				else {
+				} else {
 					oldMembers = oldTeammateResponses[0]
 				}
 
 				if (oldMembers.includes(",")) {
 					oldMembers = oldMembers.split(", ")
-				}
-				else {
+				} else {
 					oldMembers = [oldMembers]
 				}
 
