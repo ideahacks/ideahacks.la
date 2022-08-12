@@ -1,5 +1,5 @@
 $(() => {
-	let scheduleResize = function() {
+	let scheduleResize = function () {
 		if (window.outerWidth <= 990) {
 			$(".schedule-time").removeClass("col-xs-3")
 			$(".schedule-time").removeClass("text-center")

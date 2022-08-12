@@ -21,7 +21,7 @@ function recover(user) {
 		to: user.email,
 		from: "team@ideahacks.la",
 		subject: "IDEA Hacks password reset",
-		html: "Your temporary IDEA Hacks password is: " + tempPassword + " . Log in and change your password."
+		html: "Your temporary IDEA Hacks password is: " + tempPassword + " . Log in and change your password.",
 	}
 
 	sgMail.send(msg)

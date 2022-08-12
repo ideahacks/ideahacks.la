@@ -12,11 +12,11 @@ describe("ideahacks/helpers/auth.js...", () => {
 			next = sinon.spy()
 
 			req = {
-				isAuthenticated: function() {}
+				isAuthenticated: function () {},
 			}
 
 			res = {
-				redirect: sinon.spy()
+				redirect: sinon.spy(),
 			}
 		})
 
@@ -48,12 +48,12 @@ describe("ideahacks/helpers/auth.js...", () => {
 			next = sinon.spy()
 
 			req = {
-				isAuthenticated: function() {},
-				user: {}
+				isAuthenticated: function () {},
+				user: {},
 			}
 
 			res = {
-				redirect: sinon.spy()
+				redirect: sinon.spy(),
 			}
 		})
 
@@ -98,12 +98,12 @@ describe("ideahacks/helpers/auth.js...", () => {
 			next = sinon.spy()
 
 			req = {
-				isAuthenticated: function() {},
-				user: {}
+				isAuthenticated: function () {},
+				user: {},
 			}
 
 			res = {
-				redirect: sinon.spy()
+				redirect: sinon.spy(),
 			}
 		})
 

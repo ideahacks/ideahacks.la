@@ -4,5 +4,5 @@ module.exports = {
 	dashboardRouter: require("./dashboard"),
 	partsRouter: require("./parts"),
 	teamRouter: require("./teams"),
-	userRouter: require("./users")
+	userRouter: require("./users"),
 }

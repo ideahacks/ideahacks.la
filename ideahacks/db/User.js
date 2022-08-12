@@ -45,7 +45,7 @@ const UserSchema = new Schema({
 
 	// Check in/out fields
 	checkinTime: Date,
-	checkoutTime: Date
+	checkoutTime: Date,
 })
 
 module.exports = mongoose.model("User", UserSchema)

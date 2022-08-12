@@ -3,7 +3,7 @@ const User = require("../../db").User
 const getApplicationReview = (req, res) => {
 	User.find({ hasApplication: true })
 		.sort("firstName")
-		.then(users => {
+		.then((users) => {
 			let applicationStats = users.reduce(
 				(stats, user, index) => {
 					if (user.applicationStatus === "accepted") stats.accepted++
@@ -23,11 +23,11 @@ const getApplicationReview = (req, res) => {
 
 				numberWaitlisted: applicationStats.waitlisted,
 
-				numberPending: applicationStats.pending
+				numberPending: applicationStats.pending,
 			})
 		})
 }
 
 module.exports = {
-	getApplicationReview
+	getApplicationReview,
 }

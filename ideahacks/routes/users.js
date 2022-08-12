@@ -19,10 +19,10 @@ userRouter.get("/api/users", isAdmin, getUsers)
 
 function getUsers(req, res) {
 	User.find(req.query)
-		.then(users => {
+		.then((users) => {
 			return res.json({ users })
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -39,11 +39,11 @@ userRouter.get("/api/users/emails", isAdmin, getUserEmails)
 
 function getUserEmails(req, res) {
 	User.find(req.query, "email")
-		.then(users => {
-			let emailList = users.map(user => user.email).join(", ")
+		.then((users) => {
+			let emailList = users.map((user) => user.email).join(", ")
 			return res.send(emailList)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -59,10 +59,10 @@ userRouter.get("/api/users/:email", isAdmin, getUserByEmail)
 
 function getUserByEmail(req, res) {
 	User.findOne({ email: req.params.email })
-		.then(user => {
+		.then((user) => {
 			return res.json(user)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.send(c.StatusInternalError).send(err)
 		})
 }
@@ -79,18 +79,18 @@ userRouter.post("/api/users/change/application-status/:email/:newApplicationStat
 
 function changeApplicationStatus(req, res) {
 	User.findOne({ email: req.params.email })
-		.then(user => {
+		.then((user) => {
 			user.applicationStatus = req.params.newApplicationStatus
 			user
 				.save()
 				.then(() => {
 					return res.json({ status: "success", message: "Successfully changed application status!" })
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -106,7 +106,7 @@ userRouter.put("/api/users/:email", isAdmin, editUser)
 
 function editUser(req, res) {
 	User.findOne({ email: req.params.email })
-		.then(user => {
+		.then((user) => {
 			// If team does not exist, return not found
 			if (!user) {
 				return res.status(c.StatusNotFound).send("User with given email does not exist")
@@ -120,11 +120,11 @@ function editUser(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }

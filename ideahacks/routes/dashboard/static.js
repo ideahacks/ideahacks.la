@@ -3,5 +3,5 @@ const getResources = (req, res) => {
 }
 
 module.exports = {
-	getResources
+	getResources,
 }

@@ -2,13 +2,11 @@ $(() => {
 	let modal = document.getElementById("myModal")
 
 	// when application clicked on, make API call, inject info into modal, and then display modal
-	$("li").click(function() {
-		let userEmail = $(this)
-			.attr("class")
-			.split(" ")[0]
+	$("li").click(function () {
+		let userEmail = $(this).attr("class").split(" ")[0]
 		let userApiUrl = "/api/users/" + userEmail
 
-		$.ajax({ url: userApiUrl, type: "GET" }).done(response => {
+		$.ajax({ url: userApiUrl, type: "GET" }).done((response) => {
 			for (let key in response) {
 				$('*[name="' + key + '"]').text(response[key])
 			}
@@ -16,11 +14,8 @@ $(() => {
 			$('a[name="linkedin-anchor"]').attr("href", response.linkedin)
 			$('a[name="resume-anchor"]').attr("href", response.resume)
 			$('input[value="' + response["applicationStatus"] + '"]').attr("checked", "checked")
-			$(".radio-outer-square").each(function(i, el) {
-				let labelText = $(el)
-					.next()
-					.html()
-					.toLowerCase()
+			$(".radio-outer-square").each(function (i, el) {
+				let labelText = $(el).next().html().toLowerCase()
 				if (labelText === response.applicationStatus) {
 					$(el).click()
 				}
@@ -30,7 +25,7 @@ $(() => {
 	})
 
 	// when radio button is clicked, asynchronously change application status
-	$('input[name="application-status-radio"]').click(function() {
+	$('input[name="application-status-radio"]').click(function () {
 		let userEmail = $('span[name="email"]').text()
 		let oldApplicationStatus = $('li[name="' + userEmail + '"]')
 			.find(".application-status")
@@ -38,7 +33,7 @@ $(() => {
 		let newApplicationStatus = $(this).val()
 		let userApiUrl = "/api/users/change/application-status/" + userEmail + "/" + newApplicationStatus
 
-		$.ajax({ url: userApiUrl, type: "POST" }).done(response => {
+		$.ajax({ url: userApiUrl, type: "POST" }).done((response) => {
 			if (response.status === "failure") console.log(response.message)
 
 			changeApplicationStatus(userEmail, oldApplicationStatus, newApplicationStatus)
@@ -46,7 +41,7 @@ $(() => {
 	})
 
 	// when user clicks outside the modal, hide the modal
-	window.onclick = e => {
+	window.onclick = (e) => {
 		if (e.target === modal) {
 			modal.style.display = "none"
 		}

@@ -8,5 +8,5 @@ module.exports = {
 	// Status codes
 	StatusOK: 200,
 	StatusNotFound: 404,
-	StatusInternalError: 500
+	StatusInternalError: 500,
 }

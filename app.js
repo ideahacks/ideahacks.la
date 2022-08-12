@@ -22,7 +22,7 @@ app.use(morgan("dev"))
 // View and Asset Handling
 app.set("port", process.env.PORT || 3000)
 app.set("view engine", "hbs")
-hbs.registerHelper("if_even", function(conditional, options) {
+hbs.registerHelper("if_even", function (conditional, options) {
 	if (conditional % 2 === 0) {
 		return options.fn(this)
 	} else {

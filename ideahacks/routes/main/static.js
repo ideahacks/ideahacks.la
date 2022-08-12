@@ -37,5 +37,5 @@ module.exports = {
 	getVenue,
 	getConfirm,
 	getPrivacy,
-	getBoxes
+	getBoxes,
 }

@@ -25,7 +25,7 @@ const postApplication = (req, res) => {
 		.then(() => {
 			return res.status(c.StatusOK).send("Successfully submitted!")
 		})
-		.catch(err => {
+		.catch((err) => {
 			console.log(err)
 			return res.status(c.StatusInternalError).send(c.MessageInternalError + err)
 		})
@@ -33,5 +33,5 @@ const postApplication = (req, res) => {
 
 module.exports = {
 	getApplication,
-	postApplication
+	postApplication,
 }

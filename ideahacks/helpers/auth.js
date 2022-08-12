@@ -13,5 +13,5 @@ const isAdmin = (req, res, next) => {
 module.exports = {
 	isAuthenticated,
 	isVerified,
-	isAdmin
+	isAdmin,
 }

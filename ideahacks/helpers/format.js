@@ -1,4 +1,4 @@
-const formatUser = user => {
+const formatUser = (user) => {
 	if (user.hasTeam) {
 		user.hasATeam = true
 	} else {
@@ -77,5 +77,5 @@ const formatUser = user => {
 }
 
 module.exports = {
-	formatUser
+	formatUser,
 }

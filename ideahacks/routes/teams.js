@@ -19,10 +19,10 @@ teamRouter.get("/api/teams", isAdmin, getTeams)
 
 function getTeams(req, res) {
 	Team.find(req.query)
-		.then(teams => {
+		.then((teams) => {
 			return res.json(teams)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -36,7 +36,7 @@ teamRouter.get("/api/teams/:teamNumber", isAdmin, getTeamByNumber)
 
 function getTeamByNumber(req, res) {
 	Team.findOne({ teamNumber: req.params.teamNumber })
-		.then(team => {
+		.then((team) => {
 			// If team does not exist, return not found
 			if (!team) {
 				return res.status(c.StatusNotFound).send(c.MessageNotFound)
@@ -44,7 +44,7 @@ function getTeamByNumber(req, res) {
 
 			return res.json(team)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -68,7 +68,7 @@ function createTeam(req, res) {
 
 	// Check if team with matching team number already exists, else create new team
 	Team.findOne({ teamNumber })
-		.then(team => {
+		.then((team) => {
 			if (team) {
 				return res.status(c.StatusInternalError).send("Team with this number already exists")
 			}
@@ -80,11 +80,11 @@ function createTeam(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -99,7 +99,7 @@ teamRouter.put("/api/teams/:teamNumber", isAdmin, editTeam)
 
 function editTeam(req, res) {
 	Team.findOne({ teamNumber: req.params.teamNumber })
-		.then(team => {
+		.then((team) => {
 			// If team does not exist, return not found
 			if (!team) {
 				return res.status(c.StatusNotFound).send("Team with given team number does not exist")
@@ -118,11 +118,11 @@ function editTeam(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -134,7 +134,7 @@ function deleteTeam(req, res) {
 		.then(() => {
 			return res.send(c.MessageOK)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }

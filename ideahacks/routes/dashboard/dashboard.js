@@ -5,7 +5,7 @@ const { Team } = require("../../db")
 const { User } = require("../../db")
 
 const getParts = (req, res) => {
-	Part.find().then(parts => {
+	Part.find().then((parts) => {
 		res.render("dashboard-parts", { parts })
 	})
 }
@@ -31,7 +31,7 @@ const getMe = (req, res) => {
 	res.render("me", {
 		user: req.user,
 		statusDescription: statusDescription,
-		accepted: accepted
+		accepted: accepted,
 	})
 }
 
@@ -65,11 +65,11 @@ const postSettings = (req, res) => {
 			req.user.password = hashedPassword
 		}
 
-		User.findOne({ email: req.user.email }).then(u => {
+		User.findOne({ email: req.user.email }).then((u) => {
 			if (u && emailChanged) {
 				return res.json({
 					status: "failure",
-					message: "A user with this email already exists!"
+					message: "A user with this email already exists!",
 				})
 			}
 
@@ -78,7 +78,7 @@ const postSettings = (req, res) => {
 				.then(() => {
 					return res.json({ status: "success", message: "Successfully saved profile changes." })
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.send(err)
 				})
 		})
@@ -87,17 +87,17 @@ const postSettings = (req, res) => {
 
 const getMyParts = (req, res) => {
 	let parts = {}
-	Part.find().then(p => {
-		parts = p.map(part => ({
+	Part.find().then((p) => {
+		parts = p.map((part) => ({
 			name: part.partName,
 			category: part.category,
-			quantity: part.stock
+			quantity: part.stock,
 		}))
 	})
-	User.find({ email: req.user.email }).then(user => {
+	User.find({ email: req.user.email }).then((user) => {
 		let hasTeam = user[0]._doc.hasTeam
 		if (hasTeam) {
-			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
+			Team.find({ teamNumber: user[0]._doc.teamNumber }).then((team) => {
 				let myParts = team[0]._doc.parts
 
 				res.render("dashboard-my-parts", { user: req.user, myParts, parts })
@@ -126,7 +126,7 @@ const getMyTeam = (req, res) => {
 		// console.log(typeof teammate)
 	}
 
-	Promise.all(promises).then(values => {
+	Promise.all(promises).then((values) => {
 		for (let i = 0; i < tlen; i++) {
 			let teammate = values[i]
 
@@ -154,5 +154,5 @@ module.exports = {
 	getSettings,
 	postSettings,
 	getMyParts,
-	getMyTeam
+	getMyTeam,
 }

@@ -10,14 +10,14 @@ const successfulConnectionMessage = "Successfully connected to the database!"
 mongoose.connect(dbURI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
-	useCreateIndex: true
+	useCreateIndex: true,
 })
 
 // Plug in global promise library
 mongoose.Promise = global.Promise
 
 // On error connecting to the database, log error
-mongoose.connection.on("error", err => {
+mongoose.connection.on("error", (err) => {
 	console.log("Mongoose error: ", err)
 })
 
@@ -31,5 +31,5 @@ module.exports = {
 	Part: require("./Part.js"),
 	teamData: require("./data/team.js"),
 	sponsorsData: require("./data/sponsors.js"),
-	boxesData: require("./data/boxes.js")
+	boxesData: require("./data/boxes.js"),
 }

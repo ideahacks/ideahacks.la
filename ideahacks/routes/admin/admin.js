@@ -1,7 +1,7 @@
 const User = require("../../db").User
 
 const getAdmin = (req, res) => {
-	User.find({ hasApplication: true, isVerified: true }).then(users => {
+	User.find({ hasApplication: true, isVerified: true }).then((users) => {
 		// Compile lists of emails for accepted, pending, and rejected users
 		let emailLists = users.reduce(
 			(lists, user, i) => {
@@ -12,7 +12,7 @@ const getAdmin = (req, res) => {
 				pending: { name: "Pending", list: [] },
 				accepted: { name: "Accepted", list: [] },
 				rejected: { name: "Rejected", list: [] },
-				waitlisted: { name: "Waitlisted", list: [] }
+				waitlisted: { name: "Waitlisted", list: [] },
 			}
 		)
 
@@ -23,11 +23,11 @@ const getAdmin = (req, res) => {
 		// }
 
 		return res.render("admin", {
-			mailingLists
+			mailingLists,
 		})
 	})
 }
 
 module.exports = {
-	getAdmin
+	getAdmin,
 }

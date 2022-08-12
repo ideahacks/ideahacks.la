@@ -10,49 +10,35 @@ describe("Application...", () => {
 		server = app.listen(3000, () => {})
 	})
 
-	afterEach(done => {
+	afterEach((done) => {
 		server.close(done)
 	})
 
-	it("responds to /", done => {
-		request(server)
-			.get("/")
-			.expect(200, done)
+	it("responds to /", (done) => {
+		request(server).get("/").expect(200, done)
 	})
 
-	it("responds to /team", done => {
-		request(server)
-			.get("/team")
-			.expect(200, done)
+	it("responds to /team", (done) => {
+		request(server).get("/team").expect(200, done)
 	})
 
-	it("responds to /history", done => {
-		request(server)
-			.get("/history")
-			.expect(200, done)
+	it("responds to /history", (done) => {
+		request(server).get("/history").expect(200, done)
 	})
 
-	it("responds to /login", done => {
-		request(server)
-			.get("/login")
-			.expect(200, done)
+	it("responds to /login", (done) => {
+		request(server).get("/login").expect(200, done)
 	})
 
-	it("responds to /registration", done => {
-		request(server)
-			.get("/registration")
-			.expect(200, done)
+	it("responds to /registration", (done) => {
+		request(server).get("/registration").expect(200, done)
 	})
 
-	it("responds to /privacy", done => {
-		request(server)
-			.get("/privacy")
-			.expect(200, done)
+	it("responds to /privacy", (done) => {
+		request(server).get("/privacy").expect(200, done)
 	})
 
-	it("404's everything else", done => {
-		request(server)
-			.get("/asldfjalsfk")
-			.expect(404, done)
+	it("404's everything else", (done) => {
+		request(server).get("/asldfjalsfk").expect(404, done)
 	})
 })

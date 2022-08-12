@@ -18,7 +18,7 @@ function verifyEmail(user) {
 			user.verificationHash +
 			'">' +
 			"Verify" +
-			"</a>"
+			"</a>",
 	}
 
 	sgMail.send(msg)

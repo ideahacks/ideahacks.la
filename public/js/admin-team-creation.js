@@ -3,7 +3,7 @@ let members
 let withTeam
 let withTeamNumbers
 $(() => {
-	$("#team-number").submit(function(event) {
+	$("#team-number").submit(function (event) {
 		event.stopPropagation()
 		teamNumber = $('input[name="team-number"]').val()
 		if (isNaN(teamNumber)) {
@@ -13,7 +13,7 @@ $(() => {
 		//Check if team number is already taken
 		$.get("/api/teams/" + teamNumber)
 			//Team already exists
-			.then(team => {
+			.then((team) => {
 				return errorHandler("Team number already exists!")
 			})
 			.catch(() => {
@@ -22,10 +22,8 @@ $(() => {
 			})
 	})
 
-	$("#members").submit(function() {
-		let memberEmails = $('textarea[name="members"]')
-			.val()
-			.trim()
+	$("#members").submit(function () {
+		let memberEmails = $('textarea[name="members"]').val().trim()
 		if (memberEmails.includes("\n")) {
 			memberEmails = memberEmails.split("\n")
 		} else {
@@ -33,7 +31,7 @@ $(() => {
 		}
 
 		let memberPromises = []
-		memberEmails.forEach(email => {
+		memberEmails.forEach((email) => {
 			memberPromises.push($.get("/api/users/" + email))
 		})
 
@@ -42,7 +40,7 @@ $(() => {
 		withTeamNumbers = []
 		let curEmail = ""
 		$.when(...memberPromises)
-			.then(function(...memberResponses) {
+			.then(function (...memberResponses) {
 				for (let i = 0; i < memberPromises.length; i++) {
 					if (memberPromises.length !== 1) {
 						member = memberResponses[i][0]
@@ -61,7 +59,7 @@ $(() => {
 					member.hasTeam = true
 					member.teamNumber = teamNumber
 					member.teammates = []
-					memberEmails.forEach(e => {
+					memberEmails.forEach((e) => {
 						if (e !== member.email) {
 							member.teammates.push(e)
 						}
@@ -79,20 +77,20 @@ $(() => {
 
 				return createTeam()
 			})
-			.catch(err => {
+			.catch((err) => {
 				//Email doesn't exist
 				errorHandler(curEmail + " is not a user!")
 			})
 	})
 
-	$("#confirm").submit(function() {
+	$("#confirm").submit(function () {
 		// Remove any users already on teams from their old teammates' team data
 		let oldTeammatePromises = []
 		// Get a list of users on each old team
-		withTeamNumbers.forEach(number => {
+		withTeamNumbers.forEach((number) => {
 			oldTeammatePromises.push($.get("/api/users/emails?teamNumber=" + number))
 		})
-		$.when(...oldTeammatePromises).then(function(...oldTeammateResponses) {
+		$.when(...oldTeammatePromises).then(function (...oldTeammateResponses) {
 			let teammateUpdatePromises = []
 			for (let i = 0; i < oldTeammatePromises.length; i++) {
 				let userEmail = withTeam[i]
@@ -119,9 +117,9 @@ $(() => {
 				// Get the old teammate's data and prepare to remove the user
 				// from their teammate list
 				if (oldTeammates) {
-					oldTeammates.forEach(teammate => {
+					oldTeammates.forEach((teammate) => {
 						$.get("/api/users/" + teammate)
-							.then(teammateData => {
+							.then((teammateData) => {
 								let toRemove = teammateData.teammates.indexOf(userEmail)
 								if (toRemove > -1) {
 									teammateData.teammates.splice(toRemove, 1)
@@ -130,42 +128,42 @@ $(() => {
 									$.ajax({
 										url: "/api/users/" + teammateData.email,
 										type: "PUT",
-										data: teammateData
+										data: teammateData,
 									})
 								)
 							})
-							.catch(err => errorHandler(err))
+							.catch((err) => errorHandler(err))
 					})
 				}
 			}
 
 			$.when(...teammateUpdatePromises)
-				.then(function(...updateResponses) {
+				.then(function (...updateResponses) {
 					// At this point, all references to any of the users being in
 					// their old teams have been removed, so we're clear to create
 					// the new team
 					return createTeam()
 				})
-				.catch(err => errorHandler(err))
+				.catch((err) => errorHandler(err))
 		})
 	})
 })
 
 function createTeam() {
 	team = {
-		teamNumber: teamNumber
+		teamNumber: teamNumber,
 	}
 
 	$.ajax({ url: "/api/teams", type: "POST", data: team })
 		.then(() => {
-			members.forEach(member => {
-				$.ajax({ url: "/api/users/" + member.email, type: "PUT", data: member }).catch(err => {
+			members.forEach((member) => {
+				$.ajax({ url: "/api/users/" + member.email, type: "PUT", data: member }).catch((err) => {
 					errorHandler(err)
 				})
 			})
 			return successHandler()
 		})
-		.catch(err => {
+		.catch((err) => {
 			errorHandler(err)
 		})
 }
@@ -174,7 +172,7 @@ function deleteTeam() {
 	$.ajax({
 		url: "/api/teams",
 		type: "DELETE",
-		data: { teamNumber: teamNumber }
+		data: { teamNumber: teamNumber },
 	})
 }
 

@@ -19,10 +19,10 @@ partsRouter.get("/api/parts", isVerified, getParts)
 
 function getParts(req, res) {
 	Part.find(req.query)
-		.then(parts => {
+		.then((parts) => {
 			return res.json(parts)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -36,7 +36,7 @@ partsRouter.get("/api/parts/:barcode", isAdmin, getPartByBarcode)
 
 function getPartByBarcode(req, res) {
 	Part.findOne({ barcode: req.params.barcode })
-		.then(part => {
+		.then((part) => {
 			// If part doesn't exist, return not found
 			if (!part) {
 				return res.status(c.StatusNotFound).send(c.MessageNotFound)
@@ -44,7 +44,7 @@ function getPartByBarcode(req, res) {
 
 			return res.json(part)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -67,7 +67,7 @@ function createPart(req, res) {
 
 	// Check if part with matching name already exists, else create new part
 	Part.findOne({ partName })
-		.then(part => {
+		.then((part) => {
 			if (part) {
 				return res.status(c.StatusInternalError).send("Part with this name already exists!")
 			}
@@ -84,11 +84,11 @@ function createPart(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -103,7 +103,7 @@ partsRouter.put("/api/parts/:barcode", isAdmin, editPartWithBarcode)
 
 function editPartWithBarcode(req, res) {
 	Part.findOne({ barcode: req.params.barcode })
-		.then(part => {
+		.then((part) => {
 			// If part doesn't exist, return not found
 			if (!part) {
 				return res.status(c.StatusNotFound).send("Part with barcode does not exist")
@@ -117,11 +117,11 @@ function editPartWithBarcode(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }

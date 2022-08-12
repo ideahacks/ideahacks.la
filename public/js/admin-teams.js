@@ -6,10 +6,10 @@ $(document).ready(() => {
 	$(".team-list").on("click", "li span.delete-team", deleteTeam)
 
 	// Logic that runs when the Add Team button is clicked
-	$('button[title="Add Team"]').click(function() {
+	$('button[title="Add Team"]').click(function () {
 		modal.style.display = "block"
 
-		window.onclick = e => {
+		window.onclick = (e) => {
 			if (e.target === modal) {
 				modal.style.display = "none"
 			}
@@ -17,7 +17,7 @@ $(document).ready(() => {
 	})
 
 	// form submission logic
-	$("form").submit(e => {
+	$("form").submit((e) => {
 		e.preventDefault()
 		userNoLongerTyping()
 
@@ -30,10 +30,10 @@ $(document).ready(() => {
 			teamName: $(".team-name").val(),
 			teamNumber: $(".team-number").val(),
 			members: teamMembers,
-			parts: []
+			parts: [],
 		}
 
-		$.ajax({ url: "/admin/teams", type: "POST", data: teamData }).done(response => {
+		$.ajax({ url: "/admin/teams", type: "POST", data: teamData }).done((response) => {
 			if (response.status === "failure") {
 				$(".error-message").text(response.message)
 			} else {
@@ -71,7 +71,7 @@ $(document).ready(() => {
 	socket.on("no longer typing", () => $(".user-typing-message").text(""))
 
 	// append new team to list when server sends team created event
-	socket.on("team created", teamData => appendNewTeam(teamData))
+	socket.on("team created", (teamData) => appendNewTeam(teamData))
 })
 
 function appendNewTeam(teamData) {
@@ -94,18 +94,13 @@ function appendNewTeam(teamData) {
 
 function deleteTeam() {
 	if (confirm("Are you sure you want to delete this team?")) {
-		let teamName = $(this)
-			.parent()
-			.find(".team-name")
-			.text()
+		let teamName = $(this).parent().find(".team-name").text()
 
-		$.ajax({ url: "/admin/teams/delete/" + teamName, type: "DELETE" }).done(response => {
+		$.ajax({ url: "/admin/teams/delete/" + teamName, type: "DELETE" }).done((response) => {
 			if (response.status === "failure") {
 				$(".error-message").text(response.message)
 			} else if (response.status === "success") {
-				$(this)
-					.parent()
-					.remove()
+				$(this).parent().remove()
 			}
 		})
 	}

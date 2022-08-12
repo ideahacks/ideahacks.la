@@ -20,9 +20,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 	// })
 
 	// find school entry
-	let school_entry = $('select[name="school"]')
-		.find(":selected")
-		.text()
+	let school_entry = $('select[name="school"]').find(":selected").text()
 	if (school_entry == "Other") {
 		school_entry = $('input[name="school_other"]').val()
 	}
@@ -76,10 +74,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
-	let hasTeam =
-		$('select[name="hasTeam"]')
-			.find(":selected")
-			.text() == "YES"
+	let hasTeam = $('select[name="hasTeam"]').find(":selected").text() == "YES"
 	if (hasTeam && !teammateEmails.length) {
 		alert("Please fill out your teammate's email.")
 		return false
@@ -127,9 +122,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		phone: $('input[name="phone"]').val(),
 		school: school_entry,
 		major: $('input[name="major"]').val(),
-		year: $('select[name="year"]')
-			.find(":selected")
-			.text(),
+		year: $('select[name="year"]').find(":selected").text(),
 		// gender: gender_entry,
 		github: $('input[name="github"]').val(),
 		linkedin: $('input[name="linkedin"]').val(),
@@ -144,9 +137,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		reasonForParticipation: $('textarea[name="reasonForParticipation"]').val(),
 		themeIdea: $('textarea[name="themeIdea"]').val(),
 		desiredParts: $('textarea[name="desiredParts"]').val(),
-		shirtSize: $('select[name="shirtSize"]')
-			.find(":selected")
-			.text(),
+		shirtSize: $('select[name="shirtSize"]').find(":selected").text(),
 		// needParking: $('select[name="needsParking"]')
 		// 	.find(":selected")
 		// 	.text(),
@@ -156,14 +147,14 @@ function getAndSendApplicationData(toggleHasApplication) {
 		// canPickUpBox: canPickUpBox,
 		// getsTeamBox: getsTeamBox,
 		// shippingAddress: $('textarea[name="address"]').val(),
-		hasApplication: toggleHasApplication
+		hasApplication: toggleHasApplication,
 	}
 
 	$.ajax({
 		url: "/dashboard/application",
 		type: "POST",
-		data: applicationData
-	}).done(response => {
+		data: applicationData,
+	}).done((response) => {
 		location.reload()
 	})
 }

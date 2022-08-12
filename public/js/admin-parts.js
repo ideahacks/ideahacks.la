@@ -1,5 +1,5 @@
 $(() => {
-	$(".part-category").click(function() {
+	$(".part-category").click(function () {
 		let category = $(this).text()
 		for (let part of $(".filter-list").children()) {
 			if ($(part).attr("id") == category) {

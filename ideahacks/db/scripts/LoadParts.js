@@ -7,12 +7,12 @@ const dbURI = require("../../config").dbURI
 const Part = require("../Part.js")
 
 mongoose.connect(dbURI, {
-	useMongoClient: true
+	useMongoClient: true,
 })
 
 mongoose.Promise = global.Promise
 
-mongoose.connection.on("error", err => {
+mongoose.connection.on("error", (err) => {
 	console.log("Mongoose error: ", err)
 })
 
@@ -36,7 +36,7 @@ fs.readFile(filePath, { encoding: "utf-8" }, (err, data) => {
 			type: splitLine[4] === "Consumable" ? "consumable" : "must return",
 			manufacturer: splitLine[5],
 			manufacturerPartNumber: splitLine[6],
-			datasheet: splitLine[7]
+			datasheet: splitLine[7],
 		})
 
 		newPart.save()

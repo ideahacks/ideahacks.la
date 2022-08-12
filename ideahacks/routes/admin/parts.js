@@ -1,7 +1,7 @@
 const Part = require("../../db").Part
 
 const getParts = (req, res) => {
-	Part.find().then(parts => {
+	Part.find().then((parts) => {
 		res.render("admin-parts", { parts })
 	})
 }
@@ -21,13 +21,13 @@ const createParts = (req, res) => {
 		"User Interface",
 		"Discrete Semiconductor",
 		"Electromechanical",
-		"Miscellaneous"
+		"Miscellaneous",
 	]
 	return res.render("admin-create-parts", { categories })
 }
 
 const postParts = (req, res) => {
-	Part.find({ partName: req.body.partName }).then(parts => {
+	Part.find({ partName: req.body.partName }).then((parts) => {
 		if (parts.length > 0) {
 			return res.json({ status: "failure", message: "Part already exists" })
 		}
@@ -40,7 +40,7 @@ const postParts = (req, res) => {
 			type: req.body.type,
 			manufacturer: req.body.manufacturer,
 			manufacturerPartNumber: req.body.manufacturerPartNumber,
-			datasheet: req.body.datasheet
+			datasheet: req.body.datasheet,
 		})
 		newPart.save()
 
@@ -51,5 +51,5 @@ const postParts = (req, res) => {
 module.exports = {
 	getParts,
 	postParts,
-	createParts
+	createParts,
 }
