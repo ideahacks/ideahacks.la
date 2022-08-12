@@ -5,7 +5,7 @@ const c = require("./constants")
 const { isVerified, isAdmin } = require("../helpers/auth")
 
 // partsRouter controls endpoints that manages the parts resource
-let partsRouter = express.Router()
+const partsRouter = express.Router()
 
 /**
  * GET /api/parts returns a list of parts that matches the criteria given
@@ -60,7 +60,7 @@ partsRouter.post("/api/parts", isAdmin, createPart)
 
 function createPart(req, res) {
 	// Check if the given part has a name
-	let partName = req.body.partName
+	const partName = req.body.partName
 	if (!partName) {
 		return res.status(c.StatusInternalError).send("Missing part name!")
 	}
@@ -72,7 +72,7 @@ function createPart(req, res) {
 				return res.status(c.StatusInternalError).send("Part with this name already exists!")
 			}
 
-			let newPart = new Part(req.body)
+			const newPart = new Part(req.body)
 
 			// HACK: Empty string comes through from the front end, but it should default to returnable
 			if (newPart.type === "") {
@@ -110,7 +110,7 @@ function editPartWithBarcode(req, res) {
 			}
 
 			// Update part with given info and save
-			let updatedPart = Object.assign(part, req.body)
+			const updatedPart = Object.assign(part, req.body)
 
 			updatedPart
 				.save()

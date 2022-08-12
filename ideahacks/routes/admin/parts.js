@@ -32,7 +32,7 @@ const postParts = (req, res) => {
 			return res.json({ status: "failure", message: "Part already exists" })
 		}
 
-		let newPart = new Part({
+		const newPart = new Part({
 			partName: req.body.partName,
 			stock: req.body.stock,
 			description: req.body.description,

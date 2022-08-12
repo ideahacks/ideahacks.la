@@ -53,7 +53,7 @@ const initializePassport = () => {
 		}
 		User.findOne({ email: profile.emails[0].value }).then((user) => {
 			if (!user) {
-				let newUser = new User({
+				const newUser = new User({
 					email: profile.emails[0].value,
 					verificationHash: crypto.randomBytes(24).toString("hex"),
 				})

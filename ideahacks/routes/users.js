@@ -5,7 +5,7 @@ const c = require("./constants")
 const { isAdmin } = require("../helpers/auth")
 
 // userRouter controls endpoints that manage the user resource
-let userRouter = express.Router()
+const userRouter = express.Router()
 
 /**
  * GET /api/users returns a list of users that matches the criteria given
@@ -40,7 +40,7 @@ userRouter.get("/api/users/emails", isAdmin, getUserEmails)
 function getUserEmails(req, res) {
 	User.find(req.query, "email")
 		.then((users) => {
-			let emailList = users.map((user) => user.email).join(", ")
+			const emailList = users.map((user) => user.email).join(", ")
 			return res.send(emailList)
 		})
 		.catch((err) => {
@@ -113,7 +113,7 @@ function editUser(req, res) {
 			}
 
 			// Update team with info in request body and save
-			let updatedUser = Object.assign(user, req.body)
+			const updatedUser = Object.assign(user, req.body)
 
 			updatedUser
 				.save()

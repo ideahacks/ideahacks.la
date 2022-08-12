@@ -4,7 +4,7 @@ const getApplicationReview = (req, res) => {
 	User.find({ hasApplication: true })
 		.sort("firstName")
 		.then((users) => {
-			let applicationStats = users.reduce(
+			const applicationStats = users.reduce(
 				(stats, user, index) => {
 					if (user.applicationStatus === "accepted") stats.accepted++
 					else if (user.applicationStatus === "pending") stats.pending++

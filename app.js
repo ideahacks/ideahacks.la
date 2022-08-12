@@ -11,7 +11,7 @@ const sslRedirect = require("heroku-ssl-redirect").default
 
 const ideahacks = require("./ideahacks")
 
-let app = express()
+const app = express()
 
 // HTTPS Redirect
 app.use(sslRedirect(["production"], 301))

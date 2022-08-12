@@ -19,17 +19,17 @@ mongoose.connection.on("error", (err) => {
 fs.readFile(filePath, { encoding: "utf-8" }, (err, data) => {
 	if (err) console.log(err)
 
-	let splitData = data.split("\r\n")
+	const splitData = data.split("\r\n")
 	let skippedFirstLine = false
-	for (let line of splitData) {
+	for (const line of splitData) {
 		if (!skippedFirstLine) {
 			skippedFirstLine = true
 			continue
 		}
 
-		let splitLine = line.split(",")
+		const splitLine = line.split(",")
 		console.log(splitLine[3])
-		let newPart = new Part({
+		const newPart = new Part({
 			partName: splitLine[2],
 			stock: splitLine[3],
 			description: splitLine[1],

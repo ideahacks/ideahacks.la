@@ -9,7 +9,7 @@ const getTeams = (req, res) => {
 		})
 		// Aggregate quantities
 		teams.map(function (team) {
-			let aggregatedParts = {}
+			const aggregatedParts = {}
 			team.parts.forEach((part) => {
 				if (aggregatedParts[part.name]) {
 					aggregatedParts[part.name].quantity += part.quantity
@@ -39,14 +39,14 @@ const postTeams = (req, res) => {
 	Team.find()
 		.populate("members", "email")
 		.then((teams) => {
-			for (let team of teams) {
+			for (const team of teams) {
 				if (team.teamName === req.body.teamName || team.teamNumber.toString() === req.body.teamNumber) {
 					return res.json({
 						status: "failure",
 						message: "A team with this team name or number already exists!",
 					})
 				}
-				for (let user of team.members) {
+				for (const user of team.members) {
 					if (req.body.members.indexOf(user.email) !== -1) {
 						return res.json({
 							status: "failure",
@@ -59,9 +59,9 @@ const postTeams = (req, res) => {
 				email: { $in: req.body.members },
 			})
 				.then((users) => {
-					let tempEmails = req.body.members
-					for (let user of users) {
-						let index = tempEmails.indexOf(user.email)
+					const tempEmails = req.body.members
+					for (const user of users) {
+						const index = tempEmails.indexOf(user.email)
 						if (index !== -1) {
 							tempEmails.splice(index, 1)
 						}
@@ -72,12 +72,12 @@ const postTeams = (req, res) => {
 							message: "The emails " + tempEmails.join(", ") + " are not within our database!",
 						})
 					}
-					let memberIds = []
-					for (let user of users) {
+					const memberIds = []
+					for (const user of users) {
 						memberIds.push(user._id)
 					}
 
-					let newTeam = new Team({
+					const newTeam = new Team({
 						teamName: req.body.teamName || "",
 						teamNumber: req.body.teamNumber || "",
 						members: memberIds,
@@ -96,7 +96,7 @@ const postTeams = (req, res) => {
 }
 
 const deleteOneTeam = (req, res) => {
-	let teamToDelete = req.params.teamName
+	const teamToDelete = req.params.teamName
 	Team.remove({ teamName: teamToDelete }, (err) => {
 		if (err) {
 			console.log(err)

@@ -8,7 +8,7 @@ sgMail.setApiKey(config.SENDGRID_API_KEY)
 // recover is a function that resets a user's password with a temporary one,
 // and sends the user their new temp password
 function recover(user) {
-	let tempPassword = crypto.randomBytes(6).toString("hex")
+	const tempPassword = crypto.randomBytes(6).toString("hex")
 
 	bcrypt.hash(tempPassword, null, null, (err, hashedPassword) => {
 		if (err) console.log(err)

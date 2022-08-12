@@ -48,7 +48,7 @@ const postSettings = (req, res) => {
 	// and makes the requested changes to the current user
 
 	if (req.body.email) {
-		const emailRegex = new RegExp(/\.edu$/)
+		const emailRegex = /\.edu$/
 		if (!emailRegex.test(req.body.email)) {
 			return res.json({ status: "failure", message: "Email must end in .edu!" })
 		}
@@ -57,7 +57,7 @@ const postSettings = (req, res) => {
 		var emailChanged = true
 	}
 
-	bcrypt.hash(req.body["newPassword"], null, null, (err, hashedPassword) => {
+	bcrypt.hash(req.body.newPassword, null, null, (err, hashedPassword) => {
 		if (err) console.log(err)
 
 		// Ignore empty password change request
@@ -95,10 +95,10 @@ const getMyParts = (req, res) => {
 		}))
 	})
 	User.find({ email: req.user.email }).then((user) => {
-		let hasTeam = user[0]._doc.hasTeam
+		const hasTeam = user[0]._doc.hasTeam
 		if (hasTeam) {
 			Team.find({ teamNumber: user[0]._doc.teamNumber }).then((team) => {
-				let myParts = team[0]._doc.parts
+				const myParts = team[0]._doc.parts
 
 				res.render("dashboard-my-parts", { user: req.user, myParts, parts })
 			})
@@ -111,16 +111,16 @@ const getMyParts = (req, res) => {
 const getMyTeam = (req, res) => {
 	var team = []
 
-	let teammatesEmails = req.user.teammates
+	const teammatesEmails = req.user.teammates
 
-	let tlen = teammatesEmails.length
+	const tlen = teammatesEmails.length
 
 	var promises = []
 
 	for (let i = 0; i < tlen; i++) {
-		let email = teammatesEmails[i]
+		const email = teammatesEmails[i]
 
-		let teammate = User.find({ email: email })
+		const teammate = User.find({ email: email })
 
 		promises.push(teammate)
 		// console.log(typeof teammate)
@@ -128,12 +128,12 @@ const getMyTeam = (req, res) => {
 
 	Promise.all(promises).then((values) => {
 		for (let i = 0; i < tlen; i++) {
-			let teammate = values[i]
+			const teammate = values[i]
 
-			let name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
-			let email = teammate[0]._doc.email
-			let major = teammate[0]._doc.major
-			let year = teammate[0]._doc.year
+			const name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
+			const email = teammate[0]._doc.email
+			const major = teammate[0]._doc.major
+			const year = teammate[0]._doc.year
 
 			// console.log(name, email, major, year)
 

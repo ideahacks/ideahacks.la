@@ -6,7 +6,7 @@ const verifyEmail = require("../../mailer").verifyEmail
 const sendPasswordRecoverEmail = require("../../mailer").recover
 
 const getLogin = (req, res) => {
-	let gError = req.session.gError
+	const gError = req.session.gError
 	req.session.gError = null
 	return res.render("login", {
 		gError: gError,
@@ -67,7 +67,7 @@ const getRegistration = (req, res) => {
 }
 
 const postRegistration = (req, res, next) => {
-	let eduEmailRegex = new RegExp(/(\.edu$)|(\.org$)/) // registration email must end in .edu or .org
+	const eduEmailRegex = /(\.edu$)|(\.org$)/ // registration email must end in .edu or .org
 	if (req.body.password !== req.body.passwordConfirm) {
 		return res.json({ status: "failure", message: "Your passwords have to match!" })
 	} else if (!eduEmailRegex.test(req.body.email)) {
@@ -80,7 +80,7 @@ const postRegistration = (req, res, next) => {
 		bcrypt.hash(req.body.password, null, null, (err, hashedPassword) => {
 			if (err) console.log(err)
 
-			let newUser = new User({
+			const newUser = new User({
 				email: req.body.email,
 				password: hashedPassword,
 				verificationHash: crypto.randomBytes(24).toString("hex"),

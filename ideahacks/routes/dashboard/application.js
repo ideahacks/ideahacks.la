@@ -7,13 +7,13 @@ const getApplication = (req, res) => {
 }
 
 const postApplication = (req, res) => {
-	let oldHasApplicationStatus = req.user.hasApplication
-	for (let key in req.body) {
+	const oldHasApplicationStatus = req.user.hasApplication
+	for (const key in req.body) {
 		req.user[key] = req.body[key]
 	}
 
 	// process hasTeam
-	req.user["teammates"] = req.body.teammates ? req.body.teammates : []
+	req.user.teammates = req.body.teammates ? req.body.teammates : []
 
 	if (oldHasApplicationStatus === true) {
 		req.user.hasApplication = true

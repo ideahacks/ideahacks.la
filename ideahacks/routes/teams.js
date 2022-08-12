@@ -5,7 +5,7 @@ const c = require("./constants")
 const { isAdmin } = require("../helpers/auth")
 
 // teamRouter controls endpoints that manages the team resource
-let teamRouter = express.Router()
+const teamRouter = express.Router()
 
 /**
  * GET /api/teams returns a list of teams in the system
@@ -60,7 +60,7 @@ teamRouter.post("/api/teams", isAdmin, createTeam)
 
 function createTeam(req, res) {
 	// Check if given team has a teamNumber
-	let teamNumber = req.body.teamNumber
+	const teamNumber = req.body.teamNumber
 
 	if (!teamNumber) {
 		return res.status(c.StatusInternalError).send("Missing team number!")
@@ -73,7 +73,7 @@ function createTeam(req, res) {
 				return res.status(c.StatusInternalError).send("Team with this number already exists")
 			}
 
-			let newTeam = new Team(req.body)
+			const newTeam = new Team(req.body)
 
 			newTeam
 				.save()
@@ -106,7 +106,7 @@ function editTeam(req, res) {
 			}
 
 			// Update team with info in request body and save
-			let updatedTeam = Object.assign(team, req.body)
+			const updatedTeam = Object.assign(team, req.body)
 
 			// HACK: empty lists don't go through, so we have this check
 			if (!req.body.parts) {
