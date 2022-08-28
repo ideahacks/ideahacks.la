@@ -10,7 +10,6 @@ const successfulConnectionMessage = "Successfully connected to the database!"
 mongoose.connect(dbURI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
-	useCreateIndex: true,
 })
 
 // Plug in global promise library
