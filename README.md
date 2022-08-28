@@ -6,18 +6,23 @@
 
 ## Setting up the development environment
 
-Clone this repo with `git clone https://github.com/ideahacks/ideahacks.la.git`  
-Change into the this directory with `cd ideahacks.la`  
-Run `npm install` to install the project's dependencies.  
-Create a `development.json` file within `/ideahacks/config` (see below)  
-Run `npm start` to start the server.  
-Visit `localhost:3000` to view the site.
+- Make sure you have an up-to-date version of Node installed. `node --version`
+  must be at least **16.17.0**, which is the LTS version.
+- Clone this repo with `git clone https://github.com/ideahacks/ideahacks.la.git`
+- Change into the repo directory with `cd ideahacks.la`
+- Run `npm ci` to install the project's dependencies.
+- Create a development.json file within the folder ideahacks/config (see below)
+- Run `npm run dev` to start the server. Changes you make will automatically
+  restart the server.
+- Visit `localhost:3000` to view the site.
+- Run `npm run test` to check formatting and run ESLint, which will catch common
+  errors.
 
 ## development.json
 
-The development.json file contains private configuration variables that can't
-be pushed onto GitHub, so you'll have to create it in order to run the project
-locally. It looks like:
+Make sure you have a development.json file within the folder ideahacks/config
+— it contains private configuration variables that can't be pushed onto GitHub,
+so you'll have to create it in order to run the project locally. It looks like:
 
 ```
 {
@@ -40,14 +45,15 @@ UCLA_WIFI will work
 UCLA_WEB will not work
 ```
 
-If you see error messages in your console about failure to connect to the database, this is likely the issue. It might also be because you don't have
+If you see error messages in your console about failure to connect to the
+database, this is likely the issue. It might also be because you don't have
 necessary permissions.
 
 ## Deployment
 
-Currently this website is hosted on Heroku, a cloud hosting service. Heroku
-is configured to **automatically** deploy this repo on its development and production
-branches.
+Currently this website is hosted on Heroku, a cloud hosting service. Heroku is
+configured to **automatically** deploy this repo on its development and
+production branches.
 
 ```
 production: ideahacks.la
