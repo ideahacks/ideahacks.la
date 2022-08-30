@@ -31,6 +31,7 @@
     <!-- SCRIPTS -->
     <script src='/js/navbar-scroll.js'></script>
     <script src='/js/index.js'></script>
+    <script src='/js/announcement.js'></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -41,8 +42,10 @@
         {{> navbar }}
 
         <!-- ANNOUNCEMENT -->
-        <div id="announcement" class="container-fluid">
-            <span id="close" onclick="$(this).parent().hide()">
+
+        <!-- Hide by default to prevent content flash when loading -->
+        <div id="announcement" class="container-fluid" style="display: none">
+            <span id="close">
                 <span class="glyphicon glyphicon-remove"></span>
             </span>
             <p>
