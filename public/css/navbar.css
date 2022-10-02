@@ -208,6 +208,13 @@
 }
 
 @media (max-width: 980px) {
+	:root {
+		--navbar-height: 60px;
+	}
+	.ideahacks-icon {
+		width: 45px;
+		height: 45px;
+	}
 	.navbar-icon {
 		display: inline-block;
 	}
