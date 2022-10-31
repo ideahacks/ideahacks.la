@@ -25,6 +25,12 @@
 
 #announcement {
 	position: fixed;
+
+	/* Place at bottom center of screen */
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+
 	width: 100%;
 	max-width: 1280px;
 	z-index: 1;
