@@ -1,3 +1,4 @@
+dist: jammy
 env:
   global:
     - NODE_ENV=test
