@@ -1,15 +1,12 @@
 $(() => {
 	// Show modal on clicking a part
-	$(".part").click(function() {
+	$(".part").click(function () {
 		// Get part info
 		const part = $(this)
 		const name = part.children(".part-name").html()
 		const image = part.children("img").attr("src")
 		const color = part.children("img").css("border-color")
-		const quantity = part
-			.children(".quantity")
-			.html()
-			.split(" ")[1] // Requires quantity text to be inline in HTML
+		const quantity = part.children(".quantity").html().split(" ")[1] // Requires quantity text to be inline in HTML
 		const category = part.attr("data-category")
 		const description = part.attr("data-description")
 		const datasheet = part.attr("data-datasheet")
@@ -30,7 +27,7 @@ $(() => {
 	})
 
 	// Hide modal on clicking background
-	$("#part-modal").click(function(e) {
+	$("#part-modal").click(function (e) {
 		if (!e.target.closest(".modal-content")) {
 			$("#part-modal").fadeOut("fast")
 		}

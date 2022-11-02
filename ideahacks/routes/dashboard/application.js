@@ -7,13 +7,13 @@ const getApplication = (req, res) => {
 }
 
 const postApplication = (req, res) => {
-	let oldHasApplicationStatus = req.user.hasApplication
-	for (let key in req.body) {
+	const oldHasApplicationStatus = req.user.hasApplication
+	for (const key in req.body) {
 		req.user[key] = req.body[key]
 	}
 
 	// process hasTeam
-	req.user["teammates"] = req.body.teammates ? req.body.teammates : []
+	req.user.teammates = req.body.teammates ? req.body.teammates : []
 
 	if (oldHasApplicationStatus === true) {
 		req.user.hasApplication = true
@@ -25,7 +25,7 @@ const postApplication = (req, res) => {
 		.then(() => {
 			return res.status(c.StatusOK).send("Successfully submitted!")
 		})
-		.catch(err => {
+		.catch((err) => {
 			console.log(err)
 			return res.status(c.StatusInternalError).send(c.MessageInternalError + err)
 		})
@@ -33,5 +33,5 @@ const postApplication = (req, res) => {
 
 module.exports = {
 	getApplication,
-	postApplication
+	postApplication,
 }

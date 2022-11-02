@@ -1,20 +1,11 @@
 $(() => {
-	$("#save").click(e => {
+	$("#save").click((e) => {
 		e.preventDefault()
 
 		let newInfo = {}
 		// If email has changed
-		if (
-			$('[name="email"]')
-				.val()
-				.toLowerCase() !==
-			$('[name="email"]')
-				.attr("data-email")
-				.toLowerCase()
-		) {
-			newInfo.email = $('[name="email"]')
-				.val()
-				.toLowerCase()
+		if ($('[name="email"]').val().toLowerCase() !== $('[name="email"]').attr("data-email").toLowerCase()) {
+			newInfo.email = $('[name="email"]').val().toLowerCase()
 		}
 
 		// If there is a new password
@@ -27,8 +18,8 @@ $(() => {
 			$.ajax({
 				url: "/dashboard/me/settings",
 				type: "POST",
-				data: newInfo
-			}).done(res => {
+				data: newInfo,
+			}).done((res) => {
 				if (res.status === "success") {
 					$(".error-message").text("Changes saved!")
 					setTimeout(() => (location.href = "/dashboard/me"), 1000)

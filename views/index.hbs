@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="http://www.ideahacks.la/img/thumbnail.png">
     <meta property="og:description" content="For the eighth time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+    <meta name="google-site-verification" content="AO6dZVpzA4IP1Lf-v68mikBfQsndom1J1cBfz_vsWAc" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -30,6 +31,7 @@
     <!-- SCRIPTS -->
     <script src='/js/navbar-scroll.js'></script>
     <script src='/js/index.js'></script>
+    <script src='/js/announcement.js'></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -37,36 +39,36 @@
 
         <!-- NAVBAR -->
 
-        {{> navbar }}
+        {{!-- {{> navbar }} --}}
 
         <!-- ANNOUNCEMENT -->
-        <div id="announcement" class="container-fluid">
-            <span id="close" onclick="$(this).parent().hide()">
+
+        <!-- Hide by default to prevent content flash when loading -->
+        <div id="announcement" class="container-fluid" style="display: none">
+            <span id="close">
                 <span class="glyphicon glyphicon-remove"></span>
             </span>
             <p>
-                To follow UCLA's COVID-19 guidelines, we have had to move IDEA
-                Hacks to a semi-remote format. Read more about how the hackathon
-                will work below.
+                We are currently updating the website for IDEA Hacks 2023. Stay tuned for more information!
             </p>
         </div>
 
         <!-- BANNER -->
 
-        <div class="filler"></div>
         <div class='logo-header'>
-            <img class='img-header' src='/img/index/landingHeader.png' />
             <span class='logo-img-header'>
-                <img class='logo-img' src='/img/index/landinglogo.png' />
-                <p class="dates">January 14 - 16, 2022</p>
+                <img class='logo-img' src='/img/index/landingLogo.svg' />
+                <p class="dates">January 20 - 23, 2023</p>
                 {{!-- <a id="apply" href="/dashboard/application"><button>Apply</button></a> --}}
             </span>
+            <video class='img-header' src='/img/index/landingHeader.webm' autoplay muted loop />
         </div>
 
         <div id='about' class='black-box'></div>
 
         <!-- ABOUT -->
 
+        {{!--
         <div class='black-tab-container about-section row'>
             <div>
                 <div>
@@ -425,7 +427,7 @@
                 <a href='https://guayaki.com/' target='_blank'><img class='large-logo' src="/img/company_logos/yerba.png"></a>
                 <a href='https://www.wetzels.com/' target='_blank'><img class='large-logo' src="/img/company_logos/wetzels.svg"></a>
             </div>
-        </div>
+        </div> --}}
 
         <!-- FOOTER -->
         {{> footer }}

@@ -6,10 +6,10 @@ const verifyEmail = require("../../mailer").verifyEmail
 const sendPasswordRecoverEmail = require("../../mailer").recover
 
 const getLogin = (req, res) => {
-	let gError = req.session.gError
+	const gError = req.session.gError
 	req.session.gError = null
 	return res.render("login", {
-		gError: gError
+		gError: gError,
 	})
 }
 
@@ -19,7 +19,7 @@ const postLogin = (req, res, next) => {
 
 		if (!user) return res.json({ status: "failure", message: "Invalid email or password!" })
 
-		req.login(user, err => {
+		req.login(user, (err) => {
 			if (err) return next(err)
 
 			return res.json({ status: "success", message: "Successfully logged in!" })
@@ -30,7 +30,7 @@ const postLogin = (req, res, next) => {
 const getLoginGoogle = (req, res, next) => {
 	passport.authenticate("google", {
 		scope: ["profile", "email"],
-		hd: "g.ucla.edu"
+		hd: "g.ucla.edu",
 	})(req, res, next)
 }
 
@@ -46,7 +46,7 @@ const googleLoginCallback = (req, res, next) => {
 			return res.redirect("/login")
 		}
 
-		req.login(user, err => {
+		req.login(user, (err) => {
 			if (err) return next(err)
 			return res.redirect("/dashboard")
 		})
@@ -54,7 +54,7 @@ const googleLoginCallback = (req, res, next) => {
 }
 
 const recoverPassword = (req, res) => {
-	User.findOne({ email: req.params.email }).then(user => {
+	User.findOne({ email: req.params.email }).then((user) => {
 		if (!user) return res.json({ status: "failure", message: "A user with that email doesn't exist!" })
 
 		sendPasswordRecoverEmail(user)
@@ -67,30 +67,30 @@ const getRegistration = (req, res) => {
 }
 
 const postRegistration = (req, res, next) => {
-	let eduEmailRegex = new RegExp(/(\.edu$)|(\.org$)/) // registration email must end in .edu or .org
+	const eduEmailRegex = /(\.edu$)|(\.org$)/ // registration email must end in .edu or .org
 	if (req.body.password !== req.body.passwordConfirm) {
 		return res.json({ status: "failure", message: "Your passwords have to match!" })
 	} else if (!eduEmailRegex.test(req.body.email)) {
 		return res.json({ status: "failure", message: "The email you register with must be a .edu email!" })
 	}
 
-	User.findOne({ email: req.body.email }).then(user => {
+	User.findOne({ email: req.body.email }).then((user) => {
 		if (user) return res.json({ status: "failure", message: "A user with this username already exists!" })
 
 		bcrypt.hash(req.body.password, null, null, (err, hashedPassword) => {
 			if (err) console.log(err)
 
-			let newUser = new User({
+			const newUser = new User({
 				email: req.body.email,
 				password: hashedPassword,
-				verificationHash: crypto.randomBytes(24).toString("hex")
+				verificationHash: crypto.randomBytes(24).toString("hex"),
 			})
 			newUser.save()
 			verifyEmail(newUser)
 
 			return res.json({
 				status: "success",
-				message: "Successfully registered a new user!"
+				message: "Successfully registered a new user!",
 			})
 		})
 	})
@@ -101,18 +101,18 @@ const postConfirm = (req, res) => {
 		verifyEmail(req.user)
 		return res.json({
 			status: "success",
-			message: "A verification email has been resent to your account."
+			message: "A verification email has been resent to your account.",
 		})
 	} else {
 		return res.json({
 			status: "failure",
-			message: "This account has already been verified!"
+			message: "This account has already been verified!",
 		})
 	}
 }
 
 const getVerify = (req, res) => {
-	User.findOne({ verificationHash: req.params.hash }).then(user => {
+	User.findOne({ verificationHash: req.params.hash }).then((user) => {
 		if (user) {
 			user.isVerified = true
 			user.verificationHash = ""
@@ -139,5 +139,5 @@ module.exports = {
 	postRegistration,
 	postConfirm,
 	getVerify,
-	getLogout
+	getLogout,
 }

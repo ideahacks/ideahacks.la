@@ -2,12 +2,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	min-height: var(--navbar-height);
-	padding: 0 30px;
+	padding: 20px;
 
-	background-color: var(--white);
+	background-color: var(--black);
 	text-align: center;
-	color: var(--black);
+	color: var(--white);
 	font-weight: 500;
 }
 

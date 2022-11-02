@@ -5,7 +5,7 @@ const c = require("./constants")
 const { isAdmin } = require("../helpers/auth")
 
 // teamRouter controls endpoints that manages the team resource
-let teamRouter = express.Router()
+const teamRouter = express.Router()
 
 /**
  * GET /api/teams returns a list of teams in the system
@@ -19,10 +19,10 @@ teamRouter.get("/api/teams", isAdmin, getTeams)
 
 function getTeams(req, res) {
 	Team.find(req.query)
-		.then(teams => {
+		.then((teams) => {
 			return res.json(teams)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -36,7 +36,7 @@ teamRouter.get("/api/teams/:teamNumber", isAdmin, getTeamByNumber)
 
 function getTeamByNumber(req, res) {
 	Team.findOne({ teamNumber: req.params.teamNumber })
-		.then(team => {
+		.then((team) => {
 			// If team does not exist, return not found
 			if (!team) {
 				return res.status(c.StatusNotFound).send(c.MessageNotFound)
@@ -44,7 +44,7 @@ function getTeamByNumber(req, res) {
 
 			return res.json(team)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -60,7 +60,7 @@ teamRouter.post("/api/teams", isAdmin, createTeam)
 
 function createTeam(req, res) {
 	// Check if given team has a teamNumber
-	let teamNumber = req.body.teamNumber
+	const teamNumber = req.body.teamNumber
 
 	if (!teamNumber) {
 		return res.status(c.StatusInternalError).send("Missing team number!")
@@ -68,23 +68,23 @@ function createTeam(req, res) {
 
 	// Check if team with matching team number already exists, else create new team
 	Team.findOne({ teamNumber })
-		.then(team => {
+		.then((team) => {
 			if (team) {
 				return res.status(c.StatusInternalError).send("Team with this number already exists")
 			}
 
-			let newTeam = new Team(req.body)
+			const newTeam = new Team(req.body)
 
 			newTeam
 				.save()
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -99,14 +99,14 @@ teamRouter.put("/api/teams/:teamNumber", isAdmin, editTeam)
 
 function editTeam(req, res) {
 	Team.findOne({ teamNumber: req.params.teamNumber })
-		.then(team => {
+		.then((team) => {
 			// If team does not exist, return not found
 			if (!team) {
 				return res.status(c.StatusNotFound).send("Team with given team number does not exist")
 			}
 
 			// Update team with info in request body and save
-			let updatedTeam = Object.assign(team, req.body)
+			const updatedTeam = Object.assign(team, req.body)
 
 			// HACK: empty lists don't go through, so we have this check
 			if (!req.body.parts) {
@@ -118,11 +118,11 @@ function editTeam(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -134,7 +134,7 @@ function deleteTeam(req, res) {
 		.then(() => {
 			return res.send(c.MessageOK)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }

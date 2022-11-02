@@ -1,6 +1,6 @@
 $(() => {
 	// When the parts creation form is submitted, hit the parts creation API
-	$("#create-parts-form").submit(e => {
+	$("#create-parts-form").submit((e) => {
 		e.preventDefault()
 
 		// Create a part from the data the user typed into the form
@@ -13,16 +13,16 @@ $(() => {
 			stock: $('input[name="part-stock"]').val(),
 			category: $('select[name="part-category"]').val(),
 			imageUrl: $('input[name="part-image"]').val(),
-			isConsumable: $('select[name="part-type"]').val() === "Consumable"
+			isConsumable: $('select[name="part-type"]').val() === "Consumable",
 		}
 
 		// Hit the POST /api/parts endpoint with the part
 		$.post("/api/parts", part)
-			.then(res => {
+			.then((res) => {
 				$("#error-message").text("Success! Reloading page in 2 seconds")
 				setTimeout(() => location.reload(), 2000)
 			})
-			.catch(err => {
+			.catch((err) => {
 				console.log(err)
 				try {
 					JSON.parse(err.responseText) // Check if there is a custom error message

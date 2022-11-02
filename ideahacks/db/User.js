@@ -18,7 +18,7 @@ const UserSchema = new Schema({
 	// team info
 	hasTeam: { type: Boolean, default: false },
 	teamNumber: { type: Number, default: -1 },
-	teammates: { type: [String], default: [] }, //emails
+	teammates: { type: [String], default: [] }, // emails
 	teammates_names: { type: [String], default: [] },
 
 	// short answer
@@ -45,7 +45,7 @@ const UserSchema = new Schema({
 
 	// Check in/out fields
 	checkinTime: Date,
-	checkoutTime: Date
+	checkoutTime: Date,
 })
 
 module.exports = mongoose.model("User", UserSchema)

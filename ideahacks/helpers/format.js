@@ -1,11 +1,11 @@
-const formatUser = user => {
+const formatUser = (user) => {
 	if (user.hasTeam) {
 		user.hasATeam = true
 	} else {
 		user.hasNoTeam = true
 	}
 
-	let numberOfTeammates = user.teammates.length
+	const numberOfTeammates = user.teammates.length
 
 	switch (numberOfTeammates) {
 		case 4:
@@ -38,7 +38,7 @@ const formatUser = user => {
 	var Motion = "Motion Add-on"
 	var AV = "Audio + Visual Add-on"
 	var TI = "TI Box"
-	//FOR KITS//
+	// FOR KITS//
 	switch (user.boxPreferenceOne) {
 		case Motion:
 			user.pref1MotionAddOn = true
@@ -77,5 +77,5 @@ const formatUser = user => {
 }
 
 module.exports = {
-	formatUser
+	formatUser,
 }

@@ -5,5 +5,5 @@ require("./auth")()
 
 module.exports = {
 	routes: require("./routes"),
-	session: require("./session")
+	session: require("./session"),
 }

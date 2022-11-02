@@ -5,7 +5,7 @@ const { Team } = require("../../db")
 const { User } = require("../../db")
 
 const getParts = (req, res) => {
-	Part.find().then(parts => {
+	Part.find().then((parts) => {
 		res.render("dashboard-parts", { parts })
 	})
 }
@@ -31,7 +31,7 @@ const getMe = (req, res) => {
 	res.render("me", {
 		user: req.user,
 		statusDescription: statusDescription,
-		accepted: accepted
+		accepted: accepted,
 	})
 }
 
@@ -48,7 +48,7 @@ const postSettings = (req, res) => {
 	// and makes the requested changes to the current user
 
 	if (req.body.email) {
-		const emailRegex = new RegExp(/\.edu$/)
+		const emailRegex = /\.edu$/
 		if (!emailRegex.test(req.body.email)) {
 			return res.json({ status: "failure", message: "Email must end in .edu!" })
 		}
@@ -57,7 +57,7 @@ const postSettings = (req, res) => {
 		var emailChanged = true
 	}
 
-	bcrypt.hash(req.body["newPassword"], null, null, (err, hashedPassword) => {
+	bcrypt.hash(req.body.newPassword, null, null, (err, hashedPassword) => {
 		if (err) console.log(err)
 
 		// Ignore empty password change request
@@ -65,11 +65,11 @@ const postSettings = (req, res) => {
 			req.user.password = hashedPassword
 		}
 
-		User.findOne({ email: req.user.email }).then(u => {
+		User.findOne({ email: req.user.email }).then((u) => {
 			if (u && emailChanged) {
 				return res.json({
 					status: "failure",
-					message: "A user with this email already exists!"
+					message: "A user with this email already exists!",
 				})
 			}
 
@@ -78,7 +78,7 @@ const postSettings = (req, res) => {
 				.then(() => {
 					return res.json({ status: "success", message: "Successfully saved profile changes." })
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.send(err)
 				})
 		})
@@ -87,18 +87,18 @@ const postSettings = (req, res) => {
 
 const getMyParts = (req, res) => {
 	let parts = {}
-	Part.find().then(p => {
-		parts = p.map(part => ({
+	Part.find().then((p) => {
+		parts = p.map((part) => ({
 			name: part.partName,
 			category: part.category,
-			quantity: part.stock
+			quantity: part.stock,
 		}))
 	})
-	User.find({ email: req.user.email }).then(user => {
-		let hasTeam = user[0]._doc.hasTeam
+	User.find({ email: req.user.email }).then((user) => {
+		const hasTeam = user[0]._doc.hasTeam
 		if (hasTeam) {
-			Team.find({ teamNumber: user[0]._doc.teamNumber }).then(team => {
-				let myParts = team[0]._doc.parts
+			Team.find({ teamNumber: user[0]._doc.teamNumber }).then((team) => {
+				const myParts = team[0]._doc.parts
 
 				res.render("dashboard-my-parts", { user: req.user, myParts, parts })
 			})
@@ -111,29 +111,29 @@ const getMyParts = (req, res) => {
 const getMyTeam = (req, res) => {
 	var team = []
 
-	let teammatesEmails = req.user.teammates
+	const teammatesEmails = req.user.teammates
 
-	let tlen = teammatesEmails.length
+	const tlen = teammatesEmails.length
 
 	var promises = []
 
 	for (let i = 0; i < tlen; i++) {
-		let email = teammatesEmails[i]
+		const email = teammatesEmails[i]
 
-		let teammate = User.find({ email: email })
+		const teammate = User.find({ email: email })
 
 		promises.push(teammate)
 		// console.log(typeof teammate)
 	}
 
-	Promise.all(promises).then(values => {
+	Promise.all(promises).then((values) => {
 		for (let i = 0; i < tlen; i++) {
-			let teammate = values[i]
+			const teammate = values[i]
 
-			let name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
-			let email = teammate[0]._doc.email
-			let major = teammate[0]._doc.major
-			let year = teammate[0]._doc.year
+			const name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
+			const email = teammate[0]._doc.email
+			const major = teammate[0]._doc.major
+			const year = teammate[0]._doc.year
 
 			// console.log(name, email, major, year)
 
@@ -154,5 +154,5 @@ module.exports = {
 	getSettings,
 	postSettings,
 	getMyParts,
-	getMyTeam
+	getMyTeam,
 }

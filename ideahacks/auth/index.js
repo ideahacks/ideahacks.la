@@ -16,14 +16,14 @@ const initializePassport = () => {
 
 	passport.deserializeUser((username, done) => {
 		User.findOne({ email: username })
-			.then(user => done(null, user))
-			.catch(err => console.log(err))
+			.then((user) => done(null, user))
+			.catch((err) => console.log(err))
 	})
 
 	// Initialize local strategy
 
 	const authProcessor = (username, password, done) => {
-		User.findOne({ email: username }).then(user => {
+		User.findOne({ email: username }).then((user) => {
 			if (!user) {
 				return done(null, false, { message: "Incorrect username." })
 			}
@@ -44,18 +44,18 @@ const initializePassport = () => {
 		clientID: GOOGLE_CLIENT_ID,
 		clientSecret: GOOGLE_CLIENT_SECRET,
 		callbackURL: "/login/google/callback",
-		proxy: true
+		proxy: true,
 	}
 
 	const googleAuthProcessor = (accessToken, refreshToken, profile, done) => {
 		if (profile._json.hd !== "g.ucla.edu") {
 			return done(null, false, { message: "Email must be @g.ucla.edu." })
 		}
-		User.findOne({ email: profile.emails[0].value }).then(user => {
+		User.findOne({ email: profile.emails[0].value }).then((user) => {
 			if (!user) {
-				let newUser = new User({
+				const newUser = new User({
 					email: profile.emails[0].value,
-					verificationHash: crypto.randomBytes(24).toString("hex")
+					verificationHash: crypto.randomBytes(24).toString("hex"),
 				})
 				newUser.save()
 				verifyEmail(newUser)

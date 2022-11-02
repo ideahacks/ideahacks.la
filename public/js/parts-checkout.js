@@ -1,6 +1,6 @@
 $(() => {
 	//Team number is inputted for check out
-	$("#checkout-team-input").keypress(function(e) {
+	$("#checkout-team-input").keypress(function (e) {
 		if (e.which === 13) {
 			$(".checkout-container").hide()
 			$("#barcode-scan h1").text("You have decided to CHECK OUT a part")
@@ -13,7 +13,7 @@ $(() => {
 	})
 
 	//Team number is inputted for check in
-	$("#checkin-team-input").keypress(function(e) {
+	$("#checkin-team-input").keypress(function (e) {
 		if (e.which === 13) {
 			$(".checkout-container").hide()
 			$("#barcode-scan h1").text("You have decided to CHECK IN a part")
@@ -26,7 +26,7 @@ $(() => {
 	})
 
 	//Return back to original page with check out and check in options
-	$("#go-back-button").click(function() {
+	$("#go-back-button").click(function () {
 		$("#go-back").hide()
 		$("#barcode-scan").hide()
 		$('#barcode-scan input[type="text"]').val("")
@@ -36,19 +36,19 @@ $(() => {
 		$(".checkout-container").show()
 	})
 
-	$("#checkout-more-items").click(function() {
+	$("#checkout-more-items").click(function () {
 		$("#checkout-success").hide()
 		$(".banner").show()
 		$("#barcode-scan").show()
 		$("#go-back").show()
 	})
 
-	$(".barcode-form .admin-input").on("keypress", function(e) {
+	$(".barcode-form .admin-input").on("keypress", function (e) {
 		return e.which !== 13
 	})
 
 	// When check-out or check-in button clicked, run this monstorous piece of logic
-	$(".barcode-form").submit(function() {
+	$(".barcode-form").submit(function () {
 		// Grab some information from the form
 		let barcode = $('input[name="barcode"]').val()
 		let teamNumber = $('input[name="team-number"]').val()
@@ -59,7 +59,7 @@ $(() => {
 		}
 		// Check for part existence
 		$.get("/api/parts/" + barcode)
-			.then(part => {
+			.then((part) => {
 				if (part.stock === 0 && buttonId === "out-button") {
 					errorHandler("Part has 0 stock!")
 				} else if (part.stock < quantity && buttonId === "out-button") {
@@ -67,9 +67,9 @@ $(() => {
 				}
 				// Check for team existance
 				$.get("/api/teams/" + teamNumber)
-					.then(team => {
+					.then((team) => {
 						let idx = team.parts
-							.map(function(p) {
+							.map(function (p) {
 								return p.name
 							})
 							.indexOf(part.partName)
@@ -99,7 +99,7 @@ $(() => {
 							if (idx === -1) {
 								team.parts.push({
 									name: part.partName,
-									quantity: quantity
+									quantity: quantity,
 								})
 							} else {
 								team.parts[idx].quantity += quantity
@@ -124,11 +124,11 @@ $(() => {
 									.then(() => {
 										successHandler()
 									})
-									.catch(err => {
+									.catch((err) => {
 										errorHandler(err)
 									})
 							})
-							.catch(err => {
+							.catch((err) => {
 								errorHandler(err)
 							})
 					})
@@ -153,9 +153,9 @@ $(() => {
 							parts: [
 								{
 									name: part.partName,
-									quantity: quantity
-								}
-							]
+									quantity: quantity,
+								},
+							],
 							//[part.partName]
 						}
 
@@ -165,16 +165,16 @@ $(() => {
 									.then(() => {
 										successHandler()
 									})
-									.catch(err => {
+									.catch((err) => {
 										errorHandler(err)
 									})
 							})
-							.catch(err => {
+							.catch((err) => {
 								errorHandler(err)
 							})
 					})
 			})
-			.catch(err => {
+			.catch((err) => {
 				// Part does not exist
 				errorHandler(err)
 			})

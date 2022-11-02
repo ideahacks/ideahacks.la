@@ -10,7 +10,7 @@ const PartSchema = new Schema({
 	type: { type: String, default: "returnable" },
 	isConsumable: { type: Boolean, default: false },
 	datasheet: { type: String, default: "" },
-	imageUrl: String
+	imageUrl: String,
 })
 
 module.exports = mongoose.model("Part", PartSchema)

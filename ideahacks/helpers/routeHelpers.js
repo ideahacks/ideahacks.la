@@ -3,11 +3,11 @@ const setResLocals = (req, res, next) => {
 		onDashboard: req.baseUrl === "/dashboard",
 		onAdmin: req.baseUrl === "/admin",
 		onMain: req.baseUrl === "",
-		authenticated: req.isAuthenticated()
+		authenticated: req.isAuthenticated(),
 	}
 	next()
 }
 
 module.exports = {
-	setResLocals
+	setResLocals,
 }

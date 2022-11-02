@@ -5,7 +5,7 @@ const c = require("./constants")
 const { isVerified, isAdmin } = require("../helpers/auth")
 
 // partsRouter controls endpoints that manages the parts resource
-let partsRouter = express.Router()
+const partsRouter = express.Router()
 
 /**
  * GET /api/parts returns a list of parts that matches the criteria given
@@ -19,10 +19,10 @@ partsRouter.get("/api/parts", isVerified, getParts)
 
 function getParts(req, res) {
 	Part.find(req.query)
-		.then(parts => {
+		.then((parts) => {
 			return res.json(parts)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -36,7 +36,7 @@ partsRouter.get("/api/parts/:barcode", isAdmin, getPartByBarcode)
 
 function getPartByBarcode(req, res) {
 	Part.findOne({ barcode: req.params.barcode })
-		.then(part => {
+		.then((part) => {
 			// If part doesn't exist, return not found
 			if (!part) {
 				return res.status(c.StatusNotFound).send(c.MessageNotFound)
@@ -44,7 +44,7 @@ function getPartByBarcode(req, res) {
 
 			return res.json(part)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -60,19 +60,19 @@ partsRouter.post("/api/parts", isAdmin, createPart)
 
 function createPart(req, res) {
 	// Check if the given part has a name
-	let partName = req.body.partName
+	const partName = req.body.partName
 	if (!partName) {
 		return res.status(c.StatusInternalError).send("Missing part name!")
 	}
 
 	// Check if part with matching name already exists, else create new part
 	Part.findOne({ partName })
-		.then(part => {
+		.then((part) => {
 			if (part) {
 				return res.status(c.StatusInternalError).send("Part with this name already exists!")
 			}
 
-			let newPart = new Part(req.body)
+			const newPart = new Part(req.body)
 
 			// HACK: Empty string comes through from the front end, but it should default to returnable
 			if (newPart.type === "") {
@@ -84,11 +84,11 @@ function createPart(req, res) {
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -103,25 +103,25 @@ partsRouter.put("/api/parts/:barcode", isAdmin, editPartWithBarcode)
 
 function editPartWithBarcode(req, res) {
 	Part.findOne({ barcode: req.params.barcode })
-		.then(part => {
+		.then((part) => {
 			// If part doesn't exist, return not found
 			if (!part) {
 				return res.status(c.StatusNotFound).send("Part with barcode does not exist")
 			}
 
 			// Update part with given info and save
-			let updatedPart = Object.assign(part, req.body)
+			const updatedPart = Object.assign(part, req.body)
 
 			updatedPart
 				.save()
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }

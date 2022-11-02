@@ -5,7 +5,7 @@ const c = require("./constants")
 const { isAdmin } = require("../helpers/auth")
 
 // userRouter controls endpoints that manage the user resource
-let userRouter = express.Router()
+const userRouter = express.Router()
 
 /**
  * GET /api/users returns a list of users that matches the criteria given
@@ -19,10 +19,10 @@ userRouter.get("/api/users", isAdmin, getUsers)
 
 function getUsers(req, res) {
 	User.find(req.query)
-		.then(users => {
+		.then((users) => {
 			return res.json({ users })
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -39,11 +39,11 @@ userRouter.get("/api/users/emails", isAdmin, getUserEmails)
 
 function getUserEmails(req, res) {
 	User.find(req.query, "email")
-		.then(users => {
-			let emailList = users.map(user => user.email).join(", ")
+		.then((users) => {
+			const emailList = users.map((user) => user.email).join(", ")
 			return res.send(emailList)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -59,10 +59,10 @@ userRouter.get("/api/users/:email", isAdmin, getUserByEmail)
 
 function getUserByEmail(req, res) {
 	User.findOne({ email: req.params.email })
-		.then(user => {
+		.then((user) => {
 			return res.json(user)
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.send(c.StatusInternalError).send(err)
 		})
 }
@@ -79,18 +79,18 @@ userRouter.post("/api/users/change/application-status/:email/:newApplicationStat
 
 function changeApplicationStatus(req, res) {
 	User.findOne({ email: req.params.email })
-		.then(user => {
+		.then((user) => {
 			user.applicationStatus = req.params.newApplicationStatus
 			user
 				.save()
 				.then(() => {
 					return res.json({ status: "success", message: "Successfully changed application status!" })
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }
@@ -106,25 +106,25 @@ userRouter.put("/api/users/:email", isAdmin, editUser)
 
 function editUser(req, res) {
 	User.findOne({ email: req.params.email })
-		.then(user => {
+		.then((user) => {
 			// If team does not exist, return not found
 			if (!user) {
 				return res.status(c.StatusNotFound).send("User with given email does not exist")
 			}
 
 			// Update team with info in request body and save
-			let updatedUser = Object.assign(user, req.body)
+			const updatedUser = Object.assign(user, req.body)
 
 			updatedUser
 				.save()
 				.then(() => {
 					return res.send(c.MessageOK)
 				})
-				.catch(err => {
+				.catch((err) => {
 					return res.status(c.StatusInternalError).send(err)
 				})
 		})
-		.catch(err => {
+		.catch((err) => {
 			return res.status(c.StatusInternalError).send(err)
 		})
 }

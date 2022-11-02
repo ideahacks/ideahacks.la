@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	// logic for smooth scrolling animation after tab is clicked
-	$(".myNavbar a, .mobile-nav-list a").click(function(e) {
+	$(".myNavbar a, .mobile-nav-list a").click(function (e) {
 		if (this.hash !== "") {
 			e.preventDefault()
 			let hash = this.hash
