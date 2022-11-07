@@ -131,13 +131,17 @@ module.exports = [
 				picturePath: "/img/team/default.png",
 			},
 			{
+				name: "Jessica Chang",
+				picturePath: "/img/team/jessica_chang.jpg",
+			},
+			{
 				name: "Tyler Price",
 				picturePath: "/img/team/tyler_price.jpg",
 			},
 			{
 				name: "Sudarshan Seshadri",
-				picturePath: "/img/team/Suarshan_Seshadri.jpg",
-			}.jpg,
+				picturePath: "/img/team/Sudarshan_Seshadri.jpg",
+			},
 			{
 				name: "James Tseng",
 				picturePath: "/img/team/default.png",
