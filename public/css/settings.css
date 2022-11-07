@@ -42,7 +42,7 @@
 
 .ideahacks-form button {
 	display: block;
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--white);
 	border: none;
 	border-radius: 20px;

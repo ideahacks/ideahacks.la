@@ -21,7 +21,7 @@
 .picture[src=""] {
 	width: 150px;
 	height: 150px;
-	background-color: var(--green);
+	background-color: var(--primary);
 }
 
 .modal-content p {

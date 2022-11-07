@@ -19,7 +19,7 @@
 
 .myFooter a:hover {
 	text-decoration: none;
-	color: var(--green);
+	color: var(--primary);
 }
 
 .myFooter .fa {

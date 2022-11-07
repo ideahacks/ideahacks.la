@@ -117,7 +117,7 @@ label.container {
 
 /* When the radio button is checked, add a green background */
 .container input:checked ~ .checkmark {
-	background-color: var(--green);
+	background-color: var(--primary);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -163,7 +163,7 @@ input[type="file"] {
 .my-dash,
 .save-application,
 .submit-button {
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--white);
 	display: flex;
 	padding: 8px 12px;

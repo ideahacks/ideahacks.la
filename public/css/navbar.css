@@ -63,7 +63,7 @@
 
 .navbar-list a:hover,
 .mobile-navbar-list a:hover {
-	color: var(--green);
+	color: var(--primary);
 }
 
 .dropdown {
@@ -78,7 +78,7 @@
 }
 
 .dropdown:hover {
-	background-color: var(--green);
+	background-color: var(--primary);
 }
 
 .dropdown a:hover,
@@ -94,7 +94,7 @@
 	width: 100%;
 	height: 180px;
 	overflow: auto;
-	background-color: var(--green);
+	background-color: var(--primary);
 
 	flex-direction: column;
 	justify-content: space-around;
@@ -110,7 +110,7 @@
 }
 
 .myNavbar button {
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--white);
 	border: none;
 	border-radius: 20px;
@@ -192,7 +192,7 @@
 
 .responsive-dropdown-content {
 	display: none;
-	background-color: var(--green);
+	background-color: var(--primary);
 }
 
 .responsive-dropdown .responsive-dropdown-content.active {

@@ -36,7 +36,7 @@
 /* text / photo */
 
 p {
-	color: var(--green);
+	color: var(--primary);
 	font-size: 20px;
 	text-align: center;
 	line-height: 24px;
@@ -44,7 +44,7 @@ p {
 }
 
 .Description {
-	color: var(--green);
+	color: var(--primary);
 	font-family: "Roboto", sans-serif;
 	margin: 15px 0px 0px 0px;
 	font-weight: 200;

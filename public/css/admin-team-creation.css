@@ -50,7 +50,7 @@ textarea:focus {
 
 .submit-button {
 	padding: 10px 20px;
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--white);
 	border: none;
 	border-radius: 20px;
