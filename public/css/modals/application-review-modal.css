@@ -23,13 +23,13 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: var(--green);
+	color: var(--primary);
 }
 
 /* APPLICANT INFO SECTIONS */
 /* NAME */
 .application-name {
-	color: var(--green);
+	color: var(--primary);
 	font-size: inherit;
 	font-weight: bold;
 

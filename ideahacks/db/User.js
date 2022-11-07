@@ -8,6 +8,7 @@ const UserSchema = new Schema({
 	password: { type: String, default: "" },
 	firstName: { type: String, default: "" },
 	lastName: { type: String, default: "" },
+	pronouns: { type: String, default: "" },
 	phone: { type: String, default: "" },
 	school: { type: String, default: "University of California, Los Angeles" },
 	major: { type: String, default: "" },
@@ -32,6 +33,7 @@ const UserSchema = new Schema({
 	foodRestrictions: { type: String, default: "" },
 	desiredParts: { type: String, default: "" },
 	shirtSize: { type: String, default: "M" },
+	needsHousing: { type: Boolean, default: false },
 
 	// non-application fields
 	// boolean fields

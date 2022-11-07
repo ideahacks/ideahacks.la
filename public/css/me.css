@@ -1,6 +1,6 @@
 .app-title {
 	text-transform: uppercase;
-	color: var(--green);
+	color: var(--primary);
 	font-weight: 700;
 	margin-top: 50px;
 }
@@ -21,11 +21,11 @@
 }
 
 button {
-	background-color: var(--green);
+	background-color: var(--primary);
 	font-weight: 700;
 	font-size: 14px;
 	color: var(--white);
-	border: 1.5px solid var(--green);
+	border: 1.5px solid var(--primary);
 	text-transform: uppercase;
 	border-radius: 10px;
 	padding: 8px 20px;
@@ -122,7 +122,7 @@ button:hover {
 }
 
 .accepted {
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--white);
 	margin-top: 20px;
 }

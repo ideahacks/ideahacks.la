@@ -17,7 +17,7 @@ label {
 	font-family: "Roboto";
 	font-weight: bold;
 	text-transform: uppercase;
-	color: var(--green);
+	color: var(--primary);
 }
 
 /* Header */
@@ -80,12 +80,12 @@ label {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-top: 20px;
-	color: var(--green);
+	color: var(--primary);
 }
 
 .category-header,
 .search-bar {
-	color: var(--green);
+	color: var(--primary);
 }
 
 .part-category,
@@ -116,7 +116,7 @@ label {
 .part {
 	width: 200px;
 	height: 200px;
-	background: var(--green);
+	background: var(--primary);
 	/* margin-bottom: 5px;
 	margin-top: 20px; */
 	/* margin: 20px; */

@@ -1,9 +1,9 @@
 :root {
-	--green: #619b83;
+	--primary: #de59ba;
 	--red: #c86b6b;
 	--yellow: #ccab45;
 	--blue: #78b0c0;
-	--black: #191a1b;
+	--black: #2f3133;
 	--white: #ffffff;
 }
 
@@ -16,13 +16,13 @@ body {
 
 h1 {
 	font-family: "Source Code Pro", monospace;
-	color: var(--green);
+	color: var(--primary);
 	font-size: 48px;
 	font-weight: bold;
 }
 
 a {
-	color: var(--green);
+	color: var(--primary);
 }
 
 .wrapper {

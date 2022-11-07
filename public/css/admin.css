@@ -10,7 +10,7 @@
 	font-family: "Source Code Pro", monospace;
 	font-weight: bold;
 	font-size: 52px;
-	color: var(--green);
+	color: var(--primary);
 	margin: 100px auto 10px;
 }
 
@@ -62,7 +62,7 @@ hr {
 	background-color: var(--blue) !important;
 }
 .column:nth-child(2) {
-	background-color: var(--green) !important;
+	background-color: var(--primary) !important;
 }
 .column:nth-child(3) {
 	background-color: var(--red) !important;

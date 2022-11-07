@@ -38,7 +38,7 @@
 
 .team-dropdown-content {
 	display: none;
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--black);
 	padding: 10px 20px;
 	text-align: center;

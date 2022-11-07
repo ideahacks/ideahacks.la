@@ -57,7 +57,7 @@
 }
 
 #announcement strong {
-	color: var(--green);
+	color: var(--primary);
 }
 
 #announcement a {
@@ -175,7 +175,7 @@
 .schedule {
 	border: solid 3px var(--black);
 	border-radius: 14px;
-	color: var(--green);
+	color: var(--primary);
 	padding: 15px 15px 5px 15px;
 	margin: 0px 10px;
 	overflow: auto;
@@ -219,7 +219,7 @@
 .faq-section b {
 	display: block;
 	margin-top: 10px;
-	color: var(--green);
+	color: var(--primary);
 }
 
 /* SPONSORS */
@@ -238,10 +238,6 @@
 	vertical-align: middle;
 	width: 25%;
 	margin: 30px 10px;
-}
-
-.large-logo.intel {
-	width: 20%;
 }
 
 .small-logo {
@@ -291,8 +287,7 @@
 		display: none;
 	}
 
-	.large-logo,
-	.large-logo.intel {
+	.large-logo {
 		width: 250px;
 		margin: 20px 10px;
 	}

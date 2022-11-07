@@ -54,7 +54,7 @@ hr {
 	margin-top: 15pt;
 	font-weight: normal;
 	font-size: 14px;
-	color: #619b83;
+	color: var(--primary);
 	border: 0px;
 	text-transform: uppercase;
 	border-radius: 10px;
@@ -63,7 +63,7 @@ hr {
 }
 
 .login:hover {
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: white;
 	cursor: pointer;
 	transition: 0.3s ease;
@@ -140,7 +140,7 @@ hr {
 a,
 a:active {
 	text-decoration: none;
-	color: var(--green);
+	color: var(--primary);
 	font-size: 24px;
 	line-height: inherit;
 }

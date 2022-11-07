@@ -19,7 +19,7 @@
 }
 
 .filler {
-	background-color: #b5c6bc;
+	background-color: var(--white);
 	width: 100%;
 	height: 120px;
 }
@@ -117,7 +117,7 @@ label.container {
 
 /* When the radio button is checked, add a green background */
 .container input:checked ~ .checkmark {
-	background-color: var(--green);
+	background-color: var(--primary);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -161,8 +161,9 @@ input[type="file"] {
 
 .resume,
 .my-dash,
+.save-application,
 .submit-button {
-	background-color: var(--green);
+	background-color: var(--primary);
 	color: var(--white);
 	display: flex;
 	padding: 8px 12px;
@@ -171,6 +172,10 @@ input[type="file"] {
 	border: none;
 	transition: 0.3s ease;
 	font-weight: 700;
+}
+
+.save-application {
+	background-color: var(--blue);
 }
 
 .resume:hover {
@@ -204,4 +209,20 @@ input[type="file"] {
 .submit button {
 	width: 30%;
 	justify-content: center;
+}
+
+.save {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.save button {
+	width: 30%;
+	justify-content: center;
+}
+
+.save button:hover {
+	color: var(--black);
+	background-color: var(--white);
 }

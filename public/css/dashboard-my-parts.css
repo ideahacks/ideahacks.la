@@ -46,14 +46,14 @@
 	font-size: 35px;
 	text-transform: uppercase;
 
-	color: var(--green);
+	color: var(--primary);
 	margin-top: 0;
 	letter-spacing: -1.5px;
 }
 
 .labels,
 .part-entry {
-	border-bottom: 1px solid var(--green);
+	border-bottom: 1px solid var(--primary);
 }
 
 .labels {
