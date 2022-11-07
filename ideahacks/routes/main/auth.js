@@ -124,9 +124,21 @@ const getVerify = (req, res) => {
 	})
 }
 
-const getLogout = (req, res) => {
-	req.logout()
-	res.redirect("/login")
+/**
+ * Do not use `req.logout()` followed by `res.redirect('/')`. See
+ * https://stackoverflow.com/a/19132999 for why.
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
+const getLogout = (req, res, next) => {
+	req.session.destroy(function (err) {
+		if (err) {
+			return next(err)
+		}
+
+		res.redirect("/")
+	})
 }
 
 module.exports = {
