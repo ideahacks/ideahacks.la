@@ -237,7 +237,7 @@
                         </div>
                     </div>
                     <fieldset>
-                        <div class='form-group col-md-5 col-sm-10 col-xs-10'>
+                        <div class='form-group col-md-4 col-sm-10 col-xs-10'>
                             <label>Shirt Size*</label>
                             <select class='form-control' name='shirtSize'>
                                 <option>S</option>
@@ -247,8 +247,13 @@
                             </select>
                             <label>Any dietary restrictions or food allergies?</label>
                             <textarea class='form-control textarea' name='foodRestrictions' rows='1'>{{user.foodRestrictions}}</textarea>
-                            <label>If you are visiting from another school and would like assistance with housing over the weekend, please check this box. Please note that there is a limited number of people we can support, so we will prioritize early applications and those with need.</label>
-                            <div class="yes-no col-xs-1 col-sm-6 col-md-6">
+                        </div>
+                        <div class="form-group col-md-5 col-sm-10 col-xs-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <label>If you are visiting from another school, would you like assistance with housing over the weekend? Please note that there is a limited number of people we can support, so we will prioritize early applications and those with need.</label>
+                            </div>
+                            
+                            <div class="yes-no col-md-10 col-sm-10 col-xs-10">
                                 <label class="container">Yes
                                     <input type="radio" name="needsHousing" value={{user.needsHousing}} id="yes-housing">
                                     <span class="checkmark"></span>
@@ -258,9 +263,6 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                        </div>
-                        <div class="miscellaneous_icon col-md-5 col-sm-10 col-xs-10">
-                            <img src="/img/application/applicationicon.png" alt="Ideahacks Icon" width="50%">
                         </div>
                     </fieldset>
                 </div>
@@ -273,7 +275,7 @@
                 <button class="submit-button">SUBMIT</button>
             </div>
             <p class="submit-message" style='color: transparent;'></p>
-            
+
         {{/if}}
     </div>
 </body>
