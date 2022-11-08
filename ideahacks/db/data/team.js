@@ -144,7 +144,7 @@ module.exports = [
 			},
 			{
 				name: "James Tseng",
-				picturePath: "/img/team/default.png",
+				picturePath: "/img/team/James_Tseng.jpg",
 			},
 		],
 	},
