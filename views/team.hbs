@@ -41,19 +41,22 @@
         <!-- NAVBAR -->
         {{> navbar }}
         <div class='logo-header'>
-            <img class='img-header' src='/img/team/teamHeader.png' />
             <span class='logo-img-header'>
                 <img class='logo-img' src='/img/team/teamlogo.png' />
             </span>
+            {{!-- <video class='img-header' src='/img/team/teamHeader.webm' autoplay muted loop/> --}}
+            <img class='img-header' src='/img/team/teamHeader.png' />
         </div>
         <div class='filler'></div>
 
         <div class='team-container'>
             {{#each teamData}}
                 {{#if @first}}
-                    <div class='container-fluid section'>
+                    <div class='container-fluid section white-tab-container'>
                         <div>
-                            <h1 class='directors-header'>{{this.departmentName}}</h1>
+                            <div>
+                                <h1 class='directors-header'>{{this.departmentName}}</h1>
+                            </div>
                         </div>
                         <div class='filler'></div>
                         <div class='individual-team__teammates-container'>
@@ -66,11 +69,11 @@
                                 </div>
                             {{/each}}
                         </div>
-                        <div class='filler-thick'></div>
-                        <div class='filler-thick'></div>
+                        {{!-- <div class='filler-thick'></div> --}}
+                        {{!-- <div class='filler-thick'></div> --}}
                     </div>
                 {{else}}
-                    <div class='container-fluid section {{#if_even @index}} black-tab-container {{else}} white-tab-container {{/if_even}}'>
+                    <div class='container-fluid section {{#if_even @index}} white-tab-container {{else}} black-tab-container {{/if_even}}'>
                         <div>
                             <div>
                                 <h1>{{this.departmentName}}</h1>

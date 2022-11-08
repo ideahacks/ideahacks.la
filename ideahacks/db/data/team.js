@@ -24,7 +24,7 @@ module.exports = [
 		teammates: [
 			{
 				name: "Claire Huang",
-				picturePath: "/img/team/Claire_Huang.jpg",
+				picturePath: "/img/team/Claire_Huang.jpeg",
 			},
 			{
 				name: "Henry Shu",
@@ -128,7 +128,7 @@ module.exports = [
 			},
 			{
 				name: "Akshay Gupta",
-				picturePath: "/img/team/default.png",
+				picturePath: "/img/team/AKSHAY_GUPTA.jpg",
 			},
 			{
 				name: "Jessica Chang",
