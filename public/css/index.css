@@ -86,14 +86,14 @@
 .logo-img-header {
 	position: absolute;
 	top: 156px;
-	max-width: 483px;
+	/* max-width: 483px; */
 }
 
 .logo-img {
 	margin-left: 50%;
 	transform: translateX(-50%);
-	width: 100%;
-	max-width: 483px;
+	width: 80%;
+	/* max-width: 483px; */
 }
 
 .img-header {

@@ -8,93 +8,107 @@ module.exports = [
 		isFourWide: false,
 		teammates: [
 			{
-				name: "Solaine Zhao",
-				picturePath: "/img/team/default.png",
+				name: "Bradley Schulz",
+				picturePath: "/img/team/Bradley_Schulz.jpeg",
 			},
 			{
-				name: "Tao Lu",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Pranav Srinivasan",
-				picturePath: "/img/team/default.png",
+				name: "Jason Song",
+				picturePath: "/img/team/Jason_Song.jpg",
 			},
 		],
 	},
 	{
-		departmentName: "Website",
+		departmentName: "Design",
 		isFourWide: false,
-		teamLead: "Robert Peralta",
+		teamLead: "Claire Huang",
 		teammates: [
 			{
-				name: "Robert Peralta",
+				name: "Claire Huang",
+				picturePath: "/img/team/Claire_Huang.jpeg",
+			},
+			{
+				name: "Henry Shu",
 				picturePath: "/img/team/default.png",
 			},
 			{
-				name: "Ava Asmani",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Grace Ma",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Yolanda Chen",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Raj Piskala",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Timothy Jacques",
-				picturePath: "/img/team/default.png",
+				name: "Juliet Zhang",
+				picturePath: "/img/team/Juliet_Zhang.jpg",
 			},
 		],
 	},
 	{
 		departmentName: "Food",
 		isFourWide: true,
-		teamLead: "Jack Lin",
+		teamLead: "Vidhya Prabhu",
 		teammates: [
 			{
-				name: "Jack Lin",
+				name: "Vidya Prabhu",
+				picturePath: "/img/team/vidhya_prabhu.jpg",
+			},
+			{
+				name: "Jacqueline Duong",
+				picturePath: "/img/team/jacqueline_duong.jpg",
+			},
+			{
+				name: "Siddhant Gupta",
+				picturePath: "/img/team/siddhant_gupta.jpg",
+			},
+			{
+				name: "Tim Jacques",
+				picturePath: "/img/team/tim_jacques.jpg",
+			},
+			{
+				name: "Nathan Nguyendinh",
+				picturePath: "/img/team/nathan_n.jpg",
+			},
+		],
+	},
+	{
+		departmentName: "Corporate",
+		isFourWide: true,
+		teamLead: "Taylor Kawate",
+		teammates: [
+			{
+				name: "Taylor Kawate",
+				picturePath: "/img/team/TAYLOR_KAWATE.jpeg",
+			},
+			{
+				name: "Laura Huang",
 				picturePath: "/img/team/default.png",
 			},
 			{
-				name: "Kimi Kodama",
+				name: "Pranav Srinivasan",
+				picturePath: "/img/team/pranav_srinivasan.jpeg",
+			},
+		],
+	},
+	{
+		departmentName: "Website",
+		isFourWide: true,
+		teamLead: "Paul Zhang",
+		teammates: [
+			{
+				name: "Paul Zhang",
+				picturePath: "/img/team/paul_zhang.jpg",
+			},
+			{
+				name: "Courtney Gibbons",
+				picturePath: "/img/team/courtney_gibbons.jpeg",
+			},
+			{
+				name: "Dylan Lee Ortega",
 				picturePath: "/img/team/default.png",
 			},
 			{
-				name: "Viviane Dinh",
+				name: "Tommy Nguyen",
 				picturePath: "/img/team/default.png",
 			},
 			{
-				name: "Alex Chen",
-				picturePath: "/img/team/default.png",
+				name: "Andy Ngo",
+				picturePath: "/img/team/Andy_Ngo.jpg",
 			},
 			{
-				name: "Kat Nasif",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Jun Sang Lee",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Achinthya Poduval",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Taylor Chung",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Ryeder Geyer",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Dominic Olson",
+				name: "Kevin Zhang",
 				picturePath: "/img/team/default.png",
 			},
 		],
@@ -102,133 +116,35 @@ module.exports = [
 	{
 		departmentName: "Operations",
 		isFourWide: true,
-		teamLead: "Brandon Le",
+		teamLead: "Andrew Fantino and Dominic Olson",
 		teammates: [
 			{
-				name: "Brandon Le",
-				picturePath: "/img/team/default.png",
+				name: "Andrew Fantino",
+				picturePath: "/img/team/andrew_fantino.jpg",
 			},
 			{
-				name: "Nick Turner",
-				picturePath: "/img/team/default.png",
+				name: "Dominic Olson",
+				picturePath: "/img/team/dominic_olson.jpg",
 			},
 			{
-				name: "Ryan Tien",
-				picturePath: "/img/team/default.png",
+				name: "Akshay Gupta",
+				picturePath: "/img/team/AKSHAY_GUPTA.jpg",
 			},
 			{
-				name: "Jason Wu",
-				picturePath: "/img/team/default.png",
+				name: "Jessica Chang",
+				picturePath: "/img/team/jessica_chang.jpg",
 			},
 			{
-				name: "Bradley Schulz",
-				picturePath: "/img/team/default.png",
+				name: "Tyler Price",
+				picturePath: "/img/team/tyler_price.jpg",
 			},
 			{
-				name: "Aaron Kuo",
-				picturePath: "/img/team/default.png",
+				name: "Sudarshan Seshadri",
+				picturePath: "/img/team/Sudarshan_Seshadri.jpg",
 			},
 			{
-				name: "Jade Hakim",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Freddy Aguilar",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Raj Intwala",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Zach Wong",
-				picturePath: "/img/team/default.png",
-			},
-		],
-	},
-	{
-		departmentName: "Corporate",
-		isFourWide: true,
-		teamLead: "Tim Zou",
-		teammates: [
-			{
-				name: "Tim Zou",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Jason Song",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Victor Morales Ortega",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Junho Choi",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Stephen Kim",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Raj Kumar",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Siddhant Gupta",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Caleb Terrill",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Sudarshan Seshardi",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Adelpha Chan",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Kate Hsieh",
-				picturePath: "/img/team/default.png",
-			},
-		],
-	},
-	{
-		departmentName: "Design",
-		isFourWide: true,
-		teamLead: "Courtney Gibbons",
-		teammates: [
-			{
-				name: "Courtney Gibbons",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Fred Chu",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "David Kao",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Paul Vu",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Margot Nguyen",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Ryan Lin",
-				picturePath: "/img/team/default.png",
-			},
-			{
-				name: "Elona Khoshaba",
-				picturePath: "/img/team/default.png",
+				name: "James Tseng",
+				picturePath: "/img/team/James_Tseng.jpg",
 			},
 		],
 	},
