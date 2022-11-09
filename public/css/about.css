@@ -11,6 +11,16 @@
 	color: var(--primary);
 }
 
+.black-box {
+	background-color: var(--black);
+	height: 50px;
+}
+
+.white-box {
+	background-color: var(--white);
+	height: 50px;
+}
+
 /* HEADER */
 
 .logo-header {
@@ -84,6 +94,50 @@
 
 .agb-section img {
 	width: 100%;
+}
+
+/* Events */
+
+.events-section {
+	padding: 30px 75px 0;
+}
+
+.events-section h2 {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: var(--black);
+	color: var(--white);
+	border-radius: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.events-section b {
+	display: block;
+	margin-top: 10px;
+	color: var(--primary);
+}
+
+/* Sustainability */
+
+.sus-section {
+	padding: 30px 75px 0;
+}
+
+.sus-section h2 {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: var(--white);
+	color: var(--black);
+	border-radius: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.sus-section b {
+	display: block;
+	margin-top: 10px;
+	color: var(--primary);
 }
 
 @media (max-width: 1070px) {

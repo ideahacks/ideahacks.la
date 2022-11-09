@@ -40,32 +40,6 @@
 
         {{> navbar }}
 
-        {{!-- <!-- ANNOUNCEMENT -->
-
-        <!-- Hide by default to prevent content flash when loading -->
-        <div id="announcement" class="container-fluid" style="display: none">
-            <span id="close">
-                <span class="glyphicon glyphicon-remove"></span>
-            </span>
-            <p>
-                We are currently updating the website for IDEA Hacks 2023. Stay tuned for more information!
-            </p>
-        </div> --}}
-
-        <!-- BANNER -->
-
-        {{!-- <div class='logo-header'> --}}
-            {{!-- <span class='logo-img-header'> --}}
-                {{!-- <img class='logo-img' src='/img/index/landingLogo.svg' /> --}}
-                {{!-- <img class='logo-img' src='/img/index/landinglogo.png' /> --}}
-                {{!-- <p class="dates">January 20 - 22, 2023</p> --}}
-                {{!-- <a id="apply" href="/dashboard/application"><button>Apply</button></a> --}}
-            {{!-- </span> --}}
-            {{!-- <video class='img-header' src='/img/index/landingHeader.webm' autoplay muted loop /> --}}
-        {{!-- </div> --}}
-
-        {{!-- <div id='about' class='black-box'></div> --}}
-        
         <div class='logo-header'>
             <span class='logo-img-header'>
                 <img class='logo-img' src='/img/about/aboutlogo.png' />
@@ -73,48 +47,47 @@
             {{!-- <video class='img-header' src='/img/team/teamHeader.webm' autoplay muted loop/> --}}
             <img class='img-header' src='/img/about/teamHeader.png' />
         </div>
-        <div class='filler'></div>
-
-        <div id='fun' class='black-box'>
-        </div>
-
+        
         <!-- FUN EVENTS SECTION -->
 
-        <div class='white-tab-container schedule-section'>
+        <div class='white-tab-container row events-section'>
             <div>
                 <div>
                     <h1>Having Fun!</h1>
                 </div>
             </div>
 
-            <h2>Game Room</h2>
-            <p>
-                Going along with our game-based theme, we have a room open throughout the event dedicated solely to games. 
-                If you ever need a break from your project, drop into this room, pick your game of choice, and try to get the high score! 
-                If your high score stands by the end of the event, a prize awaits you. 
-                Exact games are still being determined (if you have recommendations, please reach out!), 
-                but we aim to include a mix of virtual and hands-on games where you can dance, race, stream, and solve puzzles.
-            </p>
+            <div class="col-md-6">
+                <h2>Game Room</h2>
+                <p>
+                    Going along with our game-based theme, we have a room open throughout the event dedicated solely to games. 
+                    If you ever need a break from your project, drop into this room, pick your game of choice, and try to get the high score! 
+                    If your high score stands by the end of the event, a prize awaits you. 
+                    Exact games are still being determined (if you have recommendations, please reach out!), 
+                    but we aim to include a mix of virtual and hands-on games where you can dance, race, stream, and solve puzzles.
+                </p>
+            </div>
 
-            <h2>E-Waste Art Team Social</h2>
-            <p>
-                Friday afternoon, before the hacking starts, we will host a team formation social making art out of unused components from the IEEE lab! 
-                This event provides an opportunity to destress before the hacking starts, find a team if needed, and reduce the number of wasted electronic components IEEE produces. 
-                This is a fantastic opportunity to express your creative side, build relationships, reduce waste, and play around with random electronic parts.
-            </p>
+            <div class="col-md-6">
+                <h2>E-Waste Art Team Social</h2>
+                <p>
+                    Friday afternoon, before the hacking starts, we will host a team formation social making art out of unused components from the IEEE lab! 
+                    This event provides an opportunity to destress before the hacking starts, find a team if needed, and reduce the number of wasted electronic components IEEE produces. 
+                    This is a fantastic opportunity to express your creative side, build relationships, reduce waste, and play around with random electronic parts.
+                </p>
+                <h2>Yoga Session</h2>
+                <p>
+                    To get the blood flowing after sitting inside staring at a screen for hours on end, we will host a guided yoga session Saturday evening. 
+                    This activity is an opportunity to take a quick break, stretch your muscles, and re-energize your body so you can make it through the rest of the hackathon.
+                </p>
+            </div>
+        </div>
 
-            <h2>Yoga Session</h2>
-            <p>
-                To get the blood flowing after sitting inside staring at a screen for hours on end, we will host a guided yoga session Saturday evening. 
-                This activity is an opportunity to take a quick break, stretch your muscles, and re-energize your body so you can make it through the rest of the hackathon.
-            </p>
-
+        <div id='sustainability' class='white-box'></div>
 
         <!-- SUSTAINABILITY -->
         
-        <div id='sustainability' class='black-box'></div>
-
-        <div class='black-tab-container row faq-section'>
+        <div class='black-tab-container row sus-section'>
             <div>
                 <div>
                     <h1>Sustainability</h1>
