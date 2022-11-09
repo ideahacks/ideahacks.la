@@ -109,7 +109,7 @@ module.exports = [
 			},
 			{
 				name: "Kevin Zhang",
-				picturePath: "/img/team/default.png",
+				picturePath: "/img/team/Kevin_Zhang.png",
 			},
 		],
 	},
