@@ -6,6 +6,10 @@ const getMain = (req, res) => {
 	return res.render("index", { sponsorsData })
 }
 
+const getAbout = (req, res) => {
+	return res.render("about")
+}
+
 const getTeam = (req, res) => {
 	return res.render("team", { teamData })
 }
@@ -32,6 +36,7 @@ const getBoxes = (req, res) => {
 
 module.exports = {
 	getMain,
+	getAbout,
 	getTeam,
 	getHistory,
 	getVenue,

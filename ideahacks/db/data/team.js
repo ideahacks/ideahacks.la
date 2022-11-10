@@ -28,7 +28,7 @@ module.exports = [
 			},
 			{
 				name: "Henry Shu",
-				picturePath: "/img/team/default.png",
+				picturePath: "/img/team/Henry_Shu.jpg",
 			},
 			{
 				name: "Juliet Zhang",
@@ -38,7 +38,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Food",
-		isFourWide: true,
+		isFourWide: false,
 		teamLead: "Vidhya Prabhu",
 		teammates: [
 			{
@@ -84,7 +84,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Website",
-		isFourWide: true,
+		isFourWide: false,
 		teamLead: "Paul Zhang",
 		teammates: [
 			{
@@ -101,7 +101,7 @@ module.exports = [
 			},
 			{
 				name: "Tommy Nguyen",
-				picturePath: "/img/team/default.png",
+				picturePath: "/img/team/Tommy_Nguyen.jpeg",
 			},
 			{
 				name: "Andy Ngo",
@@ -109,7 +109,7 @@ module.exports = [
 			},
 			{
 				name: "Kevin Zhang",
-				picturePath: "/img/team/default.png",
+				picturePath: "/img/team/Kevin_Zhang.jpeg",
 			},
 		],
 	},

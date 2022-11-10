@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDEA Hacks - About</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="http://www.ideahacks.la/img/thumbnail.png">
+    <meta property="og:description" content="For the eighth time, UCLA IEEE and the UCLA Chapter of Theta Tau are pleased to present IDEA Hacks, the largest hardware focused hackathon on the west coast. Apply on our website today!">
+    <meta name="google-site-verification" content="AO6dZVpzA4IP1Lf-v68mikBfQsndom1J1cBfz_vsWAc" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700;1,900&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel="stylesheet" type='text/css' href="/css/about.css">
+
+    <!-- SCRIPTS -->
+    {{!-- <script src='/js/navbar-scroll.js'></script> --}}
+    {{!-- <script src='/js/about.js'></script> --}}
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div class='wrapper'>
+
+        <!-- NAVBAR -->
+
+        {{> navbar }}
+
+        <div class='logo-header'>
+            <span class='logo-img-header'>
+                <img class='logo-img' src='/img/about/aboutlogo.png' />
+            </span>
+            {{!-- <video class='img-header' src='/img/team/teamHeader.webm' autoplay muted loop/> --}}
+            <img class='img-header' src='/img/about/teamHeader.png' />
+        </div>
+
+        <!-- FUN EVENTS SECTION -->
+
+        <div class='white-tab-container row events-section'>
+            <div>
+                <div>
+                    <h1>Having Fun!</h1>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Game Room</h2>
+                <p>
+                    Going along with our game-based theme, we have a room open throughout the event dedicated solely to games.
+                    If you ever need a break from your project, drop into this room, pick your game of choice, and try to get the high score!
+                    If your high score stands by the end of the event, a prize awaits you.
+                    Exact games are still being determined (if you have recommendations, please reach out!),
+                    but we aim to include a mix of virtual and hands-on games where you can dance, race, stream, and solve puzzles.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <h2>E-Waste Art Team Social</h2>
+                <p>
+                    Friday afternoon, before the hacking starts, we will host a team formation social making art out of unused components from the IEEE lab!
+                    This event provides an opportunity to destress before the hacking starts, find a team if needed, and reduce the number of wasted electronic components IEEE produces.
+                    This is a fantastic opportunity to express your creative side, build relationships, reduce waste, and play around with random electronic parts.
+                </p>
+                <h2>Yoga Session</h2>
+                <p>
+                    To get the blood flowing after sitting inside staring at a screen for hours on end, we will host a guided yoga session Saturday evening.
+                    This activity is an opportunity to take a quick break, stretch your muscles, and re-energize your body so you can make it through the rest of the hackathon.
+                </p>
+            </div>
+        </div>
+
+        <div id='sustainability' class='white-box'></div>
+
+        <!-- SUSTAINABILITY -->
+
+        <div class='black-tab-container row sus-section'>
+            <div>
+                <div>
+                    <h1>Sustainability</h1>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Goals</h2>
+
+                <b>Green Event Certification</b>
+                <p>
+                    We are aiming to have the event officially certified as a Green Event by UCLA.
+                    This means we are minimizing our use of single use items, reducing waste wherever possible, ensuring proper disposal when waste
+                    is unavoidable, and working with suppliers to ensure all products we source have minimal environmental footprints.
+                </p>
+
+                <b>Waste Reduction</b>
+                <p>
+                    If you’ve ever tried to track the waste you generate, you’ve most likely found that it ends up being a lot more than you realize.
+                    Especially at large events with catered food and single-use items, waste can increase exponentially.
+                    To combat this and align with UCLA’s <a href="https://docs.google.com/document/d/1HtB7y7cBVjnpvGXCp-lIg5t9ig5sECxFhtkZXmye-n8/edit" target="_blank">single-use plastic policy</a>,
+                    we are aiming to use no plastic beyond required packaging from suppliers, utilize fully compostable containers where single-use items are unavoidable, and source our snacks in bulk so we can distribute them in reusable containers.
+                    We will also highlight proper waste sorting throughout the event to divert as much waste from landfill as possible and teach participants how to properly sort their waste in the future.
+                </p>
+
+                <b>Minimzing Food Impacts</b>
+                <p>
+                    Food represents a significant portion of our environmental impacts.
+                    At every step of its journey from production to packaging, transportation, and disposal, it places huge burdens on the environment that many people are unaware of.
+                    To minimize these impacts, we aim to provide plentiful plant-based food options to minimize the water and carbon-based impacts hidden behind the food we eat.
+                    When serving food, we will use fully biodegradable serving and dining ware that would get sent to a landfill after our event.
+                    Lastly, we have several initiatives to prevent food sent to landfill after the event.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Initiatives</h2>
+
+                <b>Sustainability Workshop</b>
+                <p>
+                    We are partnering with the Renewable Energy Association (REA) to host a sustainability workshop before the event begins.
+                    Since one of our judging subcategories targets environmentally sustainable practices, this workshop will cover topics and habits that can be turned into projects during the event.
+                    This workshop will highlight important takeaways applicable to daily life and outline tasks to “gamify” as inspiration for the environmental subcategory of our theme.
+                </p>
+
+                <b>Debunking Common Misconceptions (With Prizes!)</b>
+                <p>
+                    With so much information out there about the environment, we want to clarify all those fuzzy environmental facts.
+                    Building off student research sponsored by UCLA’s Institute of the Environment and Sustainability (IoES) and collaborating with other on-campus organizations,
+                    we will describe proper waste sorting practices, what habits have the biggest bang for their buck in reducing environmental impacts, and how simple, overlooked actions can have disproportionate impacts
+                    (hint: those emails you have sitting in your inbox have more of an impact than you may think!).
+                    All this information will be presented in interactive, “gamified” ways throughout the event, and prizes await the top scorers in each activity.
+                </p>
+
+                <b>Prizes!</b>
+                <p>
+                    We have received funding to supply students with all kinds of tools they need to live more sustainably in their day to day lives.
+                    We will keep these special prizes a surprise for now, but the key takeaway for now is that we have more free prizes to give out.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        {{> footer }}
+
+    </div>
+
+
+</body>
+</html>
