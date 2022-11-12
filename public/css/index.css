@@ -110,20 +110,20 @@
 
 #apply {
 	position: absolute;
-	right: 0;
-	bottom: 38%;
+	right: 50%;
+	bottom: 0;
 	transform: translateX(58%);
 }
 
 #apply > button {
-	background-color: var(--black);
+	background-color: var(--primary);
 	color: var(--white);
-	font-size: 23px;
+	font-size: 23;
 	text-transform: uppercase;
 	font-weight: 500;
 	border: none;
 	border-radius: 10px;
-	padding: 4px 10px 2px;
+	padding: 8px 15px 8px;
 	transition: 0.3s background-color ease, 0.3s color ease;
 }
 
