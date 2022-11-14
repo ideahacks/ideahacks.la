@@ -19,7 +19,7 @@ module.exports = [
 	},
 	{
 		departmentName: "Design",
-		isFourWide: false,
+		isFourWide: true,
 		teamLead: "Claire Huang",
 		teammates: [
 			{
@@ -33,6 +33,10 @@ module.exports = [
 			{
 				name: "Juliet Zhang",
 				picturePath: "/img/team/Juliet_Zhang.jpg",
+			},
+			{
+				name: "Courtney Gibbons",
+				picturePath: "/img/team/courtney_gibbons.jpeg",
 			},
 		],
 	},
