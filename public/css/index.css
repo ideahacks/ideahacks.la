@@ -33,7 +33,7 @@
 
 	width: 100%;
 	max-width: 480px;
-	z-index: 1;
+	z-index: 2; /* Position above apply button */
 	padding: 20px 10px;
 	background: linear-gradient(to bottom right, var(--primary), var(--red));
 	box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
@@ -129,7 +129,8 @@
 	right: 50%;
 	bottom: 0;
 	transform: translateX(58%);
-	z-index: 1; /* Required so video doesn't obstruct button clickability */
+	z-index: 1; /* Required so video doesn't obstruct button clickability, 
+						     while keeping the button below the announcement banner */
 }
 
 #apply > button {
