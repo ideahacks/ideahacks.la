@@ -32,13 +32,13 @@
 	transform: translateX(-50%);
 
 	width: 100%;
-	max-width: 1280px;
+	max-width: 480px;
 	z-index: 1;
-	padding: 20px 50px;
-	background: linear-gradient(to bottom right, #263cc3, #b366ff);
+	padding: 20px 10px;
+	background: linear-gradient(to bottom right, var(--primary), var(--red));
 	box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
 	color: var(--white);
-	font-size: 20px;
+	font-size: 30px;
 }
 
 #announcement #close {
@@ -54,6 +54,7 @@
 
 #announcement p {
 	text-align: center;
+	font-weight: bold;
 }
 
 #announcement strong {
@@ -320,7 +321,7 @@
 
 @media (max-width: 700px) {
 	#announcement {
-		font-size: 16px;
+		font-size: 20px;
 	}
 
 	.filler {
@@ -352,10 +353,6 @@
 	.sponsors-section,
 	.schedule-section {
 		padding: 10px 10px 35px 10px;
-	}
-
-	.schedule p {
-		font-size: 16px;
 	}
 
 	.schedule-day {
