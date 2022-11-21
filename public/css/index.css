@@ -315,13 +315,14 @@
 	margin: 15px 0px 0px 0px;
 	font-weight: 200;
 	font-size: 20px;
-
 	text-align: center;
 	padding-bottom: 20px;
 }
 
 .individual-donor img {
-	width: 100%;
+	width: 75%;
+	margin: auto;
+	display: block;
 }
 
 /* MEDIA QUERIES */
