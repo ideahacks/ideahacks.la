@@ -33,7 +33,7 @@
 
 	width: 100%;
 	max-width: 480px;
-	z-index: 2; /* Position above apply button */
+	z-index: 1;
 	padding: 20px 10px;
 	background: linear-gradient(to bottom right, var(--primary), var(--red));
 	box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
@@ -54,6 +54,7 @@
 
 #announcement p {
 	text-align: center;
+	font-weight: bold;
 	font-weight: bold;
 }
 
@@ -76,6 +77,21 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: linear-gradient(-45deg, var(--primary), var(--dark-blue), var(--purple), var(--red));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 	background: linear-gradient(-45deg, var(--primary), var(--dark-blue), var(--purple), var(--red));
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -255,6 +271,12 @@
 .large-logo {
 	vertical-align: middle;
 	width: 25%;
+	margin: 30px 10px;
+}
+
+.med-logo {
+	vertical-align: middle;
+	width: 17%;
 	margin: 30px 10px;
 }
 
