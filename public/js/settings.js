@@ -2,7 +2,7 @@ $(() => {
 	$("#save").click((e) => {
 		e.preventDefault()
 
-		let newInfo = {}
+		const newInfo = {}
 		// If email has changed
 		if ($('[name="email"]').val().toLowerCase() !== $('[name="email"]').attr("data-email").toLowerCase()) {
 			newInfo.email = $('[name="email"]').val().toLowerCase()

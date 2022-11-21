@@ -74,7 +74,7 @@ function getAndSendApplicationData(toggleHasApplication) {
 		return false
 	}
 
-	const hasTeam = $('select[name="hasTeam"]').find(":selected").text() == "YES"
+	const hasTeam = $('select[name="hasTeam"]').find(":selected").text() === "Yes"
 	if (hasTeam && !teammateEmails.length) {
 		alert("Please fill out your teammate's email.")
 		return false
