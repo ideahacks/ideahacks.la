@@ -63,14 +63,12 @@ a {
 	top: 0;
 	left: 50%;
 	transform: translateY(-99%);
-	max-width: min(500px, 100%);
 }
 
 .white-tab-container > div:first-child div {
 	display: inline-block;
 	position: relative;
 	left: -50%;
-	max-width: min(500px, 100%);
 	padding: 15px 25px 0;
 	border-radius: 20px 20px 0 0;
 
