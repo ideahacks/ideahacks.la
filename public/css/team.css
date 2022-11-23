@@ -55,11 +55,11 @@ p {
 }
 
 .lead-1 {
-	color: var(--white);
+	color: var(--black);
 }
 
 .lead-2 {
-	color: var(--black);
+	color: var(--white);
 }
 
 .team-photo {
