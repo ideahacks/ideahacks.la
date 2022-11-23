@@ -140,6 +140,10 @@
 	color: var(--primary);
 }
 
+.sus-section img {
+	max-width: 30%;
+}
+
 @media (max-width: 1070px) {
 	.logo-img-header {
 		max-width: 80%;
