@@ -1,13 +1,13 @@
 $(() => {
-	let modal = document.getElementById("partsModal")
+	const modal = document.getElementById("partsModal")
 
 	// display modal when clicking on part
 	$(".part").click(function () {
 		const PARTS_API_URL = "/api/parts?_id=" + $(this).attr("id")
 
 		$.ajax({ url: PARTS_API_URL, type: "GET" }).done((part) => {
-			let partData = part[0] // Retrieve only the first part
-			for (let data in partData) {
+			const partData = part[0] // Retrieve only the first part
+			for (const data in partData) {
 				$('span[name="' + data + '"]').text(partData[data])
 			}
 			$('a[name="datasheet"]').text(partData.datasheet)

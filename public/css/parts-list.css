@@ -116,7 +116,7 @@ label {
 .part {
 	width: 200px;
 	height: 200px;
-	background: var(--primary);
+	background-image: url("/img/admin/no_image.png");
 	/* margin-bottom: 5px;
 	margin-top: 20px; */
 	/* margin: 20px; */

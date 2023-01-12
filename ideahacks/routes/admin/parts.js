@@ -1,29 +1,23 @@
 const Part = require("../../db").Part
 
+function getCategories(parts) {
+	const categories = new Set(
+		parts.map(() => {
+			return parts.category
+		})
+	)
+
+	return categories
+}
+
 const getParts = (req, res) => {
 	Part.find().then((parts) => {
-		res.render("admin-parts", { parts })
+		res.render("admin-parts", { parts, categories: getCategories(parts) })
 	})
 }
 
 const createParts = (req, res) => {
-	const categories = [
-		"Dev Kit",
-		"Battery",
-		"Power",
-		"Microcontroller",
-		"FPGA",
-		"Sensor",
-		"Connector",
-		"Memory",
-		"Display",
-		"Interface IC",
-		"User Interface",
-		"Discrete Semiconductor",
-		"Electromechanical",
-		"Miscellaneous",
-	]
-	return res.render("admin-create-parts", { categories })
+	return res.render("admin-create-parts", { categories: Part.find().then((parts) => getCategories(parts)) })
 }
 
 const postParts = (req, res) => {
