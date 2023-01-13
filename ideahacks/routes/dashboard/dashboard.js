@@ -4,9 +4,19 @@ const Part = require("../../db").Part
 const { Team } = require("../../db")
 const { User } = require("../../db")
 
+function getCategories(parts) {
+	const categories = new Set(
+		parts.map((part) => {
+			return part.category
+		})
+	)
+
+	return categories
+}
+
 const getParts = (req, res) => {
 	Part.find().then((parts) => {
-		res.render("dashboard-parts", { parts })
+		res.render("dashboard-parts", { parts, categories: getCategories(parts) })
 	})
 }
 
