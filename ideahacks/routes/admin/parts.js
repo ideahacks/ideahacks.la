@@ -2,8 +2,8 @@ const Part = require("../../db").Part
 
 function getCategories(parts) {
 	const categories = new Set(
-		parts.map(() => {
-			return parts.category
+		parts.map((part) => {
+			return part.category
 		})
 	)
 
