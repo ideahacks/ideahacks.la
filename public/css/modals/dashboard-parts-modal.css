@@ -21,7 +21,7 @@
 .picture[src=""] {
 	width: 150px;
 	height: 150px;
-	background-image: url("/img/admin/no_image.png");
+	background-image: url("/img/admin/no-image.png");
 }
 
 .modal-content p {
