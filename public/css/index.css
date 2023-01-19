@@ -65,11 +65,13 @@
 
 #announcement a {
 	font-weight: bold;
+	color: var(--white);
+	text-decoration: underline;
 }
 
 #announcement a:hover {
 	color: var(--white);
-	text-decoration: none;
+	text-decoration: underline dotted;
 }
 
 /* HEADER */
