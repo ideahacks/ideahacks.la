@@ -106,11 +106,11 @@ const getMyParts = (req, res) => {
 	})
 
 	User.find({ email: req.user.email }).then((user) => {
-		const hasTeam = user[0]._doc.teamNumber !== -1
+		const hasTeam = user[0].teamNumber !== -1
 
 		if (hasTeam) {
-			Team.find({ teamNumber: user[0]._doc.teamNumber }).then((team) => {
-				const myParts = team[0]._doc.parts
+			Team.find({ teamNumber: user[0].teamNumber }).then((team) => {
+				const myParts = team[0].parts
 
 				res.render("dashboard-my-parts", { hasTeam, user: req.user, myParts, parts })
 			})
@@ -132,14 +132,22 @@ const getMyTeam = (req, res) => {
 		promises.push(teammate)
 	}
 
-	Promise.all(promises).then((values) => {
-		for (const teammate of values) {
-			const name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
-			const email = teammate[0]._doc.email
-			const major = teammate[0]._doc.major
-			const year = teammate[0]._doc.year
+	Promise.all(promises).then((teammates) => {
+		for (let i = 0; i < teammates.length; i++) {
+			const teammate = teammates[i]
 
-			team.push({ name, email, major, year })
+			// If teammate cannot be found in the database, only provide their email
+			// (since that's all we have)
+			if (Array.isArray(teammate) && teammate.length > 0) {
+				const name = teammate[0].firstName + " " + teammate[0].lastName
+				const email = teammate[0].email
+				const major = teammate[0].major
+				const year = teammate[0].year
+
+				team.push({ name, email, major, year })
+			} else {
+				team.push({ name: "", email: teammatesEmails[i], major: "", year: "" })
+			}
 		}
 
 		res.render("dashboard-my-team", { team })
