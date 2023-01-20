@@ -104,13 +104,15 @@ const getMyParts = (req, res) => {
 			quantity: part.stock,
 		}))
 	})
+
 	User.find({ email: req.user.email }).then((user) => {
-		const hasTeam = user[0]._doc.hasTeam
+		const hasTeam = user[0]._doc.teamNumber !== -1
+
 		if (hasTeam) {
 			Team.find({ teamNumber: user[0]._doc.teamNumber }).then((team) => {
 				const myParts = team[0]._doc.parts
 
-				res.render("dashboard-my-parts", { user: req.user, myParts, parts })
+				res.render("dashboard-my-parts", { hasTeam, user: req.user, myParts, parts })
 			})
 		} else {
 			res.render("dashboard-my-parts", { user: req.user, myParts: null, parts })
@@ -119,42 +121,28 @@ const getMyParts = (req, res) => {
 }
 
 const getMyTeam = (req, res) => {
-	var team = []
+	const team = []
+	const promises = []
 
 	const teammatesEmails = req.user.teammates
 
-	const tlen = teammatesEmails.length
-
-	var promises = []
-
-	for (let i = 0; i < tlen; i++) {
-		const email = teammatesEmails[i]
-
-		const teammate = User.find({ email: email })
+	for (const email of teammatesEmails) {
+		const teammate = User.find({ email })
 
 		promises.push(teammate)
-		// console.log(typeof teammate)
 	}
 
 	Promise.all(promises).then((values) => {
-		for (let i = 0; i < tlen; i++) {
-			const teammate = values[i]
-
+		for (const teammate of values) {
 			const name = teammate[0]._doc.firstName + " " + teammate[0]._doc.lastName
 			const email = teammate[0]._doc.email
 			const major = teammate[0]._doc.major
 			const year = teammate[0]._doc.year
 
-			// console.log(name, email, major, year)
-
 			team.push({ name, email, major, year })
 		}
 
-		// console.log("team", team)
-
 		res.render("dashboard-my-team", { team })
-
-		// console.log(values)
 	})
 }
 
