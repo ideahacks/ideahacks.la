@@ -55,20 +55,20 @@
                     </div>
                     {{#if myParts}}
                         <div class="text-box">
-                        {{#each myParts}}
-                            <div class="part-entry" data-full="{{name}}">
-                                <p class="name col-xs-10">{{name}}</p>
-                                <p class="quantity col-xs-2">{{quantity}}</p>
-                            </div>
-                        {{/each}}
+                            {{#each myParts}}
+                                <div class="part-entry" data-full="{{name}}">
+                                    <p class="name col-xs-10">{{name}}</p>
+                                    <p class="quantity col-xs-2">{{quantity}}</p>
+                                </div>
+                            {{/each}}
                         </div>
                     {{else}}
                         <div class="text-box no-parts">
-                        {{#if hasTeam}}
-                            <h2>Looks like your team hasn't checked out any parts yet!</h2>
-                        {{else}}
-                            <h2>Looks like you're not part of a team yet!</h2>
-                        {{/if}}
+                            {{#if hasTeam}}
+                                <h2>Looks like your team hasn't checked out any parts yet!</h2>
+                            {{else}}
+                                <h2>Looks like you're not part of a team yet!</h2>
+                            {{/if}}
                         </div>
                     {{/if}}
                 </div>
