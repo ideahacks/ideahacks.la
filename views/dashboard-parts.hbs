@@ -73,9 +73,9 @@
                             <div class='detail-section'>
                                 <p class='part-details filter-key text-left'>{{this.partName}}</p>
                                 {{#if this.isConsumable}}
-                                    <p class='part-details quantity text-left'>Quantity: Limited Stock</p>
+                                    <p class='part-details quantity text-left'>Quantity: <b>{{this.stock}} (consumable)</b></p>
                                 {{else}}
-                                    <p class='part-details quantity text-left'>Quantity: {{this.stock}}</p>
+                                    <p class='part-details quantity text-left'>Quantity: <b>{{this.stock}}</b></p>
                                 {{/if}}
                             </div>
                         </div>

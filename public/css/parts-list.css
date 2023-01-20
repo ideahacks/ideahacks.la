@@ -143,6 +143,10 @@ label {
 	width: 100%;
 }
 
+.part-details b {
+	color: var(--primary);
+}
+
 .detail-section {
 	margin-top: 12px;
 }
