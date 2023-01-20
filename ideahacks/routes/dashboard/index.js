@@ -25,7 +25,7 @@ dashboardRouter.get("/me/settings", setResLocals, h.isVerified, dashboardHandler
 dashboardRouter.get("/me/parts", setResLocals, h.isVerified, dashboardHandlers.getMyParts)
 
 // route for myTeam:
-// dashboardRouter.get("/me/team", setResLocals, h.isVerified, dashboardHandlers.getMyTeam)
+dashboardRouter.get("/me/team", setResLocals, h.isVerified, dashboardHandlers.getMyTeam)
 
 dashboardRouter.get("/resources", setResLocals, staticHandlers.getResources)
 
